@@ -1,14 +1,14 @@
-import type { AppProps /*, AppContext */ } from 'next/app';
+import type { AppProps /* AppContext */ } from 'next/app';
 
 /* Styling */
 import '../styles/globals.scss';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Component {...pageProps} />
-    </>
-  );
+	return (
+		<>
+			<Component {...pageProps} />
+		</>
+	);
 }
 
 // Only uncomment this method if you have blocking data requirements for
