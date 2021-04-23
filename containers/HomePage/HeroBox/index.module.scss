@@ -1,0 +1,42 @@
+@import '../../../styles/guidelines';
+
+.heroboxWrapper {
+	min-height: 80vh;
+	background: linear-gradient(180deg, #2f8ddf, #184770);
+}
+
+.herobox {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: $prim_white;
+	width: 100%;
+	height: 100%;
+	padding-top: 18rem;
+}
+
+.heroboxText {
+	width: 50%;
+}
+
+.heading {
+	font-size: $fontsize_title_54;
+	font-weight: $fontweight_bold;
+	line-height: $fontlineheight_heading_70;
+}
+
+.tagline {
+	font-size: $fontsize_content_14;
+	line-height: $fontlineheight_content_30;
+	font-weight: $fontweight_regular;
+	margin: 2rem 0;
+	width: 80%;
+}
+
+.ctaOverText {
+	font-size: $fontsize_content_12;
+	margin-top: 2rem;
+	display: inline-block;
+	line-height: $fontlineheight_content_20;
+	font-weight: $fontweight_regular;
+}

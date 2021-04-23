@@ -1,8 +1,11 @@
+/* Containers */
+import HeroBox from '../containers/HomePage/HeroBox';
+
 const HomePage = () => {
 	return (
-		<main className="page-container">
-			<h1>Hello World</h1>
-		</main>
+		<>
+			<HeroBox />
+		</>
 	);
 };
 
