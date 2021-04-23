@@ -7,6 +7,9 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import InfoCard from '../../../components/InfoCard';
 
+/* Data */
+import { featureSectionList } from './data';
+
 interface Props {}
 
 const InfoSection: React.FC<Props> = () => {
@@ -46,9 +49,9 @@ const InfoSection: React.FC<Props> = () => {
 				</div>
 
 				<div className={styles.infoSectionCardsWrapper}>
-					<InfoCard />
-					<InfoCard />
-					<InfoCard />
+					{featureSectionList.map((feature: any) => {
+						return <InfoCard key={feature.title} {...feature} />;
+					})}
 				</div>
 			</div>
 		</section>

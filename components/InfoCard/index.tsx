@@ -7,51 +7,47 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../CTAButton';
 
-interface Props {}
+interface Props {
+	title: string;
+	description: string;
+	featureList: string[];
+	isPopular: boolean;
+}
 
-const InfoCard: React.FC<Props> = () => {
+const InfoCard: React.FC<Props> = (props) => {
+	const { title, isPopular, description, featureList } = props;
 	return (
 		<div className={styles.infoCard}>
-			<h3 className={styles.infoCardTitle}>Private Label Go</h3>
+			{isPopular && <div className={styles.infoCardLabel}>Most Popular</div>}
 
-			<p className={styles.infoCardDesc}>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna
-			</p>
+			<h3 className={styles.infoCardTitle}>{title}</h3>
+
+			<p className={styles.infoCardDesc}>{description}</p>
 
 			<h4 className={styles.featureTitle}>Popular Features</h4>
 
 			<ul className={styles.featuresList}>
-				<li className={styles.feature}>
-					<Image
-						src="/featureCheck.svg"
-						alt="Feature is available"
-						width={10}
-						height={10}
-					/>
-					<span className={styles.featureName}></span> Product Analysis
-				</li>
-				<li className={styles.feature}>
-					<Image
-						src="/featureCheck.svg"
-						alt="Feature is available"
-						width={10}
-						height={10}
-					/>
-					<span className={styles.featureName}></span> Competition Analysis
-				</li>
-				<li className={styles.feature}>
-					<Image
-						src="/featureCheck.svg"
-						alt="Feature is available"
-						width={10}
-						height={10}
-					/>
-					<span className={styles.featureName}></span> Define Product Range
-				</li>
+				{featureList.map((featureName: string) => {
+					return (
+						<li key={featureName} className={styles.feature}>
+							<Image
+								src="/featureCheck.svg"
+								alt="Feature is available"
+								width={10}
+								height={10}
+							/>
+							<span className={styles.featureName}> {featureName}</span>
+						</li>
+					);
+				})}
 			</ul>
 
-			<CTAButton type="primary" size="small" navigateTo="/" className={styles.featureCTA}>
+			<CTAButton
+				type="primary"
+				size="small"
+				navigateTo="/"
+				className={styles.featureCTA}
+			>
 				Get Started
 			</CTAButton>
 		</div>
