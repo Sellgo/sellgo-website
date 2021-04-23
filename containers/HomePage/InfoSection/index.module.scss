@@ -1,0 +1,46 @@
+@import '../../../styles/guidelines';
+
+.infoSectionWrapper {
+	background: $grey_0;
+	min-height: 100vh;
+	margin-top: 8rem;
+}
+
+.infoSection {
+	width: 100%;
+}
+
+.infoSectionDescription {
+	text-align: center;
+	font-size: $fontsize_content_14;
+	width: 70%;
+	margin: 5rem auto;
+	@media only screen and(max-width: 650px) {
+		width: 100%;
+	}
+}
+
+.infoSectionCTAWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: max-content;
+	margin: 0 auto;
+	@media only screen and(max-width: 650px) {
+		width: 100%;
+	}
+	@media only screen and(max-width: 580px) {
+		flex-direction: column;
+	}
+}
+
+.infoSectionCTA {
+	margin: 0 4rem;
+	@media only screen and(max-width: 650px) {
+		margin: 0;
+	}
+
+	@media only screen and(max-width: 580px) {
+		margin-bottom: 1.5rem;
+	}
+}

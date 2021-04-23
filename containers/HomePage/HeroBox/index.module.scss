@@ -11,8 +11,6 @@
 	align-items: center;
 	color: $prim_white;
 	min-height: 80vh;
-
-	
 }
 
 .heroboxText {
@@ -45,6 +43,7 @@
 	font-weight: $fontweight_regular;
 	margin: 2rem 0;
 	width: 80%;
+	color: $prim_white;
 
 	@media only screen and(max-width: 750px) {
 		width: 100%;
