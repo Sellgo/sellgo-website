@@ -1,7 +1,6 @@
 @import '../../../styles/guidelines';
 
 .statisticsSection {
-	min-height: 80vh;
 	background: linear-gradient(180deg, $blue_6, #184770);
 	display: flex;
 	margin-bottom: 10rem;
@@ -9,8 +8,8 @@
 
 .statisticsWrapper {
 	color: $prim_white;
-	height: 70vh;
-	padding-top: 10rem;
+	height: 100%;
+	padding: 10rem 0;
 	text-align: center;
 
 	h2 {

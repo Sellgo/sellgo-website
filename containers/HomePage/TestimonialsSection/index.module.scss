@@ -1,12 +1,13 @@
 @import '../../../styles/guidelines';
 
 .testimonialsSection {
-	min-height: 80vh;
+	min-height: 90vh;
+	margin-top: 10rem;
 }
 
 .testimonialsSectionWrapper {
 	text-align: center;
-
+	height: 100%;
 	h2 {
 		color: #1e3767;
 		font-size: $fontsize_subtitle_32;
