@@ -58,12 +58,19 @@
 	}
 }
 
+/* Footer Links Style guide */
 a.public-footer-link,
 p.copyright {
 	text-decoration: underline;
 	color: #fff;
 	font-size: 14px;
 	font-weight: 400;
+	display: inline-block;
+
+	@media only screen and(max-width: 500px) {
+		margin: 8px auto;
+		text-align: center;
+	}
 }
 
 p.copyright {

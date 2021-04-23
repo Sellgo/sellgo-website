@@ -5,7 +5,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-bottom: 1rem;
+	padding-bottom: 2rem;
+	@media only screen and(max-width: 800px) {
+		flex-direction: column;
+	}
 }
 
 .socialLinks {
@@ -33,5 +36,19 @@
 	margin-left: 20rem;
 	li {
 		margin: 0 1rem;
+	}
+
+	@media only screen and(max-width: 980px) {
+		margin-left: 5rem;
+	}
+
+	@media only screen and(max-width: 800px) {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	@media only screen and(max-width: 500px) {
+		flex-direction: column;
+		text-align: center;
 	}
 }

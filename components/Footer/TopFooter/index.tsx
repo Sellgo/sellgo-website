@@ -23,12 +23,9 @@ const TopFooter: React.FC<Props> = () => {
 				</Link>
 
 				<Link href="/" passHref>
-					<Image
-						src="/amazonWebServices.png"
-						alt="Amazon Web Services Logo"
-						width={150}
-						height={57}
-					/>
+					<a>
+						<img src="/amazonWebServices.png" alt="Amazon Web Services Logo" />
+					</a>
 				</Link>
 			</div>
 
