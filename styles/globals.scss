@@ -57,3 +57,27 @@
 		font-size: 28px;
 	}
 }
+
+a.public-footer-link,
+p.copyright {
+	text-decoration: underline;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+p.copyright {
+	text-decoration: none;
+}
+
+.footerNavigationLinks {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	margin: 1rem 0;
+	a {
+		color: #bdc5cc;
+		font-size: 14px;
+		font-weight: 400;
+	}
+}

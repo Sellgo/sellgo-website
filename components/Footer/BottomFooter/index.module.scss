@@ -1,0 +1,37 @@
+@import '../../../styles/guidelines';
+
+.bottomFooter {
+	border-top: 1px solid $grey_4;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 1rem;
+}
+
+.socialLinks {
+	padding: 2rem 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	list-style: none;
+
+	li {
+		margin: 0 1rem;
+		img {
+			height: 15px;
+			width: auto;
+		}
+	}
+}
+
+.publicLinks {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	flex: 1;
+	margin-left: 20rem;
+	li {
+		margin: 0 1rem;
+	}
+}

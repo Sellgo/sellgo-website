@@ -1,0 +1,26 @@
+@import '../../../styles/guidelines';
+
+.topFooter {
+	min-height: 30rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-top: 2rem;
+}
+
+.logoWrapper {
+	display: flex;
+	flex-direction: column;
+	color: $prim_white;
+	list-style: none;
+	a {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.footerNavigation {
+	color: $prim_white;
+	list-style: none;
+	font-weight: 400;
+	text-align: left;
+}
