@@ -11,6 +11,8 @@
 	align-items: center;
 	color: $prim_white;
 	min-height: 80vh;
+
+	
 }
 
 .heroboxText {
@@ -20,8 +22,9 @@
 		margin: 0 auto;
 	}
 
-	@media only screen and(max-width: 650px) {
+	@media only screen and(max-width: 750px) {
 		width: 100%;
+		text-align: center;
 	}
 }
 
@@ -43,8 +46,14 @@
 	margin: 2rem 0;
 	width: 80%;
 
-	@media only screen and(max-width: 650px) {
+	@media only screen and(max-width: 750px) {
 		width: 100%;
+	}
+}
+
+.ctaHeroBox {
+	@media only screen and(max-width: 750px) {
+		margin: 0 auto;
 	}
 }
 
