@@ -1,0 +1,58 @@
+@import '../../styles/guidelines';
+
+.productCard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+	margin: 8rem 0;
+
+	&__Text {
+		flex: 0 0 45%;
+		small {
+			color: $orange_6;
+			font-size: $fontsize_content_14;
+			font-weight: $fontweight_semibold;
+		}
+
+		h3 {
+			font-size: $fontsize_subtitle_28;
+			font-weight: $fontweight_medium;
+			line-height: 1;
+			margin-bottom: 3rem;
+		}
+
+		p {
+			width: 50%;
+			font-size: $fontsize_content_14;
+			font-weight: $fontweight_regular;
+		}
+	}
+
+	&__Link {
+		color: $system-blue;
+		text-decoration: underline;
+		display: inline-block;
+		margin: 2rem 0;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_regular;
+	}
+
+	&__Image {
+		flex: 0 0 45%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+.reversedText {
+	order: 2;
+}
+
+.reversedImage {
+	order: 1;
+}
