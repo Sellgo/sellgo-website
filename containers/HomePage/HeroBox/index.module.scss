@@ -10,19 +10,30 @@
 	justify-content: flex-start;
 	align-items: center;
 	color: $prim_white;
-	width: 100%;
-	height: 100%;
-	padding-top: 18rem;
+	min-height: 80vh;
 }
 
 .heroboxText {
 	width: 50%;
+	@media only screen and(max-width: 1280px) {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	@media only screen and(max-width: 650px) {
+		width: 100%;
+	}
 }
 
 .heading {
 	font-size: $fontsize_title_54;
 	font-weight: $fontweight_bold;
 	line-height: $fontlineheight_heading_70;
+
+	@media only screen and(max-width: 650px) {
+		font-size: 4.5rem;
+		line-height: 1.2;
+	}
 }
 
 .tagline {
@@ -31,6 +42,10 @@
 	font-weight: $fontweight_regular;
 	margin: 2rem 0;
 	width: 80%;
+
+	@media only screen and(max-width: 650px) {
+		width: 100%;
+	}
 }
 
 .ctaOverText {

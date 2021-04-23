@@ -23,7 +23,7 @@ const HeroBox: React.FC<Props> = () => {
 						aliquip ex ea
 					</p>
 
-					<CTAButton type="primary" size="medium" navigateTo="/">
+					<CTAButton type="primary" size="medium" navigateTo="/" className="herobox__cta">
 						Get Sellgo Free
 					</CTAButton>
 
