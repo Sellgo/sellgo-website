@@ -3,11 +3,13 @@ import type { AppProps /* AppContext */ } from 'next/app';
 /* Styling */
 import '../styles/globals.scss';
 
-function MyApp({ Component, pageProps }: AppProps) {
+import Layout from '../components/Layout';
+
+function App({ Component, pageProps }: AppProps) {
 	return (
-		<>
+		<Layout>
 			<Component {...pageProps} />
-		</>
+		</Layout>
 	);
 }
 
@@ -23,4 +25,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 //   return { ...appProps }
 // }
 
-export default MyApp;
+export default App;
