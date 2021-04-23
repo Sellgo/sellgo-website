@@ -25,6 +25,7 @@
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 auto;
+	width: max-content;
 	@media only screen and(max-width: 760px) {
 		width: 90%;
 		flex-direction: column;
