@@ -1,8 +1,11 @@
 import React from 'react';
-import CTAButton from '../../../components/CTAButton';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* Components */
+import CTAButton from '../../../components/CTAButton';
+import InfoCard from '../../../components/InfoCard';
 
 interface Props {}
 
@@ -32,9 +35,20 @@ const InfoSection: React.FC<Props> = () => {
 					>
 						Get Free Opportunity Finder
 					</CTAButton>
-					<CTAButton type="secondary" size="small" navigateTo="/">
+					<CTAButton
+						type="secondary"
+						size="small"
+						navigateTo="/"
+						className={styles.infoSectionCTA}
+					>
 						Demo premium Opportunity Finder
 					</CTAButton>
+				</div>
+
+				<div className={styles.infoSectionCardsWrapper}>
+					<InfoCard />
+					<InfoCard />
+					<InfoCard />
 				</div>
 			</div>
 		</section>

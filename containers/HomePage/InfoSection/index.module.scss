@@ -7,7 +7,7 @@
 }
 
 .infoSection {
-	width: 100%;
+	width: 90%;
 }
 
 .infoSectionDescription {
@@ -16,7 +16,7 @@
 	width: 70%;
 	margin: 5rem auto;
 	@media only screen and(max-width: 650px) {
-		width: 100%;
+		width: 90%;
 	}
 }
 
@@ -27,9 +27,7 @@
 	width: max-content;
 	margin: 0 auto;
 	@media only screen and(max-width: 650px) {
-		width: 100%;
-	}
-	@media only screen and(max-width: 580px) {
+		width: 90%;
 		flex-direction: column;
 	}
 }
@@ -37,10 +35,18 @@
 .infoSectionCTA {
 	margin: 0 4rem;
 	@media only screen and(max-width: 650px) {
-		margin: 0;
+		margin-top:2rem;
 	}
 
 	@media only screen and(max-width: 580px) {
 		margin-bottom: 1.5rem;
 	}
+}
+
+.infoSectionCardsWrapper {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 10rem;
+	flex-wrap: wrap;
 }
