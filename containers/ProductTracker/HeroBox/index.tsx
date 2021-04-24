@@ -15,7 +15,12 @@ const HeroBox: React.FC<Props> = () => {
 					<span></span> <h2 className={styles.subHeading}>Lorem Ipsum</h2>
 				</div>
 				<h1 className={styles.heading}>Lorem Ipsum</h1>
-				<CTAButton navigateTo="/" type="primary" size="medium" className={styles.heroBoxCTA}>
+				<CTAButton
+					navigateTo="/"
+					type="primary"
+					size="medium"
+					className={styles.heroBoxCTA}
+				>
 					Get Started
 				</CTAButton>
 			</div>
