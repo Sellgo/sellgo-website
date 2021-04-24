@@ -1,0 +1,52 @@
+@import '../../../styles/guidelines';
+
+.heroBox {
+	min-height: 80vh;
+	padding-top:15rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	&__Image {
+		height: 45rem;
+		width: 45rem;
+		border: 1px solid $prim_dark_1;
+	}
+
+	&__Details {
+		flex: 0 0 45%;
+		color: $prim_dark_2;
+	}
+}
+
+.subHeadingWrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	span {
+		min-width: 4rem;
+		min-height: 4rem;
+		background-color: $blue_6;
+		display: inline-block;
+		border-radius: 7px;
+		margin-right: 1rem;
+	}
+}
+
+.subHeading {
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_medium;
+	line-height: 1;
+	color: inherit;
+}
+
+.heading {
+	margin: 2rem 0;
+	color: inherit;
+	font-size: $fontsize_title_46;
+}
+
+.heroBoxCTA {
+	padding: 0 5rem;
+}
