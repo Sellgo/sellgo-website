@@ -3,6 +3,9 @@ import React from 'react';
 /* Styling */
 import styles from './index.module.scss';
 
+/* Components */
+import StatsCard from '../../../components/StatsCard';
+
 interface Props {}
 
 const StatisticsSection: React.FC<Props> = () => {
@@ -21,6 +24,49 @@ const StatisticsSection: React.FC<Props> = () => {
 					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 					pariatur. Excepteur sint
 				</p>
+
+				<div className={styles.statisticsGrid}>
+					<StatsCard
+						statsCount={100}
+						statsLabel="Popular Features"
+						bottomStats={false}
+					/>
+					<StatsCard
+						statsCount={100}
+						statsLabel="Popular Features"
+						bottomStats={false}
+					/>
+					<StatsCard
+						statsCount={100}
+						statsLabel="Popular Features"
+						bottomStats={false}
+					/>
+					<StatsCard
+						statsCount={100}
+						statsLabel="Popular Features"
+						bottomStats={false}
+					/>
+					<StatsCard
+						statsCount={100}
+						statsLabel="Popular Features"
+						bottomStats
+					/>
+					<StatsCard
+						statsCount={100}
+						statsLabel="Popular Features"
+						bottomStats
+					/>
+					<StatsCard
+						statsCount={100}
+						statsLabel="Popular Features"
+						bottomStats
+					/>
+					<StatsCard
+						statsCount={100}
+						statsLabel="Popular Features"
+						bottomStats
+					/>
+				</div>
 			</div>
 		</section>
 	);

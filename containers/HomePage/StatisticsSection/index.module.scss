@@ -9,7 +9,7 @@
 .statisticsWrapper {
 	color: $prim_white;
 	height: 100%;
-	padding: 10rem 0;
+	padding: 15rem 0;
 	text-align: center;
 
 	h2 {
@@ -28,5 +28,19 @@
 		@media only screen and(max-width: 650px) {
 			width: 80%;
 		}
+	}
+}
+
+.statisticsGrid {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	margin: 8rem auto;
+	flex-wrap: wrap;
+
+	@media only screen and(max-width: 890px) {
+		justify-content: space-around;
+		align-items: flex-start;
 	}
 }
