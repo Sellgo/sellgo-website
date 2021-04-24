@@ -11,41 +11,30 @@ const BottomFooter: React.FC<Props> = () => {
 		<div className={styles.bottomFooter}>
 			<ul className={styles.socialLinks}>
 				<li>
-					<Link href="/" passHref>
-						<a>
-							<img src="/twitterLogo.svg" alt="Social Media Icon for Twitter" />
-						</a>
-					</Link>
+					<a href="#!" target="_blank" rel="noopener noreferrer">
+						<img src="/twitterLogo.svg" alt="Social Media Icon for Twitter" />
+					</a>
 				</li>
 
 				<li>
-					<Link href="/" passHref>
-						<a>
-							<img
-								src="/facebookLogo.svg"
-								alt="Social Media Icon for Facebook"
-							/>
-						</a>
-					</Link>
+					<a href="#!" target="_blank" rel="noopener noreferrer">
+						<img src="/facebookLogo.svg" alt="Social Media Icon for Facebook" />
+					</a>
 				</li>
 
 				<li>
-					<Link href="/" passHref>
-						<a>
-							<img
-								src="/instagramLogo.svg"
-								alt="Social Media Icon for Instagram"
-							/>
-						</a>
-					</Link>
+					<a href="#!" target="_blank" rel="noopener noreferrer">
+						<img
+							src="/instagramLogo.svg"
+							alt="Social Media Icon for Instagram"
+						/>
+					</a>
 				</li>
 
 				<li>
-					<Link href="/" passHref>
-						<a>
-							<img src="/youtubeLogo.svg" alt="Social Media Icon for Youtube" />
-						</a>
-					</Link>
+					<a href="#!" target="_blank" rel="noopener noreferrer">
+						<img src="/youtubeLogo.svg" alt="Social Media Icon for Youtube" />
+					</a>
 				</li>
 			</ul>
 
