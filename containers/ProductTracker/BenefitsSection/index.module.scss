@@ -10,6 +10,10 @@
 		color: $prim_dark_2;
 		font-size: $fontsize_title_46;
 		text-align: center;
+
+		@media only screen and(max-width: 750px) {
+			font-size: 3.4rem;
+		}
 	}
 }
 
@@ -26,6 +30,10 @@
 	align-items: center;
 	color: $prim_dark_2;
 	border-bottom: 1px solid $grey_2;
+
+	@media only screen and(max-width: 600px) {
+		justify-content: space-between;
+	}
 }
 
 .benefitsTab {
@@ -38,5 +46,9 @@
 	&__Selected {
 		border-bottom: 2px solid $prim_dark_2;
 		font-weight: $fontweight_medium;
+	}
+
+	@media only screen and(max-width: 600px) {
+		font-size: 1.8rem;
 	}
 }
