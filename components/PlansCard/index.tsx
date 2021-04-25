@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 /* Styling */
 import styles from './index.module.scss';
 
