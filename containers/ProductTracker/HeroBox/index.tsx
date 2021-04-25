@@ -1,8 +1,14 @@
 import React from 'react';
-import CTAButton from '../../../components/CTAButton';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* Components */
+import CTAButton from '../../../components/CTAButton';
+import ProductAccordion from '../../../components/ProductAccordion';
+
+/* Data */
+import {accordionData} from './data';
 
 interface Props {}
 
@@ -23,6 +29,8 @@ const HeroBox: React.FC<Props> = () => {
 				>
 					Get Started
 				</CTAButton>
+
+				<ProductAccordion data={accordionData}/>
 			</div>
 		</section>
 	);
