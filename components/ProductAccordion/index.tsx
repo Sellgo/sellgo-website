@@ -28,8 +28,8 @@ const ProductAccordion: React.FC<Props> = (props) => {
 									<p>
 										{accordionData.title}
 										<AccordionItemState>
-											{({expanded}) => {
-												console.log(expanded)
+											{({ expanded }) => {
+												console.log(expanded);
 												return expanded ? (
 													<span>&#8722;</span>
 												) : (

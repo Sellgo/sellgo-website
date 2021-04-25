@@ -8,7 +8,7 @@ import CTAButton from '../../../components/CTAButton';
 import ProductAccordion from '../../../components/ProductAccordion';
 
 /* Data */
-import {accordionData} from './data';
+import { accordionData } from './data';
 
 interface Props {}
 
@@ -30,7 +30,7 @@ const HeroBox: React.FC<Props> = () => {
 					Get Started
 				</CTAButton>
 
-				<ProductAccordion data={accordionData}/>
+				<ProductAccordion data={accordionData} />
 			</div>
 		</section>
 	);
