@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, Tabs, TabList, TabPanel, resetIdCounter } from 'react-tabs';
 import { v4 as uuid } from 'uuid';
 
 /* Styling */
@@ -14,6 +14,8 @@ import { benefitsData } from './data';
 interface Props {}
 
 const BenefitsSection: React.FC<Props> = () => {
+	resetIdCounter();
+
 	return (
 		<section className={styles.benefitsSectionWrapper}>
 			<div className={`page-container ${styles.benefitsSection}`}>

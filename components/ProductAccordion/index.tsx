@@ -5,8 +5,10 @@ import {
 	AccordionItemButton,
 	AccordionItemHeading,
 	AccordionItemPanel,
-	AccordionItemState
+	AccordionItemState,
+	resetNextUuid
 } from 'react-accessible-accordion';
+import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -17,19 +19,22 @@ interface Props {
 
 const ProductAccordion: React.FC<Props> = (props) => {
 	const { data } = props;
+
+	// Reset UUID for react accordion (server apps)
+	resetNextUuid();
+
 	return (
 		<>
 			<Accordion className={styles.productAccordion} allowZeroExpanded>
-				{data.map((accordionData: any, index: number) => {
+				{data.map((accordionData: any) => {
 					return (
-						<AccordionItem className={styles.productAccordionItem} key={index}>
+						<AccordionItem className={styles.productAccordionItem} key={uuid()}>
 							<AccordionItemHeading className={styles.productAccordionHeading}>
 								<AccordionItemButton className={styles.productAccordionButton}>
 									<p>
 										{accordionData.title}
 										<AccordionItemState>
 											{({ expanded }) => {
-												console.log(expanded);
 												return expanded ? (
 													<span>&#8722;</span>
 												) : (
