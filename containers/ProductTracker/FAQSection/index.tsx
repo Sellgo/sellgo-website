@@ -7,7 +7,7 @@ import styles from './index.module.scss';
 import FAQAccordion from '../../../components/FAQAccordion';
 
 /* Data */
-import {faqData} from './data'
+import { faqData } from './data';
 
 interface Props {}
 
