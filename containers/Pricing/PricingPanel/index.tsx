@@ -19,7 +19,10 @@ const PricingPanel: React.FC<Props> = () => {
 				<Tab className={styles.pricingPanelTab}>Private Label</Tab>
 			</TabList>
 
-			<TabPanel style={{ minHeight: '70vh' }}></TabPanel>
+			<TabPanel style={{ minHeight: '70vh' }}>Free Trial Plan Details</TabPanel>
+			<TabPanel>
+				
+			</TabPanel>
 		</Tabs>
 	);
 };

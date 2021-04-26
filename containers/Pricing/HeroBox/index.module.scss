@@ -20,7 +20,7 @@
 		color: inherit;
 		font-size: $fontsize_content_14;
 		font-weight: $fontweight_regular;
-		margin-bottom:4rem;
+		margin-bottom: 4rem;
 	}
 }
 
@@ -49,12 +49,12 @@
 	border-left: 1px solid $prim_white;
 	border-bottom: 1px solid $prim_white;
 
-	&__pricing{
-		border-radius:4px 0 0 0;
+	&__pricing {
+		border-radius: 4px 0 0 0;
 	}
 
-	&__bundles{
-		border-radius:0 4px 0 0;
+	&__bundles {
+		border-radius: 0 4px 0 0;
 	}
 
 	&__disabled {
