@@ -5,6 +5,7 @@ import React from 'react';
 
 /* Containers */
 import HeroBox from '../../containers/Pricing/HeroBox';
+import FAQSection from '../../containers/Pricing/FAQSection';
 
 interface Props {}
 
@@ -12,6 +13,7 @@ const PricingPage: React.FC<Props> = () => {
 	return (
 		<>
 			<HeroBox />
+			<FAQSection />
 		</>
 	);
 };

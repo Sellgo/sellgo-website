@@ -20,9 +20,7 @@ const PricingPanel: React.FC<Props> = () => {
 			</TabList>
 
 			<TabPanel style={{ minHeight: '70vh' }}>Free Trial Plan Details</TabPanel>
-			<TabPanel>
-				
-			</TabPanel>
+			<TabPanel></TabPanel>
 		</Tabs>
 	);
 };

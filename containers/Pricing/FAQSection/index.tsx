@@ -14,9 +14,8 @@ interface Props {}
 const FAQSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.faqSection}`}>
-			<h2>Frequently Asked Questions</h2>
-
-			<FAQAccordion data={faqData} horizontalFocus />
+			<h2 className="secondary-heading">Frequently Asked Questions</h2>
+			<FAQAccordion data={faqData} />
 		</section>
 	);
 };
