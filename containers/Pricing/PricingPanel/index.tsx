@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
+import { Tabs, TabList, Tab, TabPanel, resetIdCounter } from 'react-tabs';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -7,6 +7,9 @@ import styles from './index.module.scss';
 interface Props {}
 
 const PricingPanel: React.FC<Props> = () => {
+	// Only for server side isomorphic apps
+	resetIdCounter();
+
 	return (
 		<Tabs selectedTabClassName={styles.pricingPanelTab__Selected}>
 			<TabList className={styles.pricingPanelTabList}>
