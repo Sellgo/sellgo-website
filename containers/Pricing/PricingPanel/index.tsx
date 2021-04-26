@@ -8,10 +8,7 @@ interface Props {}
 
 const PricingPanel: React.FC<Props> = () => {
 	return (
-		<Tabs
-			className={styles.pricingPanelTabsWrapper}
-			selectedTabClassName={styles.pricingPanelTab__Selected}
-		>
+		<Tabs selectedTabClassName={styles.pricingPanelTab__Selected}>
 			<TabList className={styles.pricingPanelTabList}>
 				<Tab className={styles.pricingPanelTab}>Free Trial</Tab>
 				<Tab className={styles.pricingPanelTab}>Pay As You Go</Tab>
@@ -19,8 +16,10 @@ const PricingPanel: React.FC<Props> = () => {
 				<Tab className={styles.pricingPanelTab}>Private Label</Tab>
 			</TabList>
 
-			<TabPanel style={{ minHeight: '70vh' }}>Free Trial Plan Details</TabPanel>
-			<TabPanel></TabPanel>
+			<TabPanel>Free Trial Plan Details</TabPanel>
+			<TabPanel>This is for the pay as you go</TabPanel>
+			<TabPanel>Wholesale</TabPanel>
+			<TabPanel>Private label</TabPanel>
 		</Tabs>
 	);
 };

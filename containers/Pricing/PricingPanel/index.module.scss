@@ -1,9 +1,5 @@
 @import '../../../styles/guidelines';
 
-.pricingPanelWrapper {
-	min-height: 80vh;
-}
-
 .pricingPanelTabsWrapper {
 	width: 100%;
 	min-height: 7.5rem;
@@ -20,6 +16,15 @@
 	margin: 0 auto;
 	border-bottom: 1px solid $second_silver;
 	box-shadow: $box-shadow-2;
+
+	@media only screen and(max-width: 980px) {
+		justify-content: space-around;
+	}
+
+	@media only screen and(max-width: 520px) {
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
 }
 
 .pricingPanelTab {
@@ -28,7 +33,6 @@
 	color: inherit;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	padding: 2rem;
 	cursor: pointer;
 	min-width: 19.3rem;
@@ -37,5 +41,15 @@
 		border-bottom: 2px solid #707070;
 		background: $blue_1;
 		font-weight: $fontweight_semibold;
+	}
+
+	@media only screen and(max-width: 980px) {
+		padding: 2rem;
+		width: max-content;
+		min-width: auto;
+	}
+
+	@media only screen and(max-width: 520px) {
+		width: 50%;
 	}
 }

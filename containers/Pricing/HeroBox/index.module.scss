@@ -9,11 +9,13 @@
 	color: $prim_white;
 	flex-direction: column;
 	position: relative;
+	text-align: center;
 
 	h1 {
 		font-size: $fontsize_subtitle_28;
 		font-weight: $fontweight_bold;
 		color: inherit;
+		width:90%;
 	}
 
 	p {
@@ -21,6 +23,7 @@
 		font-size: $fontsize_content_14;
 		font-weight: $fontweight_regular;
 		margin-bottom: 4rem;
+		width:90%;
 	}
 }
 
@@ -63,5 +66,12 @@
 		border-left: 1px solid $grey_1;
 		border-bottom: 1px solid $grey_1;
 		font-weight: $fontweight_regular;
+	}
+
+	@media only screen and(max-width: 500px) {
+		width: max-content;
+		font-size:1.4rem;
+		height:5rem;
+		min-width: 15rem;
 	}
 }
