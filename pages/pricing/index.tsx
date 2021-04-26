@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Styling */
-// import styles from './index.module.scss';
+import styles from './index.module.scss';
 
 /* Containers */
 import HeroBox from '../../containers/Pricing/HeroBox';
@@ -14,6 +14,7 @@ const PricingPage: React.FC<Props> = () => {
 		<>
 			<HeroBox />
 			<FAQSection />
+			<div className={styles.banner}></div>
 		</>
 	);
 };
