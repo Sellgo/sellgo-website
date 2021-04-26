@@ -4,6 +4,8 @@ import InfoSection from '../../containers/ProductTracker/InfoSection';
 import BenefitsSection from '../../containers/ProductTracker/BenefitsSection';
 import PlansSection from '../../containers/ProductTracker/PlansSection';
 import OtherInfoSection from '../../containers/ProductTracker/OtherInfoSection';
+import FAQSection from '../../containers/ProductTracker/FAQSection';
+import RecommendationSection from '../../containers/ProductTracker/RecommendationSection';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -17,6 +19,8 @@ const ProductTracker = () => {
 			<BenefitsSection />
 			<PlansSection />
 			<OtherInfoSection />
+			<FAQSection />
+			<RecommendationSection/>
 		</>
 	);
 };

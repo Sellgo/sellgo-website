@@ -1,0 +1,15 @@
+@import '../../styles/guidelines';
+
+.recomCard {
+	min-width: 34rem;
+	min-height: 27rem;
+	background: $prim_white;
+
+	@media only screen and(max-width: 1080px) {
+		margin-bottom: 2rem;
+	}
+
+	@media only screen and(max-width: 450px) {
+		min-width:30rem;
+	}
+}
