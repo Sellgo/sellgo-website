@@ -20,7 +20,7 @@ const ProductTracker = () => {
 			<PlansSection />
 			<OtherInfoSection />
 			<FAQSection />
-			<RecommendationSection/>
+			<RecommendationSection />
 		</>
 	);
 };
