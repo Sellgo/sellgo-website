@@ -23,7 +23,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 7rem 0;
+	margin: 7rem auto;
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+	}
 }
 
 .ctaWrapper {
@@ -31,10 +34,17 @@
 	justify-content: center;
 	align-items: center;
 	margin: 6rem auto;
+
+	@media only screen and(max-width: 680px) {
+		flex-direction: column;
+	}
 }
 
 .plansCTA {
 	margin: 0 2rem;
+	@media only screen and(max-width: 680px) {
+		margin-bottom: 2rem;
+	}
 }
 
 .infoDescription {
@@ -62,4 +72,7 @@
 	justify-content: space-around;
 	align-items: center;
 	margin: 5rem 0;
+	@media only screen and(max-width: 600px) {
+		flex-direction: column;
+	}
 }

@@ -31,7 +31,7 @@ const OtherInfoSection: React.FC<Props> = () => {
 					<h4 className={styles.cardsWrapper__Text}>logo or name</h4>
 				</div>
 			</div>
-			
+
 			<h2 className="secondary-heading">
 				Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
 			</h2>

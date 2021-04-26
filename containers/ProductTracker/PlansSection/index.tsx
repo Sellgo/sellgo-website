@@ -65,30 +65,35 @@ const PlansSection: React.FC<Props> = () => {
 					alt="Recognition award for something"
 					width={90}
 					height={110}
+					className={styles.achievement}
 				/>
 				<Image
 					src="/achievementCard.svg"
 					alt="Recognition award for something"
 					width={90}
 					height={110}
+					className={styles.achievement}
 				/>
 				<Image
 					src="/achievementCard.svg"
 					alt="Recognition award for something"
 					width={90}
 					height={110}
+					className={styles.achievement}
 				/>
 				<Image
 					src="/achievementCard.svg"
 					alt="Recognition award for something"
 					width={90}
 					height={110}
+					className={styles.achievement}
 				/>
 				<Image
 					src="/achievementCard.svg"
 					alt="Recognition award for something"
 					width={90}
 					height={110}
+					className={styles.achievement}
 				/>
 			</div>
 		</section>

@@ -9,6 +9,10 @@
 	min-height: 20rem;
 	position: relative;
 
+	@media only screen and(max-width: 1080px) {
+		margin-bottom: 3rem;
+	}
+
 	h3 {
 		color: $prim_dark_2;
 		font-size: $fontsize_subtitle_24;
