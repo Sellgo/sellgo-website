@@ -1,0 +1,42 @@
+@import '../../../styles/guidelines';
+
+.benefitsSection {
+	margin: 15rem auto;
+	text-align: center;
+}
+
+.benefitsCardWrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 8rem auto;
+
+	@media only screen and(max-width: 500px) {
+		flex-direction: column;
+	}
+}
+
+.benefitsCard {
+	display: flex;
+	flex-direction: column;
+	color: $prim_dark_2;
+
+	@media only screen and(max-width: 500px) {
+		margin-bottom: 4rem;
+	}
+
+	h3 {
+		margin: 2rem auto;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_medium;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_regular;
+	}
+}
+
+.benefitsCTA {
+	margin: 4rem auto;
+}

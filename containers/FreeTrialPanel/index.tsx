@@ -9,6 +9,7 @@ import PricingInfoAlert from '../../components/PricingInfoAlert';
 
 /* Containers */
 import FeaturesSection from './FeaturesSection';
+import BenefitsSection from './BenefitsSection';
 
 interface Props {}
 
@@ -23,6 +24,7 @@ const FreeTrialPanel: React.FC<Props> = () => {
 			</section>
 
 			<FeaturesSection />
+			<BenefitsSection />
 		</>
 	);
 };
