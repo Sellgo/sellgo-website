@@ -24,12 +24,9 @@ const PricingPlansCardHead: React.FC<Props> = () => {
 				</div>
 
 				<div className={styles.pricingCardHead__Right}>
+					<h3>$1/Day</h3>
 					<p>
-						Starts at <span>$70</span>
-					</p>
-					<h3>$49/Mo</h3>
-					<p>
-						Billed at <span>$500</span>{' '}
+						Billed at <span>$500</span>
 						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
 							$500/year
 						</span>

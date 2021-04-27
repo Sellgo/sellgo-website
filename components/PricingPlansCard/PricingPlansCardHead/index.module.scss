@@ -19,17 +19,19 @@
 
 	&__Right {
 		text-align: right;
+		h3 {
+			color: $blue_7;
+			font-size: $fontsize_subtitle_20;
+			font-weight: $fontweight_medium;
+		}
+
 		p {
 			color: $prim_dark_2;
 			font-weight: $fontweight_semibold;
 			span {
 				text-decoration: line-through;
+				margin-left: 5px;
 			}
-		}
-		h3 {
-			color: $blue_7;
-			font-size: $fontsize_subtitle_20;
-			font-weight: $fontweight_semibold;
 		}
 	}
 }
