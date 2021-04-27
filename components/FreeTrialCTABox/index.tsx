@@ -11,7 +11,7 @@ interface Props {}
 
 const FreeTrialCTABox: React.FC<Props> = () => {
 	return (
-		<section className={`page-container ${styles.freeTrialCTABox}`}>
+		<section className={`big-page-container ${styles.freeTrialCTABox}`}>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
 					<h2>Free Trial</h2>

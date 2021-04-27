@@ -4,9 +4,12 @@ import { Tabs, TabList, Tab, TabPanel, resetIdCounter } from 'react-tabs';
 /* Styling */
 import styles from './index.module.scss';
 
+/* Conatiners */
+import PricingPlansSection from '../PricingPlansSection';
+
 interface Props {}
 
-const PricingPanel: React.FC<Props> = () => {
+const ProductsPanel: React.FC<Props> = () => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
 
@@ -19,12 +22,23 @@ const PricingPanel: React.FC<Props> = () => {
 				<Tab className={styles.pricingPanelTab}>Private Label</Tab>
 			</TabList>
 
-			<TabPanel>Free Trial Plan Details</TabPanel>
-			<TabPanel>This is for the pay as you go</TabPanel>
-			<TabPanel>Wholesale</TabPanel>
-			<TabPanel>Private label</TabPanel>
+			<TabPanel>
+				<PricingPlansSection />
+			</TabPanel>
+
+			<TabPanel>
+				<PricingPlansSection />
+			</TabPanel>
+
+			<TabPanel>
+				<PricingPlansSection />
+			</TabPanel>
+
+			<TabPanel>
+				<PricingPlansSection />
+			</TabPanel>
 		</Tabs>
 	);
 };
 
-export default PricingPanel;
+export default ProductsPanel;

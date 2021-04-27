@@ -1,0 +1,48 @@
+@import '../../../styles/guidelines';
+
+.pricngPlansSectionWrapper {
+	min-height: 80vh;
+}
+
+.pricingPlansSection {
+	padding-top: 6rem;
+}
+
+.planName {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	span {
+		width: 4rem;
+		height: 4rem;
+		background: $blue_6;
+		border-radius: 3px;
+		margin-right: 10px;
+	}
+
+	h2 {
+		font-size: $fontsize_subtitle_32;
+	}
+}
+
+.planShortSummary {
+	color: $prim_dark_2;
+	font-size: $fontsize_content-14;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem auto;
+	p {
+		margin-right: 10px;
+		color: inherit;
+	}
+}
+
+.pricingPlansCardWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2rem auto;
+	width: 1200px;
+}

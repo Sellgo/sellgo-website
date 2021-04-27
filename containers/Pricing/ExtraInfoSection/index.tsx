@@ -8,7 +8,7 @@ interface Props {}
 
 const ExtraInfoSection: React.FC<Props> = () => {
 	return (
-		<section className={`page-container ${styles.extraInfoSection}`}>
+		<section className={`big-page-container ${styles.extraInfoSection}`}>
 			<div className={styles.extraInfoSection__Image}></div>
 
 			<div className={styles.extraInfoSection__Details}>
