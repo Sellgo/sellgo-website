@@ -4,9 +4,23 @@ import Image from 'next/image';
 /* Styling */
 import styles from './index.module.scss';
 
-interface Props {}
+interface Props {
+	name: string;
+	productsDatabase: number;
+	perDayPrice: number;
+	yearlyPrice: number;
+	annualPrice: number;
+}
 
-const PricingPlansCardHead: React.FC<Props> = () => {
+const PricingPlansCardHead: React.FC<Props> = (props) => {
+	const {
+		name,
+		productsDatabase,
+		perDayPrice,
+		yearlyPrice,
+		annualPrice
+	} = props;
+
 	return (
 		<>
 			<div className={styles.pricingCardHead}>
@@ -19,23 +33,23 @@ const PricingPlansCardHead: React.FC<Props> = () => {
 							height={10}
 							priority
 						/>
-						<span>Starter</span>
+						<span>{name}</span>
 					</h2>
 				</div>
 
 				<div className={styles.pricingCardHead__Right}>
-					<h3>$1/Day</h3>
+					<h3>{`$${perDayPrice}/Day`}</h3>
 					<p>
-						Billed at <span>$500</span>
+						Billed at <span>{`$${annualPrice.toLocaleString()}`}</span>
 						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
-							$500/year
+							{`$${yearlyPrice.toLocaleString()}/yr`}
 						</span>
 					</p>
 				</div>
 			</div>
 
 			<div className={styles.startingAt}>
-				<p>Starts At 1,000</p>
+				<p>Starts At {productsDatabase.toLocaleString()}</p>
 				<a href="#!" target="_blank" rel="noopener noreferrer">
 					<span> products database</span>
 

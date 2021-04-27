@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -16,22 +17,27 @@ import ContactInfo from '../../../components/ContactInfo';
 import ExtraInfoSection from '../ExtraInfoSection';
 import FAQSection from '../FAQSection';
 
-interface Props {}
+interface Props {
+	planName: string;
+	productsIncluded: any;
+}
 
-const PricingPlansSection: React.FC<Props> = () => {
+const PricingPlansSection: React.FC<Props> = (props) => {
+	const { planName, productsIncluded } = props;
+
 	return (
 		<>
 			<section className={styles.pricingPlansSectionWrapper}>
 				<div className={`big-page-container ${styles.pricingPlansSection}`}>
 					<div className={styles.planName}>
 						<span></span>
-						<h2>Wholesale Go</h2>
+						<h2>{planName}</h2>
 					</div>
 
 					<div className={styles.planShortSummary}>
 						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						<a href="#!" className="anchor">
-							Calculate your price{' '}
+							Calculate your price
 							<Image
 								src="/downArrow.svg"
 								alt="Select the arrow to move to calculate your price section"
@@ -46,9 +52,9 @@ const PricingPlansSection: React.FC<Props> = () => {
 				</div>
 
 				<div className={`big-page-container ${styles.pricingPlansCardWrapper}`}>
-					<PricingPlansCard />
-					<PricingPlansCard />
-					<PricingPlansCard />
+					{productsIncluded.map((product: any) => {
+						return <PricingPlansCard key={uuid()} {...product} />;
+					})}
 				</div>
 			</section>
 

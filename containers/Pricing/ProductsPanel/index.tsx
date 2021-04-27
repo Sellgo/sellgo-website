@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tabs, TabList, Tab, TabPanel, resetIdCounter } from 'react-tabs';
+import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -7,6 +8,9 @@ import styles from './index.module.scss';
 /* Conatiners */
 import PricingPlansSection from '../PricingPlansSection';
 import FreeTrialPanel from '../../FreeTrialPanel';
+
+/* Data */
+import { planTypes, plansAndProductsDetails } from './data';
 
 interface Props {}
 
@@ -17,34 +21,27 @@ const ProductsPanel: React.FC<Props> = () => {
 	return (
 		<Tabs selectedTabClassName={styles.pricingPanelTab__Selected}>
 			<TabList className={styles.pricingPanelTabList}>
-				<Tab className={styles.pricingPanelTab}>Free Trial</Tab>
-				<Tab className={styles.pricingPanelTab}>Pay As You Go</Tab>
-				<Tab className={styles.pricingPanelTab}>Wholesale</Tab>
-				<Tab className={styles.pricingPanelTab}>Private Label</Tab>
-				<Tab className={styles.pricingPanelTab}>
-					Seller Scout Pro <span className={styles.newBadge}>New</span>
-				</Tab>
+				{planTypes.map((planType: any) => {
+					return (
+						<Tab key={uuid()} className={styles.pricingPanelTab}>
+							{planType.name}
+							{planType.isNew && <span className={styles.newBadge}>New</span>}
+						</Tab>
+					);
+				})}
 			</TabList>
 
+			{/* Seperation of concern for free trial tab */}
 			<TabPanel>
 				<FreeTrialPanel />
 			</TabPanel>
-
-			<TabPanel>
-				<PricingPlansSection />
-			</TabPanel>
-
-			<TabPanel>
-				<PricingPlansSection />
-			</TabPanel>
-
-			<TabPanel>
-				<PricingPlansSection />
-			</TabPanel>
-
-			<TabPanel>
-				<PricingPlansSection />
-			</TabPanel>
+			{plansAndProductsDetails.map((plan: any) => {
+				return (
+					<TabPanel key={uuid()}>
+						<PricingPlansSection {...plan} />
+					</TabPanel>
+				);
+			})}
 		</Tabs>
 	);
 };
