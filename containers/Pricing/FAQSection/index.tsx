@@ -13,7 +13,7 @@ interface Props {}
 
 const FAQSection: React.FC<Props> = () => {
 	return (
-		<section className={`big-page-container ${styles.faqSection}`}>
+		<section className={`page-container ${styles.faqSection}`}>
 			<h2 className="secondary-heading">Frequently Asked Questions</h2>
 			<FAQAccordion data={faqData} />
 		</section>

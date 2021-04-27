@@ -8,6 +8,7 @@ import HeroBox from '../../containers/Pricing/HeroBox';
 import ProductsPanel from '../../containers/Pricing/ProductsPanel';
 import BundlesPanel from '../../containers/Pricing/BundlesPanel';
 
+import MarketplaceSection from '../../containers/Pricing/MarketplaceSection';
 import ExtraInfoSection from '../../containers/Pricing/ExtraInfoSection';
 import FAQSection from '../../containers/Pricing/FAQSection';
 
@@ -34,6 +35,7 @@ const PricingPage: React.FC<Props> = () => {
 			{isProductsPanelSelected ? <ProductsPanel /> : <BundlesPanel />}
 
 			<FreeTrialCTABox />
+			<MarketplaceSection />
 			<ExtraInfoSection />
 			<FAQSection />
 			<div className={styles.banner}></div>
