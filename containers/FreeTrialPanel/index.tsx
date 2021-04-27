@@ -8,7 +8,7 @@ import FreeTrialCTABox from '../../components/FreeTrialCTABox';
 import PricingInfoAlert from '../../components/PricingInfoAlert';
 
 /* Containers */
-import BenefitsSection from './FeaturesSection';
+import FeaturesSection from './FeaturesSection';
 
 interface Props {}
 
@@ -22,7 +22,7 @@ const FreeTrialPanel: React.FC<Props> = () => {
 				<PricingInfoAlert className={styles.freeTrialInfoAlert} />
 			</section>
 
-			<BenefitsSection />
+			<FeaturesSection />
 		</>
 	);
 };
