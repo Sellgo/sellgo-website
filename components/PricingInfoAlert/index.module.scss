@@ -22,5 +22,8 @@
 		text-decoration: underline;
 		color: inherit;
 		font-size: $fontsize_content_12;
+		span {
+			margin-left: 5px;
+		}
 	}
 }

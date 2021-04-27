@@ -7,11 +7,16 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../CTAButton';
 
-interface Props {}
+interface Props {
+	className?: string;
+}
 
-const FreeTrialCTABox: React.FC<Props> = () => {
+const FreeTrialCTABox: React.FC<Props> = (props) => {
+	const { className } = props;
 	return (
-		<section className={`big-page-container ${styles.freeTrialCTABox}`}>
+		<section
+			className={`big-page-container ${styles.freeTrialCTABox} ${className}`}
+		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
 					<h2>Free Trial</h2>

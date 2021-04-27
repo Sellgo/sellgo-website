@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 
 /* Conatiners */
 import PricingPlansSection from '../PricingPlansSection';
+import FreeTrialPanel from '../../FreeTrialPanel';
 
 interface Props {}
 
@@ -23,7 +24,7 @@ const ProductsPanel: React.FC<Props> = () => {
 			</TabList>
 
 			<TabPanel>
-				<PricingPlansSection />
+				<FreeTrialPanel />
 			</TabPanel>
 
 			<TabPanel>
