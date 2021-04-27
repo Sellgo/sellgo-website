@@ -8,7 +8,7 @@ import FreeTrialCTABox from '../../components/FreeTrialCTABox';
 import PricingInfoAlert from '../../components/PricingInfoAlert';
 
 /* Containers */
-import BenefitsSection from './BenefitsSection';
+import BenefitsSection from './FeaturesSection';
 
 interface Props {}
 

@@ -1,7 +1,18 @@
-export const benefitsData = [
+export const featuresData = [
 	{
 		title: 'Free Trial 1',
-		benefitsList: [
+		featuresList: [
+			'Starter Plus',
+			'Starter Plus',
+			'Starter Plus',
+			'Starter Plus',
+			'Starter Plus',
+			'Starter Plus'
+		]
+	},
+	{
+		title: 'Free Trial 2',
+		featuresList: [
 			'Starter Plus',
 			'Starter Plus',
 			'Starter Plus',
@@ -12,18 +23,7 @@ export const benefitsData = [
 	},
 	{
 		title: 'Free Trial 3',
-		benefitsList: [
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus'
-		]
-	},
-	{
-		title: 'Free Trial 3',
-		benefitsList: [
+		featuresList: [
 			'Starter Plus',
 			'Starter Plus',
 			'Starter Plus',
@@ -34,7 +34,7 @@ export const benefitsData = [
 	},
 	{
 		title: 'Free Trial 4',
-		benefitsList: [
+		featuresList: [
 			'Starter Plus',
 			'Starter Plus',
 			'Starter Plus',

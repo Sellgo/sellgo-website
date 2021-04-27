@@ -7,17 +7,17 @@ import styles from './index.module.scss';
 
 interface Props {
 	title: string;
-	benefitsList: string[];
+	featuresList: string[];
 }
 
-const FreeTrialBenefitsCard: React.FC<Props> = (props) => {
-	const { title, benefitsList } = props;
+const FreeTrialFeaturesCard: React.FC<Props> = (props) => {
+	const { title, featuresList } = props;
 
 	return (
-		<div className={styles.benefitsCard}>
+		<div className={styles.featuresCard}>
 			<h3>{title}</h3>
-			<ul className={styles.benefitsList}>
-				{benefitsList.map((benefits: string) => {
+			<ul className={styles.featuresList}>
+				{featuresList.map((benefits: string) => {
 					return (
 						<li key={uuid()}>
 							<Image
@@ -37,4 +37,4 @@ const FreeTrialBenefitsCard: React.FC<Props> = (props) => {
 	);
 };
 
-export default FreeTrialBenefitsCard;
+export default FreeTrialFeaturesCard;
