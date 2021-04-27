@@ -37,6 +37,12 @@
 		margin-right: 10px;
 		color: inherit;
 	}
+
+	@media only screen and(max-width: 650px) {
+		flex-direction: column;
+		text-align: center;
+		margin: 2rem auto;
+	}
 }
 
 .pricingPlansCardWrapper {
@@ -44,5 +50,8 @@
 	justify-content: space-between;
 	align-items: center;
 	margin: 2rem auto;
-	width: 1200px;
+
+	@media only screen and(max-width: 1200px) {
+		flex-direction: column;
+	}
 }

@@ -36,7 +36,7 @@ const PricingPlansSection: React.FC<Props> = () => {
 				<PricingInfoAlert />
 			</div>
 
-			<div className={styles.pricingPlansCardWrapper}>
+			<div className={`big-page-container ${styles.pricingPlansCardWrapper}`}>
 				<PricingPlansCard />
 				<PricingPlansCard />
 				<PricingPlansCard />
