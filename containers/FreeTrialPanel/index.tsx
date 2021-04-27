@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 /* Components */
 import FreeTrialCTABox from '../../components/FreeTrialCTABox';
 import PricingInfoAlert from '../../components/PricingInfoAlert';
+import ContactInfo from '../../components/ContactInfo';
 
 /* Containers */
 import FeaturesSection from './FeaturesSection';
@@ -25,6 +26,10 @@ const FreeTrialPanel: React.FC<Props> = () => {
 
 			<FeaturesSection />
 			<BenefitsSection />
+
+			<section className={`big-page-container ${styles.contactInfoSection}`}>
+				<ContactInfo />
+			</section>
 		</>
 	);
 };
