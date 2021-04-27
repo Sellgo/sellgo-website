@@ -9,6 +9,7 @@ import ProductsPanel from '../../containers/Pricing/ProductsPanel';
 import BundlesPanel from '../../containers/Pricing/BundlesPanel';
 
 import MarketplaceSection from '../../containers/Pricing/MarketplaceSection';
+import RecommendedBundlesSection from '../../containers/Pricing/RecommendedBundlesSection';
 import ExtraInfoSection from '../../containers/Pricing/ExtraInfoSection';
 import FAQSection from '../../containers/Pricing/FAQSection';
 
@@ -36,6 +37,7 @@ const PricingPage: React.FC<Props> = () => {
 
 			<FreeTrialCTABox />
 			<MarketplaceSection />
+			<RecommendedBundlesSection />
 			<ExtraInfoSection />
 			<FAQSection />
 			<div className={styles.banner}></div>

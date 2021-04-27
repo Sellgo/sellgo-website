@@ -1,6 +1,7 @@
 {
 	"extends": ["stylelint-config-standard", "stylelint-config-prettier"],
 	"rules": {
-		"value-keyword-case": "lower"
+		"value-keyword-case": "lower",
+		"no-descending-specificity": null
 	}
 }
