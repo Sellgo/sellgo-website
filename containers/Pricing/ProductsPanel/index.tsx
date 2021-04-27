@@ -21,10 +21,17 @@ const ProductsPanel: React.FC<Props> = () => {
 				<Tab className={styles.pricingPanelTab}>Pay As You Go</Tab>
 				<Tab className={styles.pricingPanelTab}>Wholesale</Tab>
 				<Tab className={styles.pricingPanelTab}>Private Label</Tab>
+				<Tab className={styles.pricingPanelTab}>
+					Seller Scout Pro <span className={styles.newBadge}>New</span>
+				</Tab>
 			</TabList>
 
 			<TabPanel>
 				<FreeTrialPanel />
+			</TabPanel>
+
+			<TabPanel>
+				<PricingPlansSection />
 			</TabPanel>
 
 			<TabPanel>
