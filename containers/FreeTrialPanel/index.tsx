@@ -11,6 +11,8 @@ import ContactInfo from '../../components/ContactInfo';
 /* Containers */
 import FeaturesSection from './FeaturesSection';
 import BenefitsSection from './BenefitsSection';
+import FAQSection from './FAQSection';
+import CTAButton from '../../components/CTAButton';
 
 interface Props {}
 
@@ -29,6 +31,20 @@ const FreeTrialPanel: React.FC<Props> = () => {
 
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
 				<ContactInfo />
+			</section>
+
+			<FAQSection />
+
+			<section className={`big-page-container ${styles.otherInfoSection}`}>
+				<h2 className="secondary-heading">You May Also Like...</h2>
+				<CTAButton
+					type="primary"
+					size="medium"
+					navigateTo="/"
+					className={styles.otherInfoCTA}
+				>
+					Get Started Free
+				</CTAButton>
 			</section>
 		</>
 	);
