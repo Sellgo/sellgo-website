@@ -1,11 +1,8 @@
 @import '../../styles/guidelines';
 
-.freeTrialWrapper {
-	margin-top: 8rem;
-}
-
 .freeTrialSection {
 	text-align: center;
+	margin-top: 8rem;
 	p {
 		font-size: $fontsize_content_14;
 		color: $prim_dark_2;
@@ -28,4 +25,5 @@
 	border-top-right-radius: 0;
 	border-top-left-radius: 0;
 	border-top: 0;
+	max-width: 120rem;
 }

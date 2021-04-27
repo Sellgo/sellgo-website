@@ -1,0 +1,58 @@
+@import '../../styles/guidelines';
+
+.benefitsCard {
+	border: 1px solid $grey_2;
+	min-height: 35rem;
+	width: 28rem;
+	padding: 3rem;
+	color: $prim_dark_2;
+	border-radius: 7px;
+	position: relative;
+
+	h3 {
+		font-size: $fontsize_subtitle_24;
+		text-align: center;
+		font-weight: $fontweight_medium;
+	}
+
+	button {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	@media only screen and(max-width: 1200px) {
+		margin-bottom: 3rem;
+	}
+}
+
+.benefitsList {
+	margin-top: 2.5rem;
+	font-size: $fontsize_content_14;
+	li {
+		margin-bottom: 1rem;
+		span {
+			margin-left: 8px;
+		}
+	}
+}
+
+.seeAllFeatures {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	background: unset;
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $blue_8;
+	font-size: $fontsize_content_14;
+	border-top: 1px solid $grey_2;
+	cursor: pointer;
+}
