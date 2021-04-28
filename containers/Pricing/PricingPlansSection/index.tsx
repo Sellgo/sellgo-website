@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
+import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -10,6 +11,7 @@ import PricingInfoAlert from '../../../components/PricingInfoAlert';
 import PricingPlansCard from '../../../components/PricingPlansCard';
 import FreeTrialCTABox from '../../../components/FreeTrialCTABox';
 import ContactInfo from '../../../components/ContactInfo';
+// import AllFeaturesTable from '../../../components/AllFeaturesTable';
 
 /* Containers */
 import MarketplaceSection from '../MarketplaceSection';
@@ -26,6 +28,10 @@ interface Props {
 
 const PricingPlansSection: React.FC<Props> = (props) => {
 	const { planName, productsIncluded, selectedPlanType } = props;
+
+	useEffect(() => {
+		Modal.setAppElement('#all-features-modal');
+	}, []);
 
 	return (
 		<>
@@ -72,6 +78,12 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			<CalculateYourPriceSection selectedPlanType={selectedPlanType} />
 			<ExtraInfoSection />
 			<FAQSection />
+
+			{/* <Modal isOpen overlayClassName="modalOverlay" className="modal">
+				<AllFeaturesTable />
+			</Modal> */}
+
+			<div id="all-features-modal" />
 		</>
 	);
 };

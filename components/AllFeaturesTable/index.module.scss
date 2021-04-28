@@ -1,0 +1,25 @@
+@import '../../styles/guidelines';
+
+.allFeaturesTable {
+	border: 1px solid $second_silver;
+	width: 120rem;
+	height: 50rem;
+	margin: 0 auto;
+	overflow: auto;
+	background: $prim_white;
+	border-radius: 7px;
+	position: relative;
+}
+
+.tableHeader {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $second_silver;
+
+	span {
+		width: 4rem;
+		height: 4rem;
+		background: $blue_6;
+	}
+}
