@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
+import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
 
 interface Props {}
 
 const RecommendedBundlesSection: React.FC<Props> = () => {
+	const [isMonthly, setIsMonthly] = useState<boolean>(true);
+
+	const hanldeChange = () => {
+		setIsMonthly(!isMonthly);
+	};
+
 	return (
 		<section
 			className={`big-page-container ${styles.recommendedBundlesWrapper}`}
@@ -75,6 +82,10 @@ const RecommendedBundlesSection: React.FC<Props> = () => {
 							$49 <span className={styles.price__type}>/mo</span>
 							<span className={styles.price__discount}>$500</span>
 						</p>
+						<PricePlanToggleButton
+							isMonthly={isMonthly}
+							handleChange={hanldeChange}
+						/>
 						<CTAButton
 							type="primary"
 							size="medium"
