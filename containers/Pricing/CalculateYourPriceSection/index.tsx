@@ -7,10 +7,14 @@ import styles from './index.module.scss';
 /* Components */
 import BuyPlanPriceCard from '../../../components/BuyPlanPriceCard';
 
-interface Props {}
+interface Props {
+	selectedPlanType: number;
+}
 
-const CalculateYourPriceSection: React.FC<Props> = () => {
+const CalculateYourPriceSection: React.FC<Props> = (props) => {
 	const [isMonthly, setIsMonthly] = useState<boolean>(true);
+
+	const { selectedPlanType } = props;
 
 	const handleChange = () => {
 		setIsMonthly(!isMonthly);
@@ -26,12 +30,34 @@ const CalculateYourPriceSection: React.FC<Props> = () => {
 			<div className={styles.calculatePriceWrapper}>
 				<div className={styles.priceCalculator}>
 					<div className={styles.planTypesWrapper}>
-						<div className={`${styles.planName} ${styles.planName__Active}`}>
+						<div
+							className={`${styles.planName} ${
+								selectedPlanType === 1 ? styles.planName__Active : ''
+							}`}
+						>
 							Pay As You Go
 						</div>
-						<div className={styles.planName}>Wholesale Go</div>
-						<div className={styles.planName}>Private Label</div>
-						<div className={styles.planName}>Seller Scout Pro</div>
+						<div
+							className={`${styles.planName} ${
+								selectedPlanType === 2 ? styles.planName__Active : ''
+							}`}
+						>
+							Wholesale Go
+						</div>
+						<div
+							className={`${styles.planName} ${
+								selectedPlanType === 3 ? styles.planName__Active : ''
+							}`}
+						>
+							Private Label
+						</div>
+						<div
+							className={`${styles.planName} ${
+								selectedPlanType === 4 ? styles.planName__Active : ''
+							}`}
+						>
+							Seller Scout Pro
+						</div>
 					</div>
 				</div>
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Tabs, TabList, Tab, TabPanel, resetIdCounter } from 'react-tabs';
 import { v4 as uuid } from 'uuid';
 
@@ -18,8 +18,23 @@ const ProductsPanel: React.FC<Props> = () => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
 
+	const [selectedPlanType, setSelectedPlanType] = useState<number>(0);
+
+	const handlePlanSelectChange = (index: number, lastIndex: number) => {
+		// [0,1,2,3,4]=['Free Trial','Pay As You Go',WholeSale','Private Label','Seller Scout Pro']
+
+		if (!index) {
+			setSelectedPlanType(lastIndex);
+		} else {
+			setSelectedPlanType(index);
+		}
+	};
+
 	return (
-		<Tabs selectedTabClassName={styles.pricingPanelTab__Selected}>
+		<Tabs
+			selectedTabClassName={styles.pricingPanelTab__Selected}
+			onSelect={handlePlanSelectChange}
+		>
 			<TabList className={styles.pricingPanelTabList}>
 				{planTypes.map((planType: any) => {
 					return (
@@ -38,7 +53,10 @@ const ProductsPanel: React.FC<Props> = () => {
 			{plansAndProductsDetails.map((plan: any) => {
 				return (
 					<TabPanel key={uuid()}>
-						<PricingPlansSection {...plan} />
+						<PricingPlansSection
+							{...plan}
+							selectedPlanType={selectedPlanType}
+						/>
 					</TabPanel>
 				);
 			})}

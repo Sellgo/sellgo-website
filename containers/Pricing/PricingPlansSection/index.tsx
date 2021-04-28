@@ -21,10 +21,11 @@ import FAQSection from '../FAQSection';
 interface Props {
 	planName: string;
 	productsIncluded: any;
+	selectedPlanType: number;
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
-	const { planName, productsIncluded } = props;
+	const { planName, productsIncluded, selectedPlanType } = props;
 
 	return (
 		<>
@@ -68,7 +69,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 				<ContactInfo />
 			</section>
 
-			<CalculateYourPriceSection />
+			<CalculateYourPriceSection selectedPlanType={selectedPlanType} />
 			<ExtraInfoSection />
 			<FAQSection />
 		</>
