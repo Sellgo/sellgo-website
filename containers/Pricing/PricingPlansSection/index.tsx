@@ -9,11 +9,12 @@ import styles from './index.module.scss';
 import PricingInfoAlert from '../../../components/PricingInfoAlert';
 import PricingPlansCard from '../../../components/PricingPlansCard';
 import FreeTrialCTABox from '../../../components/FreeTrialCTABox';
+import ContactInfo from '../../../components/ContactInfo';
 
 /* Containers */
 import MarketplaceSection from '../MarketplaceSection';
 import RecommendedBundlesSection from '../RecommendedBundlesSection';
-import ContactInfo from '../../../components/ContactInfo';
+import CalculateYourPriceSection from '../CalculateYourPriceSection';
 import ExtraInfoSection from '../ExtraInfoSection';
 import FAQSection from '../FAQSection';
 
@@ -61,10 +62,12 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			<FreeTrialCTABox />
 			<MarketplaceSection />
 			<RecommendedBundlesSection />
+
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
 				<ContactInfo />
 			</section>
 
+			<CalculateYourPriceSection />
 			<ExtraInfoSection />
 			<FAQSection />
 		</>
