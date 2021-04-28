@@ -17,7 +17,10 @@ const CalculateYourPriceSection: React.FC<Props> = () => {
 	};
 
 	return (
-		<section className={`big-page-container ${styles.calculatePriceSection}`}>
+		<section
+			className={`big-page-container ${styles.calculatePriceSection}`}
+			id="calculatePrice"
+		>
 			<h2 className="secondary-heading">Calculate your price</h2>
 
 			<div className={styles.calculatePriceWrapper}>

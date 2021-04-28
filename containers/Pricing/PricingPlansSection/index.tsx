@@ -37,7 +37,8 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 
 					<div className={styles.planShortSummary}>
 						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						<a href="#!" className="anchor">
+
+						<a href="#calculatePrice" className="anchor">
 							Calculate your price
 							<Image
 								src="/downArrow.svg"
