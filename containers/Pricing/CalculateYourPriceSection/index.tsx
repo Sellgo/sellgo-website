@@ -21,7 +21,16 @@ const CalculateYourPriceSection: React.FC<Props> = () => {
 			<h2 className="secondary-heading">Calculate your price</h2>
 
 			<div className={styles.calculatePriceWrapper}>
-				<div className={styles.priceCalculator}></div>
+				<div className={styles.priceCalculator}>
+					<div className={styles.planTypesWrapper}>
+						<div className={`${styles.planName} ${styles.planName__Active}`}>
+							Pay As You Go
+						</div>
+						<div className={styles.planName}>Wholesale Go</div>
+						<div className={styles.planName}>Private Label</div>
+						<div className={styles.planName}>Seller Scout Pro</div>
+					</div>
+				</div>
 
 				<div className={styles.buyPlan}>
 					<Link href="/pricing" passHref>
