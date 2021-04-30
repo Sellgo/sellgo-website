@@ -1,15 +1,22 @@
 import type { AppProps /* AppContext */ } from 'next/app';
+import { ApolloProvider } from '@apollo/client/react';
 
 /* Styling */
 import '../styles/globals.scss';
 
+/* Apollo Client */
+import client from '../apollo';
+
+/* Components */
 import Layout from '../components/Layout';
 
 function App({ Component, pageProps }: AppProps) {
 	return (
-		<Layout>
-			<Component {...pageProps} />
-		</Layout>
+		<ApolloProvider client={client}>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</ApolloProvider>
 	);
 }
 
