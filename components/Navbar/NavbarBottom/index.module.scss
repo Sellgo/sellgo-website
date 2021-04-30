@@ -1,0 +1,31 @@
+@import '../../../styles/guidelines';
+
+.navbarBottom {
+	display: flex;
+	width: 90%;
+	margin-left: auto;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 3rem;
+}
+
+.navbarBottomLinksList {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex: 0 0 50%;
+}
+
+.navbarBottomLink {
+	font-size: $fontsize_content_14;
+	color: $prim_dark_2;
+}
+
+.navLink {
+	color: $prim_dark_2;
+	font-weight: $fontweight_semibold;
+}
+
+.navbarCTA {
+	justify-self: flex-end;
+}
