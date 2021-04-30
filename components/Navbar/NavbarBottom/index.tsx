@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 /* Styling */
@@ -9,39 +9,26 @@ import ProductsNavbarExpansion from '../../ProductsNavbarExpansion';
 interface Props {}
 
 const NavbarBottom: React.FC<Props> = () => {
-	const [
-		isProductsNavbarExpanded,
-		setIsProductNavbarExpanded
-	] = useState<boolean>(false);
-
 	return (
 		<div className={styles.navbarBottom}>
 			<ul className={styles.navbarBottomLinksList}>
-				<li
-					className={styles.navbarBottomLink}
-					onClick={() => setIsProductNavbarExpanded(!isProductsNavbarExpanded)}
-					role="presentation"
-				>
-					<Link href="/product-tracker" passHref>
-						<a className={styles.navLink}>
-							<span>Products</span>
-						</a>
-					</Link>
-					<ProductsNavbarExpansion />
+				<li className={styles.navbarBottomLink}>
+					<a href="#" className={styles.navLink}>
+						Products
+					</a>
+					<ProductsNavbarExpansion className={styles.expandedProductsNavbar} />
 				</li>
 
 				<li className={styles.navbarBottomLink}>
 					<Link href="/pricing" passHref>
-						<a className={styles.navLink}>
-							<span>Pricing</span>
-						</a>
+						<a className={styles.navLink}>Pricing</a>
 					</Link>
 				</li>
 
 				<li className={styles.navbarBottomLink}>
-					<p className={styles.navLink}>
-						<span>Resources</span>
-					</p>
+					<a href="#" className={styles.navLink}>
+						Resources
+					</a>
 				</li>
 			</ul>
 
