@@ -34,4 +34,30 @@
 .productsNavbar__right {
 	min-width: 50rem;
 	height: 36rem;
+	padding: 3rem 4rem;
+}
+
+.groupedLinksWrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 50rem;
+}
+
+.bottomSummary {
+	border-top: 1px solid $grey_1;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-top: 3rem;
+
+	h2 {
+		font-size: $fontsize_subtitle_20;
+		font-weight: $fontweight_medium;
+	}
+
+	p {
+		color: $grey_8;
+		margin: 0;
+	}
 }

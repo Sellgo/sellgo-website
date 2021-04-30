@@ -1,8 +1,10 @@
 import React from 'react';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* Components */
+import GroupedNavLink from '../GroupedNavLinks';
 
 interface Props {
 	className: string;
@@ -10,23 +12,41 @@ interface Props {
 
 const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 	const { className } = props;
+
 	return (
 		<div className={className}>
 			<div className={styles.productsNavbar}>
 				<div className={styles.productsNavbar__left}>
 					<div className={styles.productsNavigator}>
 						<h2>Product Tracker</h2>
-						<Link href="/product-tracker" passHref>
-							<a className="anchor">Lorem Ipsum &#x2192;</a>
-						</Link>
+						<a href="/product-tracker" className="anchor">
+							Lorem Ipsum &#x2192;
+						</a>
 					</div>
 					<div className={styles.productsNavigator}>
 						<h2>Product Tracker</h2>
-						<a className="anchor">Lorem Ipsum &#x2192;</a>
+						<a href="/product-tracker" className="anchor">
+							Lorem Ipsum &#x2192;
+						</a>
 					</div>
 				</div>
 
-				<div className={styles.productsNavbar__right}></div>
+				<div className={styles.productsNavbar__right}>
+					<div className={styles.groupedLinksWrapper}>
+						<GroupedNavLink />
+						<GroupedNavLink />
+						<GroupedNavLink />
+						<GroupedNavLink />
+					</div>
+
+					<div className={styles.bottomSummary}>
+						<h2>Lorem Ipsum</h2>
+						<p>Lorem Ipsum</p>
+						<a href="/product-tracker" className="anchor">
+							Lorem Ipsum &#x2192;
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

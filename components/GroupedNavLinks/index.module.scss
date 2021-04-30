@@ -1,0 +1,29 @@
+@import '../../styles/guidelines';
+
+.groupedNavLinks {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 3rem;
+}
+
+.icon {
+	width: 4rem;
+	height: 4rem;
+	background: $grey_1;
+	border-radius: 7px;
+}
+
+.linkDetails {
+	color: $prim_dark_2;
+	margin-left: 1rem;
+	text-align: left;
+	h2 {
+		font-size: $fontsize_subtitle_20;
+		font-weight: $fontweight_medium;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		color: $grey_8;
+	}
+}
