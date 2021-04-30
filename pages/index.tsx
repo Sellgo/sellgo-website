@@ -8,9 +8,13 @@ import ProductsSection from '../containers/HomePage/ProductsSection';
 import StatisticsSection from '../containers/HomePage/StatisticsSection';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 
+/* Components */
+import SEOHead from '../components/SEOHead';
+
 const HomePage = () => {
 	return (
 		<>
+			<SEOHead title="Sellgo" description="" imageUrl="" pageUrl="" />
 			<HeroBox />
 			<InfoSection />
 			<section className={styles.homeBanner} />
