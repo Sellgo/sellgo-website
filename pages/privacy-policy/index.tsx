@@ -56,7 +56,8 @@ export const getStaticProps: GetStaticProps = async () => {
 		props: {
 			seoDetails: seo,
 			pageContent: otherPageDetails
-		}
+		},
+		revalidate: 1
 	};
 };
 
