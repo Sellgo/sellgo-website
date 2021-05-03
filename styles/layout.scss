@@ -25,6 +25,10 @@
 #privacy-page {
 	font-size: 14px;
 
+	h2 {
+		font-size: 2.1rem;
+	}
+
 	a {
 		color: #349af8;
 		overflow-wrap: break-word;
@@ -48,10 +52,8 @@
 
 	#table-of-contents {
 		margin: 3rem auto;
-
 		h2 {
-			margin: 3rem auto;
-			font-size: 3rem;
+			margin-bottom: 3rem;
 		}
 
 		ol {
@@ -71,13 +73,43 @@
 	}
 
 	.section-group {
-		margin: 3rem auto;
+		margin: 4rem auto;
 		width: 100%;
 
 		h3 {
 			margin: 2rem auto;
-			font-size: 2.4rem;
+			font-size: 1.8rem;
 			line-height: 1 !important;
+		}
+	}
+}
+
+#terms-page {
+	.section-group {
+		margin: 2rem 0;
+
+		h2 {
+			margin-bottom: 2rem;
+		}
+		p {
+			margin: 1rem 0;
+		}
+	}
+
+	a {
+		color: #349af8;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		-ms-word-break: break-all;
+		word-break: break-all;
+		word-break: break-word;
+		-ms-hyphens: auto;
+		-moz-hyphens: auto;
+		-webkit-hyphens: auto;
+		hyphens: auto;
+
+		&:hover {
+			color: #5381db;
 		}
 	}
 }
