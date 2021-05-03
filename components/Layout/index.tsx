@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 /* Components */
 import Navbar from '../Navbar';
@@ -9,9 +10,12 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
+	const router = useRouter();
+	const currentPath = router.pathname;
+
 	return (
 		<>
-			<Navbar />
+			{!['/privacy-policy'].includes(currentPath) && <Navbar />}
 			{children}
 			<Footer />
 		</>

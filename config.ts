@@ -1,5 +1,6 @@
 export const DEV_URLS = {
-	CMS_BASE_URL: 'https://graphql.contentful.com'
+	CMS_BASE_URL: 'https://graphql.contentful.com',
+	WPGRAPHQL: 'http://54.242.244.57/graphql'
 };
 
 export const KEYS = {

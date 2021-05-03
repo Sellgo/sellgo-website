@@ -53,3 +53,18 @@ export const GET_BLOG_BY_SLUG = gql`
 		}
 	}
 `;
+
+export const GET_PAGE_BY_URI = gql`
+	query getPageByURI($uri: String!) {
+		pageBy(uri: $uri) {
+			title
+			seo {
+				metaDesc
+				metaKeywords
+				canonical
+				title
+			}
+			content
+		}
+	}
+`;

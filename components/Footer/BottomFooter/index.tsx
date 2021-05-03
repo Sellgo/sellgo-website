@@ -40,17 +40,17 @@ const BottomFooter: React.FC<Props> = () => {
 
 			<ul className={styles.publicLinks}>
 				<li>
-					<Link href="/" passHref>
+					<Link href="/privacy-policy" passHref>
 						<a className="public-footer-link">Privacy Policy</a>
 					</Link>
 				</li>
 				<li>
-					<Link href="/" passHref>
+					<Link href="/privacy-policy" passHref>
 						<a className="public-footer-link">Privacy Policy</a>
 					</Link>
 				</li>
 				<li>
-					<Link href="/" passHref>
+					<Link href="/terms-of-use" passHref>
 						<a className="public-footer-link">Terms of Use</a>
 					</Link>
 				</li>
