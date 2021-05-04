@@ -53,7 +53,8 @@
 	border-bottom: 1px solid $prim_white;
 
 	&__pricing {
-		border-radius: 4px 0 0 0;
+		// border-radius: 4px 0 0 0;
+		border-radius: 4px 4px 0 0;
 	}
 
 	&__bundles {

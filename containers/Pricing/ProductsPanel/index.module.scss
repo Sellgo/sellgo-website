@@ -17,9 +17,9 @@
 	border-bottom: 1px solid $second_silver;
 	box-shadow: $box-shadow-2;
 
-	@media only screen and(max-width: 980px) {
-		justify-content: space-between;
-	}
+	// @media only screen and(max-width: 980px) {
+	// 	justify-content: space-between;
+	// }
 
 	@media only screen and(max-width: 700px) {
 		justify-content: space-evenly;
@@ -40,13 +40,13 @@
 
 	@media only screen and(max-width: 980px) {
 		padding: 2rem;
-		width: max-content;
-		min-width: auto;
+		// width: max-content;
+		// min-width: auto;
 	}
 
-	@media only screen and(max-width: 700px) {
-		width: max-content;
-	}
+	// @media only screen and(max-width: 700px) {
+	// 	width: max-content;
+	// }
 
 	&__Selected {
 		border-bottom: 2px solid #707070;
