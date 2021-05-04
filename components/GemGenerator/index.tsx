@@ -58,7 +58,7 @@ const GemGenerator: React.FC<Props> = (props) => {
 					priority
 				/>,
 				<Image
-					src="/greenGem.svg"
+					src="/blueGem.svg"
 					alt="Gem Icon"
 					width={10}
 					height={10}
