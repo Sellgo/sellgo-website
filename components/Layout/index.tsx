@@ -15,9 +15,9 @@ const Layout: React.FC<Props> = ({ children }) => {
 
 	return (
 		<>
-			{!['/privacy-policy', '/terms-of-use'].includes(currentPath) && (
-				<Navbar />
-			)}
+			{!['/privacy-policy', '/terms-of-use', '/pricing'].includes(
+				currentPath
+			) && <Navbar />}
 			{children}
 			<Footer />
 		</>

@@ -8,11 +8,10 @@ import styles from './index.module.scss';
 import PricingPlansCardHead from './PricingPlansCardHead';
 import PricingPlansCardFeaturesList from './PricingPlansCardFeaturesList';
 
-import CTAButton from '../CTAButton';
-
 interface Props {
 	name: string;
 	productsDatabase: number;
+	salesEstimateCount: number;
 	perDayPrice: number;
 	yearlyPrice: number;
 	annualPrice: number;
@@ -30,7 +29,8 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 		annualPrice,
 		featuresLists,
 		featureSubName,
-		planName
+		planName,
+		salesEstimateCount
 	} = props;
 
 	return (
@@ -43,16 +43,8 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 					yearlyPrice={yearlyPrice}
 					annualPrice={annualPrice}
 					planName={planName}
+					salesEstimateCount={salesEstimateCount}
 				/>
-
-				<CTAButton
-					type="primary"
-					size="medium"
-					navigateTo="/"
-					className={styles.buyNowCTA}
-				>
-					Buy Now
-				</CTAButton>
 
 				<p className={styles.planType}>{featureSubName}</p>
 

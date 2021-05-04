@@ -20,7 +20,7 @@ export const plansAndProductsDetails = [
 			{
 				name: 'Profit Finder',
 				productsDatabase: 1000,
-				perDayPrice: 1,
+				salesEstimateCount: 0,
 				yearlyPrice: 500,
 				annualPrice: 600,
 				featureSubName: 'Starter Plus',
@@ -47,7 +47,7 @@ export const plansAndProductsDetails = [
 			{
 				name: 'Browser Extension',
 				productsDatabase: 2000,
-				perDayPrice: 2,
+				salesEstimateCount: 0,
 				yearlyPrice: 600,
 				annualPrice: 700,
 				featureSubName: 'Starter Plus',
@@ -84,7 +84,7 @@ export const plansAndProductsDetails = [
 			{
 				name: 'Seller Finder',
 				productsDatabase: 3000,
-				perDayPrice: 3,
+				salesEstimateCount: 0,
 				yearlyPrice: 700,
 				annualPrice: 800,
 				featureSubName: 'Starter Plus',
@@ -125,8 +125,8 @@ export const plansAndProductsDetails = [
 		productsIncluded: [
 			{
 				name: 'Starter',
-				productsDatabase: 1000,
-				perDayPrice: 1,
+				productsDatabase: 0,
+				salesEstimateCount: 1000,
 				yearlyPrice: 500,
 				annualPrice: 600,
 				featureSubName: 'Free tools plus',
@@ -151,8 +151,8 @@ export const plansAndProductsDetails = [
 			},
 			{
 				name: 'Suite',
-				productsDatabase: 2000,
-				perDayPrice: 2,
+				productsDatabase: 0,
+				salesEstimateCount: 2000,
 				yearlyPrice: 600,
 				annualPrice: 700,
 				featureSubName: 'Starter Plus',
@@ -181,8 +181,8 @@ export const plansAndProductsDetails = [
 			},
 			{
 				name: 'Professional',
-				productsDatabase: 3000,
-				perDayPrice: 3,
+				productsDatabase: 0,
+				salesEstimateCount: 3000,
 				yearlyPrice: 700,
 				annualPrice: 800,
 				featureSubName: 'Professional Plus',

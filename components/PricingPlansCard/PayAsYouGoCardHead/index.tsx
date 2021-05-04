@@ -3,23 +3,17 @@ import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
+import CTAButton from '../../CTAButton';
 
 interface Props {
 	name: string;
 	productsDatabase: number;
-	perDayPrice: number;
 	yearlyPrice: number;
 	annualPrice: number;
 }
 
 const PayAsYouGoCardHead: React.FC<Props> = (props) => {
-	const {
-		name,
-		productsDatabase,
-		perDayPrice,
-		yearlyPrice,
-		annualPrice
-	} = props;
+	const { name, productsDatabase, yearlyPrice, annualPrice } = props;
 
 	return (
 		<>
@@ -38,9 +32,10 @@ const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 				</div>
 
 				<div className={styles.pricingCardHead__Right}>
-					<h3>{`$${perDayPrice}/Day`}</h3>
+					<h3>$1/Day</h3>
 					<p>
-						Billed at <span>{`$${annualPrice.toLocaleString()}`}</span>
+						Billed at{' '}
+						<span className="strke-text">{`$${annualPrice.toLocaleString()}`}</span>
 						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
 							{`$${yearlyPrice.toLocaleString()}/yr`}
 						</span>
@@ -62,6 +57,14 @@ const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 					/>
 				</a>
 			</div>
+			<CTAButton
+				type="primary"
+				size="medium"
+				navigateTo="/"
+				className={styles.buyNameCTA}
+			>
+				Buy Now
+			</CTAButton>
 		</>
 	);
 };
