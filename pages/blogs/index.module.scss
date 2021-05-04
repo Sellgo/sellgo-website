@@ -1,0 +1,34 @@
+@import '../../styles/guidelines';
+
+.blogsPage {
+	font-size: 1.4rem;
+	color: $prim_dark_2;
+	max-width: 940px;
+	padding: 5rem;
+	border: 1px solid $grey_1;
+	margin: 10rem auto;
+	border-radius: 10px;
+	h1 {
+		margin: 4rem auto;
+		font-size: 3.6rem;
+	}
+}
+
+.blog {
+	h2 {
+		margin: 3rem auto;
+		text-align: left;
+		font-size: 2.5rem;
+	}
+
+	p {
+		margin: 1rem auto;
+	}
+
+	figure {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 2rem auto;
+	}
+}

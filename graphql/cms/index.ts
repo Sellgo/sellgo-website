@@ -1,22 +1,12 @@
 import { gql } from '@apollo/client';
 
 export const GET_ALL_BLOGS = gql`
-	query getAllBlogs {
-		blogsCollection {
-			items {
+	query MyQuery {
+		posts {
+			nodes {
+				content
 				title
 				slug
-				keywords
-				featuredImage {
-					title
-					description
-					width
-					height
-					url
-				}
-				content {
-					json
-				}
 			}
 		}
 	}

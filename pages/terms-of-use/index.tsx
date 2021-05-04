@@ -29,7 +29,7 @@ const TermOfUse: React.FC<Props> = (props) => {
 				imageUrl=""
 				pageUrl="https://www.sellgo/com/terms-of-use"
 			/>
-			<main className={`page-container ${styles.termsPage}`}>
+			<main className={`blog-page-container ${styles.termsPage}`}>
 				<h1>{pageContent.title}</h1>
 				<article
 					id="terms-page"
