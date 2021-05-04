@@ -9,6 +9,7 @@ import styles from './index.module.scss';
 import PricingInfoAlert from '../../../components/PricingInfoAlert';
 import PricingPlansCard from '../../../components/PricingPlansCard';
 import FreeTrialCTABox from '../../../components/FreeTrialCTABox';
+import AllfeaturesTable from '../../../components/AllFeaturesTable';
 // import ContactInfo from '../../../components/ContactInfo';
 
 /* Containers */
@@ -18,6 +19,9 @@ import FreeTrialCTABox from '../../../components/FreeTrialCTABox';
 // import ExtraInfoSection from '../ExtraInfoSection';
 import FAQSection from '../FAQSection';
 
+/* Constants */
+import { getAllFeaturesForPlans } from '../../../data/Pricing';
+
 interface Props {
 	planName: string;
 	productsIncluded: any;
@@ -26,6 +30,8 @@ interface Props {
 
 const PricingPlansSection: React.FC<Props> = (props) => {
 	const { planName, productsIncluded, selectedPlanType } = props;
+
+	const allPlanFeatures = getAllFeaturesForPlans(planName);
 
 	return (
 		<>
@@ -64,6 +70,14 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						);
 					})}
 				</div>
+			</section>
+
+			<section className={`big-page-container ${styles.allFeaturesSection}`}>
+				{allPlanFeatures.map((feature: any) => {
+					return (
+						<AllfeaturesTable header={feature.header} body={feature.body} />
+					);
+				})}
 			</section>
 
 			<FreeTrialCTABox className={styles.freeTrialBox} />
