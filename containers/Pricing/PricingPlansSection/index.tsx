@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 
@@ -10,6 +10,8 @@ import PricingInfoAlert from '../../../components/PricingInfoAlert';
 import PricingPlansCard from '../../../components/PricingPlansCard';
 import FreeTrialCTABox from '../../../components/FreeTrialCTABox';
 import AllfeaturesTable from '../../../components/AllFeaturesTable';
+import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
+
 // import ContactInfo from '../../../components/ContactInfo';
 
 /* Containers */
@@ -30,6 +32,8 @@ interface Props {
 
 const PricingPlansSection: React.FC<Props> = (props) => {
 	const { planName, productsIncluded, selectedPlanType } = props;
+
+	const [isMonthly, setIsMonthly] = useState(true);
 
 	const allPlanFeatures = getAllFeaturesForPlans(planName);
 
@@ -59,17 +63,33 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 
 					{/* Show only for Pay as you go plans */}
 					{selectedPlanType === 1 && <PricingInfoAlert />}
-				</div>
 
-				<div className={`big-page-container ${styles.pricingPlansCardWrapper}`}>
-					{/* Show for all other plans except pay as you go */}
-
-					{productsIncluded.map((product: any) => {
-						return (
-							<PricingPlansCard key={uuid()} {...product} planName={planName} />
-						);
-					})}
+					{/* Show for all expect pay as you go */}
+					{selectedPlanType !== 1 && (
+						<PricePlanToggleButton
+							isMonthly={isMonthly}
+							handleChange={() => setIsMonthly(!isMonthly)}
+							className={styles.paymentModeToggle}
+						/>
+					)}
 				</div>
+			</section>
+
+			<section
+				className={`big-page-container ${styles.pricingPlansCardWrapper}`}
+			>
+				{/* Show for all other plans except pay as you go */}
+
+				{productsIncluded.map((product: any) => {
+					return (
+						<PricingPlansCard
+							key={uuid()}
+							{...product}
+							planName={planName}
+							isMonthly={isMonthly}
+						/>
+					);
+				})}
 			</section>
 
 			<section className={`big-page-container ${styles.allFeaturesSection}`}>

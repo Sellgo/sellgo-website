@@ -127,8 +127,8 @@ export const plansAndProductsDetails = [
 				name: 'Starter',
 				productsDatabase: 0,
 				salesEstimateCount: 1000,
-				yearlyPrice: 500,
-				annualPrice: 600,
+				monthlyPrice: 49,
+				annualPrice: 348,
 				featureSubName: 'Free tools plus',
 				featuresLists: [
 					{
@@ -153,8 +153,8 @@ export const plansAndProductsDetails = [
 				name: 'Suite',
 				productsDatabase: 0,
 				salesEstimateCount: 2000,
-				yearlyPrice: 600,
-				annualPrice: 700,
+				monthlyPrice: 69,
+				annualPrice: 504,
 				featureSubName: 'Starter Plus',
 				featuresLists: [
 					{
@@ -183,8 +183,8 @@ export const plansAndProductsDetails = [
 				name: 'Professional',
 				productsDatabase: 0,
 				salesEstimateCount: 3000,
-				yearlyPrice: 700,
-				annualPrice: 800,
+				monthlyPrice: 129,
+				annualPrice: 996,
 				featureSubName: 'Professional Plus',
 				featuresLists: [
 					{

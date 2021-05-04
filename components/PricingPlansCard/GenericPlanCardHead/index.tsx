@@ -7,15 +7,20 @@ import CTAButton from '../../CTAButton';
 
 interface Props {
 	name: string;
-	productsDatabase: number;
-	perDayPrice: number;
-	yearlyPrice: number;
+	monthlyPrice: number;
 	annualPrice: number;
 	salesEstimateCount: number;
+	isMonthly: boolean;
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
-	const { name, salesEstimateCount } = props;
+	const {
+		name,
+		salesEstimateCount,
+		isMonthly,
+		monthlyPrice,
+		annualPrice
+	} = props;
 
 	return (
 		<>
@@ -58,16 +63,27 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 
 			<div className={styles.startingAt}>
 				<p>
-					Starts At <span className="strike-text">$60</span>
+					Starts At{' '}
+					{!isMonthly && <span className="strike-text">${monthlyPrice}</span>}
 				</p>
-				<h3>$42/ Mo</h3>
-				<p className={styles.billedAtPrice}>
-					Billed At <span className="strike-text">$50</span>
-					<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
-						$504/yr
-					</span>
-					Save $240
-				</p>
+
+				{isMonthly ? (
+					<h3>${monthlyPrice}/ Mo</h3>
+				) : (
+					<h3>${Math.round(annualPrice / 12)}/ Mo</h3>
+				)}
+
+				{!isMonthly ? (
+					<p className={styles.billedAtPrice}>
+						Billed At <span className="strike-text">${monthlyPrice * 12}</span>
+						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
+							${annualPrice}/yr
+						</span>
+						Save ${monthlyPrice * 12 - annualPrice}
+					</p>
+				) : (
+					<p>Billed Monthly</p>
+				)}
 			</div>
 			<CTAButton
 				type="primary"

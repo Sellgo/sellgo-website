@@ -24,6 +24,8 @@ interface Props {
 	featuresLists: any;
 	featureSubName: string;
 	planName: string;
+	isMonthly: boolean;
+	monthlyPrice: number;
 }
 
 const PricingPlansCard: React.FC<Props> = (props) => {
@@ -36,7 +38,9 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 		featuresLists,
 		featureSubName,
 		planName,
-		salesEstimateCount
+		salesEstimateCount,
+		isMonthly,
+		monthlyPrice
 	} = props;
 
 	const isGradientHeader = plansWithHeaderGradient.includes(name);
@@ -65,6 +69,8 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 					annualPrice={annualPrice}
 					planName={planName}
 					salesEstimateCount={salesEstimateCount}
+					isMonthly={isMonthly}
+					monthlyPrice={monthlyPrice}
 				/>
 
 				<p className={styles.planType}>{featureSubName}</p>

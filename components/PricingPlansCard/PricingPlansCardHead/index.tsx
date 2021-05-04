@@ -12,6 +12,8 @@ interface Props {
 	annualPrice: number;
 	planName: string;
 	salesEstimateCount: number;
+	isMonthly: boolean;
+	monthlyPrice: number;
 }
 
 const PricingPlansCardHead: React.FC<Props> = (props) => {
