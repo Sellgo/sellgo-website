@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
-import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -10,14 +9,13 @@ import styles from './index.module.scss';
 import PricingInfoAlert from '../../../components/PricingInfoAlert';
 import PricingPlansCard from '../../../components/PricingPlansCard';
 import FreeTrialCTABox from '../../../components/FreeTrialCTABox';
-import ContactInfo from '../../../components/ContactInfo';
-// import AllFeaturesTable from '../../../components/AllFeaturesTable';
+// import ContactInfo from '../../../components/ContactInfo';
 
 /* Containers */
-import MarketplaceSection from '../MarketplaceSection';
-import RecommendedBundlesSection from '../RecommendedBundlesSection';
-import CalculateYourPriceSection from '../CalculateYourPriceSection';
-import ExtraInfoSection from '../ExtraInfoSection';
+// import MarketplaceSection from '../MarketplaceSection';
+// import RecommendedBundlesSection from '../RecommendedBundlesSection';
+// import CalculateYourPriceSection from '../CalculateYourPriceSection';
+// import ExtraInfoSection from '../ExtraInfoSection';
 import FAQSection from '../FAQSection';
 
 interface Props {
@@ -28,10 +26,6 @@ interface Props {
 
 const PricingPlansSection: React.FC<Props> = (props) => {
 	const { planName, productsIncluded, selectedPlanType } = props;
-
-	useEffect(() => {
-		Modal.setAppElement('#all-features-modal');
-	}, []);
 
 	return (
 		<>
@@ -57,33 +51,35 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						</a>
 					</div>
 
-					<PricingInfoAlert />
+					{/* Show only for Pay as you go plans */}
+					{selectedPlanType === 1 && <PricingInfoAlert />}
 				</div>
 
 				<div className={`big-page-container ${styles.pricingPlansCardWrapper}`}>
+					{/* Show for all other plans except pay as you go */}
+
 					{productsIncluded.map((product: any) => {
-						return <PricingPlansCard key={uuid()} {...product} />;
+						return (
+							<PricingPlansCard key={uuid()} {...product} planName={planName} />
+						);
 					})}
 				</div>
 			</section>
 
-			<FreeTrialCTABox />
-			<MarketplaceSection />
-			<RecommendedBundlesSection />
+			<FreeTrialCTABox className={styles.freeTrialBox} />
 
-			<section className={`big-page-container ${styles.contactInfoSection}`}>
+			{/* Remove section for now */}
+
+			{/* <MarketplaceSection /> */}
+			{/* <RecommendedBundlesSection /> */}
+
+			{/* <section className={`big-page-container ${styles.contactInfoSection}`}>
 				<ContactInfo />
-			</section>
+			</section> */}
 
-			<CalculateYourPriceSection selectedPlanType={selectedPlanType} />
-			<ExtraInfoSection />
+			{/* <CalculateYourPriceSection selectedPlanType={selectedPlanType} /> */}
+			{/* <ExtraInfoSection /> */}
 			<FAQSection />
-
-			{/* <Modal isOpen overlayClassName="modalOverlay" className="modal">
-				<AllFeaturesTable />
-			</Modal> */}
-
-			<div id="all-features-modal" />
 		</>
 	);
 };

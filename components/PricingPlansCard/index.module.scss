@@ -5,7 +5,7 @@
 	background: $prim_white;
 	border-radius: 7px;
 	min-width: 38rem;
-	min-height: 88rem;
+	min-height: 80rem;
 	border: 1px solid $second_silver;
 
 	@media only screen and(max-width: 1200px) {
@@ -20,7 +20,7 @@
 .pricingPlansCard {
 	width: 100%;
 	padding: 2rem;
-	margin-bottom: 10rem;
+	height: 100%;
 }
 
 .buyNowCTA {
@@ -31,23 +31,4 @@
 
 .planType {
 	font-size: $fontsize_content_14;
-}
-
-.seeAllFeatures {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	border: 0;
-	outline: 0;
-	background: unset;
-	height: 5rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: $blue_8;
-	font-size: $fontsize_content_14;
-	border-top: 1px solid $second_silver;
-	cursor: pointer;
 }

@@ -10,10 +10,9 @@ interface Props {
 	perDayPrice: number;
 	yearlyPrice: number;
 	annualPrice: number;
-	planName: string;
 }
 
-const PricingPlansCardHead: React.FC<Props> = (props) => {
+const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 	const {
 		name,
 		productsDatabase,
@@ -67,4 +66,4 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 	);
 };
 
-export default PricingPlansCardHead;
+export default PayAsYouGoCardHead;

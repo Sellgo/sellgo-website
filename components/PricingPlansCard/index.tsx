@@ -17,6 +17,8 @@ interface Props {
 	yearlyPrice: number;
 	annualPrice: number;
 	featuresLists: any;
+	featureSubName: string;
+	planName: string;
 }
 
 const PricingPlansCard: React.FC<Props> = (props) => {
@@ -26,7 +28,9 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 		perDayPrice,
 		yearlyPrice,
 		annualPrice,
-		featuresLists
+		featuresLists,
+		featureSubName,
+		planName
 	} = props;
 
 	return (
@@ -38,6 +42,7 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 					perDayPrice={perDayPrice}
 					yearlyPrice={yearlyPrice}
 					annualPrice={annualPrice}
+					planName={planName}
 				/>
 
 				<CTAButton
@@ -49,7 +54,7 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 					Buy Now
 				</CTAButton>
 
-				<p className={styles.planType}>Starter Plus</p>
+				<p className={styles.planType}>{featureSubName}</p>
 
 				<div className={styles.pricingPlansCardBody}>
 					{featuresLists.map((featureList: any) => {
@@ -59,7 +64,6 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 					})}
 				</div>
 			</div>
-			<button className={styles.seeAllFeatures}>See all features</button>
 		</div>
 	);
 };

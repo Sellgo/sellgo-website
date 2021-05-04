@@ -48,7 +48,7 @@
 .pricingPlansCardWrapper {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	margin: 2rem auto;
 
 	@media only screen and(max-width: 1200px) {
@@ -59,4 +59,8 @@
 .contactInfoSection {
 	margin: 10rem auto;
 	margin-bottom: 20rem;
+}
+
+.freeTrialBox {
+	margin: 10rem auto;
 }

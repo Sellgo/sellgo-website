@@ -10,14 +10,6 @@ export const planTypes = [
 	{
 		name: 'Wholesale',
 		isNew: false
-	},
-	{
-		name: 'Private Label',
-		isNew: false
-	},
-	{
-		name: 'Seller Scout Pro',
-		isNew: true
 	}
 ];
 
@@ -31,6 +23,7 @@ export const plansAndProductsDetails = [
 				perDayPrice: 1,
 				yearlyPrice: 500,
 				annualPrice: 600,
+				featureSubName: 'Starter Plus',
 				featuresLists: [
 					{
 						title: 'Feature 1',
@@ -49,8 +42,7 @@ export const plansAndProductsDetails = [
 							'Starter Plus'
 						]
 					}
-				],
-				allFeaturesDetails: []
+				]
 			},
 			{
 				name: 'Browser Extension',
@@ -58,6 +50,7 @@ export const plansAndProductsDetails = [
 				perDayPrice: 2,
 				yearlyPrice: 600,
 				annualPrice: 700,
+				featureSubName: 'Starter Plus',
 				featuresLists: [
 					{
 						title: 'Feature 1',
@@ -86,8 +79,7 @@ export const plansAndProductsDetails = [
 							'Starter Plus'
 						]
 					}
-				],
-				allFeaturesDetails: []
+				]
 			},
 			{
 				name: 'Seller Finder',
@@ -95,6 +87,7 @@ export const plansAndProductsDetails = [
 				perDayPrice: 3,
 				yearlyPrice: 700,
 				annualPrice: 800,
+				featureSubName: 'Starter Plus',
 				featuresLists: [
 					{
 						title: 'Feature 1',
@@ -123,8 +116,7 @@ export const plansAndProductsDetails = [
 							'Starter Plus'
 						]
 					}
-				],
-				allFeaturesDetails: []
+				]
 			}
 		]
 	},
@@ -132,347 +124,91 @@ export const plansAndProductsDetails = [
 		planName: 'Wholesale Go',
 		productsIncluded: [
 			{
-				name: 'Profit Finder',
+				name: 'Starter',
 				productsDatabase: 1000,
 				perDayPrice: 1,
 				yearlyPrice: 500,
 				annualPrice: 600,
+				featureSubName: 'Free tools plus',
 				featuresLists: [
 					{
-						title: 'Feature 1',
+						title: 'Discover Best Selling',
 						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
+							'Full access to the Chrome extension',
+							'Profit Finder FBA bulk calculation',
+							'Data input as UPC, EAN, ASIN, ISBN'
 						]
 					},
 					{
-						title: 'Feature 2',
+						title: 'Understand Your Leads',
 						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
+							'Supplier analytics',
+							'Product Tracker',
+							'Historical Data'
 						]
 					}
-				],
-				allFeaturesDetails: []
+				]
 			},
 			{
-				name: 'Browser Extension',
+				name: 'Suite',
 				productsDatabase: 2000,
 				perDayPrice: 2,
 				yearlyPrice: 600,
 				annualPrice: 700,
+				featureSubName: 'Starter Plus',
 				featuresLists: [
 					{
-						title: 'Feature 1',
+						title: 'Advanced profit scout',
 						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
+							'Full access to Profit Finder Web App',
+							'Instant analytics with Data Buster',
+							'Advanced filter preset',
+							'Bulk product error analysis',
+							'Bulk filtered data export'
 						]
 					},
 					{
-						title: 'Feature 2',
+						title: 'Optimize your leads',
 						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
+							'Product analysis',
+							'Bulk variation analysis',
+							'Competitive seller analysis',
+							'Inventory insight',
+							'Market share insight'
 						]
 					}
-				],
-				allFeaturesDetails: []
+				]
 			},
 			{
-				name: 'Seller Finder',
+				name: 'Professional',
 				productsDatabase: 3000,
 				perDayPrice: 3,
 				yearlyPrice: 700,
 				annualPrice: 800,
+				featureSubName: 'Professional Plus',
 				featuresLists: [
 					{
-						title: 'Feature 1',
+						title: 'Advance your leads',
 						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
+							'Full access to Leads Tracker',
+							'Bulk multipack analysis',
+							'Process up to 1,000,000 ASINs monthly',
+							'Track up to 1,000 ASINs daily'
 						]
 					},
 					{
-						title: 'Feature 2',
+						title: 'Seller Reverse Research',
 						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
+							'Seller Finder',
+							'Check sellers inventory',
+							'Brand finder'
 						]
 					},
 					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
+						title: 'Advanced access',
+						featuresIncluded: ['7 users included', 'Priority onboarding']
 					}
-				],
-				allFeaturesDetails: []
-			}
-		]
-	},
-	{
-		planName: 'Private Label Go',
-		productsIncluded: [
-			{
-				name: 'Profit Finder',
-				productsDatabase: 1000,
-				perDayPrice: 1,
-				yearlyPrice: 500,
-				annualPrice: 600,
-				featuresLists: [
-					{
-						title: 'Feature 1',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 2',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					}
-				],
-				allFeaturesDetails: []
-			},
-			{
-				name: 'Browser Extension',
-				productsDatabase: 2000,
-				perDayPrice: 2,
-				yearlyPrice: 600,
-				annualPrice: 700,
-				featuresLists: [
-					{
-						title: 'Feature 1',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 2',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					}
-				],
-				allFeaturesDetails: []
-			},
-			{
-				name: 'Seller Finder',
-				productsDatabase: 3000,
-				perDayPrice: 3,
-				yearlyPrice: 700,
-				annualPrice: 800,
-				featuresLists: [
-					{
-						title: 'Feature 1',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 2',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					}
-				],
-				allFeaturesDetails: []
-			}
-		]
-	},
-	{
-		planName: 'Seller Scout Pro',
-		productsIncluded: [
-			{
-				name: 'Profit Finder',
-				productsDatabase: 1000,
-				perDayPrice: 1,
-				yearlyPrice: 500,
-				annualPrice: 600,
-				featuresLists: [
-					{
-						title: 'Feature 1',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 2',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					}
-				],
-				allFeaturesDetails: []
-			},
-			{
-				name: 'Browser Extension',
-				productsDatabase: 2000,
-				perDayPrice: 2,
-				yearlyPrice: 600,
-				annualPrice: 700,
-				featuresLists: [
-					{
-						title: 'Feature 1',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 2',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					}
-				],
-				allFeaturesDetails: []
-			},
-			{
-				name: 'Seller Finder',
-				productsDatabase: 3000,
-				perDayPrice: 3,
-				yearlyPrice: 700,
-				annualPrice: 800,
-				featuresLists: [
-					{
-						title: 'Feature 1',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 2',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					}
-				],
-				allFeaturesDetails: []
+				]
 			}
 		]
 	}
