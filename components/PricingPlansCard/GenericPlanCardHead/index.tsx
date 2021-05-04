@@ -3,7 +3,10 @@ import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* Components */
 import CTAButton from '../../CTAButton';
+import GemGenerator from '../../GemGenerator';
 
 interface Props {
 	name: string;
@@ -27,27 +30,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			<div className={styles.pricingCardHead}>
 				<div className={styles.pricingCardHead__Left}>
 					<div className={styles.planGems}>
-						<Image
-							src="/gemIcon.svg"
-							alt="Gem Icon"
-							width={10}
-							height={10}
-							priority
-						/>
-						<Image
-							src="/greenGem.svg"
-							alt="Gem Icon"
-							width={10}
-							height={10}
-							priority
-						/>
-						<Image
-							src="/blueGem.svg"
-							alt="Gem Icon"
-							width={10}
-							height={10}
-							priority
-						/>
+						<GemGenerator name={name} />
 					</div>
 					<h2>{name}</h2>
 				</div>
