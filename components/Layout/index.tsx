@@ -5,6 +5,9 @@ import { useRouter } from 'next/router';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 
+/* Constants */
+import { hideNavigationOnRoutes } from '../../constants';
+
 interface Props {
 	children: React.ReactNode;
 }
@@ -15,9 +18,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 
 	return (
 		<>
-			{!['/privacy-policy', '/terms-of-use', '/pricing'].includes(
-				currentPath
-			) && <Navbar />}
+			{!hideNavigationOnRoutes.includes(currentPath) && <Navbar />}
 			{children}
 			<Footer />
 		</>

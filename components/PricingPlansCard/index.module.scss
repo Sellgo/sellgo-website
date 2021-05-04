@@ -8,6 +8,11 @@
 	min-height: 80rem;
 	border: 1px solid $second_silver;
 
+	&__NoBorder {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
 	@media only screen and(max-width: 1200px) {
 		margin-top: 3rem;
 	}
@@ -15,6 +20,15 @@
 	@media only screen and(max-width: 450px) {
 		min-width: 100%;
 	}
+}
+
+.headerGradient {
+	position: absolute;
+	top: 0;
+	height: 8px;
+	width: 100%;
+	left: 0;
+	right: 0;
 }
 
 .pricingPlansCard {

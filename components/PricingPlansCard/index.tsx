@@ -8,6 +8,12 @@ import styles from './index.module.scss';
 import PricingPlansCardHead from './PricingPlansCardHead';
 import PricingPlansCardFeaturesList from './PricingPlansCardFeaturesList';
 
+/* Constants */
+import {
+	plansWithHeaderGradient,
+	pricingCardHeaderGradients
+} from '../../constants';
+
 interface Props {
 	name: string;
 	productsDatabase: number;
@@ -33,8 +39,23 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 		salesEstimateCount
 	} = props;
 
+	const isGradientHeader = plansWithHeaderGradient.includes(name);
+
+	const cardWrapperClassName = `${styles.pricingPlansCardWrapper} ${
+		isGradientHeader ? styles.pricingPlansCardWrapper__NoBorder : ''
+	}`;
+
 	return (
-		<div className={styles.pricingPlansCardWrapper}>
+		<div className={cardWrapperClassName}>
+			{/* Header gradients for plans */}
+
+			{isGradientHeader && (
+				<div
+					className={styles.headerGradient}
+					style={{ background: `${pricingCardHeaderGradients[name]}` }}
+				/>
+			)}
+
 			<div className={styles.pricingPlansCard}>
 				<PricingPlansCardHead
 					name={name}
