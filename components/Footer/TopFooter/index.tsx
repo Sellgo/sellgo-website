@@ -33,7 +33,7 @@ const TopFooter: React.FC<Props> = () => {
 				<li className="footerNavigationLinks">Products</li>
 				<li className="footerNavigationLinks">
 					<Link href="/" passHref>
-						<a>Supplier Management</a>
+						<a>Search Management</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
@@ -46,13 +46,14 @@ const TopFooter: React.FC<Props> = () => {
 						<a>Product Tracker</a>
 					</Link>
 				</li>
-			</ul>
-
-			<ul className={styles.footerNavigation}>
-				<li className="footerNavigationLinks">Features</li>
 				<li className="footerNavigationLinks">
 					<Link href="/" passHref>
-						<a>Whitepapers</a>
+						<a>Seller Database</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/" passHref>
+						<a>Seller Finder</a>
 					</Link>
 				</li>
 			</ul>
@@ -61,17 +62,22 @@ const TopFooter: React.FC<Props> = () => {
 				<li className="footerNavigationLinks">Resources</li>
 				<li className="footerNavigationLinks">
 					<Link href="/" passHref>
-						<a>Placeholder</a>
+						<a>Blogs</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
 					<Link href="/" passHref>
-						<a>Placeholder</a>
+						<a>Affiliate Program</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
 					<Link href="/" passHref>
-						<a>Placeholder</a>
+						<a>Free Sales Estimation Tools</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/" passHref>
+						<a>Free Amazon FBA Fee Calculator</a>
 					</Link>
 				</li>
 			</ul>

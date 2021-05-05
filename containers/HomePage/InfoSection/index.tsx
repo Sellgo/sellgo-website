@@ -17,16 +17,13 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<h2 className="secondary-heading">
-					The Amazon Opportunity Finder Your Business Will Love
+					The Amazon Opportunity Finder to Make Your Business Thrive
 				</h2>
 
 				<p className={styles.infoSectionDescription}>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint
+				Sellgo's tools provide any Amazon seller with endless opportunities to grow and expand your wholesale or 
+				private label business. Whether you need help with product scouting or product research, 
+				our powerful FBA tools can help you exceed limitations and accelerate your Amazon business.
 				</p>
 
 				<div className={styles.infoSectionCTAWrapper}>
@@ -36,7 +33,7 @@ const InfoSection: React.FC<Props> = () => {
 						navigateTo="/"
 						className={styles.infoSectionCTA}
 					>
-						Get Free Opportunity Finder
+						Get Free Wholesale Tools
 					</CTAButton>
 					<CTAButton
 						type="secondary"
@@ -44,7 +41,7 @@ const InfoSection: React.FC<Props> = () => {
 						navigateTo="/"
 						className={styles.infoSectionCTA}
 					>
-						Demo premium Opportunity Finder
+						Demo Premium Wholesale Tools
 					</CTAButton>
 				</div>
 

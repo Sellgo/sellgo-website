@@ -11,10 +11,10 @@ const GroupedNavLink: React.FC<Props> = () => {
 		<div className={styles.groupedNavLinks}>
 			<div className={styles.icon} />
 			<div className={styles.linkDetails}>
-				<h2>Lorem Ipsum</h2>
-				<p>Lorem Ipsum</p>
+				<h2>Wholesale Go</h2>
+				<p>Wholesale Sourcing Software.</p>
 				<Link href="/" passHref>
-					<a className="anchor">Lorem Ipsum &#x2192;</a>
+					<a className="anchor">$1 and Premium Plan &#x2192;</a>
 				</Link>
 			</div>
 		</div>

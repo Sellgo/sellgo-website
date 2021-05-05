@@ -18,15 +18,15 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 			<div className={styles.productsNavbar}>
 				<div className={styles.productsNavbar__left}>
 					<div className={styles.productsNavigator}>
-						<h2>Product Tracker</h2>
+						<h2>The Full FBA <br /> Sourcing <br />Platform</h2>
 						<a href="/product-tracker" className="anchor">
-							Lorem Ipsum &#x2192;
+							Overview of all <br /> products &#x2192;
 						</a>
 					</div>
 					<div className={styles.productsNavigator}>
-						<h2>Product Tracker</h2>
+						<h2>Free Sourcing</h2>
 						<a href="/product-tracker" className="anchor">
-							Lorem Ipsum &#x2192;
+							Overview of Sellgo's <br /> free tools &#x2192;
 						</a>
 					</div>
 				</div>
@@ -36,14 +36,13 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 						<GroupedNavLink />
 						<GroupedNavLink />
 						<GroupedNavLink />
-						<GroupedNavLink />
 					</div>
 
 					<div className={styles.bottomSummary}>
-						<h2>Lorem Ipsum</h2>
-						<p>Lorem Ipsum</p>
+						<h2>App Marketplace</h2>
+						<p>Connect your favorite apps to Sellgo</p>
 						<a href="/product-tracker" className="anchor">
-							Lorem Ipsum &#x2192;
+							See all integrations &#x2192;
 						</a>
 					</div>
 				</div>
