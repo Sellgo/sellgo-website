@@ -11,7 +11,7 @@ import RecommendationSection from '../../containers/WholesaleGo/RecommendationSe
 /* Styling */
 import styles from './index.module.scss';
 
-const WholesaleGo = () => {
+const WholesaleGoPage = () => {
 	return (
 		<>
 			<HeroBox />
@@ -27,4 +27,4 @@ const WholesaleGo = () => {
 	);
 };
 
-export default WholesaleGo;
+export default WholesaleGoPage;

@@ -1,17 +1,17 @@
 /* Containers */
-import HeroBox from '../../containers/ProductTracker/HeroBox';
-import InfoSection from '../../containers/ProductTracker/InfoSection';
-import BenefitsSection from '../../containers/ProductTracker/BenefitsSection';
-import BannerCTASection from '../../containers/ProductTracker/BannerCTASection';
-import PlansSection from '../../containers/ProductTracker/PlansSection';
-import OtherInfoSection from '../../containers/ProductTracker/OtherInfoSection';
-import FAQSection from '../../containers/ProductTracker/FAQSection';
-import RecommendationSection from '../../containers/ProductTracker/RecommendationSection';
+import HeroBox from '../../containers/PrivatelabelGo/HeroBox';
+import InfoSection from '../../containers/PrivatelabelGo/InfoSection';
+import BenefitsSection from '../../containers/PrivatelabelGo/BenefitsSection';
+import BannerCTASection from '../../containers/PrivatelabelGo/BannerCTASection';
+import PlansSection from '../../containers/PrivatelabelGo/PlansSection';
+import OtherInfoSection from '../../containers/PrivatelabelGo/OtherInfoSection';
+import FAQSection from '../../containers/PrivatelabelGo/FAQSection';
+import RecommendationSection from '../../containers/PrivatelabelGo/RecommendationSection';
 
 /* Styling */
 import styles from './index.module.scss';
 
-const ProductTracker = () => {
+const PrivateLabelPage = () => {
 	return (
 		<>
 			<HeroBox />
@@ -27,4 +27,4 @@ const ProductTracker = () => {
 	);
 };
 
-export default ProductTracker;
+export default PrivateLabelPage;

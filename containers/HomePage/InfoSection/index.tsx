@@ -21,9 +21,11 @@ const InfoSection: React.FC<Props> = () => {
 				</h2>
 
 				<p className={styles.infoSectionDescription}>
-				Sellgo's tools provide any Amazon seller with endless opportunities to grow and expand your wholesale or 
-				private label business. Whether you need help with product scouting or product research, 
-				our powerful FBA tools can help you exceed limitations and accelerate your Amazon business.
+					Sellgo&apos;s tools provide any Amazon seller with endless
+					opportunities to grow and expand your wholesale or private label
+					business. Whether you need help with product scouting or product
+					research, our powerful FBA tools can help you exceed limitations and
+					accelerate your Amazon business.
 				</p>
 
 				<div className={styles.infoSectionCTAWrapper}>

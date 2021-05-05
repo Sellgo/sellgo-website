@@ -17,7 +17,8 @@ const HeroBox: React.FC<Props> = () => {
 						Ultimate Amazon Wholesale <br /> Sourcing Tools
 					</h1>
 					<p className={`${styles.tagline}`}>
-						Scout, source, and sell high demand, winning products<br />
+						Scout, source, and sell high demand, winning products
+						<br />
 						for your Wholesale business with prime FBA tools.
 					</p>
 

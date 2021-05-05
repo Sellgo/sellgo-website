@@ -11,7 +11,7 @@ import RecommendationSection from '../../containers/SellerscoutGo/Recommendation
 /* Styling */
 import styles from './index.module.scss';
 
-const SellerscoutGo = () => {
+const SellerScoutPage = () => {
 	return (
 		<>
 			<HeroBox />
@@ -27,4 +27,4 @@ const SellerscoutGo = () => {
 	);
 };
 
-export default SellerscoutGo;
+export default SellerScoutPage;
