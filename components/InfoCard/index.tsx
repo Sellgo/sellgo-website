@@ -12,10 +12,11 @@ interface Props {
 	description: string;
 	featureList: string[];
 	isPopular: boolean;
+	navigateTo: string;
 }
 
 const InfoCard: React.FC<Props> = (props) => {
-	const { title, isPopular, description, featureList } = props;
+	const { title, isPopular, description, featureList, navigateTo } = props;
 	return (
 		<div className={styles.infoCard}>
 			{isPopular && <div className={styles.infoCardLabel}>Most Popular</div>}
@@ -45,7 +46,7 @@ const InfoCard: React.FC<Props> = (props) => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="/"
+				navigateTo={navigateTo}
 				className={styles.featureCTA}
 			>
 				Get Started

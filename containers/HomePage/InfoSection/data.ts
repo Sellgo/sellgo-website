@@ -8,7 +8,8 @@ export const featureSectionList = [
 			'Competition Analysis',
 			'Define Product Range'
 		],
-		isPopular: false
+		isPopular: false,
+		navigateTo: '/'
 	},
 	{
 		title: 'Wholesale Go',
@@ -19,7 +20,8 @@ export const featureSectionList = [
 			'Popular Features',
 			'Pupular Features-2'
 		],
-		isPopular: true
+		isPopular: true,
+		navigateTo: '/'
 	},
 	{
 		title: 'Professional Go',
@@ -30,6 +32,7 @@ export const featureSectionList = [
 			'Popular Features-2',
 			'Pupular Features-3'
 		],
-		isPopular: false
+		isPopular: false,
+		navigateTo: '/'
 	}
 ];
