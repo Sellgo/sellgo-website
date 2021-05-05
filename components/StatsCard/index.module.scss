@@ -8,6 +8,11 @@
 	min-width: 20rem;
 	text-align: center;
 	padding: 3rem 0;
+
+	&:nth-child(4n) {
+		border-right: 0;
+	}
+
 	&__bottom {
 		border-bottom: 0;
 		border-top: 1px solid $prim_white;

@@ -8,22 +8,25 @@ interface Props {
 	statsCount: number;
 	statsLabel: string;
 	bottomStats: boolean;
+	iconImageLink: string;
+	imageAltText: string;
 }
 
 const StatsCard: React.FC<Props> = (props) => {
-	const { statsCount, statsLabel, bottomStats } = props;
+	const {
+		statsCount,
+		statsLabel,
+		bottomStats,
+		iconImageLink,
+		imageAltText
+	} = props;
 
 	const statsCardClassName = `${styles.statsCard} ${
 		bottomStats ? styles.statsCard__bottom : ''
 	}`;
 	return (
 		<div className={statsCardClassName}>
-			<Image
-				src="/medalIcon.svg"
-				alt="Medl icon representing the successful statistics"
-				width={35}
-				height={35}
-			/>
+			<Image src={iconImageLink} alt={imageAltText} width={35} height={35} />
 			<h3 className={styles.statsCount}>
 				{statsCount} <span>+</span>
 			</h3>
