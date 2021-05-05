@@ -14,7 +14,7 @@ const NavbarBottom: React.FC<Props> = () => {
 			<ul className={styles.navbarBottomLinksList}>
 				<li className={styles.navbarBottomLink}>
 					<a href="#" className={styles.navLink}>
-						Products
+						Software
 					</a>
 					<ProductsNavbarExpansion className={styles.expandedProductsNavbar} />
 				</li>
@@ -38,7 +38,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				navigateTo="/"
 				className={styles.navbarCTA}
 			>
-				Get Sellgo Free
+				Try Sellgo for $1
 			</CTAButton>
 		</div>
 	);

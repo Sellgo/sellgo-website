@@ -1,10 +1,14 @@
 import React from 'react';
+import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import StatsCard from '../../../components/StatsCard';
+
+/* Data */
+import { statisticsData } from './data';
 
 interface Props {}
 
@@ -26,46 +30,11 @@ const StatisticsSection: React.FC<Props> = () => {
 				</p>
 
 				<div className={styles.statisticsGrid}>
-					<StatsCard
-						statsCount={100}
-						statsLabel="Popular Features"
-						bottomStats={false}
-					/>
-					<StatsCard
-						statsCount={100}
-						statsLabel="Popular Features"
-						bottomStats={false}
-					/>
-					<StatsCard
-						statsCount={100}
-						statsLabel="Popular Features"
-						bottomStats={false}
-					/>
-					<StatsCard
-						statsCount={100}
-						statsLabel="Popular Features"
-						bottomStats={false}
-					/>
-					<StatsCard
-						statsCount={100}
-						statsLabel="Popular Features"
-						bottomStats
-					/>
-					<StatsCard
-						statsCount={100}
-						statsLabel="Popular Features"
-						bottomStats
-					/>
-					<StatsCard
-						statsCount={100}
-						statsLabel="Popular Features"
-						bottomStats
-					/>
-					<StatsCard
-						statsCount={100}
-						statsLabel="Popular Features"
-						bottomStats
-					/>
+					{statisticsData.map((statistics: any, index: number) => {
+						return (
+							<StatsCard key={uuid()} {...statistics} bottomStats={index > 3} />
+						);
+					})}
 				</div>
 			</div>
 		</section>

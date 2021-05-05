@@ -7,7 +7,7 @@
 		"eslint": "eslint --config ./.eslintrc.json **/*.{js,jsx,ts,tsx} --fix",
 		"stylelint": "stylelint **/*.{css,scss} --fix",
 		"lint": "npm-run-all prettier eslint stylelint",
-		"dev": "npm run lint && next dev",
+		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
 		"prepare": "husky install"

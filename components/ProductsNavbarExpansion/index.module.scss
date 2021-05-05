@@ -3,7 +3,6 @@
 .productsNavbar {
 	background: $prim_white;
 	width: 100%;
-	height: 100%;
 	display: flex;
 	box-shadow: 0 5px 10px rgba(#000, 0.5);
 }
@@ -11,7 +10,7 @@
 .productsNavbar__left {
 	min-width: 24rem;
 	background: $grey_1;
-	height: 36rem;
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -32,16 +31,14 @@
 }
 
 .productsNavbar__right {
-	min-width: 50rem;
-	height: 36rem;
 	padding: 3rem 4rem;
+	height: 100%;
 }
 
 .groupedLinksWrapper {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-wrap: wrap;
-	max-width: 50rem;
 }
 
 .bottomSummary {

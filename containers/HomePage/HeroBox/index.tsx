@@ -14,13 +14,12 @@ const HeroBox: React.FC<Props> = () => {
 			<div className={`page-container ${styles.herobox}`}>
 				<div className={`${styles.heroboxText}`}>
 					<h1 className={`${styles.heading}`}>
-						Find Winning <br /> Wholesale Products!
+						Ultimate Amazon Wholesale <br /> Sourcing Tools
 					</h1>
 					<p className={`${styles.tagline}`}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea
+						Scout, source, and sell high demand, winning products
+						<br />
+						for your Wholesale business with prime FBA tools.
 					</p>
 
 					<CTAButton
@@ -29,11 +28,11 @@ const HeroBox: React.FC<Props> = () => {
 						navigateTo="/"
 						className={styles.ctaHeroBox}
 					>
-						Get Sellgo Free
+						Try Sellgo for $1
 					</CTAButton>
 
 					<small className={`${styles.ctaOverText}`}>
-						Get started with FREE tools, and <br /> upgrade as your grow
+						Or get started with FREE tools, and <br /> upgrade as your grow
 					</small>
 				</div>
 			</div>

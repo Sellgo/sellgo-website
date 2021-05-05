@@ -2,7 +2,7 @@ export const wholeSalePlanAllFeatures = [
 	{
 		header: ['Brief', 'Starter', 'Suite', 'Professional'],
 		body: [
-			['Money-back guarantee help', '-', '-', '-'],
+			['Money-back guarantee help', '✓', '✓', '✓'],
 			['Cancel any time help', '-', '-', '-'],
 			['Included users', '-', '-', '-'],
 			['Eligible for additional users', '-', '-', '-'],

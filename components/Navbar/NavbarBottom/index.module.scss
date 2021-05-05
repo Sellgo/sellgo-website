@@ -16,11 +16,12 @@
 	left: -15rem;
 	display: none;
 	visibility: none;
-	min-height: 36rem;
 	border-radius: 5px;
-	width: max-content;
+	min-width: 108rem;
+	max-width: 108rem;
 	overflow: hidden;
 	padding: 2.2rem 2rem;
+	z-index: 999;
 }
 
 .navbarBottomLinksList {
