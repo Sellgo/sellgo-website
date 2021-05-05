@@ -16,7 +16,7 @@ const ProductsSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.productsSection}`}>
 			<h2 className="secondary-heading">
-				Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+			From Wholesale to Private Label to Agencies. Whatever your business model and needs, Sellgo is here to help you grow.
 			</h2>
 
 			<div className={styles.productsWrapper}>
@@ -32,7 +32,7 @@ const ProductsSection: React.FC<Props> = () => {
 			</div>
 
 			<h2 className="secondary-heading">
-				Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+			Get Started and Access Sellgo's Tools to Grow Your Business.
 			</h2>
 			<CTAButton
 				type="primary"
@@ -40,7 +40,7 @@ const ProductsSection: React.FC<Props> = () => {
 				navigateTo="/"
 				className={styles.productsSectionCTA}
 			>
-				Get Started
+				See Pricing Plans
 			</CTAButton>
 		</section>
 	);
