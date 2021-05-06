@@ -29,7 +29,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 	return (
 		<>
 			<SEOHead
-				title="Blogs| Sellgo"
+				title="Blogs | Sellgo"
 				description="Blogs Page For Sellgo"
 				imageUrl=""
 				pageUrl={`${AppConfig.WEB_URL}/blogs`}
