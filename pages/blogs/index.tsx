@@ -34,6 +34,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 				imageUrl=""
 				pageUrl={`${AppConfig.WEB_URL}/blogs`}
 			/>
+
 			<main className={`page-container ${styles.blogsPage}`}>
 				<section className={styles.blogsHeroSection}>
 					<div className={styles.blogsHeroSection__Left}>
@@ -73,6 +74,8 @@ const BlogsPage: React.FC<Props> = (props) => {
 						<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[5]} extended />
 					</aside>
 				</section>
+
+				<div className="divider"></div>
 			</main>
 		</>
 	);
