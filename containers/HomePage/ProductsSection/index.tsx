@@ -16,7 +16,8 @@ const ProductsSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.productsSection}`}>
 			<h2 className="secondary-heading">
-			From Wholesale to Private Label to Agencies. Whatever your business model and needs, Sellgo is here to help you grow.
+				From Wholesale to Private Label to Agencies. Whatever your business
+				model and needs, Sellgo is here to help you grow.
 			</h2>
 
 			<div className={styles.productsWrapper}>
@@ -32,7 +33,7 @@ const ProductsSection: React.FC<Props> = () => {
 			</div>
 
 			<h2 className="secondary-heading">
-			Get Started and Access Sellgo's Tools to Grow Your Business.
+				Get Started and Access Sellgo&apos;s Tools to Grow Your Business.
 			</h2>
 			<CTAButton
 				type="primary"
