@@ -1,23 +1,44 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
 
-interface Props {}
+/* Types */
+import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 
-const BigFeatureCard: React.FC<Props> = () => {
+/* Utils */
+import {
+	generateCategoryDisplayName,
+	imageLoaderForBlogs
+} from '../../../utils/Blogs';
+
+interface Props {
+	showcaseBlogDetails: ShowcaseBlogDetails;
+}
+
+const BigFeatureCard: React.FC<Props> = (props) => {
+	const { showcaseBlogDetails } = props;
+
+	const { featuredImage, slug, title, categories } = showcaseBlogDetails;
+
 	return (
-		<Link href="/" passHref>
+		<Link href={`/blogs/blog/${slug}`} passHref>
 			<a>
 				<article className={styles.bigFeatureCard}>
-					<div className={styles.bgImage}></div>
+					<div className={styles.bgImage}>
+						<Image
+							loader={imageLoaderForBlogs}
+							src={featuredImage.node.sourceUrl}
+							alt={featuredImage.node.altText}
+							layout="fill"
+							objectFit="cover"
+						/>
+					</div>
 					<div className={styles.blogText}>
-						<h1>
-							How to Write a Blog Post: A Step-by-Step guide [+ Free Blog Post
-							Template]
-						</h1>
-						<p>Marketing | 25 Min read</p>
+						<h1>{title}</h1>
+						<p>{generateCategoryDisplayName(categories.nodes)} | 25 Min read</p>
 					</div>
 				</article>
 			</a>

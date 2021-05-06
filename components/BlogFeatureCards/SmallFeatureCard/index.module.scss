@@ -1,26 +1,34 @@
 @import '../../../styles/guidelines';
 
 .smallFeatureCard {
-	border: 1px solid #000;
 	border-radius: 7px;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
 	width: 35rem;
-	min-height: 100%;
+	height: 47rem;
+	max-height: 100%;
+	box-shadow: $box-shadow-1;
+
+	&__Extended {
+		min-height: 68rem;
+	}
 }
 
 .bgImage {
 	min-height: 20rem;
-	max-height: 20rem;
+	height: 20rem;
 	width: 100%;
+	overflow: hidden;
+	z-index: -1;
+	position: relative;
 }
 
 .blogText {
 	color: $prim_dark_2;
 	background: $grey_1;
 	padding: 2rem;
-	min-height: 18rem;
+	// min-height: 18rem;
 	width: 100%;
 	position: relative;
 	flex: 1;
@@ -28,7 +36,7 @@
 	h2 {
 		font-size: $fontsize_subtitle_24;
 		font-weight: $fontweight_semibold;
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
 	}
 
 	p {

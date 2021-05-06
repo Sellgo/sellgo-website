@@ -1,60 +1,27 @@
 import { gql } from '@apollo/client';
 
-export const GET_ALL_BLOGS = gql`
-	query MyQuery {
-		posts {
+export const GET_SHOW_CASE_BLOGS = gql`
+	query getBlogsForShowcase {
+		posts(first: 6, where: { orderby: { field: DATE, order: DESC } }) {
 			nodes {
-				content
+				slug
 				title
-				slug
-			}
-		}
-	}
-`;
-
-export const GET_ALL_SLUGS = gql`
-	query getAllSlugs {
-		blogsCollection {
-			items {
-				slug
-			}
-		}
-	}
-`;
-
-export const GET_BLOG_BY_SLUG = gql`
-	query getBlogBySlug($slug: String!) {
-		blogsCollection(where: { slug: $slug }) {
-			items {
-				title
-				slug
-				keywords
 				featuredImage {
-					title
-					description
-					width
-					height
-					url
+					node {
+						altText
+						sourceUrl
+						mediaDetails {
+							width
+							height
+						}
+					}
 				}
-				content {
-					json
+				categories {
+					nodes {
+						name
+					}
 				}
 			}
-		}
-	}
-`;
-
-export const GET_PAGE_BY_URI = gql`
-	query getPageByURI($uri: String!) {
-		pageBy(uri: $uri) {
-			title
-			seo {
-				metaDesc
-				metaKeywords
-				canonical
-				title
-			}
-			content
 		}
 	}
 `;
