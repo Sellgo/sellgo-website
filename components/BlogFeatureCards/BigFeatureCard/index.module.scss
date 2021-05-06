@@ -1,0 +1,37 @@
+@import '../../../styles/guidelines';
+
+.bigFeatureCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 7px;
+	overflow: hidden;
+	min-height: 60rem;
+	border: 1px solid #000;
+	transition: transform 0.1s ease-in-out;
+}
+
+.bgImage {
+	min-height: 50rem;
+	background: $grey_1;
+	background: $prim_white;
+}
+
+.blogText {
+	color: $prim_dark_2;
+	background: $grey_1;
+	padding: 2rem;
+	min-height: 18rem;
+
+	h1 {
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_semibold;
+	}
+
+	p {
+		text-transform: uppercase;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_semibold;
+		margin-top: 2rem;
+	}
+}
