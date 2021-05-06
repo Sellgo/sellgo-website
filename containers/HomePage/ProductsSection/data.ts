@@ -1,49 +1,32 @@
 export const productsDetails = [
 	{
-		title: 'Search Management',
-		subTitle: 'Start Product Sourcing Here',
-		description: `Upload dozens of suppliers' catalogs at once and filter 
-		thousands of products instantly. Highlight suppliers with high quality 
-		and profitable products that match your business needs.`,
-		linkLabel: 'Explore Search Management Tool',
+		title: 'Amazon Wholesale Sellers',
+		subTitle: 'Streamline Your Amazon Wholesale Business',
+		description: `Obtain all the tools you need to scout, source, and sell profitable, 
+		high-demand products for your Amazon inventory. 
+		Use Sellgo's reliable data and sales analytics to build a 
+		thriving Amazon wholesale business.`,
+		linkLabel: 'Learn more about our Amazon wholesale resources.',
 		navigateTo: '/',
 		imageUrl: '/productOne.png'
 	},
 	{
-		title: 'Profit Finder',
-		subTitle: 'Explore Best Selling Products Online',
-		description: `Sort, filter, and identify thousands of products based on real-time data 
-		to hand-pick winning products to source your FBA wholesale business. 
-		Build your inventory with proven products and data-driven decisions that will grow your Amazon business.`,
-		linkLabel: 'Explore Profit Finder Tool',
+		title: 'Amazon Private Label Sellers',
+		subTitle: 'Expand Your Amazon Private Label',
+		description: `Access the tools you need to grow your Amazon private label business. 
+		Sellgo's powerful FBA tools empower private label sellers with the data and resources to
+		 maximize your brand, sales, and profits.`,
+		linkLabel: 'Learn more about our Amazon private label resources.',
 		navigateTo: '/',
 		imageUrl: '/productSecond.png'
 	},
 	{
-		title: 'Product Tracker',
-		subTitle: 'Empower Your Amazon Product Research',
-		description: `Monitor your sales performances and detect high demand and profitable products 
-		to shape your Amazon strategy and maximize your productivity.`,
-		linkLabel: 'Explore Product Tracker Tool',
-		navigateTo: '/',
-		imageUrl: '/productThird.png'
-	},
-	{
-		title: 'Seller Finder',
-		subTitle: 'Compete with Amazon Top Sellers',
-		description: `With more sellers joining Amazon FBA, spy on your competitor's products 
-		and start sourcing winning, profitable products to grow your own catalog. 
-		Gain a competitive advantage to compete in any Amazon Buy Box.`,
-		linkLabel: 'Explore Seller Finder Tool',
-		navigateTo: '/',
-		imageUrl: '/productSecond.png'
-	},
-	{
-		title: 'Picture right',
-		subTitle: 'Empower Your Amazon Product Research',
-		description: `Monitor your sales performances and detect high demand and profitable products 
-		to shape your Amazon strategy and maximize your productivity.`,
-		linkLabel: 'Explore Product Tracker Tool',
+		title: 'Brands, Agencies, and Enterprise',
+		subTitle: 'Connect with the Amazon Network',
+		description: `Uncover new market segments and reach out to thousands of Amazon 
+		sellers to showcase your company, products, or services. Join a network 
+		of existing sellers who are already looking for you. `,
+		linkLabel: 'Learn more about our Brand, Agency, and Enterprise resources.',
 		navigateTo: '/',
 		imageUrl: '/productThird.png'
 	}
