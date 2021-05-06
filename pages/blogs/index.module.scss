@@ -3,19 +3,102 @@
 .blogsPage {
 	min-height: 100vh;
 	margin: 5rem auto;
+	margin-bottom: 15rem;
 }
 
 .blogsHeroSection {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	margin-bottom: 2rem;
+
+	&__Left {
+		flex: 0 0 70%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-right: 2rem;
+	}
+
+	&__Right {
+		flex: 0 0 30%;
+		justify-content: space-between;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
 }
 
-.blogCard {
-	width: 75%;
-	margin-right: 3rem;
+.recommededSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 2rem;
+
+	&__Left {
+		flex: 0 0 70%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-right: 2rem;
+	}
+
+	&__Right {
+		flex: 0 0 30%;
+		justify-content: space-between;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
 }
 
-.blogFilter {
-	width: 30%;
+.otherBlogsSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 2rem;
+
+	&__Left {
+		flex: 0 0 30%;
+		justify-content: space-between;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		margin-right: 2rem;
+	}
+
+	&__Right {
+		flex: 0 0 70%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
+
+.lastBlogsSection {
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	&__Left {
+		margin-right: 2rem;
+	}
+
+	&__Right {
+		height: 100%;
+	}
+}
+
+.newsLetter {
+	min-height: 47rem;
+	background: $orange_5;
+	width: 100%;
+	border-radius: 7px;
+}
+
+.report {
+	min-height: 67.5rem;
+	background: $orange_5;
+	width: 100%;
+	border-radius: 7px;
 }

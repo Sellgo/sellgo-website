@@ -3,6 +3,7 @@
 .filteredBlogs {
 	width: 100%;
 	height: 100%;
+	margin-bottom: 2rem;
 }
 
 .filterBlogLabel {
@@ -16,6 +17,7 @@
 	justify-content: flex-start;
 	padding-left: 2rem;
 	align-items: center;
+	margin-bottom: 2rem;
 	p {
 		color: inherit;
 	}
@@ -26,7 +28,7 @@
 	color: $prim_dark_2;
 	width: 100%;
 	border-radius: 3px;
-	margin: 2rem auto;
+	margin: 1rem auto;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
