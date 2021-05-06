@@ -1,22 +1,22 @@
-@import '../../styles/guidelines';
+@import '../../../styles/guidelines';
 
 .blogsPage {
 	font-size: 1.4rem;
 	color: $prim_dark_2;
-	max-width: 940px;
-	padding: 5rem;
-	border: 1px solid $grey_1;
-	margin: 10rem auto;
-	border-radius: 10px;
+	margin: 5rem auto;
+	margin-bottom: 15rem;
+
 	h1 {
-		margin: 4rem auto;
-		font-size: 3.6rem;
+		margin: 10rem auto;
+		font-size: 3.4rem;
+		text-align: center;
 	}
 }
 
 .blog {
+	margin-top: 10rem;
 	h2 {
-		margin: 3rem auto;
+		margin: 4rem auto;
 		text-align: left;
 		font-size: 2.5rem;
 	}

@@ -25,3 +25,43 @@ export const GET_SHOW_CASE_BLOGS = gql`
 		}
 	}
 `;
+
+export const GET_ALL_SLUGS = gql`
+	query getAllSlugs {
+		posts {
+			nodes {
+				slug
+			}
+		}
+	}
+`;
+
+export const GET_BLOG_BY_SLUG = gql`
+	query getBlogBySlug($slug: String!) {
+		postBy(slug: $slug) {
+			author {
+				node {
+					name
+				}
+			}
+			title
+			slug
+			content
+			seo {
+				metaDesc
+				metaKeywords
+				title
+			}
+			featuredImage {
+				node {
+					altText
+					sourceUrl
+					mediaDetails {
+						width
+						height
+					}
+				}
+			}
+		}
+	}
+`;

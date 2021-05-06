@@ -1,17 +1,26 @@
 export const DEV_URLS = {
-	CMS_BASE_URL: 'https://graphql.contentful.com',
+	WEB_URL: 'https://www.sellgo-dev.com',
 	WPGRAPHQL: 'http://54.242.244.57/graphql'
 };
 
-export const KEYS = {
-	DELIVERY_API_KEYS: 'hJhIpKSwuZlcQl_bvqGXvhNZmOR5nOKs1E72-2J4SII',
-	PREVIEW_API_KEY: 'zpHiIArEoinlmGbSYNJ9jbHZfgxf2E5pqS4CsxUtHQE',
-	SPACE_ID: 'dk5234jyg52f'
+export const PROD_URLS = {
+	WEB_URL: 'https://www.sellgo.com',
+	WPGRAPHQL: 'http://54.242.244.57/graphql'
 };
 
-const AppConfig = {
-	...DEV_URLS,
-	...KEYS
+const DEV = {
+	...DEV_URLS
 };
 
+const PROD = {
+	...PROD_URLS
+};
+const getAppConfig = () => {
+	if (process.env.NODE_ENV === 'production') {
+		return PROD;
+	}
+
+	return DEV;
+};
+const AppConfig = getAppConfig();
 export default AppConfig;

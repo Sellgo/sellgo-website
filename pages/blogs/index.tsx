@@ -10,10 +10,14 @@ import client from '../../apollo';
 /* GraphQL */
 import { GET_SHOW_CASE_BLOGS } from '../../graphql/cms';
 
+/* App Config */
+import AppConfig from '../../config';
+
 /* Components */
 import BigFeatureCard from '../../components/BlogFeatureCards/BigFeatureCard';
 import SmallFeatureCard from '../../components/BlogFeatureCards/SmallFeatureCard';
 import FilteredBlogs from '../../components/FilteredBlogs';
+import SEOHead from '../../components/SEOHead';
 
 interface Props {
 	showcaseBlogs: any;
@@ -23,46 +27,54 @@ const BlogsPage: React.FC<Props> = (props) => {
 	const { showcaseBlogs } = props;
 
 	return (
-		<main className={`page-container ${styles.blogsPage}`}>
-			<section className={styles.blogsHeroSection}>
-				<div className={styles.blogsHeroSection__Left}>
-					<BigFeatureCard showcaseBlogDetails={showcaseBlogs[0]} />
-				</div>
+		<>
+			<SEOHead
+				title="Blogs| Sellgo"
+				description="Blogs Page For Sellgo"
+				imageUrl=""
+				pageUrl={`${AppConfig.WEB_URL}/blogs`}
+			/>
+			<main className={`page-container ${styles.blogsPage}`}>
+				<section className={styles.blogsHeroSection}>
+					<div className={styles.blogsHeroSection__Left}>
+						<BigFeatureCard showcaseBlogDetails={showcaseBlogs[0]} />
+					</div>
 
-				<aside className={styles.blogsHeroSection__Right}>
-					<FilteredBlogs label="Popular Blogs" />
-					<FilteredBlogs label="Editors Choice" />
-				</aside>
-			</section>
+					<aside className={styles.blogsHeroSection__Right}>
+						<FilteredBlogs label="Popular Blogs" />
+						<FilteredBlogs label="Editors Choice" />
+					</aside>
+				</section>
 
-			<section className={styles.recommededSection}>
-				<div className={styles.recommededSection__Left}>
-					<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[1]} />
-					<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[2]} />
-				</div>
-				<aside className={styles.recommededSection__Right}>
-					<div className={styles.newsLetter} />
-				</aside>
-			</section>
+				<section className={styles.recommededSection}>
+					<div className={styles.recommededSection__Left}>
+						<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[1]} />
+						<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[2]} />
+					</div>
+					<aside className={styles.recommededSection__Right}>
+						<div className={styles.newsLetter} />
+					</aside>
+				</section>
 
-			<section className={styles.otherBlogsSection}>
-				<div className={styles.otherBlogsSection__Left}>
-					<div className={styles.report}></div>
-				</div>
-				<aside className={styles.otherBlogsSection__Right}>
-					<BigFeatureCard showcaseBlogDetails={showcaseBlogs[3]} />
-				</aside>
-			</section>
+				<section className={styles.otherBlogsSection}>
+					<div className={styles.otherBlogsSection__Left}>
+						<div className={styles.report}></div>
+					</div>
+					<aside className={styles.otherBlogsSection__Right}>
+						<BigFeatureCard showcaseBlogDetails={showcaseBlogs[3]} />
+					</aside>
+				</section>
 
-			<section className={styles.lastBlogsSection}>
-				<div className={styles.lastBlogsSection__Left}>
-					<BigFeatureCard showcaseBlogDetails={showcaseBlogs[4]} />
-				</div>
-				<aside className={styles.lastBlogsSection__Right}>
-					<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[5]} extended />
-				</aside>
-			</section>
-		</main>
+				<section className={styles.lastBlogsSection}>
+					<div className={styles.lastBlogsSection__Left}>
+						<BigFeatureCard showcaseBlogDetails={showcaseBlogs[4]} />
+					</div>
+					<aside className={styles.lastBlogsSection__Right}>
+						<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[5]} extended />
+					</aside>
+				</section>
+			</main>
+		</>
 	);
 };
 
