@@ -1,0 +1,21 @@
+@import '../../styles/guidelines';
+
+.commonFeatureCard {
+	text-align: center;
+	width: 30rem;
+	margin: 3rem auto;
+
+	h2 {
+		color: $blue_8;
+		font-size: $fontsize_subtitle_20;
+		font-weight: $fontweight_semibold;
+		margin-top: 1rem;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		text-align: center;
+		width: 80%;
+		margin: 0 auto;
+	}
+}

@@ -2,6 +2,7 @@
 import HeroBox from '../../containers/PrivatelabelGo/HeroBox';
 import InfoSection from '../../containers/PrivatelabelGo/InfoSection';
 import BenefitsSection from '../../containers/PrivatelabelGo/BenefitsSection';
+import CommonFeaturesSection from '../../containers/PrivatelabelGo/CommomFeaturesSection';
 import BannerCTASection from '../../containers/PrivatelabelGo/BannerCTASection';
 import PlansSection from '../../containers/PrivatelabelGo/PlansSection';
 import OtherInfoSection from '../../containers/PrivatelabelGo/OtherInfoSection';
@@ -18,6 +19,7 @@ const PrivateLabelPage = () => {
 			<section className={styles.banner} />
 			<InfoSection />
 			<BenefitsSection />
+			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />
 			<OtherInfoSection />

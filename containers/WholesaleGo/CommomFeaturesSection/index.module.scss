@@ -1,0 +1,15 @@
+@import '../../../styles/guidelines';
+
+.commonFeaturesSection {
+	color: $prim_dark_2;
+	margin: 10rem auto;
+	min-height: 80vh;
+}
+
+.featuresCardWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 10rem;
+	flex-wrap: wrap;
+}

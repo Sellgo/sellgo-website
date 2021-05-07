@@ -2,6 +2,7 @@
 import HeroBox from '../../containers/WholesaleGo/HeroBox';
 import InfoSection from '../../containers/WholesaleGo/InfoSection';
 import BenefitsSection from '../../containers/WholesaleGo/BenefitsSection';
+import CommonFeaturesSection from '../../containers/WholesaleGo/CommomFeaturesSection';
 import BannerCTASection from '../../containers/WholesaleGo/BannerCTASection';
 import PlansSection from '../../containers/WholesaleGo/PlansSection';
 import OtherInfoSection from '../../containers/WholesaleGo/OtherInfoSection';
@@ -18,6 +19,7 @@ const WholesaleGoPage = () => {
 			<section className={styles.banner} />
 			<InfoSection />
 			<BenefitsSection />
+			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />
 			<OtherInfoSection />
