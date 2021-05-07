@@ -7,12 +7,23 @@
 	border-radius: 7px;
 	overflow: hidden;
 	margin: 2rem auto;
+
+	@media only screen and(max-width: 600px) {
+		width: 100%;
+		min-height: auto;
+		height: auto;
+		max-width: auto;
+	}
+
 	&__Image {
 		position: relative;
 		min-height: 14.8rem;
 		max-height: 14.8rem;
 		width: 100%;
 		z-index: 1;
+		@media only screen and(max-width: 600px) {
+			height: auto;
+		}
 	}
 
 	&__Text {

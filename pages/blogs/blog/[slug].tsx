@@ -22,6 +22,7 @@ import { FeaturedImage } from '../../../interfaces/Blogs';
 /* Containers */
 import HeroBox from '../../../containers/Blogs/HeroBox';
 import ShareBlogSection from '../../../containers/Blogs/ShareBlogSection';
+import RelatedBlogsSection from '../../../containers/Blogs/RelatedBlogsSection';
 
 interface Props {
 	author: string;
@@ -52,6 +53,7 @@ const BlogPage: React.FC<Props> = (props) => {
 				/>
 			</main>
 			<ShareBlogSection />
+			<RelatedBlogsSection />
 		</>
 	);
 };
