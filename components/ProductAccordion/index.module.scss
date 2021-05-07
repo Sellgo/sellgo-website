@@ -43,4 +43,16 @@
 	padding: 1.5rem 2rem;
 	font-size: $fontsize_content_14;
 	color: $prim_dark_2;
+	border: 1px solid $grey_2;
+	border-top: 0;
+
+	ul {
+		list-style-type: none;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+
+		li::before {
+			content: '-';
+		}
+	}
 }

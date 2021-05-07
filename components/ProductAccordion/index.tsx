@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import {
 	Accordion,
 	AccordionItem,
@@ -27,12 +28,18 @@ const ProductAccordion: React.FC<Props> = (props) => {
 		<>
 			<Accordion className={styles.productAccordion} allowZeroExpanded>
 				{data.map((accordionData: any) => {
+					const {
+						title,
+						description,
+						ctaLinkDetails,
+						listDetails
+					} = accordionData;
 					return (
 						<AccordionItem className={styles.productAccordionItem} key={uuid()}>
 							<AccordionItemHeading className={styles.productAccordionHeading}>
 								<AccordionItemButton className={styles.productAccordionButton}>
 									<p>
-										{accordionData.title}
+										{title}
 										<AccordionItemState>
 											{({ expanded }) => {
 												return expanded ? (
@@ -46,7 +53,17 @@ const ProductAccordion: React.FC<Props> = (props) => {
 								</AccordionItemButton>
 							</AccordionItemHeading>
 							<AccordionItemPanel className={styles.productAccordionPanel}>
-								<p>{accordionData.description}</p>
+								<p>{description}</p>
+								<ul>
+									{listDetails.map((list: string) => {
+										return <li key={uuid()}>{list}</li>;
+									})}
+								</ul>
+								{ctaLinkDetails && ctaLinkDetails.name && (
+									<Link href={ctaLinkDetails.linkTo} passHref>
+										<a className="anchor">{ctaLinkDetails.name} &#8594;</a>
+									</Link>
+								)}
 							</AccordionItemPanel>
 						</AccordionItem>
 					);
