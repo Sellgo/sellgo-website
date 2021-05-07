@@ -64,6 +64,11 @@ export const GET_BLOG_BY_SLUG = gql`
 					}
 				}
 			}
+			categories {
+				nodes {
+					name
+				}
+			}
 		}
 	}
 `;
