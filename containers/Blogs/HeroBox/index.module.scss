@@ -13,7 +13,7 @@
 	justify-content: space-between;
 
 	&__Left {
-		flex: 0 0 60%;
+		flex: 0 0 50%;
 		height: 100%;
 		padding-top: 10rem;
 		text-align: left;
@@ -24,6 +24,14 @@
 		background: $prim_white;
 		min-width: 30rem;
 		min-height: 70rem;
+		z-index: 1;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			max-width: 100%;
+		}
 	}
 }
 

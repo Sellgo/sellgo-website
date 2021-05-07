@@ -27,3 +27,8 @@ export interface ShowcaseBlogDetails {
 	featuredImage: FeaturedImage;
 	categories: Categories;
 }
+
+export interface Author {
+	firstName: string;
+	lastName: string;
+}

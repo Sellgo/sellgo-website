@@ -41,12 +41,14 @@ export const GET_BLOG_BY_SLUG = gql`
 		postBy(slug: $slug) {
 			author {
 				node {
-					name
+					lastName
+					firstName
 				}
 			}
 			title
 			slug
 			content
+			excerpt
 			seo {
 				metaDesc
 				metaKeywords
