@@ -11,11 +11,12 @@ const InfoSection: React.FC<Props> = () => {
 			<div className={styles.infoSection__Text}>
 				<h2>Get a Quick Snapshot of High Demand Products</h2>
 				<p>
-				The Profit Finder compares all of the products in a catalog and gives you real-time data to optimize your inventory and profitability. Hand-pick the winning products to begin sourcing and build your profits.
+					The Profit Finder compares all of the products in a catalog and gives
+					you real-time data to optimize your inventory and profitability.
+					Hand-pick the winning products to begin sourcing and build your
+					profits.
 				</p>
-				<p>
-					
-				</p>
+				<p></p>
 			</div>
 			<div className={styles.infoSection__Image}></div>
 		</section>

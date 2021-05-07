@@ -18,7 +18,10 @@ const HeroBox: React.FC<Props> = () => {
 			<div className={styles.heroBox__Image}></div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<span></span> <h2 className={styles.subHeading}>Track Top FBA Competitors and Best Sellers</h2>
+					<span></span>{' '}
+					<h2 className={styles.subHeading}>
+						Track Top FBA Competitors and Best Sellers
+					</h2>
 				</div>
 				<h1 className={styles.heading}>Seller Finder</h1>
 				<CTAButton

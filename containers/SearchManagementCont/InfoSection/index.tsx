@@ -11,11 +11,11 @@ const InfoSection: React.FC<Props> = () => {
 			<div className={styles.infoSection__Text}>
 				<h2>The Search Management Tool Makes Product Sourcing Easy</h2>
 				<p>
-				Simply upload catalogs files to our Search Management tool then sort and filter millions of products. Find winning products that will take your business to the next level. 
+					Simply upload catalogs files to our Search Management tool then sort
+					and filter millions of products. Find winning products that will take
+					your business to the next level.
 				</p>
-				<p>
-					
-				</p>
+				<p></p>
 			</div>
 			<div className={styles.infoSection__Image}></div>
 		</section>

@@ -15,7 +15,9 @@ interface Props {}
 const CommonFeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
-			<h2 className="secondary-heading">We're Here for You - Whatever You Need</h2>
+			<h2 className="secondary-heading">
+				We&apos;re Here for You - Whatever You Need
+			</h2>
 
 			<div className={styles.featuresCardWrapper}>
 				{commonFeaturesList.map((commonFeatureDetails: any) => {

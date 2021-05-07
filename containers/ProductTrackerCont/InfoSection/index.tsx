@@ -11,11 +11,12 @@ const InfoSection: React.FC<Props> = () => {
 			<div className={styles.infoSection__Text}>
 				<h2>Expedite the Product Research Process</h2>
 				<p>
-				Products come and go, and so do profits. The Product Tracker tool empowers any seller to monitor their products and sales performances over time. Spot high demand products and new trends that can shape your Amazon strategy and success.
+					Products come and go, and so do profits. The Product Tracker tool
+					empowers any seller to monitor their products and sales performances
+					over time. Spot high demand products and new trends that can shape
+					your Amazon strategy and success.
 				</p>
-				<p>
-					
-				</p>
+				<p></p>
 			</div>
 			<div className={styles.infoSection__Image}></div>
 		</section>
