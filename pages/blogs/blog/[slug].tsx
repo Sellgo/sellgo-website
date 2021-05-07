@@ -21,6 +21,7 @@ import { FeaturedImage } from '../../../interfaces/Blogs';
 
 /* Containers */
 import HeroBox from '../../../containers/Blogs/HeroBox';
+import ShareBlogSection from '../../../containers/Blogs/ShareBlogSection';
 
 interface Props {
 	author: string;
@@ -50,6 +51,7 @@ const BlogPage: React.FC<Props> = (props) => {
 					dangerouslySetInnerHTML={{ __html: content }}
 				/>
 			</main>
+			<ShareBlogSection />
 		</>
 	);
 };
