@@ -60,6 +60,7 @@
 	font-size: $fontsize_content_16;
 	font-weight: $fontweight_regular;
 	color: $prim_dark_2;
-	margin-top: 1rem;
-	padding: 0 2rem;
+	padding: 1rem 2rem;
+	border: 1px solid $grey_2;
+	border-top: 0;
 }
