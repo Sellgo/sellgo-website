@@ -19,6 +19,9 @@ import { GET_ALL_SLUGS, GET_BLOG_BY_SLUG } from '../../../graphql/cms';
 /* Types */
 import { FeaturedImage } from '../../../interfaces/Blogs';
 
+/* Containers */
+import HeroBox from '../../../containers/Blogs/HeroBox';
+
 interface Props {
 	author: string;
 	seo: any;
@@ -29,7 +32,7 @@ interface Props {
 }
 
 const BlogPage: React.FC<Props> = (props) => {
-	const { seo, content, slug, title, featuredImage } = props;
+	const { seo, content, slug, featuredImage, title } = props;
 	return (
 		<>
 			<SEOHead
@@ -38,13 +41,14 @@ const BlogPage: React.FC<Props> = (props) => {
 				imageUrl={featuredImage.node.sourceUrl || ''}
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
 			/>
+			<HeroBox />
 			<main className={`page-container ${styles.blogsPage}`}>
 				<h1>{title}</h1>
 				<article
 					className={`blog-content-container ${styles.blog}`}
 					// eslint-disable-next-line react/no-danger
 					dangerouslySetInnerHTML={{ __html: content }}
-				></article>
+				/>
 			</main>
 		</>
 	);

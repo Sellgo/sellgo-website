@@ -22,7 +22,7 @@
 .plansWrapper {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	margin: 7rem auto;
 	@media only screen and(max-width: 1080px) {
 		flex-direction: column;

@@ -1,0 +1,54 @@
+@import '../../../styles/guidelines';
+
+.heroboxWrapper {
+	width: 100%;
+	background: linear-gradient(180deg, #45a5f9, #23537d);
+	color: $prim_white;
+}
+
+.herobox {
+	color: inherit;
+	min-height: 70rem;
+	display: flex;
+	justify-content: space-between;
+
+	&__Left {
+		flex: 0 0 60%;
+		height: 100%;
+		padding-top: 10rem;
+		text-align: left;
+	}
+
+	&__Right {
+		flex: 0 0 40%;
+		background: $prim_white;
+		min-width: 30rem;
+		min-height: 70rem;
+	}
+}
+
+.contentWrapper {
+	margin-left: 40rem;
+	h1 {
+		font-size: $fontsize_title_46;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		color: inherit;
+		margin: 2rem 0;
+		width: 70%;
+		font-weight: $fontweight_regular;
+		span {
+			font-weight: $fontweight_semibold;
+		}
+	}
+}
+
+.rect {
+	background: $prim_white;
+	border-radius: 7px;
+	margin: 4rem 0;
+	width: 48rem;
+	height: 21rem;
+}
