@@ -27,6 +27,8 @@ interface Props {
 const BlogsPage: React.FC<Props> = (props) => {
 	const { showcaseBlogs } = props;
 
+	const relatedBlogs = showcaseBlogs.splice(-4);
+
 	return (
 		<>
 			<SEOHead
@@ -42,7 +44,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 
 				<div className={styles.divider} />
 
-				<BlogsCategorySection />
+				<BlogsCategorySection relatedBlogs={relatedBlogs} />
 
 				<section className={styles.banner} />
 			</main>

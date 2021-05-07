@@ -8,7 +8,12 @@ import styles from './index.module.scss';
 /* Utils */
 import { imageLoaderForBlogs } from '../../../utils/Blogs';
 
-interface Props {}
+/* Types */
+import { RelatedBlogDetails } from '../../../interfaces/Blogs';
+
+interface Props {
+	relatedBlogsDetails: RelatedBlogDetails;
+}
 
 const CategoryBlogCard: React.FC<Props> = () => {
 	return (
@@ -28,7 +33,7 @@ const CategoryBlogCard: React.FC<Props> = () => {
 
 					<div className={styles.categoryBlogCard__Text}>
 						<h3>Marketing</h3>
-						<p>Insights, ideas and inspiration</p>
+						<p>Insights, ideas and inspiratio</p>
 					</div>
 				</a>
 			</Link>
