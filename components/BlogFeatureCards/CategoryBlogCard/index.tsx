@@ -33,7 +33,7 @@ const CategoryBlogCard: React.FC<Props> = () => {
 
 					<div className={styles.categoryBlogCard__Text}>
 						<h3>Marketing</h3>
-						<p>Insights, ideas and inspiratio</p>
+						<p>Insights, ideas and inspiration</p>
 					</div>
 				</a>
 			</Link>
