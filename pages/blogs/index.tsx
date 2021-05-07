@@ -36,6 +36,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 			/>
 
 			<main className={`page-container ${styles.blogsPage}`}>
+				{/* Hero Section */}
 				<section className={styles.blogsHeroSection}>
 					<div className={styles.blogsHeroSection__Left}>
 						<BigFeatureCard showcaseBlogDetails={showcaseBlogs[0]} />
@@ -47,6 +48,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 					</aside>
 				</section>
 
+				{/* Recommeded Section : Change name later */}
 				<section className={styles.recommededSection}>
 					<div className={styles.recommededSection__Left}>
 						<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[1]} />
@@ -57,6 +59,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 					</aside>
 				</section>
 
+				{/* Other Blogs Section: Change name later */}
 				<section className={styles.otherBlogsSection}>
 					<div className={styles.otherBlogsSection__Left}>
 						<div className={styles.report}></div>
@@ -66,12 +69,13 @@ const BlogsPage: React.FC<Props> = (props) => {
 					</aside>
 				</section>
 
+				{/* Last Blogs Section : Change name later */}
 				<section className={styles.lastBlogsSection}>
 					<div className={styles.lastBlogsSection__Left}>
 						<BigFeatureCard showcaseBlogDetails={showcaseBlogs[4]} />
 					</div>
 					<aside className={styles.lastBlogsSection__Right}>
-						<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[5]} extended />
+						<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[5]} />
 					</aside>
 				</section>
 

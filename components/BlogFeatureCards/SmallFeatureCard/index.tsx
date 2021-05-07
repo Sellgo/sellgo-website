@@ -16,22 +16,17 @@ import {
 
 interface Props {
 	showcaseBlogDetails: ShowcaseBlogDetails;
-	extended?: boolean;
 }
 
 const SmallFeatureCard: React.FC<Props> = (props) => {
-	const { showcaseBlogDetails, extended } = props;
+	const { showcaseBlogDetails } = props;
 
 	const { featuredImage, slug, title, categories } = showcaseBlogDetails;
 
 	return (
 		<Link passHref href={`/blogs/blog/${slug}`}>
 			<a>
-				<article
-					className={`${styles.smallFeatureCard} ${
-						extended ? styles.smallFeatureCard__Extended : ''
-					}`}
-				>
+				<article className={`${styles.smallFeatureCard}`}>
 					<div className={styles.bgImage}>
 						<Image
 							loader={imageLoaderForBlogs}

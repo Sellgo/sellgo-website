@@ -5,13 +5,25 @@
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
-	width: 35rem;
-	height: 47rem;
+	min-width: 34.8rem;
+	max-width: 34.8rem;
+	min-height: 58rem;
+	max-height: 58rem;
 	max-height: 100%;
 	box-shadow: $box-shadow-1;
 
-	&__Extended {
-		min-height: 68rem;
+	@media only screen and(max-width: 1080px) {
+		margin: 2rem auto;
+		min-height: 58rem;
+		min-width: 71.3rem;
+		max-width: 71.3rem;
+	}
+
+	@media only screen and(max-width: 750px) {
+		width: 100%;
+		min-width: auto;
+		max-width: auto;
+		min-height: auto;
 	}
 }
 
@@ -22,16 +34,36 @@
 	overflow: hidden;
 	z-index: -1;
 	position: relative;
+
+	@media only screen and(max-width: 1080px) {
+		min-height: 40rem;
+		max-height: 40rem;
+	}
+
+	@media only screen and(max-width: 500px) {
+		min-height: 25rem;
+	}
 }
 
 .blogText {
 	color: $prim_dark_2;
 	background: $grey_1;
 	padding: 2rem;
-	// min-height: 18rem;
+	min-height: 38rem;
 	width: 100%;
 	position: relative;
 	flex: 1;
+
+	@media only screen and(max-width: 1080px) {
+		min-height: 18rem;
+		max-height: 18rem;
+	}
+
+	@media only screen and(max-width: 500px) {
+		min-height: 5rem;
+		max-height: unset;
+		height: max-content;
+	}
 
 	h2 {
 		font-size: $fontsize_subtitle_24;
@@ -47,5 +79,9 @@
 		position: absolute;
 		bottom: 1rem;
 		left: 2rem;
+
+		@media only screen and(max-width: 500px) {
+			font-size: $fontsize_content_12;
+		}
 	}
 }

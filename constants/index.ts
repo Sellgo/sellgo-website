@@ -9,5 +9,6 @@ export const pricingCardHeaderGradients: { [key: string]: string } = {
 export const hideNavigationOnRoutes = [
 	'/privacy-policy',
 	'/terms-of-use',
-	'/pricing'
+	'/pricing',
+	'/blogs'
 ];
