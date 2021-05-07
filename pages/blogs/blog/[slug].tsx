@@ -101,7 +101,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		seo,
 		slug,
 		featuredImage,
-		excerpt
+		excerpt,
+		categories
 	} = response.data.postBy;
 
 	return {
@@ -112,7 +113,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			seo,
 			slug,
 			featuredImage,
-			shortSummary: excerpt
+			shortSummary: excerpt,
+			categories
 		},
 		revalidate: 1
 	};
