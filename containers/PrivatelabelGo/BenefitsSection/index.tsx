@@ -36,12 +36,17 @@ const BenefitsSection: React.FC<Props> = () => {
 					</TabList>
 
 					{benefitsData.map((benefitsDetails: any) => {
-						const { benefitSummary, popularFeaturesList } = benefitsDetails;
+						const {
+							benefitSummary,
+							popularFeaturesList,
+							details
+						} = benefitsDetails;
 						return (
 							<TabPanel key={uuid()} className={styles.benefitsTabPanel}>
 								<BenefitsPanel
 									benefitSummary={benefitSummary}
 									popularFeaturesList={popularFeaturesList}
+									details={details}
 								/>
 							</TabPanel>
 						);
