@@ -1,34 +1,50 @@
 import React from 'react';
+import Image from 'next/image';
 
 /* Styles */
 import styles from './index.module.scss';
 
-interface Props {}
+/* Types */
+import { FeaturedImage, Author } from '../../../interfaces/Blogs';
+import { imageLoaderForBlogs } from '../../../utils/Blogs';
 
-const HeroBox: React.FC<Props> = () => {
+interface Props {
+	title: string;
+	author: Author;
+	shortSummary: string;
+	featuredImage: FeaturedImage;
+}
+
+const HeroBox: React.FC<Props> = (props) => {
+	const { title, author, shortSummary, featuredImage } = props;
+
 	return (
 		<section className={styles.heroboxWrapper}>
 			<div className={`${styles.herobox}`}>
 				<div className={styles.herobox__Left}>
 					<div className={`page-container ${styles.contentWrapper}`}>
-						<h1>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Lorem Ipsum</h1>
-
+						<h1>{title}</h1>
 						<p>
-							Written by <span>First Last</span>
+							Written by{' '}
+							<span>
+								{author.firstName} {author.lastName}
+							</span>
 						</p>
-
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea
-						</p>
-
+						{/* eslint-disable-next-line react/no-danger */}
+						<div dangerouslySetInnerHTML={{ __html: shortSummary }}></div>
 						<div className={styles.rect} />
 					</div>
 				</div>
 
-				<div className={styles.herobox__Right}></div>
+				<div className={styles.herobox__Right}>
+					<Image
+						loader={imageLoaderForBlogs}
+						src={featuredImage.node.sourceUrl}
+						alt={featuredImage.node.altText}
+						width={featuredImage.node.mediaDetails.width}
+						height={featuredImage.node.mediaDetails.height}
+					/>
+				</div>
 			</div>
 		</section>
 	);

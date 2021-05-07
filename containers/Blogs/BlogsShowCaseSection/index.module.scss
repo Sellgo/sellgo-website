@@ -4,8 +4,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-bottom: 4rem;
 	width: 100%;
+	margin-bottom: 1.2rem;
 
 	@media only screen and(max-width: 1080px) {
 		align-items: center;
@@ -17,8 +17,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-bottom: 4rem;
 	width: 100%;
+	margin-bottom: 1.8rem;
 
 	@media only screen and(max-width: 1080px) {
 		flex-direction: column;
@@ -51,7 +51,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin-bottom: 4rem;
+	margin-bottom: 1.8rem;
 
 	@media only screen and(max-width: 1080px) {
 		flex-direction: column;

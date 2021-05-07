@@ -13,10 +13,17 @@
 	justify-content: space-between;
 
 	&__Left {
-		flex: 0 0 60%;
+		flex: 0 0 50%;
 		height: 100%;
 		padding-top: 10rem;
 		text-align: left;
+		@media only screen and(max-width: 1080px) {
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			flex: 1;
+		}
 	}
 
 	&__Right {
@@ -24,13 +31,50 @@
 		background: $prim_white;
 		min-width: 30rem;
 		min-height: 70rem;
+		z-index: 1;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media only screen and(max-width: 1080px) {
+			display: none;
+		}
+
+		img {
+			max-width: 100%;
+		}
 	}
 }
 
 .contentWrapper {
-	margin-left: 40rem;
+	margin-left: 30rem;
+
+	@media only screen and(max-width: 1400px) {
+		margin-left: 20rem;
+	}
+
+	@media only screen and(max-width: 1200px) {
+		margin-left: 10rem;
+	}
+
+	@media only screen and(max-width: 700px) {
+		width: 90%;
+		margin: 0 auto !important;
+		margin-left: 0;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
 	h1 {
 		font-size: $fontsize_title_46;
+
+		@media only screen and(max-width: 700px) {
+			font-size: $fontsize_subtitle_32;
+		}
 	}
 
 	p {
@@ -42,6 +86,10 @@
 		span {
 			font-weight: $fontweight_semibold;
 		}
+
+		@media only screen and(max-width: 1080px) {
+			margin: 2rem auto;
+		}
 	}
 }
 
@@ -51,4 +99,13 @@
 	margin: 4rem 0;
 	width: 48rem;
 	height: 21rem;
+
+	@media only screen and(max-width: 1080px) {
+		margin: 4rem auto;
+	}
+
+	@media only screen and(max-width: 700px) {
+		margin: 4rem auto;
+		width: 100%;
+	}
 }

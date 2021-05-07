@@ -17,7 +17,7 @@ import client from '../../../apollo';
 import { GET_ALL_SLUGS, GET_BLOG_BY_SLUG } from '../../../graphql/cms';
 
 /* Types */
-import { FeaturedImage } from '../../../interfaces/Blogs';
+import { FeaturedImage, Author } from '../../../interfaces/Blogs';
 
 /* Containers */
 import HeroBox from '../../../containers/Blogs/HeroBox';
@@ -25,16 +25,25 @@ import ShareBlogSection from '../../../containers/Blogs/ShareBlogSection';
 import RelatedBlogsSection from '../../../containers/Blogs/RelatedBlogsSection';
 
 interface Props {
-	author: string;
+	author: Author;
 	seo: any;
 	content: string;
 	title: string;
 	slug: string;
 	featuredImage: FeaturedImage;
+	shortSummary: string;
 }
 
 const BlogPage: React.FC<Props> = (props) => {
-	const { seo, content, slug, featuredImage, title } = props;
+	const {
+		seo,
+		content,
+		slug,
+		featuredImage,
+		title,
+		author,
+		shortSummary
+	} = props;
 	return (
 		<>
 			<SEOHead
@@ -43,9 +52,13 @@ const BlogPage: React.FC<Props> = (props) => {
 				imageUrl={featuredImage.node.sourceUrl || ''}
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
 			/>
-			<HeroBox />
+			<HeroBox
+				title={title}
+				author={author}
+				shortSummary={shortSummary}
+				featuredImage={featuredImage}
+			/>
 			<main className={`page-container ${styles.blogsPage}`}>
-				<h1>{title}</h1>
 				<article
 					className={`blog-content-container ${styles.blog}`}
 					// eslint-disable-next-line react/no-danger
@@ -87,17 +100,21 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		content,
 		seo,
 		slug,
-		featuredImage
+		featuredImage,
+		excerpt,
+		categories
 	} = response.data.postBy;
 
 	return {
 		props: {
-			author: author.node.name,
+			author: author.node,
 			title,
 			content,
 			seo,
 			slug,
-			featuredImage
+			featuredImage,
+			shortSummary: excerpt,
+			categories
 		},
 		revalidate: 1
 	};

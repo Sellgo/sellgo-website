@@ -11,7 +11,7 @@ interface Props {
 
 const ShareBlogSection: React.FC<Props> = () => {
 	return (
-		<section className={styles.shareBlogs}>
+		<section className={`page-container ${styles.shareBlogs}`}>
 			<h3>Don&apos;t forget to share this post</h3>
 			<div className={styles.shareLinksWrapper}>
 				<a href="">
