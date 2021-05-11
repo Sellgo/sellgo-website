@@ -28,7 +28,7 @@ const HeroBox: React.FC<Props> = () => {
 						navigateTo="/"
 						className={styles.ctaHeroBox}
 					>
-						Try Sellgo for $1
+						Pay Only $1 to Sell
 					</CTAButton>
 
 					<small className={`${styles.ctaOverText}`}>

@@ -1,43 +1,37 @@
 export const commonFeaturesList = [
 	{
-		title: 'Feature',
-		detail: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam`,
+		title: 'Reveal Product Insights',
+		detail: `Evaluate dozens of products and gain in-depth insight for any product including sales estimations, seller rankings, profit margins using data directly from Amazon.`,
 		iconImageLink: '/genericIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'Feature',
-		detail: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam`,
+		title: 'Product Validation',
+		detail: `Validate any product before sourcing and make confident business decisions using real-time, accurate data. View a product's sales history and price tracking history to ensure a product's long-term sustainability and profitability.`,
 		iconImageLink: '/genericIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'Feature',
-		detail: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam`,
+		title: 'Bulk Exports',
+		detail: `Export multiple products and categories at once so you can have reliable data on the go. Discover a bounty of profitable products and take them with you at a click of a button.`,
 		iconImageLink: '/genericIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'Feature',
-		detail: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam`,
+		title: 'Competitive Snapshot',
+		detail: `Compare multiple products and categories to determine the best products that fit your business model and needs. Uncover the products with the best sales records and profitability to add to your Amazon catalogs.`,
 		iconImageLink: '/genericIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'Feature',
-		detail: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam`,
+		title: 'Amazon Quick View',
+		detail: `Easily use the Sellgo Chrome Extension with our Amazon overlay. Display key performance metrics of any product or category directly on your Amazon search pages to expedite your product research process.`,
 		iconImageLink: '/genericIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'Feature',
-		detail: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam`,
+		title: 'Track Your Favorite Products',
+		detail: `Take your discoveries and keep tabs on potential products that capture your attention with the Product Tracker! Synchronize your entire product research toolbox with the Chrome extension.`,
 		iconImageLink: '/genericIcon.svg',
 		alt: `Describe the icon here`
 	}

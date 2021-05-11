@@ -4,7 +4,7 @@ export const planTypes = [
 		isNew: false
 	},
 	{
-		name: 'Pay As You Go',
+		name: 'Pay $1 Plan',
 		isNew: false
 	},
 	{
@@ -15,10 +15,10 @@ export const planTypes = [
 
 export const plansAndProductsDetails = [
 	{
-		planName: 'Pay As You Go',
+		planName: 'Pay Only $1 to Sell',
 		productsIncluded: [
 			{
-				name: 'Profit Finder',
+				name: 'Browser Extension',
 				productsDatabase: 1000,
 				salesEstimateCount: 0,
 				yearlyPrice: 500,
@@ -45,7 +45,7 @@ export const plansAndProductsDetails = [
 				]
 			},
 			{
-				name: 'Browser Extension',
+				name: 'Profit Finder',
 				productsDatabase: 2000,
 				salesEstimateCount: 0,
 				yearlyPrice: 600,

@@ -1,6 +1,6 @@
 export const benefitsData = [
 	{
-		title: 'Benefit 1',
+		title: 'Reveal Product Insights',
 		benefitSummary: `This is summary for benefit. Hope you like it`,
 		details: `Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum 
 		Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum`,

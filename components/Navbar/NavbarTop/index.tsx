@@ -9,7 +9,7 @@ interface Props {}
 const NavbarTop: React.FC<Props> = () => {
 	return (
 		<div className={styles.navbarTop}>
-			<a href="" className={styles.navbarLink__sales}>
+			<a href="/contact-sales" className={styles.navbarLink__sales}>
 				<Image
 					src="/userIcon.svg"
 					width={12}
@@ -22,17 +22,17 @@ const NavbarTop: React.FC<Props> = () => {
 
 			<ul className={styles.navbarTopLinksList}>
 				<li className={styles.navbarTopLink}>
-					<a href="" className={styles.navbarLink}>
+					<a href="https://app.sellgo.com/" className={styles.navbarLink}>
 						Go to my account
 					</a>
 				</li>
 				<li className={styles.navbarTopLink}>
-					<a href="" className={styles.navbarLink}>
+					<a href="/support" className={styles.navbarLink}>
 						Customer Support
 					</a>
 				</li>
 				<li className={styles.navbarTopLink}>
-					<a href="" className={styles.navbarLink}>
+					<a href="/about" className={styles.navbarLink}>
 						About
 					</a>
 				</li>
