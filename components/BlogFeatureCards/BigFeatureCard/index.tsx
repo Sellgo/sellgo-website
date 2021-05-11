@@ -34,11 +34,12 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 							alt={featuredImage.node.altText}
 							layout="fill"
 							objectFit="cover"
+							priority
 						/>
 					</div>
 					<div className={styles.blogText}>
 						<h1>{title}</h1>
-						<p>{generateCategoryDisplayName(categories.nodes)} | 25 Min read</p>
+						<p>{generateCategoryDisplayName(categories.nodes)} | 25 Min Read</p>
 					</div>
 				</article>
 			</a>

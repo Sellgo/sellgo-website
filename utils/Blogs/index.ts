@@ -1,3 +1,5 @@
+import readingTime from 'reading-time';
+
 /* Types */
 import { Category } from '../../interfaces/Blogs';
 
@@ -14,4 +16,9 @@ export const generateCategoryDisplayName = (categoriesList: Category[]) => {
 		return '';
 	}
 	return categoriesList[0].name;
+};
+
+/* Send the reading time details */
+export const getBlogReadTime = (content: string) => {
+	return readingTime(content).text;
 };

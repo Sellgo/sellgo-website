@@ -47,7 +47,7 @@ const BlogPage: React.FC<Props> = (props) => {
 	return (
 		<>
 			<SEOHead
-				title={seo.title || 'Blog'}
+				title={seo.title || 'Blog | Sellgo'}
 				description={seo.metaDesc}
 				imageUrl={featuredImage.node.sourceUrl || ''}
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
