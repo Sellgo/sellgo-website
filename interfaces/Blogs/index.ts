@@ -31,6 +31,7 @@ export interface ShowcaseBlogDetails {
 	title: string;
 	featuredImage: FeaturedImage;
 	categories: Categories;
+	content: string;
 }
 
 export interface RelatedBlogDetails extends ShowcaseBlogDetails {}

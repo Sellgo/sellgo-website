@@ -15,8 +15,8 @@ const HeroBox: React.FC<Props> = (props) => {
 	return (
 		<>
 			<section className={styles.heroboxSection}>
-				<h1>Lorem Ipsum</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				<h1>Sell better with the right plan.</h1>
+				<p>Pay less on software, invest more on your business.</p>
 
 				<div className={styles.tabsWrapper}>
 					<button
@@ -25,7 +25,7 @@ const HeroBox: React.FC<Props> = (props) => {
 						} ${styles.tab__pricing}`}
 						onClick={setProductsPanel}
 					>
-						Pricing and Plans
+						Products & Plans
 					</button>
 					{/* <button
 						className={`${styles.tab} ${

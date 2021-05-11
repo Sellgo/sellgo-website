@@ -32,27 +32,27 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Products</li>
 				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
+					<Link href="/extension" passHref>
+						<a>Extension</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/search-management" passHref>
 						<a>Search Management</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
+					<Link href="/profit-finder" passHref>
 						<a>Profit Finder</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
+					<Link href="/product-tracker" passHref>
 						<a>Product Tracker</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
-						<a>Seller Database</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
+					<Link href="/seller-finder" passHref>
 						<a>Seller Finder</a>
 					</Link>
 				</li>
@@ -61,22 +61,22 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Resources</li>
 				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
+					<Link href="/blogs" passHref>
 						<a>Blogs</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
+					<Link href="/affiliate-program" passHref>
 						<a>Affiliate Program</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
+					<Link href="/free-sales-estimation" passHref>
 						<a>Free Sales Estimation Tools</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
+					<Link href="/free-fba-calculator" passHref>
 						<a>Free Amazon FBA Fee Calculator</a>
 					</Link>
 				</li>
@@ -85,12 +85,12 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Support</li>
 				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
+					<Link href="/contact" passHref>
 						<a>Contact Us</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
+					<Link href="/support" passHref>
 						<a>Support Page</a>
 					</Link>
 				</li>

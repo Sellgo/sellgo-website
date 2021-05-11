@@ -38,7 +38,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				navigateTo="/"
 				className={styles.navbarCTA}
 			>
-				Try Sellgo for $1
+				Pay Only $1 to Sell
 			</CTAButton>
 		</div>
 	);
