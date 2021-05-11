@@ -66,7 +66,9 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					</div>
 
 					{/* Show only for Pay as you go plans */}
-					{selectedPlanType === 1 && <PricingInfoAlert />}
+					{selectedPlanType === 1 && (
+						<PricingInfoAlert navigateTo="/" navigateLabel="Learn More" />
+					)}
 
 					{/* Show for all expect pay as you go */}
 					{selectedPlanType !== 1 && (
@@ -99,7 +101,11 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			<section className={`big-page-container ${styles.allFeaturesSection}`}>
 				{allPlanFeatures.map((feature: any) => {
 					return (
-						<AllfeaturesTable header={feature.header} body={feature.body} />
+						<AllfeaturesTable
+							header={feature.header}
+							body={feature.body}
+							key={uuid()}
+						/>
 					);
 				})}
 			</section>

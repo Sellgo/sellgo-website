@@ -2,57 +2,73 @@
 
 .featuresCard {
 	border: 1px solid $grey_2;
-	min-height: 35rem;
 	width: 28rem;
-	padding: 3rem;
 	color: $prim_dark_2;
 	border-radius: 7px;
 	position: relative;
-
-	h3 {
-		font-size: $fontsize_subtitle_24;
-		text-align: center;
-		font-weight: $fontweight_medium;
-	}
-
-	button {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-	}
+	overflow: hidden;
+	border-bottom: 0;
 
 	@media only screen and(max-width: 1200px) {
 		margin-bottom: 3rem;
 	}
-}
 
-.featuresList {
-	margin-top: 2.5rem;
-	font-size: $fontsize_content_14;
-	li {
-		margin-bottom: 1rem;
+	button {
+		width: 100%;
+		outline: 0;
+		background: $prim_white;
+		color: $blue_8;
+		border: 0;
+		border-top: 1px solid $grey_2;
+		border-bottom: 1px solid $grey_2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 5rem;
+		font-size: $fontsize_content_14;
+		cursor: pointer;
 		span {
-			margin-left: 8px;
+			margin-left: 2rem;
+			font-size: 20px;
 		}
 	}
 }
 
-.seeAllFeatures {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
+.featuresCard__Content {
+	min-height: 26rem;
 	width: 100%;
-	border: 0;
-	outline: 0;
-	background: unset;
-	height: 4rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: $blue_8;
+	color: inherit;
+	padding: 2rem;
+	h3 {
+		color: $prim_dark_2;
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_medium;
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		margin-top: 2.5rem;
+		font-size: $fontsize_content_14;
+		li {
+			margin-bottom: 1rem;
+			span {
+				margin-left: 8px;
+			}
+		}
+	}
+}
+
+.popularFeaturesList {
 	font-size: $fontsize_content_14;
-	border-top: 1px solid $grey_2;
-	cursor: pointer;
+	border-bottom: 1px solid $grey_2;
+	width: 100%;
+	text-align: left;
+	padding: 2rem;
+	min-height: 10rem;
+	li {
+		margin: 0.5rem auto;
+		span {
+			margin-left: 8px;
+		}
+	}
 }

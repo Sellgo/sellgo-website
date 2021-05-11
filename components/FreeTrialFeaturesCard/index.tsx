@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 
@@ -8,31 +8,57 @@ import styles from './index.module.scss';
 interface Props {
 	title: string;
 	featuresList: string[];
+	popularFeaturesList: string[];
 }
 
 const FreeTrialFeaturesCard: React.FC<Props> = (props) => {
-	const { title, featuresList } = props;
+	const { title, featuresList, popularFeaturesList } = props;
+
+	const [isExpanded, setIsExpanded] = useState(false);
 
 	return (
 		<div className={styles.featuresCard}>
-			<h3>{title}</h3>
-			<ul className={styles.featuresList}>
-				{featuresList.map((benefits: string) => {
-					return (
-						<li key={uuid()}>
-							<Image
-								src="/checkMark.svg"
-								alt="The benefits is included"
-								width={10}
-								height={8}
-							/>
-							<span>{benefits}</span>
-						</li>
-					);
-				})}
-			</ul>
+			<div className={styles.featuresCard__Content}>
+				<h3>{title}</h3>
+				<ul>
+					{featuresList.map((benefits: string) => {
+						return (
+							<li key={uuid()}>
+								<Image
+									src="/checkMark.svg"
+									alt="The benefits is included"
+									width={10}
+									height={8}
+								/>
+								<span>{benefits}</span>
+							</li>
+						);
+					})}
+				</ul>
+			</div>
 
-			<button className={styles.seeAllFeatures}>See all features</button>
+			<button onClick={() => setIsExpanded(!isExpanded)}>
+				Popular Features
+				{isExpanded ? <span>&#8722; </span> : <span>&#43;</span>}
+			</button>
+
+			{isExpanded && (
+				<ul className={styles.popularFeaturesList}>
+					{popularFeaturesList.map((feature: string) => {
+						return (
+							<li key={uuid()}>
+								<Image
+									src="/checkMark.svg"
+									alt="The benefits is included"
+									width={10}
+									height={8}
+								/>
+								<span>{feature}</span>
+							</li>
+						);
+					})}
+				</ul>
+			)}
 		</div>
 	);
 };

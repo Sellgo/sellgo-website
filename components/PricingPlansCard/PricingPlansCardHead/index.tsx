@@ -14,6 +14,8 @@ interface Props {
 	salesEstimateCount: number;
 	isMonthly: boolean;
 	monthlyPrice: number;
+	ctaLink: string;
+	desc: string;
 }
 
 const PricingPlansCardHead: React.FC<Props> = (props) => {
@@ -21,7 +23,7 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 
 	return (
 		<>
-			{['Pay As You Go'].includes(planName) ? (
+			{['Pay $1 for a day'].includes(planName) ? (
 				<PayAsYouGoCardHead {...otherProps} />
 			) : (
 				<GenericPlanCardHead {...otherProps} />

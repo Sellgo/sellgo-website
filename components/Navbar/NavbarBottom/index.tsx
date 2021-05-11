@@ -35,7 +35,7 @@ const NavbarBottom: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="/"
+				navigateTo="https://app.sellgo.com/subscription/?type=basic&mode=yearly"
 				className={styles.navbarCTA}
 			>
 				Pay Only $1 to Sell

@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -14,16 +13,12 @@ interface Props {
 	annualPrice: number;
 	salesEstimateCount: number;
 	isMonthly: boolean;
+	ctaLink: string;
+	desc: string;
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
-	const {
-		name,
-		salesEstimateCount,
-		isMonthly,
-		monthlyPrice,
-		annualPrice
-	} = props;
+	const { name, isMonthly, monthlyPrice, annualPrice, ctaLink, desc } = props;
 
 	return (
 		<>
@@ -33,15 +28,16 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						<GemGenerator name={name} />
 					</div>
 					<h2>{name}</h2>
+					<p>{desc}</p>
 				</div>
 
-				<div className={styles.pricingCardHead__Right}>
+				{/* <div className={styles.pricingCardHead__Right}>
 					<p>Starts at {salesEstimateCount.toLocaleString()}</p>
 					<a href="#!" target="_blank" rel="noreferrer noopener">
 						<span>sales estimate</span>
 						<Image src="/externalLinkIcon.svg" width={12} height={10} />
 					</a>
-				</div>
+				</div> */}
 			</div>
 
 			<div className={styles.startingAt}>
@@ -71,7 +67,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			<CTAButton
 				type="primary"
 				size="medium"
-				navigateTo="/"
+				navigateTo={ctaLink}
 				className={styles.buyNowCTA}
 			>
 				Buy Now

@@ -9,9 +9,9 @@ const ContactInfo: React.FC<Props> = () => {
 	return (
 		<div className={styles.contactInfo}>
 			<h2>
-				Not sure which plan is right for you?
+				Not sure what plan is right for your business?
 				<br />
-				Give us a call.
+				Send us a message!
 			</h2>
 
 			<div className={styles.capsule}></div>

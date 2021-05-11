@@ -16,49 +16,20 @@
 			}
 		}
 	}
-
-	&__Right {
-		text-align: right;
-		h3 {
-			color: $blue_7;
-			font-size: $fontsize_subtitle_20;
-			font-weight: $fontweight_medium;
-		}
-
-		p {
-			color: $prim_dark_2;
-			font-weight: $fontweight_semibold;
-			span {
-				text-decoration: line-through;
-				margin-left: 5px;
-			}
-		}
-	}
 }
 
-.startingAt {
-	font-size: $fontsize_content_12;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	text-align: left;
+.pricePerDay {
+	text-align: center;
 	margin-top: 2rem;
-	p {
-		margin-right: 5px;
-	}
-
-	a {
+	h3 {
 		color: $blue_8;
+		font-size: $fontsize_subtitle_24;
 		font-weight: $fontweight_bold;
-
-		span {
-			margin-right: 3px;
-		}
 	}
 }
 
 .buyNameCTA {
-	margin-top: 5rem;
+	margin-top: 3rem;
 	margin-bottom: 3rem;
 	width: 100%;
 }

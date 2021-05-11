@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 import GroupedNavLink from '../GroupedNavLinks';
 
 /* Data */
-import { productsPlanNavigationLink, productsNavigationList } from './data';
+import { productsNavigationList, productsRightPanelData } from './data';
 
 interface Props {
 	className: string;
@@ -74,22 +74,26 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 				</div>
 
 				<div className={`${styles.productsNavbar__right}`}>
-					<div id="products" className="tabContent">
-						<h3>Features</h3>
-						<div className={styles.groupedLinksWrapper}>
-							{productsPlanNavigationLink.map(
-								(groupLinkDetails: any, index: number) => {
-									return (
-										<GroupedNavLink
-											key={uuid()}
-											{...groupLinkDetails}
-											id={index}
-										/>
-									);
-								}
-							)}
-						</div>
-					</div>
+					{productsRightPanelData.map((panelData: any) => {
+						return (
+							<div id={panelData.hoverId} className="tabContent" key={uuid()}>
+								<h3>{panelData.header}</h3>
+								<div className={styles.groupedLinksWrapper}>
+									{panelData.groupedNavLinksData.map(
+										(groupLinkDetails: any, index: number) => {
+											return (
+												<GroupedNavLink
+													key={uuid()}
+													{...groupLinkDetails}
+													id={index}
+												/>
+											);
+										}
+									)}
+								</div>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>

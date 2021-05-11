@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { v4 as uuid } from 'uuid';
 
 interface Props {
 	name: string;
@@ -12,6 +13,7 @@ const GemGenerator: React.FC<Props> = (props) => {
 		case 'Starter': {
 			gems = [
 				<Image
+					key={uuid()}
 					src="/gemIcon.svg"
 					alt="Gem Icon"
 					width={10}
@@ -24,6 +26,7 @@ const GemGenerator: React.FC<Props> = (props) => {
 		case 'Suite': {
 			gems = [
 				<Image
+					key={uuid()}
 					src="/gemIcon.svg"
 					alt="Gem Icon"
 					width={10}
@@ -31,6 +34,7 @@ const GemGenerator: React.FC<Props> = (props) => {
 					priority
 				/>,
 				<Image
+					key={uuid()}
 					src="/greenGem.svg"
 					alt="Gem Icon"
 					width={10}
@@ -44,6 +48,7 @@ const GemGenerator: React.FC<Props> = (props) => {
 		case 'Professional': {
 			gems = [
 				<Image
+					key={uuid()}
 					src="/gemIcon.svg"
 					alt="Gem Icon"
 					width={10}
@@ -51,6 +56,7 @@ const GemGenerator: React.FC<Props> = (props) => {
 					priority
 				/>,
 				<Image
+					key={uuid()}
 					src="/greenGem.svg"
 					alt="Gem Icon"
 					width={10}
@@ -58,6 +64,7 @@ const GemGenerator: React.FC<Props> = (props) => {
 					priority
 				/>,
 				<Image
+					key={uuid()}
 					src="/blueGem.svg"
 					alt="Gem Icon"
 					width={10}

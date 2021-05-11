@@ -25,7 +25,7 @@ const HeroBox: React.FC<Props> = () => {
 				</div>
 				<h1 className={styles.heading}>Profit Finder</h1>
 				<CTAButton
-					navigateTo="/"
+					navigateTo="https://app.sellgo.com/signup/?type=free"
 					type="primary"
 					size="medium"
 					className={styles.heroBoxCTA}

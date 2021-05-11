@@ -7,30 +7,45 @@
 	padding-top: 2rem;
 
 	&__Left {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+
 		h2 {
 			font-size: $fontsize_subtitle_20;
 			font-weight: $fontweight_medium;
+			margin: 0 auto;
 		}
-	}
 
-	&__Right {
-		color: $prim_dark_2;
-		text-align: right;
-		font-size: $fontsize_content_12;
 		p {
-			color: inherit;
-			font-weight: $fontweight_medium;
-		}
-
-		a {
-			display: flex;
-			color: $blue_8;
-			font-weight: $fontweight_bold;
-			span {
-				margin-right: 5px;
-			}
+			font-size: $fontsize_content_10;
+			font-weight: $fontweight_regular;
+			color: $grey_5;
+			max-width: 13.5rem;
+			text-align: center;
 		}
 	}
+
+	// &__Right {
+	// 	color: $prim_dark_2;
+	// 	text-align: right;
+	// 	font-size: $fontsize_content_12;
+	// 	p {
+	// 		color: inherit;
+	// 		font-weight: $fontweight_medium;
+	// 	}
+
+	// 	a {
+	// 		display: flex;
+	// 		color: $blue_8;
+	// 		font-weight: $fontweight_bold;
+	// 		span {
+	// 			margin-right: 5px;
+	// 		}
+	// 	}
+	// }
 }
 
 .planGems {
