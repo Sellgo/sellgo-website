@@ -15,6 +15,7 @@ interface Props {
 	isMonthly: boolean;
 	monthlyPrice: number;
 	ctaLink: string;
+	desc: string;
 }
 
 const PricingPlansCardHead: React.FC<Props> = (props) => {

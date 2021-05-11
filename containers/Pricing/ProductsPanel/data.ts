@@ -93,6 +93,7 @@ export const plansAndProductsDetails = [
 				monthlyPrice: 49,
 				annualPrice: 348,
 				ctaLink: '/',
+				desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 				featureSubName: 'Free tools plus',
 				featuresLists: [
 					{
@@ -121,6 +122,7 @@ export const plansAndProductsDetails = [
 				annualPrice: 588,
 				ctaLink: '/',
 				featureSubName: 'Starter Plus',
+				desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 				featuresLists: [
 					{
 						title: 'Advanced profit scout',
@@ -152,6 +154,7 @@ export const plansAndProductsDetails = [
 				annualPrice: 996,
 				ctaLink: '/',
 				featureSubName: 'Professional Plus',
+				desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 				featuresLists: [
 					{
 						title: 'Advance your leads',

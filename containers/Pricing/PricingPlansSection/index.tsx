@@ -101,7 +101,11 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			<section className={`big-page-container ${styles.allFeaturesSection}`}>
 				{allPlanFeatures.map((feature: any) => {
 					return (
-						<AllfeaturesTable header={feature.header} body={feature.body} />
+						<AllfeaturesTable
+							header={feature.header}
+							body={feature.body}
+							key={uuid()}
+						/>
 					);
 				})}
 			</section>

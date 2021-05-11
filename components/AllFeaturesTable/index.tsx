@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuid } from 'uuid';
 
 /* Styles */
 import styles from './index.module.scss';
@@ -16,16 +17,16 @@ const AllFeaturesTable: React.FC<Props> = (props) => {
 			<thead>
 				<tr>
 					{header.map((headerVal: string) => {
-						return <th>{headerVal}</th>;
+						return <th key={uuid()}>{headerVal}</th>;
 					})}
 				</tr>
 			</thead>
 			<tbody>
 				{body.map((bodyRow: string[]) => {
 					return (
-						<tr>
+						<tr key={uuid()}>
 							{bodyRow.map((bodyVal: string) => {
-								return <td>{bodyVal}</td>;
+								return <td key={uuid()}>{bodyVal}</td>;
 							})}
 						</tr>
 					);

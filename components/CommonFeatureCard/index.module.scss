@@ -2,14 +2,15 @@
 
 .commonFeatureCard {
 	text-align: center;
-	width: 30rem;
+	width: 35rem;
 	margin: 3rem auto;
 
 	h2 {
 		color: $blue_8;
-		font-size: $fontsize_subtitle_20;
-		font-weight: $fontweight_semibold;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_bold;
 		margin-top: 1rem;
+		min-height: 4rem;
 	}
 
 	p {
