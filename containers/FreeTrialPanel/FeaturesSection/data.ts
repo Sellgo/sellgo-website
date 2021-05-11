@@ -1,46 +1,31 @@
 export const featuresData = [
 	{
-		title: 'Free Trial 1',
+		title: 'Browser Extension',
 		featuresList: [
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus'
+			'Amazon Sales Estimator',
+			'Leaf Sourcing',
+			'Bulk Export',
+			'Connect to Product Tracker'
 		]
 	},
 	{
-		title: 'Free Trial 2',
+		title: 'Product Research',
 		featuresList: [
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus'
+			'Search Management',
+			'Profit Finder',
+			'Product Tracker',
+			'Variation Analysis',
+			'Multipack Analysis'
 		]
 	},
 	{
-		title: 'Free Trial 3',
+		title: 'Seller Research',
 		featuresList: [
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus'
-		]
-	},
-	{
-		title: 'Free Trial 4',
-		featuresList: [
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus',
-			'Starter Plus'
+			'Super Targeting',
+			'Seller Database',
+			'Seller Finder',
+			'Brand Finder',
+			'Check Seller Inventory'
 		]
 	}
 ];

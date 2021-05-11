@@ -41,7 +41,7 @@ const BenefitsSection: React.FC<Props> = () => {
 				navigateTo="/"
 				className={styles.benefitsCTA}
 			>
-				Get Started Free
+				Try Now for Free
 			</CTAButton>
 		</section>
 	);

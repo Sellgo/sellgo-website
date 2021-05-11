@@ -19,16 +19,19 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
-					<h2>Free Trial</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+					<h2>Maximize Your Profits with Sellgo's Free Trial!</h2>
+					<p>
+						Access all of Sellgo's free Amazon tools and integrate them into
+						your Amazon business.
+					</p>
 				</div>
 				<CTAButton
 					type="secondary"
 					size="medium"
-					navigateTo="/"
+					navigateTo="https://app.sellgo.com/signup/?type=free"
 					className={styles.freeTrialCTA}
 				>
-					Get Started Free
+					Try Now 7-day Free Trial
 				</CTAButton>
 			</div>
 
@@ -42,7 +45,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 							alt="Check Mark Icon"
 						/>
 					</span>
-					Product
+					Browser Extension
 				</li>
 
 				<li className={styles.detailsList}>
@@ -54,7 +57,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 							alt="Check Mark Icon"
 						/>
 					</span>
-					Product
+					Search Management
 				</li>
 
 				<li className={styles.detailsList}>
@@ -66,7 +69,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 							alt="Check Mark Icon"
 						/>
 					</span>
-					Product
+					Profit Finder
 				</li>
 
 				<li className={styles.detailsList}>
@@ -78,7 +81,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 							alt="Check Mark Icon"
 						/>
 					</span>
-					Product
+					Product Tracker
 				</li>
 
 				<li className={styles.detailsList}>
@@ -90,19 +93,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 							alt="Check Mark Icon"
 						/>
 					</span>
-					Product
-				</li>
-
-				<li className={styles.detailsList}>
-					<span>
-						<Image
-							src="/checkMark.svg"
-							width={10}
-							height={8}
-							alt="Check Mark Icon"
-						/>
-					</span>
-					Product
+					Seller Finder
 				</li>
 
 				<li>

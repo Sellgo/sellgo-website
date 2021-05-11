@@ -39,7 +39,7 @@ const OtherInfoSection: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="/"
+				navigateTo="https://app.sellgo.com/signup/?type=free"
 				className={styles.otherInfoSectionCTA}
 			>
 				Get Started

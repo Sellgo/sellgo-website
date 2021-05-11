@@ -14,7 +14,7 @@ const HeroBox: React.FC<Props> = () => {
 			<div className={`page-container ${styles.herobox}`}>
 				<div className={`${styles.heroboxText}`}>
 					<h1 className={`${styles.heading}`}>
-						Ultimate Amazon Wholesale <br /> Sourcing Tools
+						Start Selling <br /> On Amazon Today
 					</h1>
 					<p className={`${styles.tagline}`}>
 						Scout, source, and sell high demand, winning products

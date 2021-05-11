@@ -18,11 +18,14 @@ const HeroBox: React.FC<Props> = () => {
 			<div className={styles.heroBox__Image}></div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<span></span> <h2 className={styles.subHeading}>Quick Product Validation on Browser</h2>
+					<span></span>{' '}
+					<h2 className={styles.subHeading}>
+						Quick Product Validation on Browser
+					</h2>
 				</div>
 				<h1 className={styles.heading}>Chrome Extension</h1>
 				<CTAButton
-					navigateTo="/"
+					navigateTo="https://app.sellgo.com/signup/?type=free"
 					type="primary"
 					size="medium"
 					className={styles.heroBoxCTA}

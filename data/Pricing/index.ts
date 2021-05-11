@@ -1,14 +1,11 @@
 /* Interfaces */
 import { KeyValuePair } from '../../interfaces';
 
-import {
-	wholeSalePlanAllFeatures,
-	payAsYouGoAllFeatures
-} from './allFeaturesTable';
+import { pay1MonthAllFeatures, pay1DayAllFeatures } from './allFeaturesTable';
 
 export const allPlansFeatureMapper: KeyValuePair = {
-	'Wholesale Go': wholeSalePlanAllFeatures,
-	'Pay As You Go': payAsYouGoAllFeatures
+	'Pay $1 for the entire first month of membership': pay1MonthAllFeatures,
+	'Pay $1 for a day': pay1DayAllFeatures
 };
 
 export const getAllFeaturesForPlans = (planName: string) => {

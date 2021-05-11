@@ -4,116 +4,76 @@ export const planTypes = [
 		isNew: false
 	},
 	{
-		name: 'Pay $1 Plan',
+		name: 'Pay $1 for a Day',
 		isNew: false
 	},
 	{
-		name: 'Wholesale',
+		name: 'Pay $1 for the 1st Month',
 		isNew: false
 	}
 ];
 
 export const plansAndProductsDetails = [
 	{
-		planName: 'Pay Only $1 to Sell',
+		planName: 'Pay $1 for a day',
 		productsIncluded: [
 			{
 				name: 'Browser Extension',
-				productsDatabase: 1000,
-				salesEstimateCount: 0,
+				productsDatabase: 0,
+				salesEstimateCount: 30,
 				yearlyPrice: 500,
 				annualPrice: 600,
-				featureSubName: 'Starter Plus',
+				featureSubName: 'Free Account Plus',
 				featuresLists: [
 					{
-						title: 'Feature 1',
-						featuresIncluded: ['Starter Plus', 'Starter Plus']
-					},
-					{
-						title: 'Feature 2',
-						featuresIncluded: ['Starter Plus', 'Starter Plus', 'Starter Plus']
-					},
-					{
-						title: 'Feature 3',
+						title: 'Amazon Sales Estimator',
 						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
+							'30 estimates daily',
+							'True Sales Estimate',
+							'Leaf Sourcing'
 						]
 					}
 				]
 			},
 			{
-				name: 'Profit Finder',
-				productsDatabase: 2000,
+				name: 'Product Research',
+				productsDatabase: 0,
 				salesEstimateCount: 0,
 				yearlyPrice: 600,
 				annualPrice: 700,
-				featureSubName: 'Starter Plus',
+				featureSubName: 'Free Account Plus',
 				featuresLists: [
 					{
-						title: 'Feature 1',
+						title: 'Wholesale Features',
 						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
+							'Search Management',
+							'Profit Finder 500 products daily',
+							'Variation Analysis',
+							'Multipack Analysis'
 						]
 					},
 					{
-						title: 'Feature 2',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
+						title: 'Private Label Features',
+						featuresIncluded: ['Product Tracker 50 products daily']
 					}
 				]
 			},
 			{
-				name: 'Seller Finder',
-				productsDatabase: 3000,
+				name: 'Seller Research',
+				productsDatabase: 0,
 				salesEstimateCount: 0,
 				yearlyPrice: 700,
 				annualPrice: 800,
-				featureSubName: 'Starter Plus',
+				featureSubName: 'Free Account Plus',
 				featuresLists: [
 					{
-						title: 'Feature 1',
+						title: 'Wholesale Features',
 						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 2',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
-						]
-					},
-					{
-						title: 'Feature 3',
-						featuresIncluded: [
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus',
-							'Starter Plus'
+							'Super Targeting',
+							'Seller Database',
+							'Seller Finder',
+							'Brand Finder',
+							'Check Seller Inventory'
 						]
 					}
 				]
@@ -121,7 +81,7 @@ export const plansAndProductsDetails = [
 		]
 	},
 	{
-		planName: 'Wholesale Go',
+		planName: 'Pay $1 for the entire first month of membership',
 		productsIncluded: [
 			{
 				name: 'Starter',
@@ -152,7 +112,7 @@ export const plansAndProductsDetails = [
 			{
 				name: 'Suite',
 				productsDatabase: 0,
-				salesEstimateCount: 2000,
+				salesEstimateCount: 1500,
 				monthlyPrice: 69,
 				annualPrice: 504,
 				featureSubName: 'Starter Plus',
@@ -182,7 +142,7 @@ export const plansAndProductsDetails = [
 			{
 				name: 'Professional',
 				productsDatabase: 0,
-				salesEstimateCount: 3000,
+				salesEstimateCount: 2500,
 				monthlyPrice: 129,
 				annualPrice: 996,
 				featureSubName: 'Professional Plus',

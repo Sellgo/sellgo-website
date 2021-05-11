@@ -13,10 +13,13 @@ const PricingInfoAlert: React.FC<Props> = (props) => {
 
 	return (
 		<div className={`${styles.pricingInfoAlert} ${className}`}>
-			<h3>Lorem ipsum dolor sit amet</h3>
+			<h3>Start selling on Amazon today with Sellgo's free tools</h3>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua.
+				Want to try our advanced Amazon tools? Review our FBA tools and pricing
+				packages.
+				<br />
+				Our premium tools empower you to track and research more products to
+				optimize your Amazon business.
 			</p>
 			<a href="#!">
 				Learn More{' '}

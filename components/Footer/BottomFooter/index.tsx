@@ -11,35 +11,57 @@ const BottomFooter: React.FC<Props> = () => {
 		<div className={styles.bottomFooter}>
 			<ul className={styles.socialLinks}>
 				<li>
-					<a href="https://twitter.com/Sellgo3" target="_blank" rel="noopener noreferrer">
+					<a
+						href="https://twitter.com/Sellgo3"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img src="/twitterLogo.svg" alt="Social Media Icon for Twitter" />
 					</a>
 				</li>
 
 				<li>
-					<a href="https://www.facebook.com/sellgoinc/" target="_blank" rel="noopener noreferrer">
+					<a
+						href="https://www.facebook.com/sellgoinc/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img src="/facebookLogo.svg" alt="Social Media Icon for Facebook" />
 					</a>
 				</li>
 
 				<li>
-					<a href="https://www.instagram.com/sellgoinc_/" target="_blank" rel="noopener noreferrer">
+					<a
+						href="https://www.instagram.com/sellgoinc_/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img
-							src="/instagramLogo.svg" alt="Social Media Icon for Instagram"
+							src="/instagramLogo.svg"
+							alt="Social Media Icon for Instagram"
 						/>
 					</a>
 				</li>
 
 				<li>
-					<a href="https://www.linkedin.com/company/sellgo/" target="_blank" rel="noopener noreferrer">
+					<a
+						href="https://www.linkedin.com/company/sellgo/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img
-							src="/instagramLogo.svg" alt="Social Media Icon for LinkedIn"
+							src="/instagramLogo.svg"
+							alt="Social Media Icon for LinkedIn"
 						/>
 					</a>
 				</li>
 
 				<li>
-					<a href="https://www.youtube.com/channel/UCPIKsoPjh4uyuU1LYi4WNNA" target="_blank" rel="noopener noreferrer">
+					<a
+						href="https://www.youtube.com/channel/UCPIKsoPjh4uyuU1LYi4WNNA"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<img src="/youtubeLogo.svg" alt="Social Media Icon for Youtube" />
 					</a>
 				</li>
