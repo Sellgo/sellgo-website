@@ -34,6 +34,7 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 							alt={featuredImage.node.altText}
 							layout="fill"
 							objectFit="cover"
+							priority
 						/>
 					</div>
 					<div className={styles.blogText}>

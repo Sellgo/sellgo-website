@@ -21,14 +21,17 @@ export interface Categories {
 	nodes: Category[];
 }
 
+export interface Author {
+	firstName: string;
+	lastName: string;
+}
+
 export interface ShowcaseBlogDetails {
 	slug: string;
 	title: string;
 	featuredImage: FeaturedImage;
 	categories: Categories;
+	content: string;
 }
 
-export interface Author {
-	firstName: string;
-	lastName: string;
-}
+export interface RelatedBlogDetails extends ShowcaseBlogDetails {}

@@ -8,27 +8,37 @@ import styles from './index.module.scss';
 /* Utils */
 import { imageLoaderForBlogs } from '../../../utils/Blogs';
 
-interface Props {}
+/* Types */
+import { RelatedBlogDetails } from '../../../interfaces/Blogs';
 
-const CategoryBlogCard: React.FC<Props> = () => {
+interface Props {
+	relatedBlogsDetails: RelatedBlogDetails | null;
+}
+
+const CategoryBlogCard: React.FC<Props> = (props) => {
+	const { relatedBlogsDetails } = props;
+
+	// return empty if no details found
+	if (!relatedBlogsDetails) {
+		return null;
+	}
+
 	return (
 		<article className={styles.categoryBlogCard}>
-			<Link href="/" passHref>
+			<Link href={`/blogs/blog/${relatedBlogsDetails.slug}`} passHref>
 				<a>
 					<div className={styles.categoryBlogCard__Image}>
 						<Image
 							loader={imageLoaderForBlogs}
-							src={`https://blog.hubspot.com/hubfs/assets/blog.hubspot.com/
-					2018/blogroll-images/marketing-blog-image.jpg`}
-							alt="Alt Text"
+							src={relatedBlogsDetails.featuredImage.node.sourceUrl}
+							alt={relatedBlogsDetails.featuredImage.node.altText}
 							layout="fill"
 							objectFit="cover"
 						/>
 					</div>
 
 					<div className={styles.categoryBlogCard__Text}>
-						<h3>Marketing</h3>
-						<p>Insights, ideas and inspiration</p>
+						<p>{relatedBlogsDetails.title}</p>
 					</div>
 				</a>
 			</Link>

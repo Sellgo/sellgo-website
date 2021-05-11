@@ -1,3 +1,5 @@
+import { GetStaticProps } from 'next';
+
 /* Containers */
 import HeroBox from '../../containers/ExtensionCont/HeroBox';
 import InfoSection from '../../containers/ExtensionCont/InfoSection';
@@ -29,4 +31,11 @@ const ExtensionContPage = () => {
 	);
 };
 
+export const getStaticProps: GetStaticProps = async () => {
+	return {
+		props: {
+			faqDetails: []
+		}
+	};
+};
 export default ExtensionContPage;
