@@ -5,56 +5,72 @@
 	width: 100%;
 	display: flex;
 	box-shadow: 0 5px 10px rgba(#000, 0.5);
+	min-height: 34rem;
 }
 
 .productsNavbar__left {
 	min-width: 24rem;
 	background: $grey_1;
 	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
-	padding: 0 4rem;
-}
 
-.productsNavigator {
-	margin: 4rem 0;
-	color: $prim_dark_2;
-	text-align: left;
-	cursor: auto;
-	h2 {
-		color: inherit;
-		font-size: $fontsize_subtitle_20;
-		font-weight: $fontweight_medium;
+	h3 {
+		font-size: $fontsize_content_10;
+		color: $prim_dark_2;
+		text-align: left;
+		margin-top: 1rem;
+		margin-left: 2rem;
+		margin-bottom: 1rem;
+		font-weight: $fontweight_semibold;
 	}
 }
 
 .productsNavbar__right {
-	padding: 3rem 4rem;
-	height: 100%;
+	min-height: 100%;
+	background: $prim_white;
+	min-width: 60rem;
+
+	h3 {
+		font-size: $fontsize_content_10;
+		color: $prim_dark_2;
+		text-align: left;
+		margin-top: 1rem;
+		margin-left: 5rem;
+		margin-bottom: 1rem;
+		font-weight: $fontweight_semibold;
+	}
 }
 
 .groupedLinksWrapper {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	flex-wrap: wrap;
+	width: 80%;
+	margin-left: 5rem;
 }
 
-.bottomSummary {
-	border-top: 1px solid $grey_1;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	padding-top: 3rem;
+.tabLinks {
+	height: 6rem;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	text-align: left;
+	padding-left: 1rem;
+	margin-left: 1rem;
+	min-width: 100%;
 
 	h2 {
 		font-size: $fontsize_subtitle_20;
 		font-weight: $fontweight_medium;
+		margin-top: 5px;
 	}
 
-	p {
-		color: $grey_8;
-		margin: 0;
+	a {
+		color: $blue_8;
+		font-size: $fontsize_content_12;
+		display: inline-block;
+		span {
+			margin-left: 4px;
+			font-size: 14px;
+		}
 	}
 }

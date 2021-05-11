@@ -1,4 +1,25 @@
-export const groupNavigationDetails = [
+export const productsNavigationList = [
+	{
+		head: 'Lorem Ipsum',
+		navigateLabel: 'Lorem ipsum',
+		navigateTo: 'lorem ipsum',
+		hoverId: 'products'
+	},
+	{
+		head: 'Lorem Ipsum',
+		navigateLabel: 'Lorem ipsum',
+		navigateTo: 'lorem ipsum',
+		hoverId: 'api'
+	},
+	{
+		head: 'Lorem Ipsum',
+		navigateLabel: 'Lorem ipsum',
+		navigateTo: 'lorem ipsum',
+		hoverId: 'free-trial'
+	}
+];
+
+export const productsPlanNavigationLink = [
 	{
 		head: 'Wholesale Go',
 		desc: 'Wholesale Sourcing Software',
@@ -15,6 +36,18 @@ export const groupNavigationDetails = [
 		head: 'Seller Scout',
 		desc: 'Wholesale Sourcing Software',
 		navigateTo: '/sellerscout-go',
+		navigateLabel: '$1 and Premium Plan'
+	},
+	{
+		head: 'Wholesale Go',
+		desc: 'Wholesale Sourcing Software',
+		navigateTo: '/wholesale-go',
+		navigateLabel: '$1 and Premium Plan'
+	},
+	{
+		head: 'Wholesale Go',
+		desc: 'Wholesale Sourcing Software',
+		navigateTo: '/wholesale-go',
 		navigateLabel: '$1 and Premium Plan'
 	},
 	{
