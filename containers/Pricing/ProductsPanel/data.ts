@@ -4,11 +4,11 @@ export const planTypes = [
 		isNew: false
 	},
 	{
-		name: 'Pay $1 for a Day',
+		name: 'Pay $1 a day',
 		isNew: false
 	},
 	{
-		name: 'Pay $1 for the 1st Month',
+		name: 'Pay $1 1st month',
 		isNew: false
 	}
 ];
@@ -114,7 +114,7 @@ export const plansAndProductsDetails = [
 				productsDatabase: 0,
 				salesEstimateCount: 1500,
 				monthlyPrice: 69,
-				annualPrice: 504,
+				annualPrice: 588,
 				featureSubName: 'Starter Plus',
 				featuresLists: [
 					{
