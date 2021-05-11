@@ -1,3 +1,10 @@
+import React from 'react';
+import { GetStaticProps } from 'next';
+import axios from 'axios';
+
+/* Styling */
+import styles from './index.module.scss';
+
 /* Containers */
 import HeroBox from '../../containers/LeadsTrackerCont/HeroBox';
 import InfoSection from '../../containers/LeadsTrackerCont/InfoSection';
@@ -9,10 +16,19 @@ import OtherInfoSection from '../../containers/LeadsTrackerCont/OtherInfoSection
 import FAQSection from '../../containers/LeadsTrackerCont/FAQSection';
 import RecommendationSection from '../../containers/LeadsTrackerCont/RecommendationSection';
 
-/* Styling */
-import styles from './index.module.scss';
+/* App Config */
+import AppConfig from '../../config';
 
-const LeadsTrackerContPage = () => {
+/* Types */
+import { FAQDetails } from '../../interfaces/FAQ';
+
+interface Props {
+	faqDetails: FAQDetails;
+}
+
+const LeadsTrackerContPage: React.FC<Props> = (props) => {
+	const { faqDetails } = props;
+
 	return (
 		<>
 			<HeroBox />
@@ -23,10 +39,21 @@ const LeadsTrackerContPage = () => {
 			<BannerCTASection />
 			<PlansSection />
 			<OtherInfoSection />
-			<FAQSection />
+			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>
 	);
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/leadsTracker.json`);
+	const { data } = response;
+	return {
+		props: {
+			faqDetails: data
+		},
+		revalidate: 1
+	};
 };
 
 export default LeadsTrackerContPage;

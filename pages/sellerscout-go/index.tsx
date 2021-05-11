@@ -1,3 +1,10 @@
+import React from 'react';
+import { GetStaticProps } from 'next';
+import axios from 'axios';
+
+/* Styling */
+import styles from './index.module.scss';
+
 /* Containers */
 import HeroBox from '../../containers/SellerscoutGo/HeroBox';
 import InfoSection from '../../containers/SellerscoutGo/InfoSection';
@@ -9,10 +16,19 @@ import OtherInfoSection from '../../containers/SellerscoutGo/OtherInfoSection';
 import FAQSection from '../../containers/SellerscoutGo/FAQSection';
 import RecommendationSection from '../../containers/SellerscoutGo/RecommendationSection';
 
-/* Styling */
-import styles from './index.module.scss';
+/* App Config */
+import AppConfig from '../../config';
 
-const SellerScoutPage = () => {
+/* Types */
+import { FAQDetails } from '../../interfaces/FAQ';
+
+interface Props {
+	faqDetails: FAQDetails;
+}
+
+const SellerScoutPage: React.FC<Props> = (props) => {
+	const { faqDetails } = props;
+
 	return (
 		<>
 			<HeroBox />
@@ -23,10 +39,24 @@ const SellerScoutPage = () => {
 			<BannerCTASection />
 			<PlansSection />
 			<OtherInfoSection />
-			<FAQSection />
+			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>
 	);
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+	const response = await axios.get(
+		`${AppConfig.FAQ_BUCKET}/sellerScoutGo.json`
+	);
+
+	const { data } = response;
+	return {
+		props: {
+			faqDetails: data
+		},
+		revalidate: 1
+	};
 };
 
 export default SellerScoutPage;

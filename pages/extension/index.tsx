@@ -1,4 +1,9 @@
+import React from 'react';
 import { GetStaticProps } from 'next';
+import axios from 'axios';
+
+/* Styling */
+import styles from './index.module.scss';
 
 /* Containers */
 import HeroBox from '../../containers/ExtensionCont/HeroBox';
@@ -11,10 +16,19 @@ import OtherInfoSection from '../../containers/ExtensionCont/OtherInfoSection';
 import FAQSection from '../../containers/ExtensionCont/FAQSection';
 import RecommendationSection from '../../containers/ExtensionCont/RecommendationSection';
 
-/* Styling */
-import styles from './index.module.scss';
+/* App Config */
+import AppConfig from '../../config';
 
-const ExtensionContPage = () => {
+/* Types */
+import { FAQDetails } from '../../interfaces/FAQ';
+
+interface Props {
+	faqDetails: FAQDetails;
+}
+
+const ExtensionContPage: React.FC<Props> = (props) => {
+	const { faqDetails } = props;
+
 	return (
 		<>
 			<HeroBox />
@@ -25,17 +39,21 @@ const ExtensionContPage = () => {
 			<BannerCTASection />
 			<PlansSection />
 			<OtherInfoSection />
-			<FAQSection />
+			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>
 	);
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/extension.json`);
+
+	const { data } = response;
 	return {
 		props: {
-			faqDetails: []
-		}
+			faqDetails: data
+		},
+		revalidate: 1
 	};
 };
 export default ExtensionContPage;

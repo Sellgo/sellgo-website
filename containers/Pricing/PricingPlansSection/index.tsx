@@ -24,14 +24,18 @@ import FAQSection from '../FAQSection';
 /* Constants */
 import { getAllFeaturesForPlans } from '../../../data/Pricing';
 
+/* Types */
+import { FAQDetails } from '../../../interfaces/FAQ';
+
 interface Props {
 	planName: string;
 	productsIncluded: any;
 	selectedPlanType: number;
+	faqData: FAQDetails;
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
-	const { planName, productsIncluded, selectedPlanType } = props;
+	const { planName, productsIncluded, selectedPlanType, faqData } = props;
 
 	const [isMonthly, setIsMonthly] = useState(true);
 
@@ -113,7 +117,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 
 			{/* <CalculateYourPriceSection selectedPlanType={selectedPlanType} /> */}
 			{/* <ExtraInfoSection /> */}
-			<FAQSection />
+			{faqData.data.length > 0 && <FAQSection faqData={faqData.data} />}
 		</>
 	);
 };

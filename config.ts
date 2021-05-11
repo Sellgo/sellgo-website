@@ -1,11 +1,13 @@
 export const DEV_URLS = {
 	WEB_URL: 'https://www.sellgo-dev.com',
-	WPGRAPHQL: 'http://54.242.244.57/graphql'
+	WPGRAPHQL: 'http://54.242.244.57/graphql',
+	FAQ_BUCKET: 'https://sellgo-website-dev.s3.amazonaws.com/faqDetails'
 };
 
 export const PROD_URLS = {
 	WEB_URL: 'https://www.sellgo.com',
-	WPGRAPHQL: 'http://54.242.244.57/graphql'
+	WPGRAPHQL: 'http://54.242.244.57/graphql',
+	FAQ_BUCKET: 'https://sellgo-website-dev.s3.amazonaws.com/faqDetails'
 };
 
 const DEV = {

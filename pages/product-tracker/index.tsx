@@ -1,3 +1,10 @@
+import React from 'react';
+import { GetStaticProps } from 'next';
+import axios from 'axios';
+
+/* Styling */
+import styles from './index.module.scss';
+
 /* Containers */
 import HeroBox from '../../containers/ProductTrackerCont/HeroBox';
 import InfoSection from '../../containers/ProductTrackerCont/InfoSection';
@@ -9,10 +16,18 @@ import OtherInfoSection from '../../containers/ProductTrackerCont/OtherInfoSecti
 import FAQSection from '../../containers/ProductTrackerCont/FAQSection';
 import RecommendationSection from '../../containers/ProductTrackerCont/RecommendationSection';
 
-/* Styling */
-import styles from './index.module.scss';
+/* App Config */
+import AppConfig from '../../config';
 
-const ProductTrackerContPage = () => {
+/* Types */
+import { FAQDetails } from '../../interfaces/FAQ';
+
+interface Props {
+	faqDetails: FAQDetails;
+}
+
+const ProductTrackerContPage: React.FC<Props> = (props) => {
+	const { faqDetails } = props;
 	return (
 		<>
 			<HeroBox />
@@ -23,10 +38,23 @@ const ProductTrackerContPage = () => {
 			<BannerCTASection />
 			<PlansSection />
 			<OtherInfoSection />
-			<FAQSection />
+			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>
 	);
 };
 
+export const getStaticProps: GetStaticProps = async () => {
+	const response = await axios.get(
+		`${AppConfig.FAQ_BUCKET}/productTracker.json`
+	);
+
+	const { data } = response;
+	return {
+		props: {
+			faqDetails: data
+		},
+		revalidate: 1
+	};
+};
 export default ProductTrackerContPage;
