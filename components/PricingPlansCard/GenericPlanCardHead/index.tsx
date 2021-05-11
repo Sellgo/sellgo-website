@@ -14,6 +14,7 @@ interface Props {
 	annualPrice: number;
 	salesEstimateCount: number;
 	isMonthly: boolean;
+	ctaLink: string;
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
@@ -22,7 +23,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		salesEstimateCount,
 		isMonthly,
 		monthlyPrice,
-		annualPrice
+		annualPrice,
+		ctaLink
 	} = props;
 
 	return (
@@ -71,7 +73,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			<CTAButton
 				type="primary"
 				size="medium"
-				navigateTo="/"
+				navigateTo={ctaLink}
 				className={styles.buyNowCTA}
 			>
 				Buy Now

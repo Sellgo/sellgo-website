@@ -9,24 +9,25 @@ import CTAButton from '../CTAButton';
 
 interface Props {
 	className?: string;
+	isPrimary?: boolean;
 }
 
 const FreeTrialCTABox: React.FC<Props> = (props) => {
-	const { className } = props;
+	const { className, isPrimary } = props;
 	return (
 		<section
 			className={`big-page-container ${styles.freeTrialCTABox} ${className}`}
 		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
-					<h2>Maximize Your Profits with Sellgo's Free Trial!</h2>
+					<h2>Maximize Your Profits with Sellgo&apos;s Free Trial!</h2>
 					<p>
-						Access all of Sellgo's free Amazon tools and integrate them into
-						your Amazon business.
+						Access all of Sellgo&apos;s free Amazon tools and integrate them
+						into your Amazon business.
 					</p>
 				</div>
 				<CTAButton
-					type="secondary"
+					type={isPrimary ? 'primary' : 'secondary'}
 					size="medium"
 					navigateTo="https://app.sellgo.com/signup/?type=free"
 					className={styles.freeTrialCTA}

@@ -22,8 +22,12 @@ const FreeTrialPanel: React.FC<Props> = () => {
 			<section className={`big-page-container ${styles.freeTrialSection}`}>
 				<h2 className="secondary-heading">Free Trial</h2>
 				<p>We offer a 7-day free trial with no credit card required.</p>
-				<FreeTrialCTABox className={styles.freeTrialCTABox} />
-				<PricingInfoAlert className={styles.freeTrialInfoAlert} />
+				<FreeTrialCTABox className={styles.freeTrialCTABox} isPrimary />
+				<PricingInfoAlert
+					className={styles.freeTrialInfoAlert}
+					navigateTo="/"
+					navigateLabel="Learn More"
+				/>
 			</section>
 
 			<FeaturesSection />
@@ -37,7 +41,7 @@ const FreeTrialPanel: React.FC<Props> = () => {
 
 			<section className={`big-page-container ${styles.otherInfoSection}`}>
 				<h2 className="secondary-heading">
-					Maximize Your Profits with Sellgo's Free Tools!
+					Maximize Your Profits with Sellgo&apos;s Free Tools!
 				</h2>
 				<CTAButton
 					type="primary"

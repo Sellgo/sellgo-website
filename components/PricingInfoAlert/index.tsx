@@ -6,14 +6,16 @@ import styles from './index.module.scss';
 
 interface Props {
 	className?: string;
+	navigateTo: string;
+	navigateLabel: string;
 }
 
 const PricingInfoAlert: React.FC<Props> = (props) => {
-	const { className } = props;
+	const { className, navigateLabel, navigateTo } = props;
 
 	return (
 		<div className={`${styles.pricingInfoAlert} ${className}`}>
-			<h3>Start selling on Amazon today with Sellgo's free tools</h3>
+			<h3>Start selling on Amazon today with Sellgo&apos;s free tools</h3>
 			<p>
 				Want to try our advanced Amazon tools? Review our FBA tools and pricing
 				packages.
@@ -21,8 +23,8 @@ const PricingInfoAlert: React.FC<Props> = (props) => {
 				Our premium tools empower you to track and research more products to
 				optimize your Amazon business.
 			</p>
-			<a href="#!">
-				Learn More{' '}
+			<a href={navigateTo} target="_blank" rel="noopener noreferrer">
+				{navigateLabel}{' '}
 				<span>
 					<Image
 						src="/externalLinkIcon.svg"

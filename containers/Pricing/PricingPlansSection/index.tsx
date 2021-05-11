@@ -62,7 +62,9 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					</div>
 
 					{/* Show only for Pay as you go plans */}
-					{selectedPlanType === 1 && <PricingInfoAlert />}
+					{selectedPlanType === 1 && (
+						<PricingInfoAlert navigateTo="/" navigateLabel="Learn More" />
+					)}
 
 					{/* Show for all expect pay as you go */}
 					{selectedPlanType !== 1 && (

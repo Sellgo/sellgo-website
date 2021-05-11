@@ -24,6 +24,7 @@ export const plansAndProductsDetails = [
 				yearlyPrice: 500,
 				annualPrice: 600,
 				featureSubName: 'Free Account Plus',
+				ctaLink: '/',
 				featuresLists: [
 					{
 						title: 'Amazon Sales Estimator',
@@ -41,6 +42,7 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 0,
 				yearlyPrice: 600,
 				annualPrice: 700,
+				ctaLink: '/',
 				featureSubName: 'Free Account Plus',
 				featuresLists: [
 					{
@@ -64,6 +66,7 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 0,
 				yearlyPrice: 700,
 				annualPrice: 800,
+				ctaLink: '/',
 				featureSubName: 'Free Account Plus',
 				featuresLists: [
 					{
@@ -89,6 +92,7 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 1000,
 				monthlyPrice: 49,
 				annualPrice: 348,
+				ctaLink: '/',
 				featureSubName: 'Free tools plus',
 				featuresLists: [
 					{
@@ -115,6 +119,7 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 1500,
 				monthlyPrice: 69,
 				annualPrice: 588,
+				ctaLink: '/',
 				featureSubName: 'Starter Plus',
 				featuresLists: [
 					{
@@ -145,6 +150,7 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 2500,
 				monthlyPrice: 129,
 				annualPrice: 996,
+				ctaLink: '/',
 				featureSubName: 'Professional Plus',
 				featuresLists: [
 					{

@@ -10,10 +10,11 @@ interface Props {
 	productsDatabase: number;
 	yearlyPrice: number;
 	annualPrice: number;
+	ctaLink: string;
 }
 
 const PayAsYouGoCardHead: React.FC<Props> = (props) => {
-	const { name, productsDatabase, yearlyPrice, annualPrice } = props;
+	const { name, ctaLink } = props;
 
 	return (
 		<>
@@ -30,19 +31,8 @@ const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 						<span>{name}</span>
 					</h2>
 				</div>
-
-				<div className={styles.pricingCardHead__Right}>
-					<h3>$1/Day</h3>
-					<p>
-						Billed at{' '}
-						<span className="strke-text">{`$${annualPrice.toLocaleString()}`}</span>
-						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
-							{`$${yearlyPrice.toLocaleString()}/yr`}
-						</span>
-					</p>
-				</div>
 			</div>
-
+			{/* 
 			<div className={styles.startingAt}>
 				<p>Starts At {productsDatabase.toLocaleString()}</p>
 				<a href="#!" target="_blank" rel="noopener noreferrer">
@@ -56,11 +46,16 @@ const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 						priority
 					/>
 				</a>
+			</div> */}
+
+			<div className={styles.pricePerDay}>
+				<h3>$1/Day</h3>
 			</div>
+
 			<CTAButton
 				type="primary"
 				size="medium"
-				navigateTo="/"
+				navigateTo={ctaLink}
 				className={styles.buyNameCTA}
 			>
 				Buy Now

@@ -26,6 +26,7 @@ interface Props {
 	planName: string;
 	isMonthly: boolean;
 	monthlyPrice: number;
+	ctaLink: string;
 }
 
 const PricingPlansCard: React.FC<Props> = (props) => {
@@ -40,17 +41,14 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 		planName,
 		salesEstimateCount,
 		isMonthly,
-		monthlyPrice
+		monthlyPrice,
+		ctaLink
 	} = props;
 
 	const isGradientHeader = plansWithHeaderGradient.includes(name);
 
-	const cardWrapperClassName = `${styles.pricingPlansCardWrapper} ${
-		isGradientHeader ? styles.pricingPlansCardWrapper__NoBorder : ''
-	}`;
-
 	return (
-		<div className={cardWrapperClassName}>
+		<div className={styles.pricingPlansCardWrapper}>
 			{/* Header gradients for plans */}
 
 			{isGradientHeader && (
@@ -71,6 +69,7 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 					salesEstimateCount={salesEstimateCount}
 					isMonthly={isMonthly}
 					monthlyPrice={monthlyPrice}
+					ctaLink={ctaLink}
 				/>
 
 				<p className={styles.planType}>{featureSubName}</p>
