@@ -65,7 +65,10 @@ const BlogPage: React.FC<Props> = (props) => {
 					dangerouslySetInnerHTML={{ __html: content }}
 				/>
 			</main>
-			<ShareBlogSection />
+			<ShareBlogSection
+				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
+				title={title}
+			/>
 			<RelatedBlogsSection />
 		</>
 	);
