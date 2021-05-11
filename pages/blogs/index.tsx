@@ -42,7 +42,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 
 				<div className={styles.divider} />
 
-				<BlogsCategorySection />
+				<BlogsCategorySection relatedBlogs={showcaseBlogs.slice(6)} />
 
 				<section className={styles.banner} />
 			</main>

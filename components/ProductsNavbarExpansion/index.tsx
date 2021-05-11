@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 import GroupedNavLink from '../GroupedNavLinks';
 
 /* Data */
-import { groupNavigationDetails } from './data';
+import { productsNavigationList, productsRightPanelData } from './data';
 
 interface Props {
 	className: string;
@@ -17,41 +17,83 @@ interface Props {
 const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 	const { className } = props;
 
+	const handleChange = (e: any, customID: string) => {
+		const tabContent = document.querySelectorAll('.tabContent');
+		const tabLinks = document.querySelectorAll('.tabLinks');
+		const hoverTabPanel = document.getElementById(customID);
+		console.log(hoverTabPanel);
+
+		tabContent.forEach((tabContent: any) => {
+			// eslint-disable-next-line no-param-reassign
+			tabContent.style.display = 'none';
+		});
+
+		tabLinks.forEach((tabLink: any) => {
+			// eslint-disable-next-line no-param-reassign
+			tabLink.className = tabLink.className.replace(' active', '');
+		});
+
+		if (hoverTabPanel) {
+			hoverTabPanel.style.display = 'block';
+		}
+
+		e.currentTarget.className += ' active';
+	};
+
 	return (
 		<div className={className}>
 			<div className={styles.productsNavbar}>
 				<div className={styles.productsNavbar__left}>
-					<div className={styles.productsNavigator}>
-						<h2>
-							The Full FBA <br /> Sourcing <br />
-							Platform
-						</h2>
-						<a href="/privatelabel-go" className="anchor">
-							Overview of all <br /> products &#x2192;
-						</a>
-					</div>
-					<div className={styles.productsNavigator}>
-						<h2>Free Sourcing</h2>
-						<a href="/privatelabel-go" className="anchor">
-							{`Overview of Sellgo's`} <br /> free tools &#x2192;
-						</a>
-					</div>
+					<h3>Products</h3>
+
+					{productsNavigationList.map(
+						(productListDetails: any, index: number) => {
+							return (
+								<div
+									className={`${styles.tabLinks} tabLinks ${
+										index === 0 ? 'active' : ''
+									}`}
+									key={uuid()}
+									onMouseOver={(e: any) => {
+										handleChange(e, productListDetails.hoverId);
+									}}
+									onFocus={(e: any) => {
+										handleChange(e, productListDetails.hoverId);
+									}}
+									role="button"
+									tabIndex={0}
+								>
+									<h2>{productListDetails.head}</h2>
+									<a href={productListDetails.navigateTo}>
+										{productListDetails.navigateLabel} <span>&#8594;</span>
+									</a>
+								</div>
+							);
+						}
+					)}
 				</div>
 
-				<div className={styles.productsNavbar__right}>
-					<div className={styles.groupedLinksWrapper}>
-						{groupNavigationDetails.map((groupedNavLink: any) => {
-							return <GroupedNavLink key={uuid()} {...groupedNavLink} />;
-						})}
-					</div>
-
-					<div className={styles.bottomSummary}>
-						<h2>App Marketplace</h2>
-						<p>Connect your favorite apps to Sellgo</p>
-						<a href="/privatelabel-go" className="anchor">
-							See all integrations &#x2192;
-						</a>
-					</div>
+				<div className={`${styles.productsNavbar__right}`}>
+					{productsRightPanelData.map((panelData: any) => {
+						return (
+							<div id={panelData.hoverId} className="tabContent" key={uuid()}>
+								<h3>{panelData.header}</h3>
+								<div className={styles.groupedLinksWrapper}>
+									{panelData.groupedNavLinksData.map(
+										(groupLinkDetails: any, index: number) => {
+											return (
+												<GroupedNavLink
+													key={uuid()}
+													{...groupLinkDetails}
+													id={index}
+												/>
+											);
+										}
+									)}
+								</div>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>

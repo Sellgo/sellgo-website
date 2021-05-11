@@ -12,16 +12,23 @@ import FreeTrialPanel from '../../FreeTrialPanel';
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
 
-interface Props {}
+/* Types */
+import { FAQDetails } from '../../../interfaces/FAQ';
 
-const ProductsPanel: React.FC<Props> = () => {
+interface Props {
+	faqDetails: FAQDetails[];
+}
+
+const ProductsPanel: React.FC<Props> = (props) => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
+
+	const { faqDetails } = props;
 
 	const [selectedPlanType, setSelectedPlanType] = useState<number>(0);
 
 	const handlePlanSelectChange = (index: number, lastIndex: number) => {
-		// [0,1,2,3,4]=['Free Trial','Pay As You Go',WholeSale','Private Label','Seller Scout Pro']
+		// [0,1,2,3,4]=['Free Trial','Pay $1 a day', 'Pay $1 1st month']
 
 		if (!index) {
 			setSelectedPlanType(lastIndex);
@@ -48,7 +55,7 @@ const ProductsPanel: React.FC<Props> = () => {
 
 			{/* Seperation of concern for free trial tab */}
 			<TabPanel>
-				<FreeTrialPanel />
+				<FreeTrialPanel faqData={faqDetails[0]} />
 			</TabPanel>
 			{plansAndProductsDetails.map((plan: any) => {
 				return (
@@ -56,6 +63,7 @@ const ProductsPanel: React.FC<Props> = () => {
 						<PricingPlansSection
 							{...plan}
 							selectedPlanType={selectedPlanType}
+							faqData={faqDetails[selectedPlanType]}
 						/>
 					</TabPanel>
 				);

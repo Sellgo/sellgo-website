@@ -7,13 +7,14 @@
 		"eslint": "eslint --config ./.eslintrc.json **/*.{js,jsx,ts,tsx} --fix",
 		"stylelint": "stylelint **/*.{css,scss} --fix",
 		"lint": "npm-run-all eslint prettier  stylelint",
-		"dev": "next dev",
+		"dev": "npm run lint && next dev",
 		"build": "next build",
 		"start": "next start",
 		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@apollo/client": "^3.3.15",
+		"axios": "^0.21.1",
 		"framer-motion": "^4.1.13",
 		"graphql": "^15.5.0",
 		"next": "10.1.3",
@@ -21,7 +22,9 @@
 		"react-accessible-accordion": "^3.3.4",
 		"react-dom": "17.0.2",
 		"react-modal": "^3.13.1",
+		"react-share": "^4.4.0",
 		"react-tabs": "^3.2.2",
+		"reading-time": "^1.3.0",
 		"uuid": "^3.4.0"
 	},
 	"devDependencies": {

@@ -43,6 +43,7 @@ const HeroBox: React.FC<Props> = (props) => {
 						alt={featuredImage.node.altText}
 						width={featuredImage.node.mediaDetails.width}
 						height={featuredImage.node.mediaDetails.height}
+						priority
 					/>
 				</div>
 			</div>

@@ -1,8 +1,23 @@
 import { gql } from '@apollo/client';
 
+export const GET_PAGE_BY_URI = gql`
+	query getPageByURI($uri: String!) {
+		pageBy(uri: $uri) {
+			title
+			seo {
+				metaDesc
+				metaKeywords
+				canonical
+				title
+			}
+			content
+		}
+	}
+`;
+
 export const GET_SHOW_CASE_BLOGS = gql`
 	query getBlogsForShowcase {
-		posts(first: 6, where: { orderby: { field: DATE, order: DESC } }) {
+		posts(first: 10, where: { orderby: { field: DATE, order: DESC } }) {
 			nodes {
 				slug
 				title
