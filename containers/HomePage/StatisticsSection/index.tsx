@@ -17,11 +17,14 @@ const StatisticsSection: React.FC<Props> = () => {
 		<section className={styles.statisticsSection}>
 			<div className={`page-container ${styles.statisticsWrapper}`}>
 				<h2 className="secondary-heading">
-				Real Data, Real Tools, Real Results
+					Real Data, Real Tools, Real Results
 				</h2>
 
 				<p>
-				While you own your business, you don't have to build it alone. Master everything from scouting, sourcing, and selling and get the most out of your Amazon business with Sellgo's FBA tools and a community of Amazon sellers just like you.
+					While you own your business, you don&apos;t have to build it alone.
+					Master everything from scouting, sourcing, and selling and get the
+					most out of your Amazon business with Sellgo&apos;s FBA tools and a
+					community of Amazon sellers just like you.
 				</p>
 
 				<div className={styles.statisticsGrid}>

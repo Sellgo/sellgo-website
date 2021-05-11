@@ -16,7 +16,7 @@ const ProductsSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.productsSection}`}>
 			<h2 className="secondary-heading">
-				From Wholesale to Private Label to Agencies. <br /> 
+				From Wholesale to Private Label to Agencies. <br />
 				Whatever your business model and needs, <br />
 				Sellgo is here to help you grow.
 			</h2>

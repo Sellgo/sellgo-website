@@ -14,7 +14,12 @@ export const wholeSalePlanAllFeatures = [
 		body: [
 			['Chrome extension', '✓', '✓', '✓'],
 			['Product Tracker', '100 products', '200 products', '1,000 products'],
-			['Amazon Best Sales Estimator', '1,000 estimates/mo', '1,500 estimates/mo', '2,500 estimates/mo'],
+			[
+				'Amazon Best Sales Estimator',
+				'1,000 estimates/mo',
+				'1,500 estimates/mo',
+				'2,500 estimates/mo'
+			],
 			['Inventory Insight', '-', '✓', '✓'],
 			['Market share insight', '-', '✓', '✓']
 		]
@@ -22,7 +27,12 @@ export const wholeSalePlanAllFeatures = [
 	{
 		header: ['Bulk Profit Research', 'Starter', 'Suite', 'Professional'],
 		body: [
-			['Profit Finder', '3,000 products/day', '300,000 products/mo', '1,000,000 products/mo'],
+			[
+				'Profit Finder',
+				'3,000 products/day',
+				'300,000 products/mo',
+				'1,000,000 products/mo'
+			],
 			['Additional bulk processing', '-', '-', '-'],
 			['Data input (UPC, EAN, ASIN, ISBN)', '✓', '✓', '✓'],
 			['Data Buster', '-', '✓', '✓'],
@@ -36,7 +46,12 @@ export const wholeSalePlanAllFeatures = [
 	{
 		header: ['Seller Research', 'Starter', 'Suite', 'Professional'],
 		body: [
-			['Seller Finder', '20 sellers/day', '1,000 sellers/mo', '5,000 sellers/mo'],
+			[
+				'Seller Finder',
+				'20 sellers/day',
+				'1,000 sellers/mo',
+				'5,000 sellers/mo'
+			],
 			['Export Seller Data', '-', '-', '-'],
 			['Check Seller Inventory', '-', '-', '✓'],
 			['Brand Finder', '-', '-', '✓']
