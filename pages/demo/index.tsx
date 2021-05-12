@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import isEmail from 'validator/es/lib/isEmail';
-import isAlpha from 'validator/es/lib/isAlpha';
-import isMobilePhone from 'validator/es/lib/isMobilePhone';
-import isURL from 'validator/es/lib/isURL';
+import Dropdown from 'react-dropdown';
+import validator from 'validator';
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -12,6 +11,9 @@ import HeroBox from '../../containers/Demo/HeroBox';
 
 /* Components */
 import FormInput from '../../components/FormInput';
+
+/* Constants */
+import { employSizeList } from '../../constants';
 
 interface Props {}
 
@@ -23,7 +25,8 @@ const DemoPage: React.FC<Props> = () => {
 		phoneNumber: '',
 		company: '',
 		website: '',
-		companySize: ''
+		companySize: employSizeList[0].value,
+		sellgoBlog: false
 	});
 
 	const [formDataError, setFormDataError] = useState({
@@ -36,11 +39,30 @@ const DemoPage: React.FC<Props> = () => {
 	});
 
 	const handleChange = (e: any) => {
-		const { value, name } = e.target;
+		const { value, name, checked } = e.target;
+
+		if (name === 'sellgoBlog') {
+			setFormData((prevState) => {
+				return {
+					...prevState,
+					[name]: checked
+				};
+			});
+		} else {
+			setFormData((prevState) => {
+				return {
+					...prevState,
+					[name]: value
+				};
+			});
+		}
+	};
+
+	const handleSelectChange = (selectedOption: any) => {
 		setFormData((prevState) => {
 			return {
 				...prevState,
-				[name]: value
+				companySize: selectedOption.value
 			};
 		});
 	};
@@ -51,7 +73,9 @@ const DemoPage: React.FC<Props> = () => {
 		email,
 		phoneNumber,
 		company,
-		website
+		website,
+		companySize,
+		sellgoBlog
 	} = formData;
 
 	const {
@@ -69,7 +93,7 @@ const DemoPage: React.FC<Props> = () => {
 			setFormDataError((prevErr) => {
 				return {
 					...prevErr,
-					emailErr: !isEmail(email)
+					emailErr: !validator.isEmail(email)
 				};
 			});
 		} else {
@@ -88,7 +112,7 @@ const DemoPage: React.FC<Props> = () => {
 			setFormDataError((prevErr) => {
 				return {
 					...prevErr,
-					firstNameErr: !isAlpha(firstName)
+					firstNameErr: !validator.isAlpha(firstName)
 				};
 			});
 		} else {
@@ -107,7 +131,7 @@ const DemoPage: React.FC<Props> = () => {
 			setFormDataError((prevErr) => {
 				return {
 					...prevErr,
-					lastNameErr: !isAlpha(lastName)
+					lastNameErr: !validator.isAlpha(lastName)
 				};
 			});
 		} else {
@@ -126,7 +150,7 @@ const DemoPage: React.FC<Props> = () => {
 			setFormDataError((prevErr) => {
 				return {
 					...prevErr,
-					phoneNumberErr: !isMobilePhone(phoneNumber)
+					phoneNumberErr: !validator.isMobilePhone(phoneNumber)
 				};
 			});
 		} else {
@@ -164,7 +188,7 @@ const DemoPage: React.FC<Props> = () => {
 			setFormDataError((prevState) => {
 				return {
 					...prevState,
-					websiteErr: !isURL(website)
+					websiteErr: !validator.isURL(website)
 				};
 			});
 		} else {
@@ -177,9 +201,26 @@ const DemoPage: React.FC<Props> = () => {
 		}
 	}, [website]);
 
+	/* Clear the form data */
+	const clearForm = () => {
+		setFormData({
+			firstName: '',
+			lastName: '',
+			email: '',
+			phoneNumber: '',
+			company: '',
+			website: '',
+			companySize: employSizeList[0].value,
+			sellgoBlog: false
+		});
+	};
+
 	const handleSubmit = (e: any) => {
 		e.preventDefault();
 		console.log(formData);
+		setTimeout(() => {
+			clearForm();
+		}, 1000);
 	};
 
 	return (
@@ -290,6 +331,47 @@ const DemoPage: React.FC<Props> = () => {
 						required
 						hasError={websiteErr}
 						errorMessage="Please enter valid URL"
+					/>
+
+					<div className={styles.dropdownWrapper}>
+						<label>How many employees work there? *</label>
+						<Dropdown
+							options={employSizeList}
+							onChange={handleSelectChange}
+							className={styles.selectDropdown}
+							placeholderClassName={styles.selectDropdown__placeholder}
+							controlClassName={styles.selectDropdown__control}
+							menuClassName={styles.selectDropdown__menu}
+							value={companySize}
+							arrowClosed={
+								<Image
+									src="/dropdownArrow.svg"
+									width={10}
+									height={10}
+									alt="Dropdown Arrow"
+								/>
+							}
+							arrowOpen={
+								<Image
+									src="/dropdownArrow.svg"
+									width={10}
+									height={10}
+									alt="Dropdown Arrow"
+								/>
+							}
+						/>
+					</div>
+
+					<FormInput
+						className={styles.selectCheckbox}
+						type="checkbox"
+						name="sellgoBlog"
+						id="sellgoBlog"
+						checked={sellgoBlog}
+						onChange={handleChange}
+						label="Subscribe to Sellgo's blog"
+						value={sellgoBlog ? 'on' : 'off'}
+						labelLast
 					/>
 				</div>
 

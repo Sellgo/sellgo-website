@@ -30,7 +30,7 @@
 
 .demoPageForm {
 	width: 43.5rem;
-	height: 94.2rem;
+	height: max-content;
 	border-radius: 7px;
 	background: $prim_white;
 	box-shadow: $box-shadow-1;
@@ -38,6 +38,7 @@
 	top: 10rem;
 	right: 30rem;
 	padding: 3rem;
+	padding-bottom: 5rem;
 
 	@media only screen and(max-width: 1600px) {
 		right: 15rem;
@@ -68,6 +69,10 @@
 		margin-top: 5rem;
 		cursor: pointer;
 
+		@media only screen and(max-width: 500px) {
+			margin: 3rem auto;
+		}
+
 		&:disabled {
 			opacity: 0.5;
 			cursor: unset;
@@ -85,7 +90,7 @@
 .formInput {
 	margin: 2rem 0;
 	width: 18rem;
-	margin-bottom: 5rem;
+	margin-bottom: 3rem;
 	min-height: 8.2rem;
 
 	@media only screen and(max-width: 500px) {
@@ -125,25 +130,89 @@
 		font-size: $fontsize_content_12;
 		color: $system_red;
 	}
-	select {
-		height: 4rem;
-		background: $grey_1;
-		border: 1px solid $second_silver;
-		border-radius: 3px;
+}
+
+.dropdownWrapper {
+	width: 100%;
+	font-size: $fontsize_content_14;
+	color: $prim_dark_2;
+	margin-bottom: 5rem;
+	label {
 		color: $prim_dark_2;
 		font-size: $fontsize_content_14;
-		font-family: inherit;
-		width: 18rem;
-		&:focus {
-			outline: 0;
-		}
+		font-weight: $fontweight_semibold;
+		width: 100%;
+		margin-bottom: 5px;
+		display: inline-block;
+	}
+}
 
-		option {
-			background: $grey_1;
+.selectDropdown {
+	width: 18rem;
+
+	@media only screen and(max-width: 500px) {
+		width: 100%;
+	}
+
+	&__placeholder {
+		flex: 1;
+	}
+
+	&__control {
+		width: 18rem;
+		background: $grey_1;
+		border: 1px solid $second_silver;
+		font-size: $fontsize_content_14;
+		padding: 1rem;
+		border-radius: 3px;
+		cursor: pointer;
+		height: 4rem;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		@media only screen and(max-width: 500px) {
+			width: 100% !important;
 		}
 	}
 
-	&__full {
-		width: max-content;
+	&__menu {
+		background: $grey_1;
+		border: 1px solid $second_silver;
+		border-radius: 3px;
+		border-top: 0;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		font-size: $fontsize_content_14;
+		padding: 1rem;
+		cursor: pointer;
+
+		div[role='option'] {
+			margin: 0.5rem 0;
+		}
+	}
+
+	&__arrow {
+		height: max-content;
+		font-size: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $blue_7;
+		width: 10px;
+	}
+}
+
+.selectCheckbox {
+	display: flex;
+	align-items: center;
+	margin-bottom: 4rem;
+	label {
+		color: $prim_dark_2;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_semibold;
+		width: 100%;
+		display: inline-block;
+		margin-left: 5px;
 	}
 }
