@@ -17,6 +17,7 @@ import ProductsSection from '../containers/HomePage/ProductsSection';
 import StatisticsSection from '../containers/HomePage/StatisticsSection';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
+import ClosingCTASection from '../containers/HomePage/ClosingCTASection';
 
 /* Components */
 import SEOHead from '../components/SEOHead';
@@ -31,12 +32,18 @@ const HomePage: React.FC<Props> = (props) => {
 		<>
 			<SEOHead title="Sellgo" description="" imageUrl="" pageUrl="" />
 			<HeroBox />
-			<InfoSection />
-			<section className={styles.homeBanner} />
-			<ProductsSection />
-			<StatisticsSection />
-			<TestimonialsSection />
-			<RecentBlogsSection recentBlogs={homeBlogs} />
+			<main>
+				<InfoSection />
+				<section className={styles.homeBanner} />
+				<ProductsSection />
+				<StatisticsSection />
+				<TestimonialsSection />
+				<div className={styles.divider}></div>
+				<RecentBlogsSection recentBlogs={homeBlogs} />
+				<div className={styles.divider}></div>
+
+				<ClosingCTASection />
+			</main>
 		</>
 	);
 };
