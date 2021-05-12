@@ -12,6 +12,7 @@ import { GET_BLOGS_FOR_HOME } from '../graphql/cms';
 
 /* Containers */
 import HeroBox from '../containers/HomePage/HeroBox';
+import ProductsStepperSection from '../containers/HomePage/ProductsStepperSection';
 import InfoSection from '../containers/HomePage/InfoSection';
 import ProductsSection from '../containers/HomePage/ProductsSection';
 import StatisticsSection from '../containers/HomePage/StatisticsSection';
@@ -33,6 +34,7 @@ const HomePage: React.FC<Props> = (props) => {
 			<SEOHead title="Sellgo" description="" imageUrl="" pageUrl="" />
 			<HeroBox />
 			<main>
+				<ProductsStepperSection />
 				<section className={styles.opportunityBanner}>
 					<h2 className="secondary-heading">
 						The Amazon Opportunity Finder Your Business Will Love
