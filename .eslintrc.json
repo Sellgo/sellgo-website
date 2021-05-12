@@ -38,7 +38,6 @@
 		"no-nested-ternary": "off",
 		"no-else-return": "off",
 		"no-shadow": "off",
-		"no-unused-vars": "error",
 		"max-len": ["error", 120],
 		"import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
 		"import/prefer-default-export": "off",
@@ -59,7 +58,10 @@
 		],
 		"jsx-a11y/anchor-is-valid": "off",
 		"react/no-array-index-key": "off",
-		"@typescript-eslint/no-unused-vars": 0
+		"jsx-a11y/label-has-associated-control": 0,
+		"@typescript-eslint/no-empty-interface": 0,
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": ["error"]
 	},
 	"settings": {
 		"import/resolver": {
