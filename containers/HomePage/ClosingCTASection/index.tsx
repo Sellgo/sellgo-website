@@ -1,8 +1,11 @@
 import React from 'react';
-import CTAButton from '../../../components/CTAButton';
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* Components */
+import CTAButton from '../../../components/CTAButton';
 
 interface Props {}
 
@@ -29,7 +32,14 @@ const ClosingCTASection: React.FC<Props> = () => {
 
 					<small>Get started with FREE tools, and upgrade as you grow.</small>
 				</div>
-				<div className={styles.closingCTAWrapper__right}></div>
+				<div className={styles.closingCTAWrapper__right}>
+					<Image
+						src="/growTogether.png"
+						width={450}
+						height={419}
+						alt="Grow Together"
+					/>
+				</div>
 			</div>
 		</section>
 	);
