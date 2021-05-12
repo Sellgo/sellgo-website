@@ -87,3 +87,25 @@ export const GET_BLOG_BY_SLUG = gql`
 		}
 	}
 `;
+
+export const GET_BLOGS_FOR_HOME = gql`
+	query getBlogsForHome {
+		posts(first: 10, where: { orderby: { field: DATE, order: DESC } }) {
+			nodes {
+				date
+				featuredImage {
+					node {
+						altText
+						mediaDetails {
+							width
+							height
+						}
+						sourceUrl
+					}
+				}
+				slug
+				title
+			}
+		}
+	}
+`;
