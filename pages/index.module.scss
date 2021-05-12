@@ -1,5 +1,16 @@
 @import '../styles/guidelines';
 
+.opportunityBanner {
+	height: 25rem;
+	background: $second_grey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	h2 {
+		color: $prim_white;
+	}
+}
+
 .homeBanner {
 	min-height: 35rem;
 	background: $orange_5;

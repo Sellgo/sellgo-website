@@ -33,6 +33,11 @@ const HomePage: React.FC<Props> = (props) => {
 			<SEOHead title="Sellgo" description="" imageUrl="" pageUrl="" />
 			<HeroBox />
 			<main>
+				<section className={styles.opportunityBanner}>
+					<h2 className="secondary-heading">
+						The Amazon Opportunity Finder Your Business Will Love
+					</h2>
+				</section>
 				<InfoSection />
 				<section className={styles.homeBanner} />
 				<ProductsSection />
