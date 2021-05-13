@@ -1,6 +1,5 @@
 import React from 'react';
-// @ts-ignore : don't have the type declartions on npm for this
-import Stepper from 'react-stepper-horizontal';
+import Steps, { Step } from 'rc-steps';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -15,15 +14,11 @@ const ProductsStepperSection: React.FC<Props> = () => {
 			</h2>
 
 			<div className={styles.stepperWrapper}>
-				<Stepper
-					steps={[
-						{ title: 'Step One' },
-						{ title: 'Step Two' },
-						{ title: 'Step Three' },
-						{ title: 'Step Four' }
-					]}
-					activeStep={1}
-				/>
+				<Steps current={2} className={styles.rcsteps}>
+					<Step title="First" style={{ fontSize: 14, fontWeight: 'bold' }} />
+					<Step title="Second" style={{ fontSize: 14, fontWeight: 'bold' }} />
+					<Step title="Third" style={{ fontSize: 14, fontWeight: 'bold' }} />
+				</Steps>
 			</div>
 		</section>
 	);

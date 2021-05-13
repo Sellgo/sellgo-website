@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 /* Containers */
 import HeroBox from '../../containers/ExtensionCont/HeroBox';
 import InfoSection from '../../containers/ExtensionCont/InfoSection';
-import BenefitsSection from '../../containers/ExtensionCont/BenefitsSection';
+import NewBenefitsSection from '../../containers/ExtensionCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/ExtensionCont/CommomFeaturesSection';
 import BannerCTASection from '../../containers/ExtensionCont/BannerCTASection';
 import PlansSection from '../../containers/ExtensionCont/PlansSection';
@@ -34,7 +34,8 @@ const ExtensionContPage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />
-			<BenefitsSection />
+			<NewBenefitsSection />
+			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />

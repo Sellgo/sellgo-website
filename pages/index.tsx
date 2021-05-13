@@ -65,7 +65,9 @@ export const getStaticProps: GetStaticProps = async () => {
 	return {
 		props: {
 			homeBlogs: blogsForHome
-		}
+		},
+		revalidate: 1
 	};
 };
+
 export default HomePage;

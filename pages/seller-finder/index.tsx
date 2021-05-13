@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 /* Containers */
 import HeroBox from '../../containers/SellerFinderCont/HeroBox';
 import InfoSection from '../../containers/SellerFinderCont/InfoSection';
-import BenefitsSection from '../../containers/SellerFinderCont/BenefitsSection';
+import NewBenefitsSection from '../../containers/SellerFinderCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/SellerFinderCont/CommomFeaturesSection';
 import BannerCTASection from '../../containers/SellerFinderCont/BannerCTASection';
 import PlansSection from '../../containers/SellerFinderCont/PlansSection';
@@ -34,7 +34,8 @@ const SellerFinderContPage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />
-			<BenefitsSection />
+			<NewBenefitsSection />
+			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />

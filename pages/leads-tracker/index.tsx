@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 /* Containers */
 import HeroBox from '../../containers/LeadsTrackerCont/HeroBox';
 import InfoSection from '../../containers/LeadsTrackerCont/InfoSection';
-import BenefitsSection from '../../containers/LeadsTrackerCont/BenefitsSection';
+import NewBenefitsSection from '../../containers/LeadsTrackerCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/LeadsTrackerCont/CommomFeaturesSection';
 import BannerCTASection from '../../containers/LeadsTrackerCont/BannerCTASection';
 import PlansSection from '../../containers/LeadsTrackerCont/PlansSection';
@@ -34,7 +34,8 @@ const LeadsTrackerContPage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />
-			<BenefitsSection />
+			<NewBenefitsSection />
+			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />

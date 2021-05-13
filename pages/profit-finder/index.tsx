@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 /* Containers */
 import HeroBox from '../../containers/ProfitFinderCont/HeroBox';
 import InfoSection from '../../containers/ProfitFinderCont/InfoSection';
-import BenefitsSection from '../../containers/ProfitFinderCont/BenefitsSection';
+import NewBenefitsSection from '../../containers/ProfitFinderCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/ProfitFinderCont/CommomFeaturesSection';
 import BannerCTASection from '../../containers/ProfitFinderCont/BannerCTASection';
 import PlansSection from '../../containers/ProfitFinderCont/PlansSection';
@@ -33,7 +33,8 @@ const ProfitFinderContPage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />
-			<BenefitsSection />
+			<NewBenefitsSection />
+			<section className={styles.Newbanner} />
 			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />

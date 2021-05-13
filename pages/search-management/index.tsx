@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 /* Containers */
 import HeroBox from '../../containers/SearchManagementCont/HeroBox';
 import InfoSection from '../../containers/SearchManagementCont/InfoSection';
-import BenefitsSection from '../../containers/SearchManagementCont/BenefitsSection';
+import NewBenefitsSection from '../../containers/SearchManagementCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/SearchManagementCont/CommomFeaturesSection';
 import BannerCTASection from '../../containers/SearchManagementCont/BannerCTASection';
 import PlansSection from '../../containers/SearchManagementCont/PlansSection';
@@ -34,7 +34,8 @@ const SearchManagementContPage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />
-			<BenefitsSection />
+			<NewBenefitsSection />
+			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />
