@@ -9,24 +9,25 @@ interface Props {}
 
 const InfoSection: React.FC<Props> = () => {
 	return (
-		<section className={`page-container ${styles.infoSection}`}>
-			<div className={styles.infoSection__Text}>
-				<h2>Expedite the Product Research Process</h2>
-				<p>
-					Products come and go, and so do profits. The Product Tracker tool
-					empowers any seller to monitor their products and sales performances
-					over time. Spot high demand products and new trends that can shape
-					your Amazon strategy and success.
-				</p>
-				<p></p>
-			</div>
-			<div className={styles.infoSection__Image}>
-				<Image
-					src="/producttracker_infosection.png"
-					width={450}
-					height={230}
-					alt=""
-				/>
+		<section className={styles.infoSectionWrapper}>
+			<div className={`page-container ${styles.infoSection}`}>
+				<div className={styles.infoSection__Text}>
+					<h2>Expedite the Product Research Process</h2>
+					<p>
+						Products come and go, and so do profits. The Product Tracker tool
+						empowers any seller to monitor their products and sales performances
+						over time. Spot high demand products and new trends that can shape
+						your Amazon strategy and success.
+					</p>
+				</div>
+				<div className={styles.infoSection__Image}>
+					<Image
+						src="/producttracker_herobox.png"
+						width={450}
+						height={230}
+						alt=""
+					/>
+				</div>
 			</div>
 		</section>
 	);

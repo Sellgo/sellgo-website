@@ -1,10 +1,14 @@
 import React from 'react';
+import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import RecommendationCard from '../../../components/RecommendationCard';
+
+/* Data */
+import { recomDataCardDetails } from './data';
 
 interface Props {}
 
@@ -19,9 +23,9 @@ const RecommendationSection: React.FC<Props> = () => {
 				</p>
 
 				<div className={styles.recomCardsWrapper}>
-					<RecommendationCard />
-					<RecommendationCard />
-					<RecommendationCard />
+					{recomDataCardDetails.map((cardDetail: any) => {
+						return <RecommendationCard key={uuid()} {...cardDetail} />;
+					})}
 				</div>
 			</div>
 		</section>
