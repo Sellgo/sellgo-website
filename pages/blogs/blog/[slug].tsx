@@ -51,6 +51,7 @@ const BlogPage: React.FC<Props> = (props) => {
 				description={seo.metaDesc}
 				imageUrl={featuredImage.node.sourceUrl || ''}
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
+				keywords={''}
 			/>
 			<HeroBox
 				title={title}

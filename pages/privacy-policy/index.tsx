@@ -13,6 +13,9 @@ import { GET_PAGE_BY_URI } from '../../graphql/cms/index';
 /* Components */
 import SEOHead from '../../components/SEOHead';
 
+/* Utils */
+import { generatePageURL } from '../../utils/SEO';
+
 interface Props {
 	seoDetails: any;
 	pageContent: any;
@@ -27,7 +30,8 @@ const PrivacyPage: React.FC<Props> = (props) => {
 				title={seoDetails.title}
 				description={seoDetails.description}
 				imageUrl=""
-				pageUrl="https://www.sellgo.com/privacy-policy"
+				pageUrl={generatePageURL('/privacy-policy')}
+				keywords=""
 			/>
 			<main className={`page-container ${styles.privacyPage}`}>
 				<h1>{pageContent.title}</h1>

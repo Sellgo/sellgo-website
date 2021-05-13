@@ -10,15 +10,18 @@ import client from '../../apollo';
 /* GraphQL */
 import { GET_SHOW_CASE_BLOGS } from '../../graphql/cms';
 
-/* App Config */
-import AppConfig from '../../config';
-
 /* Containers */
 import BlogsShowCaseSection from '../../containers/Blogs/BlogsShowCaseSection';
 import BlogsCategorySection from '../../containers/Blogs/BlogsCategorySection';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
+
+/* Data */
+import { seoData } from '../../data/SEO/blogsShowcase';
+
+/* Utils */
+import { generatePageURL } from '../../utils/SEO';
 
 interface Props {
 	showcaseBlogs: any;
@@ -30,10 +33,11 @@ const BlogsPage: React.FC<Props> = (props) => {
 	return (
 		<>
 			<SEOHead
-				title="Blogs | Sellgo"
-				description="Blogs Page For Sellgo"
-				imageUrl=""
-				pageUrl={`${AppConfig.WEB_URL}/blogs`}
+				title={seoData.title}
+				description={seoData.description}
+				imageUrl={seoData.imageUrl}
+				keywords={seoData.keywords.join(',')}
+				pageUrl={generatePageURL(seoData.slug)}
 			/>
 
 			<main className={`page-container ${styles.blogsPage}`}>

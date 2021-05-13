@@ -8,13 +8,22 @@ import styles from './index.module.scss';
 /* Containers */
 import HeroBox from '../../containers/LeadsTrackerCont/HeroBox';
 import InfoSection from '../../containers/LeadsTrackerCont/InfoSection';
-import BenefitsSection from '../../containers/LeadsTrackerCont/BenefitsSection';
+import NewBenefitsSection from '../../containers/LeadsTrackerCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/LeadsTrackerCont/CommomFeaturesSection';
 import BannerCTASection from '../../containers/LeadsTrackerCont/BannerCTASection';
 import PlansSection from '../../containers/LeadsTrackerCont/PlansSection';
 import OtherInfoSection from '../../containers/LeadsTrackerCont/OtherInfoSection';
 import FAQSection from '../../containers/LeadsTrackerCont/FAQSection';
 import RecommendationSection from '../../containers/LeadsTrackerCont/RecommendationSection';
+
+/* Components */
+import SEOHead from '../../components/SEOHead';
+
+/* Data */
+import { seoData } from '../../data/SEO/leadsTracker';
+
+/* Utils */
+import { generatePageURL } from '../../utils/SEO';
 
 /* App Config */
 import AppConfig from '../../config';
@@ -31,10 +40,18 @@ const LeadsTrackerContPage: React.FC<Props> = (props) => {
 
 	return (
 		<>
+			<SEOHead
+				title={seoData.title}
+				description={seoData.description}
+				keywords={seoData.keywords.join(',')}
+				imageUrl={seoData.imageUrl}
+				pageUrl={generatePageURL(seoData.slug)}
+			/>
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />
-			<BenefitsSection />
+			<NewBenefitsSection />
+			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />

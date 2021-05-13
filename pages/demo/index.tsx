@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Dropdown from 'react-dropdown';
 import validator from 'validator';
 import Image from 'next/image';
+import axios from 'axios';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -14,6 +15,9 @@ import FormInput from '../../components/FormInput';
 
 /* Constants */
 import { employSizeList } from '../../constants';
+
+/* App Config */
+import AppConfig from '../../config';
 
 interface Props {}
 
@@ -215,12 +219,29 @@ const DemoPage: React.FC<Props> = () => {
 		});
 	};
 
-	const handleSubmit = (e: any) => {
+	const handleSubmit = async (e: any) => {
 		e.preventDefault();
-		console.log(formData);
-		setTimeout(() => {
+
+		const formData = new FormData();
+		formData.append('email', email);
+		formData.append('firstname', firstName);
+		formData.append('lastname', lastName);
+		formData.append('phone', phoneNumber);
+		formData.append('company', company);
+		formData.append('website', website);
+		formData.append('numemployees', companySize);
+		formData.append('subscribeblog', sellgoBlog ? 'Yes' : 'No');
+
+		try {
+			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
+			const response = await axios.post(URL, formData);
+			if (response.status === 201) {
+				clearForm();
+			}
+		} catch (err) {
+			console.error('Error Sending data to hubspot');
 			clearForm();
-		}, 1000);
+		}
 	};
 
 	return (

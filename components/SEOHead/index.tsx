@@ -6,10 +6,11 @@ interface Props {
 	description: string;
 	imageUrl: string;
 	pageUrl: string;
+	keywords: string;
 }
 
 const SEOHead: React.FC<Props> = (props) => {
-	const { title, description, imageUrl, pageUrl } = props;
+	const { title, description, imageUrl, pageUrl, keywords } = props;
 	return (
 		<Head>
 			<meta httpEquiv="content-language" content="en-us" />
@@ -19,6 +20,7 @@ const SEOHead: React.FC<Props> = (props) => {
 
 			<title>{title}</title>
 			<meta name="description" content={description} />
+			<meta name="keywords" content={keywords} />
 			<link rel="canonical" href="https://www.sellgo.com" />
 
 			{/* Open Graph/Faecbook */}

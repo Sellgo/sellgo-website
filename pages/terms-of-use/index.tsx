@@ -12,6 +12,7 @@ import { GET_PAGE_BY_URI } from '../../graphql/cms/index';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
+import { generatePageURL } from '../../utils/SEO';
 
 interface Props {
 	seoDetails: any;
@@ -27,7 +28,8 @@ const TermOfUse: React.FC<Props> = (props) => {
 				title={seoDetails.title}
 				description={seoDetails.description}
 				imageUrl=""
-				pageUrl="https://www.sellgo/com/terms-of-use"
+				keywords=""
+				pageUrl={generatePageURL('/terms-of-use')}
 			/>
 			<main className={`page-container ${styles.termsPage}`}>
 				<h1>{pageContent.title}</h1>

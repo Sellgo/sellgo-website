@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 /* Containers */
 import HeroBox from '../../containers/SellerscoutGo/HeroBox';
 import InfoSection from '../../containers/SellerscoutGo/InfoSection';
-import BenefitsSection from '../../containers/SellerscoutGo/BenefitsSection';
+import NewBenefitsSection from '../../containers/SellerscoutGo/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/SellerscoutGo/CommomFeaturesSection';
 import BannerCTASection from '../../containers/SellerscoutGo/BannerCTASection';
 import PlansSection from '../../containers/SellerscoutGo/PlansSection';
@@ -34,7 +34,8 @@ const SellerScoutPage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />
-			<BenefitsSection />
+			<NewBenefitsSection />
+			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />

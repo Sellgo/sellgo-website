@@ -8,13 +8,22 @@ import styles from './index.module.scss';
 /* Containers */
 import HeroBox from '../../containers/SellerFinderCont/HeroBox';
 import InfoSection from '../../containers/SellerFinderCont/InfoSection';
-import BenefitsSection from '../../containers/SellerFinderCont/BenefitsSection';
+import NewBenefitsSection from '../../containers/SellerFinderCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/SellerFinderCont/CommomFeaturesSection';
 import BannerCTASection from '../../containers/SellerFinderCont/BannerCTASection';
 import PlansSection from '../../containers/SellerFinderCont/PlansSection';
 import OtherInfoSection from '../../containers/SellerFinderCont/OtherInfoSection';
 import FAQSection from '../../containers/SellerFinderCont/FAQSection';
 import RecommendationSection from '../../containers/SellerFinderCont/RecommendationSection';
+
+/* Components */
+import SEOHead from '../../components/SEOHead';
+
+/* Data */
+import { seoData } from '../../data/SEO/sellerFinder';
+
+/* Utils */
+import { generatePageURL } from '../../utils/SEO';
 
 /* App Config */
 import AppConfig from '../../config';
@@ -31,10 +40,18 @@ const SellerFinderContPage: React.FC<Props> = (props) => {
 
 	return (
 		<>
+			<SEOHead
+				title={seoData.title}
+				description={seoData.description}
+				keywords={seoData.keywords.join(',')}
+				imageUrl={seoData.imageUrl}
+				pageUrl={generatePageURL(seoData.slug)}
+			/>
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />
-			<BenefitsSection />
+			<NewBenefitsSection />
+			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />
