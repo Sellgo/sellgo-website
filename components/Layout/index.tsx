@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 
 /* Components */
 import Navbar from '../Navbar';
+import MobileNavBar from '../MobileNavbar';
 import Footer from '../Footer';
 
 /* Constants */
@@ -19,6 +20,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 	return (
 		<>
 			{!hideNavigationOnRoutes.includes(currentPath) && <Navbar />}
+			<MobileNavBar />
 			{children}
 			<Footer />
 		</>
