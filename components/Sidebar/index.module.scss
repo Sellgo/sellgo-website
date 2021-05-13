@@ -1,0 +1,11 @@
+@import '../../styles/guidelines';
+
+.sidebar {
+	display: none;
+}
+
+.close {
+	z-index: 9999 !important;
+	position: fixed;
+	top: 1rem;
+}
