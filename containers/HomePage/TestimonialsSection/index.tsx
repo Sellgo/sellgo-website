@@ -15,7 +15,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 
 				<div className={styles.testimonialVideo}>
 					<div className={styles.videoWrapper}>
-						<video src=""></video>
+						{/* <video src=""></video> */}
 					</div>
 					<small>
 						{`"I like that their profit margin and ROI are more accurate than any
