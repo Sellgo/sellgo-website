@@ -24,6 +24,7 @@
 		justify-content: space-evenly;
 		flex-direction: row;
 		width: 100%;
+		margin-bottom: 2rem;
 	}
 
 	@media only screen and(max-width: 500px) {
@@ -33,7 +34,10 @@
 	}
 
 	a {
-		margin-bottom: 1.5rem;
+		margin-top: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
