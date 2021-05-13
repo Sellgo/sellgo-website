@@ -21,7 +21,6 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 		const tabContent = document.querySelectorAll('.tabContent');
 		const tabLinks = document.querySelectorAll('.tabLinks');
 		const hoverTabPanel = document.getElementById(customID);
-		console.log(hoverTabPanel);
 
 		tabContent.forEach((tabContent: any) => {
 			// eslint-disable-next-line no-param-reassign

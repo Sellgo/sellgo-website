@@ -1,6 +1,6 @@
 export const productsNavigationList = [
 	{
-		head: 'Lorem Ipsum',
+		head: 'Sellgo',
 		navigateLabel: 'Lorem ipsum',
 		navigateTo: 'lorem ipsum',
 		hoverId: 'products'
@@ -19,39 +19,39 @@ export const productsRightPanelData = [
 		header: 'Features',
 		groupedNavLinksData: [
 			{
-				head: 'Wholesale Go',
-				desc: 'Wholesale Sourcing Software',
-				navigateTo: '/wholesale-go',
+				head: 'Extension',
+				desc: 'Product Validation on Amazon Page',
+				navigateTo: '/extension',
 				navigateLabel: '$1 and Premium Plan'
 			},
 			{
-				head: 'Private Label Go',
-				desc: 'Wholesale Sourcing Software',
-				navigateTo: '/privatelabel-go',
+				head: 'Profit Finder',
+				desc: 'Wholesale Bulk Calculator',
+				navigateTo: '/profit-finder',
 				navigateLabel: '$1 and Premium Plan'
 			},
 			{
-				head: 'Seller Scout',
-				desc: 'Wholesale Sourcing Software',
-				navigateTo: '/sellerscout-go',
+				head: 'Product Tracker ',
+				desc: 'Daily Tracking and Scouting',
+				navigateTo: '/product-tracker',
 				navigateLabel: '$1 and Premium Plan'
 			},
 			{
-				head: 'Wholesale Go',
-				desc: 'Wholesale Sourcing Software',
-				navigateTo: '/wholesale-go',
+				head: 'Leads Tracker',
+				desc: 'Monitor Wholesale Product Daily',
+				navigateTo: '/leads-tracker',
 				navigateLabel: '$1 and Premium Plan'
 			},
 			{
-				head: 'Wholesale Go',
-				desc: 'Wholesale Sourcing Software',
-				navigateTo: '/wholesale-go',
+				head: 'Search Management',
+				desc: 'Streamline Wholesale Inventories',
+				navigateTo: '/search-management',
 				navigateLabel: '$1 and Premium Plan'
 			},
 			{
-				head: 'Wholesale Go',
-				desc: 'Wholesale Sourcing Software',
-				navigateTo: '/wholesale-go',
+				head: 'Seller Finder',
+				desc: 'Take Advantage of Competition',
+				navigateTo: '/seller-finder',
 				navigateLabel: '$1 and Premium Plan'
 			}
 		]

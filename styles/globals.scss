@@ -87,6 +87,11 @@ p.copyright {
 		color: #bdc5cc;
 		font-size: 14px;
 		font-weight: 400;
+
+		&.special-link {
+			font-weight: 600;
+			color: #fff;
+		}
 	}
 }
 

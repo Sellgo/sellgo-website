@@ -25,35 +25,27 @@ export const hideNavigationOnRoutes = [
 
 export const employSizeList = [
 	{
-		label: '1',
-		value: '1'
+		label: '1 to 5',
+		value: '1-5'
 	},
 	{
-		label: '2 to 5',
-		value: '2-5'
+		label: '5 to 25',
+		value: '5-25'
 	},
 	{
-		label: '6 to 10',
-		value: '6-10'
+		label: '25 to 50',
+		value: '25-50'
 	},
 	{
-		label: '11 to 25',
-		value: '11-25'
+		label: '100 to 500',
+		value: '100-500'
 	},
 	{
-		label: '26 to 50',
-		value: '26-50'
+		label: '500 to 1000',
+		value: '500-1000'
 	},
 	{
-		label: '51 to 300',
-		value: '51-300'
-	},
-	{
-		label: '301 to 1,000',
-		value: '51-1000'
-	},
-	{
-		label: '1,001 or more',
-		value: '1001-more'
+		label: '1000 or more',
+		value: '1000+'
 	}
 ];

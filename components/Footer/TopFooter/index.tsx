@@ -14,10 +14,10 @@ const TopFooter: React.FC<Props> = () => {
 				<Link href="/" passHref>
 					<a>
 						<Image
-							src="/sellgoFooterLogo.svg"
+							src="/footerLogo.png"
 							alt="Sellgo Coompany Logo"
-							width={150}
-							height={57}
+							width={75}
+							height={30}
 						/>
 					</a>
 				</Link>
@@ -61,7 +61,7 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">
 					<Link href="/pricing" passHref>
-						Pricing
+						<a className="special-link">Pricing</a>
 					</Link>
 				</li>
 			</ul>

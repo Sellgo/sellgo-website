@@ -22,12 +22,13 @@
 	overflow: hidden;
 	padding: 2.2rem 2rem;
 	z-index: 999;
+	max-height: 50rem;
 }
 
 .navbarBottomLinksList {
 	display: flex;
 	justify-content: space-evenly;
-	align-items: stretch;
+	align-items: center;
 	flex: 0 0 50%;
 }
 

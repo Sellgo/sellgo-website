@@ -25,9 +25,10 @@
 }
 
 .productsNavbar__right {
-	min-height: 100%;
 	background: $prim_white;
 	min-width: 60rem;
+	min-height: 40.4rem;
+	max-height: 40.4rem;
 
 	h3 {
 		font-size: $fontsize_content_10;

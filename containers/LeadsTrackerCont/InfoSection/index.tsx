@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Image from 'next/image';
+
 /* Styling */
 import styles from './index.module.scss';
 
@@ -27,7 +29,14 @@ const InfoSection: React.FC<Props> = () => {
 					pariatur.
 				</p>
 			</div>
-			<div className={styles.infoSection__Image}></div>
+			<div className={styles.infoSection__Image}>
+				<Image
+					src="/searchmanagement_infosection.png"
+					width={450}
+					height={230}
+					alt=""
+				/>
+			</div>
 		</section>
 	);
 };

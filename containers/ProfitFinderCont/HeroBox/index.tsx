@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Image from 'next/image';
+
 /* Styling */
 import styles from './index.module.scss';
 
@@ -15,7 +17,14 @@ interface Props {}
 const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.heroBox}`}>
-			<div className={styles.heroBox__Image}></div>
+			<div className={styles.heroBox__Image}>
+				<Image
+					src="/profitfinder_herobox.png"
+					width={450}
+					height={270}
+					alt=""
+				/>
+			</div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
 					<span></span>{' '}
