@@ -2,6 +2,8 @@ import React from 'react';
 import { Tab, Tabs, TabList, TabPanel, resetIdCounter } from 'react-tabs';
 import { v4 as uuid } from 'uuid';
 
+import Image from 'next/image';
+
 /* Styling */
 import styles from './index.module.scss';
 

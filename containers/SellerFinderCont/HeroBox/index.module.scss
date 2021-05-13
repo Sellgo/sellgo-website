@@ -14,9 +14,9 @@
 	}
 
 	&__Image {
-		height: 45rem;
+		height: 27rem;
 		width: 45rem;
-		border: 1px solid $prim_dark_1;
+		//border: 1px solid $prim_dark_1;
 		@media only screen and(max-width: 650px) {
 			width: 100%;
 		}
