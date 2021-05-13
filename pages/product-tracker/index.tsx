@@ -16,6 +16,15 @@ import OtherInfoSection from '../../containers/ProductTrackerCont/OtherInfoSecti
 import FAQSection from '../../containers/ProductTrackerCont/FAQSection';
 import RecommendationSection from '../../containers/ProductTrackerCont/RecommendationSection';
 
+/* Components */
+import SEOHead from '../../components/SEOHead';
+
+/* Data */
+import { seoData } from '../../data/SEO/productTracker';
+
+/* Utils */
+import { generatePageURL } from '../../utils/SEO';
+
 /* App Config */
 import AppConfig from '../../config';
 
@@ -30,6 +39,13 @@ const ProductTrackerContPage: React.FC<Props> = (props) => {
 	const { faqDetails } = props;
 	return (
 		<>
+			<SEOHead
+				title={seoData.title}
+				description={seoData.description}
+				keywords={seoData.keywords.join(',')}
+				imageUrl={seoData.imageUrl}
+				pageUrl={generatePageURL(seoData.slug)}
+			/>
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />

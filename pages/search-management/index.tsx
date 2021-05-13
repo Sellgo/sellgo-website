@@ -16,6 +16,15 @@ import OtherInfoSection from '../../containers/SearchManagementCont/OtherInfoSec
 import FAQSection from '../../containers/SearchManagementCont/FAQSection';
 import RecommendationSection from '../../containers/SearchManagementCont/RecommendationSection';
 
+/* Components */
+import SEOHead from '../../components/SEOHead';
+
+/* Data */
+import { seoData } from '../../data/SEO/searchManagement';
+
+/* Utils */
+import { generatePageURL } from '../../utils/SEO';
+
 /* App Config */
 import AppConfig from '../../config';
 
@@ -31,6 +40,13 @@ const SearchManagementContPage: React.FC<Props> = (props) => {
 
 	return (
 		<>
+			<SEOHead
+				title={seoData.title}
+				description={seoData.description}
+				keywords={seoData.keywords.join(',')}
+				imageUrl={seoData.imageUrl}
+				pageUrl={generatePageURL(seoData.slug)}
+			/>
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />

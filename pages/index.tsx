@@ -23,6 +23,12 @@ import ClosingCTASection from '../containers/HomePage/ClosingCTASection';
 /* Components */
 import SEOHead from '../components/SEOHead';
 
+/* Data */
+import { seoData } from '../data/SEO/home';
+
+/* Utils */
+import { generatePageURL } from '../utils/SEO';
+
 interface Props {
 	homeBlogs: any;
 }
@@ -31,7 +37,13 @@ const HomePage: React.FC<Props> = (props) => {
 	const { homeBlogs } = props;
 	return (
 		<>
-			<SEOHead title="Sellgo" description="" imageUrl="" pageUrl="" />
+			<SEOHead
+				title={seoData.title}
+				description={seoData.description}
+				imageUrl={seoData.imageUrl}
+				keywords={seoData.keywords.join(',')}
+				pageUrl={generatePageURL(seoData.slug)}
+			/>
 			<HeroBox />
 			<main>
 				<ProductsStepperSection />

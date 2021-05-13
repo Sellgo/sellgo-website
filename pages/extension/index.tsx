@@ -16,8 +16,17 @@ import OtherInfoSection from '../../containers/ExtensionCont/OtherInfoSection';
 import FAQSection from '../../containers/ExtensionCont/FAQSection';
 import RecommendationSection from '../../containers/ExtensionCont/RecommendationSection';
 
+/* Components */
+import SEOHead from '../../components/SEOHead';
+
 /* App Config */
 import AppConfig from '../../config';
+
+/* Data */
+import { seoData } from '../../data/SEO/extension';
+
+/* Utils */
+import { generatePageURL } from '../../utils/SEO';
 
 /* Types */
 import { FAQDetails } from '../../interfaces/FAQ';
@@ -31,6 +40,13 @@ const ExtensionContPage: React.FC<Props> = (props) => {
 
 	return (
 		<>
+			<SEOHead
+				title={seoData.title}
+				description={seoData.description}
+				keywords={seoData.keywords.join(',')}
+				imageUrl={seoData.imageUrl}
+				pageUrl={generatePageURL(seoData.slug)}
+			/>
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />

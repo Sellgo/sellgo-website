@@ -16,6 +16,15 @@ import OtherInfoSection from '../../containers/ProfitFinderCont/OtherInfoSection
 import FAQSection from '../../containers/ProfitFinderCont/FAQSection';
 import RecommendationSection from '../../containers/ProfitFinderCont/RecommendationSection';
 
+/* Components */
+import SEOHead from '../../components/SEOHead';
+
+/* Data */
+import { seoData } from '../../data/SEO/profitFinder';
+
+/* Utils */
+import { generatePageURL } from '../../utils/SEO';
+
 /* App Config */
 import AppConfig from '../../config';
 
@@ -30,6 +39,13 @@ const ProfitFinderContPage: React.FC<Props> = (props) => {
 	const { faqDetails } = props;
 	return (
 		<>
+			<SEOHead
+				title={seoData.title}
+				description={seoData.description}
+				keywords={seoData.keywords.join(',')}
+				imageUrl={seoData.imageUrl}
+				pageUrl={generatePageURL(seoData.slug)}
+			/>
 			<HeroBox />
 			<section className={styles.banner} />
 			<InfoSection />

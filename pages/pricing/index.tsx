@@ -9,9 +9,18 @@ import styles from './index.module.scss';
 import HeroBox from '../../containers/Pricing/HeroBox';
 import ProductsPanel from '../../containers/Pricing/ProductsPanel';
 import BundlesPanel from '../../containers/Pricing/BundlesPanel';
-import AppConfig from '../../config';
+
+/* Components */
+import SEOHead from '../../components/SEOHead';
+
+/* Data */
+import { seoData } from '../../data/SEO/pricing';
+
+/* Utils */
+import { generatePageURL } from '../../utils/SEO';
 
 /* App Config */
+import AppConfig from '../../config';
 
 interface Props {
 	faqDetailsForPricing: any;
@@ -27,6 +36,13 @@ const PricingPage: React.FC<Props> = (props) => {
 
 	return (
 		<>
+			<SEOHead
+				title={seoData.title}
+				description={seoData.description}
+				keywords={seoData.keywords.join(',')}
+				imageUrl={seoData.imageUrl}
+				pageUrl={generatePageURL(seoData.slug)}
+			/>
 			<HeroBox
 				isProductsPlanSelected={isProductsPanelSelected}
 				setProductsPanel={() => setIsProductsPanelSelected(true)}
