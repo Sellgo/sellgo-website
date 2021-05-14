@@ -23,7 +23,6 @@ interface Props {
 
 const PricingPlansCardHead: React.FC<Props> = (props) => {
 	const { planName, ...otherProps } = props;
-
 	return (
 		<>
 			{['Pay $1 for a day'].includes(planName) ? (
