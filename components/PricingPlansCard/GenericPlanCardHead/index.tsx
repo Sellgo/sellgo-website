@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../CTAButton';
 import GemGenerator from '../../GemGenerator';
+import PricePlanToggleButton from '../../PricePlanToggleButton';
 
 interface Props {
 	name: string;
@@ -15,29 +16,36 @@ interface Props {
 	isMonthly: boolean;
 	ctaLink: string;
 	desc: string;
+	withToggle?: boolean;
+	className?: string;
+	handleChange?: any;
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
-	const { name, isMonthly, monthlyPrice, annualPrice, ctaLink, desc } = props;
+	const {
+		name,
+		isMonthly,
+		monthlyPrice,
+		annualPrice,
+		ctaLink,
+		desc,
+		withToggle,
+		className,
+		handleChange
+	} = props;
 
 	return (
-		<>
+		<div className={className}>
 			<div className={styles.pricingCardHead}>
 				<div className={styles.pricingCardHead__Left}>
-					<div className={styles.planGems}>
-						<GemGenerator name={name} />
-					</div>
+					{!withToggle && (
+						<div className={styles.planGems}>
+							<GemGenerator name={name} />
+						</div>
+					)}
 					<h2>{name}</h2>
-					<p>{desc}</p>
+					{!withToggle && <p>{desc}</p>}
 				</div>
-
-				{/* <div className={styles.pricingCardHead__Right}>
-					<p>Starts at {salesEstimateCount.toLocaleString()}</p>
-					<a href="#!" target="_blank" rel="noreferrer noopener">
-						<span>sales estimate</span>
-						<Image src="/externalLinkIcon.svg" width={12} height={10} />
-					</a>
-				</div> */}
 			</div>
 
 			<div className={styles.startingAt}>
@@ -64,15 +72,25 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					<p>Billed Monthly</p>
 				)}
 			</div>
+
+			{withToggle && (
+				<div className={styles.toggleWrapper}>
+					<PricePlanToggleButton
+						isMonthly={isMonthly}
+						handleChange={handleChange}
+					/>
+				</div>
+			)}
+
 			<CTAButton
 				type="primary"
 				size="medium"
 				navigateTo={ctaLink}
-				className={styles.buyNowCTA}
+				className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 			>
 				Buy Now
 			</CTAButton>
-		</>
+		</div>
 	);
 };
 

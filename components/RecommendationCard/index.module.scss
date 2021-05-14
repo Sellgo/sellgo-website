@@ -4,6 +4,26 @@
 	min-width: 34rem;
 	min-height: 27rem;
 	background: $prim_white;
+	color: $prim_dark_2;
+	border-radius: 3px;
+	padding: 2rem 0;
+
+	h3 {
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_semibold;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		max-width: 29rem;
+		margin: 0 auto;
+		margin: 2rem auto;
+		font-weight: $fontweight_medium;
+	}
+
+	a {
+		text-decoration: underline;
+	}
 
 	@media only screen and(max-width: 1080px) {
 		margin-bottom: 2rem;

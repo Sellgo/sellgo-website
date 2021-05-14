@@ -1,7 +1,12 @@
 import React from 'react';
+import Link from 'next/link';
+import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* Data */
+import { cardDetails } from './data';
 
 interface Props {}
 
@@ -11,7 +16,12 @@ const BannerCTASection: React.FC<Props> = () => {
 			<div className={styles.background} />
 
 			<div className={`page-container ${styles.bannerCTASection}`}>
-				<div className={styles.capsule} />
+				<div className={styles.capsule}>
+					<p>Lorem ipsum dolor sit Lorem ipsum dolor sit</p>
+					<Link href="/contact-sales" passHref>
+						<a className="anchor">Contact Sales</a>
+					</Link>
+				</div>
 
 				<h2>Lorem ipsum dolor sit amet</h2>
 				<p>
@@ -20,9 +30,14 @@ const BannerCTASection: React.FC<Props> = () => {
 				</p>
 
 				<div className={styles.ctaBannerCardsWrapper}>
-					<div className={styles.ctaBannerCard}></div>
-					<div className={styles.ctaBannerCard}></div>
-					<div className={styles.ctaBannerCard}></div>
+					{cardDetails.map((cardDetail) => {
+						return (
+							<div key={uuid()} className={styles.ctaBannerCard}>
+								<h3>{cardDetail.title}</h3>
+								<p>{cardDetail.description}</p>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</section>

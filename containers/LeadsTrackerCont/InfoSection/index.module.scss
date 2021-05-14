@@ -1,11 +1,16 @@
 @import '../../../styles/guidelines';
 
+.infoSectionWrapper {
+	margin-top: 10rem;
+	background: $blue_9;
+}
+
 .infoSection {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 10rem auto;
-	min-height: 40vh;
+	min-height: 81rem;
+	color: $prim_white;
 
 	@media only screen and(max-width: 1000px) {
 		flex-direction: column;
@@ -14,7 +19,6 @@
 }
 
 .infoSection__Text {
-	color: $prim_dark_2;
 	flex: 0 0 50%;
 
 	h2 {
@@ -32,9 +36,9 @@
 }
 
 .infoSection__Image {
-	width: 43rem;
+	width: 45rem;
 	height: 23rem;
-	border: 1px solid #000;
+	//border: 1px solid #000;
 	@media only screen and(max-width: 1000px) {
 		margin-top: 4rem;
 	}

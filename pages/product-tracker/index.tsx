@@ -47,7 +47,6 @@ const ProductTrackerContPage: React.FC<Props> = (props) => {
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
 			<HeroBox />
-			<section className={styles.banner} />
 			<InfoSection />
 			<NewBenefitsSection />
 			<section className={styles.newBanner} />

@@ -32,7 +32,6 @@ const SellerScoutPage: React.FC<Props> = (props) => {
 	return (
 		<>
 			<HeroBox />
-			<section className={styles.banner} />
 			<InfoSection />
 			<NewBenefitsSection />
 			<section className={styles.newBanner} />
