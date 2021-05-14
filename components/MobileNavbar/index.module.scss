@@ -5,6 +5,9 @@
 	justify-content: center;
 	align-items: center;
 	min-height: 5rem;
+	@media only screen and(min-width: 950px) {
+		display: none;
+	}
 }
 
 .mobileNav {
@@ -13,18 +16,19 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
-	@media only screen and(min-width: 950px) {
-		display: none;
-	}
 }
 
 .mobileNavLinks {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	flex: 1;
 	color: $prim_dark_2;
+	flex: 1;
+
+	@media only screen and(max-width: 500px) {
+		display: none;
+		visibility: 0;
+	}
 
 	li {
 		color: inherit;

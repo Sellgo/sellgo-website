@@ -93,7 +93,7 @@ export const plansAndProductsDetails = [
 				monthlyPrice: 49,
 				annualPrice: 348,
 				ctaLink: '/',
-				desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+				desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
 				featureSubName: 'Free tools plus',
 				featuresLists: [
 					{

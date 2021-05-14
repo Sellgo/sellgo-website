@@ -2,8 +2,7 @@
 
 .navbarBottom {
 	display: flex;
-	width: 90%;
-	margin-left: auto;
+	width: 100%;
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 3rem;
@@ -42,7 +41,7 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	flex: 0 0 50%;
+	flex: 1;
 
 	@media only screen and(max-width: 1080px) {
 		flex: 1;
@@ -54,7 +53,6 @@
 	color: $prim_dark_2;
 	cursor: pointer;
 	position: relative;
-
 	@media only screen and(max-width: 1620px) {
 		position: unset !important;
 	}
