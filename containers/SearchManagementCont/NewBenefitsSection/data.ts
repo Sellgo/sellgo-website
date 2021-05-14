@@ -1,32 +1,39 @@
 export const newBenefitsData = [
 	{
-		title: 'Amazon Wholesale Sellers',
-		subTitle: 'Streamline Your Amazon Wholesale Business',
-		description: `Obtain all the tools you need to scout, source, and sell profitable, 
-		high-demand products for your Amazon inventory. 
-		Use Sellgo's reliable data and sales analytics to build a 
-		thriving Amazon wholesale business.`,
-		linkLabel: 'Learn more about our Amazon Wholesale resources.',
+		title: 'Search Management',
+		subTitle: 'Optimize Your Search Management',
+		description: `Whether you're working with one supplier 
+		or hundreds, easily manage all your suppliers and their 
+		catalogs in one place. Gain detailed insights on your 
+		suppliers before you source their products. Organize 
+		their catalogs based on ASINs*, profitability, price to 
+		listing ratio and more.`,
+		linkLabel: 'Learn more about our Search Management resources.',
 		navigateTo: '/',
 		imageUrl: '/productOne.png'
 	},
 	{
-		title: 'Amazon Private Label Sellers',
-		subTitle: 'Expand Your Amazon Private Label',
-		description: `Access the tools you need to grow your Amazon Private Label business. 
-		Sellgo's powerful FBA tools empower private label sellers with the data and resources to
-		 maximize your brand, sales, and profits.`,
-		linkLabel: 'Learn more about our Amazon Private Label resources.',
+		title: 'Supplier Analysis',
+		subTitle: 'Painless Supplier Analysis',
+		description: `Each supplier's catalog can contain hundreds 
+		or even thousands of different products and ASINs. Highlight 
+		suppliers with best quality, most profitable, and replenishable 
+		products for your Amazon business.`,
+		linkLabel: 'Learn more about our Search Management resources.',
 		navigateTo: '/',
 		imageUrl: '/productSecond.png'
 	},
 	{
-		title: 'Brands, Agencies, and Enterprise',
-		subTitle: 'Connect with the Amazon Network',
-		description: `Uncover new market segments and reach out to thousands of Amazon 
-		sellers to showcase your company, products, or services. Join a network 
-		of existing sellers who are already looking for you. `,
-		linkLabel: 'Learn more about our Brand, Agency, and Enterprise resources.',
+		title: 'Catalog Errors',
+		subTitle: 'Catalog Error Alerts',
+		description: `UnWith thousands of products within a single 
+		catalog, data can get mixed up! Get alerts when you upload 
+		catalogs with file errors including missing ASINs, repetitive 
+		SKUs, and more.cover new market segments and reach out to 
+		thousands of Amazon sellers to showcase your company, products, 
+		or services. Join a network of existing sellers who are already 
+		looking for you. `,
+		linkLabel: 'Learn more about our Search Management resources.',
 		navigateTo: '/',
 		imageUrl: '/productThird.png'
 	}

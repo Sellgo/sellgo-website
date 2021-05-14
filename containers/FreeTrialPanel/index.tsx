@@ -27,11 +27,13 @@ const FreeTrialPanel: React.FC<Props> = (props) => {
 	return (
 		<>
 			<section className={`big-page-container ${styles.freeTrialSection}`}>
-				<h2 className="secondary-heading">Free Trial</h2>
+				<h2 className="secondary-heading">
+					Maximize Your Profits with Sellgo&apos;s Free Tools!
+				</h2>
 				<p className={styles.info}>
-					We offer a 7-day free trial with no credit card required.
+					Access all of Sellgo&apos;s free trial Amazon tools and integrate them
+					into your Amazon business.
 				</p>
-
 				<FreeTrialCTABox className={styles.freeTrialCTABox} isPrimary />
 
 				<PricingInfoAlert

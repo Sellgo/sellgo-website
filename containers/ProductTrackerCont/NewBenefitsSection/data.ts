@@ -1,32 +1,36 @@
 export const newBenefitsData = [
 	{
-		title: 'Amazon Wholesale Sellers',
-		subTitle: 'Streamline Your Amazon Wholesale Business',
-		description: `Obtain all the tools you need to scout, source, and sell profitable, 
-		high-demand products for your Amazon inventory. 
-		Use Sellgo's reliable data and sales analytics to build a 
-		thriving Amazon wholesale business.`,
-		linkLabel: 'Learn more about our Amazon Wholesale resources.',
+		title: 'Sales Analytics',
+		subTitle: 'Oversee Sales Performance and Trends',
+		description: `Monitor the sales performances over time 
+		and get detailed insights on your products and your 
+		competitors. Detect new trends and Amazon's best sellers 
+		then freely track their sales to optimize your inventory 
+		and shape your business.`,
+		linkLabel: 'Learn more about our Product Tracker resources.',
 		navigateTo: '/',
 		imageUrl: '/productOne.png'
 	},
 	{
-		title: 'Amazon Private Label Sellers',
-		subTitle: 'Expand Your Amazon Private Label',
-		description: `Access the tools you need to grow your Amazon Private Label business. 
-		Sellgo's powerful FBA tools empower private label sellers with the data and resources to
-		 maximize your brand, sales, and profits.`,
-		linkLabel: 'Learn more about our Amazon Private Label resources.',
+		title: 'Product Coordination',
+		subTitle: 'Coordinate Products with Precision',
+		description: `Pinpoint winning products with high profits 
+		and group them together to create customized visuals to 
+		streamline your business. Visualize and export your sales 
+		history to make well-informed decisions to maximize efficiency.`,
+		linkLabel: 'Learn more about our Product Tracker resources.',
 		navigateTo: '/',
 		imageUrl: '/productSecond.png'
 	},
 	{
-		title: 'Brands, Agencies, and Enterprise',
-		subTitle: 'Connect with the Amazon Network',
-		description: `Uncover new market segments and reach out to thousands of Amazon 
-		sellers to showcase your company, products, or services. Join a network 
-		of existing sellers who are already looking for you. `,
-		linkLabel: 'Learn more about our Brand, Agency, and Enterprise resources.',
+		title: 'Key Performance Metics',
+		subTitle: 'Evaluate Key Performance Metrics',
+		description: `Energize and organize your product management 
+		system with meaningful key performance indicators. Dissect 
+		key metrics like average profit margins, sales ranks, daily 
+		revenue, and average return on investment and make business 
+		decisions based off of real-time, authentic data.`,
+		linkLabel: 'Learn more about our Product Tracker resources.',
 		navigateTo: '/',
 		imageUrl: '/productThird.png'
 	}

@@ -20,11 +20,8 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
-					<h2>Maximize Your Profits with Sellgo&apos;s Free Trial!</h2>
-					<p>
-						Access all of Sellgo&apos;s free Amazon tools and integrate them
-						into your Amazon business.
-					</p>
+					<h2>Sellgo Free Trial</h2>
+					<p></p>
 				</div>
 
 				<div className={styles.freeTrailCTAWrapper}>
@@ -34,7 +31,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 						navigateTo="https://app.sellgo.com/signup/?type=free"
 						className={styles.freeTrialCTA}
 					>
-						Try Now 7-day Free Trial
+						Try Now for Free
 					</CTAButton>
 					<p>We offer a 7-day free trial with no credit card required.</p>
 				</div>

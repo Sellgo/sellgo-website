@@ -23,30 +23,12 @@
 			font-size: $fontsize_content_10;
 			font-weight: $fontweight_regular;
 			color: $grey_5;
-			max-width: 20rem;
+			max-width: 30rem;
 			text-align: center;
 			white-space: pre-line;
+			min-height: 6rem;
 		}
 	}
-
-	// &__Right {
-	// 	color: $prim_dark_2;
-	// 	text-align: right;
-	// 	font-size: $fontsize_content_12;
-	// 	p {
-	// 		color: inherit;
-	// 		font-weight: $fontweight_medium;
-	// 	}
-
-	// 	a {
-	// 		display: flex;
-	// 		color: $blue_8;
-	// 		font-weight: $fontweight_bold;
-	// 		span {
-	// 			margin-right: 5px;
-	// 		}
-	// 	}
-	// }
 }
 
 .planGems {
