@@ -19,10 +19,8 @@ export const plansAndProductsDetails = [
 		productsIncluded: [
 			{
 				name: 'Browser Extension',
-				productsDatabase: 0,
-				salesEstimateCount: 30,
-				yearlyPrice: 500,
-				annualPrice: 600,
+				productsDatabase: 1000,
+				desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
 				featureSubName: 'Free Account Plus',
 				ctaLink: '/',
 				featuresLists: [
@@ -38,11 +36,9 @@ export const plansAndProductsDetails = [
 			},
 			{
 				name: 'Product Research',
-				productsDatabase: 0,
-				salesEstimateCount: 0,
-				yearlyPrice: 600,
-				annualPrice: 700,
+				productsDatabase: 1000,
 				ctaLink: '/',
+				desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
 				featureSubName: 'Free Account Plus',
 				featuresLists: [
 					{
@@ -62,11 +58,9 @@ export const plansAndProductsDetails = [
 			},
 			{
 				name: 'Seller Research',
-				productsDatabase: 0,
-				salesEstimateCount: 0,
-				yearlyPrice: 700,
-				annualPrice: 800,
+				productsDatabase: 1000,
 				ctaLink: '/',
+				desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
 				featureSubName: 'Free Account Plus',
 				featuresLists: [
 					{

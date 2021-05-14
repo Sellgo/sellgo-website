@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 
 /* Styling */
@@ -37,7 +36,7 @@ interface Props {
 const PricingPlansSection: React.FC<Props> = (props) => {
 	const { planName, productsIncluded, selectedPlanType, faqData } = props;
 
-	const [isMonthly, setIsMonthly] = useState(true);
+	const [isMonthly, setIsMonthly] = useState(false);
 
 	const allPlanFeatures = getAllFeaturesForPlans(planName);
 
@@ -53,7 +52,9 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					<div className={styles.planShortSummary}>
 						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-						<a href="#calculatePrice" className="anchor">
+						{/* Show on next release */}
+
+						{/* <a href="#calculatePrice" className="anchor">
 							Calculate your price
 							<Image
 								src="/downArrow.svg"
@@ -62,7 +63,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 								height={10}
 								priority
 							/>
-						</a>
+						</a> */}
 					</div>
 
 					{/* Show only for Pay as you go plans */}

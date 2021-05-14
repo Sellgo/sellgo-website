@@ -3,53 +3,46 @@ import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* Components */
 import CTAButton from '../../CTAButton';
 
 interface Props {
 	name: string;
 	productsDatabase: number;
-	yearlyPrice: number;
-	annualPrice: number;
 	ctaLink: string;
+	desc: string;
 }
 
 const PayAsYouGoCardHead: React.FC<Props> = (props) => {
-	const { name, ctaLink } = props;
+	const { name, ctaLink, desc, productsDatabase } = props;
 
 	return (
 		<>
 			<div className={styles.pricingCardHead}>
 				<div className={styles.pricingCardHead__Left}>
-					<h2>
-						<Image
-							src="/gemIcon.svg"
-							alt="Gem Icon"
-							width={10}
-							height={10}
-							priority
-						/>
-						<span>{name}</span>
-					</h2>
+					<h2>{name}</h2>
+					<p>{desc}</p>
 				</div>
 			</div>
-			{/* 
-			<div className={styles.startingAt}>
-				<p>Starts At {productsDatabase.toLocaleString()}</p>
-				<a href="#!" target="_blank" rel="noopener noreferrer">
-					<span> products database</span>
-
-					<Image
-						src="/externalLinkIcon.svg"
-						alt="Move to the external link"
-						width={12}
-						height={10}
-						priority
-					/>
-				</a>
-			</div> */}
 
 			<div className={styles.pricePerDay}>
-				<h3>$1/Day</h3>
+				<h3>$1</h3>
+				<p>Billed Daily</p>
+				<p></p>
+			</div>
+
+			<div className={styles.productsDatabase}>
+				<p>Starts At {productsDatabase.toLocaleString()}</p>
+				<a href="#featuresTable" className="anchor">
+					<span>products database</span>
+					<Image
+						src="/downArrow.svg"
+						width={10}
+						height={8}
+						alt="Move to the all features datababse table"
+					/>
+				</a>
 			</div>
 
 			<CTAButton
