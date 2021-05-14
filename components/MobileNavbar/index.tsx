@@ -34,19 +34,19 @@ const MobileNavBar: React.FC<Props> = () => {
 					</li>
 
 					<li>
-						<Link passHref href="/pricing">
+						<Link passHref href="/about-us">
 							<a>About Us</a>
 						</Link>
 					</li>
 
 					<li>
-						<Link passHref href="/pricing">
+						<Link passHref href="/contact-us">
 							<a>Contact Us</a>
 						</Link>
 					</li>
 
 					<li>
-						<Link passHref href="/pricing">
+						<Link passHref href="/blogs">
 							<a>Blogs</a>
 						</Link>
 					</li>

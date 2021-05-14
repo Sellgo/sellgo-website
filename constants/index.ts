@@ -16,12 +16,7 @@ export const pricingCardHeaderGradients: { [key: string]: string } = {
 	'Seller Research': `linear-gradient(90deg,#EA8731,#754419)`
 };
 
-export const hideNavigationOnRoutes = [
-	'/privacy-policy',
-	'/terms-of-use',
-	'/pricing',
-	'/blogs'
-];
+export const hideNavigationOnRoutes = ['/privacy-policy', '/terms-of-use'];
 
 export const employSizeList = [
 	{
