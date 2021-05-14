@@ -3,11 +3,12 @@
 .freeTrialSection {
 	text-align: center;
 	margin-top: 8rem;
-	p {
-		font-size: $fontsize_content_14;
-		color: $prim_dark_2;
-		margin-top: 1rem;
-	}
+}
+
+.info {
+	font-size: $fontsize_content_14;
+	color: $prim_dark_2;
+	margin-top: 1rem;
 }
 
 .freeTrialCTABox {
@@ -26,6 +27,10 @@
 	border-top-left-radius: 0;
 	border-top: 0;
 	max-width: 120rem;
+
+	p {
+		margin: 0 !important;
+	}
 }
 
 .contactInfoSection {
@@ -36,6 +41,26 @@
 	margin: 10rem auto;
 }
 
-.otherInfoCTA {
+.otherInfoCTAWrapper {
+	width: 30rem;
 	margin: 2rem auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	@media only screen and(max-width: 350px) {
+		width: 100%;
+	}
+
+	p {
+		font-size: 11px;
+		color: $second_grey;
+		margin-top: 4px;
+		text-align: center;
+	}
+}
+
+.otherInfoCTA {
+	width: 100%;
 }

@@ -29,7 +29,6 @@ const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 			<div className={styles.pricePerDay}>
 				<h3>$1</h3>
 				<p>Billed Daily</p>
-				<p></p>
 			</div>
 
 			<div className={styles.productsDatabase}>

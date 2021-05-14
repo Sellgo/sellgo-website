@@ -26,14 +26,18 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 						into your Amazon business.
 					</p>
 				</div>
-				<CTAButton
-					type={isPrimary ? 'primary' : 'secondary'}
-					size="medium"
-					navigateTo="https://app.sellgo.com/signup/?type=free"
-					className={styles.freeTrialCTA}
-				>
-					Try Now 7-day Free Trial
-				</CTAButton>
+
+				<div className={styles.freeTrailCTAWrapper}>
+					<CTAButton
+						type={isPrimary ? 'primary' : 'secondary'}
+						size="medium"
+						navigateTo="https://app.sellgo.com/signup/?type=free"
+						className={styles.freeTrialCTA}
+					>
+						Try Now 7-day Free Trial
+					</CTAButton>
+					<p>We offer a 7-day free trial with no credit card required.</p>
+				</div>
 			</div>
 
 			<ul className={styles.detailsListWrapper}>

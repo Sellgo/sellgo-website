@@ -9,6 +9,10 @@
 	flex-direction: column;
 	padding: 3rem 4rem;
 	padding-bottom: 0;
+
+	@media only screen and(max-width: 450px) {
+		padding: 2rem 2rem;
+	}
 }
 
 .infoWrapper {
@@ -18,7 +22,7 @@
 	width: 100%;
 	margin-bottom: 3rem;
 
-	@media only screen and(max-width: 750px) {
+	@media only screen and(max-width: 950px) {
 		flex-direction: column;
 		align-items: center;
 	}
@@ -26,7 +30,7 @@
 	&__Desc {
 		text-align: left;
 
-		@media only screen and(max-width: 750px) {
+		@media only screen and(max-width: 950px) {
 			text-align: center;
 		}
 
@@ -44,11 +48,37 @@
 	}
 }
 
-.freeTrialCTA {
+.freeTrailCTAWrapper {
+	text-align: left;
+	width: 30rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	align-self: flex-end;
+
+	@media only screen and(max-width: 950px) {
+		align-self: center;
+		margin: 2rem auto;
+	}
+
+	@media only screen and(max-width: 450px) {
+		width: 100%;
+	}
+
+	p {
+		color: $second_grey;
+		font-size: 11px;
+		margin-top: 4px;
+		text-align: center;
+	}
+}
+
+.freeTrialCTA {
+	width: 100%;
+	margin: 0 auto;
 	@media only screen and(max-width: 750px) {
 		align-self: center;
-		margin-top: 2rem;
 	}
 }
 
@@ -64,6 +94,12 @@
 
 	@media only screen and(max-width: 750px) {
 		justify-content: space-evenly;
+	}
+
+	@media only screen and(max-width: 550px) {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
 	}
 }
 

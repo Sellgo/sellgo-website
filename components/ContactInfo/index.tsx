@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -14,7 +15,12 @@ const ContactInfo: React.FC<Props> = () => {
 				Send us a message!
 			</h2>
 
-			<div className={styles.capsule}></div>
+			<div className={styles.capsule}>
+				<p>Lorem ipsum dolor sit Lorem ipsum dolor sit</p>
+				<Link href="/contact-sales" passHref>
+					<a className="anchor">Contact sales</a>
+				</Link>
+			</div>
 		</div>
 	);
 };

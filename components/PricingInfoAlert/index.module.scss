@@ -2,7 +2,6 @@
 
 .pricingInfoAlert {
 	border: 1px solid $blue_6;
-	background: $blue_1;
 	color: $prim_dark_2;
 	padding: 1rem 2rem;
 	border-radius: 7px;
@@ -22,6 +21,7 @@
 		text-decoration: underline;
 		color: inherit;
 		font-size: $fontsize_content_12;
+		margin-left: 10px;
 		span {
 			margin-left: 5px;
 		}
