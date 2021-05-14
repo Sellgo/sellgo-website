@@ -123,3 +123,8 @@ a.anchor {
 input.error {
 	border: 1px solid #eb675e !important;
 }
+
+/* Generic class to rotate something */
+.rotate-180 {
+	transform: rotate(180deg);
+}

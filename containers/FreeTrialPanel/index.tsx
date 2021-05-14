@@ -50,7 +50,7 @@ const FreeTrialPanel: React.FC<Props> = (props) => {
 			<BenefitsSection />
 
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
-				<ContactInfo />
+				<ContactInfo message="Lorem ipsum dolor sit Lorem ipsum dolor sit" />
 			</section>
 
 			{freeTrailFAQData.data.length > 0 && (

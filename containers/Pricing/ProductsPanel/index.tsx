@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Tabs, TabList, Tab, TabPanel, resetIdCounter } from 'react-tabs';
 import { v4 as uuid } from 'uuid';
-import { useRouter } from 'next/router';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -12,9 +11,6 @@ import FreeTrialPanel from '../../FreeTrialPanel';
 
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
-
-/* Utils */
-import { generateTabIndexFromQuery } from '../../../utils/Pricing';
 
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
@@ -29,18 +25,7 @@ const ProductsPanel: React.FC<Props> = (props) => {
 
 	const { faqDetails } = props;
 
-	const router = useRouter();
-
-	const type = router.query?.type || '';
-
-	const [selectedPlanType, setSelectedPlanType] = useState<number>(
-		generateTabIndexFromQuery(0)
-	);
-
-	useEffect(() => {
-		const preSelectedPlanType = generateTabIndexFromQuery(type);
-		setSelectedPlanType(preSelectedPlanType);
-	}, [router]);
+	const [selectedPlanType, setSelectedPlanType] = useState<number>(2);
 
 	const handlePlanSelectChange = (index: number, lastIndex: number) => {
 		// [0,1,2,3,4]=['Free Trial','Pay $1 a day', 'Pay $1 1st month']
@@ -56,6 +41,7 @@ const ProductsPanel: React.FC<Props> = (props) => {
 		<Tabs
 			selectedTabClassName={styles.pricingPanelTab__Selected}
 			onSelect={handlePlanSelectChange}
+			defaultIndex={2}
 		>
 			<TabList className={styles.pricingPanelTabList}>
 				{planTypes.map((planType: any) => {

@@ -64,8 +64,8 @@
 	text-align: center;
 
 	h3 {
-		color: $blue_8;
-		font-size: $fontsize_subtitle_24;
+		color: $blue_7;
+		font-size: $fontsize_subtitle_32;
 		font-weight: $fontweight_bold;
 	}
 }
@@ -76,7 +76,23 @@
 	}
 }
 
+.toggleWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 2rem auto;
+	div {
+		width: 100%;
+	}
+}
+
 .buyNowCTA {
 	width: 100%;
 	margin: 3rem auto;
+}
+
+.tableCardCTA {
+	width: 100%;
+	margin: 0;
 }

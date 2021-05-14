@@ -28,6 +28,8 @@ interface Props {
 	monthlyPrice: number;
 	ctaLink: string;
 	desc: string;
+	// className?: string;
+	withToggle?: boolean;
 }
 
 const PricingPlansCard: React.FC<Props> = (props) => {

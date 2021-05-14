@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
+import { Element } from 'react-scroll';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -23,8 +24,12 @@ import FAQSection from '../FAQSection';
 /* Constants */
 import { getAllFeaturesForPlans } from '../../../data/Pricing';
 
+/* Components */
+import ContactInfo from '../../../components/ContactInfo';
+
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
+import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
 
 interface Props {
 	planName: string;
@@ -51,24 +56,19 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 
 					<div className={styles.planShortSummary}>
 						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-						{/* Show on next release */}
-
-						{/* <a href="#calculatePrice" className="anchor">
-							Calculate your price
-							<Image
-								src="/downArrow.svg"
-								alt="Select the arrow to move to calculate your price section"
-								width={10}
-								height={10}
-								priority
-							/>
-						</a> */}
 					</div>
 
-					{/* Show only for Pay as you go plans */}
+					{/* Show only for Pay $1 plan */}
 					{selectedPlanType === 1 && (
-						<PricingInfoAlert navigateTo="/" navigateLabel="Learn More" />
+						<PricingInfoAlert
+							navigateTo="/"
+							navigateLabel="Learn More"
+							head={`Start selling on Amazon today with Sellgo's free tools`}
+							desc={`Want to try our advanced Amazon tools? Review our FBA tools and pricing 
+							packages.Our premium tools empower you to track and research more products 
+							to optimize your Amazon business.`}
+							background="#F2EFE4"
+						/>
 					)}
 
 					{/* Show for all expect pay as you go */}
@@ -79,14 +79,24 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							className={styles.paymentModeToggle}
 						/>
 					)}
+
+					{/* Show for $1 1st month */}
+					{selectedPlanType === 2 && (
+						<PricingInfoAlert
+							navigateTo="/"
+							navigateLabel="Learn More"
+							head={`Pay only $1 for your first month when you sign-up for a yearly subscription!`}
+							desc={` `}
+							background="#F2EFE4"
+							className={styles.extraPricingInfo}
+						/>
+					)}
 				</div>
 			</section>
 
 			<section
 				className={`big-page-container ${styles.pricingPlansCardWrapper}`}
 			>
-				{/* Show for all other plans except pay as you go */}
-
 				{productsIncluded.map((product: any) => {
 					return (
 						<PricingPlansCard
@@ -100,18 +110,41 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			</section>
 
 			<section className={`big-page-container ${styles.allFeaturesSection}`}>
-				{allPlanFeatures.map((feature: any) => {
-					return (
-						<AllfeaturesTable
-							header={feature.header}
-							body={feature.body}
-							key={uuid()}
-						/>
-					);
-				})}
+				<Element name="featuresTable">
+					{allPlanFeatures.map((feature: any) => {
+						return (
+							<AllfeaturesTable
+								header={feature.header}
+								body={feature.body}
+								key={uuid()}
+							/>
+						);
+					})}
+				</Element>
+
+				<div className={styles.priceSummaryWrapper}>
+					{productsIncluded.map((product: any) => {
+						return (
+							<div className={styles.priceSummaryCard} key={uuid()}>
+								<PricingPlansCardHead
+									{...product}
+									isMonthly={isMonthly}
+									className={styles.tablePricingSummary}
+									planName={planName}
+									withToggle
+									handleChange={() => setIsMonthly(!isMonthly)}
+								/>
+							</div>
+						);
+					})}
+				</div>
 			</section>
 
 			<FreeTrialCTABox className={styles.freeTrialBox} />
+
+			<section className={`big-page-container ${styles.contactInfoSection}`}>
+				<ContactInfo message="Lorem ipsum dolor sit Lorem ipsum dolor sit" />
+			</section>
 
 			{/* Remove section for now */}
 

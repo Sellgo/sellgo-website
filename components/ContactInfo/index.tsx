@@ -4,11 +4,16 @@ import Link from 'next/link';
 /* Styling */
 import styles from './index.module.scss';
 
-interface Props {}
+interface Props {
+	className?: string;
+	message: string;
+}
 
-const ContactInfo: React.FC<Props> = () => {
+const ContactInfo: React.FC<Props> = (props) => {
+	const { className, message } = props;
+
 	return (
-		<div className={styles.contactInfo}>
+		<div className={`${styles.contactInfo} ${className}`}>
 			<h2>
 				Not sure what plan is right for your business?
 				<br />
@@ -16,7 +21,7 @@ const ContactInfo: React.FC<Props> = () => {
 			</h2>
 
 			<div className={styles.capsule}>
-				<p>Lorem ipsum dolor sit Lorem ipsum dolor sit</p>
+				<p>{message}</p>
 				<Link href="/contact-sales" passHref>
 					<a className="anchor">Contact sales</a>
 				</Link>

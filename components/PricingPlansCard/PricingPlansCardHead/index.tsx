@@ -16,6 +16,9 @@ interface Props {
 	monthlyPrice: number;
 	ctaLink: string;
 	desc: string;
+	withToggle?: boolean;
+	className?: string;
+	handleChange?: (state: boolean) => any;
 }
 
 const PricingPlansCardHead: React.FC<Props> = (props) => {

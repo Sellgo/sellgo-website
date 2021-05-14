@@ -12,18 +12,18 @@
 		color: inherit;
 	}
 
-	p {
+	div {
 		font-size: $fontsize_content_14;
 		color: inherit;
-	}
 
-	a {
-		text-decoration: underline;
-		color: inherit;
-		font-size: $fontsize_content_12;
-		margin-left: 10px;
-		span {
-			margin-left: 5px;
+		a {
+			text-decoration: underline;
+			color: inherit;
+			font-size: $fontsize_content_12;
+			margin-left: 10px;
+			span {
+				margin-left: 5px;
+			}
 		}
 	}
 }

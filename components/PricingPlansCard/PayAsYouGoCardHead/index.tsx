@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Link } from 'react-scroll';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -12,13 +13,22 @@ interface Props {
 	productsDatabase: number;
 	ctaLink: string;
 	desc: string;
+	className?: string;
+	withToggle?: boolean;
 }
 
 const PayAsYouGoCardHead: React.FC<Props> = (props) => {
-	const { name, ctaLink, desc, productsDatabase } = props;
+	const {
+		name,
+		ctaLink,
+		desc,
+		productsDatabase,
+		className,
+		withToggle
+	} = props;
 
 	return (
-		<>
+		<div className={className}>
 			<div className={styles.pricingCardHead}>
 				<div className={styles.pricingCardHead__Left}>
 					<h2>{name}</h2>
@@ -33,15 +43,16 @@ const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 
 			<div className={styles.productsDatabase}>
 				<p>Starts At {productsDatabase.toLocaleString()}</p>
-				<a href="#featuresTable" className="anchor">
+				<Link to="featuresTable" className="anchor" smooth offset={-100}>
 					<span>products database</span>
 					<Image
 						src="/downArrow.svg"
 						width={10}
 						height={8}
 						alt="Move to the all features datababse table"
+						className={withToggle ? 'rotate-180' : ''}
 					/>
-				</a>
+				</Link>
 			</div>
 
 			<CTAButton
@@ -52,7 +63,7 @@ const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 			>
 				Buy Now
 			</CTAButton>
-		</>
+		</div>
 	);
 };
 

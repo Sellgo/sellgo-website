@@ -29,7 +29,7 @@ const PricingInfoAlert: React.FC<Props> = (props) => {
 			style={{ background }}
 		>
 			<h3>{head}</h3>
-			<p>
+			<div>
 				{desc}
 				<a href={navigateTo} target="_blank" rel="noopener noreferrer">
 					{navigateLabel} {''}
@@ -42,7 +42,7 @@ const PricingInfoAlert: React.FC<Props> = (props) => {
 						/>
 					</span>
 				</a>
-			</p>
+			</div>
 		</div>
 	);
 };
