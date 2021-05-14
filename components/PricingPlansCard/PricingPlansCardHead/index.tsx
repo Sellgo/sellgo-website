@@ -23,7 +23,7 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 
 	return (
 		<>
-			{['Pay $1 for a day'].includes(planName) ? (
+			{['Pay $1 for a Day'].includes(planName) ? (
 				<PayAsYouGoCardHead {...otherProps} />
 			) : (
 				<GenericPlanCardHead {...otherProps} />

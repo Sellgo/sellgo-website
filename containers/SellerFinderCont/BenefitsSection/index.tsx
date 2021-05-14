@@ -19,7 +19,7 @@ const BenefitsSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.benefitsSectionWrapper}>
 			<div className={`page-container ${styles.benefitsSection}`}>
-				<h2>Lorem ipsum dolor sit amet</h2>
+				<h2>A Scope into the Competitive Landscape</h2>
 
 				<Tabs
 					className={styles.benefitsTabsWrapper}

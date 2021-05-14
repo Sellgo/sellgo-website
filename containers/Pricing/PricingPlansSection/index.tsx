@@ -51,7 +51,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					</div>
 
 					<div className={styles.planShortSummary}>
-						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p> Try Our Premium Tools and Access Real-Data for $1!</p>
 
 						<a href="#calculatePrice" className="anchor">
 							Calculate your price

@@ -27,11 +27,14 @@ const HeroBox: React.FC<Props> = () => {
 			</div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<span></span> <h2 className={styles.subHeading}>Lorem Ipsum</h2>
+					<span></span>{' '}
+					<h2 className={styles.subHeading}>
+						Fast Track Your Amazon Product Research
+					</h2>
 				</div>
-				<h1 className={styles.heading}>Lorem Ipsum</h1>
+				<h1 className={styles.heading}>Product Tracker</h1>
 				<CTAButton
-					navigateTo="https://app.sellgo.com/signup/?type=free"
+					navigateTo="/pricing"
 					type="primary"
 					size="medium"
 					className={styles.heroBoxCTA}

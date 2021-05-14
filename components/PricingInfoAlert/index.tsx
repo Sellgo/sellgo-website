@@ -15,13 +15,14 @@ const PricingInfoAlert: React.FC<Props> = (props) => {
 
 	return (
 		<div className={`${styles.pricingInfoAlert} ${className}`}>
-			<h3>Start selling on Amazon today with Sellgo&apos;s free tools</h3>
-			<p>
+			<h3>
 				Want to try our advanced Amazon tools? Review our FBA tools and pricing
 				packages.
-				<br />
+			</h3>
+			<p>
 				Our premium tools empower you to track and research more products to
 				optimize your Amazon business.
+				<br />
 			</p>
 			<a href={navigateTo} target="_blank" rel="noopener noreferrer">
 				{navigateLabel}{' '}

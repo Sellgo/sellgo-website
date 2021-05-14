@@ -49,7 +49,7 @@ const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 			</div> */}
 
 			<div className={styles.pricePerDay}>
-				<h3>$1/Day</h3>
+				<h3>$1</h3>
 			</div>
 
 			<CTAButton
