@@ -11,25 +11,17 @@ import PricingPlansCard from '../../../components/PricingPlansCard';
 import FreeTrialCTABox from '../../../components/FreeTrialCTABox';
 import AllfeaturesTable from '../../../components/AllFeaturesTable';
 import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
-
-// import ContactInfo from '../../../components/ContactInfo';
+import ContactInfo from '../../../components/ContactInfo';
+import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
 
 /* Containers */
-// import MarketplaceSection from '../MarketplaceSection';
-// import RecommendedBundlesSection from '../RecommendedBundlesSection';
-// import CalculateYourPriceSection from '../CalculateYourPriceSection';
-// import ExtraInfoSection from '../ExtraInfoSection';
 import FAQSection from '../FAQSection';
 
 /* Constants */
 import { getAllFeaturesForPlans } from '../../../data/Pricing';
 
-/* Components */
-import ContactInfo from '../../../components/ContactInfo';
-
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
-import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
 
 interface Props {
 	planName: string;
@@ -146,17 +138,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 				<ContactInfo message="Lorem ipsum dolor sit Lorem ipsum dolor sit" />
 			</section>
 
-			{/* Remove section for now */}
-
-			{/* <MarketplaceSection /> */}
-			{/* <RecommendedBundlesSection /> */}
-
-			{/* <section className={`big-page-container ${styles.contactInfoSection}`}>
-				<ContactInfo />
-			</section> */}
-
-			{/* <CalculateYourPriceSection selectedPlanType={selectedPlanType} /> */}
-			{/* <ExtraInfoSection /> */}
 			{faqData.data.length > 0 && <FAQSection faqData={faqData.data} />}
 		</>
 	);

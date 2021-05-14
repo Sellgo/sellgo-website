@@ -5,7 +5,10 @@ import { Category } from '../../interfaces/Blogs';
 
 export const imageLoaderForBlogs = (config: any) => {
 	const { src, width, quality } = config;
-	const newSrc = src.replace('http://', 'https://');
+	const newSrc =
+		process.env.NODE_ENV === 'production'
+			? src.replace('http://', 'https://')
+			: src;
 
 	return `${newSrc}?w=${width}&q=${quality || 75}`;
 };
