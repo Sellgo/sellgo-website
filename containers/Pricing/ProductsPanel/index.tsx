@@ -17,7 +17,10 @@ import { planTypes, plansAndProductsDetails } from './data';
 import { FAQDetails } from '../../../interfaces/FAQ';
 
 /* Utils */
-import { generateTabIndexFromQuery } from '../../../utils/Pricing';
+import {
+	generateQueryFromTabIndex,
+	generateTabIndexFromQuery
+} from '../../../utils/Pricing';
 
 interface Props {
 	faqDetails: FAQDetails[];
@@ -46,11 +49,19 @@ const ProductsPanel: React.FC<Props> = (props) => {
 
 		if (index === undefined || index === null) {
 			setSelectedPlanType(lastIndex);
-			router.query = {
-				...router.query,
-				type: index
-			};
+			router.push({
+				pathname: '/pricing',
+				query: {
+					type: generateQueryFromTabIndex(2)
+				}
+			});
 		} else {
+			router.push({
+				pathname: '/pricing',
+				query: {
+					type: generateQueryFromTabIndex(index)
+				}
+			});
 			setSelectedPlanType(index);
 		}
 	};
