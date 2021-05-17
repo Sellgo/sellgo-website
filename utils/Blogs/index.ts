@@ -3,12 +3,7 @@ import { Category } from '../../interfaces/Blogs';
 
 export const imageLoaderForBlogs = (config: any) => {
 	const { src, width, quality } = config;
-	const newSrc =
-		process.env.NODE_ENV === 'development'
-			? src
-			: src.replace('http://', 'https://');
-
-	return `${newSrc}?w=${width}&q=${quality || 75}`;
+	return `${src}?w=${width}&q=${quality || 75}`;
 };
 
 /* Send back first category name on showcase */
