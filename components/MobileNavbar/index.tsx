@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -11,6 +11,12 @@ import Sidebar from '../Sidebar';
 interface Props {}
 
 const MobileNavBar: React.FC<Props> = () => {
+	const [isOpen, setIsOpen] = useState<boolean>(false);
+
+	const handleChange = (state: boolean) => {
+		setIsOpen(state);
+	};
+
 	return (
 		<header className={`mobile-nav-container ${styles.header}`}>
 			<nav className={styles.mobileNav}>
@@ -26,37 +32,13 @@ const MobileNavBar: React.FC<Props> = () => {
 					</a>
 				</Link>
 
-				<ul className={styles.mobileNavLinks}>
-					<li>
-						<Link passHref href="/pricing">
-							<a>Pricing</a>
-						</Link>
-					</li>
-
-					<li>
-						<Link passHref href="/about-us">
-							<a>About Us</a>
-						</Link>
-					</li>
-
-					<li>
-						<Link passHref href="/contact-us">
-							<a>Contact Us</a>
-						</Link>
-					</li>
-
-					<li>
-						<Link passHref href="/blogs">
-							<a>Blogs</a>
-						</Link>
-					</li>
-				</ul>
+				<ul className={styles.mobileNavLinks}></ul>
 
 				<div
 					className={styles.burger}
 					role="button"
 					aria-roledescription="button"
-					onClick={() => {}}
+					onClick={() => handleChange(true)}
 					tabIndex={0}
 					onKeyPress={() => {}}
 				>
@@ -66,7 +48,7 @@ const MobileNavBar: React.FC<Props> = () => {
 				</div>
 			</nav>
 
-			<Sidebar />
+			<Sidebar isOpen={isOpen} handleClose={() => handleChange(false)} />
 		</header>
 	);
 };

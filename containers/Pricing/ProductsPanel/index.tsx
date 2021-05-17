@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Tabs, TabList, Tab, TabPanel, resetIdCounter } from 'react-tabs';
 import { v4 as uuid } from 'uuid';
+import { useRouter } from 'next/router';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -15,6 +16,9 @@ import { planTypes, plansAndProductsDetails } from './data';
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
 
+/* Utils */
+import { generateTabIndexFromQuery } from '../../../utils/Pricing';
+
 interface Props {
 	faqDetails: FAQDetails[];
 }
@@ -24,14 +28,28 @@ const ProductsPanel: React.FC<Props> = (props) => {
 	resetIdCounter();
 
 	const { faqDetails } = props;
+	const router = useRouter();
 
-	const [selectedPlanType, setSelectedPlanType] = useState<number>(2);
+	const queryCollection = router.query || {};
+
+	const tabIndex = generateTabIndexFromQuery(queryCollection.type);
+
+	const [selectedPlanType, setSelectedPlanType] = useState<number>(tabIndex);
+
+	useEffect(() => {
+		const tabIndex = generateTabIndexFromQuery(queryCollection.type);
+		setSelectedPlanType(tabIndex);
+	}, [router]);
 
 	const handlePlanSelectChange = (index: number, lastIndex: number) => {
-		// [0,1,2,3,4]=['Free Trial','Pay $1 a day', 'Pay $1 1st month']
+		// [0,1,2,3,4]=['Free Trial','Pay $1 a day', 'Monthly and Annual Plans']
 
-		if (!index) {
+		if (index === undefined || index === null) {
 			setSelectedPlanType(lastIndex);
+			router.query = {
+				...router.query,
+				type: index
+			};
 		} else {
 			setSelectedPlanType(index);
 		}
@@ -41,7 +59,8 @@ const ProductsPanel: React.FC<Props> = (props) => {
 		<Tabs
 			selectedTabClassName={styles.pricingPanelTab__Selected}
 			onSelect={handlePlanSelectChange}
-			defaultIndex={2}
+			// defaultIndex={2}
+			selectedIndex={selectedPlanType}
 		>
 			<TabList className={styles.pricingPanelTabList}>
 				{planTypes.map((planType: any) => {
