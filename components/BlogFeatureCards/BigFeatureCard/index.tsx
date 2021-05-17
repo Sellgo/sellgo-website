@@ -10,6 +10,7 @@ import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 
 /* Utils */
 import {
+	formatBlogReadTime,
 	generateCategoryDisplayName,
 	imageLoaderForBlogs
 } from '../../../utils/Blogs';
@@ -21,7 +22,13 @@ interface Props {
 const BigFeatureCard: React.FC<Props> = (props) => {
 	const { showcaseBlogDetails } = props;
 
-	const { featuredImage, slug, title, categories } = showcaseBlogDetails;
+	const {
+		featuredImage,
+		slug,
+		title,
+		categories,
+		readingTime
+	} = showcaseBlogDetails;
 
 	return (
 		<Link href={`/blogs/blog/${slug}`} passHref>
@@ -39,7 +46,10 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 					</div>
 					<div className={styles.blogText}>
 						<h1>{title}</h1>
-						<p>{generateCategoryDisplayName(categories.nodes)} | 25 Min Read</p>
+						<p>
+							{generateCategoryDisplayName(categories.nodes)}{' '}
+							{formatBlogReadTime(readingTime.readtime)} Min Read
+						</p>
 					</div>
 				</article>
 			</a>

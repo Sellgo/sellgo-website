@@ -1,14 +1,12 @@
-import readingTime from 'reading-time';
-
 /* Types */
 import { Category } from '../../interfaces/Blogs';
 
 export const imageLoaderForBlogs = (config: any) => {
 	const { src, width, quality } = config;
 	const newSrc =
-		process.env.NODE_ENV === 'production'
-			? src.replace('http://', 'https://')
-			: src;
+		process.env.NODE_ENV === 'development'
+			? src
+			: src.replace('http://', 'https://');
 
 	return `${newSrc}?w=${width}&q=${quality || 75}`;
 };
@@ -18,10 +16,12 @@ export const generateCategoryDisplayName = (categoriesList: Category[]) => {
 	if (!categoriesList.length) {
 		return '';
 	}
-	return categoriesList[0].name;
+	return categoriesList[0].name === 'Uncategorized'
+		? ''
+		: `${categoriesList[0].name} |`;
 };
 
-/* Send the reading time details */
-export const getBlogReadTime = (content: string) => {
-	return readingTime(content).text;
+/* Format blog read time */
+export const formatBlogReadTime = (time: number) => {
+	return Math.abs(time);
 };
