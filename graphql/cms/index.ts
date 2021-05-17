@@ -36,6 +36,9 @@ export const GET_SHOW_CASE_BLOGS = gql`
 						name
 					}
 				}
+				readingTime {
+					readtime
+				}
 			}
 		}
 	}
@@ -84,6 +87,9 @@ export const GET_BLOG_BY_SLUG = gql`
 					name
 				}
 			}
+			seoMetaTags {
+				keywords
+			}
 		}
 	}
 `;
@@ -105,6 +111,33 @@ export const GET_BLOGS_FOR_HOME = gql`
 				}
 				slug
 				title
+			}
+		}
+	}
+`;
+
+export const GET_FILTERED_BLOGS = gql`
+	query getFilteredBlogsBy($value: String) {
+		posts(
+			where: {
+				metaQuery: {
+					metaArray: { compare: EQUAL_TO, key: "filterBy", value: $value }
+				}
+				orderby: { field: DATE, order: DESC }
+			}
+			first: 3
+		) {
+			nodes {
+				slug
+				title
+				categories {
+					nodes {
+						name
+					}
+				}
+				readingTime {
+					readtime
+				}
 			}
 		}
 	}

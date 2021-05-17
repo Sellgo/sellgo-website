@@ -6,14 +6,16 @@ import styles from './index.module.scss';
 /* Components */
 import BigFeatureCard from '../../../components/BlogFeatureCards/BigFeatureCard';
 import SmallFeatureCard from '../../../components/BlogFeatureCards/SmallFeatureCard';
-import FilteredBlogs from '../../../components/FilteredBlogs';
+import FilteredChoiceBlogs from '../../../components/FilteredBlogs';
 
 interface Props {
 	showcaseBlogs: any;
+	popularChoiceBlogs: any;
+	editorsChoiceBlogs: any;
 }
 
 const BlogsShowCaseSection: React.FC<Props> = (props) => {
-	const { showcaseBlogs } = props;
+	const { showcaseBlogs, popularChoiceBlogs, editorsChoiceBlogs } = props;
 
 	return (
 		<>
@@ -24,8 +26,14 @@ const BlogsShowCaseSection: React.FC<Props> = (props) => {
 				</div>
 
 				<aside className={styles.blogsHeroSection__Right}>
-					<FilteredBlogs label="Popular Blogs" />
-					<FilteredBlogs label="Editors Choice" />
+					<FilteredChoiceBlogs
+						label="Popular Blogs"
+						blogs={popularChoiceBlogs}
+					/>
+					<FilteredChoiceBlogs
+						label="Editors Choice"
+						blogs={editorsChoiceBlogs}
+					/>
 				</aside>
 			</section>
 

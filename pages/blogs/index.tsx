@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 import client from '../../apollo';
 
 /* GraphQL */
-import { GET_SHOW_CASE_BLOGS } from '../../graphql/cms';
+import { GET_FILTERED_BLOGS, GET_SHOW_CASE_BLOGS } from '../../graphql/cms';
 
 /* Containers */
 import BlogsShowCaseSection from '../../containers/Blogs/BlogsShowCaseSection';
@@ -25,10 +25,12 @@ import { generatePageURL } from '../../utils/SEO';
 
 interface Props {
 	showcaseBlogs: any;
+	editorsChoiceBlogs: any;
+	popularChoiceBlogs: any;
 }
 
 const BlogsPage: React.FC<Props> = (props) => {
-	const { showcaseBlogs } = props;
+	const { showcaseBlogs, popularChoiceBlogs, editorsChoiceBlogs } = props;
 
 	return (
 		<>
@@ -42,7 +44,11 @@ const BlogsPage: React.FC<Props> = (props) => {
 
 			<main className={`page-container ${styles.blogsPage}`}>
 				{/* Blogs Showcase */}
-				<BlogsShowCaseSection showcaseBlogs={showcaseBlogs} />
+				<BlogsShowCaseSection
+					showcaseBlogs={showcaseBlogs}
+					popularChoiceBlogs={popularChoiceBlogs}
+					editorsChoiceBlogs={editorsChoiceBlogs}
+				/>
 
 				<div className={styles.divider} />
 
@@ -55,12 +61,33 @@ const BlogsPage: React.FC<Props> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const response = await client.query({ query: GET_SHOW_CASE_BLOGS });
-	const showcaseBlogs = response.data.posts.nodes;
+	const showCaseBlogsResponse = await client.query({
+		query: GET_SHOW_CASE_BLOGS
+	});
+
+	const editorsChoiceBlogsResponse = await client.query({
+		query: GET_FILTERED_BLOGS,
+		variables: {
+			value: 'Editors Choice'
+		}
+	});
+
+	const popularChoiceBlogsResponse = await client.query({
+		query: GET_FILTERED_BLOGS,
+		variables: {
+			value: 'Popular Choice'
+		}
+	});
+
+	const showcaseBlogs = showCaseBlogsResponse.data.posts.nodes;
+	const editorsChoiceBlogs = editorsChoiceBlogsResponse.data.posts.nodes;
+	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
 
 	return {
 		props: {
-			showcaseBlogs
+			showcaseBlogs,
+			editorsChoiceBlogs,
+			popularChoiceBlogs
 		},
 		revalidate: 1
 	};

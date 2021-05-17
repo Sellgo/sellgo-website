@@ -4,6 +4,11 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 /* Styling */
 import styles from './index.module.scss';
 
+/* Containers */
+import HeroBox from '../../../containers/Blogs/HeroBox';
+import ShareBlogSection from '../../../containers/Blogs/ShareBlogSection';
+import RelatedBlogsSection from '../../../containers/Blogs/RelatedBlogsSection';
+
 /* Components */
 import SEOHead from '../../../components/SEOHead';
 
@@ -19,11 +24,6 @@ import { GET_ALL_SLUGS, GET_BLOG_BY_SLUG } from '../../../graphql/cms';
 /* Types */
 import { FeaturedImage, Author } from '../../../interfaces/Blogs';
 
-/* Containers */
-import HeroBox from '../../../containers/Blogs/HeroBox';
-import ShareBlogSection from '../../../containers/Blogs/ShareBlogSection';
-import RelatedBlogsSection from '../../../containers/Blogs/RelatedBlogsSection';
-
 interface Props {
 	author: Author;
 	seo: any;
@@ -32,6 +32,7 @@ interface Props {
 	slug: string;
 	featuredImage: FeaturedImage;
 	shortSummary: string;
+	keywords: string;
 }
 
 const BlogPage: React.FC<Props> = (props) => {
@@ -42,7 +43,8 @@ const BlogPage: React.FC<Props> = (props) => {
 		featuredImage,
 		title,
 		author,
-		shortSummary
+		shortSummary,
+		keywords
 	} = props;
 	return (
 		<>
@@ -51,7 +53,7 @@ const BlogPage: React.FC<Props> = (props) => {
 				description={seo.metaDesc}
 				imageUrl={featuredImage.node.sourceUrl || ''}
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
-				keywords={''}
+				keywords={keywords || ''}
 			/>
 			<HeroBox
 				title={title}
@@ -106,7 +108,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		slug,
 		featuredImage,
 		excerpt,
-		categories
+		categories,
+		seoMetaTags
 	} = response.data.postBy;
 
 	return {
@@ -118,7 +121,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			slug,
 			featuredImage,
 			shortSummary: excerpt,
-			categories
+			categories,
+			keywords: seoMetaTags.keywords
 		},
 		revalidate: 1
 	};
