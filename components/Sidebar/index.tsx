@@ -99,6 +99,7 @@ const Sidebar: React.FC<Props> = (props) => {
 					width={15}
 					height={15}
 					alt="Close Navbar"
+					priority
 				/>
 			</div>
 		</div>
