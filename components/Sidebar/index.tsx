@@ -95,7 +95,7 @@ const Sidebar: React.FC<Props> = (props) => {
 				onKeyPress={() => {}}
 			>
 				<Image
-					src="/navbarClose.svg"
+					src="/navBarClose.svg"
 					width={15}
 					height={15}
 					alt="Close Navbar"
