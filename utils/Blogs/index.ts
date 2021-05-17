@@ -10,7 +10,7 @@ export const imageLoaderForBlogs = (config: any) => {
 			? src.replace('http://', 'https://')
 			: src;
 
-	return `${newSrc}?w=${width}&q=${quality || 75}`;
+	return `${src}?w=${width}&q=${quality || 75}`;
 };
 
 /* Send back first category name on showcase */
