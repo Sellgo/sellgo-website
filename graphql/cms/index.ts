@@ -82,13 +82,32 @@ export const GET_BLOG_BY_SLUG = gql`
 					}
 				}
 			}
-			categories {
-				nodes {
-					name
-				}
-			}
 			seoMetaTags {
 				keywords
+			}
+			relatedPosts {
+				nodes {
+					title
+					slug
+					categories {
+						nodes {
+							name
+						}
+					}
+					readingTime {
+						readtime
+					}
+					featuredImage {
+						node {
+							altText
+							sourceUrl
+							mediaDetails {
+								width
+								height
+							}
+						}
+					}
+				}
 			}
 		}
 	}

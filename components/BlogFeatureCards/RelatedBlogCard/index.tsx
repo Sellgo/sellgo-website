@@ -6,28 +6,50 @@ import Link from 'next/link';
 import styles from './index.module.scss';
 
 /* Utility */
-import { imageLoaderForBlogs } from '../../../utils/Blogs';
+import {
+	formatBlogReadTime,
+	generateCategoryDisplayName,
+	imageLoaderForBlogs
+} from '../../../utils/Blogs';
 
-interface Props {}
+/* Types */
+import {
+	Categories,
+	FeaturedImage,
+	ReadingTime
+} from '../../../interfaces/Blogs';
 
-const RelatedBlogCard: React.FC<Props> = () => {
+interface Props {
+	title: string;
+	slug: string;
+	featuredImage: FeaturedImage;
+	categories: Categories;
+	readingTime: ReadingTime;
+}
+
+const RelatedBlogCard: React.FC<Props> = (props) => {
+	const { title, slug, categories, featuredImage, readingTime } = props;
+
 	return (
 		<article className={styles.relatedBlogCard}>
-			<Link href="/" passHref>
+			<Link href={`/blogs/blog/${slug}`} passHref>
 				<a>
 					<div className={styles.bgImage}>
 						<Image
 							loader={imageLoaderForBlogs}
-							src="https://blog.hubspot.com/hubfs/excel-marketing-templates.jpg"
-							alt="Alt Text"
+							src={featuredImage.node.sourceUrl}
+							alt={featuredImage.node.altText}
 							layout="fill"
 							objectFit="cover"
 						/>
 					</div>
 
 					<div className={styles.blogText}>
-						<h2>Problems with Amzon Seller</h2>
-						<p>marketing | 15 mins read</p>
+						<h2>{title}</h2>
+						<p>
+							{generateCategoryDisplayName(categories.nodes)}{' '}
+							{formatBlogReadTime(readingTime.readtime)} mins read
+						</p>
 					</div>
 				</a>
 			</Link>
