@@ -1,3 +1,5 @@
+import { countryList } from '../data/Contact/countryList';
+
 export const plansWithHeaderGradient = [
 	'Starter',
 	'Suite',
@@ -18,6 +20,7 @@ export const pricingCardHeaderGradients: { [key: string]: string } = {
 
 export const hideNavigationOnRoutes = ['/privacy-policy', '/terms-of-use'];
 
+/* Employess size list on contact forms */
 export const employSizeList = [
 	{
 		label: '1 to 5',
@@ -44,3 +47,18 @@ export const employSizeList = [
 		value: '1000+'
 	}
 ];
+
+/* Phone Code List for contact */
+export const countryPhoneCodeList = countryList.map((list: any) => {
+	return {
+		...list,
+		label: `${list.name} (${list.dial_code})`,
+		value: list.dial_code
+	};
+});
+
+export const defaultPhoneCode = {
+	label: 'United States (+1)',
+	value: '+1',
+	type: 'countryCode'
+};
