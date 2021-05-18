@@ -57,6 +57,9 @@ const BlogsPage: React.FC<Props> = (props) => {
 
 				<section className={styles.banner} />
 			</main>
+
+			{/* Mount all page modal */}
+			<div id="newsLetterMount"></div>
 		</>
 	);
 };

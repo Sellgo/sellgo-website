@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
 
+/* Components */
+import ReCaptchaNewsLetter from '../../../components/ReCaptchaNewsLetter';
+
 interface Props {}
 
 const ShowCaseHeroBox: React.FC<Props> = () => {
+	const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+	// mount the modal on target
+	useEffect(() => {
+		Modal.setAppElement('#newsLetterMount');
+	}, []);
+
 	return (
 		<div className={styles.heroBoxWrapper}>
 			<div className={`page-container ${styles.heroBoxContent}`}>
@@ -17,10 +28,20 @@ const ShowCaseHeroBox: React.FC<Props> = () => {
 				</p>
 				<button
 					className={`ctabutton ctabutton--primary ctabutton--medium ${styles.subscribeCTA}`}
+					onClick={() => setIsModalOpen(true)}
 				>
 					Subscribe
 				</button>
 			</div>
+
+			<Modal
+				isOpen={isModalOpen}
+				onRequestClose={() => setIsModalOpen(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<ReCaptchaNewsLetter closeModal={() => setIsModalOpen(false)} />
+			</Modal>
 		</div>
 	);
 };
