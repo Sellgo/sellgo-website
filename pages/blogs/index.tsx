@@ -13,6 +13,7 @@ import { GET_FILTERED_BLOGS, GET_SHOW_CASE_BLOGS } from '../../graphql/cms';
 /* Containers */
 import BlogsShowCaseSection from '../../containers/Blogs/BlogsShowCaseSection';
 import BlogsCategorySection from '../../containers/Blogs/BlogsCategorySection';
+import ShowCaseHeroBox from '../../containers/Blogs/ShowCaseHerobox';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -41,7 +42,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-
+			<ShowCaseHeroBox />
 			<main className={`page-container ${styles.blogsPage}`}>
 				{/* Blogs Showcase */}
 				<BlogsShowCaseSection
