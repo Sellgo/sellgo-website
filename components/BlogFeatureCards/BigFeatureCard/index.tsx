@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -10,6 +10,8 @@ import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 
 /* Utils */
 import {
+	fallBackImageURL,
+	formatBlogReadTime,
 	generateCategoryDisplayName,
 	imageLoaderForBlogs
 } from '../../../utils/Blogs';
@@ -21,7 +23,17 @@ interface Props {
 const BigFeatureCard: React.FC<Props> = (props) => {
 	const { showcaseBlogDetails } = props;
 
-	const { featuredImage, slug, title, categories } = showcaseBlogDetails;
+	if (!showcaseBlogDetails) {
+		return null;
+	}
+
+	const {
+		featuredImage,
+		slug,
+		title,
+		categories,
+		readingTime
+	} = showcaseBlogDetails;
 
 	return (
 		<Link href={`/blogs/blog/${slug}`} passHref>
@@ -30,8 +42,8 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 					<div className={styles.bgImage}>
 						<Image
 							loader={imageLoaderForBlogs}
-							src={featuredImage.node.sourceUrl}
-							alt={featuredImage.node.altText}
+							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+							alt={featuredImage?.node?.altText}
 							layout="fill"
 							objectFit="cover"
 							priority
@@ -39,7 +51,10 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 					</div>
 					<div className={styles.blogText}>
 						<h1>{title}</h1>
-						<p>{generateCategoryDisplayName(categories.nodes)} | 25 Min Read</p>
+						<p>
+							{generateCategoryDisplayName(categories.nodes)}{' '}
+							{formatBlogReadTime(readingTime.readtime)} Min Read
+						</p>
 					</div>
 				</article>
 			</a>
@@ -47,4 +62,4 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 	);
 };
 
-export default BigFeatureCard;
+export default memo(BigFeatureCard);

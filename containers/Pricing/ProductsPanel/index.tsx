@@ -13,11 +13,14 @@ import FreeTrialPanel from '../../FreeTrialPanel';
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
 
-/* Utils */
-import { generateTabIndexFromQuery } from '../../../utils/Pricing';
-
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
+
+/* Utils */
+import {
+	generateQueryFromTabIndex,
+	generateTabIndexFromQuery
+} from '../../../utils/Pricing';
 
 interface Props {
 	faqDetails: FAQDetails[];
@@ -28,26 +31,37 @@ const ProductsPanel: React.FC<Props> = (props) => {
 	resetIdCounter();
 
 	const { faqDetails } = props;
-
 	const router = useRouter();
 
-	const type = router.query?.type || '';
+	const queryCollection = router.query || {};
 
-	const [selectedPlanType, setSelectedPlanType] = useState<number>(
-		generateTabIndexFromQuery(0)
-	);
+	const tabIndex = generateTabIndexFromQuery(queryCollection.type);
+
+	const [selectedPlanType, setSelectedPlanType] = useState<number>(tabIndex);
 
 	useEffect(() => {
-		const preSelectedPlanType = generateTabIndexFromQuery(type);
-		setSelectedPlanType(preSelectedPlanType);
+		const tabIndex = generateTabIndexFromQuery(queryCollection.type);
+		setSelectedPlanType(tabIndex);
 	}, [router]);
 
 	const handlePlanSelectChange = (index: number, lastIndex: number) => {
-		// [0,1,2,3,4]=['Free Trial','Pay $1 a day', 'Pay $1 1st month']
+		// [0,1,2,3,4]=['Free Trial','Pay $1 a day', 'Monthly and Annual Plans']
 
-		if (!index) {
+		if (index === undefined || index === null) {
 			setSelectedPlanType(lastIndex);
+			router.push({
+				pathname: '/pricing',
+				query: {
+					type: generateQueryFromTabIndex(2)
+				}
+			});
 		} else {
+			router.push({
+				pathname: '/pricing',
+				query: {
+					type: generateQueryFromTabIndex(index)
+				}
+			});
 			setSelectedPlanType(index);
 		}
 	};
@@ -56,6 +70,8 @@ const ProductsPanel: React.FC<Props> = (props) => {
 		<Tabs
 			selectedTabClassName={styles.pricingPanelTab__Selected}
 			onSelect={handlePlanSelectChange}
+			// defaultIndex={2}
+			selectedIndex={selectedPlanType}
 		>
 			<TabList className={styles.pricingPanelTabList}>
 				{planTypes.map((planType: any) => {

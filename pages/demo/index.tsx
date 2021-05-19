@@ -3,6 +3,7 @@ import Dropdown from 'react-dropdown';
 import validator from 'validator';
 import Image from 'next/image';
 import axios from 'axios';
+import Select from 'react-select';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -14,7 +15,11 @@ import HeroBox from '../../containers/Demo/HeroBox';
 import FormInput from '../../components/FormInput';
 
 /* Constants */
-import { employSizeList } from '../../constants';
+import {
+	employSizeList,
+	defaultPhoneCode,
+	countryPhoneCodeList
+} from '../../constants';
 
 /* App Config */
 import AppConfig from '../../config';
@@ -25,8 +30,9 @@ const DemoPage: React.FC<Props> = () => {
 	const [formData, setFormData] = useState({
 		firstName: '',
 		lastName: '',
-		email: '',
+		countryCode: defaultPhoneCode,
 		phoneNumber: '',
+		email: '',
 		company: '',
 		website: '',
 		companySize: employSizeList[0].value,
@@ -62,11 +68,20 @@ const DemoPage: React.FC<Props> = () => {
 		}
 	};
 
-	const handleSelectChange = (selectedOption: any) => {
+	const handleCompanySizeChange = (selectedOption: any) => {
 		setFormData((prevState) => {
 			return {
 				...prevState,
 				companySize: selectedOption.value
+			};
+		});
+	};
+
+	const handleCountryCodeChange = (selectedOption: any) => {
+		setFormData((prevState) => {
+			return {
+				...prevState,
+				countryCode: selectedOption
 			};
 		});
 	};
@@ -79,7 +94,8 @@ const DemoPage: React.FC<Props> = () => {
 		company,
 		website,
 		companySize,
-		sellgoBlog
+		sellgoBlog,
+		countryCode
 	} = formData;
 
 	const {
@@ -210,8 +226,9 @@ const DemoPage: React.FC<Props> = () => {
 		setFormData({
 			firstName: '',
 			lastName: '',
-			email: '',
+			countryCode: defaultPhoneCode,
 			phoneNumber: '',
+			email: '',
 			company: '',
 			website: '',
 			companySize: employSizeList[0].value,
@@ -226,11 +243,13 @@ const DemoPage: React.FC<Props> = () => {
 		formData.append('email', email);
 		formData.append('firstname', firstName);
 		formData.append('lastname', lastName);
-		formData.append('phone', phoneNumber);
+		formData.append('phone', `${countryCode.value}-${phoneNumber}`);
 		formData.append('company', company);
 		formData.append('website', website);
 		formData.append('numemployees', companySize);
 		formData.append('subscribeblog', sellgoBlog ? 'Yes' : 'No');
+
+		console.log(formData);
 
 		try {
 			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
@@ -298,19 +317,18 @@ const DemoPage: React.FC<Props> = () => {
 						errorMessage="Invalid Last Name"
 					/>
 
-					<FormInput
-						className={styles.formInput}
-						label="Email *"
-						id="email"
-						type="email"
-						name="email"
-						onChange={handleChange}
-						value={email}
-						autoComplete="off"
-						required
-						hasError={emailErr}
-						errorMessage="Invalid Email"
-					/>
+					<div className={styles.dropdownWrapper}>
+						<label> Country Code *</label>
+						<Select
+							defaultValue={defaultPhoneCode}
+							options={countryPhoneCodeList}
+							className={styles.countrySelect}
+							classNamePrefix="dropdown"
+							id="dropdown"
+							onChange={handleCountryCodeChange}
+							value={countryCode}
+						/>
+					</div>
 
 					<FormInput
 						className={styles.formInput}
@@ -324,6 +342,20 @@ const DemoPage: React.FC<Props> = () => {
 						required
 						hasError={phoneNumberErr}
 						errorMessage="Invalid Phone Number"
+					/>
+
+					<FormInput
+						className={styles.formInput}
+						label="Email *"
+						id="email"
+						type="email"
+						name="email"
+						onChange={handleChange}
+						value={email}
+						autoComplete="off"
+						required
+						hasError={emailErr}
+						errorMessage="Invalid Email"
 					/>
 
 					<FormInput
@@ -354,11 +386,11 @@ const DemoPage: React.FC<Props> = () => {
 						errorMessage="Please enter valid URL"
 					/>
 
-					<div className={styles.dropdownWrapper}>
-						<label>How many employees work there? *</label>
+					<div className={styles.formInput}>
+						<label># of Employees</label>
 						<Dropdown
 							options={employSizeList}
-							onChange={handleSelectChange}
+							onChange={handleCompanySizeChange}
 							className={styles.selectDropdown}
 							placeholderClassName={styles.selectDropdown__placeholder}
 							controlClassName={styles.selectDropdown__control}

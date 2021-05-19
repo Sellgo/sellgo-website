@@ -6,10 +6,9 @@
 
 .featuresCardWrapper {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: flex-start;
-	margin-bottom: 4rem;
-	margin-top: 2rem;
+	margin: 4rem auto;
 
 	@media only screen and(max-width: 1200px) {
 		flex-wrap: wrap;

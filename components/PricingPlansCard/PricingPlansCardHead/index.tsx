@@ -16,14 +16,16 @@ interface Props {
 	monthlyPrice: number;
 	ctaLink: string;
 	desc: string;
+	withToggle?: boolean;
+	className?: string;
+	handleChange?: (state: boolean) => any;
 }
 
 const PricingPlansCardHead: React.FC<Props> = (props) => {
 	const { planName, ...otherProps } = props;
-
 	return (
 		<>
-			{['Pay $1 for a day'].includes(planName) ? (
+			{['Pay $1 for a Day'].includes(planName) ? (
 				<PayAsYouGoCardHead {...otherProps} />
 			) : (
 				<GenericPlanCardHead {...otherProps} />

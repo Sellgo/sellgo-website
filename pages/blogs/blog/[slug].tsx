@@ -4,6 +4,11 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 /* Styling */
 import styles from './index.module.scss';
 
+/* Containers */
+import HeroBox from '../../../containers/Blogs/HeroBox';
+import ShareBlogSection from '../../../containers/Blogs/ShareBlogSection';
+import RelatedBlogsSection from '../../../containers/Blogs/RelatedBlogsSection';
+
 /* Components */
 import SEOHead from '../../../components/SEOHead';
 
@@ -17,12 +22,11 @@ import client from '../../../apollo';
 import { GET_ALL_SLUGS, GET_BLOG_BY_SLUG } from '../../../graphql/cms';
 
 /* Types */
-import { FeaturedImage, Author } from '../../../interfaces/Blogs';
-
-/* Containers */
-import HeroBox from '../../../containers/Blogs/HeroBox';
-import ShareBlogSection from '../../../containers/Blogs/ShareBlogSection';
-import RelatedBlogsSection from '../../../containers/Blogs/RelatedBlogsSection';
+import {
+	FeaturedImage,
+	Author,
+	RelatedBlogDetails
+} from '../../../interfaces/Blogs';
 
 interface Props {
 	author: Author;
@@ -32,6 +36,8 @@ interface Props {
 	slug: string;
 	featuredImage: FeaturedImage;
 	shortSummary: string;
+	keywords: string;
+	relatedBlogs: RelatedBlogDetails[];
 }
 
 const BlogPage: React.FC<Props> = (props) => {
@@ -42,16 +48,19 @@ const BlogPage: React.FC<Props> = (props) => {
 		featuredImage,
 		title,
 		author,
-		shortSummary
+		shortSummary,
+		keywords,
+		relatedBlogs
 	} = props;
+
 	return (
 		<>
 			<SEOHead
 				title={seo.title || 'Blog | Sellgo'}
 				description={seo.metaDesc}
-				imageUrl={featuredImage.node.sourceUrl || ''}
+				imageUrl={featuredImage?.node?.sourceUrl || ''}
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
-				keywords={''}
+				keywords={keywords || ''}
 			/>
 			<HeroBox
 				title={title}
@@ -70,7 +79,7 @@ const BlogPage: React.FC<Props> = (props) => {
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
 				title={title}
 			/>
-			<RelatedBlogsSection />
+			<RelatedBlogsSection relatedBlogs={relatedBlogs} />
 		</>
 	);
 };
@@ -86,7 +95,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 	return {
 		paths: blogPaths,
-		fallback: false
+		fallback: 'blocking'
 	};
 };
 
@@ -106,7 +115,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		slug,
 		featuredImage,
 		excerpt,
-		categories
+		seoMetaTags,
+		relatedPosts
 	} = response.data.postBy;
 
 	return {
@@ -118,7 +128,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			slug,
 			featuredImage,
 			shortSummary: excerpt,
-			categories
+			keywords: seoMetaTags.keywords,
+			relatedBlogs: relatedPosts.nodes
 		},
 		revalidate: 1
 	};

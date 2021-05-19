@@ -1,31 +1,37 @@
 export const accordionData = [
 	{
 		title: 'Product Description',
-		description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-							Accusantium, totam culpa error a ullam sed voluptate laborum
-							incidunt esse obcaecati.`,
-		listDetails: ['List Item One', 'ListItem 2', 'List Item 3'],
+		description: `Integrate Sellgo's advanced FBA tools and reliable data 
+		analytics while you scout and research products on Amazon.`,
+		listDetails: [],
 		ctaLinkDetails: {
-			name: 'View the product description',
+			name: '',
 			linkTo: '/'
 		}
 	},
 	{
 		title: 'Pricing Overview',
-		description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-							Accusantium, totam culpa error a ullam sed voluptate laborum
-							incidunt esse obcaecati.`,
-		listDetails: ['List Item One', 'ListItem 2', 'List Item 3'],
-		ctaLinkDetails: {}
+		description: `Tools and pricing plans that grow with you and your business. 
+		Pricing plans start at:`,
+		listDetails: [
+			'Wholesale Tier 1:',
+			'Private Label Tier 1:',
+			'Professional Tier 1:'
+		],
+		ctaLinkDetails: {
+			name: 'View all Pricing plans',
+			linkTo: '/'
+		}
 	},
 	{
 		title: 'Features',
-		description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-							Accusantium, totam culpa error a ullam sed voluptate laborum
-							incidunt esse obcaecati.`,
+		description: `After installing the free Chrome Extension, head over 
+		to Amazon and overlay important key metrics directly on your search pages. 
+		Sort thousands of products with our filters to find the products perfect 
+		for your business.`,
 		listDetails: [],
 		ctaLinkDetails: {
-			name: 'View the product description',
+			name: '',
 			linkTo: '/'
 		}
 	}

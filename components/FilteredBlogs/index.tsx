@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
+import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
+import {
+	formatBlogReadTime,
+	generateCategoryDisplayName
+} from '../../utils/Blogs';
+
+/* Types */
+import { FilteredBlog } from '../../interfaces/Blogs';
 
 interface Props {
 	label: string;
-	blogs?: any;
+	blogs: FilteredBlog[];
 }
 
-const FilteredBlogs: React.FC<Props> = (props) => {
-	const { label } = props;
+const FilteredChoiceBlogs: React.FC<Props> = (props) => {
+	const { label, blogs } = props;
 
 	return (
 		<div className={styles.filteredBlogs}>
@@ -18,40 +26,25 @@ const FilteredBlogs: React.FC<Props> = (props) => {
 				<p>{label}</p>
 			</div>
 
-			<Link passHref href="/">
-				<a>
-					<div className={styles.blogTeaser}>
-						<h3>Lorem Ipsum</h3>
-						<p>
-							<strong>Lorem | 10 Min Read</strong>
-						</p>
+			{blogs.map((blog: FilteredBlog) => {
+				return (
+					<div className={styles.blogTeaser} key={uuid()}>
+						<Link passHref href={`/blogs/blog/${blog.slug}`}>
+							<a>
+								<p>{blog.title}</p>
+							</a>
+						</Link>
+						<small>
+							<strong>
+								{generateCategoryDisplayName(blog.categories.nodes)}{' '}
+								{formatBlogReadTime(blog.readingTime.readtime)} Min Read
+							</strong>
+						</small>
 					</div>
-				</a>
-			</Link>
-
-			<Link passHref href="/">
-				<a>
-					<div className={styles.blogTeaser}>
-						<h3>Lorem Ipsum</h3>
-						<p>
-							<strong>Lorem | 10 Min Read</strong>
-						</p>
-					</div>
-				</a>
-			</Link>
-
-			<Link passHref href="/">
-				<a>
-					<div className={styles.blogTeaser}>
-						<h3>Lorem Ipsum</h3>
-						<p>
-							<strong>Lorem | 10 Min Read</strong>
-						</p>
-					</div>
-				</a>
-			</Link>
+				);
+			})}
 		</div>
 	);
 };
 
-export default FilteredBlogs;
+export default memo(FilteredChoiceBlogs);

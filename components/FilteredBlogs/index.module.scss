@@ -2,6 +2,7 @@
 
 .filteredBlogs {
 	min-width: 34.8rem;
+	max-width: 34.8rem;
 	height: 28.2rem;
 	margin-bottom: 1.1rem;
 	@media only screen and(max-width: 1080px) {
@@ -39,12 +40,14 @@
 	padding: 2rem;
 	max-height: 8rem;
 
-	h3 {
-		font-size: $fontsize_content_16;
-		font-weight: $fontweight_medium;
-	}
 	p {
-		text-transform: uppercase;
 		font-size: $fontsize_content_14;
+		font-weight: $fontweight_medium;
+		text-decoration: underline;
+	}
+
+	small {
+		text-transform: uppercase;
+		font-size: $fontsize_content_12;
 	}
 }

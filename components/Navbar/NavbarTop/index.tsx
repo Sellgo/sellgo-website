@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -22,7 +23,12 @@ const NavbarTop: React.FC<Props> = () => {
 
 			<ul className={styles.navbarTopLinksList}>
 				<li className={styles.navbarTopLink}>
-					<a href="https://app.sellgo.com/" className={styles.navbarLink}>
+					<a
+						href="https://app.sellgo.com/"
+						className={styles.navbarLink}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						Go to my account
 					</a>
 				</li>
@@ -32,9 +38,9 @@ const NavbarTop: React.FC<Props> = () => {
 					</a>
 				</li>
 				<li className={styles.navbarTopLink}>
-					<a href="/about" className={styles.navbarLink}>
-						About
-					</a>
+					<Link href="/about-us" passHref>
+						<a className={styles.navbarLink}>About</a>
+					</Link>
 				</li>
 			</ul>
 		</div>

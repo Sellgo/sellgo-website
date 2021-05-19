@@ -18,7 +18,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection}>
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-					Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+					All Your Product Research In One Place
 				</h2>
 
 				<div className={styles.benefitsCardsWrapper}>

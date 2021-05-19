@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 
 interface Props {
-	label: string;
+	label?: string;
 	id: string;
 	className?: string;
 	hasError?: boolean;
@@ -33,7 +33,7 @@ const FormInput: React.FC<Props> = (props) => {
 			{labelLast ? (
 				<>
 					<input id={id} {...otherProps} />
-					<label htmlFor={id}>{label}</label>
+					{label && <label htmlFor={id}>{label}</label>}
 					{hasError && <small>{errorMessage}</small>}
 				</>
 			) : (

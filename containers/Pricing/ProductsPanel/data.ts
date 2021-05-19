@@ -4,25 +4,23 @@ export const planTypes = [
 		isNew: false
 	},
 	{
-		name: 'Pay $1 a day',
+		name: 'Pay $1 a Day',
 		isNew: false
 	},
 	{
-		name: 'Pay $1 1st month',
+		name: 'Monthly and Annual Plans',
 		isNew: false
 	}
 ];
 
 export const plansAndProductsDetails = [
 	{
-		planName: 'Pay $1 for a day',
+		planName: 'Pay $1 for a Day',
 		productsIncluded: [
 			{
 				name: 'Browser Extension',
-				productsDatabase: 0,
-				salesEstimateCount: 30,
-				yearlyPrice: 500,
-				annualPrice: 600,
+				productsDatabase: 1000,
+				desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
 				featureSubName: 'Free Account Plus',
 				ctaLink: '/',
 				featuresLists: [
@@ -38,11 +36,9 @@ export const plansAndProductsDetails = [
 			},
 			{
 				name: 'Product Research',
-				productsDatabase: 0,
-				salesEstimateCount: 0,
-				yearlyPrice: 600,
-				annualPrice: 700,
+				productsDatabase: 1000,
 				ctaLink: '/',
+				desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
 				featureSubName: 'Free Account Plus',
 				featuresLists: [
 					{
@@ -62,11 +58,9 @@ export const plansAndProductsDetails = [
 			},
 			{
 				name: 'Seller Research',
-				productsDatabase: 0,
-				salesEstimateCount: 0,
-				yearlyPrice: 700,
-				annualPrice: 800,
+				productsDatabase: 1000,
 				ctaLink: '/',
+				desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
 				featureSubName: 'Free Account Plus',
 				featuresLists: [
 					{
@@ -84,7 +78,7 @@ export const plansAndProductsDetails = [
 		]
 	},
 	{
-		planName: 'Pay $1 for the entire first month of membership',
+		planName: 'Monthly and Annual Pricing Plans',
 		productsIncluded: [
 			{
 				name: 'Starter',
@@ -92,9 +86,9 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 1000,
 				monthlyPrice: 49,
 				annualPrice: 348,
-				ctaLink: '/',
-				desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-				featureSubName: 'Free tools plus',
+				ctaLink: 'https://app.sellgo.com/subscription/?type=basic&mode=yearly',
+				desc: `The toolbox for beginner sellers. \n Get access to our tools and chrome extension!`,
+				featureSubName: 'Start with',
 				featuresLists: [
 					{
 						title: 'Discover Best Selling',
@@ -121,8 +115,8 @@ export const plansAndProductsDetails = [
 				monthlyPrice: 69,
 				annualPrice: 588,
 				ctaLink: '/',
-				featureSubName: 'Starter Plus',
-				desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+				featureSubName: 'Starter Plan Plus',
+				desc: `For experienced sellers looking to grow \n their businesses and maximize their earnings.`,
 				featuresLists: [
 					{
 						title: 'Advanced profit scout',
@@ -153,8 +147,9 @@ export const plansAndProductsDetails = [
 				monthlyPrice: 129,
 				annualPrice: 996,
 				ctaLink: '/',
-				featureSubName: 'Professional Plus',
-				desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+				featureSubName: 'Suite Plan Plus',
+				desc: `For professional sellers and businesses who need the best \n tools. 
+				Track more products, obtain more data, and optimize your entire Amazon business.`,
 				featuresLists: [
 					{
 						title: 'Advance your leads',

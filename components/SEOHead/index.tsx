@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Head from 'next/head';
 
 interface Props {
@@ -40,4 +40,4 @@ const SEOHead: React.FC<Props> = (props) => {
 	);
 };
 
-export default SEOHead;
+export default memo(SEOHead);

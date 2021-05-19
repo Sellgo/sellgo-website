@@ -8,12 +8,11 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			border: 1px solid $border-color-1;
 			padding: 1.4rem 0;
 			min-width: 100%;
 			th {
 				font-size: $fontsize_content_16;
-				font-weight: $fontweight_medium;
+				font-weight: $fontweight_bold;
 				text-transform: uppercase;
 				text-align: center;
 				flex: 1;

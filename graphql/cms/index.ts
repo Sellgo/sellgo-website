@@ -36,6 +36,12 @@ export const GET_SHOW_CASE_BLOGS = gql`
 						name
 					}
 				}
+				readingTime {
+					readtime
+				}
+			}
+			pageInfo {
+				total
 			}
 		}
 	}
@@ -79,9 +85,31 @@ export const GET_BLOG_BY_SLUG = gql`
 					}
 				}
 			}
-			categories {
+			seoMetaTags {
+				keywords
+			}
+			relatedPosts {
 				nodes {
-					name
+					title
+					slug
+					categories {
+						nodes {
+							name
+						}
+					}
+					readingTime {
+						readtime
+					}
+					featuredImage {
+						node {
+							altText
+							sourceUrl
+							mediaDetails {
+								width
+								height
+							}
+						}
+					}
 				}
 			}
 		}
@@ -105,6 +133,70 @@ export const GET_BLOGS_FOR_HOME = gql`
 				}
 				slug
 				title
+			}
+		}
+	}
+`;
+
+export const GET_FILTERED_BLOGS = gql`
+	query getFilteredBlogsBy($value: String!) {
+		posts(
+			where: {
+				metaQuery: {
+					metaArray: { compare: EQUAL_TO, key: "filterBy", value: $value }
+				}
+				orderby: { field: DATE, order: DESC }
+			}
+			first: 3
+		) {
+			nodes {
+				slug
+				title
+				categories {
+					nodes {
+						name
+					}
+				}
+				readingTime {
+					readtime
+				}
+			}
+		}
+	}
+`;
+
+export const GET_PAGINATED_BLOGS = gql`
+	query getPaginatedBlogs($offsetValue: Int!) {
+		posts(
+			where: {
+				offsetPagination: { offset: $offsetValue, size: 6 }
+				orderby: { field: DATE, order: DESC }
+			}
+		) {
+			nodes {
+				slug
+				title
+				featuredImage {
+					node {
+						altText
+						sourceUrl
+						mediaDetails {
+							width
+							height
+						}
+					}
+				}
+				categories {
+					nodes {
+						name
+					}
+				}
+				readingTime {
+					readtime
+				}
+			}
+			pageInfo {
+				total
 			}
 		}
 	}

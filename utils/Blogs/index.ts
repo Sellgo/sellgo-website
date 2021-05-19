@@ -1,13 +1,12 @@
-import readingTime from 'reading-time';
-
 /* Types */
 import { Category } from '../../interfaces/Blogs';
 
+export const fallBackImageURL = `https://wordpress.sellgo-dev.com/wp-content/uploads/
+2021/05/dd5ff4_f90c144477bb4bb8b982992680376ca0_mv2.png`;
+
 export const imageLoaderForBlogs = (config: any) => {
 	const { src, width, quality } = config;
-	const newSrc = src.replace('http://', 'https://');
-
-	return `${newSrc}?w=${width}&q=${quality || 75}`;
+	return `${src || fallBackImageURL}?w=${width}&q=${quality || 75}`;
 };
 
 /* Send back first category name on showcase */
@@ -15,10 +14,12 @@ export const generateCategoryDisplayName = (categoriesList: Category[]) => {
 	if (!categoriesList.length) {
 		return '';
 	}
-	return categoriesList[0].name;
+	return categoriesList[0].name === 'Uncategorized'
+		? ''
+		: `${categoriesList[0].name} |`;
 };
 
-/* Send the reading time details */
-export const getBlogReadTime = (content: string) => {
-	return readingTime(content).text;
+/* Format blog read time */
+export const formatBlogReadTime = (time: number) => {
+	return Math.abs(time);
 };

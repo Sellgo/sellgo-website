@@ -1,32 +1,33 @@
 export const newBenefitsData = [
 	{
-		title: 'Amazon Wholesale Sellers',
-		subTitle: 'Streamline Your Amazon Wholesale Business',
-		description: `Obtain all the tools you need to scout, source, and sell profitable, 
-		high-demand products for your Amazon inventory. 
-		Use Sellgo's reliable data and sales analytics to build a 
-		thriving Amazon wholesale business.`,
-		linkLabel: 'Learn more about our Amazon Wholesale resources.',
+		title: 'Product Insights',
+		subTitle: 'Detailed Product Analysis and Product Research',
+		description: `Evaluate dozens of products and gain in-depth insight 
+		for any product including sales estimations, seller rankings, profit 
+		margins using data directly from Amazon.`,
+		linkLabel: 'Learn more about our Extension resources.',
 		navigateTo: '/',
 		imageUrl: '/productOne.png'
 	},
 	{
-		title: 'Amazon Private Label Sellers',
-		subTitle: 'Expand Your Amazon Private Label',
-		description: `Access the tools you need to grow your Amazon Private Label business. 
-		Sellgo's powerful FBA tools empower private label sellers with the data and resources to
-		 maximize your brand, sales, and profits.`,
-		linkLabel: 'Learn more about our Amazon Private Label resources.',
+		title: 'Product Validation',
+		subTitle: 'Source Products with Confidence',
+		description: `Validate any product before sourcing and make confident 
+		business decisions using real-time, accurate data. View a product's 
+		sales history and price tracking history to ensure a product's long-term 
+		sustainability and profitability.`,
+		linkLabel: 'Learn more about our Extension resources.',
 		navigateTo: '/',
 		imageUrl: '/productSecond.png'
 	},
 	{
-		title: 'Brands, Agencies, and Enterprise',
-		subTitle: 'Connect with the Amazon Network',
-		description: `Uncover new market segments and reach out to thousands of Amazon 
-		sellers to showcase your company, products, or services. Join a network 
-		of existing sellers who are already looking for you. `,
-		linkLabel: 'Learn more about our Brand, Agency, and Enterprise resources.',
+		title: 'Competitive Snapshot',
+		subTitle: 'Wideview Scope of the Competition',
+		description: `Compare multiple products and categories to determine 
+		the best products that fit your business model and needs. Uncover 
+		the products with the best sales records and profitability to add 
+		to your Amazon catalogs.`,
+		linkLabel: 'Learn more about our Extension resources.',
 		navigateTo: '/',
 		imageUrl: '/productThird.png'
 	}

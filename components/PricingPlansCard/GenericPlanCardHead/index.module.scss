@@ -23,29 +23,12 @@
 			font-size: $fontsize_content_10;
 			font-weight: $fontweight_regular;
 			color: $grey_5;
-			max-width: 13.5rem;
+			max-width: 30rem;
 			text-align: center;
+			white-space: pre-line;
+			min-height: 6rem;
 		}
 	}
-
-	// &__Right {
-	// 	color: $prim_dark_2;
-	// 	text-align: right;
-	// 	font-size: $fontsize_content_12;
-	// 	p {
-	// 		color: inherit;
-	// 		font-weight: $fontweight_medium;
-	// 	}
-
-	// 	a {
-	// 		display: flex;
-	// 		color: $blue_8;
-	// 		font-weight: $fontweight_bold;
-	// 		span {
-	// 			margin-right: 5px;
-	// 		}
-	// 	}
-	// }
 }
 
 .planGems {
@@ -63,8 +46,8 @@
 	text-align: center;
 
 	h3 {
-		color: $blue_8;
-		font-size: $fontsize_subtitle_24;
+		color: $blue_7;
+		font-size: $fontsize_subtitle_32;
 		font-weight: $fontweight_bold;
 	}
 }
@@ -75,7 +58,23 @@
 	}
 }
 
+.toggleWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 2rem auto;
+	div {
+		width: 100%;
+	}
+}
+
 .buyNowCTA {
 	width: 100%;
 	margin: 3rem auto;
+}
+
+.tableCardCTA {
+	width: 100%;
+	margin: 0;
 }

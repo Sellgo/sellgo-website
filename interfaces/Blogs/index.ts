@@ -26,12 +26,30 @@ export interface Author {
 	lastName: string;
 }
 
+export interface ReadingTime {
+	readtime: number;
+}
+
 export interface ShowcaseBlogDetails {
 	slug: string;
 	title: string;
 	featuredImage: FeaturedImage;
 	categories: Categories;
 	content: string;
+	readingTime: ReadingTime;
 }
 
-export interface RelatedBlogDetails extends ShowcaseBlogDetails {}
+export interface FilteredBlog {
+	slug: string;
+	title: string;
+	categories: Categories;
+	readingTime: ReadingTime;
+}
+
+export interface RelatedBlogDetails {
+	title: string;
+	slug: string;
+	featuredImage: FeaturedImage;
+	categories: Categories;
+	readingTime: ReadingTime;
+}

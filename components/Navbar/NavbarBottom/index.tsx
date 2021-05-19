@@ -12,18 +12,19 @@ interface Props {}
 const NavbarBottom: React.FC<Props> = () => {
 	return (
 		<div className={styles.navbarBottom}>
+			<Link href="/" passHref>
+				<a>
+					<Image
+						src="/sellgoLogo.png"
+						width={73}
+						height={29}
+						priority
+						alt="Sellgo Inc. Company Logo"
+					/>
+				</a>
+			</Link>
+
 			<ul className={styles.navbarBottomLinksList}>
-				<Link href="/" passHref>
-					<a>
-						<Image
-							src="/sellgoLogo.png"
-							width={73}
-							height={29}
-							priority
-							alt="Sellgo Inc. Company Logo"
-						/>
-					</a>
-				</Link>
 				<li className={styles.navbarBottomLink}>
 					<a href="#" className={styles.navLink}>
 						Products

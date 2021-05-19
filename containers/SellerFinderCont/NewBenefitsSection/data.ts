@@ -1,32 +1,34 @@
 export const newBenefitsData = [
 	{
-		title: 'Amazon Wholesale Sellers',
-		subTitle: 'Streamline Your Amazon Wholesale Business',
-		description: `Obtain all the tools you need to scout, source, and sell profitable, 
-		high-demand products for your Amazon inventory. 
-		Use Sellgo's reliable data and sales analytics to build a 
-		thriving Amazon wholesale business.`,
-		linkLabel: 'Learn more about our Amazon Wholesale resources.',
+		title: 'Product Scouting',
+		subTitle: 'Integrate Within Your Scouting Process',
+		description: `Whether you scout for products using leaf 
+		sourcing or reverse sourcing, easily integrate the Seller 
+		Finder within your scouting process. Probe your competitor's 
+		catalogs for potential products you can take over and source 
+		for your own businesses.`,
+		linkLabel: 'Learn more about our Seller Finder resources.',
 		navigateTo: '/',
 		imageUrl: '/productOne.png'
 	},
 	{
-		title: 'Amazon Private Label Sellers',
-		subTitle: 'Expand Your Amazon Private Label',
-		description: `Access the tools you need to grow your Amazon Private Label business. 
-		Sellgo's powerful FBA tools empower private label sellers with the data and resources to
-		 maximize your brand, sales, and profits.`,
-		linkLabel: 'Learn more about our Amazon Private Label resources.',
+		title: 'Amazon Catalog',
+		subTitle: 'Broaden Your Amazon Catalog',
+		description: `Simply use the Seller Finder to examine 
+		all the competitve sellers for any product listing and then 
+		scan their catalogs for the other products they sell. Lookout 
+		for leads and potential products you can source and sell.`,
+		linkLabel: 'Learn more about our Seller Finder resources.',
 		navigateTo: '/',
 		imageUrl: '/productSecond.png'
 	},
 	{
-		title: 'Brands, Agencies, and Enterprise',
-		subTitle: 'Connect with the Amazon Network',
-		description: `Uncover new market segments and reach out to thousands of Amazon 
-		sellers to showcase your company, products, or services. Join a network 
-		of existing sellers who are already looking for you. `,
-		linkLabel: 'Learn more about our Brand, Agency, and Enterprise resources.',
+		title: 'Buy Box',
+		subTitle: 'Compete in the Buy Box',
+		description: `Follow the leads back to the suppliers and 
+		start sourcing the same products. Add the products to your 
+		Buy Box strategy and take over new profitable products.`,
+		linkLabel: 'Learn more about our Seller Finder resources.',
 		navigateTo: '/',
 		imageUrl: '/productThird.png'
 	}
