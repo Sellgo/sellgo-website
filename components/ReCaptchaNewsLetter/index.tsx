@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import validator from 'validator';
 import ReCAPTCHA from 'react-google-recaptcha';
+import axios from 'axios';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import FormInput from '../FormInput';
+import AppConfig from '../../config';
 
 interface Props {
 	closeModal: () => void;
@@ -38,17 +40,40 @@ const ReCaptchaNewsLetter: React.FC<Props> = (props) => {
 		} else {
 			setToken('');
 		}
-		console.log(token);
+	};
+
+	const clearForm = () => {
+		setEmail('');
+		setEmailErr(false);
+		setToken('');
 	};
 
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
+		e.stopPropagation();
 
 		if (!token) {
 			return;
 		}
 
-		console.log(token);
+		try {
+			const formData = new FormData();
+			formData.append('email', email);
+			formData.append('subscribeblog', 'true');
+			formData.append('g-recaptcha-response', token);
+			const response = await axios.post(
+				`${AppConfig.API_URL}/sellers/create-hubspot`,
+				formData
+			);
+
+			if (response && response.status === 201) {
+				clearForm();
+				console.log('Close the modal');
+				closeModal();
+			}
+		} catch (err) {
+			console.error('Error sending data to hubspot', err);
+		}
 	};
 
 	/* Effect to validate email */
