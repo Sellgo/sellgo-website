@@ -16,17 +16,12 @@ import {
 	imageLoaderForBlogs
 } from '../../../utils/Blogs';
 
-/* COmponents */
-import ImageLoader from '../../ImageLoader';
-import TextLoader from '../../TextLoader';
-
 interface Props {
 	showcaseBlogDetails: ShowcaseBlogDetails;
-	loading: boolean;
 }
 
 const BigFeatureCard: React.FC<Props> = (props) => {
-	const { showcaseBlogDetails, loading } = props;
+	const { showcaseBlogDetails } = props;
 
 	if (!showcaseBlogDetails) {
 		return null;
@@ -45,31 +40,21 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 			<a>
 				<article className={styles.bigFeatureCard}>
 					<div className={styles.bgImage}>
-						{loading ? (
-							<ImageLoader width={200} height={200} />
-						) : (
-							<Image
-								loader={imageLoaderForBlogs}
-								src={featuredImage?.node?.sourceUrl || fallBackImageURL}
-								alt={featuredImage?.node?.altText}
-								layout="fill"
-								objectFit="cover"
-								priority
-							/>
-						)}
+						<Image
+							loader={imageLoaderForBlogs}
+							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+							alt={featuredImage?.node?.altText}
+							layout="fill"
+							objectFit="cover"
+							priority
+						/>
 					</div>
 					<div className={styles.blogText}>
-						{loading ? (
-							<TextLoader />
-						) : (
-							<>
-								<h1>{title}</h1>
-								<p>
-									{generateCategoryDisplayName(categories.nodes)}{' '}
-									{formatBlogReadTime(readingTime.readtime)} Min Read
-								</p>
-							</>
-						)}
+						<h1>{title}</h1>
+						<p>
+							{generateCategoryDisplayName(categories.nodes)}{' '}
+							{formatBlogReadTime(readingTime.readtime)} Min Read
+						</p>
 					</div>
 				</article>
 			</a>
