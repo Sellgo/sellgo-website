@@ -12,17 +12,26 @@ interface Props {
 	showcaseBlogs: any;
 	popularChoiceBlogs: any;
 	editorsChoiceBlogs: any;
+	loading: any;
 }
 
 const BlogsShowCaseSection: React.FC<Props> = (props) => {
-	const { showcaseBlogs, popularChoiceBlogs, editorsChoiceBlogs } = props;
+	const {
+		showcaseBlogs,
+		popularChoiceBlogs,
+		editorsChoiceBlogs,
+		loading
+	} = props;
 
 	return (
 		<>
 			{/* Hero Section */}
 			<section className={styles.blogsHeroSection}>
 				<div className={styles.blogsHeroSection__Left}>
-					<BigFeatureCard showcaseBlogDetails={showcaseBlogs[0]} />
+					<BigFeatureCard
+						showcaseBlogDetails={showcaseBlogs[0]}
+						loading={loading}
+					/>
 				</div>
 
 				<aside className={styles.blogsHeroSection__Right}>
@@ -40,8 +49,14 @@ const BlogsShowCaseSection: React.FC<Props> = (props) => {
 			{/* Recommeded Section : Change name later */}
 			<section className={styles.recommededSection}>
 				<div className={styles.recommededSection__Left}>
-					<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[1]} />
-					<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[2]} />
+					<SmallFeatureCard
+						showcaseBlogDetails={showcaseBlogs[1]}
+						loading={loading}
+					/>
+					<SmallFeatureCard
+						showcaseBlogDetails={showcaseBlogs[2]}
+						loading={loading}
+					/>
 				</div>
 				<aside className={styles.recommededSection__Right}>
 					<div className={styles.newsLetter} />
@@ -54,17 +69,26 @@ const BlogsShowCaseSection: React.FC<Props> = (props) => {
 					<div className={styles.report}></div>
 				</div>
 				<aside className={styles.otherBlogsSection__Right}>
-					<BigFeatureCard showcaseBlogDetails={showcaseBlogs[3]} />
+					<BigFeatureCard
+						showcaseBlogDetails={showcaseBlogs[3]}
+						loading={loading}
+					/>
 				</aside>
 			</section>
 
 			{/* Last Blogs Section : Change name later */}
 			<section className={styles.lastBlogsSection}>
 				<div className={styles.lastBlogsSection__Left}>
-					<BigFeatureCard showcaseBlogDetails={showcaseBlogs[4]} />
+					<BigFeatureCard
+						showcaseBlogDetails={showcaseBlogs[4]}
+						loading={loading}
+					/>
 				</div>
 				<aside className={styles.lastBlogsSection__Right}>
-					<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[5]} />
+					<SmallFeatureCard
+						showcaseBlogDetails={showcaseBlogs[5]}
+						loading={loading}
+					/>
 				</aside>
 			</section>
 		</>

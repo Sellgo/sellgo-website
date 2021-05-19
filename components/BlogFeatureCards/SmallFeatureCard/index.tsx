@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -12,15 +12,21 @@ import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 import {
 	formatBlogReadTime,
 	generateCategoryDisplayName,
-	imageLoaderForBlogs
+	imageLoaderForBlogs,
+	fallBackImageURL
 } from '../../../utils/Blogs';
+
+/* Components */
+import ImageLoader from '../../ImageLoader';
+import TextLoader from '../../TextLoader';
 
 interface Props {
 	showcaseBlogDetails: ShowcaseBlogDetails;
+	loading: boolean;
 }
 
 const SmallFeatureCard: React.FC<Props> = (props) => {
-	const { showcaseBlogDetails } = props;
+	const { showcaseBlogDetails, loading } = props;
 
 	const {
 		featuredImage,
@@ -35,21 +41,31 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 			<a>
 				<article className={`${styles.smallFeatureCard}`}>
 					<div className={styles.bgImage}>
-						<Image
-							loader={imageLoaderForBlogs}
-							src={featuredImage.node.sourceUrl}
-							alt={featuredImage.node.altText}
-							layout="fill"
-							objectFit="cover"
-							priority
-						/>
+						{loading ? (
+							<ImageLoader width={200} height={200} />
+						) : (
+							<Image
+								loader={imageLoaderForBlogs}
+								src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+								alt={featuredImage?.node?.altText}
+								layout="fill"
+								objectFit="cover"
+								priority
+							/>
+						)}
 					</div>
 					<div className={styles.blogText}>
-						<h2>{title}</h2>
-						<p>
-							{generateCategoryDisplayName(categories.nodes)}{' '}
-							{formatBlogReadTime(readingTime.readtime)} mins read
-						</p>
+						{loading ? (
+							<TextLoader />
+						) : (
+							<>
+								<h2>{title}</h2>
+								<p>
+									{generateCategoryDisplayName(categories.nodes)}{' '}
+									{formatBlogReadTime(readingTime.readtime)} mins read
+								</p>
+							</>
+						)}
 					</div>
 				</article>
 			</a>
@@ -57,4 +73,4 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 	);
 };
 
-export default SmallFeatureCard;
+export default memo(SmallFeatureCard);

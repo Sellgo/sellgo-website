@@ -1,9 +1,12 @@
 /* Types */
 import { Category } from '../../interfaces/Blogs';
 
+export const fallBackImageURL = `https://wordpress.sellgo-dev.com/wp-content/uploads/
+2021/05/dd5ff4_f90c144477bb4bb8b982992680376ca0_mv2.png?w=640&q=75`;
+
 export const imageLoaderForBlogs = (config: any) => {
 	const { src, width, quality } = config;
-	return `${src}?w=${width}&q=${quality || 75}`;
+	return `${src || fallBackImageURL}?w=${width}&q=${quality || 75}`;
 };
 
 /* Send back first category name on showcase */

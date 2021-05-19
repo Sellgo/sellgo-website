@@ -136,7 +136,7 @@ export const GET_BLOGS_FOR_HOME = gql`
 `;
 
 export const GET_FILTERED_BLOGS = gql`
-	query getFilteredBlogsBy($value: String) {
+	query getFilteredBlogsBy($value: String!) {
 		posts(
 			where: {
 				metaQuery: {
@@ -157,6 +157,43 @@ export const GET_FILTERED_BLOGS = gql`
 				readingTime {
 					readtime
 				}
+			}
+		}
+	}
+`;
+
+export const GET_PAGINATED_BLOGS = gql`
+	query getPaginatedBlogs($offsetValue: Int!) {
+		posts(
+			where: {
+				offsetPagination: { offset: $offsetValue, size: 6 }
+				orderby: { field: DATE, order: DESC }
+			}
+		) {
+			nodes {
+				slug
+				title
+				featuredImage {
+					node {
+						altText
+						sourceUrl
+						mediaDetails {
+							width
+							height
+						}
+					}
+				}
+				categories {
+					nodes {
+						name
+					}
+				}
+				readingTime {
+					readtime
+				}
+			}
+			pageInfo {
+				total
 			}
 		}
 	}

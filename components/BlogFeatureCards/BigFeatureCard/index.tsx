@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -10,17 +10,23 @@ import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 
 /* Utils */
 import {
+	fallBackImageURL,
 	formatBlogReadTime,
 	generateCategoryDisplayName,
 	imageLoaderForBlogs
 } from '../../../utils/Blogs';
 
+/* COmponents */
+import ImageLoader from '../../ImageLoader';
+import TextLoader from '../../TextLoader';
+
 interface Props {
 	showcaseBlogDetails: ShowcaseBlogDetails;
+	loading: boolean;
 }
 
 const BigFeatureCard: React.FC<Props> = (props) => {
-	const { showcaseBlogDetails } = props;
+	const { showcaseBlogDetails, loading } = props;
 
 	const {
 		featuredImage,
@@ -35,21 +41,31 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 			<a>
 				<article className={styles.bigFeatureCard}>
 					<div className={styles.bgImage}>
-						<Image
-							loader={imageLoaderForBlogs}
-							src={featuredImage.node.sourceUrl}
-							alt={featuredImage.node.altText}
-							layout="fill"
-							objectFit="cover"
-							priority
-						/>
+						{loading ? (
+							<ImageLoader width={200} height={200} />
+						) : (
+							<Image
+								loader={imageLoaderForBlogs}
+								src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+								alt={featuredImage?.node?.altText}
+								layout="fill"
+								objectFit="cover"
+								priority
+							/>
+						)}
 					</div>
 					<div className={styles.blogText}>
-						<h1>{title}</h1>
-						<p>
-							{generateCategoryDisplayName(categories.nodes)}{' '}
-							{formatBlogReadTime(readingTime.readtime)} Min Read
-						</p>
+						{loading ? (
+							<TextLoader />
+						) : (
+							<>
+								<h1>{title}</h1>
+								<p>
+									{generateCategoryDisplayName(categories.nodes)}{' '}
+									{formatBlogReadTime(readingTime.readtime)} Min Read
+								</p>
+							</>
+						)}
 					</div>
 				</article>
 			</a>
@@ -57,4 +73,4 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 	);
 };
 
-export default BigFeatureCard;
+export default memo(BigFeatureCard);

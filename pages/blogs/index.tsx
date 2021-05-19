@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { GetStaticProps } from 'next';
+import ReactPaginate from 'react-paginate';
+
+import { useLazyQuery } from '@apollo/client';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -8,21 +11,28 @@ import styles from './index.module.scss';
 import client from '../../apollo';
 
 /* GraphQL */
-import { GET_FILTERED_BLOGS, GET_SHOW_CASE_BLOGS } from '../../graphql/cms';
+import {
+	GET_FILTERED_BLOGS,
+	GET_PAGINATED_BLOGS,
+	GET_SHOW_CASE_BLOGS
+} from '../../graphql/cms';
 
 /* Containers */
 import BlogsShowCaseSection from '../../containers/Blogs/BlogsShowCaseSection';
-import BlogsCategorySection from '../../containers/Blogs/BlogsCategorySection';
+// import BlogsCategorySection from '../../containers/Blogs/BlogsCategorySection';
 import ShowCaseHeroBox from '../../containers/Blogs/ShowCaseHerobox';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
+import LeftArrow from '../../components/Arrow/LeftArrow';
+import RightArrow from '../../components/Arrow/RightArrow';
 
 /* Data */
 import { seoData } from '../../data/SEO/blogsShowcase';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
+import ClientOnly from '../../components/ClientOnly';
 
 interface Props {
 	showcaseBlogs: any;
@@ -33,8 +43,30 @@ interface Props {
 const BlogsPage: React.FC<Props> = (props) => {
 	const { showcaseBlogs, popularChoiceBlogs, editorsChoiceBlogs } = props;
 
+	const [getMoreBlogs, { data, loading }] = useLazyQuery(GET_PAGINATED_BLOGS);
+
+	const [blogs, setBlogs] = useState<any>(showcaseBlogs);
+
+	const handlePageChange = (data: { selected: number }) => {
+		const selectedPageNumber = data.selected + 1;
+
+		if (selectedPageNumber === 1) {
+			setBlogs(showcaseBlogs);
+		} else {
+			const offsetValue = (selectedPageNumber - 1) * 6;
+			getMoreBlogs({ variables: { offsetValue: offsetValue + 1 } });
+		}
+	};
+
+	useEffect(() => {
+		if (data) {
+			setBlogs(data.posts.nodes);
+		}
+	}, [data]);
+
+	console.log(blogs);
 	return (
-		<>
+		<ClientOnly>
 			<SEOHead
 				title={seoData.title}
 				description={seoData.description}
@@ -46,21 +78,32 @@ const BlogsPage: React.FC<Props> = (props) => {
 			<main className={`page-container ${styles.blogsPage}`}>
 				{/* Blogs Showcase */}
 				<BlogsShowCaseSection
-					showcaseBlogs={showcaseBlogs}
+					showcaseBlogs={blogs}
 					popularChoiceBlogs={popularChoiceBlogs}
 					editorsChoiceBlogs={editorsChoiceBlogs}
+					loading={loading}
 				/>
 
+				<ReactPaginate
+					pageCount={10}
+					pageRangeDisplayed={3}
+					marginPagesDisplayed={1}
+					previousLabel={<LeftArrow width={10} height={16} fill="#808080" />}
+					nextLabel={<RightArrow width={10} height={16} fill="#808080" />}
+					activeClassName="active"
+					containerClassName="pagination"
+					onPageChange={handlePageChange}
+				/>
 				<div className={styles.divider} />
 
-				<BlogsCategorySection relatedBlogs={showcaseBlogs.slice(6)} />
+				{/* <BlogsCategorySection relatedBlogs={showcaseBlogs.slice(6)} /> */}
 
 				<section className={styles.banner} />
 			</main>
 
 			{/* Mount all page modal */}
 			<div id="newsLetterMount"></div>
-		</>
+		</ClientOnly>
 	);
 };
 
