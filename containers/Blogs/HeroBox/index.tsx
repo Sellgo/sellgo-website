@@ -32,8 +32,8 @@ const HeroBox: React.FC<Props> = (props) => {
 								{author.firstName} {author.lastName}
 							</span>
 						</p>
-						{/* eslint-disable-next-line react/no-danger */}
 						<div
+							// eslint-disable-next-line react/no-danger
 							dangerouslySetInnerHTML={{ __html: shortSummary }}
 							className={styles.summary}
 						></div>

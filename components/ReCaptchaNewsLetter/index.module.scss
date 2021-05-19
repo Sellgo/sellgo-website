@@ -10,10 +10,9 @@
 	padding: 2rem;
 
 	@media only screen and(max-width: 700px) {
-		min-width: auto;
-		max-width: 90%;
-		margin: 0 auto;
-		display: none;
+		min-width: 90vw;
+		width: 90vw;
+		padding: 2rem;
 	}
 
 	&:focus {
@@ -39,6 +38,10 @@
 	margin: 0 auto;
 	margin-bottom: 1rem;
 
+	@media only screen and(max-width: 500px) {
+		width: 100%;
+	}
+
 	input {
 		border: 1px solid $grey_4;
 		height: 4rem;
@@ -57,12 +60,13 @@
 		text-align: left;
 	}
 
-	div {
-		width: 100%;
-		div {
-			div {
-				min-width: 100% !important;
-			}
+	@media only screen and(max-width: 500px) {
+		div > div > div {
+			width: 100% !important;
+		}
+
+		iframe[title='reCAPTCHA'] {
+			width: 100%;
 		}
 	}
 }
@@ -72,8 +76,8 @@
 	margin: 0 auto;
 	cursor: pointer;
 
-	@media only screen and(max-width: 700px) {
-		width: 90%;
+	@media only screen and(max-width: 500px) {
+		width: 100%;
 	}
 
 	&:disabled {

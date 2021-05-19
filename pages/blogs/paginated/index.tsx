@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GetServerSideProps } from 'next';
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router';
+import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -20,6 +21,7 @@ import BlogsShowCaseSection from '../../../containers/Blogs/BlogsShowCaseSection
 import SEOHead from '../../../components/SEOHead';
 import LeftArrow from '../../../components/Arrow/LeftArrow';
 import RightArrow from '../../../components/Arrow/RightArrow';
+import ReCaptchaNewsLetter from '../../../components/ReCaptchaNewsLetter';
 
 /* Data */
 import { seoData } from '../../../data/SEO/blogsShowcase';
@@ -45,6 +47,8 @@ const BlogsPage: React.FC<Props> = (props) => {
 		totalPages,
 		pageNumber
 	} = props;
+
+	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const router = useRouter();
 
@@ -98,8 +102,26 @@ const BlogsPage: React.FC<Props> = (props) => {
 				/>
 				<div className={styles.divider} />
 
-				<section className={styles.banner} />
+				<section className={styles.banner}>
+					<div className={styles.banner__left}>
+						<h3>Subscribe to Our Newsletter</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+
+					<div className={styles.banner__right}>
+						<button onClick={() => setIsOpen(true)}>Subscribe</button>
+					</div>
+				</section>
 			</main>
+
+			<Modal
+				isOpen={isOpen}
+				onRequestClose={() => setIsOpen(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<ReCaptchaNewsLetter closeModal={() => setIsOpen(false)} />
+			</Modal>
 
 			{/* Mount all page modal */}
 			<div id="newsLetterMount"></div>
