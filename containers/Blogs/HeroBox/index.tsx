@@ -42,9 +42,9 @@ const HeroBox: React.FC<Props> = (props) => {
 					<Image
 						loader={imageLoaderForBlogs}
 						src={featuredImage?.node?.sourceUrl || fallBackImageURL}
-						alt={featuredImage.node.altText}
-						width={featuredImage.node.mediaDetails.width}
-						height={featuredImage.node.mediaDetails.height}
+						alt={featuredImage?.node?.altText || ''}
+						width={featuredImage?.node?.mediaDetails?.width || 600}
+						height={featuredImage?.node?.mediaDetails?.height || 400}
 						priority
 					/>
 				</div>

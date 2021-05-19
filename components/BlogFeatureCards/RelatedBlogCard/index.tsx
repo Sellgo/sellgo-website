@@ -7,6 +7,7 @@ import styles from './index.module.scss';
 
 /* Utility */
 import {
+	fallBackImageURL,
 	formatBlogReadTime,
 	generateCategoryDisplayName,
 	imageLoaderForBlogs
@@ -37,8 +38,8 @@ const RelatedBlogCard: React.FC<Props> = (props) => {
 					<div className={styles.bgImage}>
 						<Image
 							loader={imageLoaderForBlogs}
-							src={featuredImage.node.sourceUrl}
-							alt={featuredImage.node.altText}
+							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+							alt={featuredImage?.node?.altText || ''}
 							layout="fill"
 							objectFit="cover"
 						/>

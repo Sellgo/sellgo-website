@@ -52,6 +52,7 @@ const BlogPage: React.FC<Props> = (props) => {
 		keywords,
 		relatedBlogs
 	} = props;
+
 	return (
 		<>
 			<SEOHead
@@ -94,7 +95,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 	return {
 		paths: blogPaths,
-		fallback: false
+		fallback: 'blocking'
 	};
 };
 
