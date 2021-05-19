@@ -1,17 +1,13 @@
 /* Types */
 import { Category } from '../../interfaces/Blogs';
 
+export const fallBackImageURL = `https://wordpress.sellgo-dev.com/wp-content/uploads/
+2021/05/dd5ff4_f90c144477bb4bb8b982992680376ca0_mv2.png`;
+
 export const imageLoaderForBlogs = (config: any) => {
 	const { src, width, quality } = config;
-<<<<<<< HEAD
-	const newSrc =
-		process.env.NODE_ENV === 'production'
-			? src.replace('http://', 'https://')
-			: src;
+	return `${src || fallBackImageURL}?w=${width}&q=${quality || 75}`;
 
-=======
->>>>>>> 6d560def299f1bb22a270b6557340d382674b5dc
-	return `${src}?w=${width}&q=${quality || 75}`;
 };
 
 /* Send back first category name on showcase */

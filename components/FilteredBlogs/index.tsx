@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import { v4 as uuid } from 'uuid';
 
@@ -47,4 +47,4 @@ const FilteredChoiceBlogs: React.FC<Props> = (props) => {
 	);
 };
 
-export default FilteredChoiceBlogs;
+export default memo(FilteredChoiceBlogs);

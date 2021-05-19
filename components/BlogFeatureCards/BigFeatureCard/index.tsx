@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -10,6 +10,7 @@ import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 
 /* Utils */
 import {
+	fallBackImageURL,
 	formatBlogReadTime,
 	generateCategoryDisplayName,
 	imageLoaderForBlogs
@@ -21,6 +22,10 @@ interface Props {
 
 const BigFeatureCard: React.FC<Props> = (props) => {
 	const { showcaseBlogDetails } = props;
+
+	if (!showcaseBlogDetails) {
+		return null;
+	}
 
 	const {
 		featuredImage,
@@ -37,8 +42,8 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 					<div className={styles.bgImage}>
 						<Image
 							loader={imageLoaderForBlogs}
-							src={featuredImage.node.sourceUrl}
-							alt={featuredImage.node.altText}
+							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+							alt={featuredImage?.node?.altText}
 							layout="fill"
 							objectFit="cover"
 							priority
@@ -57,4 +62,4 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 	);
 };
 
-export default BigFeatureCard;
+export default memo(BigFeatureCard);

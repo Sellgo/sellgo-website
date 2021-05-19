@@ -22,7 +22,11 @@ import client from '../../../apollo';
 import { GET_ALL_SLUGS, GET_BLOG_BY_SLUG } from '../../../graphql/cms';
 
 /* Types */
-import { FeaturedImage, Author } from '../../../interfaces/Blogs';
+import {
+	FeaturedImage,
+	Author,
+	RelatedBlogDetails
+} from '../../../interfaces/Blogs';
 
 interface Props {
 	author: Author;
@@ -33,6 +37,7 @@ interface Props {
 	featuredImage: FeaturedImage;
 	shortSummary: string;
 	keywords: string;
+	relatedBlogs: RelatedBlogDetails[];
 }
 
 const BlogPage: React.FC<Props> = (props) => {
@@ -44,14 +49,16 @@ const BlogPage: React.FC<Props> = (props) => {
 		title,
 		author,
 		shortSummary,
-		keywords
+		keywords,
+		relatedBlogs
 	} = props;
+
 	return (
 		<>
 			<SEOHead
 				title={seo.title || 'Blog | Sellgo'}
 				description={seo.metaDesc}
-				imageUrl={featuredImage.node.sourceUrl || ''}
+				imageUrl={featuredImage?.node?.sourceUrl || ''}
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
 				keywords={keywords || ''}
 			/>
@@ -72,7 +79,7 @@ const BlogPage: React.FC<Props> = (props) => {
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
 				title={title}
 			/>
-			<RelatedBlogsSection />
+			<RelatedBlogsSection relatedBlogs={relatedBlogs} />
 		</>
 	);
 };
@@ -88,7 +95,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 	return {
 		paths: blogPaths,
-		fallback: false
+		fallback: 'blocking'
 	};
 };
 
@@ -108,8 +115,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		slug,
 		featuredImage,
 		excerpt,
-		categories,
-		seoMetaTags
+		seoMetaTags,
+		relatedPosts
 	} = response.data.postBy;
 
 	return {
@@ -121,8 +128,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			slug,
 			featuredImage,
 			shortSummary: excerpt,
-			categories,
-			keywords: seoMetaTags.keywords
+			keywords: seoMetaTags.keywords,
+			relatedBlogs: relatedPosts.nodes
 		},
 		revalidate: 1
 	};

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { GetStaticProps } from 'next';
+import React, { useEffect, useState } from 'react';
+import { GetServerSideProps } from 'next';
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
@@ -8,59 +8,67 @@ import Modal from 'react-modal';
 import styles from './index.module.scss';
 
 /* Apollo */
-import client from '../../apollo';
+import client from '../../../apollo';
 
 /* GraphQL */
-import { GET_FILTERED_BLOGS, GET_SHOW_CASE_BLOGS } from '../../graphql/cms';
+import { GET_FILTERED_BLOGS, GET_PAGINATED_BLOGS } from '../../../graphql/cms';
 
 /* Containers */
-import ShowCaseHeroBox from '../../containers/Blogs/ShowCaseHerobox';
-import BlogsShowCaseSection from '../../containers/Blogs/BlogsShowCaseSection';
+import ShowCaseHeroBox from '../../../containers/Blogs/ShowCaseHerobox';
+import BlogsShowCaseSection from '../../../containers/Blogs/BlogsShowCaseSection';
 
 /* Components */
-import SEOHead from '../../components/SEOHead';
-import LeftArrow from '../../components/Arrow/LeftArrow';
-import RightArrow from '../../components/Arrow/RightArrow';
-import ReCaptchNewsLetter from '../../components/ReCaptchaNewsLetter';
+import SEOHead from '../../../components/SEOHead';
+import LeftArrow from '../../../components/Arrow/LeftArrow';
+import RightArrow from '../../../components/Arrow/RightArrow';
+import ReCaptchaNewsLetter from '../../../components/ReCaptchaNewsLetter';
 
 /* Data */
-import { seoData } from '../../data/SEO/blogsShowcase';
+import { seoData } from '../../../data/SEO/blogsShowcase';
 
 /* Utils */
-import { generatePageURL } from '../../utils/SEO';
+import { generatePageURL } from '../../../utils/SEO';
 
 interface Props {
-	showcaseBlogs: any;
+	paginatedBlogs: any;
 	editorsChoiceBlogs: any;
 	popularChoiceBlogs: any;
 	totalPages: {
 		total: number;
 	};
+	pageNumber: number;
 }
 
 const BlogsPage: React.FC<Props> = (props) => {
 	const {
-		showcaseBlogs,
+		paginatedBlogs,
 		popularChoiceBlogs,
 		editorsChoiceBlogs,
-		totalPages
+		totalPages,
+		pageNumber
 	} = props;
 
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const router = useRouter();
 
+	useEffect(() => {
+		if (pageNumber === 1) {
+			router.push('/blogs');
+		}
+	}, []);
+
 	const handlePageChange = (data: { selected: number }) => {
 		const selectedPageNumber = data.selected + 1;
 
 		if (selectedPageNumber === 1) {
-			return;
+			router.push('/blogs');
+		} else {
+			router.push({
+				pathname: '/blogs/paginated',
+				query: { page: selectedPageNumber }
+			});
 		}
-
-		router.push({
-			pathname: '/blogs/paginated',
-			query: { page: selectedPageNumber }
-		});
 	};
 
 	return (
@@ -76,7 +84,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 			<main className={`page-container ${styles.blogsPage}`}>
 				{/* Blogs Showcase */}
 				<BlogsShowCaseSection
-					showcaseBlogs={showcaseBlogs}
+					showcaseBlogs={paginatedBlogs}
 					popularChoiceBlogs={popularChoiceBlogs}
 					editorsChoiceBlogs={editorsChoiceBlogs}
 				/>
@@ -90,7 +98,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 					activeClassName="active"
 					containerClassName="pagination"
 					onPageChange={handlePageChange}
-					initialPage={0}
+					initialPage={pageNumber - 1}
 				/>
 				<div className={styles.divider} />
 
@@ -112,7 +120,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<ReCaptchNewsLetter closeModal={() => setIsOpen(false)} />
+				<ReCaptchaNewsLetter closeModal={() => setIsOpen(false)} />
 			</Modal>
 
 			{/* Mount all page modal */}
@@ -121,9 +129,16 @@ const BlogsPage: React.FC<Props> = (props) => {
 	);
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
+	const pageNumber = Number(context?.query?.page) || 1;
+
+	const offsetValue = (pageNumber - 1) * 6;
+
 	const showCaseBlogsResponse = await client.query({
-		query: GET_SHOW_CASE_BLOGS
+		query: GET_PAGINATED_BLOGS,
+		variables: {
+			offsetValue
+		}
 	});
 
 	const editorsChoiceBlogsResponse = await client.query({
@@ -140,19 +155,25 @@ export const getStaticProps: GetStaticProps = async () => {
 		}
 	});
 
-	const showcaseBlogs = showCaseBlogsResponse.data.posts.nodes;
+	const paginatedBlogs = showCaseBlogsResponse.data.posts.nodes;
 	const totalPages = showCaseBlogsResponse.data.posts.pageInfo;
 	const editorsChoiceBlogs = editorsChoiceBlogsResponse.data.posts.nodes;
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
 
+	if (!paginatedBlogs.length) {
+		return {
+			notFound: true
+		};
+	}
+
 	return {
 		props: {
-			showcaseBlogs,
+			paginatedBlogs,
 			editorsChoiceBlogs,
 			popularChoiceBlogs,
-			totalPages
-		},
-		revalidate: 1
+			totalPages,
+			pageNumber
+		}
 	};
 };
 

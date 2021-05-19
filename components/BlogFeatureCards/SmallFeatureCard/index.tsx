@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -12,7 +12,8 @@ import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 import {
 	formatBlogReadTime,
 	generateCategoryDisplayName,
-	imageLoaderForBlogs
+	imageLoaderForBlogs,
+	fallBackImageURL
 } from '../../../utils/Blogs';
 
 interface Props {
@@ -30,6 +31,10 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 		readingTime
 	} = showcaseBlogDetails;
 
+	if (!showcaseBlogDetails) {
+		return null;
+	}
+
 	return (
 		<Link passHref href={`/blogs/blog/${slug}`}>
 			<a>
@@ -37,8 +42,8 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 					<div className={styles.bgImage}>
 						<Image
 							loader={imageLoaderForBlogs}
-							src={featuredImage.node.sourceUrl}
-							alt={featuredImage.node.altText}
+							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+							alt={featuredImage?.node?.altText}
 							layout="fill"
 							objectFit="cover"
 							priority
@@ -57,4 +62,4 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 	);
 };
 
-export default SmallFeatureCard;
+export default memo(SmallFeatureCard);

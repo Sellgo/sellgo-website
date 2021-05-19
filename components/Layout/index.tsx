@@ -15,7 +15,7 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
 	const router = useRouter();
-	const currentPath = router.pathname;
+	const currentPath = router.pathname || '';
 
 	return (
 		<>

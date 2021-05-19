@@ -4,9 +4,11 @@ import Image from 'next/image';
 /* Styles */
 import styles from './index.module.scss';
 
+/* Utils */
+import { fallBackImageURL, imageLoaderForBlogs } from '../../../utils/Blogs';
+
 /* Types */
 import { FeaturedImage, Author } from '../../../interfaces/Blogs';
-import { imageLoaderForBlogs } from '../../../utils/Blogs';
 
 interface Props {
 	title: string;
@@ -30,19 +32,21 @@ const HeroBox: React.FC<Props> = (props) => {
 								{author.firstName} {author.lastName}
 							</span>
 						</p>
-						{/* eslint-disable-next-line react/no-danger */}
-						<div dangerouslySetInnerHTML={{ __html: shortSummary }}></div>
-						<div className={styles.rect} />
+						<div
+							// eslint-disable-next-line react/no-danger
+							dangerouslySetInnerHTML={{ __html: shortSummary }}
+							className={styles.summary}
+						></div>
 					</div>
 				</div>
 
 				<div className={styles.herobox__Right}>
 					<Image
 						loader={imageLoaderForBlogs}
-						src={featuredImage.node.sourceUrl}
-						alt={featuredImage.node.altText}
-						width={featuredImage.node.mediaDetails.width}
-						height={featuredImage.node.mediaDetails.height}
+						src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+						alt={featuredImage?.node?.altText || ''}
+						width={featuredImage?.node?.mediaDetails?.width || 600}
+						height={featuredImage?.node?.mediaDetails?.height || 400}
 						priority
 					/>
 				</div>
