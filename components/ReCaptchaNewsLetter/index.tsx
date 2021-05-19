@@ -68,7 +68,6 @@ const ReCaptchaNewsLetter: React.FC<Props> = (props) => {
 
 			if (response && response.status === 201) {
 				clearForm();
-				console.log('Close the modal');
 				closeModal();
 			}
 		} catch (err) {
