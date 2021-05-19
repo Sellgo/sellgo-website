@@ -4,9 +4,11 @@ import Image from 'next/image';
 /* Styles */
 import styles from './index.module.scss';
 
+/* Utils */
+import { fallBackImageURL, imageLoaderForBlogs } from '../../../utils/Blogs';
+
 /* Types */
 import { FeaturedImage, Author } from '../../../interfaces/Blogs';
-import { imageLoaderForBlogs } from '../../../utils/Blogs';
 
 interface Props {
 	title: string;
@@ -39,7 +41,7 @@ const HeroBox: React.FC<Props> = (props) => {
 				<div className={styles.herobox__Right}>
 					<Image
 						loader={imageLoaderForBlogs}
-						src={featuredImage.node.sourceUrl}
+						src={featuredImage?.node?.sourceUrl || fallBackImageURL}
 						alt={featuredImage.node.altText}
 						width={featuredImage.node.mediaDetails.width}
 						height={featuredImage.node.mediaDetails.height}

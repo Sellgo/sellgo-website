@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import Modal from 'react-modal';
 
 /* Styling */
@@ -46,4 +46,4 @@ const ShowCaseHeroBox: React.FC<Props> = () => {
 	);
 };
 
-export default ShowCaseHeroBox;
+export default memo(ShowCaseHeroBox);

@@ -36,6 +36,10 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 		readingTime
 	} = showcaseBlogDetails;
 
+	if (!showcaseBlogDetails) {
+		return null;
+	}
+
 	return (
 		<Link passHref href={`/blogs/blog/${slug}`}>
 			<a>

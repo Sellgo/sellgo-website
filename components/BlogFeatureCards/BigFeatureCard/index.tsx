@@ -28,6 +28,10 @@ interface Props {
 const BigFeatureCard: React.FC<Props> = (props) => {
 	const { showcaseBlogDetails, loading } = props;
 
+	if (!showcaseBlogDetails) {
+		return null;
+	}
+
 	const {
 		featuredImage,
 		slug,

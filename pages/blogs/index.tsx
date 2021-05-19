@@ -26,26 +26,34 @@ import ShowCaseHeroBox from '../../containers/Blogs/ShowCaseHerobox';
 import SEOHead from '../../components/SEOHead';
 import LeftArrow from '../../components/Arrow/LeftArrow';
 import RightArrow from '../../components/Arrow/RightArrow';
+import ClientOnly from '../../components/ClientOnly';
 
 /* Data */
 import { seoData } from '../../data/SEO/blogsShowcase';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
-import ClientOnly from '../../components/ClientOnly';
 
 interface Props {
 	showcaseBlogs: any;
 	editorsChoiceBlogs: any;
 	popularChoiceBlogs: any;
+	totalPages: {
+		total: number;
+	};
 }
 
 const BlogsPage: React.FC<Props> = (props) => {
-	const { showcaseBlogs, popularChoiceBlogs, editorsChoiceBlogs } = props;
-
-	const [getMoreBlogs, { data, loading }] = useLazyQuery(GET_PAGINATED_BLOGS);
+	const {
+		showcaseBlogs,
+		popularChoiceBlogs,
+		editorsChoiceBlogs,
+		totalPages
+	} = props;
 
 	const [blogs, setBlogs] = useState<any>(showcaseBlogs);
+
+	const [getMoreBlogs, { data, loading }] = useLazyQuery(GET_PAGINATED_BLOGS);
 
 	const handlePageChange = (data: { selected: number }) => {
 		const selectedPageNumber = data.selected + 1;
@@ -64,7 +72,8 @@ const BlogsPage: React.FC<Props> = (props) => {
 		}
 	}, [data]);
 
-	console.log(blogs);
+	console.log(data);
+
 	return (
 		<ClientOnly>
 			<SEOHead
@@ -85,7 +94,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 				/>
 
 				<ReactPaginate
-					pageCount={10}
+					pageCount={Math.round(totalPages.total / 6)}
 					pageRangeDisplayed={3}
 					marginPagesDisplayed={1}
 					previousLabel={<LeftArrow width={10} height={16} fill="#808080" />}
@@ -127,6 +136,7 @@ export const getStaticProps: GetStaticProps = async () => {
 	});
 
 	const showcaseBlogs = showCaseBlogsResponse.data.posts.nodes;
+	const totalPages = showCaseBlogsResponse.data.posts.pageInfo;
 	const editorsChoiceBlogs = editorsChoiceBlogsResponse.data.posts.nodes;
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
 
@@ -134,7 +144,8 @@ export const getStaticProps: GetStaticProps = async () => {
 		props: {
 			showcaseBlogs,
 			editorsChoiceBlogs,
-			popularChoiceBlogs
+			popularChoiceBlogs,
+			totalPages
 		},
 		revalidate: 1
 	};

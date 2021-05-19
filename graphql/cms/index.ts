@@ -40,6 +40,9 @@ export const GET_SHOW_CASE_BLOGS = gql`
 					readtime
 				}
 			}
+			pageInfo {
+				total
+			}
 		}
 	}
 `;
