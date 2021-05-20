@@ -1,4 +1,6 @@
-export const seoData = {
+import { SEODetails } from '../../interfaces/SEO';
+
+export const seoData: SEODetails = {
 	title: `Sellgo - Amazon Leads Tracker:`,
 	description: `Monitor thousands of products and track price history to find leads on newly profitable 
 	products with the Amazon price tracker. 

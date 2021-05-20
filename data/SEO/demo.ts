@@ -1,4 +1,6 @@
-export const seoData = {
+import { SEODetails } from '../../interfaces/SEO';
+
+export const seoData: SEODetails = {
 	title: `Sellgo - Request a Demo`,
 	description: `Connect with our Sales Team and demo our tools and services. 
 	Get to know our platform and how you can grow your 

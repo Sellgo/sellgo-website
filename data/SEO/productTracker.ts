@@ -1,4 +1,6 @@
-export const seoData = {
+import { SEODetails } from '../../interfaces/SEO';
+
+export const seoData: SEODetails = {
 	title: `Sellgo - Amazon Product Tracker: Track Products, ASINs, Ranks, and more.`,
 	description: `Find and track endless products in high demand profitable products with 
 	the Sellgo Product Tracker. Follow sales history for any ASIN. Save winning products to 
