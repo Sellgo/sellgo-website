@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* Containers */
+import Herobox from '../../containers/ContactSales/HeroBox';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -26,7 +27,9 @@ const ContactSalesPage: React.FC<Props> = () => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<main className={styles.contactSalesPage}></main>
+			<main className={styles.contactSalesPage}>
+				<Herobox />
+			</main>
 		</>
 	);
 };
