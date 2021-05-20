@@ -22,10 +22,14 @@ function App({ Component, pageProps }: AppProps) {
 	const { asPath } = router;
 
 	useEffect(() => {
-		analytics.page({
-			url: generatePageURL(asPath),
-			title: window.document.title
-		});
+		// track only on production
+		if (process.env.NODE_ENV === 'production') {
+			analytics.page({
+				url: generatePageURL(asPath),
+				title: window.document.title,
+				path: asPath
+			});
+		}
 	}, [asPath]);
 
 	return (
