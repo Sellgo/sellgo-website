@@ -64,7 +64,8 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					)}
 
 					{/* Show for all expect pay as you go */}
-					{selectedPlanType !== 1 && (
+					{/* revert back to 1 when new plan is added */}
+					{selectedPlanType !== 2 && (
 						<PricePlanToggleButton
 							isMonthly={isMonthly}
 							handleChange={() => setIsMonthly(!isMonthly)}
