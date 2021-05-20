@@ -7,6 +7,9 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../../components/CTAButton';
 
+/* Config */
+import AppConfig from '../../../config';
+
 interface Props {}
 
 const BenefitsSection: React.FC<Props> = () => {
@@ -57,8 +60,10 @@ const BenefitsSection: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo="/"
+						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
 						className={styles.benefitsCTA}
+						asExternal
+						newTarget
 					>
 						Try Now for Free
 					</CTAButton>

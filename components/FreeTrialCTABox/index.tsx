@@ -7,6 +7,9 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../CTAButton';
 
+/* Config */
+import AppConfig from '../../config';
+
 interface Props {
 	className?: string;
 	isPrimary?: boolean;
@@ -28,7 +31,9 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 					<CTAButton
 						type={isPrimary ? 'primary' : 'secondary'}
 						size="medium"
-						navigateTo="https://app.sellgo.com/signup/?type=free"
+						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
+						asExternal
+						newTarget
 						className={styles.freeTrialCTA}
 					>
 						Try Now for Free

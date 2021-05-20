@@ -1,12 +1,15 @@
+/* App Config */
+import AppConfig from '../../../config';
+
 export const planTypes = [
 	{
 		name: 'Free Trial',
 		isNew: false
 	},
-	{
-		name: 'Pay $1 a Day',
-		isNew: false
-	},
+	// {
+	// 	name: 'Pay $1 a Day',
+	// 	isNew: false
+	// },
 	{
 		name: 'Monthly and Annual Plans',
 		isNew: false
@@ -22,7 +25,7 @@ export const plansAndProductsDetails = [
 				productsDatabase: 1000,
 				desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
 				featureSubName: 'Free Account Plus',
-				ctaLink: '/',
+				ctaLink: `${AppConfig.APP_URL}/subscription`,
 				featuresLists: [
 					{
 						title: 'Amazon Sales Estimator',
@@ -37,7 +40,7 @@ export const plansAndProductsDetails = [
 			{
 				name: 'Product Research',
 				productsDatabase: 1000,
-				ctaLink: '/',
+				ctaLink: `${AppConfig.APP_URL}/subscription`,
 				desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
 				featureSubName: 'Free Account Plus',
 				featuresLists: [
@@ -59,7 +62,7 @@ export const plansAndProductsDetails = [
 			{
 				name: 'Seller Research',
 				productsDatabase: 1000,
-				ctaLink: '/',
+				ctaLink: `${AppConfig.APP_URL}/subscription`,
 				desc: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,
 				featureSubName: 'Free Account Plus',
 				featuresLists: [
@@ -86,7 +89,7 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 1000,
 				monthlyPrice: 49,
 				annualPrice: 348,
-				ctaLink: 'https://app.sellgo.com/subscription/?type=basic&mode=yearly',
+				ctaLink: `${AppConfig.APP_URL}/subscription`,
 				desc: `The toolbox for beginner sellers. \n Get access to our tools and chrome extension!`,
 				featureSubName: 'Start with',
 				featuresLists: [
@@ -114,7 +117,7 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 1500,
 				monthlyPrice: 69,
 				annualPrice: 588,
-				ctaLink: '/',
+				ctaLink: `${AppConfig.APP_URL}/subscription`,
 				featureSubName: 'Starter Plan Plus',
 				desc: `For experienced sellers looking to grow \n their businesses and maximize their earnings.`,
 				featuresLists: [
@@ -146,7 +149,7 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 2500,
 				monthlyPrice: 129,
 				annualPrice: 996,
-				ctaLink: '/',
+				ctaLink: `${AppConfig.APP_URL}/subscription`,
 				featureSubName: 'Suite Plan Plus',
 				desc: `For professional sellers and businesses who need the best \n tools. 
 				Track more products, obtain more data, and optimize your entire Amazon business.`,

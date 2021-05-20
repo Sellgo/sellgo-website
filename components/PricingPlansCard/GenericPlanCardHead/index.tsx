@@ -34,6 +34,10 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		handleChange
 	} = props;
 
+	const checkoutLink = `${ctaLink}?mode=${
+		isMonthly ? 'monthly' : 'yearly'
+	}&type=${name.toLowerCase()}`;
+
 	return (
 		<div className={className}>
 			<div className={styles.pricingCardHead}>
@@ -85,8 +89,10 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			<CTAButton
 				type="primary"
 				size="medium"
-				navigateTo={ctaLink}
+				navigateTo={checkoutLink}
 				className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
+				asExternal
+				newTarget
 			>
 				Buy Now
 			</CTAButton>

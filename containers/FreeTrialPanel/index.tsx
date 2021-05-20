@@ -17,6 +17,9 @@ import CTAButton from '../../components/CTAButton';
 /* Types */
 import { FAQDetails } from '../../interfaces/FAQ';
 
+/* Config */
+import AppConfig from '../../config';
+
 interface Props {
 	faqData: FAQDetails;
 }
@@ -68,7 +71,7 @@ const FreeTrialPanel: React.FC<Props> = (props) => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo="/"
+						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
 						className={styles.otherInfoCTA}
 					>
 						Try Now 7-day Free Trial

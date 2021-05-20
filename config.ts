@@ -1,5 +1,6 @@
 export const DEV_URLS = {
 	WEB_URL: 'https://www.sellgo-dev.com',
+	APP_URL: 'https://app.sellgo-dev.com',
 	WPGRAPHQL: 'https://wordpress.sellgo-dev.com/graphql',
 	FAQ_BUCKET: 'https://sellgo-website-dev.s3.amazonaws.com/faqDetails',
 	API_URL: 'http://34.236.237.125/api'
@@ -7,6 +8,7 @@ export const DEV_URLS = {
 
 export const PROD_URLS = {
 	WEB_URL: 'https://www.sellgo.com',
+	APP_URL: 'https://app.sellgo.com',
 	WPGRAPHQL: 'https://wordpress.sellgo-dev.com/graphql',
 	FAQ_BUCKET: 'https://sellgo-website-dev.s3.amazonaws.com/faqDetails',
 	API_URL: 'http://34.236.237.125/api'

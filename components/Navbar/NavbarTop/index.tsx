@@ -10,16 +10,18 @@ interface Props {}
 const NavbarTop: React.FC<Props> = () => {
 	return (
 		<div className={styles.navbarTop}>
-			<a href="/contact-sales" className={styles.navbarLink__sales}>
-				<Image
-					src="/userIcon.svg"
-					width={12}
-					height={14}
-					alt="User Icon"
-					priority
-				/>
-				<span>Contact Sales</span>
-			</a>
+			<Link href="/contact-sales" passHref>
+				<a className={styles.navbarLink__sales}>
+					<Image
+						src="/userIcon.svg"
+						width={12}
+						height={14}
+						alt="User Icon"
+						priority
+					/>
+					<span>Contact Sales</span>
+				</a>
+			</Link>
 
 			<ul className={styles.navbarTopLinksList}>
 				<li className={styles.navbarTopLink}>
@@ -33,9 +35,9 @@ const NavbarTop: React.FC<Props> = () => {
 					</a>
 				</li>
 				<li className={styles.navbarTopLink}>
-					<a href="/support" className={styles.navbarLink}>
-						Customer Support
-					</a>
+					<Link href="/support" passHref>
+						<a className={styles.navbarLink}>Customer Support</a>
+					</Link>
 				</li>
 				<li className={styles.navbarTopLink}>
 					<Link href="/about-us" passHref>

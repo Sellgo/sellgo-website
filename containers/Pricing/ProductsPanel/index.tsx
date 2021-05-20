@@ -45,14 +45,14 @@ const ProductsPanel: React.FC<Props> = (props) => {
 	}, [router]);
 
 	const handlePlanSelectChange = (index: number, lastIndex: number) => {
-		// [0,1,2,3,4]=['Free Trial','Pay $1 a day', 'Monthly and Annual Plans']
+		// [0,1,2,3,4]=['Free Trial', 'Monthly and Annual Plans']
 
 		if (index === undefined || index === null) {
 			setSelectedPlanType(lastIndex);
 			router.push({
 				pathname: '/pricing',
 				query: {
-					type: generateQueryFromTabIndex(2)
+					type: generateQueryFromTabIndex(1)
 				}
 			});
 		} else {
@@ -88,17 +88,19 @@ const ProductsPanel: React.FC<Props> = (props) => {
 			<TabPanel>
 				<FreeTrialPanel faqData={faqDetails[0]} />
 			</TabPanel>
-			{plansAndProductsDetails.map((plan: any) => {
-				return (
-					<TabPanel key={uuid()}>
-						<PricingPlansSection
-							{...plan}
-							selectedPlanType={selectedPlanType}
-							faqData={faqDetails[selectedPlanType]}
-						/>
-					</TabPanel>
-				);
-			})}
+			{plansAndProductsDetails
+				.filter((_, index: number) => index >= 1)
+				.map((plan: any) => {
+					return (
+						<TabPanel key={uuid()}>
+							<PricingPlansSection
+								{...plan}
+								selectedPlanType={selectedPlanType}
+								faqData={faqDetails[selectedPlanType]}
+							/>
+						</TabPanel>
+					);
+				})}
 		</Tabs>
 	);
 };
