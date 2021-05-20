@@ -19,8 +19,8 @@ import BlogsShowCaseSection from '../../containers/Blogs/BlogsShowCaseSection';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
-import LeftArrow from '../../components/Arrow/LeftArrow';
-import RightArrow from '../../components/Arrow/RightArrow';
+import LeftArrow from '../../components/Icons/Chervons/Left';
+import RightArrow from '../../components/Icons/Chervons/Right';
 import ReCaptchNewsLetter from '../../components/ReCaptchaNewsLetter';
 
 /* Data */

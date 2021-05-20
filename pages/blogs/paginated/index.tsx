@@ -19,8 +19,8 @@ import BlogsShowCaseSection from '../../../containers/Blogs/BlogsShowCaseSection
 
 /* Components */
 import SEOHead from '../../../components/SEOHead';
-import LeftArrow from '../../../components/Arrow/LeftArrow';
-import RightArrow from '../../../components/Arrow/RightArrow';
+import LeftArrow from '../../../components/Icons/Chervons/Left';
+import RightArrow from '../../../components/Icons/Chervons/Right';
 import ReCaptchaNewsLetter from '../../../components/ReCaptchaNewsLetter';
 
 /* Data */
@@ -160,7 +160,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	const editorsChoiceBlogs = editorsChoiceBlogsResponse.data.posts.nodes;
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
 
-	if (!paginatedBlogs.length) {
+	const isInvalidPage = pageNumber > Math.round(totalPages.total / 6);
+
+	if (!paginatedBlogs.length || isInvalidPage) {
 		return {
 			notFound: true
 		};

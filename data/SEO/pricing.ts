@@ -1,4 +1,6 @@
-export const seoData = {
+import { SEODetails } from '../../interfaces/SEO';
+
+export const seoData: SEODetails = {
 	title: `Sellgo - Pricing Plans: Explore Free, Starter, Suite, and Professional Plans`,
 	description: `Sellgo has pricing plans for sellers and businesses at every size and experience level. 
 	Our pricing plans grow with your company. Pick the plan that fits your business needs. Sellgo currently 

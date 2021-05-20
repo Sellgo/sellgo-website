@@ -1,5 +1,7 @@
 import type { AppProps /* AppContext */ } from 'next/app';
 import { ApolloProvider } from '@apollo/client/react';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 /* Styling */
 import '../styles/globals.scss';
@@ -9,8 +11,23 @@ import client from '../apollo';
 
 /* Components */
 import Layout from '../components/Layout';
+import analytics from '../analytics';
+
+/* Utils */
+import { generatePageURL } from '../utils/SEO';
 
 function App({ Component, pageProps }: AppProps) {
+	const router = useRouter();
+
+	const { asPath } = router;
+
+	useEffect(() => {
+		analytics.page({
+			url: generatePageURL(asPath),
+			title: window.document.title
+		});
+	}, [asPath]);
+
 	return (
 		<ApolloProvider client={client}>
 			<Layout>

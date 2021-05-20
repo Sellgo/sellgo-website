@@ -1,4 +1,6 @@
-export const seoData = {
+import { SEODetails } from '../../interfaces/SEO';
+
+export const seoData: SEODetails = {
 	title: `Sellgo - Amazon Profit Finder:`,
 	description: `Bulk analyze thousands of products with advanced filters to sort and identify high demand 
 	products with amazing profit potential. Use key metrics profit margins, return on investments, and 

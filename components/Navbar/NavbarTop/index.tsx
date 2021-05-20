@@ -1,9 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* Components */
+import User from '../../Icons/Person';
 
 interface Props {}
 
@@ -12,13 +14,7 @@ const NavbarTop: React.FC<Props> = () => {
 		<div className={styles.navbarTop}>
 			<Link href="/contact-sales" passHref>
 				<a className={styles.navbarLink__sales}>
-					<Image
-						src="/userIcon.svg"
-						width={12}
-						height={14}
-						alt="User Icon"
-						priority
-					/>
+					<User width={14} height={12} fill="#2e3b4a" />
 					<span>Contact Sales</span>
 				</a>
 			</Link>

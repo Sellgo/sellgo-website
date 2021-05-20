@@ -21,7 +21,8 @@
 			color: inherit;
 			font-size: $fontsize_content_12;
 			margin-left: 10px;
-			span {
+			display: inline-block;
+			svg {
 				margin-left: 5px;
 			}
 		}

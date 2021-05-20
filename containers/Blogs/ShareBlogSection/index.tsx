@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import {
 	TwitterShareButton,
 	FacebookShareButton,
@@ -8,6 +7,11 @@ import {
 
 /* Styles */
 import styles from './index.module.scss';
+
+/* Components */
+import TwitterLogo from '../../../components/Icons/SocialIcons/Twitter';
+import Facebook from '../../../components/Icons/SocialIcons/Facebook';
+import LinkedIn from '../../../components/Icons/SocialIcons/LinkedIn';
 
 interface Props {
 	pageUrl: string;
@@ -28,12 +32,7 @@ const ShareBlogSection: React.FC<Props> = (props) => {
 					title={formatPageTitleForShare}
 					className={styles.shareButton}
 				>
-					<Image
-						src="/twitterBlueLogo.svg"
-						alt="Twitter Company Logo"
-						width={20}
-						height={20}
-					/>
+					<TwitterLogo width={20} height={20} fill="#349AF8" />
 				</TwitterShareButton>
 
 				<FacebookShareButton
@@ -41,12 +40,7 @@ const ShareBlogSection: React.FC<Props> = (props) => {
 					className={styles.shareButton}
 					quote={formatPageTitleForShare}
 				>
-					<Image
-						src="/facebookBlueLogo.svg"
-						alt="Facebook Company Logo"
-						width={20}
-						height={20}
-					/>
+					<Facebook width={20} height={20} fill="#349AF8" />
 				</FacebookShareButton>
 
 				<LinkedinShareButton
@@ -55,12 +49,7 @@ const ShareBlogSection: React.FC<Props> = (props) => {
 					source="Amazon Product Research Tools for FBA Sellers| Sellgo"
 					className={styles.shareButton}
 				>
-					<Image
-						src="/linkedInBlueLogo.svg"
-						alt="Linkedin Company Logo"
-						width={20}
-						height={20}
-					/>
+					<LinkedIn width={20} height={20} fill="#349AF8" />
 				</LinkedinShareButton>
 			</div>
 		</section>

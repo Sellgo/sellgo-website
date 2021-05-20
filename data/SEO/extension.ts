@@ -1,4 +1,6 @@
-export const seoData = {
+import { SEODetails } from '../../interfaces/SEO';
+
+export const seoData: SEODetails = {
 	title: `Sellgo - Chrome Extension: Amazon Product Research Tool`,
 	description: `Powerful browser extension and Amazon product research tool. 
 	Evalute thousands of products, analyze sales performances, and identify high demand, 

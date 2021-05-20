@@ -1,4 +1,6 @@
-export const seoData = {
+import { SEODetails } from '../../interfaces/SEO';
+
+export const seoData: SEODetails = {
 	title: `Sellgo - Amazon Search Management:`,
 	description: `Inspect multiple of supplier catalogs and products and source high demand products with proven data
 	 to expand your Amazon FBA business. 
