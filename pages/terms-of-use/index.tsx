@@ -26,7 +26,7 @@ const TermOfUse: React.FC<Props> = (props) => {
 		<>
 			<SEOHead
 				title={seoDetails.title}
-				description={seoDetails.description}
+				description={seoDetails.metaDesc}
 				imageUrl=""
 				keywords=""
 				pageUrl={generatePageURL('/terms-of-use')}

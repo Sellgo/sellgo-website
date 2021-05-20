@@ -67,10 +67,16 @@
 .navLink {
 	color: $prim_dark_2;
 	font-weight: $fontweight_semibold;
-	display: block;
 	position: relative;
 	width: max-content;
 	letter-spacing: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	svg {
+		margin-left: 4px;
+	}
 
 	&::after {
 		content: '';

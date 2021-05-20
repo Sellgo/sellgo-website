@@ -28,14 +28,25 @@ interface Props {
 	productsIncluded: any;
 	selectedPlanType: number;
 	faqData: FAQDetails;
+	infoAlertMessage: any;
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
-	const { planName, productsIncluded, selectedPlanType, faqData } = props;
+	const {
+		planName,
+		productsIncluded,
+		selectedPlanType,
+		faqData,
+		infoAlertMessage
+	} = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
 
 	const allPlanFeatures = getAllFeaturesForPlans(planName);
+
+	const infoAlertDetails = isMonthly
+		? infoAlertMessage.monthly
+		: infoAlertMessage.yearly;
 
 	return (
 		<>
@@ -52,24 +63,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 
 					{/* Show only for Pay $1 plan */}
 					{selectedPlanType === 1 && (
-						<PricingInfoAlert
-							navigateTo="/"
-							navigateLabel="Learn More"
-							head={`Start selling on Amazon today with Sellgo's free tools`}
-							desc={`Want to try our advanced Amazon tools? Review our FBA tools and pricing 
-							packages.Our premium tools empower you to track and research more products 
-							to optimize your Amazon business.`}
-							background="#F2EFE4"
-						/>
-					)}
-
-					{/* Show for all expect pay as you go */}
-					{selectedPlanType !== 1 && (
-						<PricePlanToggleButton
-							isMonthly={isMonthly}
-							handleChange={() => setIsMonthly(!isMonthly)}
-							className={styles.paymentModeToggle}
-						/>
+						<PricingInfoAlert {...infoAlertDetails} background="#F2EFE4" />
 					)}
 
 					{/* Show for $1 1st month */}
@@ -81,6 +75,16 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							desc={` `}
 							background="#F2EFE4"
 							className={styles.extraPricingInfo}
+						/>
+					)}
+
+					{/* Show for all expect pay as you go */}
+					{/* revert back to 1 when new plan is added */}
+					{selectedPlanType !== 2 && (
+						<PricePlanToggleButton
+							isMonthly={isMonthly}
+							handleChange={() => setIsMonthly(!isMonthly)}
+							className={styles.paymentModeToggle}
 						/>
 					)}
 				</div>

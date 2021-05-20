@@ -28,7 +28,7 @@ const PrivacyPage: React.FC<Props> = (props) => {
 		<>
 			<SEOHead
 				title={seoDetails.title}
-				description={seoDetails.description}
+				description={seoDetails.metaDesc}
 				imageUrl=""
 				pageUrl={generatePageURL('/privacy-policy')}
 				keywords=""

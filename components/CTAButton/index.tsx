@@ -7,23 +7,48 @@ interface Props {
 	navigateTo: string;
 	children: React.ReactNode;
 	className?: string;
+	asExternal?: boolean;
+	newTarget?: boolean;
 }
 
 const CTAButton: React.FC<Props> = (props) => {
-	const { navigateTo, type, size, children, className } = props;
+	const {
+		navigateTo,
+		type,
+		size,
+		children,
+		className,
+		asExternal,
+		newTarget
+	} = props;
 
 	const baseClassName = `ctabutton`;
 	const sizeClassName = `ctabutton--${size}`;
 	const typeClassName = `ctabutton--${type}`;
-	return (
-		<Link href={navigateTo} passHref>
+
+	// render as normal <a> tag
+	if (asExternal) {
+		return (
 			<a
 				className={`${baseClassName} ${typeClassName} ${sizeClassName} ${className}`}
+				href={navigateTo}
+				target={newTarget ? '_blank' : ''}
+				rel="noreferrer noopener"
 			>
 				{children}
 			</a>
-		</Link>
-	);
+		);
+	} else {
+		return (
+			<Link href={navigateTo} passHref>
+				<a
+					className={`${baseClassName} ${typeClassName} ${sizeClassName} ${className}`}
+				>
+					{children}
+				</a>
+			</Link>
+		);
+	}
 };
 
 export default CTAButton;

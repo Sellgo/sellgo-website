@@ -1,9 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* Components */
+import Check from '../../Icons/Check';
 
 interface Props {
 	title: string;
@@ -20,13 +22,7 @@ const PricingPlansCardFeaturesList: React.FC<Props> = (props) => {
 				{featuresIncluded.map((featureName: string) => {
 					return (
 						<li key={uuid()}>
-							<Image
-								src="/checkMark.svg"
-								alt="The feature is included"
-								width={10}
-								height={7}
-								priority
-							/>
+							<Check width={10} height={7} fill="#2e3b4a" />
 							<span>{featureName}</span>
 						</li>
 					);

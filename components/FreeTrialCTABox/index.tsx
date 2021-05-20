@@ -1,11 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../CTAButton';
+import Check from '../Icons/Check';
+
+/* Config */
+import AppConfig from '../../config';
 
 interface Props {
 	className?: string;
@@ -28,7 +31,9 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 					<CTAButton
 						type={isPrimary ? 'primary' : 'secondary'}
 						size="medium"
-						navigateTo="https://app.sellgo.com/signup/?type=free"
+						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
+						asExternal
+						newTarget
 						className={styles.freeTrialCTA}
 					>
 						Try Now for Free
@@ -40,66 +45,46 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 			<ul className={styles.detailsListWrapper}>
 				<li className={styles.detailsList}>
 					<span>
-						<Image
-							src="/checkMark.svg"
-							width={10}
-							height={8}
-							alt="Check Mark Icon"
-						/>
+						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Browser Extension
 				</li>
 
 				<li className={styles.detailsList}>
 					<span>
-						<Image
-							src="/checkMark.svg"
-							width={10}
-							height={8}
-							alt="Check Mark Icon"
-						/>
+						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Search Management
 				</li>
 
 				<li className={styles.detailsList}>
 					<span>
-						<Image
-							src="/checkMark.svg"
-							width={10}
-							height={8}
-							alt="Check Mark Icon"
-						/>
+						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Profit Finder
 				</li>
 
 				<li className={styles.detailsList}>
 					<span>
-						<Image
-							src="/checkMark.svg"
-							width={10}
-							height={8}
-							alt="Check Mark Icon"
-						/>
+						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Product Tracker
 				</li>
 
 				<li className={styles.detailsList}>
 					<span>
-						<Image
-							src="/checkMark.svg"
-							width={10}
-							height={8}
-							alt="Check Mark Icon"
-						/>
+						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Seller Finder
 				</li>
 
 				<li>
-					<a href="#!" className="anchor">
+					<a
+						href={`${AppConfig.APP_URL}/signup?type=free`}
+						className="anchor"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						See all features
 					</a>
 				</li>

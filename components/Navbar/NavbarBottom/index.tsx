@@ -4,8 +4,14 @@ import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* COmponents */
 import CTAButton from '../../CTAButton';
 import ProductsNavbarExpansion from '../../ProductsNavbarExpansion';
+import Bottom from '../../Icons/Chervons/Bottom';
+
+/* Config */
+import AppConfig from '../../../config';
 
 interface Props {}
 
@@ -27,7 +33,7 @@ const NavbarBottom: React.FC<Props> = () => {
 			<ul className={styles.navbarBottomLinksList}>
 				<li className={styles.navbarBottomLink}>
 					<a href="#" className={styles.navLink}>
-						Products
+						Products <Bottom width={10} height={8} fill="#2e3b4a" />
 					</a>
 					<ProductsNavbarExpansion className={styles.expandedProductsNavbar} />
 				</li>
@@ -48,8 +54,10 @@ const NavbarBottom: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="https://app.sellgo.com/subscription/?type=basic&mode=yearly"
+				navigateTo={`${AppConfig.APP_URL}/subscription?type=starter&mode=yearly`}
 				className={styles.navbarCTA}
+				newTarget
+				asExternal
 			>
 				Pay Only $1 to Sell
 			</CTAButton>

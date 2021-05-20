@@ -8,6 +8,9 @@ import MultilevelSidebar from 'react-multilevel-sidebar';
 /* Styling */
 import styles from './index.module.scss';
 
+/* Components */
+import Close from '../Icons/Close';
+
 interface Props {
 	isOpen: boolean;
 	handleClose: () => void;
@@ -94,13 +97,7 @@ const Sidebar: React.FC<Props> = (props) => {
 				role="button"
 				onKeyPress={() => {}}
 			>
-				<Image
-					src="/navBarClose.svg"
-					width={15}
-					height={15}
-					alt="Close Navbar"
-					priority
-				/>
+				<Close width={15} height={15} fill="#2E3B4A" />
 			</div>
 		</div>
 	);

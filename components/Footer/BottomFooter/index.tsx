@@ -4,6 +4,13 @@ import Link from 'next/link';
 /* Styling */
 import styles from './index.module.scss';
 
+/* Components */
+import Twitter from '../../Icons/SocialIcons/Twitter';
+import LinkedIn from '../../Icons/SocialIcons/LinkedIn';
+import Facebook from '../../Icons/SocialIcons/Facebook';
+import Instagram from '../../Icons/SocialIcons/Instagram';
+import Youtube from '../../Icons/SocialIcons/Youtube';
+
 interface Props {}
 
 const BottomFooter: React.FC<Props> = () => {
@@ -16,7 +23,7 @@ const BottomFooter: React.FC<Props> = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src="/twitterLogo.svg" alt="Social Media Icon for Twitter" />
+						<Twitter width={15} height={20} fill="#fff" />
 					</a>
 				</li>
 
@@ -26,7 +33,7 @@ const BottomFooter: React.FC<Props> = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src="/facebookLogo.svg" alt="Social Media Icon for Facebook" />
+						<Facebook width={15} height={20} fill="#fff" />
 					</a>
 				</li>
 
@@ -36,10 +43,7 @@ const BottomFooter: React.FC<Props> = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img
-							src="/instagramLogo.svg"
-							alt="Social Media Icon for Instagram"
-						/>
+						<Instagram width={15} height={20} fill="#fff" />
 					</a>
 				</li>
 
@@ -49,10 +53,7 @@ const BottomFooter: React.FC<Props> = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img
-							src="/instagramLogo.svg"
-							alt="Social Media Icon for LinkedIn"
-						/>
+						<LinkedIn width={15} height={20} fill="#fff" />
 					</a>
 				</li>
 
@@ -62,7 +63,7 @@ const BottomFooter: React.FC<Props> = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<img src="/youtubeLogo.svg" alt="Social Media Icon for Youtube" />
+						<Youtube width={15} height={20} fill="#fff" />
 					</a>
 				</li>
 			</ul>

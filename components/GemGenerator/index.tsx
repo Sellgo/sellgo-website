@@ -1,6 +1,8 @@
-import React from 'react';
-import Image from 'next/image';
+import React, { memo } from 'react';
 import { v4 as uuid } from 'uuid';
+
+/* Components */
+import Gem from '../Icons/Gem';
 
 interface Props {
 	name: string;
@@ -11,66 +13,22 @@ const GemGenerator: React.FC<Props> = (props) => {
 
 	switch (props.name) {
 		case 'Starter': {
-			gems = [
-				<Image
-					key={uuid()}
-					src="/gemIcon.svg"
-					alt="Gem Icon"
-					width={10}
-					height={10}
-					priority
-				/>
-			];
+			gems = [<Gem key={uuid()} width={12} height={12} fill="#fc7900" />];
 			break;
 		}
 		case 'Suite': {
 			gems = [
-				<Image
-					key={uuid()}
-					src="/gemIcon.svg"
-					alt="Gem Icon"
-					width={10}
-					height={10}
-					priority
-				/>,
-				<Image
-					key={uuid()}
-					src="/greenGem.svg"
-					alt="Gem Icon"
-					width={10}
-					height={10}
-					priority
-				/>
+				<Gem key={uuid()} width={12} height={12} fill="#fc7900" />,
+				<Gem key={uuid()} width={12} height={12} fill="#5dc560" />
 			];
 			break;
 		}
 
 		case 'Professional': {
 			gems = [
-				<Image
-					key={uuid()}
-					src="/gemIcon.svg"
-					alt="Gem Icon"
-					width={10}
-					height={10}
-					priority
-				/>,
-				<Image
-					key={uuid()}
-					src="/greenGem.svg"
-					alt="Gem Icon"
-					width={10}
-					height={10}
-					priority
-				/>,
-				<Image
-					key={uuid()}
-					src="/blueGem.svg"
-					alt="Gem Icon"
-					width={10}
-					height={10}
-					priority
-				/>
+				<Gem key={uuid()} width={12} height={12} fill="#fc7900" />,
+				<Gem key={uuid()} width={12} height={12} fill="#5dc560" />,
+				<Gem key={uuid()} width={12} height={12} fill="#349af8" />
 			];
 			break;
 		}
@@ -82,4 +40,4 @@ const GemGenerator: React.FC<Props> = (props) => {
 	return <>{gems}</>;
 };
 
-export default GemGenerator;
+export default memo(GemGenerator);
