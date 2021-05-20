@@ -22,11 +22,13 @@ const TopFooter: React.FC<Props> = () => {
 					</a>
 				</Link>
 
-				<Link href="/" passHref>
-					<a>
-						<img src="/amazonWebServices.png" alt="Amazon Web Services Logo" />
-					</a>
-				</Link>
+				<a
+					href="https://aws.amazon.com/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img src="/amazonWebServices.png" alt="Amazon Web Services Logo" />
+				</a>
 			</div>
 
 			<ul className={styles.footerNavigation}>
