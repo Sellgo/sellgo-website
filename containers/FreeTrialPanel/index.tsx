@@ -73,6 +73,8 @@ const FreeTrialPanel: React.FC<Props> = (props) => {
 						size="medium"
 						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
 						className={styles.otherInfoCTA}
+						asExternal
+						newTarget
 					>
 						Try Now 7-day Free Trial
 					</CTAButton>

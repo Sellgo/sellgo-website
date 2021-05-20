@@ -160,7 +160,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	const editorsChoiceBlogs = editorsChoiceBlogsResponse.data.posts.nodes;
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
 
-	if (!paginatedBlogs.length) {
+	const isInvalidPage = pageNumber > Math.round(totalPages.total / 6);
+
+	if (!paginatedBlogs.length || isInvalidPage) {
 		return {
 			notFound: true
 		};
