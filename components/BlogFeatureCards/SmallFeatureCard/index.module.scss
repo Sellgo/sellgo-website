@@ -10,7 +10,7 @@
 	min-height: 58rem;
 	max-height: 58rem;
 	max-height: 100%;
-	box-shadow: $box-shadow-1;
+	//box-shadow: $box-shadow-1;
 
 	@media only screen and(max-width: 1080px) {
 		margin: 2rem auto;
@@ -56,7 +56,7 @@
 
 .blogText {
 	color: $prim_dark_2;
-	background: $grey_1;
+	background: $grey_0;
 	padding: 2rem;
 	min-height: 38rem;
 	width: 100%;
@@ -76,14 +76,15 @@
 
 	h2 {
 		font-size: $fontsize_subtitle_24;
-		font-weight: $fontweight_semibold;
+		font-weight: $fontweight_bold;
 		margin-bottom: 4rem;
 	}
 
 	p {
 		text-transform: uppercase;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_content_12;
 		font-weight: $fontweight_semibold;
+		color: $second_grey;
 		margin-top: 2rem;
 		position: absolute;
 		bottom: 1rem;

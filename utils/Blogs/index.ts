@@ -6,8 +6,8 @@ export const fallBackImageURL = `https://wordpress.sellgo-dev.com/wp-content/upl
 
 export const imageLoaderForBlogs = (config: any) => {
 	const { src, width, quality } = config;
-	return `${src || fallBackImageURL}?w=${width}&q=${quality || 75}`;
 
+	return `${src || fallBackImageURL}?w=${width}&q=${quality || 75}`;
 };
 
 /* Send back first category name on showcase */
