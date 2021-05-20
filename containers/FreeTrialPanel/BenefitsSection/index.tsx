@@ -1,11 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../../components/CTAButton';
+import Apple from '../../../components/Icons/Apple';
 
 /* Config */
 import AppConfig from '../../../config';
@@ -22,34 +22,19 @@ const BenefitsSection: React.FC<Props> = () => {
 
 				<div className={styles.benefitsCardWrapper}>
 					<div className={styles.benefitsCard}>
-						<Image
-							src="/appleIcon.svg"
-							width={20}
-							height={23}
-							alt="Apple icon"
-						/>
+						<Apple width={20} height={23} fill="#000" />
 						<h3>Benefit</h3>
 						<p>Lorem Ipsum</p>
 						<p>Lorem Ipsum</p>
 					</div>
 					<div className={styles.benefitsCard}>
-						<Image
-							src="/appleIcon.svg"
-							width={20}
-							height={23}
-							alt="Apple icon"
-						/>
+						<Apple width={20} height={23} fill="#000" />
 						<h3>Benefit</h3>
 						<p>Lorem Ipsum</p>
 						<p>Lorem Ipsum</p>
 					</div>
 					<div className={styles.benefitsCard}>
-						<Image
-							src="/appleIcon.svg"
-							width={20}
-							height={23}
-							alt="Apple icon"
-						/>
+						<Apple width={20} height={23} fill="#000" />
 						<h3>Benefit</h3>
 						<p>Lorem Ipsum</p>
 						<p>Lorem Ipsum</p>

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* Components */
+import Check from '../Icons/Check';
 
 interface Props {
 	title: string;
@@ -24,12 +26,7 @@ const FreeTrialFeaturesCard: React.FC<Props> = (props) => {
 					{featuresList.map((benefits: string) => {
 						return (
 							<li key={uuid()}>
-								<Image
-									src="/checkMark.svg"
-									alt="The benefits is included"
-									width={10}
-									height={8}
-								/>
+								<Check width={10} height={8} fill="#3b4557" />
 								<span>{benefits}</span>
 							</li>
 						);
@@ -47,12 +44,7 @@ const FreeTrialFeaturesCard: React.FC<Props> = (props) => {
 					{popularFeaturesList.map((feature: string) => {
 						return (
 							<li key={uuid()}>
-								<Image
-									src="/checkMark.svg"
-									alt="The benefits is included"
-									width={10}
-									height={8}
-								/>
+								<Check width={10} height={8} fill="#3b4557" />
 								<span>{feature}</span>
 							</li>
 						);

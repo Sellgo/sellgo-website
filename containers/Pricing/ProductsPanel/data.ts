@@ -82,6 +82,22 @@ export const plansAndProductsDetails = [
 	},
 	{
 		planName: 'Monthly and Annual Pricing Plans',
+		infoAlertMessage: {
+			monthly: {
+				head: `Start selling on Amazon today with Sellgo's free tools Monthly`,
+				desc: `Want to try our advanced Amazon tools? Review our FBA tools and pricing packages.
+			Our premium tools empower you to track and research more products to optimize your Amazon business.`,
+				navigateTo: '/',
+				navigateLabel: 'Learn More'
+			},
+			yearly: {
+				head: `Start selling on Amazon today with Sellgo's free tools`,
+				desc: `Want to try our advanced Amazon tools? Review our FBA tools and pricing packages.
+			Our premium tools empower you to track and research more products to optimize your Amazon business.`,
+				navigateTo: '/',
+				navigateLabel: 'Learn More'
+			}
+		},
 		productsIncluded: [
 			{
 				name: 'Starter',
