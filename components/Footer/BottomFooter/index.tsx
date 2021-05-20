@@ -5,11 +5,11 @@ import Link from 'next/link';
 import styles from './index.module.scss';
 
 /* Components */
-import Twitter from '../../SocialIcons/Twitter';
-import LinkedIn from '../../SocialIcons/LinkedIn';
-import Facebook from '../../SocialIcons/Facebook';
-import Instagram from '../../SocialIcons/Instagram';
-import Youtube from '../../SocialIcons/Youtube';
+import Twitter from '../../Icons/SocialIcons/Twitter';
+import LinkedIn from '../../Icons/SocialIcons/LinkedIn';
+import Facebook from '../../Icons/SocialIcons/Facebook';
+import Instagram from '../../Icons/SocialIcons/Instagram';
+import Youtube from '../../Icons/SocialIcons/Youtube';
 
 interface Props {}
 

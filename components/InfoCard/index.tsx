@@ -1,11 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../CTAButton';
+import OrangeCheck from '../Icons/OrgangeCheck';
 
 interface Props {
 	title: string;
@@ -31,12 +31,7 @@ const InfoCard: React.FC<Props> = (props) => {
 				{featureList.map((featureName: string) => {
 					return (
 						<li key={featureName} className={styles.feature}>
-							<Image
-								src="/featureCheck.svg"
-								alt="Feature is available"
-								width={10}
-								height={10}
-							/>
+							<OrangeCheck width={10} height={10} fill="#fc7900" />
 							<span className={styles.featureName}> {featureName}</span>
 						</li>
 					);
