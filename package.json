@@ -6,14 +6,16 @@
 		"prettier": "prettier --write --config ./.prettierrc.json **/*.{js,jsx,ts,tsx,scss,json}",
 		"eslint": "eslint --config ./.eslintrc.json **/*.{js,jsx,ts,tsx} --fix",
 		"stylelint": "stylelint **/*.{css,scss} --fix",
-		"lint": "npm-run-all prettier stylelint",
+		"lint": "npm-run-all  stylelint",
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"@analytics/google-analytics": "^0.5.2",
 		"@apollo/client": "^3.3.15",
+		"analytics": "^0.7.5",
 		"axios": "^0.21.1",
 		"framer-motion": "^4.1.13",
 		"graphql": "^15.5.0",
