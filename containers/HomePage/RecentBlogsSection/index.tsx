@@ -23,7 +23,7 @@ const RecentBlogsSection: React.FC<Props> = (props) => {
 	return (
 		<section className={`page-container ${styles.recentBlogsWrapper}`}>
 			<h2 className="secondary-heading">
-				Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+				The Latest News and Tips for Your Amazon Business
 			</h2>
 
 			<div className={styles.blogsWrapper}>

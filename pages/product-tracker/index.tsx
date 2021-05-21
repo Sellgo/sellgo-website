@@ -53,7 +53,7 @@ const ProductTrackerContPage: React.FC<Props> = (props) => {
 			<CommonFeaturesSection />
 			<BannerCTASection />
 			<PlansSection />
-			<OtherInfoSection />
+			<OtherInfoSection />	
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>

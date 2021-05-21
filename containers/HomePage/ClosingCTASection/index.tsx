@@ -14,11 +14,12 @@ const ClosingCTASection: React.FC<Props> = () => {
 		<section className={`page-container ${styles.closingCTASection}`}>
 			<div className={styles.closingCTAWrapper}>
 				<div className={styles.closingCTAWrapper__left}>
-					<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+					<h2>Grow Your Amazon Business with Sellgo</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim
+						With reliable tools and data that help you at every
+						stage from product sourcing to product selling,
+						building a successful Amazon business has never
+						been easier.
 					</p>
 
 					<CTAButton
@@ -27,10 +28,10 @@ const ClosingCTASection: React.FC<Props> = () => {
 						navigateTo="/"
 						className={styles.closingCTA}
 					>
-						Get Sellgo Free
+						Pay Only $1 to Sell
 					</CTAButton>
 
-					<small>Get started with FREE tools, and upgrade as you grow.</small>
+					<small>Start an Amazon business with $1, <br /> upgrade your tools as you grow.</small>
 				</div>
 				<div className={styles.closingCTAWrapper__right}>
 					<Image

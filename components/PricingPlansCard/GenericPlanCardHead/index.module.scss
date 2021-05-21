@@ -14,16 +14,16 @@
 		width: 100%;
 
 		h2 {
-			font-size: $fontsize_subtitle_20;
-			font-weight: $fontweight_medium;
+			font-size: $fontsize_subtitle_24;
+			font-weight: $fontweight_bold;
 			margin: 0 auto;
 		}
 
 		p {
-			font-size: $fontsize_content_10;
+			font-size: $fontsize_content_12;
 			font-weight: $fontweight_regular;
-			color: $grey_5;
-			max-width: 30rem;
+			color: $second_grey;
+			max-width: 33rem;
 			text-align: center;
 			white-space: pre-line;
 			min-height: 6rem;
@@ -46,7 +46,7 @@
 	text-align: center;
 
 	h3 {
-		color: $blue_7;
+		color: $blue_8;
 		font-size: $fontsize_subtitle_32;
 		font-weight: $fontweight_bold;
 	}

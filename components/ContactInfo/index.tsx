@@ -22,8 +22,8 @@ const ContactInfo: React.FC<Props> = (props) => {
 
 			<div className={styles.capsule}>
 				<p>{message}</p>
-				<Link href="/contact-sales" passHref>
-					<a className="anchor">Contact sales</a>
+				<Link href="mailto:support@sellgo.com" passHref>
+					<a className="anchor">support@sellgo.com</a>
 				</Link>
 			</div>
 		</div>

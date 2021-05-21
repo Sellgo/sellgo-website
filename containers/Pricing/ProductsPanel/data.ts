@@ -87,15 +87,15 @@ export const plansAndProductsDetails = [
 				head: `Start selling on Amazon today with Sellgo's free tools Monthly`,
 				desc: `Want to try our advanced Amazon tools? Review our FBA tools and pricing packages.
 			Our premium tools empower you to track and research more products to optimize your Amazon business.`,
-				navigateTo: '/',
-				navigateLabel: 'Learn More'
+				navigateTo: '/pricing?type=free-trial',
+				navigateLabel: 'Free Trial'
 			},
 			yearly: {
 				head: `Start selling on Amazon today with Sellgo's free tools`,
 				desc: `Want to try our advanced Amazon tools? Review our FBA tools and pricing packages.
 			Our premium tools empower you to track and research more products to optimize your Amazon business.`,
-				navigateTo: '/',
-				navigateLabel: 'Learn More'
+				navigateTo: '/pricing?type=free-trial',
+				navigateLabel: 'Free Trial'
 			}
 		},
 		productsIncluded: [
@@ -167,8 +167,7 @@ export const plansAndProductsDetails = [
 				annualPrice: 996,
 				ctaLink: `${AppConfig.APP_URL}/subscription`,
 				featureSubName: 'Suite Plan Plus',
-				desc: `For professional sellers and businesses who need the best \n tools. 
-				Track more products, obtain more data, and optimize your entire Amazon business.`,
+				desc: `For professional sellers and businesses who need \nthe best tools. Track more products, obtain more data, \nand optimize your entire Amazon business.`,
 				featuresLists: [
 					{
 						title: 'Advance your leads',

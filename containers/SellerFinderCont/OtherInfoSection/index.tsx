@@ -33,13 +33,14 @@ const OtherInfoSection: React.FC<Props> = () => {
 			</div>
 
 			<h2 className="secondary-heading">
-				Scout out thousands of sellers and find profitable products and brands
-				to build your catalog.
+				Find new winning products and take your earning 
+				<br />
+				potential to the next level with Sellgo&apos; tools.
 			</h2>
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="https://app.sellgo.com/signup/?type=free"
+				navigateTo="/pricing?type=monthly-and-annual-plans"
 				className={styles.otherInfoSectionCTA}
 			>
 				Get Started

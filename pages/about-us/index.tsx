@@ -33,7 +33,7 @@ const AboutUsPage: React.FC<Props> = () => {
 						</h1>
 
 						<p>
-							&quot;Our mission at Sellgo is to empower Amazon sellers with the
+							Our mission at Sellgo is to empower Amazon sellers with the
 							right tools and data to grow successful businesses.
 						</p>
 
@@ -55,7 +55,7 @@ const AboutUsPage: React.FC<Props> = () => {
 							<a href="mailto:support@sellgo.com" className="anchor">
 								support@sellgo.com
 							</a>
-							.&quot;
+							.
 						</p>
 					</div>
 
@@ -76,7 +76,7 @@ const AboutUsPage: React.FC<Props> = () => {
 						<h2>Our Tools and Services</h2>
 
 						<p>
-							&quot;At Sellgo, we have developed 5 different tools that you can
+							At Sellgo, we have developed 5 different tools that you can
 							start using now. These tools were made to assist sellers at every
 							stage of their selling journey including product scouting to
 							product sourcing to product research.
@@ -112,7 +112,7 @@ const AboutUsPage: React.FC<Props> = () => {
 						<h2>Our Pricing Plans</h2>
 
 						<p>
-							&quot;We currently offer a free trial and 3 premium plans that you
+							We currently offer a free trial and 3 premium plans that you
 							can sign-up for now. Our plans are meant to help any seller at any
 							level of experience. Starting with our free trial, you can use our
 							tools and services for 7-days free.
@@ -152,7 +152,7 @@ const AboutUsPage: React.FC<Props> = () => {
 						<h2>Our Team</h2>
 
 						<p>
-							&quot;Our team members and leadership consist of Amazon sellers
+							Our team members and leadership consist of Amazon sellers
 							just like you. We&apos;ve sold on Amazon and know what challenges
 							and obstacles you may face. Our FBA tools and software solutions
 							were made by Amazon sellers for Amazon sellers.

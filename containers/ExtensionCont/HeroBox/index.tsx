@@ -29,12 +29,12 @@ const HeroBox: React.FC<Props> = () => {
 				<div className={styles.subHeadingWrapper}>
 					<span></span>{' '}
 					<h2 className={styles.subHeading}>
-						Quick Product Validation on Browser
+						Chrome Extension
 					</h2>
 				</div>
-				<h1 className={styles.heading}>Chrome Extension</h1>
+				<h1 className={styles.heading}>Quick Product Validation on Browser</h1>
 				<CTAButton
-					navigateTo="/pricing"
+					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"
 					size="medium"
 					className={styles.heroBoxCTA}

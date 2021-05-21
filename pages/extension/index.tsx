@@ -52,9 +52,9 @@ const ExtensionContPage: React.FC<Props> = (props) => {
 			<NewBenefitsSection />
 			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
-			<BannerCTASection />
-			<PlansSection />
-			<OtherInfoSection />
+			
+			
+			
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>
