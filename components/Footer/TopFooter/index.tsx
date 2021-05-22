@@ -58,6 +58,11 @@ const TopFooter: React.FC<Props> = () => {
 						<a>Seller Finder</a>
 					</Link>
 				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/leads-tracker" passHref>
+						<a>Leads Tracker</a>
+					</Link>
+				</li>
 			</ul>
 
 			<ul className={styles.footerNavigation}>

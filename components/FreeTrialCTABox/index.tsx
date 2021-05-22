@@ -80,15 +80,6 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 					</span>
 					Seller Finder
 				</li>
-
-				<li>
-					<a
-						href={`${AppConfig.APP_URL}/signup?type=free`}
-						className="anchor"
-						target="_blank"
-						rel="noopener noreferrer"
-					></a>
-				</li>
 			</ul>
 		</section>
 	);
