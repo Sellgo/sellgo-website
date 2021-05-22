@@ -10,9 +10,6 @@ import HeroBox from '../../containers/ProfitFinderCont/HeroBox';
 import InfoSection from '../../containers/ProfitFinderCont/InfoSection';
 import NewBenefitsSection from '../../containers/ProfitFinderCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/ProfitFinderCont/CommomFeaturesSection';
-import BannerCTASection from '../../containers/ProfitFinderCont/BannerCTASection';
-import PlansSection from '../../containers/ProfitFinderCont/PlansSection';
-import OtherInfoSection from '../../containers/ProfitFinderCont/OtherInfoSection';
 import FAQSection from '../../containers/ProfitFinderCont/FAQSection';
 import RecommendationSection from '../../containers/ProfitFinderCont/RecommendationSection';
 
@@ -51,9 +48,7 @@ const ProfitFinderContPage: React.FC<Props> = (props) => {
 			<NewBenefitsSection />
 			<section className={styles.Newbanner} />
 			<CommonFeaturesSection />
-			
-			
-			
+
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>

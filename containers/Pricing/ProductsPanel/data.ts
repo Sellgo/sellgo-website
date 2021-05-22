@@ -167,7 +167,8 @@ export const plansAndProductsDetails = [
 				annualPrice: 996,
 				ctaLink: `${AppConfig.APP_URL}/subscription`,
 				featureSubName: 'Suite Plan Plus',
-				desc: `For professional sellers and businesses who need \nthe best tools. Track more products, obtain more data, \nand optimize your entire Amazon business.`,
+				desc: `For professional sellers and businesses who need \nthe best tools. 
+				Track more products, obtain more data, \nand optimize your entire Amazon business.`,
 				featuresLists: [
 					{
 						title: 'Advance your leads',

@@ -10,9 +10,6 @@ import HeroBox from '../../containers/ExtensionCont/HeroBox';
 import InfoSection from '../../containers/ExtensionCont/InfoSection';
 import NewBenefitsSection from '../../containers/ExtensionCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/ExtensionCont/CommomFeaturesSection';
-import BannerCTASection from '../../containers/ExtensionCont/BannerCTASection';
-import PlansSection from '../../containers/ExtensionCont/PlansSection';
-import OtherInfoSection from '../../containers/ExtensionCont/OtherInfoSection';
 import FAQSection from '../../containers/ExtensionCont/FAQSection';
 import RecommendationSection from '../../containers/ExtensionCont/RecommendationSection';
 
@@ -52,9 +49,7 @@ const ExtensionContPage: React.FC<Props> = (props) => {
 			<NewBenefitsSection />
 			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
-			
-			
-			
+
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>

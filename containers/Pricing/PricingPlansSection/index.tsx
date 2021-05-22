@@ -87,8 +87,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							className={styles.extraPricingInfo}
 						/>
 					)}
-
-					
 				</div>
 			</section>
 

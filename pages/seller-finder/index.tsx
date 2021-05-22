@@ -10,9 +10,6 @@ import HeroBox from '../../containers/SellerFinderCont/HeroBox';
 import InfoSection from '../../containers/SellerFinderCont/InfoSection';
 import NewBenefitsSection from '../../containers/SellerFinderCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/SellerFinderCont/CommomFeaturesSection';
-import BannerCTASection from '../../containers/SellerFinderCont/BannerCTASection';
-import PlansSection from '../../containers/SellerFinderCont/PlansSection';
-import OtherInfoSection from '../../containers/SellerFinderCont/OtherInfoSection';
 import FAQSection from '../../containers/SellerFinderCont/FAQSection';
 import RecommendationSection from '../../containers/SellerFinderCont/RecommendationSection';
 
@@ -52,9 +49,7 @@ const SellerFinderContPage: React.FC<Props> = (props) => {
 			<NewBenefitsSection />
 			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
-			
-			
-			
+
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>

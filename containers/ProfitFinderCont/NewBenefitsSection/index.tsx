@@ -34,7 +34,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading">
-					Identify thousands of profitable products to grow your sales, profits, and Amazon business.
+					Identify thousands of profitable products to grow your sales, profits,
+					and Amazon business.
 				</h2>
 				<CTAButton
 					type="primary"

@@ -34,7 +34,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading">
-					Bolden your Amazon business and optimize your efficiency with our powerful Chrome Extension.
+					Bolden your Amazon business and optimize your efficiency with our
+					powerful Chrome Extension.
 				</h2>
 				<CTAButton
 					type="primary"

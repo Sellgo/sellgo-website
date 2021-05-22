@@ -33,7 +33,7 @@ const OtherInfoSection: React.FC<Props> = () => {
 			</div>
 
 			<h2 className="secondary-heading">
-				Find new winning products and take your earning 
+				Find new winning products and take your earning
 				<br />
 				potential to the next level with Sellgo&apos; tools.
 			</h2>

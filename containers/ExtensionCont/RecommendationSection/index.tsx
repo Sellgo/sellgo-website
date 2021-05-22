@@ -18,9 +18,11 @@ const RecommendationSection: React.FC<Props> = () => {
 			<div className={`page-container ${styles.recomSection}`}>
 				<h2>You May Also Like ...</h2>
 				<p>
-					The Chrome Extension is just one part of Sellgo&apos;s toolbox to help your business grow. 
+					The Chrome Extension is just one part of Sellgo&apos;s toolbox to help
+					your business grow.
 					<br />
-					While each product is amazing on their own, they work best when used alongside one another.
+					While each product is amazing on their own, they work best when used
+					alongside one another.
 				</p>
 
 				<div className={styles.recomCardsWrapper}>

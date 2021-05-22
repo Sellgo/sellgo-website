@@ -16,10 +16,9 @@ const ClosingCTASection: React.FC<Props> = () => {
 				<div className={styles.closingCTAWrapper__left}>
 					<h2>Grow Your Amazon Business with Sellgo</h2>
 					<p>
-						With reliable tools and data that help you at every
-						stage from product sourcing to product selling,
-						building a successful Amazon business has never
-						been easier.
+						With reliable tools and data that help you at every stage from
+						product sourcing to product selling, building a successful Amazon
+						business has never been easier.
 					</p>
 
 					<CTAButton
@@ -31,7 +30,10 @@ const ClosingCTASection: React.FC<Props> = () => {
 						Pay Only $1 to Sell
 					</CTAButton>
 
-					<small>Start an Amazon business with $1, <br /> upgrade your tools as you grow.</small>
+					<small>
+						Start an Amazon business with $1, <br /> upgrade your tools as you
+						grow.
+					</small>
 				</div>
 				<div className={styles.closingCTAWrapper__right}>
 					<Image

@@ -34,7 +34,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading">
-					Manage dozens of suppliers and evaluate thousands of potential products.
+					Manage dozens of suppliers and evaluate thousands of potential
+					products.
 				</h2>
 				<CTAButton
 					type="primary"

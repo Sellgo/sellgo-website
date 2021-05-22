@@ -97,8 +97,10 @@ const BlogsPage: React.FC<Props> = (props) => {
 				<section className={styles.banner}>
 					<div className={styles.banner__left}>
 						<h3>Subscribe to Our Newsletter</h3>
-						<p>Join our subscriber&apos;s list to get the latest update
-							and articles delivered directly to your inbox.</p>
+						<p>
+							Join our subscriber&apos;s list to get the latest update and
+							articles delivered directly to your inbox.
+						</p>
 					</div>
 
 					<div className={styles.banner__right}>

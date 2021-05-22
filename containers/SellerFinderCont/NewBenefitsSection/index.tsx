@@ -34,7 +34,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading">
-					Scout out million of sellers and find profitable products and brands to build your catalog.
+					Scout out million of sellers and find profitable products and brands
+					to build your catalog.
 				</h2>
 				<CTAButton
 					type="primary"

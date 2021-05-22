@@ -22,11 +22,10 @@ const ShowCaseHeroBox: React.FC<Props> = () => {
 			<div className={`page-container ${styles.heroBoxContent}`}>
 				<h1>Amazon Seller Tips & News</h1>
 				<p>
-					Stay up to date on the latest news and tips impacting your
-					business and the Amazon marketplace. Access resourceful guides,
-					learn unique strategies, and more.
-
-					Subsdcribe to our blog and get notified whenever we release new content!
+					Stay up to date on the latest news and tips impacting your business
+					and the Amazon marketplace. Access resourceful guides, learn unique
+					strategies, and more. Subsdcribe to our blog and get notified whenever
+					we release new content!
 				</p>
 				<button
 					className={`ctabutton ctabutton--primary ctabutton--medium ${styles.subscribeCTA}`}

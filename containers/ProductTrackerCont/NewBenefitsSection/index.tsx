@@ -34,7 +34,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading">
-					Track thousands of products and source sustainable, reprenishable, and profitable products
+					Track thousands of products and source sustainable, reprenishable, and
+					profitable products
 				</h2>
 				<CTAButton
 					type="primary"

@@ -19,9 +19,7 @@ const InfoSection: React.FC<Props> = () => {
 						analytics to help you find replenishable products with the best
 						profits and return on investments directly within your browser.
 					</p>
-					<p>
-						
-					</p>
+					<p></p>
 				</div>
 				<div className={styles.infoSection__Image}>
 					<Image
