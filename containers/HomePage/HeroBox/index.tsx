@@ -32,7 +32,8 @@ const HeroBox: React.FC<Props> = () => {
 					</CTAButton>
 
 					<small className={`${styles.ctaOverText}`}>
-						Or get started with FREE tools, and <br /> upgrade as your grow
+						Start an Amazon business with $1, <br /> upgrade your tools as you
+						grow.
 					</small>
 				</div>
 			</div>

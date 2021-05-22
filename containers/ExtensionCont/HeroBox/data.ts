@@ -27,7 +27,7 @@ export const accordionData = [
 		title: 'Features',
 		description: `After installing the free Chrome Extension, head over 
 		to Amazon and overlay important key metrics directly on your search pages. 
-		Sort thousands of products with our filters to find the products perfect 
+		Sort thousands of products with our filters to find the perfect products 
 		for your business.`,
 		listDetails: [],
 		ctaLinkDetails: {

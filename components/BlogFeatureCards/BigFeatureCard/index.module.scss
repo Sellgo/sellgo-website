@@ -9,7 +9,7 @@
 	min-width: 71.3rem;
 	max-width: 71.3rem;
 	width: 100%;
-	box-shadow: $box-shadow-1;
+	//box-shadow: $box-shadow-1;
 
 	@media only screen and(max-width: 1080px) {
 		margin-top: 2rem;
@@ -48,7 +48,7 @@
 
 .blogText {
 	color: $prim_dark_2;
-	background: $grey_1;
+	background: $grey_0;
 	padding: 2rem;
 	min-height: 18rem;
 	position: relative;
@@ -70,8 +70,9 @@
 
 	p {
 		text-transform: uppercase;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_content_12;
 		font-weight: $fontweight_semibold;
+		color: $second_grey;
 		margin-top: 2rem;
 		position: absolute;
 		bottom: 1rem;

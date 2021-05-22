@@ -15,6 +15,7 @@
 	border-radius: 3px;
 	color: $prim_white;
 	font-size: $fontsize_content_14;
+	font-weight: $fontweight_bold;
 	width: 80%;
 	height: 2.8rem;
 	display: flex;
@@ -28,7 +29,7 @@
 }
 
 .blogTeaser {
-	background: $grey_1;
+	background: $grey_0;
 	color: $prim_dark_2;
 	width: 100%;
 	border-radius: 3px;
@@ -49,5 +50,7 @@
 	small {
 		text-transform: uppercase;
 		font-size: $fontsize_content_12;
+		font-weight: $fontweight_light;
+		color: $second_grey;
 	}
 }

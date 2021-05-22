@@ -61,6 +61,16 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						<p> Try Our Premium Tools and Access Real-Data for $1!</p>
 					</div>
 
+					{/* Show for all expect pay as you go */}
+					{/* revert back to 1 when new plan is added */}
+					{selectedPlanType !== 2 && (
+						<PricePlanToggleButton
+							isMonthly={isMonthly}
+							handleChange={() => setIsMonthly(!isMonthly)}
+							className={styles.paymentModeToggle}
+						/>
+					)}
+
 					{/* Show only for Pay $1 plan */}
 					{selectedPlanType === 1 && (
 						<PricingInfoAlert {...infoAlertDetails} background="#F2EFE4" />
@@ -75,16 +85,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							desc={` `}
 							background="#F2EFE4"
 							className={styles.extraPricingInfo}
-						/>
-					)}
-
-					{/* Show for all expect pay as you go */}
-					{/* revert back to 1 when new plan is added */}
-					{selectedPlanType !== 2 && (
-						<PricePlanToggleButton
-							isMonthly={isMonthly}
-							handleChange={() => setIsMonthly(!isMonthly)}
-							className={styles.paymentModeToggle}
 						/>
 					)}
 				</div>
@@ -139,7 +139,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			<FreeTrialCTABox className={styles.freeTrialBox} />
 
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
-				<ContactInfo message="Lorem ipsum dolor sit Lorem ipsum dolor sit" />
+				<ContactInfo message="" />
 			</section>
 
 			{faqData.data.length > 0 && <FAQSection faqData={faqData.data} />}

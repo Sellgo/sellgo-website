@@ -41,9 +41,9 @@ const FreeTrialPanel: React.FC<Props> = (props) => {
 
 				<PricingInfoAlert
 					className={styles.freeTrialInfoAlert}
-					navigateTo="/"
-					navigateLabel="Learn More"
-					head={`Start selling on Amazon today with Sellgo's free tools`}
+					navigateTo="/pricing?type=monthly-and-annual-plans"
+					navigateLabel="Premium Tools"
+					head={`Start selling on Amazon today with Sellgo's premium tools`}
 					desc={`	Want to try our advanced Amazon tools? Review our FBA tools and pricing
 									packages.Our premium tools empower you to track and research more products to
 										optimize your Amazon business.`}
@@ -55,7 +55,7 @@ const FreeTrialPanel: React.FC<Props> = (props) => {
 			<BenefitsSection />
 
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
-				<ContactInfo message="Lorem ipsum dolor sit Lorem ipsum dolor sit" />
+				<ContactInfo message="" />
 			</section>
 
 			{freeTrailFAQData.data.length > 0 && (

@@ -12,7 +12,7 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>The Search Management Tool Makes Product Sourcing Easy</h2>
+					<h2>Breakdown Catalogs with Ease</h2>
 					<p>
 						Simply upload catalogs files to our Search Management tool then sort
 						and filter millions of products. Find winning products that will

@@ -27,14 +27,11 @@ const HeroBox: React.FC<Props> = () => {
 			</div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<span></span>{' '}
-					<h2 className={styles.subHeading}>
-						The First Step to Product Sourcing
-					</h2>
+					<span></span> <h2 className={styles.subHeading}>Search Management</h2>
 				</div>
-				<h1 className={styles.heading}>Search Management</h1>
+				<h1 className={styles.heading}>The First Step to Product Sourcing</h1>
 				<CTAButton
-					navigateTo="/pricing"
+					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"
 					size="medium"
 					className={styles.heroBoxCTA}

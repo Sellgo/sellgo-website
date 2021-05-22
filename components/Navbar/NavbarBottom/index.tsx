@@ -45,7 +45,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				</li>
 
 				<li className={styles.navbarBottomLink}>
-					<a href="#" className={styles.navLink}>
+					<a href="/blogs" className={styles.navLink}>
 						Resources
 					</a>
 				</li>

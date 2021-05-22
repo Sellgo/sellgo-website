@@ -34,12 +34,13 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading">
-					Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+					Bolden your Amazon business and optimize your efficiency with our
+					powerful Chrome Extension.
 				</h2>
 				<CTAButton
 					type="primary"
 					size="small"
-					navigateTo="/"
+					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
 					Get Started

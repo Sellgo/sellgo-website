@@ -18,6 +18,10 @@ const CommonFeaturesSection: React.FC<Props> = () => {
 			<h2 className="secondary-heading">
 				We&apos;re Here for You - Whatever You Need
 			</h2>
+			<h3>
+				With Sellgo, you&apos;re never alone. <br />
+				Our tools are here to support you and your business.
+			</h3>
 
 			<div className={styles.featuresCardWrapper}>
 				{commonFeaturesList.map((commonFeatureDetails: any) => {

@@ -16,7 +16,7 @@ const HeroBox: React.FC<Props> = (props) => {
 		<>
 			<section className={styles.heroboxSection}>
 				<h1>Sell better with the right plan.</h1>
-				<p>Pay less on software, invest more on your business.</p>
+				<p>Pay less on software, invest more in your business.</p>
 
 				<div className={styles.tabsWrapper}>
 					<button

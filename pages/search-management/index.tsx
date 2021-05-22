@@ -10,9 +10,6 @@ import HeroBox from '../../containers/SearchManagementCont/HeroBox';
 import InfoSection from '../../containers/SearchManagementCont/InfoSection';
 import NewBenefitsSection from '../../containers/SearchManagementCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/SearchManagementCont/CommomFeaturesSection';
-import BannerCTASection from '../../containers/SearchManagementCont/BannerCTASection';
-import PlansSection from '../../containers/SearchManagementCont/PlansSection';
-import OtherInfoSection from '../../containers/SearchManagementCont/OtherInfoSection';
 import FAQSection from '../../containers/SearchManagementCont/FAQSection';
 import RecommendationSection from '../../containers/SearchManagementCont/RecommendationSection';
 
@@ -52,9 +49,7 @@ const SearchManagementContPage: React.FC<Props> = (props) => {
 			<NewBenefitsSection />
 			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
-			<BannerCTASection />
-			<PlansSection />
-			<OtherInfoSection />
+
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>
