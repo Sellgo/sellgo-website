@@ -88,19 +88,19 @@ export const generateHybridTable = (comparisonStats: any) => {
 			body: [
 				[
 					'Seller Finder',
-					`${formatPlansStats(starter.sellerFinderLimit)}${formatPlanPeriod(
+					`${formatPlansStats(starter.sellerFinderLimit)} ${formatPlanPeriod(
 						starter.sellerFinderPeriod,
 						'sellers'
 					)}`,
 
-					`${formatPlansStats(suite.sellerFinderLimit)}${formatPlanPeriod(
+					`${formatPlansStats(suite.sellerFinderLimit)} ${formatPlanPeriod(
 						suite.sellerFinderPeriod,
 						'sellers'
 					)}`,
 
 					`${formatPlansStats(
 						professional.sellerFinderLimit
-					)}${formatPlanPeriod(professional.sellerFinderPeriod, 'sellers')}`
+					)} ${formatPlanPeriod(professional.sellerFinderPeriod, 'sellers')}`
 				],
 
 				['Export Seller Data', '-', 'Annual plan', 'Annual plan'],
