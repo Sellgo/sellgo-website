@@ -63,9 +63,7 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 									tabIndex={0}
 								>
 									<h2>{productListDetails.head}</h2>
-									<a href={productListDetails.navigateTo}>
-										{productListDetails.navigateLabel} <span>&#8594;</span>
-									</a>
+									<p>{productListDetails.desc}</p>
 								</div>
 							);
 						}
