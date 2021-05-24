@@ -1,4 +1,4 @@
-import { formatPlansStats } from '../../utils/Pricing';
+import { formatPlansStats, formatPlanPeriod } from '../../utils/Pricing';
 
 export const generateHybridTable = (comparisonStats: any) => {
 	const { starter, suite, professional } = comparisonStats;
@@ -34,9 +34,15 @@ export const generateHybridTable = (comparisonStats: any) => {
 				],
 				[
 					'Amazon Best Sales Estimator',
-					`${formatPlansStats(starter.salesEstimateLimit)} estimates/mo`,
-					`${formatPlansStats(suite.salesEstimateLimit)} estimates/mo`,
-					`${formatPlansStats(professional.salesEstimateLimit)} estimates/mo`
+					`${formatPlansStats(starter.salesEstimateLimit)} 
+					${formatPlanPeriod(starter.salesEstimatePeriod, 'estimates')}`,
+
+					`${formatPlansStats(suite.salesEstimateLimit)}
+					${formatPlanPeriod(suite.salesEstimatePeriod, 'estimates')}`,
+
+					`${formatPlansStats(
+						professional.salesEstimateLimit
+					)} 	${formatPlanPeriod(professional.salesEstimatePeriod, 'estimates')}`
 				],
 				['Inventory Insight', '-', '✓', '✓'],
 				['Market share insight', '-', '✓', '✓']
@@ -47,9 +53,20 @@ export const generateHybridTable = (comparisonStats: any) => {
 			body: [
 				[
 					'Profit Finder',
-					`${formatPlansStats(starter.profitFinder)} products/mo`,
-					`${formatPlansStats(suite.profitFinder)} products/mo`,
-					`${formatPlansStats(professional.profitFinder)} products/mo`
+
+					`${formatPlansStats(starter.profitFinder)} ${formatPlanPeriod(
+						starter.profitFinderPeriod,
+						'products'
+					)}`,
+					`${formatPlansStats(suite.profitFinder)} ${formatPlanPeriod(
+						suite.profitFinderPeriod,
+						'products'
+					)}`,
+
+					`${formatPlansStats(professional.profitFinder)} ${formatPlanPeriod(
+						professional.profitFinderPeriod,
+						'products'
+					)}`
 				],
 				['Additional bulk processing', '-', '-', '-'],
 				['Data input (UPC, EAN, ASIN, ISBN)', '✓', '✓', '✓'],
@@ -71,10 +88,21 @@ export const generateHybridTable = (comparisonStats: any) => {
 			body: [
 				[
 					'Seller Finder',
-					'20 sellers/day',
-					'1,000 sellers/mo',
-					'5,000 sellers/mo'
+					`${formatPlansStats(starter.sellerFinderLimit)}${formatPlanPeriod(
+						starter.sellerFinderPeriod,
+						'sellers'
+					)}`,
+
+					`${formatPlansStats(suite.sellerFinderLimit)}${formatPlanPeriod(
+						suite.sellerFinderPeriod,
+						'sellers'
+					)}`,
+
+					`${formatPlansStats(
+						professional.sellerFinderLimit
+					)}${formatPlanPeriod(professional.sellerFinderPeriod, 'sellers')}`
 				],
+
 				['Export Seller Data', '-', 'Annual plan', 'Annual plan'],
 				['Check Seller Inventory', '-', '✓', '✓'],
 				['Brand Finder', '-', '✓', '✓']

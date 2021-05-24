@@ -55,8 +55,12 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 				[plan.name.toLocaleLowerCase()]: {
 					productTracker: plan.track_limit,
 					salesEstimateLimit: plan.sales_estimation_limit,
+					salesEstimatePeriod: plan.sales_estimation_period,
 					profitFinder: plan.synthesis_limit,
+					profitFinderPeriod: plan.synthesis_period,
 					leadsTracker: plan.leads_track_limit,
+					sellerFinderLimit: plan.seller_finder,
+					sellerFinderPeriod: plan.seller_period,
 					trackHistory: Math.round(plan.track_history_limit / 30)
 				}
 			};

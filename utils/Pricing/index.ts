@@ -1,3 +1,4 @@
+/* Types */
 import { KeyValuePair } from '../../interfaces';
 
 export const plansTabMapper: KeyValuePair = {
@@ -41,4 +42,21 @@ export const formatPlansStats = (stat: number) => {
 	}
 
 	return stat.toLocaleString();
+};
+
+const periodToDisplayMapper: KeyValuePair = {
+	monthly: '/mo',
+	daily: '/day'
+};
+
+export const formatPlanPeriod = (period: string, appendString: string = '') => {
+	console.log(appendString);
+
+	if (!period) {
+		return '/day';
+	}
+
+	const periodFormatter = periodToDisplayMapper[period] || '/day';
+
+	return `${appendString}${periodFormatter}`;
 };
