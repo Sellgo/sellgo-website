@@ -50,8 +50,6 @@ const periodToDisplayMapper: KeyValuePair = {
 };
 
 export const formatPlanPeriod = (period: string, appendString: string = '') => {
-	console.log(appendString);
-
 	if (!period) {
 		return '/day';
 	}
