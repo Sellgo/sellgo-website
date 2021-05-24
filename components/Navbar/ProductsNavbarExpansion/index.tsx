@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid';
 import styles from './index.module.scss';
 
 /* Components */
-import GroupedNavLink from '../GroupedNavLinks';
+import GroupedNavLink from '../../GroupedNavLinks';
 
 /* Data */
 import { productsNavigationList, productsRightPanelData } from './data';
