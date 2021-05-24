@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 /* Styling */
 import styles from './index.module.scss';
 
@@ -41,4 +41,4 @@ const PricingInfoAlert: React.FC<Props> = (props) => {
 	);
 };
 
-export default PricingInfoAlert;
+export default memo(PricingInfoAlert);

@@ -1,15 +1,10 @@
-/* Interfaces */
-import { KeyValuePair } from '../../interfaces';
+import { generateHybridTable } from './allFeaturesTable';
 
-import { pay1MonthAllFeatures, pay1DayAllFeatures } from './allFeaturesTable';
-
-export const allPlansFeatureMapper: KeyValuePair = {
-	'Monthly and Annual Pricing Plans': pay1MonthAllFeatures,
-	'Pay $1 for a Day': pay1DayAllFeatures
-};
-
-export const getAllFeaturesForPlans = (planName: string) => {
-	const allFeatures = allPlansFeatureMapper[planName];
+export const getAllFeaturesForPlans = (
+	planName: string,
+	getComparisonStats: any
+) => {
+	const allFeatures = generateHybridTable(getComparisonStats);
 	if (!allFeatures) {
 		return [
 			{

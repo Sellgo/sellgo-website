@@ -1,78 +1,99 @@
-export const pay1MonthAllFeatures = [
-	{
-		header: ['Basic', 'Starter', 'Suite', 'Professional'],
-		body: [
-			['Money-back guarantee help', '✓', '✓', '✓'],
-			['Cancel any time help', '✓', '✓', '✓'],
-			['Included users', '1', '1', '7'],
-			['Eligible for additional users', '-', '✓', '✓'],
-			['Additional user cost', '-', '$29/mo', '$29/mo']
-		]
-	},
-	{
-		header: ['Seller Type', 'Starter', 'Suite', 'Professional'],
-		body: [
-			['Private Label', '✓', '✓', '✓'],
-			['Wholesale', '-', '✓', '✓'],
-			['Advanced Seller', '-', '-', '✓']
-		]
-	},
-	{
-		header: ['Product Research', 'Starter', 'Suite', 'Professional'],
-		body: [
-			['Chrome Extension', '✓', '✓', '✓'],
-			['Product Tracker', '100 products', '200 products', '1,000 products'],
-			[
-				'Amazon Best Sales Estimator',
-				'1,000 estimates/mo',
-				'1,500 estimates/mo',
-				'2,500 estimates/mo'
-			],
-			['Inventory Insight', '-', '✓', '✓'],
-			['Market share insight', '-', '✓', '✓']
-		]
-	},
-	{
-		header: ['Bulk Profit Research', 'Starter', 'Suite', 'Professional'],
-		body: [
-			[
-				'Profit Finder',
-				'3,000 products/day',
-				'300,000 products/mo',
-				'1,000,000 products/mo'
-			],
-			['Additional bulk processing', '-', '-', '-'],
-			['Data input (UPC, EAN, ASIN, ISBN)', '✓', '✓', '✓'],
-			['Data Buster', '-', '✓', '✓'],
-			['Smart Filter', '-', '✓', '✓'],
-			['Bulk + Filtered Data Export', '✓', '✓', '✓'],
-			['Variation Analysis', '✓', '✓', '✓'],
-			['Multipack Analysis', '✓', '✓', '✓'],
-			['Leads Tracker', '3,000 products', '10,000 products', '30,000 products']
-		]
-	},
-	{
-		header: ['Seller Research', 'Starter', 'Suite', 'Professional'],
-		body: [
-			[
-				'Seller Finder',
-				'20 sellers/day',
-				'1,000 sellers/mo',
-				'5,000 sellers/mo'
-			],
-			['Export Seller Data', '-', 'Annual plan', 'Annual plan'],
-			['Check Seller Inventory', '-', '✓', '✓'],
-			['Brand Finder', '-', '✓', '✓']
-		]
-	},
-	{
-		header: ['Data Analytics', 'Starter', 'Suite', 'Professional'],
-		body: [
-			['True Sales Estimates', '✓', '✓', '✓'],
-			['Historical Product Tracking Data', '1 month', '3 month', '1 year']
-		]
-	}
-];
+import { formatPlansStats } from '../../utils/Pricing';
+
+export const generateHybridTable = (comparisonStats: any) => {
+	const { starter, suite, professional } = comparisonStats;
+
+	return [
+		{
+			header: ['Basic', 'Starter', 'Suite', 'Professional'],
+			body: [
+				['Money-back guarantee help', '✓', '✓', '✓'],
+				['Cancel any time help', '✓', '✓', '✓'],
+				['Included users', '1', '1', '7'],
+				['Eligible for additional users', '-', '✓', '✓'],
+				['Additional user cost', '-', '$29/mo', '$29/mo']
+			]
+		},
+		{
+			header: ['Seller Type', 'Starter', 'Suite', 'Professional'],
+			body: [
+				['Private Label', '✓', '✓', '✓'],
+				['Wholesale', '-', '✓', '✓'],
+				['Advanced Seller', '-', '-', '✓']
+			]
+		},
+		{
+			header: ['Product Research', 'Starter', 'Suite', 'Professional'],
+			body: [
+				['Chrome Extension', '✓', '✓', '✓'],
+				[
+					'Product Tracker',
+					`${formatPlansStats(starter.productTracker)} products`,
+					`${formatPlansStats(suite.productTracker)} products`,
+					`${formatPlansStats(professional.productTracker)} products`
+				],
+				[
+					'Amazon Best Sales Estimator',
+					`${formatPlansStats(starter.salesEstimateLimit)} estimates/mo`,
+					`${formatPlansStats(suite.salesEstimateLimit)} estimates/mo`,
+					`${formatPlansStats(professional.salesEstimateLimit)} estimates/mo`
+				],
+				['Inventory Insight', '-', '✓', '✓'],
+				['Market share insight', '-', '✓', '✓']
+			]
+		},
+		{
+			header: ['Bulk Profit Research', 'Starter', 'Suite', 'Professional'],
+			body: [
+				[
+					'Profit Finder',
+					`${formatPlansStats(starter.profitFinder)} products/mo`,
+					`${formatPlansStats(suite.profitFinder)} products/mo`,
+					`${formatPlansStats(professional.profitFinder)} products/mo`
+				],
+				['Additional bulk processing', '-', '-', '-'],
+				['Data input (UPC, EAN, ASIN, ISBN)', '✓', '✓', '✓'],
+				['Data Buster', '-', '✓', '✓'],
+				['Smart Filter', '-', '✓', '✓'],
+				['Bulk + Filtered Data Export', '✓', '✓', '✓'],
+				['Variation Analysis', '✓', '✓', '✓'],
+				['Multipack Analysis', '✓', '✓', '✓'],
+				[
+					'Leads Tracker',
+					`${formatPlansStats(starter.leadsTracker)} products`,
+					`${formatPlansStats(suite.leadsTracker)} products`,
+					`${formatPlansStats(professional.leadsTracker)} products`
+				]
+			]
+		},
+		{
+			header: ['Seller Research', 'Starter', 'Suite', 'Professional'],
+			body: [
+				[
+					'Seller Finder',
+					'20 sellers/day',
+					'1,000 sellers/mo',
+					'5,000 sellers/mo'
+				],
+				['Export Seller Data', '-', 'Annual plan', 'Annual plan'],
+				['Check Seller Inventory', '-', '✓', '✓'],
+				['Brand Finder', '-', '✓', '✓']
+			]
+		},
+		{
+			header: ['Data Analytics', 'Starter', 'Suite', 'Professional'],
+			body: [
+				['True Sales Estimates', '✓', '✓', '✓'],
+				[
+					'Historical Product Tracking Data',
+					`${starter.trackHistory} month`,
+					`${suite.trackHistory} month`,
+					`${professional.trackHistory === 12 ? '1 year' : ''}`
+				]
+			]
+		}
+	];
+};
 
 export const pay1DayAllFeatures = [
 	{

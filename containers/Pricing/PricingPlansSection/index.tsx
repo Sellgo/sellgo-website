@@ -29,20 +29,42 @@ interface Props {
 	selectedPlanType: number;
 	faqData: FAQDetails;
 	infoAlertMessage: any;
+	subscriptionDetails: any;
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
 	const {
 		planName,
 		productsIncluded,
+		infoAlertMessage,
 		selectedPlanType,
 		faqData,
-		infoAlertMessage
+		subscriptionDetails
 	} = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
 
-	const allPlanFeatures = getAllFeaturesForPlans(planName);
+	const nonExterprisePlans = subscriptionDetails.filter(
+		(plan: any) => plan.id !== 3
+	);
+
+	const getComparisionStats = nonExterprisePlans.reduce(
+		(acc: any, plan: any) => {
+			return {
+				...acc,
+				[plan.name.toLocaleLowerCase()]: {
+					productTracker: plan.track_limit,
+					salesEstimateLimit: plan.sales_estimation_limit,
+					profitFinder: plan.synthesis_limit,
+					leadsTracker: plan.leads_track_limit,
+					trackHistory: Math.round(plan.track_history_limit / 30)
+				}
+			};
+		},
+		{}
+	);
+
+	const allPlanFeatures = getAllFeaturesForPlans(planName, getComparisionStats);
 
 	const infoAlertDetails = isMonthly
 		? infoAlertMessage.monthly
@@ -71,21 +93,8 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						/>
 					)}
 
-					{/* Show only for Pay $1 plan */}
 					{selectedPlanType === 1 && (
 						<PricingInfoAlert {...infoAlertDetails} background="#F2EFE4" />
-					)}
-
-					{/* Show for $1 1st month */}
-					{selectedPlanType === 2 && (
-						<PricingInfoAlert
-							navigateTo="/"
-							navigateLabel="Learn More"
-							head={`Pay only $1 for your first month when you sign-up for a yearly subscription!`}
-							desc={` `}
-							background="#F2EFE4"
-							className={styles.extraPricingInfo}
-						/>
 					)}
 				</div>
 			</section>
@@ -97,9 +106,14 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					return (
 						<PricingPlansCard
 							key={uuid()}
-							{...product}
+							id={product.id}
+							name={product.name}
+							desc={product.desc}
+							featureSubName={product.featureSubName}
+							featuresLists={product.featuresLists}
 							planName={planName}
 							isMonthly={isMonthly}
+							subscriptionDetails={subscriptionDetails}
 						/>
 					);
 				})}
@@ -123,12 +137,15 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						return (
 							<div className={styles.priceSummaryCard} key={uuid()}>
 								<PricingPlansCardHead
-									{...product}
+									id={product.id}
+									name={product.name}
+									desc={product.desc}
 									isMonthly={isMonthly}
 									className={styles.tablePricingSummary}
 									planName={planName}
 									withToggle
 									handleChange={() => setIsMonthly(!isMonthly)}
+									subscriptionDetails={subscriptionDetails}
 								/>
 							</div>
 						);

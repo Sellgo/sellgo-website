@@ -1,35 +1,48 @@
 import React from 'react';
 
 /* Components */
-import PayAsYouGoCardHead from '../PayAsYouGoCardHead';
 import GenericPlanCardHead from '../GenericPlanCardHead';
 
 interface Props {
+	id: number;
 	name: string;
-	productsDatabase: number;
-	perDayPrice: number;
-	yearlyPrice: number;
-	annualPrice: number;
-	planName: string;
-	salesEstimateCount: number;
-	isMonthly: boolean;
-	monthlyPrice: number;
-	ctaLink: string;
 	desc: string;
+	isMonthly: boolean;
+	planName?: string;
+	subscriptionDetails: any;
+
+	// used for price summary card head inside table comparision
 	withToggle?: boolean;
 	className?: string;
 	handleChange?: (state: boolean) => any;
 }
 
 const PricingPlansCardHead: React.FC<Props> = (props) => {
-	const { planName, ...otherProps } = props;
+	const {
+		name,
+		id,
+		isMonthly,
+		desc,
+		subscriptionDetails,
+		...otherProps
+	} = props;
+
+	const getSubscriptionPrices = subscriptionDetails.filter(
+		(subscription: any) => {
+			return subscription.id === id;
+		}
+	)[0];
+
 	return (
 		<>
-			{['Pay $1 for a Day'].includes(planName) ? (
-				<PayAsYouGoCardHead {...otherProps} />
-			) : (
-				<GenericPlanCardHead {...otherProps} />
-			)}
+			<GenericPlanCardHead
+				name={name}
+				desc={desc}
+				monthlyPrice={Number(getSubscriptionPrices.monthly_price)}
+				annualPrice={Number(getSubscriptionPrices.yearly_price)}
+				isMonthly={isMonthly}
+				{...otherProps}
+			/>
 		</>
 	);
 };

@@ -24,13 +24,14 @@ import {
 
 interface Props {
 	faqDetails: FAQDetails[];
+	subscriptionDetails: any;
 }
 
 const ProductsPanel: React.FC<Props> = (props) => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
 
-	const { faqDetails } = props;
+	const { faqDetails, subscriptionDetails } = props;
 	const router = useRouter();
 
 	const queryCollection = router.query || {};
@@ -88,19 +89,21 @@ const ProductsPanel: React.FC<Props> = (props) => {
 			<TabPanel>
 				<FreeTrialPanel faqData={faqDetails[0]} />
 			</TabPanel>
-			{plansAndProductsDetails
-				.filter((_, index: number) => index >= 1)
-				.map((plan: any) => {
-					return (
-						<TabPanel key={uuid()}>
-							<PricingPlansSection
-								{...plan}
-								selectedPlanType={selectedPlanType}
-								faqData={faqDetails[selectedPlanType]}
-							/>
-						</TabPanel>
-					);
-				})}
+
+			{plansAndProductsDetails.map((plan: any) => {
+				return (
+					<TabPanel key={uuid()}>
+						<PricingPlansSection
+							planName={plan.planName}
+							productsIncluded={plan.productsIncluded}
+							infoAlertMessage={plan.infoAlertMessage}
+							selectedPlanType={selectedPlanType}
+							faqData={faqDetails[selectedPlanType]}
+							subscriptionDetails={subscriptionDetails}
+						/>
+					</TabPanel>
+				);
+			})}
 		</Tabs>
 	);
 };

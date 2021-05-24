@@ -15,38 +15,28 @@ import {
 } from '../../constants';
 
 interface Props {
+	id: number;
 	name: string;
-	productsDatabase: number;
-	salesEstimateCount: number;
-	perDayPrice: number;
-	yearlyPrice: number;
-	annualPrice: number;
-	featuresLists: any;
+	desc: string;
 	featureSubName: string;
+	featuresLists: any;
 	planName: string;
 	isMonthly: boolean;
-	monthlyPrice: number;
-	ctaLink: string;
-	desc: string;
-	// className?: string;
+	subscriptionDetails: any;
 	withToggle?: boolean;
+	className?: string;
 }
 
 const PricingPlansCard: React.FC<Props> = (props) => {
 	const {
+		id,
 		name,
-		productsDatabase,
-		perDayPrice,
-		yearlyPrice,
-		annualPrice,
-		featuresLists,
+		desc,
 		featureSubName,
-		planName,
-		salesEstimateCount,
+		featuresLists,
 		isMonthly,
-		monthlyPrice,
-		ctaLink,
-		desc
+		planName,
+		subscriptionDetails
 	} = props;
 
 	const isGradientHeader = plansWithHeaderGradient.includes(name);
@@ -64,17 +54,12 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 
 			<div className={styles.pricingPlansCard}>
 				<PricingPlansCardHead
-					name={name}
-					productsDatabase={productsDatabase}
-					perDayPrice={perDayPrice}
-					yearlyPrice={yearlyPrice}
-					annualPrice={annualPrice}
 					planName={planName}
-					salesEstimateCount={salesEstimateCount}
-					isMonthly={isMonthly}
-					monthlyPrice={monthlyPrice}
-					ctaLink={ctaLink}
+					name={name}
 					desc={desc}
+					id={id}
+					subscriptionDetails={subscriptionDetails}
+					isMonthly={isMonthly}
 				/>
 
 				<p className={styles.planType}>{featureSubName}</p>

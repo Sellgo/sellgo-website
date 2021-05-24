@@ -7,15 +7,14 @@ import styles from './index.module.scss';
 import CTAButton from '../../CTAButton';
 import GemGenerator from '../../GemGenerator';
 import PricePlanToggleButton from '../../PricePlanToggleButton';
+import AppConfig from '../../../config';
 
 interface Props {
 	name: string;
+	desc: string;
 	monthlyPrice: number;
 	annualPrice: number;
-	salesEstimateCount: number;
 	isMonthly: boolean;
-	ctaLink: string;
-	desc: string;
 	withToggle?: boolean;
 	className?: string;
 	handleChange?: any;
@@ -27,14 +26,13 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		isMonthly,
 		monthlyPrice,
 		annualPrice,
-		ctaLink,
 		desc,
 		withToggle,
 		className,
 		handleChange
 	} = props;
 
-	const checkoutLink = `${ctaLink}?mode=${
+	const checkoutLink = `${AppConfig.WEB_URL}/subscription?mode=${
 		isMonthly ? 'monthly' : 'yearly'
 	}&type=${name.toLowerCase()}`;
 
@@ -55,11 +53,13 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			<div className={styles.startingAt}>
 				<p>
 					Starts At{' '}
-					{!isMonthly && <span className="strike-text">${monthlyPrice}</span>}
+					{!isMonthly && (
+						<span className="strike-text">${Math.round(monthlyPrice)}</span>
+					)}
 				</p>
 
 				{isMonthly ? (
-					<h3>${monthlyPrice}/ Mo</h3>
+					<h3>${Math.round(monthlyPrice)}/ Mo</h3>
 				) : (
 					<h3>${Math.round(annualPrice / 12)}/ Mo</h3>
 				)}
@@ -68,9 +68,9 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					<p className={styles.billedAtPrice}>
 						Billed At <span className="strike-text">${monthlyPrice * 12}</span>
 						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
-							${annualPrice}/yr
+							${Math.round(annualPrice)}/yr
 						</span>
-						Save ${monthlyPrice * 12 - annualPrice}
+						Save ${Math.round(monthlyPrice * 12 - annualPrice)}
 					</p>
 				) : (
 					<p>Billed Monthly</p>
