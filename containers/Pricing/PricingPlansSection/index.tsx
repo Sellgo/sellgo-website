@@ -44,11 +44,11 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 
 	const [isMonthly, setIsMonthly] = useState(false);
 
-	const nonExterprisePlans = subscriptionDetails.filter(
+	const nonEnterprisePlans = subscriptionDetails.filter(
 		(plan: any) => plan.id !== 3
 	);
 
-	const getComparisionStats = nonExterprisePlans.reduce(
+	const getComparisionStats = nonEnterprisePlans.reduce(
 		(acc: any, plan: any) => {
 			return {
 				...acc,
