@@ -5,12 +5,14 @@ import Dropdown from 'react-dropdown';
 import validator from 'validator';
 import { Element } from 'react-scroll';
 import axios from 'axios';
+import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import FormInput from '../../../components/FormInput';
+import FormSubmitConfirm from '../../../components/FormSubmitConfirm';
 
 /* Constants */
 import {
@@ -46,6 +48,8 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		websiteErr: false,
 		messageErr: false
 	});
+
+	const [openSubmitConfirm, setOpenSubmitConfirm] = useState(false);
 
 	/* Handler for event changes */
 	const handleChange = (e: any) => {
@@ -99,6 +103,11 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		websiteErr,
 		messageErr
 	} = formDataError;
+
+	// mounting for submision confirmation modal
+	useEffect(() => {
+		Modal.setAppElement('#formSubmitConfirm');
+	}, []);
 
 	/* Effects for Email validation */
 	useEffect(() => {
@@ -247,6 +256,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 			const response = await axios.post(URL, formData);
 			if (response.status === 201) {
 				clearForm();
+				setOpenSubmitConfirm(true);
 			}
 		} catch (err) {
 			console.error('Error Sending data to hubspot');
@@ -255,186 +265,203 @@ const ScheduleMeeting: React.FC<Props> = () => {
 	};
 
 	return (
-		<section className={`page-container ${styles.scheduleMeetingSection}`}>
-			<Element
-				className={styles.scheduleMeetingWrapper}
-				name="chooseTimeAndDate"
-			>
-				<h2 className="secondary-heading">Schedule a Meeting</h2>
-				<p>
-					To meet with our Sales Team, please fill out the form below then
-					select a date and time that works best for you.
-				</p>
-
-				<form className={styles.scheduleForm} onSubmit={handleSubmit}>
-					<FormInput
-						className={styles.formInput}
-						label="First Name *"
-						id="firstName"
-						type="text"
-						name="firstName"
-						onChange={handleChange}
-						value={firstName}
-						autoComplete="off"
-						required
-						hasError={firstNameErr}
-						errorMessage="Invalid First Name"
-					/>
-
-					<FormInput
-						className={styles.formInput}
-						label="Last Name *"
-						id="lastName"
-						type="text"
-						name="lastName"
-						onChange={handleChange}
-						value={lastName}
-						autoComplete="off"
-						required
-						hasError={lastNameErr}
-						errorMessage="Invalid Last Name"
-					/>
-
-					<div className={styles.dropdownWrapper}>
-						<label> Country Code *</label>
-						<Select
-							defaultValue={defaultPhoneCode}
-							options={countryPhoneCodeList}
-							className={styles.countrySelect}
-							classNamePrefix="dropdown"
-							id="dropdown"
-							onChange={handleCountryCodeChange}
-							value={countryCode}
-						/>
-					</div>
-
-					<FormInput
-						className={styles.formInput}
-						label="Phone Number *"
-						id="phoneNumber"
-						type="text"
-						name="phoneNumber"
-						onChange={handleChange}
-						value={phoneNumber}
-						autoComplete="off"
-						required
-						hasError={phoneNumberErr}
-						errorMessage="Invalid Phone Number"
-					/>
-
-					<FormInput
-						className={styles.formInput}
-						label="Email *"
-						id="email"
-						type="email"
-						name="email"
-						onChange={handleChange}
-						value={email}
-						autoComplete="off"
-						required
-						hasError={emailErr}
-						errorMessage="Invalid Email"
-					/>
-
-					<FormInput
-						className={styles.formInput}
-						label="Company *"
-						id="company"
-						type="text"
-						name="company"
-						onChange={handleChange}
-						value={company}
-						autoComplete="off"
-						required
-						hasError={companyErr}
-						errorMessage="Please enter company name"
-					/>
-
-					<FormInput
-						className={styles.formInput}
-						label="Website *"
-						id="website"
-						type="text"
-						name="website"
-						onChange={handleChange}
-						value={website}
-						autoComplete="off"
-						required
-						hasError={websiteErr}
-						errorMessage="Please enter valid URL"
-					/>
-
-					<div className={styles.formInput}>
-						<label># of Employees</label>
-						<Dropdown
-							options={employSizeList}
-							onChange={handleCompanySizeChange}
-							className={styles.selectDropdown}
-							placeholderClassName={styles.selectDropdown__placeholder}
-							controlClassName={styles.selectDropdown__control}
-							menuClassName={styles.selectDropdown__menu}
-							value={companySize}
-							arrowClosed={
-								<Image
-									src="/dropdownArrow.svg"
-									width={10}
-									height={10}
-									alt="Dropdown Arrow"
-								/>
-							}
-							arrowOpen={
-								<Image
-									src="/dropdownArrow.svg"
-									width={10}
-									height={10}
-									alt="Dropdown Arrow"
-								/>
-							}
-						/>
-					</div>
-
-					<div className={`${styles.formInput} ${styles.formInput__message}`}>
-						<label htmlFor="">
-							What are you looking to accomplish on this call *
-						</label>
-						<textarea
-							name="message"
-							id="message"
-							minLength={1}
-							cols={30}
-							rows={10}
-							value={message}
-							onChange={handleChange}
-							required
-						/>
-						{messageErr && <small>Please leave us a message</small>}
-					</div>
-
-					<p className={styles.formSubmitInfo}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip
+		<>
+			<section className={`page-container ${styles.scheduleMeetingSection}`}>
+				<Element
+					className={styles.scheduleMeetingWrapper}
+					name="chooseTimeAndDate"
+				>
+					<h2 className="secondary-heading">Schedule a Meeting</h2>
+					<p>
+						To meet with our Sales Team, please fill out the form below then
+						select a date and time that works best for you.
 					</p>
 
-					<button
-						type="submit"
-						className="ctabutton ctabutton--primary ctabutton--medium"
-						disabled={
-							firstNameErr ||
-							lastNameErr ||
-							emailErr ||
-							phoneNumberErr ||
-							companyErr ||
-							websiteErr ||
-							messageErr
-						}
-					>
-						Submit
-					</button>
-				</form>
-			</Element>
-		</section>
+					<form className={styles.scheduleForm} onSubmit={handleSubmit}>
+						<FormInput
+							className={styles.formInput}
+							label="First Name *"
+							id="firstName"
+							type="text"
+							name="firstName"
+							onChange={handleChange}
+							value={firstName}
+							autoComplete="off"
+							required
+							hasError={firstNameErr}
+							errorMessage="Invalid First Name"
+						/>
+
+						<FormInput
+							className={styles.formInput}
+							label="Last Name *"
+							id="lastName"
+							type="text"
+							name="lastName"
+							onChange={handleChange}
+							value={lastName}
+							autoComplete="off"
+							required
+							hasError={lastNameErr}
+							errorMessage="Invalid Last Name"
+						/>
+
+						<div className={styles.dropdownWrapper}>
+							<label> Country Code *</label>
+							<Select
+								defaultValue={defaultPhoneCode}
+								options={countryPhoneCodeList}
+								className={styles.countrySelect}
+								classNamePrefix="dropdown"
+								id="dropdown"
+								onChange={handleCountryCodeChange}
+								value={countryCode}
+							/>
+						</div>
+
+						<FormInput
+							className={styles.formInput}
+							label="Phone Number *"
+							id="phoneNumber"
+							type="text"
+							name="phoneNumber"
+							onChange={handleChange}
+							value={phoneNumber}
+							autoComplete="off"
+							required
+							hasError={phoneNumberErr}
+							errorMessage="Invalid Phone Number"
+						/>
+
+						<FormInput
+							className={styles.formInput}
+							label="Email *"
+							id="email"
+							type="email"
+							name="email"
+							onChange={handleChange}
+							value={email}
+							autoComplete="off"
+							required
+							hasError={emailErr}
+							errorMessage="Invalid Email"
+						/>
+
+						<FormInput
+							className={styles.formInput}
+							label="Company *"
+							id="company"
+							type="text"
+							name="company"
+							onChange={handleChange}
+							value={company}
+							autoComplete="off"
+							required
+							hasError={companyErr}
+							errorMessage="Please enter company name"
+						/>
+
+						<FormInput
+							className={styles.formInput}
+							label="Website *"
+							id="website"
+							type="text"
+							name="website"
+							onChange={handleChange}
+							value={website}
+							autoComplete="off"
+							required
+							hasError={websiteErr}
+							errorMessage="Please enter valid URL"
+						/>
+
+						<div className={styles.formInput}>
+							<label># of Employees</label>
+							<Dropdown
+								options={employSizeList}
+								onChange={handleCompanySizeChange}
+								className={styles.selectDropdown}
+								placeholderClassName={styles.selectDropdown__placeholder}
+								controlClassName={styles.selectDropdown__control}
+								menuClassName={styles.selectDropdown__menu}
+								value={companySize}
+								arrowClosed={
+									<Image
+										src="/dropdownArrow.svg"
+										width={10}
+										height={10}
+										alt="Dropdown Arrow"
+									/>
+								}
+								arrowOpen={
+									<Image
+										src="/dropdownArrow.svg"
+										width={10}
+										height={10}
+										alt="Dropdown Arrow"
+									/>
+								}
+							/>
+						</div>
+
+						<div className={`${styles.formInput} ${styles.formInput__message}`}>
+							<label htmlFor="">
+								What are you looking to accomplish on this call *
+							</label>
+							<textarea
+								name="message"
+								id="message"
+								minLength={1}
+								cols={30}
+								rows={10}
+								value={message}
+								onChange={handleChange}
+								required
+							/>
+							{messageErr && <small>Please leave us a message</small>}
+						</div>
+
+						<p className={styles.formSubmitInfo}>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip
+						</p>
+
+						<button
+							type="submit"
+							className="ctabutton ctabutton--primary ctabutton--medium"
+							disabled={
+								firstNameErr ||
+								lastNameErr ||
+								emailErr ||
+								phoneNumberErr ||
+								companyErr ||
+								websiteErr ||
+								messageErr
+							}
+						>
+							Submit
+						</button>
+					</form>
+				</Element>
+			</section>
+
+			<div id="formSubmitConfirm"></div>
+
+			<Modal
+				isOpen={openSubmitConfirm}
+				onRequestClose={() => setOpenSubmitConfirm(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<FormSubmitConfirm
+					heading="You're all set"
+					body="Your request to talk with our sales team has been confirmed!."
+					ending="Our sales team will be in touch you soon."
+				/>
+			</Modal>
+		</>
 	);
 };
 
