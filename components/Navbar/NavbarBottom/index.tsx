@@ -11,9 +11,6 @@ import ProductsNavbarExpansion from '../ProductsNavbarExpansion';
 import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
 
-/* Config */
-import AppConfig from '../../../config';
-
 interface Props {}
 
 const NavbarBottom: React.FC<Props> = () => {
