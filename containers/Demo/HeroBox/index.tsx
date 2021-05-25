@@ -9,12 +9,11 @@ const HeroBox: React.FC<Props> = () => {
 	return (
 		<div className={styles.heroboxWrapper}>
 			<div className={`page-container ${styles.herobox}`}>
-				<h1>Find Winning Wholesale Products!</h1>
+				<h1>Get a Free Demo of Sellgo&apos;s Research Platform</h1>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea
+					See how Sellgo&apos;s seller tools and real-time data can help grow
+					your Amazon business from everything between product sourcing to
+					product research.
 				</p>
 			</div>
 		</div>

@@ -283,23 +283,34 @@ const DemoPage: React.FC<Props> = () => {
 				<HeroBox />
 				<div className={`page-container ${styles.demoPageContent}`}>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea.
+						The Sellgo pricing packages include tools that can help your Amazon
+						business at any stage and Amazon sellers at every level of
+						experience.
+						<br />
+						<br />
+						Our Premium Plan includes:
+						<br />
+						<br />
+						- Seller Finder
+						<br />
+						- Search Management
+						<br />
+						- Leads Tracker
+						<br />
+						- Profit Finder
+						<br />
+						- Product Tracker
+						<br />
+						- Sellgo Chrome Extension
+						<br />
+						... and more.
 					</p>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea.
+						For any questions or concerns regarding our pricing plans or tools,
+						send us a message at support@sellgo.com For customized plans or
+						demos, you can also Contact Sales.
 					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea.
-					</p>
+					<p></p>
 				</div>
 
 				<form className={styles.demoPageForm} onSubmit={handleSubmit}>
@@ -444,10 +455,10 @@ const DemoPage: React.FC<Props> = () => {
 					</div>
 
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip
+						By subscribing to the Sellgo blog, you agree to receiving relevant
+						content regarding our services, products, and promotions. You may
+						unsubscribe from these communications at any time. For more
+						information, check out our Privacy Policy and Terms of Use.
 					</p>
 
 					<button
