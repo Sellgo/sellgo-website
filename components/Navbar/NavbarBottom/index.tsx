@@ -11,9 +11,6 @@ import ProductsNavbarExpansion from '../ProductsNavbarExpansion';
 import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
 
-/* Config */
-import AppConfig from '../../../config';
-
 interface Props {}
 
 const NavbarBottom: React.FC<Props> = () => {
@@ -49,7 +46,7 @@ const NavbarBottom: React.FC<Props> = () => {
 					</li>
 
 					<li className={styles.navbarBottomLink}>
-						<a href="/blogs" className={styles.navLink}>
+						<a href="#" className={styles.navLink}>
 							Resources <Bottom width={10} height={8} fill="#2e3b4a" />
 						</a>
 						<ResourcesNavBarExpansion
@@ -62,7 +59,7 @@ const NavbarBottom: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo={`${AppConfig.APP_URL}/subscription?type=starter&mode=yearly`}
+				navigateTo={`/pricing?type=monthly-and-annual-plans`}
 				className={styles.navbarCTA}
 				newTarget
 				asExternal

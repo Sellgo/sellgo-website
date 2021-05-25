@@ -68,8 +68,13 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Pricing</li>
 				<li className="footerNavigationLinks">
-					<Link href="/pricing" passHref>
-						<a>Pricing</a>
+					<Link href="/pricing?type=free-trial" passHref>
+						<a>Free Trial</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/pricing?type=monthly-and-annual-plans" passHref>
+						<a>Monthly and Annual Plans</a>
 					</Link>
 				</li>
 			</ul>
@@ -101,13 +106,23 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Support</li>
 				<li className="footerNavigationLinks">
-					<Link href="/contact" passHref>
-						<a>Contact Us</a>
+					<Link href="/customer-support" passHref>
+						<a>Customer Support</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/support" passHref>
-						<a>Support Page</a>
+					<Link href="/contact-sales" passHref>
+						<a>Contact Sales</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/demo" passHref>
+						<a>Request Free Demo</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/about-us" passHref>
+						<a>About Us</a>
 					</Link>
 				</li>
 			</ul>

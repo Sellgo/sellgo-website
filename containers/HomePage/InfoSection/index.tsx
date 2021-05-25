@@ -33,18 +33,18 @@ const InfoSection: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="small"
-						navigateTo="/"
+						navigateTo="/pricing?type=free-trial"
 						className={styles.infoSectionCTA}
 					>
-						Try Free Wholesale Tools
+						Try Free Tools
 					</CTAButton>
 					<CTAButton
 						type="secondary"
 						size="small"
-						navigateTo="/"
+						navigateTo="/demo"
 						className={styles.infoSectionCTA}
 					>
-						Demo Premium Wholesale Tools
+						Demo Enterprise Solution
 					</CTAButton>
 				</div>
 

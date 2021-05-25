@@ -1,8 +1,24 @@
 export const productsNavigationList = [
 	{
 		head: 'Sellgo',
-		desc: 'Lorem Ipsum',
+		desc: 'Our entire toolbox to grow your Amazon business',
 		hoverId: 'products'
+	},
+	{
+		head: 'Go Wholesale',
+		desc: 'Toolbox designed for Amazon Wholesale Businesses and Sellers',
+		hoverId: 'gowholesale'
+	},
+	{
+		head: 'Go Private Label',
+		desc: 'Toolbox built for Private Label brands and sellers',
+		hoverId: 'goprivatelabel'
+	},
+	{
+		head: 'Go Agency',
+		desc:
+			'Toolbox made for agencies and enterprises to discover new clientele and leads',
+		hoverId: 'goagency'
 	}
 ];
 

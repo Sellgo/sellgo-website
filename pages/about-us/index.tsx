@@ -90,7 +90,7 @@ const AboutUsPage: React.FC<Props> = () => {
 						<CTAButton
 							size="small"
 							type="secondary"
-							navigateTo="/"
+							navigateTo="/product"
 							className={styles.aboutUsCTA}
 						>
 							View Tools
@@ -180,7 +180,7 @@ const AboutUsPage: React.FC<Props> = () => {
 						<CTAButton
 							type="secondary"
 							size="small"
-							navigateTo="/"
+							navigateTo="/careers"
 							className={styles.aboutUsCTA}
 						>
 							Work with us
@@ -234,7 +234,7 @@ const AboutUsPage: React.FC<Props> = () => {
 							</a>
 							<p>
 								or visit{' '}
-								<Link href="/contact">
+								<Link href="/support">
 									<a className="anchor">Contact Us</a>
 								</Link>
 							</p>
