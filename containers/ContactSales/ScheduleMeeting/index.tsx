@@ -214,16 +214,6 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		}
 	}, [website]);
 
-	// /* Effect for message validation */
-	// useEffect(() => {
-	// 	setFormDataError((prevState) => {
-	// 		return {
-	// 			...prevState,
-	// 			messageErr: validator.isEmpty(message.trim())
-	// 		};
-	// 	});
-	// }, [message]);
-
 	/* Clear the form data */
 	const clearForm = () => {
 		setFormData({
