@@ -32,7 +32,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		handleChange
 	} = props;
 
-	const checkoutLink = `${AppConfig.WEB_URL}/subscription?mode=${
+	const checkoutLink = `${AppConfig.APP_URL}/subscription?mode=${
 		isMonthly ? 'monthly' : 'yearly'
 	}&type=${name.toLowerCase()}`;
 
