@@ -13,7 +13,7 @@ const Calender: React.FC<Props> = (props) => {
 			xmlns="http://www.w3.org/2000/svg"
 			width={width}
 			height={height}
-			viewBox={`0 0 ${width}${height}`}
+			viewBox={`0 0 ${width} ${height}`}
 		>
 			<path
 				d="M13.214 25.714H9.643a1.075 1.075 0 01-1.071-1.071v-3.572A1.075 1.075 0 019.643 
