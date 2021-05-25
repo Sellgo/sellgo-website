@@ -1,23 +1,22 @@
 export const productsNavigationList = [
 	{
 		head: 'Sellgo',
-		desc: 'Our entire toolbox to grow your Amazon business',
+		desc: 'Our Entire Amazon Toolbox.',
 		hoverId: 'products'
 	},
 	{
 		head: 'Go Wholesale',
-		desc: 'Toolbox designed for Amazon Wholesale Businesses and Sellers',
+		desc: 'Tools for Wholesale Businesses and Sellers.',
 		hoverId: 'gowholesale'
 	},
 	{
 		head: 'Go Private Label',
-		desc: 'Toolbox built for Private Label brands and sellers',
+		desc: 'Tools for Private Label Businesses and Sellers',
 		hoverId: 'goprivatelabel'
 	},
 	{
 		head: 'Go Agency',
-		desc:
-			'Toolbox made for agencies and enterprises to discover new clientele and leads',
+		desc: 'Tools for Agencies and Enterprises',
 		hoverId: 'goagency'
 	}
 ];
@@ -30,33 +29,123 @@ export const productsRightPanelData = [
 			{
 				head: 'Extension',
 				desc: 'Product Validation on Amazon Page',
-				navigateTo: '/extension'
+				navigateTo: '/extension',
+				iconLink: '/genericIcon.svg'
 			},
 			{
 				head: 'Profit Finder',
 				desc: 'Wholesale Bulk Calculator',
-				navigateTo: '/profit-finder'
+				navigateTo: '/profit-finder',
+				iconLink: '/genericIcon.svg'
 			},
 			{
 				head: 'Product Tracker ',
 				desc: 'Daily Tracking and Scouting',
-				navigateTo: '/product-tracker'
+				navigateTo: '/product-tracker',
+				iconLink: '/genericIcon.svg'
 			},
 			{
 				head: 'Leads Tracker',
 				desc: 'Monitor Wholesale Product Daily',
-				navigateTo: '/leads-tracker'
+				navigateTo: '/leads-tracker',
+				iconLink: '/genericIcon.svg'
 			},
 			{
 				head: 'Search Management',
 				desc: 'Streamline Wholesale Inventories',
-				navigateTo: '/search-management'
+				navigateTo: '/search-management',
+				iconLink: '/genericIcon.svg'
 			},
 			{
 				head: 'Seller Finder',
 				desc: 'Take Advantage of Competition',
-				navigateTo: '/seller-finder'
+				navigateTo: '/seller-finder',
+				iconLink: '/genericIcon.svg'
 			}
+		]
+	},
+	{
+		hoverId: 'gowholesale',
+		header: 'Features',
+		groupedNavLinksData: [
+			{
+				head: 'Extension',
+				desc: 'Product Validation on Amazon Page',
+				navigateTo: '/extension',
+				iconLink: '/genericIcon.svg'
+			},
+			{
+				head: 'Profit Finder',
+				desc: 'Wholesale Bulk Calculator',
+				navigateTo: '/profit-finder',
+				iconLink: '/genericIcon.svg'
+			},
+			{
+				head: 'Product Tracker ',
+				desc: 'Daily Tracking and Scouting',
+				navigateTo: '/product-tracker',
+				iconLink: '/genericIcon.svg'
+			},
+			{
+				head: 'Leads Tracker',
+				desc: 'Monitor Wholesale Product Daily',
+				navigateTo: '/leads-tracker',
+				iconLink: '/genericIcon.svg'
+			},
+			{
+				head: 'Search Management',
+				desc: 'Streamline Wholesale Inventories',
+				navigateTo: '/search-management',
+				iconLink: '/genericIcon.svg'
+			},
+			{
+				head: 'Seller Finder',
+				desc: 'Take Advantage of Competition',
+				navigateTo: '/seller-finder',
+				iconLink: '/genericIcon.svg'
+			}
+		]
+	},
+	{
+		hoverId: 'goprivatelabel',
+		header: 'Features',
+		groupedNavLinksData: [
+			{
+				head: 'Extension',
+				desc: 'Product Validation on Amazon Page',
+				navigateTo: '/extension',
+				iconLink: '/genericIcon.svg'
+			},
+			{
+				head: 'Profit Finder',
+				desc: 'Wholesale Bulk Calculator',
+				navigateTo: '/profit-finder',
+				iconLink: '/genericIcon.svg'
+			},
+			{
+				head: 'Product Tracker ',
+				desc: 'Daily Tracking and Scouting',
+				navigateTo: '/product-tracker',
+				iconLink: '/genericIcon.svg'
+			}
+		]
+	},
+	{
+		hoverId: 'goagency',
+		header: 'Features',
+		groupedNavLinksData: [
+			{
+				head: 'Seller Finder',
+				desc: 'Take Advantage of Competition',
+				navigateTo: '/seller-finder',
+				iconLink: '/genericIcon.svg'
+			}
+			// {
+			// 	head: 'Seller Database',
+			// 	desc: 'Take Advantage of Competition',
+			// 	navigateTo: '/seller-database',
+			// 	iconLink: '/genericIcon.svg'
+			// }
 		]
 	}
 ];

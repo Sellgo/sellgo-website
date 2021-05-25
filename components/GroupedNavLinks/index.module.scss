@@ -19,16 +19,9 @@
 		cursor: pointer !important;
 		display: flex;
 		align-items: flex-start;
+		justify-content: flex-start;
 		min-width: 45%;
 	}
-}
-
-.icon {
-	width: 4rem;
-	height: 4rem;
-	background: $grey_1;
-	border-radius: 7px;
-	cursor: auto;
 }
 
 .linkDetails {
@@ -41,7 +34,7 @@
 	justify-content: flex-start;
 
 	h2 {
-		font-size: $fontsize_subtitle_20;
+		font-size: $fontsize_content_18;
 		font-weight: $fontweight_medium;
 	}
 

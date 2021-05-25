@@ -71,7 +71,7 @@ export const getStaticProps: GetStaticProps = async () => {
 	);
 
 	const productPricingDetailsResponse = await axios.get(
-		`https://api.sellgo-dev.com/api/subscriptions`
+		`${AppConfig.API_URL}/subscriptions`
 	);
 
 	const { data: faqDetailsForPricing } = pringFAQResponse;
