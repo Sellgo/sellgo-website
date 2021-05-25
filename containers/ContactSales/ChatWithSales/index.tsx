@@ -14,6 +14,10 @@ const ChatWithSales: React.FC<Props> = () => {
 				className={`page-container ${styles.chatWithSales}`}
 			>
 				<h2 className="secondary-heading">Chat Directly with Our Sales Team</h2>
+
+				<div className={styles.chatWrapper}></div>
+
+				<div className={styles.divider} />
 			</Element>
 		</section>
 	);
