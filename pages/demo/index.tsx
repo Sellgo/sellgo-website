@@ -4,6 +4,7 @@ import validator from 'validator';
 import Image from 'next/image';
 import axios from 'axios';
 import Select from 'react-select';
+import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -14,6 +15,7 @@ import HeroBox from '../../containers/Demo/HeroBox';
 /* Components */
 import FormInput from '../../components/FormInput';
 import SEOHead from '../../components/SEOHead';
+import FormSubmitConfirm from '../../components/FormSubmitConfirm';
 
 /* Constants */
 import {
@@ -54,6 +56,8 @@ const DemoPage: React.FC<Props> = () => {
 		companyErr: false,
 		websiteErr: false
 	});
+
+	const [openSubmitConfirm, setOpenSubmitConfirm] = useState(false);
 
 	const handleChange = (e: any) => {
 		const { value, name, checked } = e.target;
@@ -113,6 +117,11 @@ const DemoPage: React.FC<Props> = () => {
 		companyErr,
 		websiteErr
 	} = formDataError;
+
+	/* Mount the react modal */
+	useEffect(() => {
+		Modal.setAppElement('#formSubmitConfirm');
+	}, []);
 
 	/* Effects for Email validation */
 	useEffect(() => {
@@ -261,6 +270,7 @@ const DemoPage: React.FC<Props> = () => {
 			const response = await axios.post(URL, formData);
 			if (response.status === 201) {
 				clearForm();
+				setOpenSubmitConfirm(true);
 			}
 		} catch (err) {
 			console.error('Error Sending data to hubspot');
@@ -464,6 +474,21 @@ const DemoPage: React.FC<Props> = () => {
 					</button>
 				</form>
 			</main>
+
+			<div id="formSubmitConfirm"></div>
+
+			<Modal
+				isOpen={openSubmitConfirm}
+				onRequestClose={() => setOpenSubmitConfirm(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<FormSubmitConfirm
+					heading="You're all set"
+					body="Your demo request has been confirmed!."
+					ending="Our sales team will be in touch with you soon."
+				/>
+			</Modal>
 		</>
 	);
 };

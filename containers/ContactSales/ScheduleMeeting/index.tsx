@@ -458,7 +458,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 				<FormSubmitConfirm
 					heading="You're all set"
 					body="Your request to talk with our sales team has been confirmed!."
-					ending="Our sales team will be in touch you soon."
+					ending="Our sales team will be in touch with you soon."
 				/>
 			</Modal>
 		</>
