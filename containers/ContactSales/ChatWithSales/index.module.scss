@@ -1,0 +1,10 @@
+@import '../../../styles/guidelines';
+
+.chatWithSalesSection {
+	margin-top: 30rem;
+	margin-bottom: 15rem;
+
+	@media only screen and(max-width: 1300px) {
+		margin-top: 10rem;
+	}
+}
