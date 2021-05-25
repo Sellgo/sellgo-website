@@ -11,8 +11,12 @@
 	@media only screen and(max-width: 1080px) {
 		min-height: max-content;
 		margin: 5rem auto;
-		text-align: center;
-		width: 100%;
+		text-align: left;
+		width: 60%;
+	}
+
+	@media only screen and(max-width: 750px) {
+		width: 90%;
 	}
 
 	p {
@@ -20,10 +24,26 @@
 		font-size: $fontsize_content_14;
 		color: $prim_dark_2;
 		margin-bottom: 3rem;
+	}
+}
 
-		@media only screen and(max-width: 1080px) {
-			max-width: 80%;
-			margin: 2rem auto;
+.premiumPlans {
+	font-size: $fontsize_content_14;
+
+	@media only screen and(max-width: 1080px) {
+		text-align: left;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	ul {
+		margin: 2rem 0;
+		font-size: inherit;
+
+		li {
+			margin: 0.5rem 0;
 		}
 	}
 }
@@ -52,9 +72,10 @@
 		position: static;
 		margin: 4rem auto;
 		margin-bottom: 10rem;
+		width: 60%;
 	}
 
-	@media only screen and(max-width: 500px) {
+	@media only screen and(max-width: 750px) {
 		width: 90%;
 		height: auto;
 	}
@@ -63,6 +84,12 @@
 		font-size: $fontsize_content_14;
 		color: $prim_dark_2;
 		line-height: $fontlineheight_content_30;
+
+		a {
+			color: inherit;
+			text-decoration: underline;
+			margin: 0 5px;
+		}
 	}
 
 	button {
@@ -93,7 +120,7 @@
 	margin-bottom: 3rem;
 	min-height: 8.2rem;
 
-	@media only screen and(max-width: 500px) {
+	@media only screen and(max-width: 750px) {
 		width: 100%;
 		margin-bottom: 2rem;
 	}
@@ -142,8 +169,8 @@
 	height: 8.2rem;
 	margin-bottom: 5rem;
 
-	@media only screen and(max-width: 500px) {
-		min-width: 100% !important;
+	@media only screen and(max-width: 750px) {
+		width: 100%;
 		margin-bottom: 2rem;
 	}
 
@@ -168,8 +195,9 @@
 	width: 18rem;
 	position: relative;
 
-	@media only screen and(max-width: 500px) {
+	@media only screen and(max-width: 750px) {
 		width: 100%;
+		margin-bottom: 2rem;
 	}
 
 	&__placeholder {
@@ -189,8 +217,9 @@
 		justify-content: flex-end;
 		align-items: center;
 
-		@media only screen and(max-width: 500px) {
-			width: 100% !important;
+		@media only screen and(max-width: 750px) {
+			width: 100%;
+			margin-bottom: 2rem;
 		}
 	}
 

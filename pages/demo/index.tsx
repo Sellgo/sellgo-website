@@ -5,6 +5,7 @@ import Image from 'next/image';
 import axios from 'axios';
 import Select from 'react-select';
 import Modal from 'react-modal';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -294,31 +295,52 @@ const DemoPage: React.FC<Props> = () => {
 						The Sellgo pricing packages include tools that can help your Amazon
 						business at any stage and Amazon sellers at every level of
 						experience.
-						<br />
-						<br />
-						Our Premium Plan includes:
-						<br />
-						<br />
-						- Seller Finder
-						<br />
-						- Search Management
-						<br />
-						- Leads Tracker
-						<br />
-						- Profit Finder
-						<br />
-						- Product Tracker
-						<br />
-						- Sellgo Chrome Extension
-						<br />
-						... and more.
 					</p>
+					<div className={styles.premiumPlans}>
+						<p>Our Premium Plan includes:</p>
+						<ul>
+							<li>
+								<Link href="/seller-finder" passHref>
+									<a className="anchor">- Seller Finder &#8594; </a>
+								</Link>
+							</li>
+							<li>
+								<Link href="/search-management" passHref>
+									<a className="anchor">- Search Management &#8594; </a>
+								</Link>
+							</li>
+							<li>
+								<Link href="/leads-tracker" passHref>
+									<a className="anchor">- Leads Tracker &#8594; </a>
+								</Link>
+							</li>
+							<li>
+								<Link href="/profit-finder" passHref>
+									<a className="anchor">- Profit Finder &#8594; </a>
+								</Link>
+							</li>
+							<li>
+								<Link href="/product-tracker" passHref>
+									<a className="anchor">- Product Tracker &#8594; </a>
+								</Link>
+							</li>
+							<li>
+								<Link href="/extension" passHref>
+									<a className="anchor">- Sellgo Chrome Extension &#8594; </a>
+								</Link>
+							</li>
+
+							<li>... and more</li>
+						</ul>
+					</div>
 					<p>
 						For any questions or concerns regarding our pricing plans or tools,
-						send us a message at support@sellgo.com For customized plans or
-						demos, you can also Contact Sales.
+						send us a message at{' '}
+						<a href="mailto:support@sellgo.com" className="anchor">
+							support@sellgo.com
+						</a>
+						. For customized plans or demos, you can also Contact Sales.
 					</p>
-					<p></p>
 				</div>
 
 				<form className={styles.demoPageForm} onSubmit={handleSubmit}>
@@ -466,7 +488,14 @@ const DemoPage: React.FC<Props> = () => {
 						By subscribing to the Sellgo blog, you agree to receiving relevant
 						content regarding our services, products, and promotions. You may
 						unsubscribe from these communications at any time. For more
-						information, check out our Privacy Policy and Terms of Use.
+						information, check out our
+						<Link href="/privacy-policy" passHref>
+							<a>Privacy Policy</a>
+						</Link>
+						and
+						<Link href="/terms-of-use" passHref>
+							<a>Terms of Use.</a>
+						</Link>
 					</p>
 
 					<button
