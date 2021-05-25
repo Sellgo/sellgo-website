@@ -39,7 +39,7 @@ const ProductsSection: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="/pricing?type=monthly-and-annual-plans"
+				navigateTo="/pricing"
 				className={styles.productsSectionCTA}
 			>
 				See Pricing Plans
