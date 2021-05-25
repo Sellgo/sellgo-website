@@ -13,7 +13,7 @@ const PaperAirplane: React.FC<Props> = (props) => {
 			xmlns="http://www.w3.org/2000/svg"
 			width={width}
 			height={height}
-			viewBox={`0 0 ${width} ${height}`}
+			viewBox={`0 0 100 100`}
 		>
 			<path
 				d="M65.084.442L1.708 37.005a3.284 3.284 0 00.3 5.907l14.535 6.1 39.284-34.623a.82.82 0 
