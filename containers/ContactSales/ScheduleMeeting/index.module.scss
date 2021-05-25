@@ -1,101 +1,64 @@
-@import '../../styles/guidelines';
+@import '../../../styles/guidelines';
 
-.demoPage {
-	position: relative;
-}
-
-.demoPageContent {
-	min-height: 70vh;
+.scheduleMeetingSection {
 	margin: 10rem auto;
+}
 
-	@media only screen and(max-width: 1080px) {
-		min-height: max-content;
-		margin: 5rem auto;
-		text-align: center;
+.scheduleMeetingWrapper {
+	width: 85rem;
+	min-height: 108rem;
+	border: 1px solid $grey_2;
+	box-shadow: $box-shadow-1;
+	border-radius: 7px;
+	margin: 0 auto;
+	padding: 3rem 0;
+
+	@media only screen and(max-width: 900px) {
 		width: 100%;
+		padding: 3rem;
 	}
 
 	p {
-		max-width: 51rem;
-		font-size: $fontsize_content_14;
-		color: $prim_dark_2;
-		margin-bottom: 3rem;
-
-		@media only screen and(max-width: 1080px) {
-			max-width: 80%;
-			margin: 2rem auto;
-		}
+		font-size: $fontsize_content_12;
+		color: $second_grey;
+		max-width: 75rem;
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 2rem;
 	}
 }
 
-.demoPageForm {
-	width: 43.5rem;
-	height: max-content;
-	border-radius: 7px;
-	background: $prim_white;
-	box-shadow: $box-shadow-1;
-	position: absolute;
-	top: 10rem;
-	right: 30rem;
-	padding: 3rem;
-	padding-bottom: 5rem;
+.scheduleForm {
+	width: 53rem;
+	margin: 4rem auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-self: flex-start;
 
-	@media only screen and(max-width: 1600px) {
-		right: 15rem;
-	}
-
-	@media only screen and(max-width: 1300px) {
-		right: 5rem;
-	}
-
-	@media only screen and(max-width: 1080px) {
-		position: static;
-		margin: 4rem auto;
-		margin-bottom: 10rem;
-	}
-
-	@media only screen and(max-width: 500px) {
+	@media only screen and(max-width: 700px) {
 		width: 90%;
-		height: auto;
-	}
-
-	p {
-		font-size: $fontsize_content_14;
-		color: $prim_dark_2;
-		line-height: $fontlineheight_content_30;
 	}
 
 	button {
-		margin-top: 5rem;
+		margin: 4rem auto;
+		width: 21rem;
 		cursor: pointer;
 
-		@media only screen and(max-width: 500px) {
-			margin: 3rem auto;
-		}
-
 		&:disabled {
-			opacity: 0.5;
+			opacity: 0.7;
 			cursor: unset;
 		}
 	}
 }
 
-.inputControlWrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	flex-wrap: wrap;
-}
-
 .formInput {
-	margin: 2rem 0;
-	width: 18rem;
+	width: 24rem;
 	margin-bottom: 3rem;
 	min-height: 8.2rem;
 
-	@media only screen and(max-width: 500px) {
+	@media only screen and(max-width: 700px) {
 		width: 100%;
-		margin-bottom: 2rem;
 	}
 
 	label {
@@ -130,21 +93,37 @@
 		font-size: $fontsize_content_12;
 		color: $system_red;
 	}
+
+	&__message {
+		width: 100%;
+
+		textarea {
+			background: $grey_1;
+			outline: 0;
+			width: 100%;
+			font-size: $fontsize_content_14;
+			border: 1px solid $second_silver;
+			border-radius: 3px;
+			padding: 1.5rem 2rem;
+			resize: vertical;
+			max-width: 52rem;
+			min-height: 8rem;
+			color: $prim_dark_2;
+		}
+	}
 }
 
 .dropdownWrapper {
-	width: 18rem;
+	width: 24rem;
 	font-size: $fontsize_content_14;
 	color: $prim_dark_2;
-	margin: 2rem 0;
 	max-height: 8.2rem;
 	min-height: 8.2rem;
 	height: 8.2rem;
 	margin-bottom: 5rem;
 
-	@media only screen and(max-width: 500px) {
-		min-width: 100% !important;
-		margin-bottom: 2rem;
+	@media only screen and(max-width: 700px) {
+		width: 100%;
 	}
 
 	label {
@@ -159,16 +138,13 @@
 
 .countrySelect {
 	height: 8.2rem;
-	@media only screen and(max-width: 500px) {
-		width: 100% !important;
-	}
 }
 
 .selectDropdown {
-	width: 18rem;
+	width: 24rem;
 	position: relative;
 
-	@media only screen and(max-width: 500px) {
+	@media only screen and(max-width: 700px) {
 		width: 100%;
 	}
 
@@ -177,7 +153,7 @@
 	}
 
 	&__control {
-		width: 18rem;
+		width: 24rem;
 		background: $grey_1;
 		border: 1px solid $second_silver;
 		font-size: $fontsize_content_14;
@@ -189,7 +165,7 @@
 		justify-content: flex-end;
 		align-items: center;
 
-		@media only screen and(max-width: 500px) {
+		@media only screen and(max-width: 700px) {
 			width: 100% !important;
 		}
 	}
@@ -232,16 +208,9 @@
 	}
 }
 
-.selectCheckbox {
-	display: flex;
-	align-items: center;
-	margin-bottom: 4rem;
-	label {
-		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
-		font-weight: $fontweight_semibold;
-		width: 100%;
-		display: inline-block;
-		margin-left: 5px;
-	}
+.formSubmitInfo {
+	width: 100% !important;
+	font-size: $fontsize_content_14 !important;
+	color: $prim_dark_2 !important;
+	text-align: left !important;
 }

@@ -120,7 +120,7 @@ const DemoPage: React.FC<Props> = () => {
 			setFormDataError((prevErr) => {
 				return {
 					...prevErr,
-					emailErr: !validator.isEmail(email)
+					emailErr: !validator.isEmail(email.trim())
 				};
 			});
 		} else {
@@ -255,8 +255,6 @@ const DemoPage: React.FC<Props> = () => {
 		formData.append('website', website);
 		formData.append('numemployees', companySize);
 		formData.append('subscribeblog', sellgoBlog ? 'Yes' : 'No');
-
-		console.log(formData);
 
 		try {
 			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;

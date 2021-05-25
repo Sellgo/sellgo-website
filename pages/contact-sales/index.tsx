@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 /* Containers */
 import Herobox from '../../containers/ContactSales/HeroBox';
 import ChatWithSales from '../../containers/ContactSales/ChatWithSales';
+import ScheduleMeeting from '../../containers/ContactSales/ScheduleMeeting';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -31,6 +32,7 @@ const ContactSalesPage: React.FC<Props> = () => {
 			<main className={styles.contactSalesPage}>
 				<Herobox />
 				<ChatWithSales />
+				<ScheduleMeeting />
 			</main>
 		</>
 	);
