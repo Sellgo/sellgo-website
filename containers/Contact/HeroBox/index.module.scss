@@ -76,7 +76,7 @@
 }
 
 .contactCard {
-	background: $prim_white;
+	background: $grey_0;
 	border-radius: 7px;
 	width: 43rem;
 	min-height: 24.2rem;
@@ -85,6 +85,7 @@
 	justify-content: space-evenly;
 	align-items: center;
 	text-align: center;
+	box-shadow: $box-shadow-1;
 
 	@media only screen and(max-width: 500px) {
 		width: 100%;
