@@ -20,6 +20,7 @@ class MyDocument extends Document {
 
 				{/* Hotjar Integration */}
 				<script
+					defer
 					dangerouslySetInnerHTML={{
 						__html: `(function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -34,6 +35,7 @@ class MyDocument extends Document {
 
 				{/* Intercom settings */}
 				<script
+					defer
 					dangerouslySetInnerHTML={{
 						__html: `  window.intercomSettings = {
     app_id: "ju2u3hej"
@@ -44,6 +46,7 @@ class MyDocument extends Document {
 
 				{/* Intercom main script */}
 				<script
+					defer
 					dangerouslySetInnerHTML={{
 						__html: `(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function")
 						{ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function()
