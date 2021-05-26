@@ -22,8 +22,12 @@ function App({ Component, pageProps }: AppProps) {
 	const { asPath } = router;
 
 	useEffect(() => {
-		// track only on production
-		if (process.env.NODE_ENV === 'production') {
+		// track only on production and window based environment
+		if (
+			process.env.NODE_ENV === 'production' &&
+			typeof window !== 'undefined'
+		) {
+			console.log('Tracking page');
 			analytics.page({
 				url: generatePageURL(asPath),
 				title: window.document.title,
