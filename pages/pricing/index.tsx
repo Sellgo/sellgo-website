@@ -24,11 +24,10 @@ import AppConfig from '../../config';
 
 interface Props {
 	faqDetailsForPricing: any;
-	subscriptionDetails: any;
 }
 
 const PricingPage: React.FC<Props> = (props) => {
-	const { faqDetailsForPricing, subscriptionDetails } = props;
+	const { faqDetailsForPricing } = props;
 
 	const [
 		isProductsPanelSelected,
@@ -52,10 +51,7 @@ const PricingPage: React.FC<Props> = (props) => {
 
 			{/* render either prcing panel or bundles panel */}
 			{isProductsPanelSelected ? (
-				<ProductsPanel
-					faqDetails={faqDetailsForPricing.products}
-					subscriptionDetails={subscriptionDetails}
-				/>
+				<ProductsPanel faqDetails={faqDetailsForPricing.products} />
 			) : (
 				<BundlesPanel />
 			)}
@@ -70,17 +66,11 @@ export const getStaticProps: GetStaticProps = async () => {
 		`${AppConfig.FAQ_BUCKET}/pricing.json`
 	);
 
-	const productPricingDetailsResponse = await axios.get(
-		`${AppConfig.API_URL}/subscriptions`
-	);
-
 	const { data: faqDetailsForPricing } = pringFAQResponse;
-	const { data: subscriptionDetails } = productPricingDetailsResponse;
 
 	return {
 		props: {
-			faqDetailsForPricing,
-			subscriptionDetails
+			faqDetailsForPricing
 		},
 		revalidate: 1
 	};

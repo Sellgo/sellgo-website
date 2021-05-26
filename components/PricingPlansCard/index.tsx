@@ -15,28 +15,35 @@ import {
 } from '../../constants';
 
 interface Props {
+	// product details
 	id: number;
 	name: string;
+	productsDatabase: number;
+	salesEstimateCount: number;
+	monthlyPrice: number;
+	annualPrice: number;
 	desc: string;
 	featureSubName: string;
 	featuresLists: any;
+
+	// plan details
 	planName: string;
 	isMonthly: boolean;
-	subscriptionDetails: any;
-	withToggle?: boolean;
-	className?: string;
 }
 
 const PricingPlansCard: React.FC<Props> = (props) => {
 	const {
 		id,
 		name,
+		productsDatabase,
+		salesEstimateCount,
+		monthlyPrice,
+		annualPrice,
 		desc,
 		featureSubName,
 		featuresLists,
 		isMonthly,
-		planName,
-		subscriptionDetails
+		planName
 	} = props;
 
 	const isGradientHeader = plansWithHeaderGradient.includes(name);
@@ -54,11 +61,15 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 
 			<div className={styles.pricingPlansCard}>
 				<PricingPlansCardHead
-					planName={planName}
+					id={id}
 					name={name}
 					desc={desc}
-					id={id}
-					subscriptionDetails={subscriptionDetails}
+					productsDatabase={productsDatabase}
+					salesEstimateCount={salesEstimateCount}
+					monthlyPrice={monthlyPrice}
+					annualPrice={annualPrice}
+					// plan details
+					planName={planName}
 					isMonthly={isMonthly}
 				/>
 

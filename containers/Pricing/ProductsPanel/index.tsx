@@ -24,14 +24,13 @@ import {
 
 interface Props {
 	faqDetails: FAQDetails[];
-	subscriptionDetails: any;
 }
 
 const ProductsPanel: React.FC<Props> = (props) => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
 
-	const { faqDetails, subscriptionDetails } = props;
+	const { faqDetails } = props;
 	const router = useRouter();
 
 	const queryCollection = router.query || {};
@@ -95,11 +94,11 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					<TabPanel key={uuid()}>
 						<PricingPlansSection
 							planName={plan.planName}
-							productsIncluded={plan.productsIncluded}
+							summary={plan.summary}
 							infoAlertMessage={plan.infoAlertMessage}
+							productsIncluded={plan.productsIncluded}
 							selectedPlanType={selectedPlanType}
 							faqData={faqDetails[selectedPlanType]}
-							subscriptionDetails={subscriptionDetails}
 						/>
 					</TabPanel>
 				);

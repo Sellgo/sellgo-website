@@ -4,12 +4,18 @@ import React from 'react';
 import GenericPlanCardHead from '../GenericPlanCardHead';
 
 interface Props {
+	// product details
 	id: number;
 	name: string;
+	productsDatabase: number;
+	salesEstimateCount: number;
+	monthlyPrice: number;
+	annualPrice: number;
 	desc: string;
+
+	// plan details
 	isMonthly: boolean;
-	planName?: string;
-	subscriptionDetails: any;
+	planName: string;
 
 	// used for price summary card head inside table comparision
 	withToggle?: boolean;
@@ -20,26 +26,20 @@ interface Props {
 const PricingPlansCardHead: React.FC<Props> = (props) => {
 	const {
 		name,
-		id,
-		isMonthly,
+		monthlyPrice,
+		annualPrice,
 		desc,
-		subscriptionDetails,
+		isMonthly,
 		...otherProps
 	} = props;
-
-	const getSubscriptionPrices = subscriptionDetails.filter(
-		(subscription: any) => {
-			return subscription.id === id;
-		}
-	)[0];
 
 	return (
 		<>
 			<GenericPlanCardHead
 				name={name}
 				desc={desc}
-				monthlyPrice={Number(getSubscriptionPrices.monthly_price)}
-				annualPrice={Number(getSubscriptionPrices.yearly_price)}
+				monthlyPrice={monthlyPrice}
+				annualPrice={annualPrice}
 				isMonthly={isMonthly}
 				{...otherProps}
 			/>

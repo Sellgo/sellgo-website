@@ -35,26 +35,3 @@ export const generateQueryFromTabIndex = (tabIndex: number): string => {
 	const queryTypeString = reversePlansTabMapper[tabIndex];
 	return queryTypeString;
 };
-
-export const formatPlansStats = (stat: number) => {
-	if (!stat) {
-		return 0;
-	}
-
-	return stat.toLocaleString();
-};
-
-const periodToDisplayMapper: KeyValuePair = {
-	monthly: '/mo',
-	daily: '/day'
-};
-
-export const formatPlanPeriod = (period: string, appendString: string = '') => {
-	if (!period) {
-		return '/day';
-	}
-
-	const periodFormatter = periodToDisplayMapper[period] || '/day';
-
-	return `${appendString}${periodFormatter}`;
-};
