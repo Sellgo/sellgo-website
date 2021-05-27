@@ -31,8 +31,8 @@ const NavbarTop: React.FC<Props> = () => {
 					</a>
 				</li>
 				<li className={styles.navbarTopLink}>
-					<Link href="/support" passHref>
-						<a className={styles.navbarLink}>Customer Support</a>
+					<Link href="/contact" passHref>
+						<a className={styles.navbarLink}>Contact Us</a>
 					</Link>
 				</li>
 				<li className={styles.navbarTopLink}>

@@ -11,7 +11,7 @@ export const featureSectionList = [
 			'BuyBox Analysis'
 		],
 		isPopular: false,
-		navigateTo: '/'
+		navigateTo: '/pricing'
 	},
 	{
 		title: 'Go Wholesale',
@@ -25,7 +25,7 @@ export const featureSectionList = [
 			'Seller Finder'
 		],
 		isPopular: true,
-		navigateTo: '/'
+		navigateTo: '/pricing'
 	},
 	{
 		title: 'Go Agency',
@@ -39,6 +39,6 @@ export const featureSectionList = [
 			'Product Finder'
 		],
 		isPopular: false,
-		navigateTo: '/'
+		navigateTo: '/pricing'
 	}
 ];

@@ -9,9 +9,7 @@ interface Props {
 	setBundlesPanel: () => void;
 }
 
-const HeroBox: React.FC<Props> = (props) => {
-	const { isProductsPlanSelected, setProductsPanel } = props;
-
+const HeroBox: React.FC<Props> = () => {
 	return (
 		<>
 			<section className={styles.heroboxSection}>
@@ -19,14 +17,14 @@ const HeroBox: React.FC<Props> = (props) => {
 				<p>Pay less on software, invest more in your business.</p>
 
 				<div className={styles.tabsWrapper}>
-					<button
+					{/* <button
 						className={`${styles.tab} ${
 							isProductsPlanSelected ? '' : styles.tab__disabled
 						} ${styles.tab__pricing}`}
 						onClick={setProductsPanel}
 					>
 						Products & Plans
-					</button>
+					</button> */}
 					{/* <button
 						className={`${styles.tab} ${
 							!isProductsPlanSelected ? '' : styles.tab__disabled

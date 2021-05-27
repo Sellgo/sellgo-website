@@ -39,12 +39,7 @@ const options = [
 		titleIcon: <Image src="/genericIcon.svg" width={25} height={25} />,
 		content: [
 			{ id: uuid(), name: 'Monthly and Annual Plans', to: '/pricing' },
-			{ id: uuid(), name: 'Free Trial', to: '/pricing?type=free-trial' },
-			{
-				id: uuid(),
-				name: 'Pay $1 a Day',
-				to: '/pricing?type=pay-one-dollar-a-day'
-			}
+			{ id: uuid(), name: 'Free Trial', to: '/pricing?type=free-trial' }
 		]
 	},
 	{
@@ -53,7 +48,7 @@ const options = [
 		content: [
 			{ id: uuid(), name: 'About us', to: '/about-us' },
 			{ id: uuid(), name: 'Blogs', to: '/blogs' },
-			{ id: uuid(), name: 'Affiliate Program', to: '/affiliate-program' },
+			{ id: uuid(), name: 'Request Demo', to: '/demo' },
 			{
 				id: uuid(),
 				name: 'Free Sales Estimation Tools',
@@ -72,8 +67,7 @@ const options = [
 		titleIcon: <Image src="/genericIcon.svg" width={25} height={25} />,
 		content: [
 			{ id: uuid(), name: 'Contact Us', to: '/contact' },
-			{ id: uuid(), name: 'Contact Support', to: '/contact-support' },
-			{ id: uuid(), name: 'Customer Support', to: '/support' }
+			{ id: uuid(), name: 'Contact Sales', to: '/contact-sales' }
 		]
 	}
 ];
