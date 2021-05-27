@@ -38,7 +38,8 @@ class MyDocument extends Document {
 					defer
 					dangerouslySetInnerHTML={{
 						__html: `  window.intercomSettings = {
-    app_id: "ju2u3hej"
+    app_id: "ju2u3hej",
+		custom_launcher_selector:'#chat-link'
   };
 `
 					}}

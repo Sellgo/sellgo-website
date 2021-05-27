@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -45,9 +44,10 @@ const HeroBox: React.FC<Props> = () => {
 						<div className={styles.chat}>
 							<p>
 								For faster response, talk with us via
-								<Link href="/" passHref>
-									<a href=""> chat.</a>
-								</Link>
+								<a id="chat-link" href="#">
+									{' '}
+									chat.
+								</a>
 							</p>
 						</div>
 					</div>

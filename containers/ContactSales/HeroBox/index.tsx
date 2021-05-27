@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* COmponents */
-import Comment from '../../../components/Icons/Comment';
-import Calender from '../../../components/Icons/Calender';
+// import Comment from '../../../components/Icons/Comment';
+// import Calender from '../../../components/Icons/Calender';
 
 interface Props {}
 
@@ -41,7 +41,7 @@ const Herobox: React.FC<Props> = () => {
 				</div>
 			</div>
 
-			<div className={`page-container ${styles.heroBoxCards}`}>
+			{/* <div className={`page-container ${styles.heroBoxCards}`}>
 				<div className={styles.contactCardsWrapper}>
 					<div className={styles.contactCard}>
 						<Comment width={50} height={38} fill="#808080" />
@@ -67,7 +67,7 @@ const Herobox: React.FC<Props> = () => {
 						</Link>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</>
 	);
 };
