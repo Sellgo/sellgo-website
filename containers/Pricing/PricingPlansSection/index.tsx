@@ -25,50 +25,26 @@ import { FAQDetails } from '../../../interfaces/FAQ';
 
 interface Props {
 	planName: string;
+	summary: string;
+	infoAlertMessage: any;
 	productsIncluded: any;
 	selectedPlanType: number;
 	faqData: FAQDetails;
-	infoAlertMessage: any;
-	subscriptionDetails: any;
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
 	const {
 		planName,
+		summary,
 		productsIncluded,
 		infoAlertMessage,
 		selectedPlanType,
-		faqData,
-		subscriptionDetails
+		faqData
 	} = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
 
-	const nonEnterprisePlans = subscriptionDetails.filter(
-		(plan: any) => plan.id !== 3
-	);
-
-	const getComparisionStats = nonEnterprisePlans.reduce(
-		(acc: any, plan: any) => {
-			return {
-				...acc,
-				[plan.name.toLocaleLowerCase()]: {
-					productTracker: plan.track_limit,
-					salesEstimateLimit: plan.sales_estimation_limit,
-					salesEstimatePeriod: plan.sales_estimation_period,
-					profitFinder: plan.synthesis_limit,
-					profitFinderPeriod: plan.synthesis_period,
-					leadsTracker: plan.leads_track_limit,
-					sellerFinderLimit: plan.seller_limit,
-					sellerFinderPeriod: plan.seller_period,
-					trackHistory: Math.round(plan.track_history_limit / 30)
-				}
-			};
-		},
-		{}
-	);
-
-	const allPlanFeatures = getAllFeaturesForPlans(planName, getComparisionStats);
+	const allPlanFeatures = getAllFeaturesForPlans(planName);
 
 	const infoAlertDetails = isMonthly
 		? infoAlertMessage.monthly
@@ -84,7 +60,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					</div>
 
 					<div className={styles.planShortSummary}>
-						<p> Try Our Premium Tools and Access Real-Data for $1!</p>
+						<p>{summary}</p>
 					</div>
 
 					{/* Show for all expect pay as you go */}
@@ -112,12 +88,16 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							key={uuid()}
 							id={product.id}
 							name={product.name}
+							productsDatabase={product.productsDatabase}
+							salesEstimateCount={product.salesEstimateCount}
+							monthlyPrice={product.monthlyPrice}
+							annualPrice={product.annualPrice}
 							desc={product.desc}
 							featureSubName={product.featureSubName}
 							featuresLists={product.featuresLists}
+							// Plan details
 							planName={planName}
 							isMonthly={isMonthly}
-							subscriptionDetails={subscriptionDetails}
 						/>
 					);
 				})}
@@ -141,15 +121,21 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						return (
 							<div className={styles.priceSummaryCard} key={uuid()}>
 								<PricingPlansCardHead
+									// product details
 									id={product.id}
 									name={product.name}
+									productsDatabase={product.productsDatabase}
+									salesEstimateCount={product.salesEstimateCount}
+									monthlyPrice={product.monthlyPrice}
+									annualPrice={product.annualPrice}
 									desc={product.desc}
+									// plan details
 									isMonthly={isMonthly}
-									className={styles.tablePricingSummary}
 									planName={planName}
+									// optional props for comparision table cards
 									withToggle
+									className={styles.tablePricingSummary}
 									handleChange={() => setIsMonthly(!isMonthly)}
-									subscriptionDetails={subscriptionDetails}
 								/>
 							</div>
 						);

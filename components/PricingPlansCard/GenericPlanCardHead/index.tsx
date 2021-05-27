@@ -14,7 +14,11 @@ interface Props {
 	desc: string;
 	monthlyPrice: number;
 	annualPrice: number;
+
+	// plan details
 	isMonthly: boolean;
+
+	// used for pricing cards on comparision table
 	withToggle?: boolean;
 	className?: string;
 	handleChange?: any;

@@ -15,6 +15,7 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and Annual Pricing Plans',
+		summary: 'Try Our Premium Tools and Access Real-Data for $1!',
 		infoAlertMessage: {
 			monthly: {
 				head: `Start selling on Amazon today with Sellgo's free tools.`,
@@ -32,11 +33,13 @@ export const plansAndProductsDetails = [
 			}
 		},
 		productsIncluded: [
-			// id means subscription id
-			// pricing will be fetched from backend
 			{
+				id: 6, // subscriptionID if needed
 				name: 'Starter',
-				id: 6,
+				productsDatabase: 0,
+				salesEstimateCount: 1000,
+				monthlyPrice: 49,
+				annualPrice: 348,
 				desc: `The toolbox for beginner sellers. \n Get access to our tools and chrome extension!`,
 				featureSubName: 'Start with',
 				featuresLists: [
@@ -59,8 +62,12 @@ export const plansAndProductsDetails = [
 				]
 			},
 			{
-				name: 'Suite',
 				id: 1,
+				name: 'Suite',
+				productsDatabase: 0,
+				salesEstimateCount: 1500,
+				monthlyPrice: 69,
+				annualPrice: 588,
 				featureSubName: 'Starter Plan Plus',
 				desc: `For experienced sellers looking to grow \n their businesses and maximize their earnings.`,
 				featuresLists: [
@@ -87,8 +94,12 @@ export const plansAndProductsDetails = [
 				]
 			},
 			{
-				name: 'Professional',
 				id: 2,
+				name: 'Professional',
+				productsDatabase: 0,
+				salesEstimateCount: 2500,
+				monthlyPrice: 129,
+				annualPrice: 996,
 				featureSubName: 'Suite Plan Plus',
 				desc: `For professional sellers and businesses who need \nthe best tools. 
 				Track more products, obtain more data, \nand optimize your entire Amazon business.`,
