@@ -27,7 +27,6 @@ function App({ Component, pageProps }: AppProps) {
 			process.env.NODE_ENV === 'production' &&
 			typeof window !== 'undefined'
 		) {
-			console.log('Tracking page');
 			analytics.page({
 				url: generatePageURL(asPath),
 				title: window.document.title,
