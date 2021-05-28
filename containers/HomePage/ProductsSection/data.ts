@@ -8,7 +8,7 @@ export const productsDetails = [
 		thriving Amazon wholesale business.`,
 		linkLabel: 'Learn more about our Amazon Wholesale resources.',
 		navigateTo: '/',
-		imageUrl: '/productOne.png'
+		imageUrl: '/productSection1.png'
 	},
 	{
 		title: 'Amazon Private Label Sellers',
@@ -18,7 +18,7 @@ export const productsDetails = [
 		 maximize your brand, sales, and profits.`,
 		linkLabel: 'Learn more about our Amazon Private Label resources.',
 		navigateTo: '/',
-		imageUrl: '/productSecond.png'
+		imageUrl: '/productSection2.png'
 	},
 	{
 		title: 'Brands, Agencies, and Enterprise',
@@ -28,6 +28,6 @@ export const productsDetails = [
 		of existing sellers who are already looking for you. `,
 		linkLabel: 'Learn more about our Brand, Agency, and Enterprise resources.',
 		navigateTo: '/',
-		imageUrl: '/productThird.png'
+		imageUrl: '/productSection3.png'
 	}
 ];

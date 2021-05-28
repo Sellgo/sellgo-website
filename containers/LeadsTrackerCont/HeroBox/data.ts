@@ -16,7 +16,10 @@ export const accordionData = [
 							Accusantium, totam culpa error a ullam sed voluptate laborum
 							incidunt esse obcaecati.`,
 		listDetails: ['List Item One', 'ListItem 2', 'List Item 3'],
-		ctaLinkDetails: {}
+		ctaLinkDetails: {
+			name: 'View all Pricing plans',
+			linkTo: '/pricing?type=monthly-and-annual-plans'
+		}
 	},
 	{
 		title: 'Features',

@@ -20,14 +20,22 @@ const HeroBox: React.FC<Props> = () => {
 			<div className={styles.heroBox__Image}>
 				<Image
 					src="/producttracker_herobox.png"
-					width={450}
-					height={270}
+					width={1336}
+					height={800}
 					alt=""
 				/>
 			</div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<span></span> <h2 className={styles.subHeading}>Product Tracker</h2>
+					<span>
+						<Image
+							src="/ptrIcon.svg"
+							width={30}
+							height={30}
+							alt="Product Tracker"
+						/>
+					</span>{' '}
+					<h2 className={styles.subHeading}>Product Tracker</h2>
 				</div>
 				<h1 className={styles.heading}>
 					Fast Track Your Amazon Product Research

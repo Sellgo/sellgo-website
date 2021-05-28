@@ -25,7 +25,7 @@ const HeroBox: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo="/pricing"
+						navigateTo="/pricing?type=monthly-and-annual-plans"
 						className={styles.ctaHeroBox}
 					>
 						Pay Only $1 to Sell

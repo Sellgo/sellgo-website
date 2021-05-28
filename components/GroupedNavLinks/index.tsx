@@ -18,7 +18,7 @@ const GroupedNavLink: React.FC<Props> = (props) => {
 	return (
 		<div className={`${styles.groupedNavLinks} ${className}`}>
 			<a href={navigateTo}>
-				<Image src={iconLink} width={40} height={40} alt={head} />
+				<Image src={iconLink} width={20} height={20} alt={head} />
 				<div className={styles.linkDetails}>
 					<h2>{head}</h2>
 					<p>{desc}</p>

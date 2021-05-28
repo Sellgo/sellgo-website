@@ -14,8 +14,8 @@
 	}
 
 	&__Image {
-		height: 27rem;
-		width: 45rem;
+		height: 133rem;
+		width: 80rem;
 		//border: 1px solid $prim_dark_1;
 		@media only screen and(max-width: 650px) {
 			width: 100%;
@@ -43,7 +43,6 @@
 	span {
 		min-width: 4rem;
 		min-height: 4rem;
-		background-color: $blue_6;
 		display: inline-block;
 		border-radius: 7px;
 		margin-right: 1rem;

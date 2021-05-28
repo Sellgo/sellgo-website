@@ -20,14 +20,22 @@ const HeroBox: React.FC<Props> = () => {
 			<div className={styles.heroBox__Image}>
 				<Image
 					src="/searchmanagement_herobox.png"
-					width={450}
-					height={270}
+					width={1336}
+					height={800}
 					alt=""
 				/>
 			</div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<span></span> <h2 className={styles.subHeading}>Search Management</h2>
+					<span>
+						<Image
+							src="/smIcon.svg"
+							width={30}
+							height={30}
+							alt="Search Management"
+						/>
+					</span>{' '}
+					<h2 className={styles.subHeading}>Search Management</h2>
 				</div>
 				<h1 className={styles.heading}>The First Step to Product Sourcing</h1>
 				<CTAButton

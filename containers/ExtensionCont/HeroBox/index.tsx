@@ -27,7 +27,15 @@ const HeroBox: React.FC<Props> = () => {
 			</div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<span></span> <h2 className={styles.subHeading}>Chrome Extension</h2>
+					<span>
+						<Image
+							src="/sellgoChromeIcon.svg"
+							width={30}
+							height={30}
+							alt="Chrome Extension"
+						/>
+					</span>{' '}
+					<h2 className={styles.subHeading}>Chrome Extension</h2>
 				</div>
 				<h1 className={styles.heading}>Quick Product Validation on Browser</h1>
 				<CTAButton
