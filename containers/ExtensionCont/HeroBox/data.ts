@@ -20,7 +20,7 @@ export const accordionData = [
 		],
 		ctaLinkDetails: {
 			name: 'View all Pricing plans',
-			linkTo: '/'
+			linkTo: '/pricing?type=monthly-and-annual-plans'
 		}
 	},
 	{

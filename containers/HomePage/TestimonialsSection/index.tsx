@@ -15,7 +15,12 @@ const TestimonialsSection: React.FC<Props> = () => {
 
 				<div className={styles.testimonialVideo}>
 					<div className={styles.videoWrapper}>
-						{/* <video src=""></video> */}
+						<video width="320" height="240" controls>
+							<track kind="captions" />
+							<source src="movie.mp4" type="video/mp4" />
+							<source src="movie.ogg" type="video/ogg" />
+							Your browser does not support the video tag.
+						</video>
 					</div>
 					<small>
 						{`"I like that their profit margin and ROI are more accurate than any

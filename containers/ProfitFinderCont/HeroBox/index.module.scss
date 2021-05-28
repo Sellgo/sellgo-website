@@ -14,9 +14,7 @@
 	}
 
 	&__Image {
-		height: 27rem;
-		width: 45rem;
-		//border: 1px solid $prim_dark_1;
+		flex: 0 0 45%;
 		@media only screen and(max-width: 650px) {
 			width: 100%;
 		}
@@ -43,7 +41,6 @@
 	span {
 		min-width: 4rem;
 		min-height: 4rem;
-		background-color: $blue_6;
 		display: inline-block;
 		border-radius: 7px;
 		margin-right: 1rem;
@@ -62,7 +59,7 @@
 	color: inherit;
 	font-size: $fontsize_title_46;
 	@media only screen and(max-width: 650px) {
-		font-size: 40px;
+		font-size: 35px;
 	}
 }
 

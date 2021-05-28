@@ -30,37 +30,37 @@ export const productsRightPanelData = [
 				head: 'Extension',
 				desc: 'Product Validation on Amazon Page',
 				navigateTo: '/extension',
-				iconLink: '/genericIcon.svg'
+				iconLink: '/sellgoChromeIcon.svg'
 			},
 			{
 				head: 'Profit Finder',
 				desc: 'Wholesale Bulk Calculator',
 				navigateTo: '/profit-finder',
-				iconLink: '/genericIcon.svg'
+				iconLink: '/pfIcon.svg'
 			},
 			{
 				head: 'Product Tracker ',
 				desc: 'Daily Tracking and Scouting',
 				navigateTo: '/product-tracker',
-				iconLink: '/genericIcon.svg'
+				iconLink: '/ptrIcon.svg'
 			},
 			{
 				head: 'Leads Tracker',
 				desc: 'Monitor Wholesale Product Daily',
 				navigateTo: '/leads-tracker',
-				iconLink: '/genericIcon.svg'
+				iconLink: '/ltrIcon.svg'
 			},
 			{
 				head: 'Search Management',
 				desc: 'Streamline Wholesale Inventories',
 				navigateTo: '/search-management',
-				iconLink: '/genericIcon.svg'
+				iconLink: '/smIcon.svg'
 			},
 			{
 				head: 'Seller Finder',
 				desc: 'Take Advantage of Competition',
 				navigateTo: '/seller-finder',
-				iconLink: '/genericIcon.svg'
+				iconLink: '/sfIcon.svg'
 			}
 		]
 	},

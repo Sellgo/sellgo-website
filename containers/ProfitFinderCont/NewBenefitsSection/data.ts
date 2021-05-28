@@ -8,7 +8,7 @@ export const newBenefitsData = [
 		and expand your inventory.`,
 		linkLabel: 'Learn more about our Profit Finder resources.',
 		navigateTo: '/',
-		imageUrl: '/productOne.png'
+		imageUrl: '/pfBenefit1_450x270.png'
 	},
 	{
 		title: 'Product Research',
@@ -19,7 +19,7 @@ export const newBenefitsData = [
 		products in seconds!`,
 		linkLabel: 'Learn more about our Profit Finder resources.',
 		navigateTo: '/',
-		imageUrl: '/productSecond.png'
+		imageUrl: '/pfBenefit2_450x270.png'
 	},
 	{
 		title: 'Sales Analytics',
@@ -30,6 +30,6 @@ export const newBenefitsData = [
 		true market potential before you start sourcing.`,
 		linkLabel: 'Learn more about our Profit Finder resources.',
 		navigateTo: '/',
-		imageUrl: '/productThird.png'
+		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

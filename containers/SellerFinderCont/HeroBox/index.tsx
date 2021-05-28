@@ -17,17 +17,23 @@ interface Props {}
 const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.heroBox}`}>
-			<div className={styles.heroBox__Image}>
-				<Image
-					src="/searchmanagement_herobox.png"
-					width={450}
-					height={270}
-					alt=""
-				/>
-			</div>
+			<Image
+				src="/profitfinder_herobox_600x360.png"
+				width={600}
+				height={360}
+				alt="Product Finder Product Cover Image"
+			/>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<span></span> <h2 className={styles.subHeading}>Seller Finder</h2>
+					<span>
+						<Image
+							src="/sfIcon.svg"
+							width={30}
+							height={30}
+							alt="Seller Finder"
+						/>
+					</span>{' '}
+					<h2 className={styles.subHeading}>Seller Finder</h2>
 				</div>
 				<h1 className={styles.heading}>
 					Track Top FBA Competitors and Best Sellers

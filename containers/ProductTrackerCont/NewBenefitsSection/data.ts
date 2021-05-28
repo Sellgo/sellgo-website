@@ -9,7 +9,7 @@ export const newBenefitsData = [
 		and shape your business.`,
 		linkLabel: 'Learn more about our Product Tracker resources.',
 		navigateTo: '/',
-		imageUrl: '/productOne.png'
+		imageUrl: '/ptrBenefit1.png'
 	},
 	{
 		title: 'Product Coordination',
@@ -20,7 +20,7 @@ export const newBenefitsData = [
 		history to make well-informed decisions to maximize efficiency.`,
 		linkLabel: 'Learn more about our Product Tracker resources.',
 		navigateTo: '/',
-		imageUrl: '/productSecond.png'
+		imageUrl: '/ptrBenefit2.png'
 	},
 	{
 		title: 'Key Performance Metics',
@@ -32,6 +32,6 @@ export const newBenefitsData = [
 		decisions based off of real-time, authentic data.`,
 		linkLabel: 'Learn more about our Product Tracker resources.',
 		navigateTo: '/',
-		imageUrl: '/productThird.png'
+		imageUrl: '/ptrBenefit3.png'
 	}
 ];
