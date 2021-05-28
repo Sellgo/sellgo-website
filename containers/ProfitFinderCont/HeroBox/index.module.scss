@@ -38,11 +38,7 @@
 	justify-content: flex-start;
 	align-items: center;
 
-	span {
-		min-width: 4rem;
-		min-height: 4rem;
-		display: inline-block;
-		border-radius: 7px;
+	svg {
 		margin-right: 1rem;
 	}
 }
