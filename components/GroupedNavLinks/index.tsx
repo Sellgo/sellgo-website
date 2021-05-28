@@ -1,24 +1,34 @@
 import React from 'react';
-import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
+
+/* COmponents */
+import ProductsIconMapper from '../Icons/Products';
+
+/* Types */
+import { Products } from '../../interfaces/Products';
 
 interface Props {
 	head: string;
 	desc: string;
 	navigateTo: string;
 	className?: string;
-	iconLink: string;
+	iconName: Products;
 }
 
 const GroupedNavLink: React.FC<Props> = (props) => {
-	const { head, desc, navigateTo, className, iconLink } = props;
+	const { head, desc, navigateTo, className, iconName } = props;
 
 	return (
 		<div className={`${styles.groupedNavLinks} ${className}`}>
 			<a href={navigateTo}>
-				<Image src={iconLink} width={20} height={20} alt={head} />
+				<ProductsIconMapper
+					name={iconName}
+					width={20}
+					height={20}
+					fill="#ef7818"
+				/>
 				<div className={styles.linkDetails}>
 					<h2>{head}</h2>
 					<p>{desc}</p>

@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../../components/CTAButton';
 import ProductAccordion from '../../../components/ProductAccordion';
-import ChromeExtension from '../../../components/Icons/Products/ChromeExtension';
+import ProductIconMapper from '../../../components/Icons/Products';
 
 /* Data */
 import { accordionData } from './data';
@@ -27,11 +27,11 @@ const HeroBox: React.FC<Props> = () => {
 
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<ChromeExtension
+					<ProductIconMapper
 						width={30}
 						height={30}
-						fill1="#ef7818"
-						fill2="#fbc99f"
+						fill="#ef7818"
+						name="extension"
 					/>
 					<h2 className={styles.subHeading}>Chrome Extension</h2>
 				</div>

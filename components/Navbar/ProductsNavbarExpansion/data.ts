@@ -1,4 +1,10 @@
-export const productsNavigationList = [
+/* Types */
+import {
+	ProductsNavigationList,
+	ProductsPanelData
+} from '../../../interfaces/Products';
+
+export const productsNavigationList: ProductsNavigationList[] = [
 	{
 		head: 'Sellgo',
 		desc: 'Our Entire Amazon Toolbox.',
@@ -21,7 +27,7 @@ export const productsNavigationList = [
 	}
 ];
 
-export const productsRightPanelData = [
+export const productsRightPanelData: ProductsPanelData[] = [
 	{
 		hoverId: 'products',
 		header: 'Features',
@@ -30,37 +36,37 @@ export const productsRightPanelData = [
 				head: 'Extension',
 				desc: 'Product Validation on Amazon Page',
 				navigateTo: '/extension',
-				iconLink: '/sellgoChromeIcon.svg'
+				iconName: 'extension'
 			},
 			{
 				head: 'Profit Finder',
 				desc: 'Wholesale Bulk Calculator',
 				navigateTo: '/profit-finder',
-				iconLink: '/pfIcon.svg'
+				iconName: 'profitFinder'
 			},
 			{
 				head: 'Product Tracker ',
 				desc: 'Daily Tracking and Scouting',
 				navigateTo: '/product-tracker',
-				iconLink: '/ptrIcon.svg'
+				iconName: 'productTracker'
 			},
 			{
 				head: 'Leads Tracker',
 				desc: 'Monitor Wholesale Product Daily',
 				navigateTo: '/leads-tracker',
-				iconLink: '/ltrIcon.svg'
+				iconName: 'leadsTracker'
 			},
 			{
 				head: 'Search Management',
 				desc: 'Streamline Wholesale Inventories',
 				navigateTo: '/search-management',
-				iconLink: '/smIcon.svg'
+				iconName: 'searchManagement'
 			},
 			{
 				head: 'Seller Finder',
 				desc: 'Take Advantage of Competition',
 				navigateTo: '/seller-finder',
-				iconLink: '/sfIcon.svg'
+				iconName: 'sellerFinder'
 			}
 		]
 	},
@@ -72,37 +78,37 @@ export const productsRightPanelData = [
 				head: 'Extension',
 				desc: 'Product Validation on Amazon Page',
 				navigateTo: '/extension',
-				iconLink: '/genericIcon.svg'
+				iconName: 'extension'
 			},
 			{
 				head: 'Profit Finder',
 				desc: 'Wholesale Bulk Calculator',
 				navigateTo: '/profit-finder',
-				iconLink: '/genericIcon.svg'
+				iconName: 'profitFinder'
 			},
 			{
 				head: 'Product Tracker ',
 				desc: 'Daily Tracking and Scouting',
 				navigateTo: '/product-tracker',
-				iconLink: '/genericIcon.svg'
+				iconName: 'productTracker'
 			},
 			{
 				head: 'Leads Tracker',
 				desc: 'Monitor Wholesale Product Daily',
 				navigateTo: '/leads-tracker',
-				iconLink: '/genericIcon.svg'
+				iconName: 'leadsTracker'
 			},
 			{
 				head: 'Search Management',
 				desc: 'Streamline Wholesale Inventories',
 				navigateTo: '/search-management',
-				iconLink: '/genericIcon.svg'
+				iconName: 'searchManagement'
 			},
 			{
 				head: 'Seller Finder',
 				desc: 'Take Advantage of Competition',
 				navigateTo: '/seller-finder',
-				iconLink: '/genericIcon.svg'
+				iconName: 'sellerFinder'
 			}
 		]
 	},
@@ -114,19 +120,19 @@ export const productsRightPanelData = [
 				head: 'Extension',
 				desc: 'Product Validation on Amazon Page',
 				navigateTo: '/extension',
-				iconLink: '/genericIcon.svg'
+				iconName: 'extension'
 			},
 			{
 				head: 'Profit Finder',
 				desc: 'Wholesale Bulk Calculator',
 				navigateTo: '/profit-finder',
-				iconLink: '/genericIcon.svg'
+				iconName: 'profitFinder'
 			},
 			{
 				head: 'Product Tracker ',
 				desc: 'Daily Tracking and Scouting',
 				navigateTo: '/product-tracker',
-				iconLink: '/genericIcon.svg'
+				iconName: 'productTracker'
 			}
 		]
 	},
@@ -138,14 +144,8 @@ export const productsRightPanelData = [
 				head: 'Seller Finder',
 				desc: 'Take Advantage of Competition',
 				navigateTo: '/seller-finder',
-				iconLink: '/genericIcon.svg'
+				iconName: 'sellerFinder'
 			}
-			// {
-			// 	head: 'Seller Database',
-			// 	desc: 'Take Advantage of Competition',
-			// 	navigateTo: '/seller-database',
-			// 	iconLink: '/genericIcon.svg'
-			// }
 		]
 	}
 ];

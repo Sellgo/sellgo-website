@@ -3,12 +3,11 @@ import React from 'react';
 interface Props {
 	width: number;
 	height: number;
-	fill1: string;
-	fill2: string;
+	fill: string;
 }
 
 const ChromeExtension: React.FC<Props> = (props) => {
-	const { width, height, fill1, fill2 } = props;
+	const { width, height, fill } = props;
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +16,7 @@ const ChromeExtension: React.FC<Props> = (props) => {
 			height={height}
 		>
 			<defs>
-				<style>{`.prefix__cls-1{fill:${fill1}}.prefix__cls-2{fill:#fff}`}</style>
+				<style>{`.prefix__cls-1{fill:${fill}}.prefix__cls-2{fill:#fff}`}</style>
 			</defs>
 			<g id="prefix__Layer_2" data-name="Layer 2">
 				<g id="prefix__Layer_1-2" data-name="Layer 1">
@@ -50,7 +49,8 @@ const ChromeExtension: React.FC<Props> = (props) => {
 					<path
 						d="M135.86 220.09a80.95 80.95 0 1180.95 81 80.94 80.94 
 						0 01-80.95-81z"
-						fill={fill2}
+						fill={fill}
+						opacity={0.4}
 					/>
 					<path
 						className="prefix__cls-2"
