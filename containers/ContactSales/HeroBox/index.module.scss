@@ -57,25 +57,25 @@
 
 	&__image {
 		align-self: flex-end;
-		position: absolute;
-		right: -20rem;
-		bottom: -0.4rem;
+		display: none;
 
-		@media only screen and(max-width: 1500px) {
-			right: -8rem;
+		// mobile first approach to avoid network call to image <750px screens
+
+		@media only screen and(min-width: 750px) {
+			display: block;
+			margin: 0 auto;
 		}
 
-		@media only screen and(max-width: 1300px) {
-			position: unset;
-		}
-
-		@media only screen and(max-width: 1080px) {
+		@media only screen and(min-width: 1080px) {
 			align-self: center;
 			order: 1;
+			position: absolute;
+			bottom: -0.4rem;
+			right: 0;
 		}
 
-		@media only screen and(max-width: 750px) {
-			display: none;
+		@media only screen and(min-width: 1500px) {
+			right: -8rem;
 		}
 	}
 }
