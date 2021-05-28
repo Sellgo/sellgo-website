@@ -17,14 +17,13 @@ interface Props {}
 const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.heroBox}`}>
-			<div className={styles.heroBox__Image}>
-				<Image
-					src="/producttracker_herobox.png"
-					width={450}
-					height={270}
-					alt=""
-				/>
-			</div>
+			<Image
+				src="/profitfinder_herobox_600x360.png"
+				width={600}
+				height={360}
+				alt="Product Finder Product Cover Image"
+			/>
+
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
 					<span>

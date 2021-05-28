@@ -13,15 +13,6 @@
 		padding-top: 10rem;
 	}
 
-	&__Image {
-		height: 27rem;
-		width: 45rem;
-		//border: 1px solid $prim_dark_1;
-		@media only screen and(max-width: 650px) {
-			width: 100%;
-		}
-	}
-
 	&__Details {
 		flex: 0 0 45%;
 		color: $prim_dark_2;
@@ -61,7 +52,7 @@
 	color: inherit;
 	font-size: $fontsize_title_46;
 	@media only screen and(max-width: 650px) {
-		font-size: 40px;
+		font-size: 35px;
 	}
 }
 
