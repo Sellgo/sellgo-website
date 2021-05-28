@@ -23,9 +23,9 @@ const InfoSection: React.FC<Props> = () => {
 				</div>
 				<div className={styles.infoSection__Image}>
 					<Image
-						src="/searchmanagement_infosection.png"
+						src="/productSection1_450x315.png"
 						width={450}
-						height={230}
+						height={315}
 						alt=""
 					/>
 				</div>

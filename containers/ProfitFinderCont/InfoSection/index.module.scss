@@ -9,7 +9,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	min-height: 81rem;
+	padding: 15rem 0;
 	color: $prim_white;
 
 	@media only screen and(max-width: 1000px) {
@@ -38,7 +38,6 @@
 .infoSection__Image {
 	width: 45rem;
 	height: 31rem;
-	//border: 1px solid #000;
 	@media only screen and(max-width: 1000px) {
 		margin-top: 4rem;
 	}
