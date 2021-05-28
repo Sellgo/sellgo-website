@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -35,6 +36,10 @@ const HeroBox: React.FC<Props> = () => {
 						Start an Amazon business with $1, <br /> upgrade your tools as you
 						grow.
 					</small>
+				</div>
+
+				<div className={styles.heroboxImage}>
+					<Image src="/heroboxImage.png" width={808} height={614} />
 				</div>
 			</div>
 		</section>
