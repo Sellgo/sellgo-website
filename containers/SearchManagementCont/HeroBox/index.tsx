@@ -20,8 +20,8 @@ const HeroBox: React.FC<Props> = () => {
 			<div className={styles.heroBox__Image}>
 				<Image
 					src="/searchmanagement_herobox.png"
-					width={1336}
-					height={800}
+					width={450}
+					height={270}
 					alt=""
 				/>
 			</div>
