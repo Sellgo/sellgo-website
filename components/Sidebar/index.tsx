@@ -29,7 +29,6 @@ const options = [
 			{ id: uuid(), name: 'Search Management', to: '/search-management' },
 			{ id: uuid(), name: 'Profit Finder', to: '/profit-finder' },
 			{ id: uuid(), name: 'Product Tracker', to: '/product-tracker' },
-			{ id: uuid(), name: 'Leads Tracker', to: '/leads-tracker' },
 			{ id: uuid(), name: 'Seller Finder', to: '/seller-finder' }
 		]
 	},
@@ -47,18 +46,7 @@ const options = [
 		titleIcon: <Image src="/genericIcon.svg" width={25} height={25} />,
 		content: [
 			{ id: uuid(), name: 'About us', to: '/about-us' },
-			{ id: uuid(), name: 'Blogs', to: '/blogs' },
-			{ id: uuid(), name: 'Request Demo', to: '/demo' },
-			{
-				id: uuid(),
-				name: 'Free Sales Estimation Tools',
-				to: '/free-sales-estimation'
-			},
-			{
-				id: uuid(),
-				name: 'Free Amazon FBA Fee Calculator',
-				to: '/free-fba-calculator'
-			}
+			{ id: uuid(), name: 'Blogs', to: '/blogs' }
 		]
 	},
 
@@ -67,7 +55,8 @@ const options = [
 		titleIcon: <Image src="/genericIcon.svg" width={25} height={25} />,
 		content: [
 			{ id: uuid(), name: 'Contact Us', to: '/contact' },
-			{ id: uuid(), name: 'Contact Sales', to: '/contact-sales' }
+			{ id: uuid(), name: 'Contact Sales', to: '/contact-sales' },
+			{ id: uuid(), name: 'Request Free Demo', to: '/demo' }
 		]
 	}
 ];
