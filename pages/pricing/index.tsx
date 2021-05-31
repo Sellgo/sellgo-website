@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 
-/* Styling */
-import styles from './index.module.scss';
-
 /* Containers */
 import HeroBox from '../../containers/Pricing/HeroBox';
 import ProductsPanel from '../../containers/Pricing/ProductsPanel';
@@ -55,8 +52,6 @@ const PricingPage: React.FC<Props> = (props) => {
 			) : (
 				<BundlesPanel />
 			)}
-
-			{/* <div className={styles.banner}></div> */}
 		</>
 	);
 };

@@ -2,9 +2,6 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 
-/* Styling */
-import styles from './index.module.scss';
-
 /* Containers */
 import HeroBox from '../../containers/SearchManagementCont/HeroBox';
 import InfoSection from '../../containers/SearchManagementCont/InfoSection';
@@ -47,11 +44,7 @@ const SearchManagementContPage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<InfoSection />
 			<NewBenefitsSection />
-			{/* <section className={styles.newBanner} /> */}
 			<CommonFeaturesSection />
-			{/* <BannerCTASection /> */}
-			{/* <PlansSection /> */}
-			{/* <OtherInfoSection /> */}
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>
