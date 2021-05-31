@@ -1,18 +1,22 @@
 import React, { memo } from 'react';
 
 /* Product Icon Components */
-import ChromeExtension from './ChromeExtension';
-import LeadsTracker from './LeadsTracker';
-import ProductTracker from './ProductTracker';
-import ProfitFinder from './ProfitFinder';
-import SearchManagement from './SearchManagement';
-import SellerFinder from './SellerFinder';
+import ChromeExtension from './Products/ChromeExtension';
+import LeadsTracker from './Products/LeadsTracker';
+import ProductTracker from './Products/ProductTracker';
+import ProfitFinder from './Products/ProfitFinder';
+import SearchManagement from './Products/SearchManagement';
+import SellerFinder from './Products/SellerFinder';
+
+/* Resources Icons */
+import Blogs from './Resources/Blogs';
+import AffiliateProgram from './Resources/AffiliateProgram';
 
 /* Types */
-import { Products } from '../../../interfaces/Products';
+import { Products, Resources } from '../../interfaces/Navbar';
 
 interface Props {
-	name: Products;
+	name: Products | Resources;
 	width: number;
 	height: number;
 	fill: string;
@@ -23,6 +27,7 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 	let productIcon: React.ReactNode;
 
 	switch (name) {
+		// products
 		case 'extension': {
 			productIcon = <ChromeExtension {...otherProps} />;
 			break;
@@ -45,6 +50,17 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 		}
 		case 'sellerFinder': {
 			productIcon = <SellerFinder {...otherProps} />;
+			break;
+		}
+
+		// resources
+		case 'blogs': {
+			productIcon = <Blogs {...otherProps} />;
+			break;
+		}
+
+		case 'affiliateProgram': {
+			productIcon = <AffiliateProgram {...otherProps} />;
 			break;
 		}
 		default: {

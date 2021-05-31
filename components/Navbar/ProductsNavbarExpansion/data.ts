@@ -2,7 +2,7 @@
 import {
 	ProductsNavigationList,
 	ProductsPanelData
-} from '../../../interfaces/Products';
+} from '../../../interfaces/Navbar';
 
 export const productsNavigationList: ProductsNavigationList[] = [
 	{

@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../../components/CTAButton';
 import ProductAccordion from '../../../components/ProductAccordion';
-import ProductIconMapper from '../../../components/Icons/Products';
+import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
 
 /* Data */
 import { accordionData } from './data';
@@ -26,7 +26,7 @@ const HeroBox: React.FC<Props> = () => {
 			/>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<ProductIconMapper
+					<ExpandedNavbarIcons
 						width={30}
 						height={30}
 						fill="#ef7818"

@@ -7,6 +7,8 @@ export type Products =
 	| 'leadsTracker'
 	| 'sellerFinder';
 
+export type Resources = 'blogs' | 'affiliateProgram';
+
 export interface ProductsNavigationList {
 	head: string;
 	desc: string;
@@ -17,7 +19,7 @@ export interface GroupedNavLinks {
 	head: string;
 	desc: string;
 	navigateTo: string;
-	iconName: Products;
+	iconName: Products | Resources;
 }
 
 export interface ProductsPanelData {

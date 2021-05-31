@@ -4,10 +4,10 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* COmponents */
-import ProductsIconMapper from '../Icons/Products';
+import ExpandedNavbarIcons from '../Icons/ExpandedNavbarIcons';
 
 /* Types */
-import { Products } from '../../interfaces/Products';
+import { Products } from '../../interfaces/Navbar';
 
 interface Props {
 	head: string;
@@ -23,7 +23,7 @@ const GroupedNavLink: React.FC<Props> = (props) => {
 	return (
 		<div className={`${styles.groupedNavLinks} ${className}`}>
 			<a href={navigateTo}>
-				<ProductsIconMapper
+				<ExpandedNavbarIcons
 					name={iconName}
 					width={20}
 					height={20}
