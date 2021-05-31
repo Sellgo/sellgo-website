@@ -1,21 +1,11 @@
-export const resourcesNavigationList = [
+/* Types */
+import { GroupedNavLinks } from '../../../interfaces/Navbar';
+
+export const resourcesNavigationList: GroupedNavLinks[] = [
 	{
 		head: 'Blog',
 		desc: 'Amazon Seller Tips & News',
 		navigateTo: '/blogs',
-		iconLink: '/blogIcon.svg'
+		iconName: 'blogs'
 	}
-	// ,
-	// {
-	// 	head: 'Affiliate Program',
-	// 	desc: 'Join the Sellgo Family!',
-	// 	navigateTo: '/affiliate-program',
-	// 	iconLink: '/affiliateIcon.svg'
-	// }
-	// {
-	// 	head: 'Affiliate Program',
-	// 	desc: 'Join the Sellgo Family!',
-	// 	navigateTo: '/affiliate-program',
-	// 	iconLink: '/affiliateIcon.svg'
-	// }
 ];

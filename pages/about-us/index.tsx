@@ -81,20 +81,10 @@ const AboutUsPage: React.FC<Props> = () => {
 							of their selling journey including product scouting to product
 							sourcing to product research.
 						</p>
-
 						<p>
 							To learn more about our tools and services, check out our product
 							pages.
 						</p>
-
-						{/* <CTAButton
-							size="small"
-							type="secondary"
-							navigateTo="/product"
-							className={styles.aboutUsCTA}
-						>
-							View Tools
-						</CTAButton> */}
 					</div>
 
 					<div className={styles.contentSection__image}>
@@ -140,7 +130,7 @@ const AboutUsPage: React.FC<Props> = () => {
 							src="/smHerobox_600x360.png"
 							width={600}
 							height={360}
-							alt="Pricing Plans Image"
+							alt="Pricing Plans section showcase"
 						/>
 					</div>
 				</section>
@@ -163,8 +153,8 @@ const AboutUsPage: React.FC<Props> = () => {
 						<Image
 							src="/ourTeam_600x477.png"
 							width={600}
-							height={477}
-							alt="Pricing Plans Image"
+							height={470}
+							alt="Our teams setion showcase"
 						/>
 					</div>
 				</section>

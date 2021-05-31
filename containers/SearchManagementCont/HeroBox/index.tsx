@@ -8,6 +8,7 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../../components/CTAButton';
 import ProductAccordion from '../../../components/ProductAccordion';
+import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
 
 /* Data */
 import { accordionData } from './data';
@@ -22,14 +23,12 @@ const HeroBox: React.FC<Props> = () => {
 			</div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<span>
-						<Image
-							src="/smIcon.svg"
-							width={30}
-							height={30}
-							alt="Search Management"
-						/>
-					</span>{' '}
+					<ExpandedNavbarIcons
+						width={30}
+						height={30}
+						fill="#ef7818"
+						name="searchManagement"
+					/>
 					<h2 className={styles.subHeading}>Search Management</h2>
 				</div>
 				<h1 className={styles.heading}>The First Step to Product Sourcing</h1>

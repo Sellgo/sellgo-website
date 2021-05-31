@@ -8,6 +8,7 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../../components/CTAButton';
 import ProductAccordion from '../../../components/ProductAccordion';
+import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
 
 /* Data */
 import { accordionData } from './data';
@@ -25,14 +26,12 @@ const HeroBox: React.FC<Props> = () => {
 			/>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
-					<span>
-						<Image
-							src="/ltrIcon.svg"
-							width={30}
-							height={30}
-							alt="Leads Tracker"
-						/>
-					</span>{' '}
+					<ExpandedNavbarIcons
+						width={30}
+						height={30}
+						fill="#ef7818"
+						name="leadsTracker"
+					/>
 					<h2 className={styles.subHeading}>Leads Tracker</h2>
 				</div>
 				<h1 className={styles.heading}>Lorem Ipsum</h1>
