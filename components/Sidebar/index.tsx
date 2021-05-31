@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 
 // @ts-ignore : cannot find typed utils
@@ -19,7 +18,6 @@ interface Props {
 const options = [
 	{
 		title: 'Products',
-		titleIcon: <Image src="/genericIcon.svg" width={25} height={25} />,
 		content: [
 			{
 				id: uuid(),
@@ -35,7 +33,6 @@ const options = [
 
 	{
 		title: 'Pricing',
-		titleIcon: <Image src="/genericIcon.svg" width={25} height={25} />,
 		content: [
 			{ id: uuid(), name: 'Monthly and Annual Plans', to: '/pricing' },
 			{ id: uuid(), name: 'Free Trial', to: '/pricing?type=free-trial' }
@@ -43,7 +40,6 @@ const options = [
 	},
 	{
 		title: 'Resources',
-		titleIcon: <Image src="/genericIcon.svg" width={25} height={25} />,
 		content: [
 			{ id: uuid(), name: 'About us', to: '/about-us' },
 			{ id: uuid(), name: 'Blogs', to: '/blogs' }
@@ -52,7 +48,6 @@ const options = [
 
 	{
 		title: 'Support',
-		titleIcon: <Image src="/genericIcon.svg" width={25} height={25} />,
 		content: [
 			{ id: uuid(), name: 'Contact Us', to: '/contact' },
 			{ id: uuid(), name: 'Contact Sales', to: '/contact-sales' },
