@@ -87,6 +87,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 					showcaseBlogs={paginatedBlogs}
 					popularChoiceBlogs={popularChoiceBlogs}
 					editorsChoiceBlogs={editorsChoiceBlogs}
+					openNewsletterModal={() => setIsOpen(true)}
 				/>
 
 				<ReactPaginate
