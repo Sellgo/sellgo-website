@@ -61,9 +61,9 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.welcomeSection__image}>
 						<Image
-							src="/productOne.png"
-							width={440}
-							height={220}
+							src="/ptrHerobox_600x360.png"
+							width={600}
+							height={360}
 							alt="Welcome to sellgo"
 						/>
 					</div>
@@ -87,22 +87,23 @@ const AboutUsPage: React.FC<Props> = () => {
 							pages.
 						</p>
 
-						<CTAButton
+						
+						{/* <CTAButton
 							size="small"
 							type="secondary"
 							navigateTo="/product"
 							className={styles.aboutUsCTA}
 						>
 							View Tools
-						</CTAButton>
+						</CTAButton> */}
 					</div>
 
 					<div className={styles.contentSection__image}>
 						<Image
-							src="/productSecond.png"
-							width={402}
-							height={231}
-							alt="Pricing Plans Image"
+							src="/pfHerobox_600x360.png"
+							width={600}
+							height={360}
+							alt="Tools and Services"
 						/>
 					</div>
 				</section>
@@ -112,7 +113,7 @@ const AboutUsPage: React.FC<Props> = () => {
 						<h2>Our Pricing Plans</h2>
 
 						<p>
-							We currently offer a free trial and 3 premium plans that you can
+							We currently offer a free trial and premium plan that you can
 							sign-up for now. Our plans are meant to help any seller at any
 							level of experience. Starting with our free trial, you can use our
 							tools and services for 7-days free.
@@ -137,9 +138,9 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.contentSection__image}>
 						<Image
-							src="/productSecond.png"
-							width={402}
-							height={231}
+							src="/smHerobox_600x360.png"
+							width={600}
+							height={360}
 							alt="Pricing Plans Image"
 						/>
 					</div>
@@ -161,15 +162,15 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.contentSection__image}>
 						<Image
-							src="/productSecond.png"
-							width={402}
-							height={231}
+							src="/ourTeam_600x477.png"
+							width={600}
+							height={477}
 							alt="Pricing Plans Image"
 						/>
 					</div>
 				</section>
 
-				<section className={`page-container ${styles.contentSection}`}>
+				{/* <section className={`page-container ${styles.contentSection}`}>
 					<div className={`${styles.contentSection__text}`}>
 						<h2>Careers</h2>
 						<p>
@@ -189,13 +190,13 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.contentSection__image}>
 						<Image
-							src="/productSecond.png"
-							width={402}
-							height={231}
-							alt="Pricing Plans Image"
+							src="/ourTeam_600x477.png"
+							width={600}
+							height={495}
+							alt="Our Team Image"
 						/>
 					</div>
-				</section>
+				</section> */}
 
 				<section className={`page-container ${styles.queryCardsWrapper}`}>
 					<div className={styles.queryCard}>

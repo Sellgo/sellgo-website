@@ -46,9 +46,11 @@ const ProfitFinderContPage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<InfoSection />
 			<NewBenefitsSection />
-			<section className={styles.Newbanner} />
+			{/* <section className={styles.Newbanner} /> */}
 			<CommonFeaturesSection />
-
+			{/* <BannerCTASection /> */}
+			{/* <PlansSection /> */}
+			{/* <OtherInfoSection /> */}
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>

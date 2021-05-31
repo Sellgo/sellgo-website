@@ -58,11 +58,11 @@ const TopFooter: React.FC<Props> = () => {
 						<a>Seller Finder</a>
 					</Link>
 				</li>
-				<li className="footerNavigationLinks">
+				{/* <li className="footerNavigationLinks">
 					<Link href="/leads-tracker" passHref>
 						<a>Leads Tracker</a>
 					</Link>
-				</li>
+				</li> */}
 			</ul>
 
 			<ul className={styles.footerNavigation}>
@@ -86,7 +86,7 @@ const TopFooter: React.FC<Props> = () => {
 						<a>Blogs</a>
 					</Link>
 				</li>
-				<li className="footerNavigationLinks">
+				{/* <li className="footerNavigationLinks">
 					<Link href="/affiliate-program" passHref>
 						<a>Affiliate Program</a>
 					</Link>
@@ -100,7 +100,7 @@ const TopFooter: React.FC<Props> = () => {
 					<Link href="/free-fba-calculator" passHref>
 						<a>Free Amazon FBA Fee Calculator</a>
 					</Link>
-				</li>
+				</li> */}
 			</ul>
 
 			<ul className={styles.footerNavigation}>

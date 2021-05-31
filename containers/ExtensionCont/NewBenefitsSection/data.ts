@@ -7,7 +7,7 @@ export const newBenefitsData = [
 		margins using data directly from Amazon.`,
 		linkLabel: 'Learn more about our Extension resources.',
 		navigateTo: '/',
-		imageUrl: '/productOne.png'
+		imageUrl: '/pfBenefit1_450x270.png'
 	},
 	{
 		title: 'Product Validation',
@@ -18,7 +18,7 @@ export const newBenefitsData = [
 		sustainability and profitability.`,
 		linkLabel: 'Learn more about our Extension resources.',
 		navigateTo: '/',
-		imageUrl: '/productSecond.png'
+		imageUrl: '/pfBenefit2_450x270.png'
 	},
 	{
 		title: 'Competitive Snapshot',
@@ -29,6 +29,6 @@ export const newBenefitsData = [
 		to your Amazon catalogs.`,
 		linkLabel: 'Learn more about our Extension resources.',
 		navigateTo: '/',
-		imageUrl: '/productThird.png'
+		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

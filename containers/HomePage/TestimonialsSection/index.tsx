@@ -15,9 +15,9 @@ const TestimonialsSection: React.FC<Props> = () => {
 
 				<div className={styles.testimonialVideo}>
 					<div className={styles.videoWrapper}>
-						{/* <video src=""></video> */}
-						<video width="320" height="240" controls>
-							<source src="movie.mp4" type="video/mp4" />
+						<video width="573" height="323" controls>
+							<track kind="captions" />
+							<source src="Testimonial_David_W.mp4" type="video/mp4" />
 							<source src="movie.ogg" type="video/ogg" />
 							Your browser does not support the video tag.
 						</video>

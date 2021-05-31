@@ -9,7 +9,7 @@ export const newBenefitsData = [
 		for your own businesses.`,
 		linkLabel: 'Learn more about our Seller Finder resources.',
 		navigateTo: '/',
-		imageUrl: '/productOne.png'
+		imageUrl: '/pfBenefit1_450x270.png'
 	},
 	{
 		title: 'Amazon Catalog',
@@ -20,7 +20,7 @@ export const newBenefitsData = [
 		for leads and potential products you can source and sell.`,
 		linkLabel: 'Learn more about our Seller Finder resources.',
 		navigateTo: '/',
-		imageUrl: '/productSecond.png'
+		imageUrl: '/pfBenefit2_450x270.png'
 	},
 	{
 		title: 'Buy Box',
@@ -30,6 +30,6 @@ export const newBenefitsData = [
 		Buy Box strategy and take over new profitable products.`,
 		linkLabel: 'Learn more about our Seller Finder resources.',
 		navigateTo: '/',
-		imageUrl: '/productThird.png'
+		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

@@ -51,9 +51,9 @@ const HomePage: React.FC<Props> = (props) => {
 					</h2>
 				</section>
 				<InfoSection />
-				<section className={styles.homeBanner} />
+				{/* <section className={styles.homeBanner} /> */}
 				<ProductsSection />
-				<StatisticsSection />
+				{/* <StatisticsSection /> */}
 				<TestimonialsSection />
 				<div className={styles.divider}></div>
 				<RecentBlogsSection recentBlogs={homeBlogs} />

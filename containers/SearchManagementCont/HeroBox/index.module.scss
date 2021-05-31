@@ -13,7 +13,7 @@
 		padding-top: 10rem;
 	}
 
-	&__Image {
+	head &__Image {
 		height: 36rem;
 		width: 60rem;
 		//border: 1px solid $prim_dark_1;
@@ -61,7 +61,7 @@
 	color: inherit;
 	font-size: $fontsize_title_46;
 	@media only screen and(max-width: 650px) {
-		font-size: 40px;
+		font-size: 35px;
 	}
 }
 

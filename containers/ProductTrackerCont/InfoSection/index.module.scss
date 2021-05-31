@@ -9,7 +9,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	min-height: 81rem;
+	padding: 15rem 0;
 	color: $prim_white;
 
 	@media only screen and(max-width: 1000px) {
@@ -39,6 +39,7 @@
 	width: 60rem;
 	height: 36rem;
 	//border: 1px solid #000;
+
 	@media only screen and(max-width: 1000px) {
 		margin-top: 4rem;
 	}

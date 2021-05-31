@@ -4,13 +4,14 @@ export const resourcesNavigationList = [
 		desc: 'Amazon Seller Tips & News',
 		navigateTo: '/blogs',
 		iconLink: '/blogIcon.svg'
-	},
-	{
-		head: 'Affiliate Program',
-		desc: 'Join the Sellgo Family!',
-		navigateTo: '/affiliate-program',
-		iconLink: '/affiliateIcon.svg'
 	}
+	// ,
+	// {
+	// 	head: 'Affiliate Program',
+	// 	desc: 'Join the Sellgo Family!',
+	// 	navigateTo: '/affiliate-program',
+	// 	iconLink: '/affiliateIcon.svg'
+	// }
 	// {
 	// 	head: 'Free Sales Estimation Tools',
 	// 	desc: 'Lorem Ipsum',

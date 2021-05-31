@@ -56,7 +56,7 @@ const PricingPage: React.FC<Props> = (props) => {
 				<BundlesPanel />
 			)}
 
-			<div className={styles.banner}></div>
+			{/* <div className={styles.banner}></div> */}
 		</>
 	);
 };
