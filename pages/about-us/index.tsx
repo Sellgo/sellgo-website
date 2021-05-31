@@ -87,7 +87,6 @@ const AboutUsPage: React.FC<Props> = () => {
 							pages.
 						</p>
 
-						
 						{/* <CTAButton
 							size="small"
 							type="secondary"

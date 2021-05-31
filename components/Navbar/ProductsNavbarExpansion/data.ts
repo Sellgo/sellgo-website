@@ -44,7 +44,7 @@ export const productsRightPanelData = [
 				desc: 'Daily Tracking and Scouting',
 				navigateTo: '/product-tracker',
 				iconLink: '/ptrIcon.svg'
-			}
+			},
 			// ,
 			// {
 			// 	head: 'Leads Tracker',
@@ -52,7 +52,6 @@ export const productsRightPanelData = [
 			// 	navigateTo: '/leads-tracker',
 			// 	iconLink: '/ltrIcon.svg'
 			// }
-			,
 			{
 				head: 'Search Management',
 				desc: 'Streamline Wholesale Inventories',
