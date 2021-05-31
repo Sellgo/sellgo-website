@@ -2,17 +2,11 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 
-/* Styling */
-import styles from './index.module.scss';
-
 /* Containers */
 import HeroBox from '../../containers/ProductTrackerCont/HeroBox';
 import InfoSection from '../../containers/ProductTrackerCont/InfoSection';
 import NewBenefitsSection from '../../containers/ProductTrackerCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/ProductTrackerCont/CommomFeaturesSection';
-import BannerCTASection from '../../containers/ProductTrackerCont/BannerCTASection';
-import PlansSection from '../../containers/ProductTrackerCont/PlansSection';
-import OtherInfoSection from '../../containers/ProductTrackerCont/OtherInfoSection';
 import FAQSection from '../../containers/ProductTrackerCont/FAQSection';
 import RecommendationSection from '../../containers/ProductTrackerCont/RecommendationSection';
 
@@ -49,11 +43,7 @@ const ProductTrackerContPage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<InfoSection />
 			<NewBenefitsSection />
-			<section className={styles.newBanner} />
 			<CommonFeaturesSection />
-			<BannerCTASection />
-			<PlansSection />
-			<OtherInfoSection />
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>

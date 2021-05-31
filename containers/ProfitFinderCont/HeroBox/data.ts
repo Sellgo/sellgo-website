@@ -8,8 +8,7 @@ export const accordionData = [
 	},
 	{
 		title: 'Pricing Overview',
-		description: `Tools and pricing plans that grow with you and your business. 
-		Pricing plans start at:`,
+		description: `Tools and pricing plans that grow with you and your business.`,
 		listDetails: [
 			'Wholesale Tier 1:',
 			'Private Label Tier 1:',

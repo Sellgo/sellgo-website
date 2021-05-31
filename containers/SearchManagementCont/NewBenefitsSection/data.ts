@@ -10,7 +10,7 @@ export const newBenefitsData = [
 		listing ratio and more.`,
 		linkLabel: 'Learn more about our Search Management resources.',
 		navigateTo: '/',
-		imageUrl: '/smBenefit1.png'
+		imageUrl: '/smBenefit1_450x270.png'
 	},
 	{
 		title: 'Supplier Analysis',
@@ -21,7 +21,7 @@ export const newBenefitsData = [
 		products for your Amazon business.`,
 		linkLabel: 'Learn more about our Search Management resources.',
 		navigateTo: '/',
-		imageUrl: '/smBenefit2.png'
+		imageUrl: '/smBenefit2_450x270.png'
 	},
 	{
 		title: 'Catalog Errors',
@@ -35,6 +35,6 @@ export const newBenefitsData = [
 		looking for you. `,
 		linkLabel: 'Learn more about our Search Management resources.',
 		navigateTo: '/',
-		imageUrl: '/smBenefit3.png'
+		imageUrl: '/smBenefit3_450x270.png'
 	}
 ];

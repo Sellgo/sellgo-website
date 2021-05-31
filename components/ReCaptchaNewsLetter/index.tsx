@@ -87,7 +87,10 @@ const ReCaptchaNewsLetter: React.FC<Props> = (props) => {
 	return (
 		<div className={styles.newsLetter}>
 			<h1>Subscribe to Our Newsletter</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			<p>
+				Join our subscriber&apos;s list to get the latest update and articles
+				delivered directly to your inbox.
+			</p>
 
 			<form onSubmit={handleSubmit} className={styles.newsLetterForm}>
 				<FormInput
@@ -124,9 +127,9 @@ const ReCaptchaNewsLetter: React.FC<Props> = (props) => {
 
 			<div className={styles.importantNotes}>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec
-					tortor at neque tempus scelerisque non sit amet sapien. Pellentesque
-					faucibus, nisl sit.
+					We&apos;re committed to your privacy. Sellgo uses the information you
+					provide to us to contact you about our relevant content, products, and
+					services. You may unsubscribe from these communications at any time.
 				</p>
 				<p>
 					For more information, check out our{' '}

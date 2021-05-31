@@ -1,10 +1,10 @@
 export const recomDataCardDetails = [
 	{
-		title: 'Seller Database',
-		description: `All the Amazon sellers in one central location to help you 
-		find new leads, meet potential customers, and grow your business.`,
-		navigateLabel: 'Learn more about the Seller Database',
-		navigateTo: '/seller-database'
+		title: 'Profit Finder',
+		description: `Product sourcing tool to help find proven products backed 
+		by real-time data to expand your Amazon catalog.`,
+		navigateLabel: 'Learn more about the Profit Finder',
+		navigateTo: '/profit-finder'
 	},
 	{
 		title: 'Product Tracker',

@@ -11,12 +11,11 @@ export const accordionData = [
 	},
 	{
 		title: 'Pricing Overview',
-		description: `Tools and pricing plans that grow with you and your business. 
-		Pricing plans start at:`,
+		description: `Tools and pricing plans that grow with you and your business.`,
 		listDetails: [
-			'Wholesale Tier 1:',
-			'Private Label Tier 1:',
-			'Professional Tier 1:'
+			// 'Wholesale Tier 1:',
+			// 'Private Label Tier 1:',
+			// 'Professional Tier 1:'
 		],
 		ctaLinkDetails: {
 			name: 'View all Pricing plans',
