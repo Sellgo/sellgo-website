@@ -86,21 +86,6 @@ const TopFooter: React.FC<Props> = () => {
 						<a>Blogs</a>
 					</Link>
 				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/affiliate-program" passHref>
-						<a>Affiliate Program</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/free-sales-estimation" passHref>
-						<a>Free Sales Estimation Tools</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/free-fba-calculator" passHref>
-						<a>Free Amazon FBA Fee Calculator</a>
-					</Link>
-				</li>
 			</ul>
 
 			<ul className={styles.footerNavigation}>
