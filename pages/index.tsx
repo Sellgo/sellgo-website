@@ -12,7 +12,6 @@ import { GET_BLOGS_FOR_HOME } from '../graphql/cms';
 
 /* Containers */
 import HeroBox from '../containers/HomePage/HeroBox';
-import InfoSection from '../containers/HomePage/InfoSection';
 import ProductsSection from '../containers/HomePage/ProductsSection';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
@@ -49,11 +48,13 @@ const HomePage: React.FC<Props> = (props) => {
 						The Amazon Opportunity Finder Your Business Will Love
 					</h2>
 				</section>
-				<InfoSection />
 				<ProductsSection />
 				<TestimonialsSection />
+
 				<div className={styles.divider}></div>
+
 				<RecentBlogsSection recentBlogs={homeBlogs} />
+
 				<div className={styles.divider}></div>
 
 				<ClosingCTASection />
