@@ -102,7 +102,7 @@ const getBlogSlugAndGenerateSitemap = async () => {
 		);
 
 		console.log(
-			chalk.green('Job finished. Common Sitemap written on the public folder.')
+			chalk.green('Job finished. Blogs Sitemap written on the public folder.')
 		);
 	} catch (err) {
 		console.log(chalk.red('Error generating sitemap for dynamic blogs'), err);

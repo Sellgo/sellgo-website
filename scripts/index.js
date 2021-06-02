@@ -1,24 +1,40 @@
-const { default: chalk } = require('chalk');
 const fs = require('fs');
 const path = require('path');
-const zlib = require('zlib');
+const globby = require('globby');
 
-const compressSiteMaps = async () => {
-	try {
-		const publicDir = path.resolve(__dirname, '../public');
+const sitemapUtils = require('./utils');
 
-		fs.readdirSync(publicDir).forEach((file) => {
-			if (file.endsWith('.xml')) {
-				const fileContents = fs.createReadStream(`${publicDir}/${file}`);
-				const writeStream = fs.createWriteStream(`${publicDir}/${file}.gz`);
-				const zip = zlib.createGzip();
+const combineSitemap = async () => {
+	const domain = 'https://www.sellgo.com';
+	const getDate = new Date().toISOString();
 
-				fileContents.pipe(zip).pipe(writeStream);
-			}
-		});
-	} catch (err) {
-		console.log(chalk.red('Error compressing sitemaps'), err);
-	}
+	const pages = await globby(['public/*.xml']);
+
+	const sitemapIndex = `
+    ${pages
+			.map((page) => {
+				const path = page.replace('public', '');
+				return `
+          <sitemap>
+            <loc>${`${domain}${path}`}</loc>
+            <lastmod>${getDate}</lastmod>
+          </sitemap>`;
+			})
+			.join('')}`;
+
+	const sitemap = `
+    <?xml version="1.0" encoding="UTF-8"?>
+    <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${sitemapIndex}
+    </sitemapindex>
+  `;
+
+	const formattedSitemap = [sitemapUtils.formatSitemap(sitemap)];
+	fs.writeFileSync(
+		path.resolve(__dirname, '../public/sitemap.xml'),
+		formattedSitemap,
+		'utf8'
+	);
 };
 
-compressSiteMaps();
+combineSitemap();

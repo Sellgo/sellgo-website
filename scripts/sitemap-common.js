@@ -34,8 +34,6 @@ const getPagesAndPrepareSitemap = async () => {
 			'!pages/blogs/blog'
 		]);
 
-		console.log(pages);
-
 		const pagesSitemap = `${pages
 			.map((page) => {
 				const path = page

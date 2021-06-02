@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+			http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+  <url>
+    <loc>https://www.sellgo.com</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/about-us</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/blogs</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/contact</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/demo</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/contact-sales</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/extension</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/leads-tracker</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/pricing</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/privacy-policy</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/product-tracker</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/profit-finder</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/search-management</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/seller-finder</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/terms-of-use</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority> </url
+  ><url>
+    <loc>https://www.sellgo.com/blogs/paginated</loc>
+    <lastmod>2021-06-02T19:59:52.124Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

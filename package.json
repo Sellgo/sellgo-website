@@ -10,7 +10,13 @@
 		"dev": "npm run lint && next dev",
 		"build": "next build",
 		"start": "next start",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"build:static-sitemap": "node scripts/sitemap-common.js",
+		"build:blogs-sitemap": "node scripts/sitemap-blogs.js",
+		"build:sitemap": "npm-run-all build:static-sitemap build:blogs-sitemap",
+		"combine:sitemap": "node scripts/index.js",
+		"generate:sitemap": "npm-run-all build:sitemap combine:sitemap",
+		"postbuild": "npm run generate:sitemap"
 	},
 	"dependencies": {
 		"@analytics/fullstory": "^0.2.4",

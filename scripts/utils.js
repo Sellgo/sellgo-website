@@ -2,7 +2,7 @@ const prettier = require('prettier');
 
 const pageFrequencyMapper = {
 	// means index page
-	index: 'monthly',
+	index: 'weekly',
 	'/blogs': 'daily',
 	'/blogs/paginated': 'daily'
 };
@@ -22,7 +22,7 @@ exports.getPageFrequency = (routePath) => {
 	}
 	const pageFrequency = pageFrequencyMapper[routePath];
 	if (!pageFrequency) {
-		return 'monthly';
+		return 'weekly';
 	}
 
 	return pageFrequency;
@@ -43,5 +43,6 @@ exports.getPagePriority = (routePath) => {
 	return pagePriority;
 };
 
+// format the sitemap using prettier
 exports.formatSitemap = (sitemap) =>
 	prettier.format(sitemap, { parser: 'html' });
