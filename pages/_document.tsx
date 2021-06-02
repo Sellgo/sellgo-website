@@ -17,6 +17,10 @@ class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
+					<meta
+						name="google-site-verification"
+						content={`${process.env.NEXT_PUBLIC_GA_SITE_VERIFY}`}
+					/>
 					<link rel="shortcut icon" href="/favicon.ico" />
 					{/* Hotjar Integration */}
 					<script
