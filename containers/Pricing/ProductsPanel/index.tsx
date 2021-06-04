@@ -48,20 +48,19 @@ const ProductsPanel: React.FC<Props> = (props) => {
 		// [0,1,2,3,4]=['Free Trial', 'Monthly and Annual Plans']
 
 		if (index === undefined || index === null) {
+			// perform shallow routing on pricing to prevent new data fetch on get static props
 			setSelectedPlanType(lastIndex);
-			router.push({
-				pathname: '/pricing',
-				query: {
-					type: generateQueryFromTabIndex(1)
-				}
+			router.push(`/pricing?type=${generateQueryFromTabIndex(1)}`, undefined, {
+				shallow: true
 			});
 		} else {
-			router.push({
-				pathname: '/pricing',
-				query: {
-					type: generateQueryFromTabIndex(index)
+			router.push(
+				`/pricing?type=${generateQueryFromTabIndex(index)}`,
+				undefined,
+				{
+					shallow: true
 				}
-			});
+			);
 			setSelectedPlanType(index);
 		}
 	};

@@ -6,23 +6,22 @@ import Link from 'next/link';
 import styles from './index.module.scss';
 
 /* Utility */
-import { imageLoaderForBlogs } from '../../../../utils/Blogs';
+import {
+	formatBlogReadTime,
+	generateCategoryDisplayName,
+	imageLoaderForBlogs
+} from '../../../../utils/Blogs';
 
 /* Types */
-import { FeaturedImage } from '../../../../interfaces/Blogs';
+import { ShowcaseBlogDetails } from '../../../../interfaces/Blogs';
 
 interface Props {
-	blogDetails: {
-		featuredImage: FeaturedImage;
-		slug: string;
-		title: string;
-		date: string;
-	};
+	blogDetails: ShowcaseBlogDetails;
 }
 
 const SmallBlogCard: React.FC<Props> = (props) => {
 	const {
-		blogDetails: { slug, title, featuredImage }
+		blogDetails: { slug, title, featuredImage, categories, readingTime }
 	} = props;
 
 	return (
@@ -40,6 +39,10 @@ const SmallBlogCard: React.FC<Props> = (props) => {
 					</div>
 					<div className={styles.blogText}>
 						<h4>{title}</h4>
+						<p>
+							{generateCategoryDisplayName(categories.nodes)}{' '}
+							{formatBlogReadTime(readingTime.readtime)} Min Read
+						</p>
 					</div>
 				</a>
 			</Link>

@@ -9,15 +9,18 @@ import styles from './index.module.scss';
 import BigBlogCard from './BigBlogCard';
 import SmallBlogCard from './SmallBlogCard';
 
+/* Types */
+import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
+
 interface Props {
-	recentBlogs: any;
+	recentBlogs: ShowcaseBlogDetails[];
 }
 
 const RecentBlogsSection: React.FC<Props> = (props) => {
 	const { recentBlogs } = props;
 
 	const recentArticlesSummary = recentBlogs.filter(
-		(blog: any, index: number) => index < 7
+		(blog: any, index: number) => index < 9
 	);
 
 	return (
