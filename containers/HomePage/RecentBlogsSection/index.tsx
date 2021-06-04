@@ -31,9 +31,9 @@ const RecentBlogsSection: React.FC<Props> = (props) => {
 
 			<div className={styles.blogsWrapper}>
 				<div className={styles.blogsWrapper__left}>
-					<BigBlogCard blogDetails={recentBlogs[9]} />
-					<SmallBlogCard blogDetails={recentBlogs[8]} />
-					<SmallBlogCard blogDetails={recentBlogs[7]} />
+					<BigBlogCard blogDetails={recentBlogs[11]} />
+					<SmallBlogCard blogDetails={recentBlogs[10]} />
+					<SmallBlogCard blogDetails={recentBlogs[9]} />
 				</div>
 
 				<div className={styles.blogsWrapper__right}>
