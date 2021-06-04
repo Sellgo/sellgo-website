@@ -1,13 +1,13 @@
-const prettier = require('prettier');
+import { KeyValuePair } from '../../interfaces';
 
-const pageFrequencyMapper = {
+const pageFrequencyMapper: KeyValuePair = {
 	// means index page
 	index: 'weekly',
 	'/blogs': 'daily',
 	'/blogs/paginated': 'daily'
 };
 
-const pagePriorityMapper = {
+const pagePriorityMapper: KeyValuePair = {
 	index: 1,
 	'/pricing': 1,
 	'/blogs': 0.8,
@@ -15,7 +15,7 @@ const pagePriorityMapper = {
 };
 
 // Utility to get the changeFreq value
-exports.getPageFrequency = (routePath) => {
+export const getPageFrequency = (routePath: string) => {
 	// special index route
 	if (routePath === '') {
 		return pageFrequencyMapper.index;
@@ -29,7 +29,7 @@ exports.getPageFrequency = (routePath) => {
 };
 
 // Utility to get the priority value
-exports.getPagePriority = (routePath) => {
+export const getPagePriority = (routePath: string) => {
 	// special index route
 	if (routePath === '') {
 		return pagePriorityMapper.index;
@@ -42,7 +42,3 @@ exports.getPagePriority = (routePath) => {
 
 	return pagePriority;
 };
-
-// format the sitemap using prettier
-exports.formatSitemap = (sitemap) =>
-	prettier.format(sitemap, { parser: 'html' });

@@ -47,6 +47,32 @@ export const GET_SHOW_CASE_BLOGS = gql`
 	}
 `;
 
+export const GET_TOTAL_BLOGS_COUNT = gql`
+	query totalBlogsCount {
+		posts {
+			pageInfo {
+				total
+			}
+		}
+	}
+`;
+
+export const GET_BLOGS_DATA_FOR_SITEMAP = gql`
+	query getALlSLugsForSitemap($size: Int!) {
+		posts(
+			where: {
+				orderby: { field: DATE, order: DESC }
+				offsetPagination: { offset: 0, size: $size }
+			}
+		) {
+			nodes {
+				slug
+				date
+			}
+		}
+	}
+`;
+
 export const GET_ALL_SLUGS = gql`
 	query getAllSlugs {
 		posts {
