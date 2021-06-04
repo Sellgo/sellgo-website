@@ -16,11 +16,12 @@ export const GET_PAGE_BY_URI = gql`
 `;
 
 export const GET_SHOW_CASE_BLOGS = gql`
-	query getBlogsForShowcase {
-		posts(first: 10, where: { orderby: { field: DATE, order: DESC } }) {
+	query getBlogsForShowcase($count: Int!) {
+		posts(first: $count, where: { orderby: { field: DATE, order: DESC } }) {
 			nodes {
 				slug
 				title
+				date
 				featuredImage {
 					node {
 						altText

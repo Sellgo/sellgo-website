@@ -38,9 +38,26 @@
 	width: 100%;
 	background: #ebeef0;
 	padding: 2rem;
+	position: relative;
+
 	h4 {
 		font-size: $fontsize_subtitle_24;
 		margin-bottom: 2rem;
 		font-weight: $fontweight_semibold;
+	}
+
+	p {
+		text-transform: uppercase;
+		font-size: $fontsize_content_12;
+		font-weight: $fontweight_semibold;
+		color: $second_grey;
+		margin-top: 2rem;
+		position: absolute;
+		bottom: 1rem;
+		left: 2rem;
+
+		@media only screen and(max-width: 500px) {
+			font-size: $fontsize_content_12;
+		}
 	}
 }

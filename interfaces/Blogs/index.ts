@@ -37,19 +37,12 @@ export interface ShowcaseBlogDetails {
 	categories: Categories;
 	content: string;
 	readingTime: ReadingTime;
+	date: Date;
 }
 
 export interface FilteredBlog {
 	slug: string;
 	title: string;
-	categories: Categories;
-	readingTime: ReadingTime;
-}
-
-export interface RelatedBlogDetails {
-	title: string;
-	slug: string;
-	featuredImage: FeaturedImage;
 	categories: Categories;
 	readingTime: ReadingTime;
 }
