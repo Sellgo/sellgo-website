@@ -77,7 +77,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 	const blogsSitemap = `${sitemapInfo
 		.map((blogSitemapData: any) => {
 			return `<url>
-            <loc>${AppConfig.WEB_URL}/blogs/${blogSitemapData.slug}</loc>
+            <loc>${AppConfig.WEB_URL}/blogs/blog/${blogSitemapData.slug}</loc>
             <lastmod>${new Date(blogSitemapData.date).toISOString()}</lastmod>
           </url>`;
 		})
