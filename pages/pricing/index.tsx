@@ -57,7 +57,6 @@ const PricingPage: React.FC<Props> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	console.log('Called again!');
 	const pringFAQResponse = await axios.get(
 		`${AppConfig.FAQ_BUCKET}/pricing.json`
 	);

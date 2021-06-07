@@ -8,10 +8,10 @@ import styles from './index.module.scss';
 import RelatedBlogCard from '../../../components/BlogFeatureCards/RelatedBlogCard';
 
 /* Types */
-import { RelatedBlogDetails } from '../../../interfaces/Blogs';
+import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 
 interface Props {
-	relatedBlogs: RelatedBlogDetails[];
+	relatedBlogs: ShowcaseBlogDetails[];
 }
 
 const RelatedBlogsSection: React.FC<Props> = (props) => {
@@ -21,7 +21,7 @@ const RelatedBlogsSection: React.FC<Props> = (props) => {
 		<section className={`page-container ${styles.relatedBlogs}`}>
 			<h3>Related Articles</h3>
 			<div className={styles.relatedBlogsWrapper}>
-				{relatedBlogs.map((blog: RelatedBlogDetails) => {
+				{relatedBlogs.map((blog: ShowcaseBlogDetails) => {
 					return <RelatedBlogCard key={uuid()} {...blog} />;
 				})}
 			</div>

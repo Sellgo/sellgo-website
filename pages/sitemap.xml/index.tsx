@@ -3,21 +3,19 @@ import { GetServerSideProps } from 'next';
 import globby from 'globby';
 
 /* Apollo */
-// import client from '../../apollo';
+import client from '../../apollo';
 
 /* Graphql */
-// import {  } from '../../graphql/cms';
+import {
+	GET_BLOGS_DATA_FOR_SITEMAP,
+	GET_TOTAL_BLOGS_COUNT
+} from '../../graphql/cms';
 
 /* App Config */
 import AppConfig from '../../config';
 
 /* Utils */
 import { getPageFrequency, getPagePriority } from '../../utils/Sitemap';
-import client from '../../apollo';
-import {
-	GET_BLOGS_DATA_FOR_SITEMAP,
-	GET_TOTAL_BLOGS_COUNT
-} from '../../graphql/cms';
 
 interface Props {}
 
