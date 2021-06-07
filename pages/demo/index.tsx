@@ -264,7 +264,7 @@ const DemoPage: React.FC<Props> = () => {
 		formData.append('company', company);
 		formData.append('website', website);
 		formData.append('numemployees', companySize);
-		formData.append('subscribeblog', sellgoBlog ? 'Yes' : 'No');
+		formData.append('subscribeblog', sellgoBlog ? 'true' : 'false');
 
 		try {
 			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;

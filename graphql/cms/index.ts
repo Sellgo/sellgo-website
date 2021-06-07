@@ -16,11 +16,12 @@ export const GET_PAGE_BY_URI = gql`
 `;
 
 export const GET_SHOW_CASE_BLOGS = gql`
-	query getBlogsForShowcase {
-		posts(first: 10, where: { orderby: { field: DATE, order: DESC } }) {
+	query getBlogsForShowcase($count: Int!) {
+		posts(first: $count, where: { orderby: { field: DATE, order: DESC } }) {
 			nodes {
 				slug
 				title
+				date
 				featuredImage {
 					node {
 						altText
@@ -42,6 +43,32 @@ export const GET_SHOW_CASE_BLOGS = gql`
 			}
 			pageInfo {
 				total
+			}
+		}
+	}
+`;
+
+export const GET_TOTAL_BLOGS_COUNT = gql`
+	query totalBlogsCount {
+		posts {
+			pageInfo {
+				total
+			}
+		}
+	}
+`;
+
+export const GET_BLOGS_DATA_FOR_SITEMAP = gql`
+	query getALlSLugsForSitemap($size: Int!) {
+		posts(
+			where: {
+				orderby: { field: DATE, order: DESC }
+				offsetPagination: { offset: 0, size: $size }
+			}
+		) {
+			nodes {
+				slug
+				date
 			}
 		}
 	}

@@ -16,12 +16,7 @@ import { seoData } from '../../data/SEO/productTracker';
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
 
-/* Types */
-import { FAQDetails } from '../../interfaces/FAQ';
-
-interface Props {
-	faqDetails: FAQDetails;
-}
+interface Props {}
 
 const ProductTrackerContPage: React.FC<Props> = () => {
 	return (

@@ -9,10 +9,10 @@ import styles from './index.module.scss';
 import { imageLoaderForBlogs } from '../../../utils/Blogs';
 
 /* Types */
-import { RelatedBlogDetails } from '../../../interfaces/Blogs';
+import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 
 interface Props {
-	relatedBlogsDetails: RelatedBlogDetails | null;
+	relatedBlogsDetails: ShowcaseBlogDetails | null;
 }
 
 const CategoryBlogCard: React.FC<Props> = (props) => {

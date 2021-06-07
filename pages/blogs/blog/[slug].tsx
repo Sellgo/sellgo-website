@@ -25,7 +25,7 @@ import { GET_ALL_SLUGS, GET_BLOG_BY_SLUG } from '../../../graphql/cms';
 import {
 	FeaturedImage,
 	Author,
-	RelatedBlogDetails
+	ShowcaseBlogDetails
 } from '../../../interfaces/Blogs';
 
 interface Props {
@@ -37,7 +37,7 @@ interface Props {
 	featuredImage: FeaturedImage;
 	shortSummary: string;
 	keywords: string;
-	relatedBlogs: RelatedBlogDetails[];
+	relatedBlogs: ShowcaseBlogDetails[];
 }
 
 const BlogPage: React.FC<Props> = (props) => {

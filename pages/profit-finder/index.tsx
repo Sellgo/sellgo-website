@@ -32,7 +32,6 @@ const ProfitFinderContPage: React.FC<Props> = () => {
 			<InfoSection />
 			<NewBenefitsSection />
 			<CommonFeaturesSection />
-
 			<RecommendationSection />
 		</>
 	);
