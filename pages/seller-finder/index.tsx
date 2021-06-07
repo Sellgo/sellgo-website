@@ -1,13 +1,10 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
-import axios from 'axios';
 
 /* Containers */
 import HeroBox from '../../containers/SellerFinderCont/HeroBox';
 import InfoSection from '../../containers/SellerFinderCont/InfoSection';
 import NewBenefitsSection from '../../containers/SellerFinderCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/SellerFinderCont/CommomFeaturesSection';
-import FAQSection from '../../containers/SellerFinderCont/FAQSection';
 import RecommendationSection from '../../containers/SellerFinderCont/RecommendationSection';
 
 /* Components */
@@ -19,19 +16,9 @@ import { seoData } from '../../data/SEO/sellerFinder';
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
 
-/* App Config */
-import AppConfig from '../../config';
+interface Props {}
 
-/* Types */
-import { FAQDetails } from '../../interfaces/FAQ';
-
-interface Props {
-	faqDetails: FAQDetails;
-}
-
-const SellerFinderContPage: React.FC<Props> = (props) => {
-	const { faqDetails } = props;
-
+const SellerFinderContPage: React.FC<Props> = () => {
 	return (
 		<>
 			<SEOHead
@@ -45,22 +32,9 @@ const SellerFinderContPage: React.FC<Props> = (props) => {
 			<InfoSection />
 			<NewBenefitsSection />
 			<CommonFeaturesSection />
-			{/* {faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />} */}
 			<RecommendationSection />
 		</>
 	);
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/sellerFinder.json`);
-
-	const { data } = response;
-	return {
-		props: {
-			faqDetails: data
-		},
-		revalidate: 1
-	};
 };
 
 export default SellerFinderContPage;

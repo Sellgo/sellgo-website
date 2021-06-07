@@ -48,7 +48,6 @@ const HomePage: React.FC<Props> = (props) => {
 						The Amazon Opportunity Finder Your Business Will Love
 					</h2>
 				</section>
-				{/* <InfoSection /> */}
 				<ProductsSection />
 				<TestimonialsSection />
 
