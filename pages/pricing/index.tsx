@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { GetStaticProps } from 'next';
-import axios from 'axios';
 
 /* Containers */
 import HeroBox from '../../containers/Pricing/HeroBox';
@@ -16,16 +14,9 @@ import { seoData } from '../../data/SEO/pricing';
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
 
-/* App Config */
-import AppConfig from '../../config';
+interface Props {}
 
-interface Props {
-	faqDetailsForPricing: any;
-}
-
-const PricingPage: React.FC<Props> = (props) => {
-	const { faqDetailsForPricing } = props;
-
+const PricingPage: React.FC<Props> = () => {
 	const [
 		isProductsPanelSelected,
 		setIsProductsPanelSelected
@@ -47,27 +38,9 @@ const PricingPage: React.FC<Props> = (props) => {
 			/>
 
 			{/* render either prcing panel or bundles panel */}
-			{isProductsPanelSelected ? (
-				<ProductsPanel faqDetails={faqDetailsForPricing.products} />
-			) : (
-				<BundlesPanel />
-			)}
+			{isProductsPanelSelected ? <ProductsPanel /> : <BundlesPanel />}
 		</>
 	);
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-	const pringFAQResponse = await axios.get(
-		`${AppConfig.FAQ_BUCKET}/pricing.json`
-	);
-
-	const { data: faqDetailsForPricing } = pringFAQResponse;
-
-	return {
-		props: {
-			faqDetailsForPricing
-		},
-		revalidate: 1
-	};
-};
 export default PricingPage;

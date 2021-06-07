@@ -13,24 +13,18 @@ import FreeTrialPanel from '../../FreeTrialPanel';
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
 
-/* Types */
-import { FAQDetails } from '../../../interfaces/FAQ';
-
 /* Utils */
 import {
 	generateQueryFromTabIndex,
 	generateTabIndexFromQuery
 } from '../../../utils/Pricing';
 
-interface Props {
-	faqDetails: FAQDetails[];
-}
+interface Props {}
 
-const ProductsPanel: React.FC<Props> = (props) => {
+const ProductsPanel: React.FC<Props> = () => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
 
-	const { faqDetails } = props;
 	const router = useRouter();
 
 	const queryCollection = router.query || {};
@@ -85,7 +79,7 @@ const ProductsPanel: React.FC<Props> = (props) => {
 
 			{/* Seperation of concern for free trial tab */}
 			<TabPanel>
-				<FreeTrialPanel faqData={faqDetails[0]} />
+				<FreeTrialPanel />
 			</TabPanel>
 
 			{plansAndProductsDetails.map((plan: any) => {
@@ -97,7 +91,6 @@ const ProductsPanel: React.FC<Props> = (props) => {
 							infoAlertMessage={plan.infoAlertMessage}
 							productsIncluded={plan.productsIncluded}
 							selectedPlanType={selectedPlanType}
-							faqData={faqDetails[selectedPlanType]}
 						/>
 					</TabPanel>
 				);
