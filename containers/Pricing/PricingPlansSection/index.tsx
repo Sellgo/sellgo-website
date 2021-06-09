@@ -14,14 +14,8 @@ import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
 import ContactInfo from '../../../components/ContactInfo';
 import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
 
-/* Containers */
-import FAQSection from '../FAQSection';
-
 /* Constants */
 import { getAllFeaturesForPlans } from '../../../data/Pricing';
-
-/* Types */
-import { FAQDetails } from '../../../interfaces/FAQ';
 
 interface Props {
 	planName: string;
@@ -29,7 +23,6 @@ interface Props {
 	infoAlertMessage: any;
 	productsIncluded: any;
 	selectedPlanType: number;
-	faqData: FAQDetails;
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
@@ -38,8 +31,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 		summary,
 		productsIncluded,
 		infoAlertMessage,
-		selectedPlanType,
-		faqData
+		selectedPlanType
 	} = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
@@ -148,8 +140,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
 				<ContactInfo message="" />
 			</section>
-
-			{faqData.data.length > 0 && <FAQSection faqData={faqData.data} />}
 		</>
 	);
 };

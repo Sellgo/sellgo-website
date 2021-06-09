@@ -11,22 +11,14 @@ import ContactInfo from '../../components/ContactInfo';
 /* Containers */
 import FeaturesSection from './FeaturesSection';
 import BenefitsSection from './BenefitsSection';
-import FAQSection from './FAQSection';
 import CTAButton from '../../components/CTAButton';
-
-/* Types */
-import { FAQDetails } from '../../interfaces/FAQ';
 
 /* Config */
 import AppConfig from '../../config';
 
-interface Props {
-	faqData: FAQDetails;
-}
+interface Props {}
 
-const FreeTrialPanel: React.FC<Props> = (props) => {
-	const { faqData: freeTrailFAQData } = props;
-
+const FreeTrialPanel: React.FC<Props> = () => {
 	return (
 		<>
 			<section className={`big-page-container ${styles.freeTrialSection}`}>
@@ -57,10 +49,6 @@ const FreeTrialPanel: React.FC<Props> = (props) => {
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
 				<ContactInfo message="" />
 			</section>
-
-			{freeTrailFAQData.data.length > 0 && (
-				<FAQSection faqData={freeTrailFAQData.data} />
-			)}
 
 			<section className={`big-page-container ${styles.otherInfoSection}`}>
 				<h2 className="secondary-heading">

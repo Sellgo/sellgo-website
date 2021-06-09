@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 import client from '../apollo';
 
 /* GraphQL */
-import { GET_BLOGS_FOR_HOME } from '../graphql/cms';
+import { GET_SHOW_CASE_BLOGS } from '../graphql/cms';
 
 /* Containers */
 import HeroBox from '../containers/HomePage/HeroBox';
@@ -26,8 +26,11 @@ import { seoData } from '../data/SEO/home';
 /* Utils */
 import { generatePageURL } from '../utils/SEO';
 
+/* Types */
+import { ShowcaseBlogDetails } from '../interfaces/Blogs';
+
 interface Props {
-	homeBlogs: any;
+	homeBlogs: ShowcaseBlogDetails[];
 }
 
 const HomePage: React.FC<Props> = (props) => {
@@ -54,7 +57,6 @@ const HomePage: React.FC<Props> = (props) => {
 				<div className={styles.divider}></div>
 
 				<RecentBlogsSection recentBlogs={homeBlogs} />
-
 				<div className={styles.divider}></div>
 
 				<ClosingCTASection />
@@ -65,7 +67,10 @@ const HomePage: React.FC<Props> = (props) => {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const response = await client.query({
-		query: GET_BLOGS_FOR_HOME
+		query: GET_SHOW_CASE_BLOGS,
+		variables: {
+			count: 12
+		}
 	});
 
 	const blogsForHome = response.data.posts.nodes;

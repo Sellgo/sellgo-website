@@ -127,7 +127,8 @@ const BlogsPage: React.FC<Props> = (props) => {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const showCaseBlogsResponse = await client.query({
-		query: GET_SHOW_CASE_BLOGS
+		query: GET_SHOW_CASE_BLOGS,
+		variables: { count: 10 }
 	});
 
 	const editorsChoiceBlogsResponse = await client.query({

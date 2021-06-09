@@ -13,24 +13,18 @@ import FreeTrialPanel from '../../FreeTrialPanel';
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
 
-/* Types */
-import { FAQDetails } from '../../../interfaces/FAQ';
-
 /* Utils */
 import {
 	generateQueryFromTabIndex,
 	generateTabIndexFromQuery
 } from '../../../utils/Pricing';
 
-interface Props {
-	faqDetails: FAQDetails[];
-}
+interface Props {}
 
-const ProductsPanel: React.FC<Props> = (props) => {
+const ProductsPanel: React.FC<Props> = () => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
 
-	const { faqDetails } = props;
 	const router = useRouter();
 
 	const queryCollection = router.query || {};
@@ -48,20 +42,19 @@ const ProductsPanel: React.FC<Props> = (props) => {
 		// [0,1,2,3,4]=['Free Trial', 'Monthly and Annual Plans']
 
 		if (index === undefined || index === null) {
+			// perform shallow routing on pricing to prevent new data fetch on get static props
 			setSelectedPlanType(lastIndex);
-			router.push({
-				pathname: '/pricing',
-				query: {
-					type: generateQueryFromTabIndex(1)
-				}
+			router.push(`/pricing?type=${generateQueryFromTabIndex(1)}`, undefined, {
+				shallow: true
 			});
 		} else {
-			router.push({
-				pathname: '/pricing',
-				query: {
-					type: generateQueryFromTabIndex(index)
+			router.push(
+				`/pricing?type=${generateQueryFromTabIndex(index)}`,
+				undefined,
+				{
+					shallow: true
 				}
-			});
+			);
 			setSelectedPlanType(index);
 		}
 	};
@@ -86,7 +79,7 @@ const ProductsPanel: React.FC<Props> = (props) => {
 
 			{/* Seperation of concern for free trial tab */}
 			<TabPanel>
-				<FreeTrialPanel faqData={faqDetails[0]} />
+				<FreeTrialPanel />
 			</TabPanel>
 
 			{plansAndProductsDetails.map((plan: any) => {
@@ -98,7 +91,6 @@ const ProductsPanel: React.FC<Props> = (props) => {
 							infoAlertMessage={plan.infoAlertMessage}
 							productsIncluded={plan.productsIncluded}
 							selectedPlanType={selectedPlanType}
-							faqData={faqDetails[selectedPlanType]}
 						/>
 					</TabPanel>
 				);
