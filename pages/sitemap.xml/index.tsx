@@ -25,6 +25,7 @@ const Sitemap: React.FC<Props> = () => {
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 	// generate sitenmap for static pages first
+
 	const staticPages = await globby([
 		// include
 		'pages/*.tsx',
