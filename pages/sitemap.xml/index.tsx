@@ -1,6 +1,5 @@
 import React from 'react';
 import { GetServerSideProps } from 'next';
-import globby from 'globby';
 
 /* Apollo */
 import client from '../../apollo';
@@ -25,19 +24,25 @@ const Sitemap: React.FC<Props> = () => {
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 	// generate sitenmap for static pages first
-	const staticPages = await globby([
-		// include
-		'pages/*.tsx',
-		'pages/**/*.tsx',
-		// exclude _document.tsx and _app.tsx
-		'!pages/_*.tsx',
-		// exclude error pages
-		'!pages/404.tsx',
-		'!pages/500.tsx',
-		// exclude as they are handled seperately on server sitemap page component
-		'!pages/blogs/blog',
-		'!pages/sitemap.xml'
-	]);
+
+	const staticPages = [
+		'pages/index.tsx',
+		'pages/about-us/index.tsx',
+		'pages/blogs/index.tsx',
+		'pages/contact/index.tsx',
+		'pages/demo/index.tsx',
+		'pages/contact-sales/index.tsx',
+		'pages/extension/index.tsx',
+		'pages/leads-tracker/index.tsx',
+		'pages/pricing/index.tsx',
+		'pages/privacy-policy/index.tsx',
+		'pages/product-tracker/index.tsx',
+		'pages/profit-finder/index.tsx',
+		'pages/search-management/index.tsx',
+		'pages/seller-finder/index.tsx',
+		'pages/terms-of-use/index.tsx',
+		'pages/blogs/paginated/index.tsx'
+	];
 
 	const staticPagesSitemap = `${staticPages
 		.map((page) => {
@@ -83,12 +88,13 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 
 	// combine the sitemaps
 	const staticPageGeneratedSitemap = `
-    <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
-			http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
-    >
+	
+    	<urlset
+      	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+				http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    	>
       ${staticPagesSitemap}
 			${blogsSitemap}
     </urlset>
