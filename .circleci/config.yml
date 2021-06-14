@@ -1,0 +1,40 @@
+version: 2.1
+orbs:
+  aws-cli: circleci/aws-cli@0.1.15
+  aws-ecr: circleci/aws-ecr@6.15.3
+  aws-ecs: circleci/aws-ecs@0.0.8
+workflows:
+  build-and-deploy-dev:
+    jobs:
+      - aws-ecr/build-and-push-image:
+          context: development
+          filters:
+            branches:
+              only: create_circleci_config_yml
+          account-url: AWS_ECR_ACCOUNT_URL
+          dockerfile: "Dockerfile"
+          repo: "api"
+          region: AWS_REGION
+          tag: "${CIRCLE_SHA1}"
+      - aws-ecs/deploy-service-update:
+          context: development
+          filters:
+            branches:
+              only: create_circleci_config_yml
+          requires:
+            - aws-ecr/build-and-push-image
+          aws-region: ${AWS_REGION}
+          cluster-name: "sellgo-ecs"
+          family: "api"
+          container-image-name-updates: "container=api,tag=${CIRCLE_SHA1},container=nginx,tag=${CIRCLE_SHA1}"
+      - aws-ecs/deploy-service-update:
+          context: development
+          filters:
+            branches:
+              only: create_circleci_config_yml
+          requires:
+            - aws-ecr/build-and-push-image
+          aws-region: ${AWS_REGION}
+          cluster-name: "sellgo-ecs"
+          family: "api-worker"
+          container-image-name-updates: "container=celery,tag=${CIRCLE_SHA1}"
