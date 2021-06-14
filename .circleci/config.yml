@@ -9,8 +9,8 @@ workflows:
       - aws-ecr/build-and-push-image:
           context: development
           filters:
-            branches:
-              only: develop
+            branches: create_circleci_config_yml
+              only:
           account-url: AWS_ECR_ACCOUNT_URL
           dockerfile: "Dockerfile"
           repo: "sellgo-website"
@@ -21,7 +21,7 @@ workflows:
           context: development
           filters:
             branches:
-              only: develop
+              only: create_circleci_config_yml
           requires:
             - aws-ecr/build-and-push-image
           aws-region: ${AWS_REGION}
