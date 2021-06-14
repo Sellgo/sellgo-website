@@ -10,7 +10,7 @@ workflows:
           context: development
           filters:
             branches:
-              only: create_circleci_config_yml
+              only: develop
           account-url: AWS_ECR_ACCOUNT_URL
           dockerfile: "Dockerfile"
           repo: "sellgo-website"
@@ -21,7 +21,31 @@ workflows:
           context: development
           filters:
             branches:
-              only: create_circleci_config_yml
+              only: develop
+          requires:
+            - aws-ecr/build-and-push-image
+          aws-region: ${AWS_REGION}
+          cluster-name: "sellgo-ecs"
+          family: "sellgo-website"
+          container-image-name-updates: "container=sellgo-website,tag=${CIRCLE_SHA1},container=sellgo-website-nginx,image=caprover/nginx-reverse-proxy"
+  build-and-deploy-prod:
+    jobs:
+      - aws-ecr/build-and-push-image:
+          context: production
+          filters:
+            branches:
+              only: master
+          account-url: AWS_ECR_ACCOUNT_URL
+          dockerfile: "Dockerfile"
+          repo: "sellgo-website"
+          region: AWS_REGION
+          tag: "${CIRCLE_SHA1}"
+          extra-build-args: '--build-arg NODE_ENV=production'
+      - aws-ecs/deploy-service-update:
+          context: production
+          filters:
+            branches:
+              only: master
           requires:
             - aws-ecr/build-and-push-image
           aws-region: ${AWS_REGION}
