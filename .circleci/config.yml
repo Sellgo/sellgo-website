@@ -26,4 +26,4 @@ workflows:
           aws-region: ${AWS_REGION}
           cluster-name: "sellgo-ecs"
           family: "sellgo-website"
-          container-image-name-updates: "container=sellgo-website,tag=${CIRCLE_SHA1},container=sellgo-website-nginx"
+          container-image-name-updates: "container=sellgo-website,tag=${CIRCLE_SHA1}"
