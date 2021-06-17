@@ -21,12 +21,14 @@ const DEV = {
 const PROD = {
 	...PROD_URLS
 };
+
 const getAppConfig = () => {
-	if (process.env.NODE_ENV === 'production') {
+	if (process.env.NEXT_PUBLIC_NODE_ENV === 'production') {
 		return PROD;
 	}
 
 	return DEV;
 };
+
 const AppConfig = getAppConfig();
 export default AppConfig;
