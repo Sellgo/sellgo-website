@@ -35,6 +35,12 @@ module.exports = {
 				permanent: true
 			},
 			{
+				source: '/post/5-useful-tools-that-every-amazon-fba-seller-should-use',
+				destination:
+					'/blogs/blog/5-useful-seller-tools-for-every-amazon-fba-seller',
+				permanent: true
+			},
+			{
 				source:
 					'/post/ultimate-guide-to-amazon-packaging-prepping-amazon-products-for-shipment',
 				destination:
@@ -47,6 +53,7 @@ module.exports = {
 				destination: '/blogs/blog/4-best-amazon-reviewer-checkers',
 				permanent: true
 			},
+
 			// slug match
 			{
 				source: '/post/:slug',
