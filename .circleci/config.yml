@@ -16,7 +16,7 @@ workflows:
           repo: "sellgo-website"
           region: AWS_REGION
           tag: "${CIRCLE_SHA1}"
-          extra-build-args: '--build-arg NODE_ENV=development'
+          extra-build-args: '--build-arg MODE=local'
       - aws-ecs/deploy-service-update:
           context: development
           filters:
@@ -40,7 +40,7 @@ workflows:
           repo: "sellgo-website"
           region: AWS_REGION
           tag: "${CIRCLE_SHA1}"
-          extra-build-args: '--build-arg NODE_ENV=production'
+          extra-build-args: '--build-arg MODE=production'
       - aws-ecs/deploy-service-update:
           context: production
           filters:
