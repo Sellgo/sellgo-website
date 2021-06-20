@@ -21,7 +21,7 @@ workflows:
           context: development
           filters:
             branches:
-              only: develop
+              only: create_circleci_config_yml
           requires:
             - aws-ecr/build-and-push-image
           aws-region: ${AWS_REGION}
