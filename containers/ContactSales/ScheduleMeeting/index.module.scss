@@ -210,8 +210,15 @@
 }
 
 .formSubmitInfo {
-	width: 100% !important;
+	width: 100%;
 	font-size: $fontsize_content_14 !important;
 	color: $prim_dark_2 !important;
 	text-align: left !important;
+
+	a {
+		color: inherit;
+		text-decoration: underline;
+		cursor: pointer;
+		margin-left: 5px;
+	}
 }
