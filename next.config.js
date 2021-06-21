@@ -53,6 +53,11 @@ module.exports = {
 				destination: '/blogs/blog/4-best-amazon-reviewer-checkers',
 				permanent: true
 			},
+			{
+				source: '/post/2021-guide-reverse-sourcing',
+				destination: '/blogs/blog/2021-guide-to-reverse-sourcing',
+				permanent: true
+			},
 
 			// slug match
 			{
