@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Select from 'react-select';
 import Image from 'next/image';
 import Dropdown from 'react-dropdown';
@@ -422,10 +423,17 @@ const ScheduleMeeting: React.FC<Props> = () => {
 						</div>
 
 						<p className={styles.formSubmitInfo}>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip
+							We&apos;re committed to your privacy. Sellgo uses the information
+							you provide to us to contact you about our relevant content,
+							products, and services. You may unsubscribe from these
+							communications at any time.
+						</p>
+
+						<p className={styles.formSubmitInfo}>
+							For more information, check our
+							<Link href="/privacy-policy">
+								<a href="">privacy policy</a>
+							</Link>
 						</p>
 
 						<button

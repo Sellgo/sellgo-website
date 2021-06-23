@@ -22,9 +22,9 @@ function App({ Component, pageProps }: AppProps) {
 	const { asPath } = router;
 
 	useEffect(() => {
-		// track only on production and window based environment
+		// track only on production and window based environment: fullstory and analytics
 		if (
-			process.env.NODE_ENV === 'production' &&
+			process.env.NEXT_PUBLIC_NODE_ENV === 'production' &&
 			typeof window !== 'undefined'
 		) {
 			analytics.page({

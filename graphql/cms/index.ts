@@ -75,8 +75,13 @@ export const GET_BLOGS_DATA_FOR_SITEMAP = gql`
 `;
 
 export const GET_ALL_SLUGS = gql`
-	query getAllSlugs {
-		posts {
+	query getAllSlugs($size: Int!) {
+		posts(
+			where: {
+				orderby: { field: DATE, order: DESC }
+				offsetPagination: { offset: 0, size: $size }
+			}
+		) {
 			nodes {
 				slug
 			}

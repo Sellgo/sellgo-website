@@ -21,12 +21,24 @@ const DEV = {
 const PROD = {
 	...PROD_URLS
 };
+
+const LOCAL = {
+	...DEV
+};
+
 const getAppConfig = () => {
-	if (process.env.NODE_ENV === 'production') {
+	// staging server
+	if (process.env.NEXT_PUBLIC_NODE_ENV === 'development') {
+		return DEV;
+	}
+	// production server
+	else if (process.env.NEXT_PUBLIC_NODE_ENV === 'production') {
 		return PROD;
 	}
 
-	return DEV;
+	// local
+	return LOCAL;
 };
+
 const AppConfig = getAppConfig();
 export default AppConfig;

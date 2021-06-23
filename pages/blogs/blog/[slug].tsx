@@ -19,7 +19,11 @@ import AppConfig from '../../../config';
 import client from '../../../apollo';
 
 /* GraphQL */
-import { GET_ALL_SLUGS, GET_BLOG_BY_SLUG } from '../../../graphql/cms';
+import {
+	GET_ALL_SLUGS,
+	GET_BLOG_BY_SLUG,
+	GET_TOTAL_BLOGS_COUNT
+} from '../../../graphql/cms';
 
 /* Types */
 import {
@@ -85,11 +89,18 @@ const BlogPage: React.FC<Props> = (props) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const response = await client.query({
-		query: GET_ALL_SLUGS
+	const { data: totalBlogsCount } = await client.query({
+		query: GET_TOTAL_BLOGS_COUNT
 	});
 
-	const blogPaths = response.data.posts.nodes.map((nodeValue: any) => ({
+	const totalCount = totalBlogsCount.posts.pageInfo.total;
+
+	const { data: allBlogsSlugs } = await client.query({
+		query: GET_ALL_SLUGS,
+		variables: { size: totalCount }
+	});
+
+	const blogPaths = allBlogsSlugs.posts.nodes.map((nodeValue: any) => ({
 		params: { slug: nodeValue.slug }
 	}));
 
@@ -106,6 +117,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			slug: params?.slug
 		}
 	});
+
+	if (!response.data.postBy) {
+		return {
+			notFound: true
+		};
+	}
 
 	const {
 		author,
