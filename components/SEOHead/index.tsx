@@ -21,7 +21,7 @@ const SEOHead: React.FC<Props> = (props) => {
 			<title>{title}</title>
 			<meta name="description" content={description} />
 			<meta name="keywords" content={keywords} />
-			<link rel="canonical" href="https://www.sellgo.com" />
+			<link rel="canonical" href={pageUrl} />
 
 			{/* Open Graph/Faecbook */}
 			<meta property="og:type" content="website" />
