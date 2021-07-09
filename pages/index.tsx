@@ -28,6 +28,7 @@ import { generatePageURL } from '../utils/SEO';
 
 /* Types */
 import { ShowcaseBlogDetails } from '../interfaces/Blogs';
+import StatisticsSection from '../containers/HomePage/StatisticsSection';
 
 interface Props {
 	homeBlogs: ShowcaseBlogDetails[];
@@ -52,6 +53,7 @@ const HomePage: React.FC<Props> = (props) => {
 					</h2>
 				</section>
 				<ProductsSection />
+				<StatisticsSection />
 				<TestimonialsSection />
 
 				<div className={styles.divider}></div>
