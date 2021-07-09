@@ -1,50 +1,42 @@
 export const statisticsData = [
 	{
-		statsCount: 100,
-		statsLabel: 'Popular Features',
-		iconImageLink: '/medalIcon.svg',
-		imageAltText: 'Medal Icon representing achievements statistics'
+		statsCount: '80M',
+		statsLabel: 'Products',
+		iconImageLink: '/medalIcon.svg'
 	},
 	{
-		statsCount: 200,
-		statsLabel: 'Popular Features',
-		iconImageLink: '/medalIcon.svg',
-		imageAltText: 'Medal Icon representing achievements statistics'
+		statsCount: '32K',
+		statsLabel: 'Categories',
+		iconImageLink: '/medalIcon.svg'
 	},
 	{
-		statsCount: 300,
-		statsLabel: 'Popular Features',
-		iconImageLink: '/medalIcon.svg',
-		imageAltText: 'Medal Icon representing achievements statistics'
+		statsCount: '800K',
+		statsLabel: 'Sellers',
+		iconImageLink: '/medalIcon.svg'
 	},
 	{
-		statsCount: 400,
-		statsLabel: 'Popular Features',
-		iconImageLink: '/medalIcon.svg',
-		imageAltText: 'Medal Icon representing achievements statistics'
+		statsCount: '850K',
+		statsLabel: 'Brands',
+		iconImageLink: '/medalIcon.svg'
 	},
 	{
-		statsCount: 200,
-		statsLabel: 'Popular Features',
-		iconImageLink: '/medalIcon.svg',
-		imageAltText: 'Medal Icon representing achievements statistics'
+		statsCount: '20K',
+		statsLabel: 'Countries',
+		iconImageLink: '/medalIcon.svg'
 	},
 	{
-		statsCount: 200,
-		statsLabel: 'Popular Features',
-		iconImageLink: '/medalIcon.svg',
-		imageAltText: 'Medal Icon representing achievements statistics'
+		statsCount: '450K',
+		statsLabel: 'U.S. Sellers',
+		iconImageLink: '/medalIcon.svg'
 	},
 	{
-		statsCount: 200,
-		statsLabel: 'Popular Features',
-		iconImageLink: '/medalIcon.svg',
-		imageAltText: 'Medal Icon representing achievements statistics'
+		statsCount: '720K',
+		statsLabel: 'Wholesalers',
+		iconImageLink: '/medalIcon.svg'
 	},
 	{
-		statsCount: 200,
-		statsLabel: 'Popular Features',
-		iconImageLink: '/medalIcon.svg',
-		imageAltText: 'Medal Icon representing achievements statistics'
+		statsCount: '110K',
+		statsLabel: 'Private Label',
+		iconImageLink: '/medalIcon.svg'
 	}
 ];
