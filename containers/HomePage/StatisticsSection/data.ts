@@ -2,41 +2,41 @@ export const statisticsData = [
 	{
 		statsCount: '80M',
 		statsLabel: 'Products',
-		iconImageLink: '/medalIcon.svg'
+		iconImageLink: '/stats-products.svg'
 	},
 	{
 		statsCount: '32K',
 		statsLabel: 'Categories',
-		iconImageLink: '/medalIcon.svg'
+		iconImageLink: '/stats-categories.svg'
 	},
 	{
 		statsCount: '800K',
 		statsLabel: 'Sellers',
-		iconImageLink: '/medalIcon.svg'
+		iconImageLink: '/stats-sellers.svg'
 	},
 	{
 		statsCount: '850K',
 		statsLabel: 'Brands',
-		iconImageLink: '/medalIcon.svg'
+		iconImageLink: '/stats-brands.svg'
 	},
 	{
-		statsCount: '20K',
+		statsCount: '20',
 		statsLabel: 'Countries',
-		iconImageLink: '/medalIcon.svg'
+		iconImageLink: '/stats-countries.svg'
 	},
 	{
 		statsCount: '450K',
 		statsLabel: 'U.S. Sellers',
-		iconImageLink: '/medalIcon.svg'
+		iconImageLink: '/stats-us-sellers.svg'
 	},
 	{
 		statsCount: '720K',
-		statsLabel: 'Wholesalers',
-		iconImageLink: '/medalIcon.svg'
+		statsLabel: 'Wholesale Sellers',
+		iconImageLink: '/stats-wholesale-sellers.svg'
 	},
 	{
 		statsCount: '110K',
-		statsLabel: 'Private Label',
-		iconImageLink: '/medalIcon.svg'
+		statsLabel: 'Private Label Sellers',
+		iconImageLink: '/stats-private-label.svg'
 	}
 ];
