@@ -15,7 +15,7 @@ export const newBenefitsData = [
 		title: 'Amazon Catalog',
 		subTitle: 'Broaden Your Amazon Catalog',
 		description: `Simply use the Seller Finder to examine 
-		all the competitve sellers for any product listing and then 
+		all the competitive sellers for any product listing and then 
 		scan their catalogs for the other products they sell. Lookout 
 		for leads and potential products you can source and sell.`,
 		linkLabel: 'Learn more about our Seller Finder resources.',

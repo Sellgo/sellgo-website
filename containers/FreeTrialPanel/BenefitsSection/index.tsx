@@ -30,7 +30,7 @@ const BenefitsSection: React.FC<Props> = () => {
 					<div className={styles.benefitsCard}>
 						<Apple width={20} height={23} fill="#000" />
 						<h3>Scale at Your Pace</h3>
-						<p>Start small with low committment and scale up later.</p>
+						<p>Start small with low commitment and scale up later.</p>
 						<p></p>
 					</div>
 					<div className={styles.benefitsCard}>
