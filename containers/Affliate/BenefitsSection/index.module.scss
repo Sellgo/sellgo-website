@@ -1,0 +1,19 @@
+@import '../../../styles/guidelines';
+
+.benefitsSection {
+	background: $blue_0;
+	display: flex;
+}
+
+.benefitsGrid {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 8rem auto;
+	flex-wrap: wrap;
+
+	@media only screen and(max-width: 890px) {
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+}

@@ -1,0 +1,58 @@
+@import '../../../styles/guidelines';
+
+.firstCTASectionBox {
+		padding-top: 9rem;
+		padding-bottom: 12rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+	@media only screen and (max-width: 1080px) {
+		// tablet
+	}
+
+	@media only screen and (max-width: 500px) {
+		// mobile
+	}
+	h1 {
+		color: $prim_dark_1;
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_bold;
+		line-height: $fontlineheight_heading_70;
+		margin-bottom: 3rem;
+		@media only screen and (max-width: 1080px) {
+			font-size: $fontsize_subtitle_40
+		}
+
+		@media only screen and(max-width: 700px) {
+			font-size: $fontsize_subtitle_32;
+		}
+	}
+	p {
+		color: $prim_dark_2;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_regular;
+		line-height: $fontlineheight_content_30;
+		@media only screen and (max-width: 1080px) {
+			max-width: 80%;
+			margin: 2rem auto;
+		}
+
+		@media only screen and(max-width: 700px) {
+			max-width: 100%;
+		}
+	}
+
+	.ctaButton {
+		margin-top: 5rem;
+		min-width: 21rem;
+		min-height: 5rem;
+		font-size: $fontsize_content_18;
+	}
+}
+
+.selectInput {
+	width: 100%;
+}

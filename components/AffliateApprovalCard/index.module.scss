@@ -1,0 +1,55 @@
+@import '../../styles/guidelines';
+
+.approvalCard {
+	width: 33%;
+	min-width: 20rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+
+	&__topCard {
+		// Increase the gap betweeen first & second row only when there's 3 cards/row
+		@media only screen and(min-width: 615px) {
+			margin-bottom: 12rem;
+		}
+	}
+
+	.stepNumber {
+		width: 4rem;
+		height: 4rem;
+		background-color: $grey_1;
+		border-radius: 0.3rem;
+		font-size: $fontsize_subtitle_20;
+		font-weight: $fontweight_bold;
+		color: $prim_dark_2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.stepTitle {
+		color: $prim_dark_2;
+		font-weight: $fontweight_bold;
+		font-size: $fontsize_content_16;
+		line-height: $fontlineheight_content_20;
+		margin-top: 1.4rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	.stepDescription {
+		color: $prim_dark_2;
+		font-size: $fontsize_content_12;
+		font-weight: $fontweight_regular;
+		line-height: $fontlineheight_content_20;
+	}
+	
+}
+
+.approvalCard::after {
+	width: 10px;
+	height: 10px;
+	background-color: red;
+	content: "";
+}

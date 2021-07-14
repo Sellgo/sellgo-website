@@ -1,0 +1,45 @@
+@import '../../../styles/guidelines';
+
+.approvalSection {
+	background: $orange_0;
+	padding-top: 7rem;
+	padding-bottom: 9.4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_bold;
+		color: $prim_dark_1;
+		line-height: $fontlineheight_heading_70;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_regular;
+		line-height: $fontlineheight_content_30;
+		color: $prim_dark_2;
+	}
+
+	.ctaButton {
+		font-size: $fontsize_content_18;
+		padding-left: 4.6rem;
+		padding-right: 4.6rem;
+	}
+}
+
+.approvalGrid {
+	width: 90%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 8rem auto;
+	flex-wrap: wrap;
+
+	@media only screen and(max-width: 890px) {
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+}

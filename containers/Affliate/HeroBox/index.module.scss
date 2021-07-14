@@ -1,0 +1,80 @@
+@import '../../../styles/guidelines';
+
+.heroboxWrapper {
+	color: $prim_white;
+	background: linear-gradient(90deg,$blue_9, $blue_8, $blue_7, $blue_7);
+	padding-top: 4.7rem;
+	padding-bottom: 6rem;
+
+	.heroBox {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@media only screen and (max-width: 1080px) {
+		// tablet
+	}
+
+	@media only screen and (max-width: 500px) {
+		// mobile
+	}
+
+	.ctaButton {
+		padding-left: 4rem;
+		padding-right: 4rem;
+		margin-top: 6.5rem;
+		font-size: $fontsize_content_18;
+		margin-bottom: 0.5rem;
+	}
+
+	h1, h2, p {
+		text-align: center;
+	}
+
+	h1 {
+		color: inherit;
+		font-size: $fontsize_title_46;
+		font-weight: $fontweight_bold;
+		line-height: $fontlineheight_heading_70;
+		@media only screen and (max-width: 1080px) {
+			font-size: $fontsize_subtitle_40
+		}
+
+		@media only screen and(max-width: 700px) {
+			font-size: $fontsize_subtitle_32;
+		}
+	}
+
+	h2 {
+		color: $accent_orange;
+		font-size: $fontsize_subtitle_20;
+		font-weight: $fontweight_bold;
+	}
+
+	p {
+		color: inherit;
+		margin-top: 1rem;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_regular;
+		@media only screen and (max-width: 1080px) {
+			max-width: 80%;
+			margin: 2rem auto;
+		}
+
+		@media only screen and(max-width: 700px) {
+			max-width: 100%;
+		}
+
+		.bold {
+			font-weight: $fontweight_bold;
+		}
+		.signinLink {
+			color: $blue_6;
+		}
+	}
+}
+
+.selectInput {
+	width: 100%;
+}
