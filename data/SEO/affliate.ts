@@ -4,8 +4,6 @@ export const seoData: SEODetails = {
 	title: `Affliate`,
 	description: ``,
 	imageUrl: ``,
-	keywords: [
-		'sellgo',
-	],
+	keywords: ['sellgo'],
 	slug: '/affliate'
 };

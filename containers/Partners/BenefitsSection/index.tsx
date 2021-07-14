@@ -18,7 +18,11 @@ const BenefitsSection: React.FC<Props> = () => {
 			<div className={styles.benefitsGrid}>
 				{benefitsData.map((benefit: any, index: number) => {
 					return (
-						<AffliateBenefitCard key={uuid()} {...benefit} bottomStats={index < 2} />
+						<AffliateBenefitCard
+							key={uuid()}
+							{...benefit}
+							bottomStats={index < 2}
+						/>
 					);
 				})}
 			</div>

@@ -8,13 +8,12 @@ import styles from './index.module.scss';
 import AffliateApprovalCard from '../../../components/AffliateApprovalCard';
 import CTAButton from '../../../components/CTAButton';
 
-
 /* Data */
 import { approvalSteps } from './data';
 
 interface Props {}
 
-const BenefitsSection: React.FC<Props> = () => {
+const ApprovalProcessSection: React.FC<Props> = () => {
 	return (
 		<div className={`${styles.approvalSection}`}>
 			<h2>Simple Approval Process</h2>
@@ -22,21 +21,25 @@ const BenefitsSection: React.FC<Props> = () => {
 			<div className={styles.approvalGrid}>
 				{approvalSteps.map((approvalStep: any, index: number) => {
 					return (
-						<AffliateApprovalCard key={uuid()} {...approvalStep} index={index+1} 
-							isLastCard={index === approvalSteps.length - 1} />
+						<AffliateApprovalCard
+							key={uuid()}
+							{...approvalStep}
+							index={index + 1}
+							isLastStep={index === approvalSteps.length - 1}
+						/>
 					);
 				})}
 			</div>
 			<CTAButton
-						type="primary"
-						size="medium"
-						navigateTo="/"
-						className={`${styles.ctaButton}`}
-					>
-						Start Earning
+				type="primary"
+				size="medium"
+				navigateTo="/"
+				className={`${styles.ctaButton}`}
+			>
+				Start Earning
 			</CTAButton>
 		</div>
 	);
 };
 
-export default BenefitsSection;
+export default ApprovalProcessSection;

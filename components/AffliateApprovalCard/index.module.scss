@@ -1,19 +1,20 @@
 @import '../../styles/guidelines';
 
+.approvalCardWrapper {
+	display: flex;
+	justify-content: center;
+}
+
 .approvalCard {
-	width: 33%;
 	min-width: 20rem;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 2rem;
 
-	&__topCard {
-		// Increase the gap betweeen first & second row only when there's 3 cards/row
-		@media only screen and(min-width: 615px) {
-			margin-bottom: 12rem;
-		}
+	@media only screen and(max-width: 940px) {
+		margin-right: 3rem;
+		margin-bottom: 3rem;
 	}
 
 	.stepNumber {
@@ -37,19 +38,22 @@
 		margin-top: 1.4rem;
 		margin-bottom: 1.5rem;
 	}
-	
+
 	.stepDescription {
 		color: $prim_dark_2;
 		font-size: $fontsize_content_12;
 		font-weight: $fontweight_regular;
 		line-height: $fontlineheight_content_20;
+		max-width: 23rem;
 	}
-	
 }
 
-.approvalCard::after {
-	width: 10px;
-	height: 10px;
-	background-color: red;
-	content: "";
+.line {
+	margin-top: 2rem;
+	border-top: 1px solid $border-color-1;
+	width: 10rem;
+
+	@media only screen and(max-width: 940px) {
+		display: none;
+	}
 }

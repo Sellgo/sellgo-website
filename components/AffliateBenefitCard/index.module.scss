@@ -7,11 +7,11 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 2rem;
+	margin-bottom: 5rem;
 
 	&__topCard {
 		// Increase the gap betweeen first & second row only when there's 3 cards/row
-		@media only screen and(min-width: 615px) {
+		@media only screen and (min-width: 615px) {
 			margin-bottom: 12rem;
 		}
 	}
@@ -31,5 +31,5 @@
 	font-size: $fontsize_content_12;
 	font-weight: $fontweight_regular;
 	line-height: $fontlineheight_content_20;
-	max-width: 25rem;
+	max-width: 23rem;
 }

@@ -7,20 +7,14 @@ import styles from './index.module.scss';
 import FAQAccordion from '../../../components/FAQAccordion';
 
 /* Types */
-import { FAQData } from '../../../interfaces/FAQ';
+import { faqData } from './data';
 
-interface Props {
-	faqData: FAQData[];
-}
+interface Props {}
 
-const FAQSection: React.FC<Props> = (props) => {
-	const { faqData } = props;
-	console.log(faqData);
-	console.log('WAD');
+const FAQSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.faqSection}`}>
 			<h2>Frequently Asked Questions</h2>
-
 			{faqData.length > 0 && <FAQAccordion data={faqData} horizontalFocus />}
 		</section>
 	);

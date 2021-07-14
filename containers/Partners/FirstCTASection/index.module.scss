@@ -1,0 +1,43 @@
+@import '../../../styles/guidelines';
+
+.firstCTASectionBox {
+	padding-top: 9rem;
+	padding-bottom: 12rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	h1 {
+		color: $prim_dark_1;
+		font-size: $fontsize_subtitle_24;
+		font-weight: $fontweight_bold;
+		line-height: $fontlineheight_heading_70;
+		margin-bottom: 3rem;
+
+		@media only screen and(max-width: 600px) {
+			font-size: $fontsize_subtitle_20;
+			line-height: $fontlineheight_content_30;
+		}
+	}
+	p {
+		color: $prim_dark_2;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_regular;
+		line-height: $fontlineheight_content_30;
+	}
+
+	.ctaButton {
+		margin-top: 5rem;
+		min-width: 21rem;
+		min-height: 5rem;
+		font-size: $fontsize_content_18;
+	}
+}
+
+.selectInput {
+	width: 100%;
+}

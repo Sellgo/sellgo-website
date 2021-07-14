@@ -6,7 +6,7 @@ import styles from './index.module.scss';
 
 interface Props {
 	title: string;
-	description: string[];
+	description: string;
 	bottomStats: boolean;
 	iconImageLink: string;
 }
@@ -19,21 +19,9 @@ const StatsCard: React.FC<Props> = (props) => {
 	}`;
 	return (
 		<div className={statsCardClassName}>
-			<Image
-				src={iconImageLink}
-				alt={`${title}`}
-				width={35}
-				height={35}
-			/>
-			<p className={styles.benefitTitle}>
-				{title}
-			</p>
-
-			{description.map((desc: String) => {
-					return (
-						<p className={styles.benefitDescription}>{desc}</p>
-					);
-				})}
+			<Image src={iconImageLink} alt={`${title}`} width={35} height={35} />
+			<p className={styles.benefitTitle}>{title}</p>
+			<p className={styles.benefitDescription}>{description}</p>
 		</div>
 	);
 };
