@@ -156,7 +156,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			popularChoiceBlogs,
 			totalPages
 		},
-		revalidate: 1
+		revalidate: 60 * 30 // 30 minutes
 	};
 };
 
