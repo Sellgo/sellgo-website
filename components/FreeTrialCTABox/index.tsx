@@ -25,7 +25,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 				<div className={styles.infoWrapper__Desc}>
 					<h2>Free Trial</h2>
 					<p>
-						Access all of Sellgo&apos; free trial Amazon tools and integrate
+						Access all of Sellgo&apos;s free trial Amazon tools and integrate
 						them into your Amazon business.
 					</p>
 				</div>

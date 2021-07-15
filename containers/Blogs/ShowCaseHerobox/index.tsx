@@ -24,7 +24,7 @@ const ShowCaseHeroBox: React.FC<Props> = () => {
 				<p>
 					Stay up to date on the latest news and tips impacting your business
 					and the Amazon marketplace. Access resourceful guides, learn unique
-					strategies, and more. Subsdcribe to our blog and get notified whenever
+					strategies, and more. Subscribe to our blog and get notified whenever
 					we release new content!
 				</p>
 				<button
