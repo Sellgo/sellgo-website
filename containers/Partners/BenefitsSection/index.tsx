@@ -14,8 +14,8 @@ interface Props {}
 
 const BenefitsSection: React.FC<Props> = () => {
 	return (
-		<div className={`${styles.benefitsSection}`}>
-			<div className={styles.benefitsGrid}>
+		<section className={`${styles.benefitsSection}`}>
+			<div className={`page-container ${styles.benefitsGrid}`}>
 				{benefitsData.map((benefit: any, index: number) => {
 					return (
 						<AffliateBenefitCard
@@ -26,7 +26,7 @@ const BenefitsSection: React.FC<Props> = () => {
 					);
 				})}
 			</div>
-		</div>
+		</section>
 	);
 };
 

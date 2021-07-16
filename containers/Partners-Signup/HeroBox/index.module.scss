@@ -6,36 +6,51 @@
 	flex-direction: row;
 	@media only screen and(max-width: 700px) {
 		width: 100%;
-	}
-
-	.heroBoxLogo {
-		display: flex;
+		flex-direction: column;
 		justify-content: center;
-		align-items: center;
-		width: 35%;
+		align-items: flex-start;
+	}
+}
 
-		@media only screen and(max-width: 700px) {
-			padding: 0;
-		}
+.heroBoxLogo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 35%;
+
+	@media only screen and(max-width: 700px) {
+		margin: 3rem auto;
+		width: 100%;
+	}
+}
+
+.heroBoxText {
+	padding-top: 2.7rem;
+	padding-bottom: 2.7rem;
+	padding-right: 3rem;
+	width: 65%;
+
+	h1 {
+		font-size: $fontsize_subtitle_24;
+		color: $prim_dark_1;
+		line-height: $fontlineheight_content_30;
+		margin-bottom: 1rem;
+		width: 25rem;
 	}
 
-	.heroBoxText {
-		padding-top: 2.7rem;
-		padding-bottom: 2.7rem;
-		padding-right: 3rem;
-		width: 65%;
+	p {
+		font-size: $fontsize_content_12;
+		color: $prim_dark_2;
+		line-height: $fontlineheight_content_30;
+	}
+
+	@media only screen and(max-width: 700px) {
+		margin-left: 3rem;
+		width: 90%;
 
 		h1 {
-			font-size: $fontsize_subtitle_24;
-			color: $prim_dark_1;
-			line-height: $fontlineheight_content_30;
-			margin-bottom: 1rem;
-		}
-
-		p {
-			font-size: $fontsize_content_12;
-			color: $prim_dark_2;
-			line-height: $fontlineheight_content_30;
+			width: 100%;
+			font-size: $fontsize_subtitle_20;
 		}
 	}
 }

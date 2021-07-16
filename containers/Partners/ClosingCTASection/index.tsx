@@ -10,21 +10,25 @@ interface Props {}
 
 const ClosingCTASection: React.FC<Props> = () => {
 	return (
-		<div className={`${styles.closingCTASectionBox}`}>
-			<h1>Join the Sellgo Affiliate Community</h1>
-			<p>
+		<section className={`page-container ${styles.closingCTASectionBox}`}>
+			<h2 className={styles.closingCTATitle}>
+				Join the Sellgo Affiliate Community
+			</h2>
+			<p className={styles.closingCTAContent}>
 				Join the Sellgo Affiliate Partner Program and Earn 25% for Every
 				Referral*
 			</p>
 			<CTAButton
 				type="primary"
 				size="medium"
-				navigateTo="/"
+				navigateTo="/partners-signup"
 				className={`${styles.ctaButton}`}
+				asExternal
+				newTarget
 			>
 				Start Earning
 			</CTAButton>
-		</div>
+		</section>
 	);
 };
 

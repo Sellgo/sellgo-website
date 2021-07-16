@@ -9,7 +9,7 @@ interface Props {}
 const HeroBox: React.FC<Props> = () => {
 	return (
 		<>
-			<div className={styles.heroBoxWrapper}>
+			<section className={`page-container ${styles.heroBoxWrapper}`}>
 				<div className={styles.heroBoxLogo}>
 					<Image
 						src="/sellgoIcon.svg"
@@ -20,7 +20,7 @@ const HeroBox: React.FC<Props> = () => {
 				</div>
 
 				<div className={styles.heroBoxText}>
-					<h1>Sellgo Affiliate {<br />}Application Form</h1>
+					<h1>Sellgo Affiliate Application Form</h1>
 					<p>
 						Join one of the best programs in our industry become a member of the
 						Sellgo family. Once approved, promote our innovative, powerful tools
@@ -29,7 +29,7 @@ const HeroBox: React.FC<Props> = () => {
 						affiliate link.
 					</p>
 				</div>
-			</div>
+			</section>
 		</>
 	);
 };

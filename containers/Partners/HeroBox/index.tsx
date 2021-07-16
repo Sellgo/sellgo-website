@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -10,11 +11,11 @@ interface Props {}
 
 const HeroBox: React.FC<Props> = () => {
 	return (
-		<div className={styles.heroboxWrapper}>
-			<div className={`${styles.heroBox}`}>
-				<h2>Sellgo Affliate Partner Program</h2>
-				<h1>Get Paid to Promote Sellgo</h1>
-				<p>
+		<section className={`${styles.heroboxWrapper}`}>
+			<div className={`page-container ${styles.heroBox}`}>
+				<h1 className={styles.heroBoxTitle}>Sellgo Affliate Partner Program</h1>
+				<h2 className={styles.heroBoxSubtitle}>Get Paid to Promote Sellgo</h2>
+				<p className={styles.heroBoxContent}>
 					Earn <span className={`${styles.bold}`}>25%</span> UNLIMITED
 					Commission for Every Referral
 				</p>
@@ -22,19 +23,22 @@ const HeroBox: React.FC<Props> = () => {
 				<CTAButton
 					type="primary"
 					size="medium"
-					navigateTo="/"
+					navigateTo="/partners-signup"
 					className={`${styles.ctaButton}`}
+					newTarget
+					asExternal
 				>
 					Get Started
 				</CTAButton>
 
-				<p>
-					{' '}
+				<p className={styles.heroBoxContent}>
 					Already an affliate?{' '}
-					<span className={`${styles.signinLink}`}>Sign in</span>
+					<Link href="/">
+						<a className={`${styles.signinLink}`}>Sign in</a>
+					</Link>
 				</p>
 			</div>
-		</div>
+		</section>
 	);
 };
 

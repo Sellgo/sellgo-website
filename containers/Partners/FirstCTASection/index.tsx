@@ -10,27 +10,28 @@ interface Props {}
 
 const FirstCTASection: React.FC<Props> = () => {
 	return (
-		<div className={`${styles.firstCTASectionBox}`}>
-			<h1>Become apart of the Sellgo Community</h1>
-			<p>
+		<section className={`page-container ${styles.firstCTASectionBox}`}>
+			<h2 className="secondary-heading">
+				Become apart of the Sellgo Community
+			</h2>
+			<p className={styles.firstCTAContent}>
 				Join the Sellgo family and one of the best programs in our industry.
-			</p>
-
-			<p>
-				{' '}
+				{<br />}
 				After approval, promote our innovative, powerful tools with your
-				audience and make money!{' '}
+				audience and make money!
 			</p>
 
 			<CTAButton
 				type="secondary"
 				size="medium"
-				navigateTo="/"
+				navigateTo="/partners-signup"
 				className={`${styles.ctaButton}`}
+				asExternal
+				newTarget
 			>
 				Join the Community
 			</CTAButton>
-		</div>
+		</section>
 	);
 };
 

@@ -7,15 +7,21 @@ import styles from './index.module.scss';
 import FAQAccordion from '../../../components/FAQAccordion';
 
 /* Types */
-import { faqData } from './data';
+import { FAQDetails } from '../../../interfaces/FAQ';
 
-interface Props {}
+interface Props {
+	faqDetails: FAQDetails;
+}
 
-const FAQSection: React.FC<Props> = () => {
+const FAQSection: React.FC<Props> = (props) => {
+	const { faqDetails } = props;
+
 	return (
 		<section className={`page-container ${styles.faqSection}`}>
-			<h2>Frequently Asked Questions</h2>
-			{faqData.length > 0 && <FAQAccordion data={faqData} horizontalFocus />}
+			<h2 className="secondary-heading">Frequently Asked Questions</h2>
+			{faqDetails.data && faqDetails.data.length > 0 && (
+				<FAQAccordion data={faqDetails.data} horizontalFocus />
+			)}
 		</section>
 	);
 };

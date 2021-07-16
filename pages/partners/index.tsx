@@ -1,7 +1,6 @@
 import React from 'react';
-
-/* Styling */
-import styles from './index.module.scss';
+import { GetStaticProps } from 'next';
+import axios from 'axios';
 
 /* Containers */
 import HeroBox from '../../containers/Partners/HeroBox';
@@ -19,10 +18,17 @@ import { seoData } from '../../data/SEO/partners';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
+import AppConfig from '../../config';
 
-interface Props {}
+/* Types */
+import { FAQDetails } from '../../interfaces/FAQ';
 
-const Partners: React.FC<Props> = () => {
+interface Props {
+	faqDetails: FAQDetails;
+}
+
+const Partners: React.FC<Props> = (props) => {
+	const { faqDetails } = props;
 	return (
 		<>
 			<SEOHead
@@ -32,16 +38,27 @@ const Partners: React.FC<Props> = () => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<main className={styles.demoPage}>
+			<main>
 				<HeroBox />
 				<FirstCTASection />
 				<BenefitsSection />
 				<ApprovalProcessSection />
 				<ClosingCTASection />
-				<FAQSection />
+				<FAQSection faqDetails={faqDetails} />
 			</main>
 		</>
 	);
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/partners.json`);
+	const { data } = response;
+	return {
+		props: {
+			faqDetails: data
+		},
+		revalidate: 60 * 15 // 15 minutes
+	};
 };
 
 export default Partners;

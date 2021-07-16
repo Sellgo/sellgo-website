@@ -3,42 +3,35 @@
 .closingCTASectionBox {
 	padding-top: 12rem;
 	padding-bottom: 12rem;
-	padding-left: 2rem;
-	padding-right: 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+}
 
-	h1 {
-		color: $prim_dark_1;
-		font-size: $fontsize_subtitle_24;
-		font-weight: $fontweight_bold;
-		margin-bottom: 3rem;
-	}
-	p {
-		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
-		font-weight: $fontweight_regular;
-		@media only screen and (max-width: 1080px) {
-			max-width: 80%;
-			margin: 2rem auto;
-		}
+.closingCTATitle {
+	color: $prim_dark_1;
+	font-size: $fontsize_subtitle_24;
+	font-weight: $fontweight_bold;
+	margin-bottom: 3rem;
+}
 
-		@media only screen and(max-width: 700px) {
-			max-width: 100%;
-		}
+.closingCTAContent {
+	color: $prim_dark_2;
+	font-size: $fontsize_content_14;
+	font-weight: $fontweight_regular;
+	@media only screen and (max-width: 1080px) {
+		max-width: 80%;
+		margin: 2rem auto;
 	}
 
-	.ctaButton {
-		margin-top: 5rem;
-		font-size: $fontsize_content_18;
-		padding-left: 4.6rem;
-		padding-right: 4.6rem;
+	@media only screen and(max-width: 700px) {
+		max-width: 100%;
 	}
 }
 
-.selectInput {
-	width: 100%;
+.ctaButton {
+	margin-top: 5rem;
+	width: 21rem;
 }

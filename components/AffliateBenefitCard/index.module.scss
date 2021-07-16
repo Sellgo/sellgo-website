@@ -11,7 +11,7 @@
 
 	&__topCard {
 		// Increase the gap betweeen first & second row only when there's 3 cards/row
-		@media only screen and (min-width: 615px) {
+		@media only screen and (min-width: 890px) {
 			margin-bottom: 12rem;
 		}
 	}

@@ -33,9 +33,11 @@
 	width: 40rem;
 	margin-bottom: 3rem;
 
-	span {
+	small {
+		font-size: $fontsize_content_12;
 		color: $system_red;
 	}
+	
 	// Styling for checkboxes
 	&__checkBox {
 		width: 40rem;

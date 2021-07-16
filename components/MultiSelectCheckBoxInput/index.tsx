@@ -24,7 +24,7 @@ interface Props {
 
 const MultiSelectCheckBoxInput: React.FC<Props> = (props) => {
 	// Initialise result to be an empty array.
-	const [result, setResult] = useState([]);
+	const [result, setResult] = useState<string[]>([]);
 
 	const { id, name, options, onChange, label, ...otherProps } = props;
 
@@ -40,9 +40,7 @@ const MultiSelectCheckBoxInput: React.FC<Props> = (props) => {
 			newResult = result.filter((option) => option !== value);
 		}
 
-		setResult(() => {
-			return newResult;
-		});
+		setResult(newResult);
 
 		const event = {
 			target: {
@@ -73,7 +71,7 @@ const MultiSelectCheckBoxInput: React.FC<Props> = (props) => {
 							value={option}
 							onChange={handleChange}
 							hasError={false}
-							errorMessage="Invalid Email"
+							errorMessage=""
 							labelLast
 							required={otherProps.required}
 						/>

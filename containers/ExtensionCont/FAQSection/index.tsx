@@ -15,8 +15,6 @@ interface Props {
 
 const FAQSection: React.FC<Props> = (props) => {
 	const { faqData } = props;
-	console.log(faqData);
-	console.log('WAD');
 	return (
 		<section className={`page-container ${styles.faqSection}`}>
 			<h2>Frequently Asked Questions</h2>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Dropdown from 'react-dropdown';
 import validator from 'validator';
-// import axios from 'axios';
+import axios from 'axios';
 import Modal from 'react-modal';
 
 /* Styling */
@@ -13,7 +13,7 @@ import FormInput from '../../../components/FormInput';
 import MultiSelectCheckBoxInput from '../../../components/MultiSelectCheckBoxInput';
 
 /* App Config */
-// import AppConfig from '../../../config';
+import AppConfig from '../../../config';
 
 /* Data */
 import {
@@ -161,24 +161,24 @@ const ScheduleMeeting: React.FC<Props> = () => {
 	}, [lastName]);
 
 	/* Clear the form data */
-	// const clearForm = () => {
-	// 	setFormData({
-	// 		firstName: '',
-	// 		lastName: '',
-	// 		email: '',
-	// 		typeOfUser: typesOfUsersData[0],
-	// 		businessModels: '',
-	// 		audienceConnectionMethods: '',
-	// 		familiarityWithSellgo: familiarityWithSellgoData[0],
-	// 		marketingPlan: '',
-	// 		urlsToPromoteSellgo: '',
-	// 		existingAudience: '',
-	// 		easierLifeMessage: '',
-	// 		ppcTosAck: '',
-	// 		couponMarketingAck: '',
-	// 		privacyPolicyAck: ''
-	// 	});
-	// };
+	const clearForm = () => {
+		setFormData({
+			firstName: '',
+			lastName: '',
+			email: '',
+			typeOfUser: typesOfUsersData[0],
+			businessModels: '',
+			audienceConnectionMethods: '',
+			familiarityWithSellgo: familiarityWithSellgoData[0],
+			marketingPlan: '',
+			urlsToPromoteSellgo: '',
+			existingAudience: '',
+			easierLifeMessage: '',
+			ppcTosAck: '',
+			couponMarketingAck: '',
+			privacyPolicyAck: ''
+		});
+	};
 
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
@@ -199,22 +199,24 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		formData.append('couponMarketingAck', couponMarketingAck);
 		formData.append('privacyPolicyAck', privacyPolicyAck);
 
-		// try {
-		// 	const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
-		// 	const response = await axios.post(URL, formData);
-		// 	if (response.status === 201) {
-		// 		clearForm();
-		// 		setOpenSubmitConfirm(true);
-		// 	}
-		// } catch (err) {
-		// 	console.error('Error Sending data to hubspot');
-		// 	clearForm();
-		// }
+		try {
+			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
+			const response = await axios.post(URL, formData);
+			if (response.status === 201) {
+				clearForm();
+			}
+		} catch (err) {
+			console.error('Error Sending data to hubspot');
+			clearForm();
+		}
 	};
 
 	return (
 		<>
-			<form className={styles.applicationForm} onSubmit={handleSubmit}>
+			<form
+				className={`page-container ${styles.applicationForm}`}
+				onSubmit={handleSubmit}
+			>
 				<FormInput
 					className={styles.formInput}
 					label="First Name *"

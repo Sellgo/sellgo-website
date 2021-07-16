@@ -15,8 +15,8 @@ const AffliateApprovalCard: React.FC<Props> = (props) => {
 	return (
 		<div className={styles.approvalCardWrapper}>
 			<div className={styles.approvalCard}>
-				<h2 className={styles.stepNumber}>{index}</h2>
-				<p className={styles.stepTitle}>{title}</p>
+				<p className={styles.stepNumber}>{index}</p>
+				<h3 className={styles.stepTitle}>{title}</h3>
 				<p className={styles.stepDescription}>{description}</p>
 			</div>
 			{!isLastStep ? <div className={styles.line} /> : <div />}

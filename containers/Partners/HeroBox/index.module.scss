@@ -10,61 +10,50 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
-
-	.ctaButton {
-		padding-left: 4rem;
-		padding-right: 4rem;
-		margin-top: 6.5rem;
-		font-size: $fontsize_content_18;
-		margin-bottom: 0.5rem;
-	}
-
-	h1,
-	h2,
-	p {
 		text-align: center;
 	}
+}
 
-	h1 {
-		color: inherit;
-		font-size: $fontsize_title_46;
-		font-weight: $fontweight_bold;
-		line-height: $fontlineheight_heading_70;
-		@media only screen and (max-width: 1080px) {
-			font-size: $fontsize_subtitle_40;
-		}
+.heroBoxTitle {
+	color: $accent_orange;
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_bold;
+}
 
-		@media only screen and(max-width: 700px) {
-			font-size: $fontsize_subtitle_32;
-		}
+.heroBoxSubtitle {
+	color: inherit;
+	font-size: $fontsize_title_46;
+	font-weight: $fontweight_bold;
+	line-height: $fontlineheight_heading_70;
+	@media only screen and (max-width: 1080px) {
+		font-size: $fontsize_subtitle_40;
 	}
 
-	h2 {
-		color: $accent_orange;
-		font-size: $fontsize_subtitle_20;
+	@media only screen and(max-width: 700px) {
+		font-size: $fontsize_subtitle_32;
+	}
+}
+
+.heroBoxContent {
+	color: inherit;
+	margin-top: 1rem;
+	font-size: $fontsize_content_14;
+	font-weight: $fontweight_regular;
+
+	.bold {
 		font-weight: $fontweight_bold;
 	}
+	.signinLink {
+		color: $blue_4;
 
-	p {
-		color: inherit;
-		margin-top: 1rem;
-		font-size: $fontsize_content_14;
-		font-weight: $fontweight_regular;
-
-		.bold {
-			font-weight: $fontweight_bold;
-		}
-		.signinLink {
-			color: $blue_4;
-
-			&:hover {
-				cursor: pointer;
-			}
+		&:hover {
+			cursor: pointer;
 		}
 	}
 }
 
-.selectInput {
-	width: 100%;
+.ctaButton {
+	margin-top: 6.5rem;
+	margin-bottom: 0.5rem;
+	width: 21rem;
 }
