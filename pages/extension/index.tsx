@@ -6,7 +6,6 @@ import InfoSection from '../../containers/ExtensionCont/InfoSection';
 import NewBenefitsSection from '../../containers/ExtensionCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/ExtensionCont/CommomFeaturesSection';
 import RecommendationSection from '../../containers/ExtensionCont/RecommendationSection';
-import FAQSection from '../../containers/ExtensionCont/FAQSection';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';

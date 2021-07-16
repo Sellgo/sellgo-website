@@ -11,7 +11,7 @@ import RecommendationSection from '../../containers/SellerMapCont/Recommendation
 import SEOHead from '../../components/SEOHead';
 
 /* Data */
-import { seoData } from '../../data/SEO/SellerMap';
+import { seoData } from '../../data/SEO/sellerMap';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
