@@ -39,7 +39,7 @@ export const audienceConnectionMethodsData = [
 ];
 
 export const familiarityWithSellgoData = [
-	'New/ unfamiliar',
+	'New/ Unfamiliar',
 	'Comfortable',
 	'Expert'
 ];
