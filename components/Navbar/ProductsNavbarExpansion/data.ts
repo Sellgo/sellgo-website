@@ -42,9 +42,21 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				iconName: 'searchManagement'
 			},
 			{
+				head: 'Seller Database',
+				desc: 'Scout a network of great Amazon sellers',
+				navigateTo: '/seller-database',
+				iconName: 'sellerFinder'
+			},
+			{
 				head: 'Seller Finder',
 				desc: 'Take Advantage of Competition',
 				navigateTo: '/seller-finder',
+				iconName: 'sellerFinder'
+			},
+			{
+				head: 'Seller Map',
+				desc: 'Locate dozens of sellers instantly',
+				navigateTo: '/seller-map',
 				iconName: 'sellerFinder'
 			}
 		]

@@ -54,8 +54,18 @@ const TopFooter: React.FC<Props> = () => {
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
+					<Link href="/seller-database" passHref>
+						<a>Seller Database</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
 					<Link href="/seller-finder" passHref>
 						<a>Seller Finder</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/seller-map" passHref>
+						<a>Seller Map</a>
 					</Link>
 				</li>
 			</ul>
