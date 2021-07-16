@@ -28,7 +28,7 @@ const PartnersSignup: React.FC<Props> = () => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<section className={` ${styles.partnersSignupWrapper}`}>
+			<section className={`${styles.partnersSignupWrapper}`}>
 				<div className={styles.blueBG} />
 				<div className={`page-container ${styles.partnersSignupBox}`}>
 					<HeroBox />

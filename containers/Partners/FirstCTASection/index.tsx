@@ -16,7 +16,7 @@ const FirstCTASection: React.FC<Props> = () => {
 			</h2>
 			<p className={styles.firstCTAContent}>
 				Join the Sellgo family and one of the best programs in our industry.
-				{<br />}
+				<br />
 				After approval, promote our innovative, powerful tools with your
 				audience and make money!
 			</p>

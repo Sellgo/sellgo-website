@@ -32,7 +32,7 @@ const HeroBox: React.FC<Props> = () => {
 				</CTAButton>
 
 				<p className={styles.heroBoxContent}>
-					Already an affliate?{' '}
+					Already an affliate?
 					<Link href="/">
 						<a className={`${styles.signinLink}`}>Sign in</a>
 					</Link>

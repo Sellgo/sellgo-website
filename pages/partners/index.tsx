@@ -18,6 +18,8 @@ import { seoData } from '../../data/SEO/partners';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
+
+/* Config */
 import AppConfig from '../../config';
 
 /* Types */

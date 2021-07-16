@@ -14,6 +14,7 @@
 
 	@media only screen and(max-width: 700px) {
 		width: 100%;
+		padding: 2rem;
 	}
 
 	button {
@@ -29,41 +30,15 @@
 	}
 }
 
+// Styles for form input
 .formInput {
-	width: 40rem;
-	margin-bottom: 3rem;
+	width: 45rem;
+	margin-bottom: 2rem;
+	min-height: 9rem;
 
 	small {
 		font-size: $fontsize_content_12;
 		color: $system_red;
-	}
-	
-	// Styling for checkboxes
-	&__checkBox {
-		width: 40rem;
-		height: 2rem;
-		margin-bottom: 1rem;
-
-		label {
-			color: $prim_dark_2;
-			font-size: $fontsize_content_14;
-			font-weight: $fontweight_semibold;
-			width: 100%;
-		}
-
-		input {
-			width: 1.7rem;
-			height: 1.7rem;
-			border-radius: 4px;
-			margin-right: 1.5rem;
-			&:focus {
-				outline: 0;
-			}
-
-			&__error {
-				border: 1px solid $system_red;
-			}
-		}
 	}
 
 	@media only screen and(max-width: 700px) {
@@ -97,8 +72,37 @@
 	}
 }
 
-.selectDropdown {
+// Styles for checkboxes
+.formInput__checkBox {
 	width: 40rem;
+	height: 2rem;
+	margin-bottom: 1rem;
+
+	label {
+		color: $prim_dark_2;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_semibold;
+		width: 100%;
+	}
+
+	input {
+		width: 1.7rem;
+		height: 1.7rem;
+		border-radius: 4px;
+		margin-right: 1.5rem;
+		&:focus {
+			outline: 0;
+		}
+
+		&__error {
+			border: 1px solid $system_red;
+		}
+	}
+}
+
+// Styles for dropdown
+.selectDropdown {
+	width: 45rem;
 	position: relative;
 
 	@media only screen and(max-width: 700px) {
@@ -110,7 +114,7 @@
 	}
 
 	&__control {
-		width: 40rem;
+		width: 45rem;
 		background: $prim_white;
 		border: 1px solid $second_silver;
 		font-size: $fontsize_content_14;
@@ -165,10 +169,11 @@
 	}
 }
 
+// Styles for form submit info
 .formSubmitInfo {
-	width: 100%;
+	width: 90%;
 	margin-top: 1.5rem;
-	font-size: $fontsize_content_14 !important;
-	color: $prim_dark_2 !important;
+	font-size: $fontsize_content_14;
+	color: $prim_dark_2;
 	line-height: $fontlineheight_content_30;
 }

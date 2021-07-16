@@ -16,14 +16,8 @@ const BenefitsSection: React.FC<Props> = () => {
 	return (
 		<section className={`${styles.benefitsSection}`}>
 			<div className={`page-container ${styles.benefitsGrid}`}>
-				{benefitsData.map((benefit: any, index: number) => {
-					return (
-						<AffliateBenefitCard
-							key={uuid()}
-							{...benefit}
-							bottomStats={index < 2}
-						/>
-					);
+				{benefitsData.map((benefit: any) => {
+					return <AffliateBenefitCard key={uuid()} {...benefit} />;
 				})}
 			</div>
 		</section>

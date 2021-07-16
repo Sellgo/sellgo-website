@@ -68,7 +68,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		props: {
 			faqDetails: data
 		},
-		revalidate: 1
+		revalidate: 60 * 15 // 15 minutes
 	};
 };
 
