@@ -5,13 +5,13 @@
 	background: linear-gradient(90deg, $blue_9, $blue_8, $blue_7, $blue_7);
 	padding-top: 4.7rem;
 	padding-bottom: 6rem;
+}
 
-	.heroBox {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
+.heroBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
 
 .heroBoxTitle {
@@ -39,21 +39,22 @@
 	margin-top: 1rem;
 	font-size: $fontsize_content_14;
 	font-weight: $fontweight_regular;
+}
 
-	.bold {
-		font-weight: $fontweight_bold;
-	}
-	.signinLink {
-		color: $blue_4;
+.bold {
+	font-weight: $fontweight_bold;
+}
+.signinLink {
+	color: $blue_4;
+	margin-left: 2px;
 
-		&:hover {
-			cursor: pointer;
-		}
+	&:hover {
+		cursor: pointer;
 	}
 }
 
 .ctaButton {
 	margin-top: 6.5rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 5px;
 	width: 21rem;
 }

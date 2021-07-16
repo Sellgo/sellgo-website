@@ -180,6 +180,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		});
 	};
 
+	/* Handle form submission */
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 
@@ -429,6 +430,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 					optionClassName={styles.formInput__checkBox}
 					required
 				/>
+
 				<button
 					type="submit"
 					className="ctabutton ctabutton--primary ctabutton--medium"
@@ -436,6 +438,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 				>
 					Next
 				</button>
+
 				<p className={styles.formSubmitInfo}>
 					You&apos;ll be asked to create an account on Rewardful or login to
 					your existing account if you have one.
