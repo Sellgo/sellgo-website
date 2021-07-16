@@ -148,7 +148,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			keywords: seoMetaTags.keywords,
 			relatedBlogs: relatedPosts.nodes
 		},
-		revalidate: 1
+		revalidate: 60 * 30 // 30 minutes
 	};
 };
 export default BlogPage;

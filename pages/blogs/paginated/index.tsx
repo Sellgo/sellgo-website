@@ -91,7 +91,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 				/>
 
 				<ReactPaginate
-					pageCount={Math.round(totalPages.total / 6)}
+					pageCount={Math.floor(totalPages.total / 6)}
 					pageRangeDisplayed={3}
 					marginPagesDisplayed={1}
 					previousLabel={<LeftArrow width={10} height={16} fill="#808080" />}
@@ -161,7 +161,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	const editorsChoiceBlogs = editorsChoiceBlogsResponse.data.posts.nodes;
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
 
-	const isInvalidPage = pageNumber > Math.round(totalPages.total / 6);
+	const isInvalidPage = pageNumber > Math.floor(totalPages.total / 6);
 
 	if (!paginatedBlogs.length || isInvalidPage) {
 		return {

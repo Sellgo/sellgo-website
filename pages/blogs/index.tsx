@@ -45,7 +45,6 @@ const BlogsPage: React.FC<Props> = (props) => {
 		editorsChoiceBlogs,
 		totalPages
 	} = props;
-
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const router = useRouter();
@@ -83,7 +82,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 				/>
 
 				<ReactPaginate
-					pageCount={Math.round(totalPages.total / 6)}
+					pageCount={Math.floor(totalPages.total / 6)}
 					pageRangeDisplayed={3}
 					marginPagesDisplayed={1}
 					previousLabel={<LeftArrow width={10} height={16} fill="#808080" />}
@@ -157,7 +156,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			popularChoiceBlogs,
 			totalPages
 		},
-		revalidate: 1
+		revalidate: 60 * 30 // 30 minutes
 	};
 };
 
