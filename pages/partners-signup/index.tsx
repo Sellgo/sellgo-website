@@ -29,7 +29,7 @@ const PartnersSignup: React.FC<Props> = () => {
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
 			<section className={` ${styles.partnersSignupWrapper}`}>
-				<div className={styles.blueBG}/>
+				<div className={styles.blueBG} />
 				<div className={`page-container ${styles.partnersSignupBox}`}>
 					<HeroBox />
 					<ApplicationForm />

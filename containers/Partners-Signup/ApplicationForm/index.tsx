@@ -16,7 +16,12 @@ import MultiSelectCheckBoxInput from '../../../components/MultiSelectCheckBoxInp
 // import AppConfig from '../../../config';
 
 /* Data */
-import {typesOfUsersData, businessModelsData, audienceConnectionMethodsData, familiarityWithSellgoData} from './data';
+import {
+	typesOfUsersData,
+	businessModelsData,
+	audienceConnectionMethodsData,
+	familiarityWithSellgoData
+} from './data';
 
 interface Props {}
 
@@ -41,7 +46,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 	const [formDataError, setFormDataError] = useState({
 		firstNameErr: false,
 		lastNameErr: false,
-		emailErr: false,
+		emailErr: false
 	});
 
 	/* Handler for event changes */
@@ -91,11 +96,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		privacyPolicyAck
 	} = formData;
 
-	const {
-		firstNameErr,
-		lastNameErr,
-		emailErr,
-	} = formDataError;
+	const { firstNameErr, lastNameErr, emailErr } = formDataError;
 
 	// mounting for submision confirmation modal
 	useEffect(() => {
@@ -285,28 +286,30 @@ const ScheduleMeeting: React.FC<Props> = () => {
 					/>
 				</div>
 
-				<MultiSelectCheckBoxInput 
+				<MultiSelectCheckBoxInput
 					label="Do you work with any of these business models? *"
 					options={businessModelsData}
 					onChange={handleChange}
-					id={"businessModels"}
-					name={"businessModels"}
+					id={'businessModels'}
+					name={'businessModels'}
 					className={styles.formInput}
 					optionClassName={styles.formInput__checkBox}
 				/>
 
-				<MultiSelectCheckBoxInput 
+				<MultiSelectCheckBoxInput
 					label="How do you connect with your audience? *"
 					options={audienceConnectionMethodsData}
 					onChange={handleChange}
-					id={"audienceConnectionMethods"}
-					name={"audienceConnectionMethods"}
+					id={'audienceConnectionMethods'}
+					name={'audienceConnectionMethods'}
 					className={styles.formInput}
 					optionClassName={styles.formInput__checkBox}
 				/>
 
 				<div className={styles.formInput}>
-					<label>How familiar are you with Sellgo&apos;s product and features? *</label>
+					<label>
+						How familiar are you with Sellgo&apos;s product and features? *
+					</label>
 					<Dropdown
 						options={familiarityWithSellgoData}
 						onChange={handleFamiliarityWithSellgoChange}
@@ -349,7 +352,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 				<FormInput
 					className={styles.formInput}
-					label= {`Please list the URLs of all the websites you intend 
+					label={`Please list the URLs of all the websites you intend 
 						to use to promote Sellgo (website, Facebook group, YouTube channel, etc.) *`}
 					id="urlsToPromoteSellgo"
 					type="text"
@@ -363,7 +366,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 				<FormInput
 					className={styles.formInput}
-					label= {`If you have an existing audience, how large is it? 
+					label={`If you have an existing audience, how large is it? 
 						(Email list, subscribers, students, site traffic, etc.) *`}
 					id="existingAudience"
 					type="text"
@@ -375,26 +378,26 @@ const ScheduleMeeting: React.FC<Props> = () => {
 					errorMessage="Please fill in this field."
 				/>
 
-				<MultiSelectCheckBoxInput 
+				<MultiSelectCheckBoxInput
 					label={`Please acknowledge our PPC TOS does not allow 
 						bidding on our branded search terms. Doing so will result in 
 						a ban and your commissions forfeited. *`}
-					options={["Yes, I understand."]}
+					options={['Yes, I understand.']}
 					onChange={handleChange}
-					id={"ppcTosAck"}
-					name={"ppcTosAck"}
+					id={'ppcTosAck'}
+					name={'ppcTosAck'}
 					className={styles.formInput}
 					optionClassName={styles.formInput__checkBox}
 					required
 				/>
 
-				<MultiSelectCheckBoxInput 
+				<MultiSelectCheckBoxInput
 					label={`Please acknowledge our program does not allow any 
 						Coupon Site affiliate marketing. *`}
-					options={["Yes, I understand."]}
+					options={['Yes, I understand.']}
 					onChange={handleChange}
-					id={"couponMarketingAck"}
-					name={"couponMarketingAck"}
+					id={'couponMarketingAck'}
+					name={'couponMarketingAck'}
 					className={styles.formInput}
 					optionClassName={styles.formInput__checkBox}
 					required
@@ -402,7 +405,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 				<FormInput
 					className={styles.formInput}
-					label= {`What will make your life easier as our affiliate?`}
+					label={`What will make your life easier as our affiliate?`}
 					id="easierLifeMessage"
 					type="text"
 					name="easierLifeMessage"
@@ -412,12 +415,14 @@ const ScheduleMeeting: React.FC<Props> = () => {
 					errorMessage="Invalid Email"
 				/>
 
-				<MultiSelectCheckBoxInput 
-					options={[`I have read, understand, and agree to the terms 
-						and services and privacy policy. *`]}
+				<MultiSelectCheckBoxInput
+					options={[
+						`I have read, understand, and agree to the terms 
+						and services and privacy policy. *`
+					]}
 					onChange={handleChange}
-					id={"privacyPolicyAck"}
-					name={"privacyPolicyAck"}
+					id={'privacyPolicyAck'}
+					name={'privacyPolicyAck'}
 					className={styles.formInput}
 					optionClassName={styles.formInput__checkBox}
 					required
@@ -425,19 +430,14 @@ const ScheduleMeeting: React.FC<Props> = () => {
 				<button
 					type="submit"
 					className="ctabutton ctabutton--primary ctabutton--medium"
-					disabled={
-						firstNameErr ||
-						lastNameErr ||
-						emailErr
-					}
+					disabled={firstNameErr || lastNameErr || emailErr}
 				>
 					Next
 				</button>
 				<p className={styles.formSubmitInfo}>
-					You&apos;ll be asked to create an account on Rewardful 
-					or login to your existing account if you have one.
+					You&apos;ll be asked to create an account on Rewardful or login to
+					your existing account if you have one.
 				</p>
-
 			</form>
 
 			<div id="formSubmitConfirm"></div>

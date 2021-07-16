@@ -1,41 +1,41 @@
 @import '../../../styles/guidelines';
 
 .heroBoxWrapper {
-    width: 65rem;
-    display: flex;
-    flex-direction: row;
-    @media only screen and(max-width: 700px) {
-        width: 100%;
-    }
+	width: 65rem;
+	display: flex;
+	flex-direction: row;
+	@media only screen and(max-width: 700px) {
+		width: 100%;
+	}
 
-    .heroBoxLogo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 35%;
-        
-        @media only screen and(max-width: 700px) {
-            padding: 0;
-        }
-    }
+	.heroBoxLogo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 35%;
 
-    .heroBoxText {
-        padding-top: 2.7rem;
-        padding-bottom: 2.7rem;
-        padding-right: 3rem;
-        width: 65%;
+		@media only screen and(max-width: 700px) {
+			padding: 0;
+		}
+	}
 
-        h1 {
-            font-size: $fontsize_subtitle_24;
-            color: $prim_dark_1;
-            line-height: $fontlineheight_content_30;
-            margin-bottom: 1rem;
-        }
+	.heroBoxText {
+		padding-top: 2.7rem;
+		padding-bottom: 2.7rem;
+		padding-right: 3rem;
+		width: 65%;
 
-        p {
-            font-size: $fontsize_content_12;
-            color: $prim_dark_2;
-            line-height: $fontlineheight_content_30;
-        }
-    }
+		h1 {
+			font-size: $fontsize_subtitle_24;
+			color: $prim_dark_1;
+			line-height: $fontlineheight_content_30;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			font-size: $fontsize_content_12;
+			color: $prim_dark_2;
+			line-height: $fontlineheight_content_30;
+		}
+	}
 }
