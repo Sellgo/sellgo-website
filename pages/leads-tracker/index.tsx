@@ -55,6 +55,7 @@ const LeadsTrackerContPage: React.FC<Props> = (props) => {
 			<BannerCTASection />
 			<PlansSection />
 			<OtherInfoSection />
+			<FAQSection />
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>

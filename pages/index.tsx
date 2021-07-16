@@ -29,6 +29,7 @@ import { generatePageURL } from '../utils/SEO';
 /* Types */
 import { ShowcaseBlogDetails } from '../interfaces/Blogs';
 import StatisticsSection from '../containers/HomePage/StatisticsSection';
+import InfoSection from '../containers/HomePage/InfoSection';
 
 interface Props {
 	homeBlogs: ShowcaseBlogDetails[];
@@ -52,6 +53,7 @@ const HomePage: React.FC<Props> = (props) => {
 						The Amazon Opportunity Finder Your Business Will Love
 					</h2>
 				</section>
+				<InfoSection />
 				<ProductsSection />
 				<StatisticsSection />
 				<TestimonialsSection />
