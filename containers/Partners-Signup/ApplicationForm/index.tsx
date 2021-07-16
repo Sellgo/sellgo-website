@@ -183,22 +183,21 @@ const ScheduleMeeting: React.FC<Props> = () => {
 	/* Handle form submission */
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
-
 		const formData = new FormData();
 		formData.append('firstname', firstName);
 		formData.append('lastname', lastName);
 		formData.append('email', email);
-		formData.append('typeOfUser', typeOfUser);
-		formData.append('businessModels', businessModels);
-		formData.append('audienceConnectionMethods', audienceConnectionMethods);
-		formData.append('familiarityWithSellgo', familiarityWithSellgo);
-		formData.append('marketingPlan', marketingPlan);
-		formData.append('urlsToPromoteSellgo', urlsToPromoteSellgo);
-		formData.append('existingAudience', existingAudience);
-		formData.append('easierLifeMessage', easierLifeMessage);
-		formData.append('ppcTosAck', ppcTosAck);
-		formData.append('couponMarketingAck', couponMarketingAck);
-		formData.append('privacyPolicyAck', privacyPolicyAck);
+		formData.append('type_of_user', typeOfUser);
+		formData.append('business_models', businessModels);
+		formData.append('audience_connection_methods', audienceConnectionMethods);
+		formData.append('familiarity', familiarityWithSellgo);
+		formData.append('marketing_plan', marketingPlan);
+		formData.append('urls_to_promote', urlsToPromoteSellgo);
+		formData.append('audience_count', existingAudience);
+		formData.append('ideas', easierLifeMessage);
+		formData.append('ppc_tos_acq', ppcTosAck);
+		formData.append('no_coupon_affiliate_acq', couponMarketingAck);
+		formData.append('privacy_policy_acq', privacyPolicyAck);
 
 		try {
 			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
@@ -392,6 +391,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 					className={styles.formInput}
 					optionClassName={styles.formInput__checkBox}
 					required
+					acknowledge
 				/>
 
 				<MultiSelectCheckBoxInput
@@ -404,6 +404,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 					className={styles.formInput}
 					optionClassName={styles.formInput__checkBox}
 					required
+					acknowledge
 				/>
 
 				<FormInput
@@ -429,6 +430,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 					className={styles.formInput}
 					optionClassName={styles.formInput__checkBox}
 					required
+					acknowledge
 				/>
 
 				<button

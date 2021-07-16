@@ -10,6 +10,7 @@ interface Props {
 	id: string;
 	name: string;
 	label?: string;
+	acknowledge?: boolean;
 	options: string[];
 	className?: string;
 	optionClassName?: string;
@@ -41,13 +42,22 @@ const MultiSelectCheckBoxInput: React.FC<Props> = (props) => {
 		}
 
 		setResult(newResult);
-
-		const event = {
-			target: {
-				name,
-				value: newResult
+		let event;
+		if (otherProps.acknowledge) {
+			event = {
+				target: {
+					name,
+					value: newResult.length === 1 ? "true" : "false"
+				}
 			}
-		};
+		} else {
+			event = {
+				target: {
+					name,
+					value: newResult
+				}
+			};
+		}
 
 		onChange(event);
 	};
