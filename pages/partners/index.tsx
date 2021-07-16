@@ -15,7 +15,7 @@ import FAQSection from '../../containers/Partners/FAQSection';
 import SEOHead from '../../components/SEOHead';
 
 /* Data */
-import { seoData } from '../../data/SEO/affliate';
+import { seoData } from '../../data/SEO/partners';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';

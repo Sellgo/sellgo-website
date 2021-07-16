@@ -1,9 +1,9 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Affliate`,
+	title: `Partners`,
 	description: ``,
 	imageUrl: ``,
 	keywords: ['sellgo'],
-	slug: '/affliate'
+	slug: '/partners'
 };
