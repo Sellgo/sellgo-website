@@ -54,7 +54,7 @@ const MultiSelectCheckBoxInput: React.FC<Props> = (props) => {
 			event = {
 				target: {
 					name,
-					value: newResult
+					value: newResult.join(';')
 				}
 			};
 		}
