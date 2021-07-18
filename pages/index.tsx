@@ -16,6 +16,7 @@ import ProductsSection from '../containers/HomePage/ProductsSection';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
 import ClosingCTASection from '../containers/HomePage/ClosingCTASection';
+import StepperInfoSection from '../containers/HomePage/StepperInfoSection';
 
 /* Components */
 import SEOHead from '../components/SEOHead';
@@ -47,6 +48,7 @@ const HomePage: React.FC<Props> = (props) => {
 			/>
 			<HeroBox />
 			<main>
+				<StepperInfoSection />
 				<section className={styles.opportunityBanner}>
 					<h2 className="secondary-heading">
 						The Amazon Opportunity Finder Your Business Will Love

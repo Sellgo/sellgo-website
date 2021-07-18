@@ -1,28 +1,93 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+
+/* Libraries */
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
-import StepButton from '@material-ui/core/StepButton';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import StepLabel from '@material-ui/core/StepLabel';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+
+/* Data */
+import { productsLabels, productsDetails } from './data';
+
+/* Components */
+import ProductCard from '../../../components/ProductCard';
 
 /* Styling */
 import styles from './index.module.scss';
 
-/* Data */
-import { productsDetails } from './data';
-
 /* Components */
-import ProductCard from '../../../components/ProductCard';
-import CTAButton from '../../../components/CTAButton';
+import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 interface Props {}
 
-const ProductsSection: React.FC<Props> = () => {
+const StepperInfoSection: React.FC<Props> = () => {
+	const [activeStep, setActiveStep] = React.useState(0);
+	const stepperIcon = (props: any) => {
+		const {active, icon} = props;
+		const fillColour = active ? '#ef7818' : '#2f8ddf';
+
+		return (
+			<ExpandedNavbarIcons
+				width={30}
+				height={30}
+				fill={fillColour}
+				name={productsLabels[icon - 1].icon}
+			/>
+		);
+	};
+
+	const stepperLine = <div className={styles.stepperLine} />;
+
+	const handleStepChange = (step: number) => {
+		setActiveStep(step);
+	};
+
 	return (
-		<section className={`page-container ${styles.productsSection}`}>
+		<section className={`page-container ${styles.stepperInfoSectionWrapper}`}>
+			<h2 className="secondary-heading">
+				The Amazon Opportunity Finder Your Business Will Love
+			</h2>
+			<div className={styles.stepperWrapper}>
+				<Stepper
+					alternativeLabel
+					nonLinear
+					activeStep={activeStep}
+					connector={stepperLine}
+				>
+					{productsLabels.map((product, index) => {
+						return (
+							<Step key={product.title} onClick={() => handleStepChange(index)}>
+								<StepLabel StepIconComponent={stepperIcon} />
+								<h3 className={styles.stepperLabel}> {product.title} </h3>
+							</Step>
+						);
+					})}
+				</Stepper>
+			</div>
+
+			<div>
+				<AutoPlaySwipeableViews
+					index={activeStep}
+					onChangeIndex={handleStepChange}
+					interval={5000} // = 5seconds
+					enableMouseEvents
+				>
+					{productsDetails.map((productDetail: any, index: number) => {
+						return (
+							<ProductCard
+								key={index}
+								{...productDetail}
+								reversed={(index + 1) % 2 === 0}
+							/>
+						);
+					})}
+				</AutoPlaySwipeableViews>
+			</div>
 		</section>
 	);
 };
 
-export default ProductsSection;
+export default StepperInfoSection;
