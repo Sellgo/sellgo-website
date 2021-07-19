@@ -59,6 +59,19 @@ class MyDocument extends Document {
 							else{w.addEventListener('load',l,false);}}})()`
 						}}
 					/>
+
+					{/* Rewardful integration */}
+					<script>(function(w,r){w._rwq=r;w[r]=w[r]||function(){
+						(w[r].q=w[r].q||[]).push(arguments)}})(window,'rewardful');
+					</script>
+					<script async src='https://r.wdfl.co/rw.js' 
+						data-rewardful='f34d76'>
+					</script>
+					<script>
+						rewardful('ready', function() {
+							console.log('Rewardful Ready!')
+						});
+					</script>
 				</Head>
 
 				<body>
