@@ -62,7 +62,6 @@ class MyDocument extends Document {
 
 					{/* Rewardful integration */}
 					<script
-						defer
 						dangerouslySetInnerHTML={{
 							__html: `(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[])
 								.push(arguments)}})(window,'rewardful');`
@@ -75,6 +74,7 @@ class MyDocument extends Document {
 							__html: `
 							rewardful('ready', function() {
 								console.log('Rewardful Ready!');
+								console.log(Rewardful._cookie);
 								if(Rewardful.affiliate) {
 									console.log(Rewardful.affiliate);
 								  } else {

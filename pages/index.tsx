@@ -39,20 +39,6 @@ const HomePage: React.FC<Props> = (props) => {
 	const { homeBlogs } = props;
 	return (
 		<>
-			<script
-				dangerouslySetInnerHTML={{
-					__html: `
-					rewardful('ready', function() {
-						console.log('Rewardful Ready!');
-						if(Rewardful.affiliate) {
-							console.log(Rewardful.affiliate);
-							} else {
-							console.log('No affiliate present.');
-							}
-					});
-					`
-				}}
-			/>
 			<SEOHead
 				title={seoData.title}
 				description={seoData.description}

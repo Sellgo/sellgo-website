@@ -36,6 +36,24 @@ const SEOHead: React.FC<Props> = (props) => {
 			<meta property="twitter:title" content={title} />
 			<meta property="twitter:description" content={description} />
 			<meta property="twitter:image" content={imageUrl} />
+
+			<script async src='https://r.wdfl.co/rw.js' data-rewardful='f34d76'></script>
+			<script
+				defer
+				dangerouslySetInnerHTML={{
+					__html: `
+					rewardful('ready', function() {
+						console.log('Rewardful Ready!');
+						console.log(Rewardful._cookie);
+						if(Rewardful.affiliate) {
+							console.log(Rewardful.affiliate);
+							} else {
+							console.log('No affiliate present.');
+							}
+					});
+					`
+				}}
+			/>
 		</Head>
 	);
 };
