@@ -2,7 +2,7 @@ export const DEV_URLS = {
 	WEB_URL: 'https://www.sellgo-dev.com',
 	// APP_URL: 'http://app.sellgo-dev.com',
 	/* Testing for Sandbox Rewardful integration */
-	APP_URL: 'http://54.166.52.145:5000/',
+	APP_URL: 'http://54.166.52.145:5000',
 	API_URL: 'https://api.sellgo-dev.com/api',
 	WPGRAPHQL: 'https://wordpress.sellgo-dev.com/graphql',
 	FAQ_BUCKET: 'https://sellgo-website-dev.s3.amazonaws.com/faqDetails'
