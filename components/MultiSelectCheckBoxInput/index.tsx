@@ -47,9 +47,9 @@ const MultiSelectCheckBoxInput: React.FC<Props> = (props) => {
 			event = {
 				target: {
 					name,
-					value: newResult.length === 1 ? "true" : "false"
+					value: newResult.length === 1 ? 'true' : 'false'
 				}
-			}
+			};
 		} else {
 			event = {
 				target: {

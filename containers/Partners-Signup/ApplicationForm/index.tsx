@@ -14,7 +14,6 @@ import FormInput from '../../../components/FormInput';
 import MultiSelectCheckBoxInput from '../../../components/MultiSelectCheckBoxInput';
 import AffliateFormSubmitConfirm from '../../../components/AffliateFormSubmitConfirm';
 
-
 /* App Config */
 import AppConfig from '../../../config';
 
@@ -29,7 +28,7 @@ import {
 interface Props {}
 
 const ScheduleMeeting: React.FC<Props> = () => {
-	const router = useRouter()
+	const router = useRouter();
 	const [formData, setFormData] = useState({
 		firstName: '',
 		lastName: '',
@@ -88,8 +87,8 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 	const handleModalClose = () => {
 		setOpenSubmitConfirm(false);
-		router.push("/partners");
-	}
+		router.push('/partners');
+	};
 
 	const {
 		firstName,
