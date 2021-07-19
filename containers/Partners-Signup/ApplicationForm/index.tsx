@@ -4,6 +4,7 @@ import Dropdown from 'react-dropdown';
 import validator from 'validator';
 import axios from 'axios';
 import Modal from 'react-modal';
+import { useRouter } from 'next/router';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -11,6 +12,8 @@ import styles from './index.module.scss';
 /* Components */
 import FormInput from '../../../components/FormInput';
 import MultiSelectCheckBoxInput from '../../../components/MultiSelectCheckBoxInput';
+import AffliateFormSubmitConfirm from '../../../components/AffliateFormSubmitConfirm';
+
 
 /* App Config */
 import AppConfig from '../../../config';
@@ -26,6 +29,7 @@ import {
 interface Props {}
 
 const ScheduleMeeting: React.FC<Props> = () => {
+	const router = useRouter()
 	const [formData, setFormData] = useState({
 		firstName: '',
 		lastName: '',
@@ -48,6 +52,8 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		lastNameErr: false,
 		emailErr: false
 	});
+
+	const [openSubmitConfirm, setOpenSubmitConfirm] = useState(false);
 
 	/* Handler for event changes */
 	const handleChange = (e: any) => {
@@ -79,6 +85,12 @@ const ScheduleMeeting: React.FC<Props> = () => {
 			};
 		});
 	};
+
+	const handleModalClose = () => {
+		setOpenSubmitConfirm(false);
+		router.push("/partners");
+	}
+
 	const {
 		firstName,
 		lastName,
@@ -204,6 +216,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 			const response = await axios.post(URL, formData);
 			if (response.status === 201) {
 				clearForm();
+				setOpenSubmitConfirm(true);
 			}
 		} catch (err) {
 			console.error('Error Sending data to hubspot');
@@ -448,6 +461,18 @@ const ScheduleMeeting: React.FC<Props> = () => {
 			</form>
 
 			<div id="formSubmitConfirm"></div>
+			<Modal
+				isOpen={openSubmitConfirm}
+				onRequestClose={handleModalClose}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<AffliateFormSubmitConfirm
+					heading="You're all set"
+					body="Your application has been received!"
+					ending="Our Partnership team will be in touch with you soon."
+				/>
+			</Modal>
 		</>
 	);
 };
