@@ -59,31 +59,6 @@ class MyDocument extends Document {
 							else{w.addEventListener('load',l,false);}}})()`
 						}}
 					/>
-
-					{/* Rewardful integration */}
-					<script
-						dangerouslySetInnerHTML={{
-							__html: `(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[])
-								.push(arguments)}})(window,'rewardful');`
-						}}
-					/>
-					<script async src='https://r.wdfl.co/rw.js' data-rewardful='f34d76'></script>
-					<script
-						defer
-						dangerouslySetInnerHTML={{
-							__html: `
-							rewardful('ready', function() {
-								console.log('Rewardful Ready!');
-								console.log(Rewardful._cookie);
-								if(Rewardful.affiliate) {
-									console.log(Rewardful.affiliate);
-								  } else {
-									console.log('No affiliate present.');
-								  }
-							});
-							`
-						}}
-					/>
 				</Head>
 
 				<body>
