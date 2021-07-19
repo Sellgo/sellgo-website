@@ -61,17 +61,29 @@ class MyDocument extends Document {
 					/>
 
 					{/* Rewardful integration */}
-					<script>(function(w,r){w._rwq=r;w[r]=w[r]||function(){
-						(w[r].q=w[r].q||[]).push(arguments)}})(window,'rewardful');
-					</script>
-					<script async src='https://r.wdfl.co/rw.js' 
-						data-rewardful='f34d76'>
-					</script>
-					<script>
-						rewardful('ready', function() {
-							console.log('Rewardful Ready!')
-						});
-					</script>
+					<script
+						defer
+						dangerouslySetInnerHTML={{
+							__html: `(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[])
+								.push(arguments)}})(window,'rewardful');`
+						}}
+					/>
+					<script async src='https://r.wdfl.co/rw.js' data-rewardful='f34d76'></script>
+					<script
+						defer
+						dangerouslySetInnerHTML={{
+							__html: `
+							rewardful('ready', function() {
+								console.log('Rewardful Ready!');
+								if(Rewardful.affiliate) {
+									console.log(Rewardful.affiliate);
+								  } else {
+									console.log('No affiliate present.');
+								  }
+							});
+							`
+						}}
+					/>
 				</Head>
 
 				<body>
