@@ -7,6 +7,8 @@ import ProductTracker from './Products/ProductTracker';
 import ProfitFinder from './Products/ProfitFinder';
 import SearchManagement from './Products/SearchManagement';
 import SellerFinder from './Products/SellerFinder';
+import SellerDatabase from './Products/SellerDatabase';
+import SellerMap from './Products/SellerMap';
 
 /* Resources Icons */
 import Blogs from './Resources/Blogs';
@@ -50,6 +52,16 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 		}
 		case 'sellerFinder': {
 			productIcon = <SellerFinder {...otherProps} />;
+			break;
+		}
+
+		case 'sellerDatabase': {
+			productIcon = <SellerDatabase {...otherProps} />;
+			break;
+		}
+
+		case 'sellerMap': {
+			productIcon = <SellerMap {...otherProps} />;
 			break;
 		}
 
