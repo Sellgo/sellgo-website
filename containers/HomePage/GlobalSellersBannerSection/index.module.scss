@@ -1,0 +1,12 @@
+@import '../../../styles/guidelines';
+
+.globalSellersBannerWrapper {
+	background-color: $orange_5;
+	min-height: 35rem;
+	padding-top: 8rem;
+	// background: red;
+}
+
+.globalSellersBanner {
+	background-image: url('../../../public/sellerWorldMap.png');
+}
