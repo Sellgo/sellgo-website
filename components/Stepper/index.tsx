@@ -3,27 +3,31 @@ import React from 'react';
 /* Styling */
 import styles from './index.module.scss';
 
-
 /* Components */
 import ExpandedNavbarIcons from '../Icons/ExpandedNavbarIcons';
 
+/* Interfaces */
+import { StepDetail } from '../../interfaces/Stepper';
+
 interface Props {
-	steps: any;
-	handleStepChange: (step:number) => void;
+	steps: StepDetail[];
+	handleStepChange: (step: number) => void;
 	activeStep: number;
 }
 
 const TextLoader: React.FC<Props> = (props) => {
-	const {steps, handleStepChange, activeStep} = props;
-	const isLastStep = (index) => index === steps.length - 1;
+	const { steps, handleStepChange, activeStep } = props;
+	const isFirstStep = (index: number) => index === 0;
+	const isActiveStep = (index: number) => index === activeStep;
+
 	return (
 		<div className={styles.stepperWrapper}>
-			{steps.map((product, index) => {
-				const fillColour = index === activeStep ? '#ef7818' : '#2f8ddf';
+			{steps.map((product: StepDetail, index: number) => {
+				const fillColour = isActiveStep(index) ? '#ef7818' : '#2f8ddf';
 				return (
-					<span className={styles.stepWrapper}>
-						<div 
-							key={product.title} 
+					<div key={index} className={styles.stepWrapper}>
+						<div
+							key={product.title}
 							onClick={() => handleStepChange(index)}
 							onKeyPress={() => handleStepChange(index)}
 							className={styles.step}
@@ -34,10 +38,10 @@ const TextLoader: React.FC<Props> = (props) => {
 								fill={fillColour}
 								name={product.icon}
 							/>
-							<h3 className={styles.stepperLabel}> {product.title} </h3>
+							<h3 className={styles.stepTitle}> {product.title} </h3>
 						</div>
-						{!isLastStep(index) ? <div className={styles.line}/> : <div/>}
-					</span>
+						{!isFirstStep(index) ? <div className={styles.line} /> : <div />}
+					</div>
 				);
 			})}
 		</div>

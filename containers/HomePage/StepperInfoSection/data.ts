@@ -1,4 +1,6 @@
-export const productsLabels = [
+import { StepDetail } from '../../../interfaces/Stepper';
+
+export const productsLabels: StepDetail[] = [
 	{
 		title: 'Search Management',
 		icon: 'searchManagement'

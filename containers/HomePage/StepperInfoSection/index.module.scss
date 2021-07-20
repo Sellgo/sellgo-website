@@ -5,33 +5,5 @@
 }
 
 .stepperWrapper {
-	width: 100%;
 	margin-top: 8rem;
-
-	&:hover {
-		cursor: pointer;
-	}
-}
-
-.stepperLine {
-	top: 1.5rem;
-	left: calc(-50% + 3rem);
-	right: calc(50% + 3rem);
-	position: absolute;
-	border-top: 1px solid $border-color-1;
-
-	@media only screen and(max-width: 650px) {
-		display: none;
-	}
-}
-
-.stepperLabel {
-	margin-top: 1.4rem;
-	text-align: center;
-	font-size: $fontsize_content_16;
-	color: $prim_dark_2;
-	font-weight: $fontweight_semibold;
-	@media only screen and(max-width: 650px) {
-		font-size: $fontsize_content_12;
-	}
 }
