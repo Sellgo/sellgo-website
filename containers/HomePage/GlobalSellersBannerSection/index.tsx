@@ -3,9 +3,6 @@ import React from 'react';
 /* Styling */
 import styles from './index.module.scss';
 
-/* Components */
-import GlobalSellersStatCard from '../../../components/GlobalSellersStatCard';
-
 interface Props {}
 
 const GlobalSellersBannerSection: React.FC<Props> = () => {
@@ -17,11 +14,18 @@ const GlobalSellersBannerSection: React.FC<Props> = () => {
 					Sellgo helps Amazon sellers all over the world
 				</h2>
 				<div className={styles.statsRow}>
-					<GlobalSellersStatCard
-						statsCount="100M"
-						statsLabel="Amazon Products"
-					/>
-					<GlobalSellersStatCard statsCount="1M" statsLabel="Amazon Sellers" />
+					<div className={styles.globalSellersStatCard}>
+						<h3 className={styles.statsCount}>
+							100M <span>+</span>
+						</h3>
+						<p className={styles.statsMessage}>Amazon Products</p>
+					</div>
+					<div className={styles.globalSellersStatCard}>
+						<h3 className={styles.statsCount}>
+							1M <span>+</span>
+						</h3>
+						<p className={styles.statsMessage}>Amazon Sellers</p>
+					</div>
 				</div>
 			</div>
 		</section>

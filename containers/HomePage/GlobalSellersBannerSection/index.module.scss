@@ -16,7 +16,7 @@
 	background-position: center;
 	position: absolute;
 
-	@media only screen and(max-width: 700px) {
+	@media only screen and(max-width: 600px) {
 		height: 22rem;
 		width: 43rem;
 	}
@@ -28,8 +28,43 @@
 
 .statsRow {
 	margin: auto;
-	width: 50%;
+	width: 65%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+
+	@media only screen and (max-width: 600px) {
+		width: 100%;
+	}
+}
+
+.globalSellersStatCard {
+	color: $prim_white;
+	text-align: center;
+	padding: 3rem 0;
+}
+
+.statsCount {
+	width: 100%;
+	font-size: $fontsize_title_54;
+	color: $prim_dark_2;
+	font-weight: $fontweight_bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	span {
+		font-size: 14px;
+		margin-left: 5px;
+	}
+
+	@media only screen and(max-width: 600px) {
+		font-size: $fontsize_subtitle_32;
+	}
+}
+
+.statsMessage {
+	font-size: $fontsize_content_14;
+	font-weight: fontweight_regular;
+	color: $prim_dark_2;
+	width: 100%;
 }
