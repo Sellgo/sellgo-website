@@ -1,52 +1,18 @@
 @import '../../../styles/guidelines';
 
-.infoSectionWrapper {
-	background: $grey_0;
-	min-height: 100vh;
-	padding-top: 8rem;
-}
-
-.infoSection {
-	width: 90%;
-}
-
-.infoSectionDescription {
-	text-align: center;
-	font-size: $fontsize_content_14;
-	width: 85%;
-	margin: 5rem auto;
-	@media only screen and(max-width: 650px) {
-		width: 90%;
-	}
-}
-
-.infoSectionCTAWrapper {
+.globalSellersBannerWrapper {
+	background-image: url('../../../public/candlesticksBanner.png');
+	background-size: cover;
+	background-position: center;
+	min-height: 27rem;
+	padding-bottom: 3rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	margin: 0 auto;
-	width: max-content;
-	@media only screen and(max-width: 760px) {
-		width: 90%;
-		flex-direction: column;
-	}
-}
 
-.infoSectionCTA {
-	margin: 0 4rem;
-	@media only screen and(max-width: 760px) {
-		margin-top: 2rem;
+	h2 {
+		color: $prim_white;
 	}
-
-	@media only screen and(max-width: 580px) {
-		margin-bottom: 1.5rem;
-	}
-}
-
-.infoSectionCardsWrapper {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	margin-top: 10rem;
-	flex-wrap: wrap;
 }

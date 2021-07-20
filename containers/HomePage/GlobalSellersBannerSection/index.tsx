@@ -4,12 +4,7 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* Components */
-import CTAButton from '../../../components/CTAButton';
-import InfoCard from '../../../components/InfoCard';
 import GlobalSellersStatCard from '../../../components/GlobalSellersStatCard'
-
-/* Data */
-import { featureSectionList } from './data';
 
 interface Props {}
 
