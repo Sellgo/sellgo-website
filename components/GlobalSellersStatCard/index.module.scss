@@ -1,0 +1,28 @@
+@import '../../styles/guidelines';
+
+.globalSellersStatCard {
+	color: $prim_white;
+	min-width: 20rem;
+	text-align: center;
+	padding: 3rem 0;
+}
+
+.statsCount {
+	font-size: $fontsize_title_54;
+	color: $prim_dark_2;
+	font-weight: $fontweight_bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	span {
+		font-size: 14px;
+		margin-left: 5px;
+	}
+}
+
+.statsMessage {
+	font-size: $fontsize_content_14;
+	font-weight: fontweight_regular;
+	color: $prim_dark_2;
+	width: 100%;
+}

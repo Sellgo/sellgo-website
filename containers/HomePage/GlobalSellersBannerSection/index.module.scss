@@ -1,12 +1,35 @@
 @import '../../../styles/guidelines';
 
 .globalSellersBannerWrapper {
-	background-color: $orange_5;
+	background-color: $orange_3;
 	min-height: 35rem;
-	padding-top: 8rem;
-	// background: red;
+	display: flex;
+	justify-content: center;
+}
+
+.globalSellersBannerBG {
+	background-image: url('../../../public/sellerWorldMap.png');
+	background-size: cover;
+	height: 35rem;
+	width: 71rem;
+	background-position: center;
+	position: absolute;
+
+	@media only screen and(max-width: 700px) {
+		height: 22rem;
+		width: 43rem;
+	}
 }
 
 .globalSellersBanner {
-	background-image: url('../../../public/sellerWorldMap.png');
+	z-index: 0;
+	padding-top: 7rem;
+}
+
+.statsRow {
+	margin: auto;
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
