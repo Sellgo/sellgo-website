@@ -12,6 +12,8 @@ import { GET_SHOW_CASE_BLOGS } from '../graphql/cms';
 
 /* Containers */
 import HeroBox from '../containers/HomePage/HeroBox';
+import OpportunityBannerSection from '../containers/HomePage/OpportunityBannerSection';
+import GlobalSellersBannerSection from '../containers/HomePage/GlobalSellersBannerSection';
 import ProductsSection from '../containers/HomePage/ProductsSection';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
@@ -48,12 +50,9 @@ const HomePage: React.FC<Props> = (props) => {
 			/>
 			<HeroBox />
 			<main>
-				<section className={styles.opportunityBanner}>
-					<h2 className="secondary-heading">
-						The Amazon Opportunity Finder Your Business Will Love
-					</h2>
-				</section>
+				<OpportunityBannerSection />
 				<InfoSection />
+				<GlobalSellersBannerSection />
 				<ProductsSection />
 				<StatisticsSection />
 				<TestimonialsSection />

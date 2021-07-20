@@ -1,0 +1,15 @@
+@import '../../../styles/guidelines';
+
+.globalSellersBannerWrapper {
+	background-image: url('../../../public/candlesticksBanner.png');
+	background-size: cover;
+	background-position: center;
+	min-height: 27rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		color: $prim_white;
+	}
+}
