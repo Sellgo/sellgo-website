@@ -50,9 +50,9 @@ const HomePage: React.FC<Props> = (props) => {
 			/>
 			<HeroBox />
 			<main>
-				<OpportunityBannerSection/>
+				<OpportunityBannerSection />
 				<InfoSection />
-				<GlobalSellersBannerSection/>
+				<GlobalSellersBannerSection />
 				<ProductsSection />
 				<StatisticsSection />
 				<TestimonialsSection />

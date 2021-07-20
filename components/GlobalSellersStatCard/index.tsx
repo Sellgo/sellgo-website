@@ -4,8 +4,8 @@ import React from 'react';
 import styles from './index.module.scss';
 
 interface Props {
-	statsCount:string,
-	statsLabel:string,
+	statsCount: string;
+	statsLabel: string;
 }
 
 const GlobalSellersStatCard: React.FC<Props> = (props) => {
