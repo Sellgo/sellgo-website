@@ -1,9 +1,6 @@
 import React from 'react';
 
 /* Libraries */
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
@@ -12,6 +9,7 @@ import { productsLabels, productsDetails } from './data';
 
 /* Components */
 import ProductCard from '../../../components/ProductCard';
+import Stepper from '../../../components/Stepper';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -51,7 +49,12 @@ const StepperInfoSection: React.FC<Props> = () => {
 				The Amazon Opportunity Finder Your Business Will Love
 			</h2>
 			<div className={styles.stepperWrapper}>
-				<Stepper
+				<Stepper 
+					steps={productsLabels} 
+					handleStepChange={handleStepChange}
+					activeStep={activeStep}
+				/>
+				{/* <Stepper
 					alternativeLabel
 					nonLinear
 					activeStep={activeStep}
@@ -65,7 +68,7 @@ const StepperInfoSection: React.FC<Props> = () => {
 							</Step>
 						);
 					})}
-				</Stepper>
+				</Stepper> */}
 			</div>
 
 			<div>

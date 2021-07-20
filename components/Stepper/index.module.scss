@@ -1,0 +1,41 @@
+@import '../../styles/guidelines';
+
+.stepperWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.stepWrapper {
+	flex-direction: row;
+}
+
+.step {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.stepTitle {
+	font-size: $fontsize_content_16;
+	color: $prim_dark_2;
+	font-weight: $fontweight_semibold;
+}
+
+.line {
+	// width: 1rem;
+	// top: 1.5rem;
+	// left: calc(50% + 2rem);
+	// right: calc(50% + 2rem);
+	// position: absolute;
+	border-top: 1px solid $border-color-1;
+	width: 10px;
+	// width: 16rem;
+
+	@media only screen and(max-width: 650px) {
+		display: none;
+	}
+}
