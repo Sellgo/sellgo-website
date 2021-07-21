@@ -15,11 +15,13 @@ import PricingPlansCardHead from '../../components/PricingPlansCard/PricingPlans
 import FeaturesSection from './FeaturesSection';
 import BenefitsSection from './BenefitsSection';
 
-/* Config */
-import AppConfig from '../../config';
-
 /* Pricing Data */
 import { sellerScoutGoPlanDetails } from '../Pricing/ProductsPanel/data';
+
+/* Utils */
+import { createFreeTrialLink } from '../../utils/Referral';
+
+const freeTrialLink = createFreeTrialLink();
 
 interface Props {}
 
@@ -127,7 +129,7 @@ const SellerScoutProPanel: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
+						navigateTo={freeTrialLink}
 						className={styles.otherInfoCTA}
 						asExternal
 						newTarget

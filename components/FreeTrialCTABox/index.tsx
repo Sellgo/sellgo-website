@@ -7,8 +7,8 @@ import styles from './index.module.scss';
 import CTAButton from '../CTAButton';
 import Check from '../Icons/Check';
 
-/* Config */
-import AppConfig from '../../config';
+/* Utils */
+import { createFreeTrialLink } from '../../utils/Referral';
 
 interface Props {
 	className?: string;
@@ -17,6 +17,7 @@ interface Props {
 
 const FreeTrialCTABox: React.FC<Props> = (props) => {
 	const { className, isPrimary } = props;
+	const freeTrialLink = createFreeTrialLink();
 	return (
 		<section
 			className={`big-page-container ${styles.freeTrialCTABox} ${className}`}
@@ -34,7 +35,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 					<CTAButton
 						type={isPrimary ? 'primary' : 'secondary'}
 						size="medium"
-						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
+						navigateTo={freeTrialLink}
 						asExternal
 						newTarget
 						className={styles.freeTrialCTA}

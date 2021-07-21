@@ -30,3 +30,11 @@ export const createCheckoutLink = (isMonthly: boolean, name: string) => {
 	const checkoutLink = appendReferralCode(webCheckOutLink);
 	return checkoutLink;
 };
+
+/* Create free trial link for webapp */
+export const createFreeTrialLink = () => {
+	const webFreeTrialLink = `${AppConfig.APP_URL}/signup?type=free`;
+
+	const freeTrialLink = appendReferralCode(webFreeTrialLink);
+	return freeTrialLink;
+};

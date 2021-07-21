@@ -13,8 +13,10 @@ import CTAButton from '../../components/CTAButton';
 import FeaturesSection from './FeaturesSection';
 import BenefitsSection from './BenefitsSection';
 
-/* Config */
-import AppConfig from '../../config';
+/* Utils */
+import { createFreeTrialLink } from '../../utils/Referral';
+
+const freeTrialLink = createFreeTrialLink();
 
 interface Props {}
 
@@ -57,7 +59,7 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
+						navigateTo={freeTrialLink}
 						className={styles.otherInfoCTA}
 						asExternal
 						newTarget

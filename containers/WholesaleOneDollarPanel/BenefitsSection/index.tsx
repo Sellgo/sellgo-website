@@ -7,8 +7,10 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import Apple from '../../../components/Icons/Apple';
 
-/* Config */
-import AppConfig from '../../../config';
+/* Utils */
+import { createFreeTrialLink } from '../../../utils/Referral';
+
+const freeTrialLink = createFreeTrialLink();
 
 interface Props {}
 
@@ -45,7 +47,7 @@ const BenefitsSection: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
+						navigateTo={freeTrialLink}
 						className={styles.benefitsCTA}
 						asExternal
 						newTarget
