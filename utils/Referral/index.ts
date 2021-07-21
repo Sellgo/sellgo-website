@@ -13,7 +13,6 @@ export const extractTheReferralID = () => {
 /* Append referral Code if applicable */
 export const appendReferralCode = (currentBuyLink: string) => {
 	const referralID = extractTheReferralID();
-	console.log('Referral ID in utils', referralID);
 
 	if (!referralID) {
 		return currentBuyLink;
@@ -26,8 +25,16 @@ export const appendReferralCode = (currentBuyLink: string) => {
 export const createCheckoutLink = (isMonthly: boolean, name: string) => {
 	const webCheckOutLink = `${AppConfig.APP_URL}/subscription?mode=${
 		isMonthly ? 'monthly' : 'yearly'
-	}&type=${name.toLowerCase()}`;
+	}&type=${name.split(' ').join('').toLowerCase()}`;
 
 	const checkoutLink = appendReferralCode(webCheckOutLink);
 	return checkoutLink;
+};
+
+/* Create free trial link for webapp */
+export const createFreeTrialLink = () => {
+	const webFreeTrialLink = `${AppConfig.APP_URL}/signup?type=free`;
+
+	const freeTrialLink = appendReferralCode(webFreeTrialLink);
+	return freeTrialLink;
 };
