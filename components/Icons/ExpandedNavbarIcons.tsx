@@ -16,6 +16,7 @@ import AffiliateProgram from './Resources/AffiliateProgram';
 
 /* Types */
 import { Products, Resources } from '../../interfaces/Navbar';
+import MagicWand from './Products/MagicWand';
 
 interface Props {
 	name: Products | Resources;
@@ -62,6 +63,12 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 
 		case 'sellerMap': {
 			productIcon = <SellerMap {...otherProps} />;
+			break;
+		}
+
+		// Currently not used
+		case 'magicWand': {
+			productIcon = <MagicWand {...otherProps} />;
 			break;
 		}
 

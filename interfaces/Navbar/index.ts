@@ -7,7 +7,8 @@ export type Products =
 	| 'leadsTracker'
 	| 'sellerFinder'
 	| 'sellerDatabase'
-	| 'sellerMap';
+	| 'sellerMap'
+	| 'magicWand';
 
 export type Resources = 'blogs' | 'affiliateProgram';
 
