@@ -9,6 +9,7 @@ import SearchManagement from './Products/SearchManagement';
 import SellerFinder from './Products/SellerFinder';
 import SellerDatabase from './Products/SellerDatabase';
 import SellerMap from './Products/SellerMap';
+import MagicWand from './Products/MagicWand';
 
 /* Resources Icons */
 import Blogs from './Resources/Blogs';
@@ -16,7 +17,6 @@ import AffiliateProgram from './Resources/AffiliateProgram';
 
 /* Types */
 import { Products, Resources } from '../../interfaces/Navbar';
-import MagicWand from './Products/MagicWand';
 
 interface Props {
 	name: Products | Resources;
