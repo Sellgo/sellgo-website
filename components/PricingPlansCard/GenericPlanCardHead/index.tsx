@@ -23,7 +23,7 @@ interface Props {
 	// used for pricing cards on comparision table
 	withToggle?: boolean;
 	className?: string;
-	handleChange?: any;
+	handleChange?: () => void;
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
@@ -81,7 +81,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				)}
 			</div>
 
-			{withToggle && (
+			{withToggle && handleChange && (
 				<div className={styles.toggleWrapper}>
 					<PricePlanToggleButton
 						isMonthly={isMonthly}

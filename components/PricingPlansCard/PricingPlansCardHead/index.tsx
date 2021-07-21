@@ -20,7 +20,7 @@ interface Props {
 	// used for price summary card head inside table comparision
 	withToggle?: boolean;
 	className?: string;
-	handleChange?: (state: boolean) => any;
+	handleChange?: () => any;
 }
 
 const PricingPlansCardHead: React.FC<Props> = (props) => {
