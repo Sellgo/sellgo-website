@@ -8,22 +8,33 @@ import styles from './index.module.scss';
 
 /* Conatiners */
 import PricingPlansSection from '../PricingPlansSection';
-import FreeTrialPanel from '../../FreeTrialPanel';
+import FAQSection from '../FAQSection';
+import WholesaleOneDollarPanel from '../../WholesaleOneDollarPanel';
+import PrivateLabelOneDollar from '../../PrivateLabelOneDollar';
+import SellerScoutProPanel from '../../SellerScoutProPanel';
 
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
 
 /* Utils */
 import {
+	DEFAULT_TAB_VALUE,
 	generateQueryFromTabIndex,
 	generateTabIndexFromQuery
 } from '../../../utils/Pricing';
 
-interface Props {}
+/* Types */
+import { FAQDetails } from '../../../interfaces/FAQ';
 
-const ProductsPanel: React.FC<Props> = () => {
+interface Props {
+	productsPanelFaqList: FAQDetails[];
+}
+
+const ProductsPanel: React.FC<Props> = (props) => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
+
+	const { productsPanelFaqList } = props;
 
 	const router = useRouter();
 
@@ -38,15 +49,20 @@ const ProductsPanel: React.FC<Props> = () => {
 		setSelectedPlanType(tabIndex);
 	}, [router]);
 
+	/* Handle Plan slection Change */
 	const handlePlanSelectChange = (index: number, lastIndex: number) => {
-		// [0,1,2,3,4]=['Free Trial', 'Monthly and Annual Plans']
+		// [0,1,2,3,4]=[Wholesale $1, 'Private Label $1, Monthly and Annual Plans]
 
 		if (index === undefined || index === null) {
 			// perform shallow routing on pricing to prevent new data fetch on get static props
 			setSelectedPlanType(lastIndex);
-			router.push(`/pricing?type=${generateQueryFromTabIndex(1)}`, undefined, {
-				shallow: true
-			});
+			router.push(
+				`/pricing?type=${generateQueryFromTabIndex(DEFAULT_TAB_VALUE)}`,
+				undefined,
+				{
+					shallow: true
+				}
+			);
 		} else {
 			router.push(
 				`/pricing?type=${generateQueryFromTabIndex(index)}`,
@@ -60,42 +76,55 @@ const ProductsPanel: React.FC<Props> = () => {
 	};
 
 	return (
-		<Tabs
-			selectedTabClassName={styles.pricingPanelTab__Selected}
-			onSelect={handlePlanSelectChange}
-			// defaultIndex={2}
-			selectedIndex={selectedPlanType}
-		>
-			<TabList className={styles.pricingPanelTabList}>
-				{planTypes.map((planType: any) => {
+		<>
+			<Tabs
+				selectedTabClassName={styles.pricingPanelTab__Selected}
+				onSelect={handlePlanSelectChange}
+				selectedIndex={selectedPlanType}
+			>
+				<TabList className={styles.pricingPanelTabList}>
+					{planTypes.map((planType: any) => {
+						return (
+							<Tab key={uuid()} className={styles.pricingPanelTab}>
+								{planType.name}
+								{planType.isNew && <span className={styles.newBadge}>New</span>}
+							</Tab>
+						);
+					})}
+				</TabList>
+
+				{/* Seperation of concern for wholesale and private label */}
+				<TabPanel>
+					<WholesaleOneDollarPanel />
+				</TabPanel>
+
+				<TabPanel>
+					<PrivateLabelOneDollar />
+				</TabPanel>
+
+				{/* Generic pricing plans section	 */}
+				{plansAndProductsDetails.map((plan: any) => {
 					return (
-						<Tab key={uuid()} className={styles.pricingPanelTab}>
-							{planType.name}
-							{planType.isNew && <span className={styles.newBadge}>New</span>}
-						</Tab>
+						<TabPanel key={uuid()}>
+							<PricingPlansSection
+								planName={plan.planName}
+								summary={plan.summary}
+								infoAlertMessage={plan.infoAlertMessage}
+								productsIncluded={plan.productsIncluded}
+								selectedPlanType={selectedPlanType}
+							/>
+						</TabPanel>
 					);
 				})}
-			</TabList>
 
-			{/* Seperation of concern for free trial tab */}
-			<TabPanel>
-				<FreeTrialPanel />
-			</TabPanel>
+				<TabPanel>
+					<SellerScoutProPanel />
+				</TabPanel>
+			</Tabs>
 
-			{plansAndProductsDetails.map((plan: any) => {
-				return (
-					<TabPanel key={uuid()}>
-						<PricingPlansSection
-							planName={plan.planName}
-							summary={plan.summary}
-							infoAlertMessage={plan.infoAlertMessage}
-							productsIncluded={plan.productsIncluded}
-							selectedPlanType={selectedPlanType}
-						/>
-					</TabPanel>
-				);
-			})}
-		</Tabs>
+			{/* FAQ Section */}
+			<FAQSection faqData={productsPanelFaqList[selectedPlanType].data} />
+		</>
 	);
 };
 

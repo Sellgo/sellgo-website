@@ -59,6 +59,28 @@ class MyDocument extends Document {
 							else{w.addEventListener('load',l,false);}}})()`
 						}}
 					/>
+
+					{/* Rewardful main script */}
+					<script
+						defer
+						dangerouslySetInnerHTML={{
+							// eslint-disable-next-line max-len
+							__html: `(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[]).push(arguments)}})(window,'rewardful')`
+						}}
+					/>
+
+					{/* Rewardful remote script */}
+					<script defer src="https://r.wdfl.co/rw.js" data-rewardful="f34d76" />
+
+					<script
+						defer
+						dangerouslySetInnerHTML={{
+							// eslint-disable-next-line max-len
+							__html: `rewardful('ready',function(){
+								console.log("From main script",Rewardful.referral)
+							})`
+						}}
+					/>
 				</Head>
 
 				<body>

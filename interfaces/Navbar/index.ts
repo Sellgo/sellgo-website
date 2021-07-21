@@ -5,7 +5,9 @@ export type Products =
 	| 'profitFinder'
 	| 'productTracker'
 	| 'leadsTracker'
-	| 'sellerFinder';
+	| 'sellerFinder'
+	| 'sellerDatabase'
+	| 'sellerMap';
 
 export type Resources = 'blogs' | 'affiliateProgram';
 
