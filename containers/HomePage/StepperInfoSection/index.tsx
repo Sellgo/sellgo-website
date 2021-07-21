@@ -1,6 +1,4 @@
-import React from 'react';
-
-/* Libraries */
+import React, { useState } from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
@@ -19,7 +17,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 interface Props {}
 
 const StepperInfoSection: React.FC<Props> = () => {
-	const [activeStep, setActiveStep] = React.useState(0);
+	const [activeStep, setActiveStep] = useState(0);
 	const handleStepChange = (step: number) => {
 		setActiveStep(step);
 	};
