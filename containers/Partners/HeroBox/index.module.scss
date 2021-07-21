@@ -1,0 +1,60 @@
+@import '../../../styles/guidelines';
+
+.heroboxWrapper {
+	color: $prim_white;
+	background: linear-gradient(90deg, $blue_9, $blue_8, $blue_7, $blue_7);
+	padding-top: 4.7rem;
+	padding-bottom: 6rem;
+}
+
+.heroBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.heroBoxTitle {
+	color: $accent_orange;
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_bold;
+}
+
+.heroBoxSubtitle {
+	color: inherit;
+	font-size: $fontsize_title_46;
+	font-weight: $fontweight_bold;
+	line-height: $fontlineheight_heading_70;
+	@media only screen and (max-width: 1080px) {
+		font-size: $fontsize_subtitle_40;
+	}
+
+	@media only screen and(max-width: 700px) {
+		font-size: $fontsize_subtitle_32;
+	}
+}
+
+.heroBoxContent {
+	color: inherit;
+	margin-top: 1rem;
+	font-size: $fontsize_content_14;
+	font-weight: $fontweight_regular;
+}
+
+.bold {
+	font-weight: $fontweight_bold;
+}
+.signinLink {
+	color: $blue_4;
+	margin-left: 2px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.ctaButton {
+	margin-top: 6.5rem;
+	margin-bottom: 5px;
+	width: 21rem;
+}

@@ -1,0 +1,37 @@
+@import '../../../styles/guidelines';
+
+.closingCTASectionBox {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.closingCTATitle {
+	color: $prim_dark_1;
+	font-size: $fontsize_subtitle_24;
+	font-weight: $fontweight_bold;
+	margin-bottom: 3rem;
+}
+
+.closingCTAContent {
+	color: $prim_dark_2;
+	font-size: $fontsize_content_14;
+	font-weight: $fontweight_regular;
+	@media only screen and (max-width: 1080px) {
+		max-width: 80%;
+		margin: 2rem auto;
+	}
+
+	@media only screen and(max-width: 700px) {
+		max-width: 100%;
+	}
+}
+
+.ctaButton {
+	margin-top: 5rem;
+	width: 21rem;
+}
