@@ -7,18 +7,26 @@ import styles from './index.module.scss';
 import FreeTrialCTABox from '../../components/FreeTrialCTABox';
 import PricingInfoAlert from '../../components/PricingInfoAlert';
 import ContactInfo from '../../components/ContactInfo';
+import CTAButton from '../../components/CTAButton';
 
 /* Containers */
 import FeaturesSection from './FeaturesSection';
 import BenefitsSection from './BenefitsSection';
-import CTAButton from '../../components/CTAButton';
+import FAQSection from './FAQSection';
 
 /* Config */
 import AppConfig from '../../config';
 
-interface Props {}
+/* Types */
+import { FAQDetails } from '../../interfaces/FAQ';
 
-const FreeTrialPanel: React.FC<Props> = () => {
+interface Props {
+	faqDetails: FAQDetails;
+}
+
+const FreeTrialPanel: React.FC<Props> = (props) => {
+	const { faqDetails } = props;
+
 	return (
 		<>
 			<section className={`big-page-container ${styles.freeTrialSection}`}>
@@ -67,6 +75,8 @@ const FreeTrialPanel: React.FC<Props> = () => {
 					<p>We offer a 7-day free trial with no credit card required.</p>
 				</div>
 			</section>
+
+			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 		</>
 	);
 };

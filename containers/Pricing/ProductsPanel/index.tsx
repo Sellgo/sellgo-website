@@ -21,11 +21,18 @@ import {
 	generateTabIndexFromQuery
 } from '../../../utils/Pricing';
 
-interface Props {}
+/* Types */
+import { FAQDetails } from '../../../interfaces/FAQ';
 
-const ProductsPanel: React.FC<Props> = () => {
+interface Props {
+	productsPanelFaqList: FAQDetails[];
+}
+
+const ProductsPanel: React.FC<Props> = (props) => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
+
+	const { productsPanelFaqList } = props;
 
 	const router = useRouter();
 
@@ -40,6 +47,7 @@ const ProductsPanel: React.FC<Props> = () => {
 		setSelectedPlanType(tabIndex);
 	}, [router]);
 
+	/* Handle Plan slection Change */
 	const handlePlanSelectChange = (index: number, lastIndex: number) => {
 		// [0,1,2,3,4]=[Wholesale $1, 'Private Label $1, Monthly and Annual Plans]
 
@@ -84,11 +92,11 @@ const ProductsPanel: React.FC<Props> = () => {
 
 			{/* Seperation of concern for free trial tab */}
 			<TabPanel>
-				<WholesaleOneDollarPanel />
+				<WholesaleOneDollarPanel faqDetails={productsPanelFaqList[0]} />
 			</TabPanel>
 
 			<TabPanel>
-				<PrivateLabelOneDollar />
+				<PrivateLabelOneDollar faqDetails={productsPanelFaqList[1]} />
 			</TabPanel>
 
 			{plansAndProductsDetails.map((plan: any) => {
