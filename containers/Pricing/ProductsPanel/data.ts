@@ -136,3 +136,8 @@ export const plansAndProductsDetails = [
 		]
 	}
 ];
+
+export const sellerScoutGoPlanDetails = {
+	monthlyPrice: 49,
+	annualPrice: 348
+};

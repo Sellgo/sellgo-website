@@ -30,7 +30,9 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 		annualPrice,
 		desc,
 		isMonthly,
-		...otherProps
+		withToggle,
+		handleChange,
+		className
 	} = props;
 
 	return (
@@ -41,7 +43,10 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 				monthlyPrice={monthlyPrice}
 				annualPrice={annualPrice}
 				isMonthly={isMonthly}
-				{...otherProps}
+				// Optional props
+				withToggle={withToggle}
+				className={className}
+				handleChange={handleChange}
 			/>
 		</>
 	);
