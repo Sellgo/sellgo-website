@@ -26,18 +26,14 @@ interface Props {
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
-	const {
-		planName,
-		summary,
-		productsIncluded,
-		infoAlertMessage,
-		selectedPlanType
-	} = props;
+	const { planName, summary, productsIncluded, infoAlertMessage } = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
 
+	/* Get all features based on plan names */
 	const allPlanFeatures = getAllFeaturesForPlans(planName);
 
+	/* Select the message alert message based on mode */
 	const infoAlertDetails = isMonthly
 		? infoAlertMessage.monthly
 		: infoAlertMessage.yearly;
@@ -47,7 +43,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			<section className={styles.pricingPlansSectionWrapper}>
 				<div className={`big-page-container ${styles.pricingPlansSection}`}>
 					<div className={styles.planName}>
-						<span></span>
 						<h2>{planName}</h2>
 					</div>
 
@@ -55,19 +50,17 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						<p>{summary}</p>
 					</div>
 
-					{/* Show for all expect pay as you go */}
-					{/* revert back to 1 when new plan is added */}
-					{selectedPlanType !== 2 && (
-						<PricePlanToggleButton
-							isMonthly={isMonthly}
-							handleChange={() => setIsMonthly(!isMonthly)}
-							className={styles.paymentModeToggle}
-						/>
-					)}
+					<PricePlanToggleButton
+						isMonthly={isMonthly}
+						handleChange={() => setIsMonthly(!isMonthly)}
+						className={styles.paymentModeToggle}
+					/>
 
-					{selectedPlanType === 1 && (
-						<PricingInfoAlert {...infoAlertDetails} background="#F2EFE4" />
-					)}
+					<PricingInfoAlert
+						{...infoAlertDetails}
+						background="#F2EFE4"
+						className={styles.singleLineAlert}
+					/>
 				</div>
 			</section>
 

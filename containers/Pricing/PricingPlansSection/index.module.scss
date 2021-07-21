@@ -17,13 +17,6 @@
 		flex-direction: column;
 	}
 
-	span {
-		width: 4rem;
-		height: 4rem;
-		border-radius: 3px;
-		margin-right: 10px;
-	}
-
 	h2 {
 		font-size: $fontsize_subtitle_32;
 		@media only screen and(max-width: 1200px) {
@@ -54,6 +47,10 @@
 
 .paymentModeToggle {
 	margin: 5rem auto !important;
+}
+
+.singleLineAlert {
+	display: flex;
 }
 
 .extraPricingInfo {

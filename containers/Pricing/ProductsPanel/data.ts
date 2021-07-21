@@ -3,7 +3,11 @@ import { PlanTypes } from '../../../interfaces/Pricing';
 
 export const planTypes: PlanTypes[] = [
 	{
-		name: 'Free Trial',
+		name: 'Wholesale $1',
+		isNew: false
+	},
+	{
+		name: 'Private Label $1',
 		isNew: false
 	},
 	{
@@ -18,18 +22,16 @@ export const plansAndProductsDetails = [
 		summary: 'Try Our Premium Tools and Access Real-Data for $1!',
 		infoAlertMessage: {
 			monthly: {
-				head: `Start selling on Amazon today with Sellgo's free tools.`,
-				desc: `Want to try our advanced Amazon tools? Review our FBA tools and pricing packages.
-			Our premium tools empower you to track and research more products to optimize your Amazon business.`,
+				head: `Pay only $1 for your first month when you sign-up for a yearly subscription `,
+				desc: ``,
 				navigateTo: '/pricing?type=free-trial',
-				navigateLabel: 'Free Trial'
+				navigateLabel: 'Learn More'
 			},
 			yearly: {
-				head: `Start selling on Amazon today with Sellgo's free tools.`,
-				desc: `Want to try our advanced Amazon tools? Review our FBA tools and pricing packages.
-			Our premium tools empower you to track and research more products to optimize your Amazon business.`,
+				head: `Pay only $1 for your first month when you sign-up for a yearly subscription `,
+				desc: ``,
 				navigateTo: '/pricing?type=free-trial',
-				navigateLabel: 'Free Trial'
+				navigateLabel: 'Learn More'
 			}
 		},
 		productsIncluded: [

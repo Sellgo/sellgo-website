@@ -40,7 +40,7 @@ const NavbarBottom: React.FC<Props> = () => {
 					</li>
 
 					<li className={styles.navbarBottomLink}>
-						<Link href="/pricing" passHref>
+						<Link href="/pricing" passHref prefetch={false}>
 							<a className={styles.navLink}>Pricing</a>
 						</Link>
 					</li>
