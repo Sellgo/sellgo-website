@@ -71,16 +71,6 @@ class MyDocument extends Document {
 
 					{/* Rewardful remote script */}
 					<script defer src="https://r.wdfl.co/rw.js" data-rewardful="f34d76" />
-
-					<script
-						defer
-						dangerouslySetInnerHTML={{
-							// eslint-disable-next-line max-len
-							__html: `rewardful('ready',function(){
-								console.log("From main script",Rewardful.referral)
-							})`
-						}}
-					/>
 				</Head>
 
 				<body>
