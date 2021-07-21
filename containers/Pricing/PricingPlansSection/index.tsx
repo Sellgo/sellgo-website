@@ -64,6 +64,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 				</div>
 			</section>
 
+			{/*  Main pricing cards section */}
 			<section
 				className={`big-page-container ${styles.pricingPlansCardWrapper}`}
 			>
@@ -88,6 +89,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 				})}
 			</section>
 
+			{/*  Main pricing table comparision section section */}
 			<section className={`big-page-container ${styles.allFeaturesSection}`}>
 				<Element name="featuresTable">
 					{allPlanFeatures.map((feature: any) => {
@@ -101,6 +103,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					})}
 				</Element>
 
+				{/* Summary pricing card head below table  */}
 				<div className={styles.priceSummaryWrapper}>
 					{productsIncluded.map((product: any) => {
 						return (
