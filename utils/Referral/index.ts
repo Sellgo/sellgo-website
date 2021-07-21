@@ -25,7 +25,7 @@ export const appendReferralCode = (currentBuyLink: string) => {
 export const createCheckoutLink = (isMonthly: boolean, name: string) => {
 	const webCheckOutLink = `${AppConfig.APP_URL}/subscription?mode=${
 		isMonthly ? 'monthly' : 'yearly'
-	}&type=${name.toLowerCase()}`;
+	}&type=${name.split(' ').join('').toLowerCase()}`;
 
 	const checkoutLink = appendReferralCode(webCheckOutLink);
 	return checkoutLink;
