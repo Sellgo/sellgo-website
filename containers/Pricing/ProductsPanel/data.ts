@@ -139,5 +139,16 @@ export const plansAndProductsDetails = [
 
 export const sellerScoutGoPlanDetails = {
 	monthlyPrice: 49,
-	annualPrice: 348
+	annualPrice: 348,
+	salesEstimate: 0,
+	productsDatabase: 0,
+	title: 'Free Trial',
+	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+	productsList: [
+		'browser Extension',
+		'Search Management',
+		'Profit Finder',
+		'Product Tracker',
+		'Seller Finder'
+	]
 };

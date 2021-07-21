@@ -41,6 +41,12 @@
 	padding-bottom: 0;
 	height: max-content;
 
+	@media only screen and(max-width: 800px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 2rem 3rem;
+	}
+
 	@media only screen and(max-width: 450px) {
 		padding: 2rem 2rem;
 	}
@@ -49,6 +55,7 @@
 /* Left side for features box */
 .featuresBoxLeft {
 	align-self: flex-end;
+	margin-right: 1.5rem;
 
 	&__Desc {
 		text-align: left;
