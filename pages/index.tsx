@@ -12,7 +12,11 @@ import { GET_SHOW_CASE_BLOGS } from '../graphql/cms';
 
 /* Containers */
 import HeroBox from '../containers/HomePage/HeroBox';
+import InfoSection from '../containers/HomePage/InfoSection';
+import OpportunityBannerSection from '../containers/HomePage/OpportunityBannerSection';
+import GlobalSellersBannerSection from '../containers/HomePage/GlobalSellersBannerSection';
 import ProductsSection from '../containers/HomePage/ProductsSection';
+import StatisticsSection from '../containers/HomePage/StatisticsSection';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
 import ClosingCTASection from '../containers/HomePage/ClosingCTASection';
@@ -29,7 +33,6 @@ import { generatePageURL } from '../utils/SEO';
 
 /* Types */
 import { ShowcaseBlogDetails } from '../interfaces/Blogs';
-import StatisticsSection from '../containers/HomePage/StatisticsSection';
 
 interface Props {
 	homeBlogs: ShowcaseBlogDetails[];
@@ -54,6 +57,9 @@ const HomePage: React.FC<Props> = (props) => {
 						The Amazon Opportunity Finder Your Business Will Love
 					</h2>
 				</section>
+				<OpportunityBannerSection />
+				<InfoSection />
+				<GlobalSellersBannerSection />
 				<ProductsSection />
 				<StatisticsSection />
 				<TestimonialsSection />
@@ -83,7 +89,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		props: {
 			homeBlogs: blogsForHome
 		},
-		revalidate: 1
+		revalidate: 60 * 30 // 30 minutes
 	};
 };
 

@@ -22,7 +22,7 @@ export const featureSectionList = [
 			'Bulk Profit Analysis',
 			'Multi-pack Analysis',
 			'Variation Analysis',
-			'Seller Finder'
+			'Seller Database'
 		],
 		isPopular: true,
 		navigateTo: '/pricing'
@@ -33,10 +33,10 @@ export const featureSectionList = [
 		trying to connect with an Amazon seller network to expand their clientele 
 		and reach new market segments.`,
 		featureList: [
+			'Seller Research',
 			'Seller Database',
-			'Seller Finder',
-			'Product Database',
-			'Product Finder'
+			'Seller Inventories',
+			'Seller Maps'
 		],
 		isPopular: false,
 		navigateTo: '/pricing'
