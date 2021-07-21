@@ -52,11 +52,6 @@ const HomePage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<main>
 				<StepperInfoSection />
-				<section className={styles.opportunityBanner}>
-					<h2 className="secondary-heading">
-						The Amazon Opportunity Finder Your Business Will Love
-					</h2>
-				</section>
 				<OpportunityBannerSection />
 				<InfoSection />
 				<GlobalSellersBannerSection />
