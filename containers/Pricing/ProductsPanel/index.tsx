@@ -23,6 +23,7 @@ import {
 
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
+import FAQSection from '../FAQSection';
 
 interface Props {
 	productsPanelFaqList: FAQDetails[];
@@ -74,45 +75,50 @@ const ProductsPanel: React.FC<Props> = (props) => {
 	};
 
 	return (
-		<Tabs
-			selectedTabClassName={styles.pricingPanelTab__Selected}
-			onSelect={handlePlanSelectChange}
-			selectedIndex={selectedPlanType}
-		>
-			<TabList className={styles.pricingPanelTabList}>
-				{planTypes.map((planType: any) => {
+		<>
+			<Tabs
+				selectedTabClassName={styles.pricingPanelTab__Selected}
+				onSelect={handlePlanSelectChange}
+				selectedIndex={selectedPlanType}
+			>
+				<TabList className={styles.pricingPanelTabList}>
+					{planTypes.map((planType: any) => {
+						return (
+							<Tab key={uuid()} className={styles.pricingPanelTab}>
+								{planType.name}
+								{planType.isNew && <span className={styles.newBadge}>New</span>}
+							</Tab>
+						);
+					})}
+				</TabList>
+
+				{/* Seperation of concern for free trial tab */}
+				<TabPanel>
+					<WholesaleOneDollarPanel />
+				</TabPanel>
+
+				<TabPanel>
+					<PrivateLabelOneDollar />
+				</TabPanel>
+
+				{plansAndProductsDetails.map((plan: any) => {
 					return (
-						<Tab key={uuid()} className={styles.pricingPanelTab}>
-							{planType.name}
-							{planType.isNew && <span className={styles.newBadge}>New</span>}
-						</Tab>
+						<TabPanel key={uuid()}>
+							<PricingPlansSection
+								planName={plan.planName}
+								summary={plan.summary}
+								infoAlertMessage={plan.infoAlertMessage}
+								productsIncluded={plan.productsIncluded}
+								selectedPlanType={selectedPlanType}
+							/>
+						</TabPanel>
 					);
 				})}
-			</TabList>
+			</Tabs>
 
-			{/* Seperation of concern for free trial tab */}
-			<TabPanel>
-				<WholesaleOneDollarPanel faqDetails={productsPanelFaqList[0]} />
-			</TabPanel>
-
-			<TabPanel>
-				<PrivateLabelOneDollar faqDetails={productsPanelFaqList[1]} />
-			</TabPanel>
-
-			{plansAndProductsDetails.map((plan: any) => {
-				return (
-					<TabPanel key={uuid()}>
-						<PricingPlansSection
-							planName={plan.planName}
-							summary={plan.summary}
-							infoAlertMessage={plan.infoAlertMessage}
-							productsIncluded={plan.productsIncluded}
-							selectedPlanType={selectedPlanType}
-						/>
-					</TabPanel>
-				);
-			})}
-		</Tabs>
+			{/* FAQ Section */}
+			<FAQSection faqData={productsPanelFaqList[selectedPlanType].data} />
+		</>
 	);
 };
 
