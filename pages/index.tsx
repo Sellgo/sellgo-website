@@ -20,6 +20,7 @@ import StatisticsSection from '../containers/HomePage/StatisticsSection';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
 import ClosingCTASection from '../containers/HomePage/ClosingCTASection';
+import StepperInfoSection from '../containers/HomePage/StepperInfoSection';
 
 /* Components */
 import SEOHead from '../components/SEOHead';
@@ -50,6 +51,7 @@ const HomePage: React.FC<Props> = (props) => {
 			/>
 			<HeroBox />
 			<main>
+				<StepperInfoSection />
 				<OpportunityBannerSection />
 				<InfoSection />
 				<GlobalSellersBannerSection />
