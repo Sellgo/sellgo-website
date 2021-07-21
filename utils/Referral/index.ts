@@ -13,7 +13,6 @@ export const extractTheReferralID = () => {
 /* Append referral Code if applicable */
 export const appendReferralCode = (currentBuyLink: string) => {
 	const referralID = extractTheReferralID();
-	console.log('Referral ID in utils', referralID);
 
 	if (!referralID) {
 		return currentBuyLink;
