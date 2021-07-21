@@ -13,12 +13,13 @@ import FeaturesSection from './FeaturesSection';
 import BenefitsSection from './BenefitsSection';
 import CTAButton from '../../components/CTAButton';
 
-/* Config */
-import AppConfig from '../../config';
+/* Utils */
+import { createFreeTrialLink } from '../../utils/Referral';
 
 interface Props {}
 
 const FreeTrialPanel: React.FC<Props> = () => {
+	const freeTrialLink = createFreeTrialLink();
 	return (
 		<>
 			<section className={`big-page-container ${styles.freeTrialSection}`}>
@@ -59,7 +60,7 @@ const FreeTrialPanel: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
+						navigateTo={freeTrialLink}
 						className={styles.otherInfoCTA}
 						asExternal
 						newTarget

@@ -7,12 +7,13 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import Apple from '../../../components/Icons/Apple';
 
-/* Config */
-import AppConfig from '../../../config';
+/* Utils */
+import { createFreeTrialLink } from '../../../utils/Referral';
 
 interface Props {}
 
 const BenefitsSection: React.FC<Props> = () => {
+	const freeTrialsLink = createFreeTrialLink();
 	return (
 		<section className={styles.benefitsSectionWrapper}>
 			<div className={styles.bgCircle}></div>
@@ -45,7 +46,7 @@ const BenefitsSection: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
+						navigateTo={freeTrialsLink}
 						className={styles.benefitsCTA}
 						asExternal
 						newTarget
