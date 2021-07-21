@@ -8,8 +8,10 @@ import styles from './index.module.scss';
 
 /* Conatiners */
 import PricingPlansSection from '../PricingPlansSection';
+import FAQSection from '../FAQSection';
 import WholesaleOneDollarPanel from '../../WholesaleOneDollarPanel';
 import PrivateLabelOneDollar from '../../PrivateLabelOneDollar';
+import SellerScoutProPanel from '../../SellerScoutProPanel';
 
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
@@ -23,7 +25,6 @@ import {
 
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
-import FAQSection from '../FAQSection';
 
 interface Props {
 	productsPanelFaqList: FAQDetails[];
@@ -92,7 +93,7 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					})}
 				</TabList>
 
-				{/* Seperation of concern for free trial tab */}
+				{/* Seperation of concern for wholesale and private label */}
 				<TabPanel>
 					<WholesaleOneDollarPanel />
 				</TabPanel>
@@ -101,6 +102,7 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					<PrivateLabelOneDollar />
 				</TabPanel>
 
+				{/* Generic pricing plans section	 */}
 				{plansAndProductsDetails.map((plan: any) => {
 					return (
 						<TabPanel key={uuid()}>
@@ -114,6 +116,10 @@ const ProductsPanel: React.FC<Props> = (props) => {
 						</TabPanel>
 					);
 				})}
+
+				<TabPanel>
+					<SellerScoutProPanel />
+				</TabPanel>
 			</Tabs>
 
 			{/* FAQ Section */}

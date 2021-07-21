@@ -4,15 +4,19 @@ import { PlanTypes } from '../../../interfaces/Pricing';
 export const planTypes: PlanTypes[] = [
 	{
 		name: 'Wholesale $1',
-		isNew: false
+		isNew: true
 	},
 	{
 		name: 'Private Label $1',
-		isNew: false
+		isNew: true
 	},
 	{
 		name: 'Monthly and Annual Plans',
 		isNew: false
+	},
+	{
+		name: 'Seller Scout Pro',
+		isNew: true
 	}
 ];
 

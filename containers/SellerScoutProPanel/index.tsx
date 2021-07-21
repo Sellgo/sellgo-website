@@ -1,0 +1,74 @@
+import React from 'react';
+
+/* Styling */
+import styles from './index.module.scss';
+
+/* Components */
+import FreeTrialCTABox from '../../components/FreeTrialCTABox';
+import PricingInfoAlert from '../../components/PricingInfoAlert';
+import ContactInfo from '../../components/ContactInfo';
+import CTAButton from '../../components/CTAButton';
+
+/* Containers */
+import FeaturesSection from './FeaturesSection';
+import BenefitsSection from './BenefitsSection';
+
+/* Config */
+import AppConfig from '../../config';
+
+interface Props {}
+
+const WholesaleOneDollar: React.FC<Props> = () => {
+	return (
+		<>
+			<section className={`big-page-container ${styles.sellerScoutSection}`}>
+				<h2 className="secondary-heading">Seller Scout Pro Plan</h2>
+
+				<p className={styles.info}>
+					Access all of Sellgo&apos;s free trial Amazon tools and integrate them
+					into your Amazon business.
+				</p>
+
+				<PricingInfoAlert
+					className={styles.freeTrialInfoAlert}
+					navigateTo="/pricing?type=monthly-and-annual-plans"
+					navigateLabel="Learn More"
+					head={`Pay only $1 for your first month when you sign-up for a yearly subscription!`}
+					desc={``}
+					background="#F2EFE4"
+				/>
+
+				<FreeTrialCTABox className={styles.freeTrialCTABox} isPrimary />
+			</section>
+
+			<FeaturesSection />
+			<BenefitsSection />
+
+			<section className={`big-page-container ${styles.contactInfoSection}`}>
+				<ContactInfo message="" />
+			</section>
+
+			<section className={`big-page-container ${styles.otherInfoSection}`}>
+				<h2 className="secondary-heading">
+					Maximize Your Profits with Sellgo&apos;s Free Tools!
+				</h2>
+
+				<div className={styles.otherInfoCTAWrapper}>
+					<CTAButton
+						type="primary"
+						size="medium"
+						navigateTo={`${AppConfig.APP_URL}/signup?type=free`}
+						className={styles.otherInfoCTA}
+						asExternal
+						newTarget
+					>
+						Try Now 7-day Free Trial
+					</CTAButton>
+					<p>We offer a 7-day free trial with no credit card required.</p>
+				</div>
+			</section>
+		</>
+	);
+};
+
+export default WholesaleOneDollar;
