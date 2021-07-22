@@ -26,10 +26,10 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
-					<h2>Free Trial</h2>
+					<h2>Pay $1 for a day</h2>
 					<p>
-						Access all of Sellgo&apos;s free trial Amazon tools and integrate
-						them into your Amazon business.
+						Access Sellgo&apos;s $1 Amazon tools and integrate them into your
+						Amazon business.
 					</p>
 				</div>
 
@@ -42,9 +42,9 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 						newTarget
 						className={styles.freeTrialCTA}
 					>
-						Try Now for Free
+						Try Now for $1
 					</CTAButton>
-					<p>We offer a 7-day free trial with no credit card required.</p>
+					<p>Pay less on software, invest more in your business.</p>
 				</div>
 			</div>
 
@@ -81,7 +81,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
-					Seller Finder
+					Seller Database
 				</li>
 			</ul>
 		</section>

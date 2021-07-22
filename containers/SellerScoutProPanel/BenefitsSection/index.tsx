@@ -25,20 +25,29 @@ const BenefitsSection: React.FC<Props> = () => {
 				<div className={styles.benefitsCardWrapper}>
 					<div className={styles.benefitsCard}>
 						<Apple width={20} height={23} fill="#000" />
-						<h3>Full Team Delegation</h3>
-						<p>Delegate tasks and collaborate with team members.</p>
+						<h3>1M+ Amazon Sellers</h3>
+						<p>
+							View a seller&apos;s entire inventory and discover new sellers
+							with the same products.
+						</p>
 						<p></p>
 					</div>
 					<div className={styles.benefitsCard}>
 						<Apple width={20} height={23} fill="#000" />
-						<h3>Scale at Your Pace</h3>
-						<p>Start small with low commitment and scale up later.</p>
+						<h3>450K+ U.S. Amazon Sellers</h3>
+						<p>
+							Analyze the amount of competition in your zip code to see if your
+							business is viable.
+						</p>
 						<p></p>
 					</div>
 					<div className={styles.benefitsCard}>
 						<Apple width={20} height={23} fill="#000" />
-						<h3>Billions of Data Points</h3>
-						<p>Access tons of data at your fingertips.</p>
+						<h3>700K+ Wholesale Sellers + 100K Private Label Sellers</h3>
+						<p>
+							For service providers looking to find new clientele, the Seller
+							Map provides sellers that match your exact needs.
+						</p>
 						<p></p>
 					</div>
 				</div>
@@ -54,7 +63,7 @@ const BenefitsSection: React.FC<Props> = () => {
 					>
 						Get Started
 					</CTAButton>
-					<p>We offer a 7-day free trial with no credit card required.</p>
+					<p>Pay less on software, invest more in your business.</p>
 				</div>
 			</div>
 		</section>

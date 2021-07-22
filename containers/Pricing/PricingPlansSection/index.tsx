@@ -131,11 +131,11 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 				</div>
 			</section>
 
-			<FreeTrialCTABox className={styles.freeTrialBox} />
-
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
 				<ContactInfo message="" />
 			</section>
+
+			{/*<FreeTrialCTABox className={styles.freeTrialBox} />*/}
 		</>
 	);
 };

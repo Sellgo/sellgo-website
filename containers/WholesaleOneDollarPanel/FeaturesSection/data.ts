@@ -41,11 +41,18 @@ export const featuresData = [
 	},
 	{
 		title: 'Seller Research',
-		featuresList: ['Super Targeting', 'Seller Database', 'Seller Finder'],
-		popularFeaturesList: [
+		featuresList: [
 			'Super Targeting',
 			'Seller Database',
-			'Seller Finder 2 sellers daily'
+			'Seller Map',
+			'Seller Finder'
+		],
+		popularFeaturesList: [
+			'Seller Database 5-seller per search',
+			'40 sellers/ day',
+			'Seller Map Top View 1,000 sellers',
+			'Show 50 products by sellers/ day',
+			'Show 5 other sellers by seller`s product/ day'
 		]
 	}
 ];

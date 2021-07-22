@@ -26,8 +26,8 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 			<section className={`big-page-container ${styles.freeTrialSection}`}>
 				<h2 className="secondary-heading">Pay $1 to Sell as Wholesale</h2>
 				<p className={styles.info}>
-					Access all of Sellgo&apos;s free trial Amazon tools and integrate them
-					into your Amazon business.
+					Access Sellgo&apos;s $1 Amazon tools for a day and integrate them into
+					your Amazon business.
 				</p>
 				<FreeTrialCTABox className={styles.freeTrialCTABox} isPrimary />
 
@@ -52,7 +52,7 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 
 			<section className={`big-page-container ${styles.otherInfoSection}`}>
 				<h2 className="secondary-heading">
-					Maximize Your Profits with Sellgo&apos;s Free Tools!
+					Maximize Your Profits with Sellgo&apos;s Amazon Tools!
 				</h2>
 
 				<div className={styles.otherInfoCTAWrapper}>
@@ -64,9 +64,9 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 						asExternal
 						newTarget
 					>
-						Try Now 7-day Free Trial
+						Try Now for $1
 					</CTAButton>
-					<p>We offer a 7-day free trial with no credit card required.</p>
+					<p>Pay less on software, invest more in your business.</p>
 				</div>
 			</section>
 		</>
