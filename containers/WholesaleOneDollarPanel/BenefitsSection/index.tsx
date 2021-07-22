@@ -49,8 +49,6 @@ const BenefitsSection: React.FC<Props> = () => {
 						size="medium"
 						navigateTo={'/pricing?type=monthly-and-annual-plans'}
 						className={styles.benefitsCTA}
-						asExternal
-						newTarget
 					>
 						Check Our Premium Plan
 					</CTAButton>
