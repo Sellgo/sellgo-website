@@ -63,7 +63,7 @@ const NavbarBottom: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="/pricing?type=monthly-and-annual-plans"
+				navigateTo="/pricing?type=wholesale"
 				className={styles.navbarCTA}
 			>
 				Pay Only $1 to Sell
