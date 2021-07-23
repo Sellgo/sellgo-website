@@ -14,7 +14,6 @@
 	width: 45rem;
 	height: 5rem;
 	border-radius: 10rem;
-	//border: 1px solid #707070;
 	margin: 0 auto;
 	margin-top: 2rem;
 	font-size: $fontsize_content_14;
@@ -35,5 +34,11 @@
 
 	a {
 		text-decoration: underline;
+		color: $prim_dark_2;
+		display: flex;
+		align-items: center;
+		span {
+			margin-left: 5px;
+		}
 	}
 }

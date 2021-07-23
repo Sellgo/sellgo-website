@@ -78,11 +78,6 @@ const TopFooter: React.FC<Props> = () => {
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/pricing?type=private-label" passHref>
-						<a>Private Label $1</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
 					<Link href="/pricing" passHref>
 						<a>Monthly and Annual Plans</a>
 					</Link>
