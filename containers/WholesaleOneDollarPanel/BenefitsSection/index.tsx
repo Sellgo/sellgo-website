@@ -7,11 +7,6 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import Apple from '../../../components/Icons/Apple';
 
-/* Utils */
-import { createFreeTrialLink } from '../../../utils/Referral';
-
-const freeTrialLink = createFreeTrialLink();
-
 interface Props {}
 
 const BenefitsSection: React.FC<Props> = () => {
@@ -20,7 +15,7 @@ const BenefitsSection: React.FC<Props> = () => {
 			<div className={styles.bgCircle}></div>
 
 			<div className={`big-page-container ${styles.benefitsSection}`}>
-				<h2 className="secondary-heading">Also Comes With...</h2>
+				<h2 className="secondary-heading">If you need ...</h2>
 
 				<div className={styles.benefitsCardWrapper}>
 					<div className={styles.benefitsCard}>
@@ -45,16 +40,14 @@ const BenefitsSection: React.FC<Props> = () => {
 
 				<div className={styles.benefitsCTAWrapper}>
 					<CTAButton
-						type="primary"
+						type="secondary"
 						size="medium"
-						navigateTo={freeTrialLink}
+						navigateTo={'/pricing?type=monthly-and-annual-plans'}
 						className={styles.benefitsCTA}
-						asExternal
-						newTarget
 					>
-						Get Started
+						Check Our Premium Plan
 					</CTAButton>
-					<p>We offer a 7-day free trial with no credit card required.</p>
+					<p>Pay only $1 for the first month of starter membership</p>
 				</div>
 			</div>
 		</section>

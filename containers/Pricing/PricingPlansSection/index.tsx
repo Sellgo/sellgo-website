@@ -8,7 +8,6 @@ import styles from './index.module.scss';
 /* Components */
 import PricingInfoAlert from '../../../components/PricingInfoAlert';
 import PricingPlansCard from '../../../components/PricingPlansCard';
-import FreeTrialCTABox from '../../../components/FreeTrialCTABox';
 import AllfeaturesTable from '../../../components/AllFeaturesTable';
 import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
 import ContactInfo from '../../../components/ContactInfo';
@@ -130,8 +129,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					})}
 				</div>
 			</section>
-
-			<FreeTrialCTABox className={styles.freeTrialBox} />
 
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
 				<ContactInfo message="" />

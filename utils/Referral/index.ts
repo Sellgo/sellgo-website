@@ -7,7 +7,7 @@ import AppConfig from '../../config';
 /* Extract referralID from localStorage */
 export const extractTheReferralID = () => {
 	// @ts-ignore
-	return (!isSSR && window.Rewardful.referral) || '';
+	return (!isSSR && window.Rewardful && window.Rewardful.referral) || '';
 };
 
 /* Append referral Code if applicable */
@@ -22,10 +22,13 @@ export const appendReferralCode = (currentBuyLink: string) => {
 };
 
 /* Create checkout link for webapp */
-export const createCheckoutLink = (isMonthly: boolean, name: string) => {
-	const webCheckOutLink = `${AppConfig.APP_URL}/subscription?mode=${
-		isMonthly ? 'monthly' : 'yearly'
-	}&type=${name.split(' ').join('').toLowerCase()}`;
+export const createCheckoutLink = (paymentMode: string, name: string) => {
+	const webCheckOutLink = `${
+		AppConfig.APP_URL
+	}/subscription?mode=${paymentMode}&type=${name
+		.split(' ')
+		.join('')
+		.toLowerCase()}`;
 
 	const checkoutLink = appendReferralCode(webCheckOutLink);
 	return checkoutLink;

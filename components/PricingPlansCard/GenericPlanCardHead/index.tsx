@@ -38,7 +38,10 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		handleChange
 	} = props;
 
-	const checkoutLink = createCheckoutLink(isMonthly, name);
+	const checkoutLink = createCheckoutLink(
+		isMonthly ? 'monthly' : 'yearly',
+		name
+	);
 
 	return (
 		<div className={className}>

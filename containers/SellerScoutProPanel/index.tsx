@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import styles from './index.module.scss';
 
 /* Components */
-import PricingInfoAlert from '../../components/PricingInfoAlert';
 import ContactInfo from '../../components/ContactInfo';
 import CTAButton from '../../components/CTAButton';
 import PricePlanToggleButton from '../../components/PricePlanToggleButton';
@@ -19,18 +18,20 @@ import BenefitsSection from './BenefitsSection';
 import { sellerScoutGoPlanDetails } from '../Pricing/ProductsPanel/data';
 
 /* Utils */
-import { createFreeTrialLink } from '../../utils/Referral';
-
-const freeTrialLink = createFreeTrialLink();
+import { createCheckoutLink } from '../../utils/Referral';
 
 interface Props {}
 
 const SellerScoutProPanel: React.FC<Props> = () => {
-	const [isMonthly, setIsMothly] = useState(false);
+	const [isMonthly, setIsMonthly] = useState(false);
+	const dollarPlanLink = createCheckoutLink(
+		isMonthly ? 'monthly' : 'yearly',
+		'sellerscoutpro'
+	);
 
 	/* Handle price change */
 	const handleChange = () => {
-		setIsMothly((prevState) => !prevState);
+		setIsMonthly((prevState) => !prevState);
 	};
 
 	return (
@@ -39,23 +40,13 @@ const SellerScoutProPanel: React.FC<Props> = () => {
 				<h2 className="secondary-heading">Seller Scout Pro Plan</h2>
 
 				<p className={styles.info}>
-					Access all of Sellgo&apos;s free trial Amazon tools and integrate them
-					into your Amazon business.
+					Discover 1M+ Amazon sellers at your fingertips
 				</p>
 
 				<PricePlanToggleButton
 					isMonthly={isMonthly}
 					handleChange={handleChange}
 					className={styles.priceToggleButton}
-				/>
-
-				<PricingInfoAlert
-					className={styles.freeTrialInfoAlert}
-					navigateTo="/pricing?type=monthly-and-annual-plans"
-					navigateLabel="Learn More"
-					head={`Pay only $1 for your first month when you sign-up for a yearly subscription!`}
-					desc={``}
-					background="#F2EFE4"
 				/>
 			</section>
 
@@ -112,7 +103,7 @@ const SellerScoutProPanel: React.FC<Props> = () => {
 			<FeaturesSection />
 
 			{/* Benefits Section */}
-			<BenefitsSection />
+			<BenefitsSection dollarPlanLink={dollarPlanLink} />
 
 			{/* Contact Info Section  */}
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
@@ -122,21 +113,22 @@ const SellerScoutProPanel: React.FC<Props> = () => {
 			{/* Other Info Section  */}
 			<section className={`big-page-container ${styles.otherInfoSection}`}>
 				<h2 className="secondary-heading">
-					Maximize Your Profits with Sellgo&apos;s Free Tools!
+					Only pay less than a dime for each Amazon sellers you can find in
+					Sellgo&apos;s 1M Seller Database!
 				</h2>
 
 				<div className={styles.otherInfoCTAWrapper}>
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo={freeTrialLink}
+						navigateTo={dollarPlanLink}
 						className={styles.otherInfoCTA}
 						asExternal
 						newTarget
 					>
-						Try Now 7-day Free Trial
+						Get started
 					</CTAButton>
-					<p>We offer a 7-day free trial with no credit card required.</p>
+					<p>Pay less on software, invest more in your business.</p>
 				</div>
 			</section>
 		</>

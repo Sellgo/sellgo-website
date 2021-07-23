@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* Components */
-import FreeTrialCTABox from '../../components/FreeTrialCTABox';
+import DollarPlanCTABox from '../../components/DollarPlanCTABox';
 import PricingInfoAlert from '../../components/PricingInfoAlert';
 import ContactInfo from '../../components/ContactInfo';
 import CTAButton from '../../components/CTAButton';
@@ -14,11 +14,11 @@ import FeaturesSection from './FeaturesSection';
 import BenefitsSection from './BenefitsSection';
 
 /* Utils */
-import { createFreeTrialLink } from '../../utils/Referral';
+import { createCheckoutLink } from '../../utils/Referral';
 
 interface Props {}
 
-const freeTrialLink = createFreeTrialLink();
+const dollarPlanLink = createCheckoutLink('daily', 'privatelabel$1');
 
 const PrivateLabelOneDollar: React.FC<Props> = () => {
 	return (
@@ -26,10 +26,14 @@ const PrivateLabelOneDollar: React.FC<Props> = () => {
 			<section className={`big-page-container ${styles.freeTrialSection}`}>
 				<h2 className="secondary-heading">Pay $1 to Sell as Private Label</h2>
 				<p className={styles.info}>
-					Access all of Sellgo&apos;s free trial Amazon tools and integrate them
-					into your Amazon business.
+					Access Sellgo&apos;s $1 Amazon tools for a day and integrate them into
+					your Amazon business.
 				</p>
-				<FreeTrialCTABox className={styles.freeTrialCTABox} isPrimary />
+				<DollarPlanCTABox
+					className={styles.freeTrialCTABox}
+					isPrimary
+					planName="privatelabel$1"
+				/>
 
 				<PricingInfoAlert
 					className={styles.freeTrialInfoAlert}
@@ -52,21 +56,21 @@ const PrivateLabelOneDollar: React.FC<Props> = () => {
 
 			<section className={`big-page-container ${styles.otherInfoSection}`}>
 				<h2 className="secondary-heading">
-					Maximize Your Profits with Sellgo&apos;s Free Tools!
+					Maximize Your Profits with Sellgo&apos;s Amazon Tools!
 				</h2>
 
 				<div className={styles.otherInfoCTAWrapper}>
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo={freeTrialLink}
+						navigateTo={dollarPlanLink}
 						className={styles.otherInfoCTA}
 						asExternal
 						newTarget
 					>
-						Try Now 7-day Free Trial
+						Try Now for $1
 					</CTAButton>
-					<p>We offer a 7-day free trial with no credit card required.</p>
+					<p>Pay less on software, invest more in your business.</p>
 				</div>
 			</section>
 		</>
