@@ -29,10 +29,10 @@ const PrivateLabelOneDollar: React.FC<Props> = () => {
 					Access Sellgo&apos;s $1 Amazon tools for a day and integrate them into
 					your Amazon business.
 				</p>
-				<DollarPlanCTABox 
-					className={styles.freeTrialCTABox} 
+				<DollarPlanCTABox
+					className={styles.freeTrialCTABox}
 					isPrimary
-					planName='privatelabel$1'
+					planName="privatelabel$1"
 				/>
 
 				<PricingInfoAlert

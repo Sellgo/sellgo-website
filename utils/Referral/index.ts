@@ -23,8 +23,12 @@ export const appendReferralCode = (currentBuyLink: string) => {
 
 /* Create checkout link for webapp */
 export const createCheckoutLink = (paymentMode: string, name: string) => {
-	const webCheckOutLink = `${AppConfig.APP_URL}/subscription?mode=${
-		paymentMode}&type=${name.split(' ').join('').toLowerCase()}`;
+	const webCheckOutLink = `${
+		AppConfig.APP_URL
+	}/subscription?mode=${paymentMode}&type=${name
+		.split(' ')
+		.join('')
+		.toLowerCase()}`;
 
 	const checkoutLink = appendReferralCode(webCheckOutLink);
 	return checkoutLink;

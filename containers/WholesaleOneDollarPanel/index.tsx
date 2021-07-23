@@ -28,10 +28,10 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 					Access Sellgo&apos;s $1 Amazon tools for a day and integrate them into
 					your Amazon business.
 				</p>
-				<DollarPlanCTABox 
+				<DollarPlanCTABox
 					className={styles.dollarPlanCTABox}
 					isPrimary
-					planName='wholesalearbitrage$1'
+					planName="wholesalearbitrage$1"
 				/>
 
 				<PricingInfoAlert

@@ -24,7 +24,10 @@ interface Props {}
 
 const SellerScoutProPanel: React.FC<Props> = () => {
 	const [isMonthly, setIsMonthly] = useState(false);
-	const dollarPlanLink = createCheckoutLink(isMonthly ? 'monthly' : 'yearly', 'sellerscoutpro');
+	const dollarPlanLink = createCheckoutLink(
+		isMonthly ? 'monthly' : 'yearly',
+		'sellerscoutpro'
+	);
 
 	/* Handle price change */
 	const handleChange = () => {
@@ -100,7 +103,7 @@ const SellerScoutProPanel: React.FC<Props> = () => {
 			<FeaturesSection />
 
 			{/* Benefits Section */}
-			<BenefitsSection dollarPlanLink={dollarPlanLink}/>
+			<BenefitsSection dollarPlanLink={dollarPlanLink} />
 
 			{/* Contact Info Section  */}
 			<section className={`big-page-container ${styles.contactInfoSection}`}>

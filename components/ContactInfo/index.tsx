@@ -20,7 +20,7 @@ const ContactInfo: React.FC<Props> = (props) => {
 			<h2>
 				Need an enterprise account for your business?
 				<br />
-				We'd be happy to talk!
+				We&apos;d be happy to talk!
 			</h2>
 
 			<div className={styles.capsule}>
