@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import styles from './index.module.scss';
 
 /* Components */
-import PricingInfoAlert from '../../components/PricingInfoAlert';
 import ContactInfo from '../../components/ContactInfo';
 import CTAButton from '../../components/CTAButton';
 import PricePlanToggleButton from '../../components/PricePlanToggleButton';
@@ -19,18 +18,17 @@ import BenefitsSection from './BenefitsSection';
 import { sellerScoutGoPlanDetails } from '../Pricing/ProductsPanel/data';
 
 /* Utils */
-import { createFreeTrialLink } from '../../utils/Referral';
-
-const freeTrialLink = createFreeTrialLink();
+import { createCheckoutLink } from '../../utils/Referral';
 
 interface Props {}
 
 const SellerScoutProPanel: React.FC<Props> = () => {
-	const [isMonthly, setIsMothly] = useState(false);
+	const [isMonthly, setIsMonthly] = useState(false);
+	const dollarPlanLink = createCheckoutLink(isMonthly ? 'monthly' : 'yearly', 'sellerscoutpro');
 
 	/* Handle price change */
 	const handleChange = () => {
-		setIsMothly((prevState) => !prevState);
+		setIsMonthly((prevState) => !prevState);
 	};
 
 	return (
@@ -47,16 +45,6 @@ const SellerScoutProPanel: React.FC<Props> = () => {
 					handleChange={handleChange}
 					className={styles.priceToggleButton}
 				/>
-
-				{/*}
-				<PricingInfoAlert
-					className={styles.freeTrialInfoAlert}
-					navigateTo="/pricing?type=monthly-and-annual-plans"
-					navigateLabel="Learn More"
-					head={`Pay only $1 for your first month when you sign-up for a yearly subscription!`}
-					desc={``}
-					background="#F2EFE4"
-				/>*/}
 			</section>
 
 			{/* Modified free trial info box (needs refactoring later into compoistion if possible ) */}
@@ -112,7 +100,7 @@ const SellerScoutProPanel: React.FC<Props> = () => {
 			<FeaturesSection />
 
 			{/* Benefits Section */}
-			<BenefitsSection />
+			<BenefitsSection dollarPlanLink={dollarPlanLink}/>
 
 			{/* Contact Info Section  */}
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
@@ -130,7 +118,7 @@ const SellerScoutProPanel: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo={freeTrialLink}
+						navigateTo={dollarPlanLink}
 						className={styles.otherInfoCTA}
 						asExternal
 						newTarget

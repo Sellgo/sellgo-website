@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* Components */
-import FreeTrialCTABox from '../../components/FreeTrialCTABox';
+import DollarPlanCTABox from '../../components/DollarPlanCTABox';
 import PricingInfoAlert from '../../components/PricingInfoAlert';
 import ContactInfo from '../../components/ContactInfo';
 import CTAButton from '../../components/CTAButton';
@@ -14,25 +14,28 @@ import FeaturesSection from './FeaturesSection';
 import BenefitsSection from './BenefitsSection';
 
 /* Utils */
-import { createFreeTrialLink } from '../../utils/Referral';
-
-const freeTrialLink = createFreeTrialLink();
+import { createCheckoutLink } from '../../utils/Referral';
 
 interface Props {}
 
 const WholesaleOneDollar: React.FC<Props> = () => {
+	const dollarPlanLink = createCheckoutLink('daily', 'wholesalearbitrage$1');
 	return (
 		<>
-			<section className={`big-page-container ${styles.freeTrialSection}`}>
+			<section className={`big-page-container ${styles.dollarPlanSection}`}>
 				<h2 className="secondary-heading">Pay $1 to Sell as Wholesale</h2>
 				<p className={styles.info}>
 					Access Sellgo&apos;s $1 Amazon tools for a day and integrate them into
 					your Amazon business.
 				</p>
-				<FreeTrialCTABox className={styles.freeTrialCTABox} isPrimary />
+				<DollarPlanCTABox 
+					className={styles.dollarPlanCTABox}
+					isPrimary
+					planName='wholesalearbitrage$1'
+				/>
 
 				<PricingInfoAlert
-					className={styles.freeTrialInfoAlert}
+					className={styles.infoAlert}
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					navigateLabel="Premium Tools"
 					head={`Start selling on Amazon today with Sellgo's premium tools`}
@@ -59,7 +62,7 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo={freeTrialLink}
+						navigateTo={dollarPlanLink}
 						className={styles.otherInfoCTA}
 						asExternal
 						newTarget

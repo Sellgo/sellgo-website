@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* Components */
-import FreeTrialCTABox from '../../components/FreeTrialCTABox';
+import DollarPlanCTABox from '../../components/DollarPlanCTABox';
 import PricingInfoAlert from '../../components/PricingInfoAlert';
 import ContactInfo from '../../components/ContactInfo';
 import CTAButton from '../../components/CTAButton';
@@ -14,11 +14,11 @@ import FeaturesSection from './FeaturesSection';
 import BenefitsSection from './BenefitsSection';
 
 /* Utils */
-import { createFreeTrialLink } from '../../utils/Referral';
+import { createCheckoutLink } from '../../utils/Referral';
 
 interface Props {}
 
-const freeTrialLink = createFreeTrialLink();
+const dollarPlanLink = createCheckoutLink('daily', 'privatelabel$1');
 
 const PrivateLabelOneDollar: React.FC<Props> = () => {
 	return (
@@ -29,7 +29,11 @@ const PrivateLabelOneDollar: React.FC<Props> = () => {
 					Access Sellgo&apos;s $1 Amazon tools for a day and integrate them into
 					your Amazon business.
 				</p>
-				<FreeTrialCTABox className={styles.freeTrialCTABox} isPrimary />
+				<DollarPlanCTABox 
+					className={styles.freeTrialCTABox} 
+					isPrimary
+					planName='privatelabel$1'
+				/>
 
 				<PricingInfoAlert
 					className={styles.freeTrialInfoAlert}
@@ -59,7 +63,7 @@ const PrivateLabelOneDollar: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						navigateTo={freeTrialLink}
+						navigateTo={dollarPlanLink}
 						className={styles.otherInfoCTA}
 						asExternal
 						newTarget

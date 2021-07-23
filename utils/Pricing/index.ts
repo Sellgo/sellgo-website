@@ -7,17 +7,19 @@ export const DEFAULT_TAB_VALUE = 2;
 /* Map plan names with tabs */
 export const plansTabMapper: KeyValuePair = {
 	wholesale: 0,
-	'private-label': 1,
-	'monthly-and-annual-plans': 2,
-	'seller-scout-pro': 3
+	/* HIDING-PRIVATE-LABEL */
+	// 'private-label': 1,
+	'monthly-and-annual-plans': 1,
+	'seller-scout-pro': 2
 };
 
 /* Map tab number with plans */
 const reversePlansTabMapper: KeyValuePair = {
 	0: 'wholesale',
-	1: 'private-label',
-	2: 'monthly-and-annual-plans',
-	3: 'seller-scout-pro'
+	/* HIDING-PRIVATE-LABEL */
+	// 1: 'private-label',
+	1: 'monthly-and-annual-plans',
+	2: 'seller-scout-pro'
 };
 
 /* Utils to generate tab number from query */

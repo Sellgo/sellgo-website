@@ -7,11 +7,6 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import Apple from '../../../components/Icons/Apple';
 
-/* Utils */
-import { createFreeTrialLink } from '../../../utils/Referral';
-
-const freeTrialLink = createFreeTrialLink();
-
 interface Props {}
 
 const BenefitsSection: React.FC<Props> = () => {

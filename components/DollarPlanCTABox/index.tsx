@@ -8,43 +8,43 @@ import CTAButton from '../CTAButton';
 import Check from '../Icons/Check';
 
 /* Utils */
-import { createFreeTrialLink } from '../../utils/Referral';
+import { createCheckoutLink } from '../../utils/Referral';
 
 interface Props {
 	className?: string;
 	isPrimary?: boolean;
+	planName: string;
 }
 
-const freeTrialLink = createFreeTrialLink();
-
-const FreeTrialCTABox: React.FC<Props> = (props) => {
-	const { className, isPrimary } = props;
+const DollarPlanCTABox: React.FC<Props> = (props) => {
+	const { className, isPrimary, planName } = props;
+	const dollarPlanLink = createCheckoutLink('daily', planName);
 
 	return (
 		<section
-			className={`big-page-container ${styles.freeTrialCTABox} ${className}`}
+			className={`big-page-container ${styles.dollarPlanCTABox} ${className}`}
 		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
-					<h2>Free Trial</h2>
+					<h2>Pay $1 for a day</h2>
 					<p>
-						Access all of Sellgo&apos;s free trial Amazon tools and integrate
-						them into your Amazon business.
+						Access Sellgo&apos;s $1 Amazon tools and integrate them into your
+						Amazon business.
 					</p>
 				</div>
 
-				<div className={styles.freeTrailCTAWrapper}>
+				<div className={styles.dollarPlanCTAWrapper}>
 					<CTAButton
 						type={isPrimary ? 'primary' : 'secondary'}
 						size="medium"
-						navigateTo={freeTrialLink}
+						navigateTo={dollarPlanLink}
 						asExternal
 						newTarget
-						className={styles.freeTrialCTA}
+						className={styles.dollarPlanCTA}
 					>
-						Try Now for Free
+						Try Now for $1
 					</CTAButton>
-					<p>We offer a 7-day free trial with no credit card required.</p>
+					<p>Pay less on software, invest more in your business.</p>
 				</div>
 			</div>
 
@@ -81,11 +81,11 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
-					Seller Finder
+					Seller Database
 				</li>
 			</ul>
 		</section>
 	);
 };
 
-export default FreeTrialCTABox;
+export default DollarPlanCTABox;

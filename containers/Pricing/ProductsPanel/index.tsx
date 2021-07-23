@@ -84,12 +84,20 @@ const ProductsPanel: React.FC<Props> = (props) => {
 			>
 				<TabList className={styles.pricingPanelTabList}>
 					{planTypes.map((planType: any) => {
-						return (
-							<Tab key={uuid()} className={styles.pricingPanelTab}>
-								{planType.name}
-								{planType.isNew && <span className={styles.newBadge}>New</span>}
-							</Tab>
-						);
+						/* 
+							Hiding private label tab 
+							Search "HIDING-PRIVATE-LABEL" to see where other changes were made
+						*/
+						if (planType.name !== 'Private Label $1') {
+							return (
+								<Tab key={uuid()} className={styles.pricingPanelTab}>
+									{planType.name}
+									{planType.isNew && <span className={styles.newBadge}>New</span>}
+								</Tab>
+							);
+						} else {
+							return <span key = {uuid()}/>
+						}
 					})}
 				</TabList>
 
@@ -98,9 +106,10 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					<WholesaleOneDollarPanel />
 				</TabPanel>
 
-				<TabPanel>
+				{/* HIDING-PRIVATE-LABEL */}
+				{/* <TabPanel>
 					<PrivateLabelOneDollar />
-				</TabPanel>
+				</TabPanel> */}
 
 				{/* Generic pricing plans section	 */}
 				{plansAndProductsDetails.map((plan: any) => {
