@@ -4,14 +4,14 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* Containers */
-import HeroBox from '../../containers/Partners-Signup/HeroBox';
-import ApplicationForm from '../../containers/Partners-Signup/ApplicationForm';
+import HeroBox from '../../containers/Affliate-Signup/HeroBox';
+import ApplicationForm from '../../containers/Affliate-Signup/ApplicationForm';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
 
 /* Data */
-import { seoData } from '../../data/SEO/partnersSignup';
+import { seoData } from '../../data/SEO/affliateSignup';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
