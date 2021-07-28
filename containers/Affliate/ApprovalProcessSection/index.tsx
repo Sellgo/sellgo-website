@@ -34,7 +34,7 @@ const ApprovalProcessSection: React.FC<Props> = () => {
 				<CTAButton
 					type="primary"
 					size="medium"
-					navigateTo="/affliate-signup"
+					navigateTo="/affiliates-signup"
 					className={`${styles.ctaButton}`}
 					newTarget
 					asExternal

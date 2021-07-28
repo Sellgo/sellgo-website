@@ -25,9 +25,6 @@ interface Props {
 
 const PricingPage: React.FC<Props> = (props) => {
 	const { pricingFaqDetails } = props;
-	console.log('pricing faq full', pricingFaqDetails);
-	// console.log("pricing faq", pricingFaqDetails.slug);
-	// console.log("pricing faq 2", pricingFaqDetails['products']);
 	const [
 		isProductsPanelSelected,
 		setIsProductsPanelSelected
