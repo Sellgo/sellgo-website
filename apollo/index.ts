@@ -25,6 +25,7 @@ const client = new ApolloClient({
 	link: authLink.concat(httpLink),
 	cache: new InMemoryCache(),
 	ssrMode: isSSR,
+	// all queries are made at build time and for ISR pages (no cachging needed)
 	defaultOptions: {
 		query: {
 			fetchPolicy: 'no-cache'
