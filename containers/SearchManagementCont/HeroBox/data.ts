@@ -1,8 +1,9 @@
 export const accordionData = [
 	{
 		title: 'Product Description',
-		description: `Inspect dozens of supplier catalogs, source high demand products with proven data, 
-		and expand your Amazon FBA business.`,
+		description: `The Search Management organizes potential supplier files and 
+		pricings in your pipeline. Track your wholesale sourcing files in a dashboard. 
+		Simplify your process without CRM and get more results..`,
 		listDetails: [],
 		ctaLinkDetails: {}
 	},
@@ -21,10 +22,9 @@ export const accordionData = [
 	},
 	{
 		title: 'Features',
-		description: `Bulk analyze product catalogs with automated software. 
-		Get notified if there is an error within the catalog. 
-		Obtain a bird's eye view of your supplier and their products to see if they are worth sourcing. 
-		Manage multiple catalogs and suppliers with a click of a button.`,
+		description: `Manage your supplier files and pricings in one place with a click 
+		of a button and keep track of each one as they go from lead to profitable. Obtain 
+		a bird's eye view of your supplier and their products to see if they are worth sourcing.`,
 		listDetails: [],
 		ctaLinkDetails: {}
 	}

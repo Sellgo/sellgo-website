@@ -49,6 +49,11 @@ const TopFooter: React.FC<Props> = () => {
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
+					<Link href="/leads-tracker" passHref>
+						<a>Leads Tracker</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
 					<Link href="/product-tracker" passHref>
 						<a>Product Tracker</a>
 					</Link>
@@ -94,6 +99,11 @@ const TopFooter: React.FC<Props> = () => {
 				<li className="footerNavigationLinks">
 					<Link href="/blogs" passHref>
 						<a>Blogs</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/affiliates" passHref>
+						<a>Affiliate Program</a>
 					</Link>
 				</li>
 			</ul>

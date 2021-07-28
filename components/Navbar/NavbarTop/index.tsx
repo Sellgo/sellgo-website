@@ -27,7 +27,7 @@ const NavbarTop: React.FC<Props> = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Go to my account
+						Login to my account
 					</a>
 				</li>
 				<li className={styles.navbarTopLink}>

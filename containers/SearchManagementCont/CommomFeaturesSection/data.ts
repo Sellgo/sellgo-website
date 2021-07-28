@@ -35,9 +35,10 @@ export const commonFeaturesList = [
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'Sync with Our FBA Tools',
-		detail: `Pick your favorite suppliers then use the Profit 
-		Finder to analyze their products to source.`,
+		title: 'Focus on What Matters',
+		detail: `Stay above the competition by being better prepared 
+		when contacting suppliers, and save time by filtering out 
+		the more profitable opportunities with the Search Management.`,
 		iconImageLink: '/linkIcon.svg',
 		alt: `Describe the icon here`
 	}

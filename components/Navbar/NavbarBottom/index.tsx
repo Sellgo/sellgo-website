@@ -66,7 +66,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				navigateTo="/pricing?type=monthly-and-annual-plans"
 				className={styles.navbarCTA}
 			>
-				Pay Only $1 to Sell
+				Get started
 			</CTAButton>
 		</div>
 	);

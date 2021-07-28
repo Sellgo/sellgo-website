@@ -12,11 +12,10 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>Breakdown Catalogs with Ease</h2>
+					<h2>Wholesale Sourcing Made Easy</h2>
 					<p>
-						Simply upload catalogs files to our Search Management tool then sort
-						and filter millions of products. Find winning products that will
-						take your business to the next level.
+						Prioritize the suppliers you&apos;re wanting to reach out to, by
+						quickly viewing the profit rate and product availability on Amazon..
 					</p>
 				</div>
 				<div className={styles.infoSection__Image}>

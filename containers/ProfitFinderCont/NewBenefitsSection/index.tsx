@@ -18,7 +18,9 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection}>
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-					Product Analysis Visualized and Customized
+					The #1 Amazon wholesale bulk calculation software
+					<br />
+					trusted by top FBA sellers
 				</h2>
 
 				<div className={styles.benefitsCardsWrapper}>
@@ -34,8 +36,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading">
-					Identify thousands of profitable products to grow your sales, profits,
-					and Amazon business.
+					Also a Perfect Pair for Reverse Wholesale Sourcing.
 				</h2>
 				<CTAButton
 					type="primary"
@@ -43,7 +44,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Get Started
+					Start Sourcing with Sellgo Today
 				</CTAButton>
 			</div>
 		</section>

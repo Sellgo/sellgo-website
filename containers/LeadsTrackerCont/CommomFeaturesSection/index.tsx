@@ -15,7 +15,15 @@ interface Props {}
 const CommonFeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
-			<h2 className="secondary-heading">Lorem Ipsum dolor sit amet</h2>
+			<h2 className="secondary-heading">
+				Sellgo is the tool you&apos;ll need for Wholesale on Amazon
+			</h2>
+			<h3>
+				Streamline your wholesale business, we automate your daily calculation
+				<br />
+				so you can focus on supplier communication and scale your Amazon
+				business.
+			</h3>
 
 			<div className={styles.featuresCardWrapper}>
 				{commonFeaturesList.map((commonFeatureDetails: any) => {
