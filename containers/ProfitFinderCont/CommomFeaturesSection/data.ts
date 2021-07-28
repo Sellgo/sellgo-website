@@ -1,7 +1,7 @@
 export const commonFeaturesList = [
 	{
 		title: 'Data-Driven Sourcing',
-		detail: `Guarantee the profits and earnings by sourcing products backed by real data.`,
+		detail: `Whether you find a supplier first or a product first, both are easy to do with Sellgo Profit Finder.`,
 		iconImageLink: '/dataIcon.svg',
 		alt: `Describe the icon here`
 	},
@@ -18,8 +18,8 @@ export const commonFeaturesList = [
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'Real-time and Precise Data Points',
-		detail: `Grow your business with accurate, precise, and reliable data gathered from suppliers and Amazon.`,
+		title: 'Real-time and Precise Prices',
+		detail: `Grow your business with accurate, precise, and reliable prices gathered from suppliers and Amazon.`,
 		iconImageLink: '/watchIcon.svg',
 		alt: `Describe the icon here`
 	},
@@ -30,8 +30,9 @@ export const commonFeaturesList = [
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'Sync with Our FBA Tools',
-		detail: `Capture winning products then use the Product Tracker to monitor their sales performances and more.`,
+		title: 'Focus on What Matters',
+		detail: `Stay above the competition by focusing on business relationships, and save time by filtering out
+		the more profitable opportunities with Profit Finder.`,
 		iconImageLink: '/linkIcon.svg',
 		alt: `Describe the icon here`
 	}

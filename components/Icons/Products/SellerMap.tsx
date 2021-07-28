@@ -15,13 +15,9 @@ const SellerMap: React.FC<Props> = (props) => {
 			width={width}
 			height={height}
 		>
-			<defs>
-				<style>{`.prefix__cls-1{fill:${fill}}.prefix__cls-2{fill:#fff}`}</style>
-			</defs>
 			<g id="prefix__Layer_2" data-name="Layer 2">
-				<g id="prefix__Layer_1-2" data-name="Layer 1">
+				<g id="prefix__Layer_1-2" data-name="Layer 1" fill={fill}>
 					<path
-						className="prefix__cls-1"
 						d="M489.55,312.41C464,422.22,365.59,504,248,504,111,504,0,393,0,256A247,
 					247,0,0,1,56,99v45.71a50,50,0,0,0,8.55,27.95c11.72,17.39,28.38,42.07,35.67,
 					52.77a114.79,114.79,0,0,0,18.06,20.74l.8.72a144.26,144.26,0,0,0,31.65,
@@ -42,7 +38,6 @@ const SellerMap: React.FC<Props> = (props) => {
 						opacity="0.4"
 					/>
 					<path
-						className="prefix__cls-1"
 						d="M321.39,297.36A32,32,0,0,0,298.76,288H232c-9.41-4.71-21.48-32-32-32a67.724,67.724,0,0,
 					1-30.313-7.162L158.61,243.3a12,12,0,0,1,1.56-22l31.17-10.39A16,16,0,0,1,206.9,214l9.28,8.06a8,8,0
 					,0,0,5.24,2h5.64a8,8,0,0,0,7.15-11.58l-15.59-31.19A8,8,0,0,1,220.2,172l9.92-9.65A8,8,0,0,1,235.7,

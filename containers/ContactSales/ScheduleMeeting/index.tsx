@@ -431,8 +431,8 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 						<p className={styles.formSubmitInfo}>
 							For more information, check our
-							<Link href="/privacy-policy">
-								<a href="">privacy policy</a>
+							<Link href="/privacy-policy" passHref>
+								<a>privacy policy</a>
 							</Link>
 						</p>
 

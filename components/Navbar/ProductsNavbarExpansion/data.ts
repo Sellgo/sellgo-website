@@ -30,6 +30,12 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				iconName: 'profitFinder'
 			},
 			{
+				head: 'Leads Tracker',
+				desc: 'Intelligent Leads Calculator',
+				navigateTo: '/leads-tracker',
+				iconName: 'leadsTracker'
+			},
+			{
 				head: 'Product Tracker ',
 				desc: 'Daily Tracking and Scouting',
 				navigateTo: '/product-tracker',

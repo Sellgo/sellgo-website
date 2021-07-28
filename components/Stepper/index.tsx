@@ -23,7 +23,7 @@ const TextLoader: React.FC<Props> = (props) => {
 	return (
 		<div className={styles.stepperWrapper}>
 			{steps.map((product: StepDetail, index: number) => {
-				const fillColour = isActiveStep(index) ? '#ef7818' : '#2f8ddf';
+				const fillColour = isActiveStep(index) ? '#ef7818' : '#ced4d9';
 				return (
 					<div key={index} className={styles.stepWrapper}>
 						<div

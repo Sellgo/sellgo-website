@@ -10,9 +10,6 @@ import HeroBox from '../../containers/LeadsTrackerCont/HeroBox';
 import InfoSection from '../../containers/LeadsTrackerCont/InfoSection';
 import NewBenefitsSection from '../../containers/LeadsTrackerCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/LeadsTrackerCont/CommomFeaturesSection';
-import BannerCTASection from '../../containers/LeadsTrackerCont/BannerCTASection';
-import PlansSection from '../../containers/LeadsTrackerCont/PlansSection';
-import OtherInfoSection from '../../containers/LeadsTrackerCont/OtherInfoSection';
 import FAQSection from '../../containers/LeadsTrackerCont/FAQSection';
 import RecommendationSection from '../../containers/LeadsTrackerCont/RecommendationSection';
 
@@ -52,9 +49,6 @@ const LeadsTrackerContPage: React.FC<Props> = (props) => {
 			<NewBenefitsSection />
 			<section className={styles.newBanner}></section>
 			<CommonFeaturesSection />
-			<BannerCTASection />
-			<PlansSection />
-			<OtherInfoSection />
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>

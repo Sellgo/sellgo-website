@@ -18,21 +18,20 @@ export const newBenefitsData = [
 		description: `Each supplier's catalog can contain hundreds 
 		or even thousands of different products and ASINs. Highlight 
 		suppliers with best quality, most profitable, and replenishable 
-		products for your Amazon business.`,
+		products for your Amazon business, and improve your process with 
+		that data in mind to increase your wholesale account approval rates.`,
 		linkLabel: 'Learn more about our Search Management resources.',
 		navigateTo: '/',
 		imageUrl: '/smBenefit2_450x270.png'
 	},
 	{
-		title: 'Catalog Errors',
-		subTitle: 'Catalog Error Alerts',
-		description: `UnWith thousands of products within a single 
-		catalog, data can get mixed up! Get alerts when you upload 
-		catalogs with file errors including missing ASINs, repetitive 
-		SKUs, and more.cover new market segments and reach out to 
-		thousands of Amazon sellers to showcase your company, products, 
-		or services. Join a network of existing sellers who are already 
-		looking for you. `,
+		title: 'Catalog Errors Alerts',
+		subTitle: 'Find Unique Opportunities',
+		description: `With thousands of products within a single 
+		catalog, data from supplier can get mixed up! Get alerts when 
+		you upload catalogs with file errors including missing ASINs, 
+		repetitive SKUs, and more. Find unique opportunities beyond 
+		the erronous product identifier that other sellers missing out.`,
 		linkLabel: 'Learn more about our Search Management resources.',
 		navigateTo: '/',
 		imageUrl: '/smBenefit3_450x270.png'

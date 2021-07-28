@@ -25,7 +25,6 @@ interface Props {
 
 const PricingPage: React.FC<Props> = (props) => {
 	const { pricingFaqDetails } = props;
-
 	const [
 		isProductsPanelSelected,
 		setIsProductsPanelSelected
@@ -57,9 +56,8 @@ const PricingPage: React.FC<Props> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const { data: pricingFaqDetails } = await axios.get(
-		`${AppConfig.FAQ_BUCKET}/pricing.json`
-	);
+	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/pricing.json`);
+	const pricingFaqDetails = response.data;
 
 	return {
 		props: {
