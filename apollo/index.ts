@@ -4,6 +4,9 @@ import { setContext } from '@apollo/client/link/context';
 /* Config */
 import AppConfig from '../config';
 
+/* Utils */
+import { isSSR } from '../utils';
+
 const httpLink = createHttpLink({
 	uri: AppConfig.WPGRAPHQL
 });
@@ -20,7 +23,8 @@ const authLink = setContext((_, { headers }) => {
 
 const client = new ApolloClient({
 	link: authLink.concat(httpLink),
-	cache: new InMemoryCache()
+	cache: new InMemoryCache(),
+	ssrMode: isSSR
 });
 
 /* Export main Client for querying */
