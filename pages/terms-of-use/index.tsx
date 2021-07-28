@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps = async () => {
 			seoDetails: seo,
 			pageContent: otherPageDetails
 		},
-		revalidate: 1
+		revalidate: 60 * 60 // 1 hour
 	};
 };
 
