@@ -24,8 +24,8 @@ export const newBenefitsData = [
 		description: `Follow the leads back to the suppliers and 
 		start sourcing the same products. Add the products to your 
 		Buy Box strategy and take over new profitable products.`,
-		linkLabel: 'Learn more about our Seller Database resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

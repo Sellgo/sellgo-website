@@ -24,8 +24,8 @@ export const newBenefitsData = [
 		description: `Network and assist dozens of Amazon businesses 
 		who need your services. Meet warm leads and convert sellers 
 		you want to work with.`,
-		linkLabel: 'Learn more about our Seller Database resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

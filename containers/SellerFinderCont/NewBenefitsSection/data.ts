@@ -27,8 +27,8 @@ export const newBenefitsData = [
 		description: `Spot all the competitve sellers in the Buy Box 
 		and examine their catalogs for the other products they sell. 
 		Lookout for leads and potential products you can take over.`,
-		linkLabel: 'Learn more about our Seller Finder resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

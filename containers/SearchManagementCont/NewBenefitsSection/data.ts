@@ -32,8 +32,8 @@ export const newBenefitsData = [
 		you upload catalogs with file errors including missing ASINs, 
 		repetitive SKUs, and more. Find unique opportunities beyond 
 		the erronous product identifier that other sellers missing out.`,
-		linkLabel: 'Learn more about our Search Management resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/smBenefit3_450x270.png'
 	}
 ];
