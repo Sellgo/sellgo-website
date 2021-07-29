@@ -1,8 +1,8 @@
 export const commonFeaturesList = [
 	{
 		title: 'Brand Inspector',
-		detail: `Get a glimpse into your competitor's brands they are currently selling 
-		and use it to expand your catalogs.`,
+		detail: `Find Wholesaler-friendly brands, or get a glimpse into your competitor's 
+		brands they are currently selling and use it to expand your catalogs.`,
 		iconImageLink: '/chartpieIcon.svg',
 		alt: `Describe the icon here`
 	},

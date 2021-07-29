@@ -102,7 +102,7 @@ const TopFooter: React.FC<Props> = () => {
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/affiliates" passHref>
+					<Link href="/partners" passHref>
 						<a>Affiliate Program</a>
 					</Link>
 				</li>

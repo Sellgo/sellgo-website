@@ -2,6 +2,10 @@ import { StepDetail } from '../../../interfaces/Stepper';
 
 export const productsLabels: StepDetail[] = [
 	{
+		title: 'Extension',
+		icon: 'extension'
+	},
+	{
 		title: 'Search Management',
 		icon: 'searchManagement'
 	},
@@ -28,6 +32,16 @@ export const productsLabels: StepDetail[] = [
 ];
 
 export const productsDetails = [
+	{
+		title: 'Extension',
+		subTitle: 'Quick Product Validation in Your Browser',
+		description: `Get Amazon Product Research capabilities inside the Sellgo Chrome
+		Extension, helps give Amazon sellers a quick validation of a market while they browse 
+		through Amazon.`,
+		linkLabel: 'Learn more about Sellgo Chrome Extension.',
+		navigateTo: '/',
+		imageUrl: '/productSection1.png'
+	},
 	{
 		title: 'Search Management',
 		subTitle: 'Streamline Your Amazon Wholesale Business',

@@ -6,7 +6,7 @@ export const accordionData = [
 		Simplify your process without CRM and get more results..`,
 		listDetails: [],
 		ctaLinkDetails: {}
-	},
+	} /*
 	{
 		title: 'Pricing Overview',
 		description: `Tools and pricing plans that grow with you and your business.`,
@@ -19,7 +19,7 @@ export const accordionData = [
 			name: 'View all Pricing plans',
 			linkTo: '/pricing?type=monthly-and-annual-plans'
 		}
-	},
+	}, */,
 	{
 		title: 'Features',
 		description: `Manage your supplier files and pricings in one place with a click 

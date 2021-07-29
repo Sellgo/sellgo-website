@@ -34,8 +34,9 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading">
-					Connect with thousands of sellers and potential clients with
-					Sellgo&apos;s Seller Finder.
+					Connect with thousands of sellers and potential clients
+					<br />
+					with Sellgo&apos;s Seller Database.
 				</h2>
 				<CTAButton
 					type="primary"
@@ -43,7 +44,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Get Started
+					Find Sellers with Sellgo Today
 				</CTAButton>
 			</div>
 		</section>

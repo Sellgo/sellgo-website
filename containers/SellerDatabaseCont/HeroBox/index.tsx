@@ -35,7 +35,7 @@ const HeroBox: React.FC<Props> = () => {
 					<h2 className={styles.subHeading}>Seller Database</h2>
 				</div>
 				<h1 className={styles.heading}>
-					Connect with an Amazon Seller Community
+					The Treasure Database of Amazon Sellers
 				</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"

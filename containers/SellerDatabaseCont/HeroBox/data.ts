@@ -5,7 +5,7 @@ export const accordionData = [
 		great Amazon sellers to expand your business.`,
 		listDetails: [],
 		ctaLinkDetails: {}
-	},
+	} /*
 	{
 		title: 'Pricing Overview',
 		description: `Tools and pricing plans that grow with you and your business.`,
@@ -18,7 +18,7 @@ export const accordionData = [
 			name: 'View all Pricing plans',
 			linkTo: '/pricing?type=monthly-and-annual-plans'
 		}
-	},
+	}, */,
 	{
 		title: 'Features',
 		description: `Join a network of Amazon sellers and connect with thousands of 

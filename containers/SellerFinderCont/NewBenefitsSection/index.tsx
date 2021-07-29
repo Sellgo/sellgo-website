@@ -43,7 +43,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Get Started
+					Find Sellers with Sellgo Today
 				</CTAButton>
 			</div>
 		</section>

@@ -12,11 +12,12 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>The Ultimate Amazon Seller Network</h2>
+					<h2>The Perfect Seller Locator</h2>
 					<p>
-						As Amazon selling becomes more and more popular, there has been an
-						emergence of sellers joining Amazon FBA and FBM. What if you could
-						connect with thousands of sellers instantly? Now you can.
+						Whether you&apos;re looking for new products to sell or you&apos;re
+						an agency who provides services to Amazon sellers, locate thousands
+						of sellers across the planet. The Seller Map shows you a global map
+						and narrow down where sellers are located.
 					</p>
 				</div>
 				<div className={styles.infoSection__Image}>
