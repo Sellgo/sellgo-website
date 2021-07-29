@@ -8,5 +8,5 @@ export const seoData: SEODetails = {
 		commission with our Affiliate Program.`,
 	imageUrl: ``,
 	keywords: ['sellgo affiliate program', 'sellgo partner', 'sellgo program'],
-	slug: '/partners'
+	slug: '/affiliates'
 };

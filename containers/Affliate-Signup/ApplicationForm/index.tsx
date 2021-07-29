@@ -87,7 +87,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 	const handleModalClose = () => {
 		setOpenSubmitConfirm(false);
-		router.push('/partners');
+		router.push('/affiliates');
 	};
 
 	const {

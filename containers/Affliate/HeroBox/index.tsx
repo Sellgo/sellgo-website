@@ -23,7 +23,7 @@ const HeroBox: React.FC<Props> = () => {
 				<CTAButton
 					type="primary"
 					size="medium"
-					navigateTo="/partners-signup"
+					navigateTo="/affiliates-signup"
 					className={`${styles.ctaButton}`}
 					newTarget
 					asExternal
@@ -33,9 +33,14 @@ const HeroBox: React.FC<Props> = () => {
 
 				<p className={styles.heroBoxContent}>
 					Already an affliate?
-					<Link href="/">
-						<a className={`${styles.signinLink}`}>Sign in</a>
-					</Link>
+					<a 
+						href="https://sellgo.getrewardful.com/login"
+						target="_blank"
+						rel="noreferrer noopener"
+						className={`${styles.signinLink}`}
+					>
+						Sign in
+					</a>
 				</p>
 			</div>
 		</section>

@@ -15,11 +15,11 @@ const ChromeExtension: React.FC<Props> = (props) => {
 			width={width}
 			height={height}
 		>
-			<defs>
+			{/* <defs>
 				<style>{`.prefix__cls-1{fill:${fill}}.prefix__cls-2{fill:#fff}`}</style>
-			</defs>
+			</defs> */}
 			<g id="prefix__Layer_2" data-name="Layer 2">
-				<g id="prefix__Layer_1-2" data-name="Layer 1">
+				<g id="prefix__Layer_1-2" data-name="Layer 1" fill={fill}>
 					<path
 						className="prefix__cls-1"
 						d="M217.34 0s128.48-5.74 196.57 123.38H206.42s-39.19-1.29-72.6 
@@ -38,6 +38,8 @@ const ChromeExtension: React.FC<Props> = (props) => {
 						39.76c22.06-1.61 45-3 74.28-33.23-16.13 28.6-88.67 153.52-88.67 153.52S97.68 
 						438.56 28.37 328.74z"
 					/>
+				</g>
+				<g id="prefix__Layer_1-2" data-name="Layer 1" fill={'#fff'}>
 					<path
 						className="prefix__cls-2"
 						d="M202.11 437.46l29.18-121.79s32.09-2.51 59-32c-16.71 29.33-88.18 153.79-88.18 153.79z"

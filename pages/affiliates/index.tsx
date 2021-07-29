@@ -3,18 +3,18 @@ import { GetStaticProps } from 'next';
 import axios from 'axios';
 
 /* Containers */
-import HeroBox from '../../containers/Partners/HeroBox';
-import FirstCTASection from '../../containers/Partners/FirstCTASection';
-import BenefitsSection from '../../containers/Partners/BenefitsSection';
-import ApprovalProcessSection from '../../containers/Partners/ApprovalProcessSection';
-import ClosingCTASection from '../../containers/Partners/ClosingCTASection';
-import FAQSection from '../../containers/Partners/FAQSection';
+import HeroBox from '../../containers/Affliate/HeroBox';
+import FirstCTASection from '../../containers/Affliate/FirstCTASection';
+import BenefitsSection from '../../containers/Affliate/BenefitsSection';
+import ApprovalProcessSection from '../../containers/Affliate/ApprovalProcessSection';
+import ClosingCTASection from '../../containers/Affliate/ClosingCTASection';
+import FAQSection from '../../containers/Affliate/FAQSection';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
 
 /* Data */
-import { seoData } from '../../data/SEO/partners';
+import { seoData } from '../../data/SEO/affliate';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
