@@ -9,7 +9,7 @@ import styles from './index.module.scss';
 import HeroBox from '../../containers/LeadsTrackerCont/HeroBox';
 import InfoSection from '../../containers/LeadsTrackerCont/InfoSection';
 import NewBenefitsSection from '../../containers/LeadsTrackerCont/NewBenefitsSection';
-import CommonFeaturesSection from '../../containers/LeadsTrackerCont/CommomFeaturesSection';
+import CommonFeaturesSection from '../../containers/LeadsTrackerCont/CommonFeaturesSection';
 import FAQSection from '../../containers/LeadsTrackerCont/FAQSection';
 import RecommendationSection from '../../containers/LeadsTrackerCont/RecommendationSection';
 
