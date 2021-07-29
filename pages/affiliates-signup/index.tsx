@@ -11,7 +11,7 @@ import ApplicationForm from '../../containers/Affliate-Signup/ApplicationForm';
 import SEOHead from '../../components/SEOHead';
 
 /* Data */
-import { seoData } from '../../data/SEO/affliateSignup';
+import { seoData } from '../../data/SEO/affiliateSignup';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
