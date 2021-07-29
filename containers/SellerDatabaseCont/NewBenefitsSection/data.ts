@@ -4,8 +4,8 @@ export const newBenefitsData = [
 		subTitle: 'Encounter Warm Leads and New Customers',
 		description: `Easily identify Amazon businesses and sellers 
 		who can become potential clients for your business.`,
-		linkLabel: 'Learn more about our Seller Database resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit1_450x270.png'
 	},
 	{
@@ -14,8 +14,8 @@ export const newBenefitsData = [
 		description: `Pinpoint thousands of sellers who are looking 
 		for new software and selling solutions to expand and optimize 
 		their businesses.`,
-		linkLabel: 'Learn more about our Seller Database resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit2_450x270.png'
 	},
 	{
@@ -24,8 +24,8 @@ export const newBenefitsData = [
 		description: `Follow the leads back to the suppliers and 
 		start sourcing the same products. Add the products to your 
 		Buy Box strategy and take over new profitable products.`,
-		linkLabel: 'Learn more about our Seller Database resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

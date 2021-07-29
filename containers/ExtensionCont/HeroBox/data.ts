@@ -1,14 +1,15 @@
 export const accordionData = [
 	{
 		title: 'Product Description',
-		description: `Integrate Sellgo's advanced FBA tools and reliable data 
-		analytics while you scout and research products on Amazon.`,
+		description: `Get Amazon Product Research capabilities inside the Sellgo Chrome
+		Extension, helps give Amazon sellers a quick validation of a market while they browse 
+		through Amazon.`,
 		listDetails: [],
 		ctaLinkDetails: {
 			name: '',
 			linkTo: '/'
 		}
-	},
+	} /*
 	{
 		title: 'Pricing Overview',
 		description: `Tools and pricing plans that grow with you and your business.`,
@@ -21,7 +22,7 @@ export const accordionData = [
 			name: 'View all Pricing plans',
 			linkTo: '/pricing?type=monthly-and-annual-plans'
 		}
-	},
+	}, */,
 	{
 		title: 'Features',
 		description: `After installing the free Chrome Extension, head over 

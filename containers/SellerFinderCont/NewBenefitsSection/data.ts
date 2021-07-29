@@ -7,8 +7,8 @@ export const newBenefitsData = [
 		Finder within your scouting process. Probe your competitor's 
 		catalogs for potential products you can take over and source 
 		for your own businesses.`,
-		linkLabel: 'Learn more about our Seller Finder resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit1_450x270.png'
 	},
 	{
@@ -17,8 +17,8 @@ export const newBenefitsData = [
 		description: `Scan your competition and the products they are 
 		selling now. Spot hidden gems within their catalogs to see 
 		which products you should sell too!`,
-		linkLabel: 'Learn more about our Seller Finder resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit2_450x270.png'
 	},
 	{
@@ -27,8 +27,8 @@ export const newBenefitsData = [
 		description: `Spot all the competitve sellers in the Buy Box 
 		and examine their catalogs for the other products they sell. 
 		Lookout for leads and potential products you can take over.`,
-		linkLabel: 'Learn more about our Seller Finder resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

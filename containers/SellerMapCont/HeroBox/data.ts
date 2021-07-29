@@ -5,7 +5,7 @@ export const accordionData = [
 		competition and find new strategies to increase you inventory and sales.`,
 		listDetails: [],
 		ctaLinkDetails: {}
-	},
+	} /*
 	{
 		title: 'Pricing Overview',
 		description: `Tools and pricing plans that grow with you and your business.`,
@@ -18,7 +18,7 @@ export const accordionData = [
 			name: 'View all Pricing plans',
 			linkTo: '/pricing?type=monthly-and-annual-plans'
 		}
-	},
+	}, */,
 	{
 		title: 'Features',
 		description: `Find the perfect list of sellers to expand your catalog or grow 

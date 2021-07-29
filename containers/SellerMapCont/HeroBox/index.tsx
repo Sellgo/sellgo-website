@@ -34,9 +34,7 @@ const HeroBox: React.FC<Props> = () => {
 					/>
 					<h2 className={styles.subHeading}>Seller Map</h2>
 				</div>
-				<h1 className={styles.heading}>
-					Find Your Neighborhood Amazon Sellers
-				</h1>
+				<h1 className={styles.heading}>Interactive Amazon Seller Map</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"

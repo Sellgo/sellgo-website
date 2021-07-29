@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -15,7 +16,15 @@ interface Props {
 }
 
 const ProductCard: React.FC<Props> = (props) => {
-	const { title, subTitle, description, reversed, imageUrl } = props;
+	const {
+		title,
+		subTitle,
+		description,
+		reversed,
+		imageUrl,
+		navigateTo,
+		linkLabel
+	} = props;
 
 	const textClass = `${styles.productCard__Text} ${
 		reversed ? styles.reversedText : ''
@@ -32,9 +41,11 @@ const ProductCard: React.FC<Props> = (props) => {
 				<h3>{subTitle}</h3>
 				<p>{description}</p>
 
-				{/* <Link href={navigateTo} passHref>
-					<a className={styles.productCard__Link}>{linkLabel}</a>
-				</Link> */}
+				{linkLabel && navigateTo && (
+					<Link href={navigateTo} passHref>
+						<a className={styles.productCard__Link}>{linkLabel}</a>
+					</Link>
+				)}
 			</div>
 
 			<div className={`${imageClass}`}>

@@ -7,7 +7,7 @@ export const accordionData = [
 		winning products to begin sourcing and build your profits.`,
 		listDetails: [],
 		ctaLinkDetails: {}
-	},
+	} /*
 	{
 		title: 'Pricing Overview',
 		description: `Tools and pricing plans that grow with you and your business.`,
@@ -20,7 +20,7 @@ export const accordionData = [
 			name: 'View all Pricing plans',
 			linkTo: '/pricing?type=monthly-and-annual-plans'
 		}
-	},
+	}, */,
 	{
 		title: 'Features',
 		description: `Read UPC, EAN, ISBN, and ASINs. Access smart filters and sort 

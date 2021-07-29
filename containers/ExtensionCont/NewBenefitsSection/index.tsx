@@ -18,7 +18,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection}>
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-					Your Amazon and Browser Empowered by Sellgo
+					From Product Research to Product Launch, <br />
+					increase your Amazon business from Browser Extension.
 				</h2>
 
 				<div className={styles.benefitsCardsWrapper}>
@@ -34,8 +35,9 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading">
-					Bolden your Amazon business and optimize your efficiency with our
-					powerful Chrome Extension.
+					Bolden your Amazon business and optimize your efficiency
+					<br />
+					with our powerful Chrome Extension.
 				</h2>
 				<CTAButton
 					type="primary"
@@ -43,7 +45,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Get Started
+					Start Scouting with Sellgo Today
 				</CTAButton>
 			</div>
 		</section>

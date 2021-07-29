@@ -25,9 +25,9 @@ export const payMonthlyAndAnnualPlan = [
 			['Product Tracker', '100 products', '1,000 products', '3,000 products'],
 			[
 				'Amazon Best Sales Estimator',
-				'500 estimates/ day',
-				'5,000 estimates/ day',
-				'10,000 estimates/ day'
+				'1,000 estimates/ month',
+				'100,000 estimates/ month',
+				'2000,000 estimates/ month'
 			],
 			['Inventory Insight', '-', '✓', '✓'],
 			['Market share insight', '-', '✓', '✓'],
@@ -62,17 +62,17 @@ export const payMonthlyAndAnnualPlan = [
 			['Bulk + Filtered Data Export', '✓', '✓', '✓'],
 			['Variation Analysis', '✓', '✓', '✓'],
 			['Multipack Analysis', '✓', '✓', '✓'],
-			['Leads Tracker', '100 products', '1,000 products', '3,000 products']
+			['Leads Tracker', '100 products', '5,000 products', '10,000 products']
 		]
 	},
 	{
 		header: ['Seller Research', 'Starter', 'Professional', 'Team'],
 		body: [
 			[
-				'Seller Database/ Map',
-				'50 sellers/ day',
-				'1,000 sellers/ day',
-				'3,000 sellers/ mo'
+				'Seller Database or Seller Map',
+				'1,000 sellers/ month',
+				'10,000 sellers/ month',
+				'20,000 sellers/ month'
 			],
 			[
 				'Seller Map Top View',
@@ -82,15 +82,15 @@ export const payMonthlyAndAnnualPlan = [
 			],
 			[
 				'Show products by sellers',
-				'1,000 products/ day',
-				'5,000 products/ day',
-				'20,000 products/ day'
+				'500 products/ month',
+				'5,000 products/ month',
+				'10,000 products/ month'
 			],
 			[
 				'Show other sellers by seller&apos;s products',
-				'50 sellers/ day',
-				'1,000 sellers/mo',
-				'3,000 sellers/mo'
+				'500 sellers/ month',
+				'5,000 sellers/ month',
+				'10,000 sellers/ month'
 			],
 			['Export Seller Database', '-', 'Annual plan', 'Annual plan'],
 			['Show seller by brand', '-', 'Incoming soon', 'Incoming soon'],

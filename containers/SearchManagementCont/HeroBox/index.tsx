@@ -31,7 +31,9 @@ const HeroBox: React.FC<Props> = () => {
 					/>
 					<h2 className={styles.subHeading}>Search Management</h2>
 				</div>
-				<h1 className={styles.heading}>The First Step to Product Sourcing</h1>
+				<h1 className={styles.heading}>
+					Organize Potential Suppliers in Your Pipeline
+				</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"

@@ -5,11 +5,8 @@ export const accordionData = [
 		experience. Run daily in the background. When there is changing in price, Leads 
 		Tracker will send alert that some products may become profitable.`,
 		listDetails: [],
-		ctaLinkDetails: {
-			name: 'View the product description',
-			linkTo: '/'
-		}
-	},
+		ctaLinkDetails: {}
+	} /*
 	{
 		title: 'Pricing Overview',
 		description: `Tools and pricing plans that grow with you and your business.`,
@@ -22,7 +19,7 @@ export const accordionData = [
 			name: 'View all Pricing plans',
 			linkTo: '/pricing?type=monthly-and-annual-plans'
 		}
-	},
+	}, */,
 	{
 		title: 'Features',
 		description: `Integrate seamlessly with Sellgo Profit Finder and Search Management.
@@ -30,9 +27,6 @@ export const accordionData = [
 		revenue with powerful intelligent sourcing. MWS Credential is needed to activate 
 		this feature*.`,
 		listDetails: [],
-		ctaLinkDetails: {
-			name: 'View the product description',
-			linkTo: '/'
-		}
+		ctaLinkDetails: {}
 	}
 ];

@@ -8,8 +8,8 @@ export const newBenefitsData = [
 		suppliers before you source their products. Organize 
 		their catalogs based on ASINs*, profitability, price to 
 		listing ratio and more.`,
-		linkLabel: 'Learn more about our Search Management resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/smBenefit1_450x270.png'
 	},
 	{
@@ -20,8 +20,8 @@ export const newBenefitsData = [
 		suppliers with best quality, most profitable, and replenishable 
 		products for your Amazon business, and improve your process with 
 		that data in mind to increase your wholesale account approval rates.`,
-		linkLabel: 'Learn more about our Search Management resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/smBenefit2_450x270.png'
 	},
 	{
@@ -32,8 +32,8 @@ export const newBenefitsData = [
 		you upload catalogs with file errors including missing ASINs, 
 		repetitive SKUs, and more. Find unique opportunities beyond 
 		the erronous product identifier that other sellers missing out.`,
-		linkLabel: 'Learn more about our Search Management resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/smBenefit3_450x270.png'
 	}
 ];
