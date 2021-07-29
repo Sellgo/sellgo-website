@@ -52,7 +52,7 @@ const ContactUsPage: React.FC<Props> = () => {
 							</a>
 							<p>
 								or visit{' '}
-								<Link href="/affiliate-program">
+								<Link href="/affiliates">
 									<a className="anchor">Affiliate Program</a>
 								</Link>
 							</p>
