@@ -28,7 +28,7 @@ import { FAQDetails } from '../../interfaces/FAQ';
 interface Props {
 	faqDetails: FAQDetails;
 }
-const SellerDatabaseContPage: React.FC<Props> = (props:Props) => {
+const SellerDatabaseContPage: React.FC<Props> = (props: Props) => {
 	const { faqDetails } = props;
 	return (
 		<>
@@ -50,7 +50,9 @@ const SellerDatabaseContPage: React.FC<Props> = (props:Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/sellerDatabase.json`);
+	const response = await axios.get(
+		`${AppConfig.FAQ_BUCKET}/sellerDatabase.json`
+	);
 	const { data } = response;
 	return {
 		props: {

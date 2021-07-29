@@ -5,8 +5,8 @@ export const newBenefitsData = [
 		description: `Evaluate dozens of products and gain in-depth insight 
 		for any product including sales estimations, seller rankings, profit 
 		margins using data directly from Amazon.`,
-		linkLabel: 'Learn more about our Extension resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit1_450x270.png'
 	},
 	{
@@ -16,8 +16,8 @@ export const newBenefitsData = [
 		business decisions using real-time, accurate data. View a product's 
 		sales history and price tracking history to ensure a product's long-term 
 		sustainability and profitability.`,
-		linkLabel: 'Learn more about our Extension resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit2_450x270.png'
 	},
 	{
@@ -27,8 +27,8 @@ export const newBenefitsData = [
 		the best products that fit your business model and needs. Uncover 
 		the products with the best sales records and profitability to add 
 		to your Amazon catalogs.`,
-		linkLabel: 'Learn more about our Extension resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

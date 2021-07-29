@@ -21,11 +21,10 @@ import { generatePageURL } from '../../utils/SEO';
 import AppConfig from '../../config';
 import { FAQDetails } from '../../interfaces/FAQ';
 
-
 interface Props {
 	faqDetails: FAQDetails;
 }
-const SellerMapContPage: React.FC<Props> = (props:Props) => {
+const SellerMapContPage: React.FC<Props> = (props: Props) => {
 	const { faqDetails } = props;
 	return (
 		<>

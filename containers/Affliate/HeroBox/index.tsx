@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -33,7 +32,7 @@ const HeroBox: React.FC<Props> = () => {
 
 				<p className={styles.heroBoxContent}>
 					Already an affliate?
-					<a 
+					<a
 						href="https://sellgo.getrewardful.com/login"
 						target="_blank"
 						rel="noreferrer noopener"

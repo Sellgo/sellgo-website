@@ -39,7 +39,7 @@ export const productsDetails = [
 		Extension, helps give Amazon sellers a quick validation of a market while they browse 
 		through Amazon.`,
 		linkLabel: 'Learn more about Sellgo Chrome Extension.',
-		navigateTo: '/',
+		navigateTo: '/extension',
 		imageUrl: '/productSection1.png'
 	},
 	{
@@ -50,7 +50,7 @@ export const productsDetails = [
 		Use Sellgo's reliable data and sales analytics to build a 
 		thriving Amazon wholesale business.`,
 		linkLabel: 'Learn more about Sellgo Search Management.',
-		navigateTo: '/',
+		navigateTo: '/search-management',
 		imageUrl: '/productSection1.png'
 	},
 	{
@@ -61,7 +61,7 @@ export const productsDetails = [
 		and the fast furnover, high profit items to sell on Amazon. We love it, you'll love it,
 		and your supplier will love it too!`,
 		linkLabel: 'Learn more about Sellgo Profit Finder.',
-		navigateTo: '/',
+		navigateTo: '/profit-finder',
 		imageUrl: '/productSection2.png'
 	},
 	{
@@ -71,7 +71,7 @@ export const productsDetails = [
 		Run the Leads Tracker to daily monitoring your wholesale bulk products in the background,
 		and get alert when something becomes profitable.`,
 		linkLabel: 'Learn more about Sellgo Leads Tracker.',
-		navigateTo: '/',
+		navigateTo: '/leads-tracker',
 		imageUrl: '/productSection3.png'
 	},
 	{
@@ -81,7 +81,7 @@ export const productsDetails = [
 		share data, and trendspotting. Make intelligent price decisions to drive sales based on 
 		comprehensive market data. `,
 		linkLabel: 'Learn more about Sellgo Product Tracker.',
-		navigateTo: '/',
+		navigateTo: '/product-tracker',
 		imageUrl: '/productSection3.png'
 	},
 	{
@@ -91,7 +91,7 @@ export const productsDetails = [
 		sellers to showcase your company, products, or services. Join a network 
 		of existing sellers who are already looking for you. `,
 		linkLabel: 'Learn more about our Brand, Agency, and Enterprise resources.',
-		navigateTo: '/',
+		navigateTo: '/seller-database',
 		imageUrl: '/productSection3.png'
 	},
 	{
@@ -101,7 +101,7 @@ export const productsDetails = [
 		sellers to showcase your company, products, or services. Join a network 
 		of existing sellers who are already looking for you. `,
 		linkLabel: 'Learn more about our Brand, Agency, and Enterprise resources.',
-		navigateTo: '/',
+		navigateTo: '/seller-map',
 		imageUrl: '/productSection3.png'
 	}
 ];
