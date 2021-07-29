@@ -13,6 +13,7 @@
 	justify-content: center;
 	position: relative;
 	width: 20%;
+	height: 10rem;
 
 	.step {
 		display: flex;
@@ -34,11 +35,11 @@
 	color: $prim_dark_2;
 	font-weight: $fontweight_semibold;
 
-	@media only screen and(max-width: 900px) {
+	@media only screen and(max-width: 1650px) {
 		width: 9rem;
 	}
 
-	@media only screen and(max-width: 500px) {
+	@media only screen and(max-width: 900px) {
 		display: none;
 	}
 }
@@ -50,7 +51,7 @@
 	margin-top: 1.5rem;
 	border-top: 1px solid $border-color-1;
 
-	@media only screen and(max-width: 600px) {
+	@media only screen and(max-width: 900px) {
 		display: none;
 	}
 }

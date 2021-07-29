@@ -15,13 +15,9 @@ const SellerDatabase: React.FC<Props> = (props) => {
 			width={width}
 			height={height}
 		>
-			<defs>
-				<style>{`.prefix__cls-1{fill:${fill}}.prefix__cls-2{fill:#fff}`}</style>
-			</defs>
 			<g id="prefix__Layer_2" data-name="Layer 2">
-				<g id="prefix__Layer_1-2" data-name="Layer 1">
+				<g id="prefix__Layer_1-2" data-name="Layer 1" fill={fill}>
 					<path
-						className="prefix__cls-1"
 						d="M608,288H464V208.67c0-17.44,13.67-32.18,31.1-32.66A32,32,0,0,
 					1,528,208h0a16,16,0,0,0,16,16h17a15,15,0,0,0,
 					15-15h0c0-43.28-34-79.51-77.26-80.95A80,80,0,0,0,416,208v80H384a32,32,0,
@@ -30,7 +26,6 @@ const SellerDatabase: React.FC<Props> = (props) => {
 						opacity="0.4"
 					/>
 					<path
-						className="prefix__cls-1"
 						d="M224,256A128,128,0,1,0,96,128,128,128,0,0,0,224,256Zm96,
 					64a63.07,63.07,0,0,1,8.1-30.5c-4.8-.5-9.5-1.5-14.5-1.5H296.9a174.1,174.1,
 					0,0,1-145.8,0H134.4A134.424,134.424,0,0,0,0,422.37V464a48,48,0,0,0,48,
