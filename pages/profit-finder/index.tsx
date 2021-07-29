@@ -6,7 +6,7 @@ import { GetStaticProps } from 'next';
 import HeroBox from '../../containers/ProfitFinderCont/HeroBox';
 import InfoSection from '../../containers/ProfitFinderCont/InfoSection';
 import NewBenefitsSection from '../../containers/ProfitFinderCont/NewBenefitsSection';
-import CommonFeaturesSection from '../../containers/ProfitFinderCont/CommomFeaturesSection';
+import CommonFeaturesSection from '../../containers/ProfitFinderCont/CommonFeaturesSection';
 import RecommendationSection from '../../containers/ProfitFinderCont/RecommendationSection';
 import FAQSection from '../../containers/ProfitFinderCont/FAQSection';
 

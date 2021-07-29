@@ -6,7 +6,7 @@ import { GetStaticProps } from 'next';
 import HeroBox from '../../containers/SellerDatabaseCont/HeroBox';
 import InfoSection from '../../containers/SellerDatabaseCont/InfoSection';
 import NewBenefitsSection from '../../containers/SellerDatabaseCont/NewBenefitsSection';
-import CommonFeaturesSection from '../../containers/SellerDatabaseCont/CommomFeaturesSection';
+import CommonFeaturesSection from '../../containers/SellerDatabaseCont/CommonFeaturesSection';
 import RecommendationSection from '../../containers/SellerDatabaseCont/RecommendationSection';
 import FAQSection from '../../containers/SellerDatabaseCont/FAQSection';
 
