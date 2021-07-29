@@ -24,7 +24,7 @@ const FirstCTASection: React.FC<Props> = () => {
 			<CTAButton
 				type="secondary"
 				size="medium"
-				navigateTo="/partners-signup"
+				navigateTo="/affliate-signup"
 				className={`${styles.ctaButton}`}
 				asExternal
 				newTarget
