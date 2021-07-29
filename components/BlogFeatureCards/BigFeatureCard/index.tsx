@@ -10,11 +10,12 @@ import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 
 /* Utils */
 import {
-	fallBackImageURL,
 	formatBlogReadTime,
 	generateCategoryDisplayName,
-	imageLoaderForBlogs
 } from '../../../utils/Blogs';
+
+/* Components */
+import BlogCardImage from '../../BlogCardImage';
 
 interface Props {
 	showcaseBlogDetails: ShowcaseBlogDetails;
@@ -32,7 +33,8 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 		slug,
 		title,
 		categories,
-		readingTime
+		readingTime,
+		placeholder
 	} = showcaseBlogDetails;
 
 	return (
@@ -40,14 +42,9 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 			<a>
 				<article className={styles.bigFeatureCard}>
 					<div className={styles.bgImage}>
-						<Image
-							loader={imageLoaderForBlogs}
-							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
-							alt={featuredImage?.node?.altText}
-							// blurDataURL={showcaseBlogDetails.placeholder}
-							// placeholder='blur'
-							layout="fill"
-							objectFit="cover"
+						<BlogCardImage
+							featuredImage={featuredImage}
+							placeholder={placeholder}
 							priority
 						/>
 					</div>

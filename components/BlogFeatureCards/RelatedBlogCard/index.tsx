@@ -7,10 +7,8 @@ import styles from './index.module.scss';
 
 /* Utility */
 import {
-	fallBackImageURL,
 	formatBlogReadTime,
 	generateCategoryDisplayName,
-	imageLoaderForBlogs
 } from '../../../utils/Blogs';
 
 /* Types */
@@ -20,28 +18,30 @@ import {
 	ReadingTime
 } from '../../../interfaces/Blogs';
 
+/* Components */
+import BlogCardImage from '../../BlogCardImage';
+
 interface Props {
 	title: string;
 	slug: string;
 	featuredImage: FeaturedImage;
 	categories: Categories;
 	readingTime: ReadingTime;
+	placeholder: string;
 }
 
 const RelatedBlogCard: React.FC<Props> = (props) => {
-	const { title, slug, categories, featuredImage, readingTime } = props;
+	const { title, slug, categories, featuredImage, readingTime, placeholder } = props;
 
 	return (
 		<article className={styles.relatedBlogCard}>
 			<Link href={`/blogs/blog/${slug}`} passHref>
 				<a>
 					<div className={styles.bgImage}>
-						<Image
-							loader={imageLoaderForBlogs}
-							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
-							alt={featuredImage?.node?.altText || ''}
-							layout="fill"
-							objectFit="cover"
+						<BlogCardImage
+							featuredImage={featuredImage}
+							placeholder={placeholder}
+							priority={false}
 						/>
 					</div>
 

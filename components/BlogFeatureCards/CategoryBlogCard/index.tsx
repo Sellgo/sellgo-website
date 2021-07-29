@@ -1,15 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 /* Styles */
 import styles from './index.module.scss';
 
-/* Utils */
-import { imageLoaderForBlogs } from '../../../utils/Blogs';
-
 /* Types */
 import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
+
+/* Components */
+import BlogCardImage from '../../BlogCardImage';
 
 interface Props {
 	relatedBlogsDetails: ShowcaseBlogDetails | null;
@@ -28,12 +27,10 @@ const CategoryBlogCard: React.FC<Props> = (props) => {
 			<Link href={`/blogs/blog/${relatedBlogsDetails.slug}`} passHref>
 				<a>
 					<div className={styles.categoryBlogCard__Image}>
-						<Image
-							loader={imageLoaderForBlogs}
-							src={relatedBlogsDetails.featuredImage.node.sourceUrl}
-							alt={relatedBlogsDetails.featuredImage.node.altText}
-							layout="fill"
-							objectFit="cover"
+						<BlogCardImage
+							featuredImage={relatedBlogsDetails.featuredImage}
+							placeholder={relatedBlogsDetails.placeholder}
+							priority={false}
 						/>
 					</div>
 

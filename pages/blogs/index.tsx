@@ -151,51 +151,14 @@ export const getStaticProps: GetStaticProps = async () => {
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
 	const totalPages = showCaseBlogsResponse.data.posts.pageInfo;
 
-	// const showcaseBlogsWithPlaceholders = await generatePlaceholderImages(showcaseBlogs);
-	// const editorsChoiceBlogsWithPlaceholders = await generatePlaceholderImages(editorsChoiceBlogs);
-	// const popularChoiceBlogsWithPlaceholders = await generatePlaceholderImages(popularChoiceBlogs);
-	// let newShowcaseBlogs:any[] = [];
-	// let newEditorsChoiceBlogs:any[] = [];
-	// let newPopularChoiceBlogs:any[] = [];
-	// await Promise.all(showcaseBlogs.map(async (post:any) => {
-	// 	const imgSrc = post.featuredImage.node.sourceUrl;
-	// 	const {base64} = await getPlaiceholder(imgSrc);
-	// 	newShowcaseBlogs.push({base64, ...post});
-	// } ));
-
-	// await Promise.all(editorsChoiceBlogs.map(async (post:any) => {
-	// 	const imgSrc = post.featuredImage?.node?.sourceUrl;
-	// 	if (imgSrc) {
-	// 		const {base64} = await getPlaiceholder(imgSrc);
-	// 		newEditorsChoiceBlogs.push({base64, ...post});
-	// 	} else {
-	// 		const base64 = '';
-	// 		newEditorsChoiceBlogs.push({base64, ...post});
-	// 	}
-	// } ));
-
-	// await Promise.all(popularChoiceBlogs.map(async (post:any) => {
-	// 	const imgSrc = post.featuredImage?.node?.sourceUrl;
-	// 	if (imgSrc) {
-	// 		const {base64} = await getPlaiceholder(imgSrc);
-	// 		newPopularChoiceBlogs.push({base64, ...post});
-	// 	} else {
-	// 		const base64 = '';
-	// 		newPopularChoiceBlogs.push({base64, ...post});
-	// 	};
-	// } ));
-
-	// console.log(newShowcaseBlogs.length);
-	// console.log(newEditorsChoiceBlogs.length);
-	// console.log(newPopularChoiceBlogs.length);
+	const showcaseBlogsWithPlaceholders = await generatePlaceholderImages(showcaseBlogs, getPlaiceholder);
+	const editorsChoiceBlogsWithPlaceholders = await generatePlaceholderImages(editorsChoiceBlogs, getPlaiceholder);
+	const popularChoiceBlogsWithPlaceholders = await generatePlaceholderImages(popularChoiceBlogs, getPlaiceholder);
 	return {
 		props: {
-			// showcaseBlogs: showcaseBlogsWithPlaceholders,
-			// editorsChoiceBlogs: editorsChoiceBlogsWithPlaceholders,
-			// popularChoiceBlogs: popularChoiceBlogsWithPlaceholders,
-			showcaseBlogs,
-			editorsChoiceBlogs,
-			popularChoiceBlogs,
+			showcaseBlogs: showcaseBlogsWithPlaceholders,
+			editorsChoiceBlogs: editorsChoiceBlogsWithPlaceholders,
+			popularChoiceBlogs: popularChoiceBlogsWithPlaceholders,
 			totalPages
 		},
 		revalidate: 60 * 30 // 30 minutes
