@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next';
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
+import { getPlaiceholder } from "plaiceholder";
 
 /* Styling */
 import styles from './index.module.scss';
@@ -28,6 +29,7 @@ import { seoData } from '../../data/SEO/blogsShowcase';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
+import { generatePlaceholderImages } from '../../utils/Blogs';
 
 interface Props {
 	showcaseBlogs: any;
@@ -145,12 +147,52 @@ export const getStaticProps: GetStaticProps = async () => {
 	});
 
 	const showcaseBlogs = showCaseBlogsResponse.data.posts.nodes;
-	const totalPages = showCaseBlogsResponse.data.posts.pageInfo;
 	const editorsChoiceBlogs = editorsChoiceBlogsResponse.data.posts.nodes;
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
+	const totalPages = showCaseBlogsResponse.data.posts.pageInfo;
 
+	// const showcaseBlogsWithPlaceholders = await generatePlaceholderImages(showcaseBlogs);
+	// const editorsChoiceBlogsWithPlaceholders = await generatePlaceholderImages(editorsChoiceBlogs);
+	// const popularChoiceBlogsWithPlaceholders = await generatePlaceholderImages(popularChoiceBlogs);
+	// let newShowcaseBlogs:any[] = [];
+	// let newEditorsChoiceBlogs:any[] = [];
+	// let newPopularChoiceBlogs:any[] = [];
+	// await Promise.all(showcaseBlogs.map(async (post:any) => {
+	// 	const imgSrc = post.featuredImage.node.sourceUrl;
+	// 	const {base64} = await getPlaiceholder(imgSrc);
+	// 	newShowcaseBlogs.push({base64, ...post});
+	// } ));
+
+	// await Promise.all(editorsChoiceBlogs.map(async (post:any) => {
+	// 	const imgSrc = post.featuredImage?.node?.sourceUrl;
+	// 	if (imgSrc) {
+	// 		const {base64} = await getPlaiceholder(imgSrc);
+	// 		newEditorsChoiceBlogs.push({base64, ...post});
+	// 	} else {
+	// 		const base64 = '';
+	// 		newEditorsChoiceBlogs.push({base64, ...post});
+	// 	}
+	// } ));
+
+	// await Promise.all(popularChoiceBlogs.map(async (post:any) => {
+	// 	const imgSrc = post.featuredImage?.node?.sourceUrl;
+	// 	if (imgSrc) {
+	// 		const {base64} = await getPlaiceholder(imgSrc);
+	// 		newPopularChoiceBlogs.push({base64, ...post});
+	// 	} else {
+	// 		const base64 = '';
+	// 		newPopularChoiceBlogs.push({base64, ...post});
+	// 	};
+	// } ));
+
+	// console.log(newShowcaseBlogs.length);
+	// console.log(newEditorsChoiceBlogs.length);
+	// console.log(newPopularChoiceBlogs.length);
 	return {
 		props: {
+			// showcaseBlogs: showcaseBlogsWithPlaceholders,
+			// editorsChoiceBlogs: editorsChoiceBlogsWithPlaceholders,
+			// popularChoiceBlogs: popularChoiceBlogsWithPlaceholders,
 			showcaseBlogs,
 			editorsChoiceBlogs,
 			popularChoiceBlogs,

@@ -44,6 +44,8 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 							loader={imageLoaderForBlogs}
 							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
 							alt={featuredImage?.node?.altText}
+							blurDataURL={showcaseBlogDetails.placeholder}
+							placeholder='blur'
 							layout="fill"
 							objectFit="cover"
 							priority
