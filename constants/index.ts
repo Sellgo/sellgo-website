@@ -20,6 +20,8 @@ export const pricingCardHeaderGradients: { [key: string]: string } = {
 
 export const hideNavigationOnRoutes = ['/affiliates-signup'];
 
+export const hideCookieConsentBanner = ['/privacy-policy', '/terms-of-use'];
+
 /* Employess size list on contact forms */
 export const employSizeList = [
 	{

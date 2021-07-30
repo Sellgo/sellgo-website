@@ -1,0 +1,41 @@
+@import '../../styles/guidelines';
+
+.cookieBannerWrapper {
+	background: $grey_1;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 5rem;
+}
+
+.cookieBannerContent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: $fontsize_content_14;
+
+	p {
+		color: $prim_dark_2;
+	}
+
+	a {
+		color: $accent_blue;
+		margin: 0 2rem;
+	}
+
+	button {
+		color: $prim_white;
+		background: $blue_8;
+		font-size: $fontsize_content_14;
+		padding: 0 1rem;
+		height: 3rem;
+		border-radius: 7px;
+		border: 0;
+		outline: 0;
+		cursor: pointer;
+	}
+}
