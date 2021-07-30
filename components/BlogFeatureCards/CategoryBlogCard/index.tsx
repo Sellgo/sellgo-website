@@ -8,7 +8,10 @@ import styles from './index.module.scss';
 import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 
 /* Components */
-import BlogCardImage from '../../BlogCardImage';
+import BlogCardImage from '../../ShimmeredImage';
+
+/* Utils */
+import { fallBackImageURL, imageLoaderForBlogs } from '../../../utils/Blogs';
 
 interface Props {
 	relatedBlogsDetails: ShowcaseBlogDetails | null;
@@ -20,22 +23,27 @@ const CategoryBlogCard: React.FC<Props> = (props) => {
 	// return empty if no details found
 	if (!relatedBlogsDetails) {
 		return null;
-	}
+	} 
+
+	const {title, featuredImage, slug} = relatedBlogsDetails;
+
 
 	return (
 		<article className={styles.categoryBlogCard}>
-			<Link href={`/blogs/blog/${relatedBlogsDetails.slug}`} passHref>
+			<Link href={`/blogs/blog/${slug}`} passHref>
 				<a>
 					<div className={styles.categoryBlogCard__Image}>
 						<BlogCardImage
-							featuredImage={relatedBlogsDetails.featuredImage}
-							placeholder={relatedBlogsDetails.placeholder}
-							priority={false}
+							loader={imageLoaderForBlogs}
+							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+							alt={featuredImage?.node?.altText}
+							layout="fill"
+							objectFit="cover"
 						/>
 					</div>
 
 					<div className={styles.categoryBlogCard__Text}>
-						<p>{relatedBlogsDetails.title}</p>
+						<p>{title}</p>
 					</div>
 				</a>
 			</Link>

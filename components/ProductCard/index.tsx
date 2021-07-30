@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import ShimmeredImage from '../ShimmeredImage';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -38,7 +38,7 @@ const ProductCard: React.FC<Props> = (props) => {
 			</div>
 
 			<div className={`${imageClass}`}>
-				<Image src={imageUrl} alt="Seller Finder" width={450} height={270} />
+				<ShimmeredImage src={imageUrl} alt="Seller Finder" width={450} height={270} />
 			</div>
 		</article>
 	);

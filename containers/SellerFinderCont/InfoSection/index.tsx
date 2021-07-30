@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Image from 'next/image';
+/* Components */
+import ShimmeredImage from '../../../components/ShimmeredImage';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -22,7 +23,7 @@ const InfoSection: React.FC<Props> = () => {
 					</p>
 				</div>
 				<div className={styles.infoSection__Image}>
-					<Image src="/pfSection_600x360.png" width={600} height={360} alt="" />
+					<ShimmeredImage src="/pfSection_600x360.png" width={600} height={360} alt="" />
 				</div>
 			</div>
 		</section>

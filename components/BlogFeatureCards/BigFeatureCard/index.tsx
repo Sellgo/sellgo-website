@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -10,12 +9,14 @@ import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 
 /* Utils */
 import {
+	fallBackImageURL,
 	formatBlogReadTime,
 	generateCategoryDisplayName,
+	imageLoaderForBlogs
 } from '../../../utils/Blogs';
 
 /* Components */
-import BlogCardImage from '../../BlogCardImage';
+import BlogCardImage from '../../ShimmeredImage';
 
 interface Props {
 	showcaseBlogDetails: ShowcaseBlogDetails;
@@ -34,7 +35,6 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 		title,
 		categories,
 		readingTime,
-		placeholder
 	} = showcaseBlogDetails;
 
 	return (
@@ -43,8 +43,11 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 				<article className={styles.bigFeatureCard}>
 					<div className={styles.bgImage}>
 						<BlogCardImage
-							featuredImage={featuredImage}
-							placeholder={placeholder}
+							loader={imageLoaderForBlogs}
+							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+							alt={featuredImage?.node?.altText}
+							layout="fill"
+							objectFit="cover"
 							priority
 						/>
 					</div>

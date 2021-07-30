@@ -9,6 +9,7 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import ProductAccordion from '../../../components/ProductAccordion';
 import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
+import ShimmeredImage from '../../../components/ShimmeredImage';
 
 /* Data */
 import { accordionData } from './data';
@@ -18,7 +19,7 @@ interface Props {}
 const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.heroBox}`}>
-			<Image
+			<ShimmeredImage
 				src="/pfHerobox_600x360.png"
 				width={600}
 				height={360}

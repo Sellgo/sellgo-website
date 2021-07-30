@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Image from 'next/image';
-
 /* Styling */
 import styles from './index.module.scss';
 
@@ -9,6 +7,7 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import ProductAccordion from '../../../components/ProductAccordion';
 import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
+import ShimmeredImage from '../../../components/ShimmeredImage';
 
 /* Data */
 import { accordionData } from './data';
@@ -19,7 +18,7 @@ const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.heroBox}`}>
 			<div className={styles.heroBox__Image}>
-				<Image src="/ptrHerobox_600x360.png" width={600} height={360} alt="" />
+				<ShimmeredImage src="/ptrHerobox_600x360.png" width={600} height={360} alt="" />
 			</div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>

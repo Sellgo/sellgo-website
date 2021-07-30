@@ -3,7 +3,6 @@ import { GetStaticProps } from 'next';
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
-import { getPlaiceholder } from "plaiceholder";
 
 /* Styling */
 import styles from './index.module.scss';
@@ -151,14 +150,11 @@ export const getStaticProps: GetStaticProps = async () => {
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
 	const totalPages = showCaseBlogsResponse.data.posts.pageInfo;
 
-	const showcaseBlogsWithPlaceholders = await generatePlaceholderImages(showcaseBlogs, getPlaiceholder);
-	const editorsChoiceBlogsWithPlaceholders = await generatePlaceholderImages(editorsChoiceBlogs, getPlaiceholder);
-	const popularChoiceBlogsWithPlaceholders = await generatePlaceholderImages(popularChoiceBlogs, getPlaiceholder);
 	return {
 		props: {
-			showcaseBlogs: showcaseBlogsWithPlaceholders,
-			editorsChoiceBlogs: editorsChoiceBlogsWithPlaceholders,
-			popularChoiceBlogs: popularChoiceBlogsWithPlaceholders,
+			showcaseBlogs,
+			editorsChoiceBlogs,
+			popularChoiceBlogs,
 			totalPages
 		},
 		revalidate: 60 * 30 // 30 minutes

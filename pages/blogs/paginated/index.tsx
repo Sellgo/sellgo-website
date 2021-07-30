@@ -163,10 +163,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	const editorsChoiceBlogs = editorsChoiceBlogsResponse.data.posts.nodes;
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
 
-	const paginatedBlogsWithPlaceholders = await generatePlaceholderImages(paginatedBlogs, getPlaiceholder);
-	const editorsChoiceBlogsWithPlaceholders = await generatePlaceholderImages(editorsChoiceBlogs, getPlaiceholder);
-	const popularChoiceBlogsWithPlaceholders = await generatePlaceholderImages(popularChoiceBlogs, getPlaiceholder);
-	
 	const isInvalidPage = pageNumber > Math.floor(totalPages.total / 6);
 
 	if (!paginatedBlogs.length || isInvalidPage) {
@@ -177,9 +173,9 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
 	return {
 		props: {
-			paginatedBlogs: paginatedBlogsWithPlaceholders,
-			editorsChoiceBlogs: editorsChoiceBlogsWithPlaceholders,
-			popularChoiceBlogs: popularChoiceBlogsWithPlaceholders,
+			paginatedBlogs,
+			editorsChoiceBlogs,
+			popularChoiceBlogs,
 			totalPages,
 			pageNumber
 		}

@@ -41,7 +41,7 @@ function App({ Component, pageProps }: AppProps) {
 		<ApolloProvider client={client}>
 			{/* Hotjar Integration */}
 			<Script
-				strategy="afterInteractive"
+				strategy="lazyOnload"
 				dangerouslySetInnerHTML={{
 					__html: `(function(h,o,t,j,a,r){
 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -56,7 +56,7 @@ a.appendChild(r);
 
 			{/* Intercom settings */}
 			<Script
-				strategy="afterInteractive"
+				strategy="lazyOnload"
 				dangerouslySetInnerHTML={{
 					__html: `  window.intercomSettings = {
 app_id: "ju2u3hej",
@@ -68,7 +68,7 @@ custom_launcher_selector:'#chat-link'
 
 			{/* Intercom main script */}
 			<Script
-				strategy="afterInteractive"
+				strategy="lazyOnload"
 				dangerouslySetInnerHTML={{
 					__html: `(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function")
 				{ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function()
@@ -83,7 +83,7 @@ custom_launcher_selector:'#chat-link'
 
 			{/* Rewardful main script */}
 			<Script
-				strategy="afterInteractive"
+				strategy="lazyOnload"
 				dangerouslySetInnerHTML={{
 					// eslint-disable-next-line max-len
 					__html: `(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[]).push(arguments)}})(window,'rewardful')`
@@ -92,13 +92,13 @@ custom_launcher_selector:'#chat-link'
 
 			{/* Rewardful remote script */}
 			<Script
-				strategy="afterInteractive"
+				strategy="lazyOnload"
 				src="https://r.wdfl.co/rw.js"
 				data-rewardful="f34d76"
 			/>
 
 			<Script
-				strategy="afterInteractive"
+				strategy="lazyOnload"
 				dangerouslySetInnerHTML={{
 					// eslint-disable-next-line max-len
 					__html: `rewardful('ready',function(){

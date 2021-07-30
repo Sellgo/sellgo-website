@@ -38,9 +38,6 @@ export interface ShowcaseBlogDetails {
 	content: string;
 	readingTime: ReadingTime;
 	date: Date;
-
-	/* This is manually added in by plaiceholder library */
-	placeholder: string;
 }
 
 export interface FilteredBlog {

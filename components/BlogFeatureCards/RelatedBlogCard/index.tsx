@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 /* Styling */
@@ -7,8 +6,10 @@ import styles from './index.module.scss';
 
 /* Utility */
 import {
+	fallBackImageURL,
 	formatBlogReadTime,
 	generateCategoryDisplayName,
+	imageLoaderForBlogs
 } from '../../../utils/Blogs';
 
 /* Types */
@@ -19,7 +20,7 @@ import {
 } from '../../../interfaces/Blogs';
 
 /* Components */
-import BlogCardImage from '../../BlogCardImage';
+import BlogCardImage from '../../ShimmeredImage';
 
 interface Props {
 	title: string;
@@ -27,11 +28,16 @@ interface Props {
 	featuredImage: FeaturedImage;
 	categories: Categories;
 	readingTime: ReadingTime;
-	placeholder: string;
 }
 
 const RelatedBlogCard: React.FC<Props> = (props) => {
-	const { title, slug, categories, featuredImage, readingTime, placeholder } = props;
+	const {
+		title,
+		slug,
+		categories,
+		featuredImage,
+		readingTime,
+	} = props;
 
 	return (
 		<article className={styles.relatedBlogCard}>
@@ -39,9 +45,11 @@ const RelatedBlogCard: React.FC<Props> = (props) => {
 				<a>
 					<div className={styles.bgImage}>
 						<BlogCardImage
-							featuredImage={featuredImage}
-							placeholder={placeholder}
-							priority={false}
+							loader={imageLoaderForBlogs}
+							src={featuredImage?.node?.sourceUrl || fallBackImageURL}
+							alt={featuredImage?.node?.altText}
+							layout="fill"
+							objectFit="cover"
 						/>
 					</div>
 
