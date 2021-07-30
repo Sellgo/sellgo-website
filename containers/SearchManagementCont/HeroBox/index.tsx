@@ -18,7 +18,12 @@ const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.heroBox}`}>
 			<div className={styles.heroBox__Image}>
-				<ShimmeredImage src="/smHerobox_600x360.png" width={600} height={360} alt="" />
+				<ShimmeredImage
+					src="/smHerobox_600x360.png"
+					width={600}
+					height={360}
+					alt=""
+				/>
 			</div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>

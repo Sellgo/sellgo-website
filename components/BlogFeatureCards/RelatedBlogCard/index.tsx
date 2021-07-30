@@ -31,13 +31,7 @@ interface Props {
 }
 
 const RelatedBlogCard: React.FC<Props> = (props) => {
-	const {
-		title,
-		slug,
-		categories,
-		featuredImage,
-		readingTime,
-	} = props;
+	const { title, slug, categories, featuredImage, readingTime } = props;
 
 	return (
 		<article className={styles.relatedBlogCard}>

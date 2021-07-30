@@ -1,7 +1,5 @@
-const { withPlaiceholder } = require("@plaiceholder/next");
-
 /* eslint-disable max-len */
-module.exports = withPlaiceholder({
+module.exports = {
 	async redirects() {
 		return [
 			{
@@ -69,4 +67,4 @@ module.exports = withPlaiceholder({
 			}
 		];
 	}
-});
+};

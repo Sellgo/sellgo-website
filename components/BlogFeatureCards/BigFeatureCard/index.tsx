@@ -34,7 +34,7 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 		slug,
 		title,
 		categories,
-		readingTime,
+		readingTime
 	} = showcaseBlogDetails;
 
 	return (

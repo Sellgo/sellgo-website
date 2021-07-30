@@ -63,7 +63,11 @@ export const defaultPhoneCode = {
 	type: 'countryCode'
 };
 
-export const shimmerPlaceholder = (backgroundColor:string, logoColor: string, animationColor: string) => `
+export const shimmerPlaceholder = (
+	backgroundColor: string,
+	logoColor: string,
+	animationColor: string
+) => `
 	<svg 
 		width="1000" 
 		height="1000" 
@@ -95,4 +99,4 @@ export const shimmerPlaceholder = (backgroundColor:string, logoColor: string, an
 	</g>
 	<rect id="r" width="1000" height="1000" fill="url(#g)"/>
 	<animate xlink:href="#r" attributeName="x" from="-1000" to="1000" dur="1s" repeatCount="indefinite"  />
-	</svg>`
+	</svg>`;

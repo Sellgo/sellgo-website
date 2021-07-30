@@ -30,7 +30,7 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 		slug,
 		title,
 		categories,
-		readingTime,
+		readingTime
 	} = showcaseBlogDetails;
 
 	if (!showcaseBlogDetails) {

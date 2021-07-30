@@ -23,10 +23,9 @@ const CategoryBlogCard: React.FC<Props> = (props) => {
 	// return empty if no details found
 	if (!relatedBlogsDetails) {
 		return null;
-	} 
+	}
 
-	const {title, featuredImage, slug} = relatedBlogsDetails;
-
+	const { title, featuredImage, slug } = relatedBlogsDetails;
 
 	return (
 		<article className={styles.categoryBlogCard}>

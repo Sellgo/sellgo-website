@@ -12,10 +12,9 @@ export const imageLoaderForBlogs = (config: any) => {
 
 /* Used in generating placeholder */
 export const toBase64 = (str: string) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
-    : window.btoa(str)
-
+	typeof window === 'undefined'
+		? Buffer.from(str).toString('base64')
+		: window.btoa(str);
 
 /* Send back first category name on showcase */
 export const generateCategoryDisplayName = (categoriesList: Category[]) => {

@@ -16,7 +16,7 @@ const CommonFeatureCard: React.FC<Props> = (props) => {
 
 	return (
 		<div className={styles.commonFeatureCard}>
-			<Image src={iconImageLink} width={40} height={40} alt={altText}/>
+			<Image src={iconImageLink} width={40} height={40} alt={altText} />
 			<h2>{title}</h2>
 			<p>{detail}</p>
 		</div>

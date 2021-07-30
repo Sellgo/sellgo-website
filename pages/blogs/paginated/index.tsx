@@ -3,7 +3,6 @@ import { GetServerSideProps } from 'next';
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router';
 import Modal from 'react-modal';
-import { getPlaiceholder } from 'plaiceholder';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -29,7 +28,6 @@ import { seoData } from '../../../data/SEO/blogsShowcase';
 
 /* Utils */
 import { generatePageURL } from '../../../utils/SEO';
-import { generatePlaceholderImages } from '../../../utils/Blogs';
 
 interface Props {
 	paginatedBlogs: any;

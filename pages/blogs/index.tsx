@@ -28,7 +28,6 @@ import { seoData } from '../../data/SEO/blogsShowcase';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
-import { generatePlaceholderImages } from '../../utils/Blogs';
 
 interface Props {
 	showcaseBlogs: any;
