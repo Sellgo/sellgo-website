@@ -28,10 +28,12 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 	const staticPages = [
 		'pages/index.tsx',
 		'pages/about-us/index.tsx',
+		'pages/affiliates/index.tsx',
+		'pages/affliates-signup/index.tsx',
 		'pages/blogs/index.tsx',
 		'pages/contact/index.tsx',
-		'pages/demo/index.tsx',
 		'pages/contact-sales/index.tsx',
+		'pages/demo/index.tsx',
 		'pages/extension/index.tsx',
 		'pages/leads-tracker/index.tsx',
 		'pages/pricing/index.tsx',
@@ -39,9 +41,10 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 		'pages/product-tracker/index.tsx',
 		'pages/profit-finder/index.tsx',
 		'pages/search-management/index.tsx',
+		'pages/seller-database/index.tsx',
 		'pages/seller-finder/index.tsx',
-		'pages/terms-of-use/index.tsx',
-		'pages/blogs/paginated/index.tsx'
+		'pages/seller-map/index.tsx',
+		'pages/terms-of-use/index.tsx'
 	];
 
 	const staticPagesSitemap = `${staticPages

@@ -1,33 +1,30 @@
 export const newBenefitsData = [
 	{
-		title: 'Amazon Wholesale Sellers',
+		title: 'Advance Product Sourcing',
 		subTitle: 'Streamline Your Amazon Wholesale Business',
-		description: `Obtain all the tools you need to scout, source, and sell profitable, 
-		high-demand products for your Amazon inventory. 
-		Use Sellgo's reliable data and sales analytics to build a 
-		thriving Amazon wholesale business.`,
-		linkLabel: 'Learn more about our Amazon Wholesale resources.',
-		navigateTo: '/',
-		imageUrl: '/productOne.png'
+		description: ``,
+		linkLabel: '',
+		navigateTo: '',
+		imageUrl: '/pfBenefit1_450x270.png'
 	},
 	{
-		title: 'Amazon Private Label Sellers',
-		subTitle: 'Expand Your Amazon Private Label',
+		title: 'Intelligent Profit Calculator',
+		subTitle: 'Find Your Profitable Products Effortlessly',
 		description: `Access the tools you need to grow your Amazon Private Label business. 
 		Sellgo's powerful FBA tools empower private label sellers with the data and resources to
 		 maximize your brand, sales, and profits.`,
-		linkLabel: 'Learn more about our Amazon Private Label resources.',
-		navigateTo: '/',
-		imageUrl: '/productSecond.png'
+		linkLabel: '',
+		navigateTo: '',
+		imageUrl: '/pfBenefit2_450x270.png'
 	},
 	{
-		title: 'Brands, Agencies, and Enterprise',
-		subTitle: 'Connect with the Amazon Network',
-		description: `Uncover new market segments and reach out to thousands of Amazon 
-		sellers to showcase your company, products, or services. Join a network 
-		of existing sellers who are already looking for you. `,
-		linkLabel: 'Learn more about our Brand, Agency, and Enterprise resources.',
-		navigateTo: '/',
-		imageUrl: '/productThird.png'
+		title: 'Big Data Automation',
+		subTitle: 'Less Spreadsheet Distractions',
+		description: `Why bugging your team with gazilion number of daily Spreadsheet in the midst of 
+		constant price changing? Just focus on accurate analytics that matter to your business
+		the most. `,
+		linkLabel: '',
+		navigateTo: '',
+		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

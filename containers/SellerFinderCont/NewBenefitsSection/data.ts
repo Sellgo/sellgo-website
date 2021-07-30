@@ -7,29 +7,28 @@ export const newBenefitsData = [
 		Finder within your scouting process. Probe your competitor's 
 		catalogs for potential products you can take over and source 
 		for your own businesses.`,
-		linkLabel: 'Learn more about our Seller Finder resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit1_450x270.png'
 	},
 	{
-		title: 'Amazon Catalog',
-		subTitle: 'Broaden Your Amazon Catalog',
-		description: `Simply use the Seller Finder to examine 
-		all the competitive sellers for any product listing and then 
-		scan their catalogs for the other products they sell. Lookout 
-		for leads and potential products you can source and sell.`,
-		linkLabel: 'Learn more about our Seller Finder resources.',
-		navigateTo: '/',
+		title: 'Inventory Insight',
+		subTitle: 'Catch Your Competitors` Products',
+		description: `Scan your competition and the products they are 
+		selling now. Spot hidden gems within their catalogs to see 
+		which products you should sell too!`,
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit2_450x270.png'
 	},
 	{
-		title: 'Buy Box',
-		subTitle: 'Compete in the Buy Box',
-		description: `Follow the leads back to the suppliers and 
-		start sourcing the same products. Add the products to your 
-		Buy Box strategy and take over new profitable products.`,
-		linkLabel: 'Learn more about our Seller Finder resources.',
-		navigateTo: '/',
+		title: 'Amazon Catalog',
+		subTitle: 'Magnify the Buy Box',
+		description: `Spot all the competitve sellers in the Buy Box 
+		and examine their catalogs for the other products they sell. 
+		Lookout for leads and potential products you can take over.`,
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/pfBenefit3_450x270.png'
 	}
 ];

@@ -208,7 +208,7 @@ const AboutUsPage: React.FC<Props> = () => {
 							</a>
 							<p>
 								or visit{' '}
-								<Link href="/affiliate-program">
+								<Link href="/affiliates" passHref>
 									<a className="anchor">Affiliate Program</a>
 								</Link>
 							</p>
@@ -224,7 +224,7 @@ const AboutUsPage: React.FC<Props> = () => {
 							</a>
 							<p>
 								or visit{' '}
-								<Link href="/support">
+								<Link href="/contact" passHref>
 									<a className="anchor">Contact Us</a>
 								</Link>
 							</p>

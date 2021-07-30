@@ -1,0 +1,59 @@
+@import '../../styles/guidelines';
+
+.approvalCardWrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.approvalCard {
+	min-width: 20rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media only screen and(max-width: 1200px) {
+		margin-right: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	.stepNumber {
+		width: 4rem;
+		height: 4rem;
+		background-color: $grey_1;
+		border-radius: 0.3rem;
+		font-size: $fontsize_subtitle_20;
+		font-weight: $fontweight_bold;
+		color: $prim_dark_2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.stepTitle {
+		color: $prim_dark_2;
+		font-weight: $fontweight_bold;
+		font-size: $fontsize_content_16;
+		line-height: $fontlineheight_content_20;
+		margin-top: 1.4rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.stepDescription {
+		color: $prim_dark_2;
+		font-size: $fontsize_content_12;
+		font-weight: $fontweight_regular;
+		line-height: $fontlineheight_content_20;
+		max-width: 23rem;
+	}
+}
+
+.line {
+	margin-top: 2rem;
+	border-top: 1px solid $border-color-1;
+	width: 10rem;
+
+	@media only screen and(max-width: 1200px) {
+		display: none;
+	}
+}

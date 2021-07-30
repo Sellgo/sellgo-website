@@ -1,0 +1,57 @@
+@import '../../styles/guidelines';
+
+.stepperWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.stepWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+	width: 20%;
+	height: 10rem;
+
+	.step {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.stepTitle {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin-top: 1.4rem;
+	font-size: $fontsize_content_16;
+	color: $prim_dark_2;
+	font-weight: $fontweight_semibold;
+
+	@media only screen and(max-width: 1650px) {
+		width: 9rem;
+	}
+
+	@media only screen and(max-width: 900px) {
+		display: none;
+	}
+}
+
+.line {
+	position: absolute;
+	left: calc(-50% + 3rem);
+	right: calc(50% + 3rem);
+	margin-top: 1.5rem;
+	border-top: 1px solid $border-color-1;
+
+	@media only screen and(max-width: 900px) {
+		display: none;
+	}
+}

@@ -7,7 +7,9 @@ import styles from './index.module.scss';
 import CTAButton from '../../CTAButton';
 import GemGenerator from '../../GemGenerator';
 import PricePlanToggleButton from '../../PricePlanToggleButton';
-import AppConfig from '../../../config';
+
+/* Utils */
+import { createCheckoutLink } from '../../../utils/Referral';
 
 interface Props {
 	name: string;
@@ -21,7 +23,7 @@ interface Props {
 	// used for pricing cards on comparision table
 	withToggle?: boolean;
 	className?: string;
-	handleChange?: any;
+	handleChange?: () => void;
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
@@ -36,9 +38,10 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		handleChange
 	} = props;
 
-	const checkoutLink = `${AppConfig.APP_URL}/subscription?mode=${
-		isMonthly ? 'monthly' : 'yearly'
-	}&type=${name.toLowerCase()}`;
+	const checkoutLink = createCheckoutLink(
+		isMonthly ? 'monthly' : 'yearly',
+		name
+	);
 
 	return (
 		<div className={className}>
@@ -81,7 +84,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				)}
 			</div>
 
-			{withToggle && (
+			{withToggle && handleChange && (
 				<div className={styles.toggleWrapper}>
 					<PricePlanToggleButton
 						isMonthly={isMonthly}

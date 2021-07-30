@@ -1,0 +1,15 @@
+@import '../../styles/guidelines';
+
+.multiSelectBox {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	.checkBoxInput {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+}

@@ -15,12 +15,15 @@ const HeroBox: React.FC<Props> = () => {
 			<div className={`page-container ${styles.herobox}`}>
 				<div className={`${styles.heroboxText}`}>
 					<h1 className={`${styles.heading}`}>
-						Start Selling <br /> On Amazon Today
+						The Amazon Tools Trusted by Top Wholesale, Brands and Private Label
+						Sellers
 					</h1>
 					<p className={`${styles.tagline}`}>
 						Scout, source, and sell high demand, winning products
 						<br />
-						for your Wholesale business with prime FBA tools.
+						for your Amazon business with pro FBA tools.
+						<br />
+						Powerful Analytics. Powerful Selling.
 					</p>
 
 					<CTAButton
@@ -29,7 +32,7 @@ const HeroBox: React.FC<Props> = () => {
 						navigateTo="/pricing?type=monthly-and-annual-plans"
 						className={styles.ctaHeroBox}
 					>
-						Pay Only $1 to Sell
+						Get Started
 					</CTAButton>
 
 					<small className={`${styles.ctaOverText}`}>

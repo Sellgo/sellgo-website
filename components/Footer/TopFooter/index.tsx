@@ -49,8 +49,18 @@ const TopFooter: React.FC<Props> = () => {
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
+					<Link href="/leads-tracker" passHref>
+						<a>Leads Tracker</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
 					<Link href="/product-tracker" passHref>
 						<a>Product Tracker</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/seller-database" passHref>
+						<a>Seller Database</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
@@ -58,18 +68,28 @@ const TopFooter: React.FC<Props> = () => {
 						<a>Seller Finder</a>
 					</Link>
 				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/seller-map" passHref>
+						<a>Seller Map</a>
+					</Link>
+				</li>
 			</ul>
 
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Pricing</li>
 				<li className="footerNavigationLinks">
-					<Link href="/pricing?type=free-trial" passHref>
-						<a>Free Trial</a>
+					<Link href="/pricing?type=wholesale" passHref>
+						<a>Pay $1 for a day </a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
 					<Link href="/pricing" passHref>
 						<a>Monthly and Annual Plans</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/pricing?type=seller-scout-pro" passHref>
+						<a>Seller Scout Pro</a>
 					</Link>
 				</li>
 			</ul>
@@ -79,6 +99,11 @@ const TopFooter: React.FC<Props> = () => {
 				<li className="footerNavigationLinks">
 					<Link href="/blogs" passHref>
 						<a>Blogs</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/affiliates" passHref>
+						<a>Affiliate Program</a>
 					</Link>
 				</li>
 			</ul>

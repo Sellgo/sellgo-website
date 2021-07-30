@@ -6,8 +6,8 @@ export const productsDetails = [
 		high-demand products for your Amazon inventory. 
 		Use Sellgo's reliable data and sales analytics to build a 
 		thriving Amazon wholesale business.`,
-		linkLabel: 'Learn more about our Amazon Wholesale resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/productSection1.png'
 	},
 	{
@@ -16,8 +16,8 @@ export const productsDetails = [
 		description: `Access the tools you need to grow your Amazon Private Label business. 
 		Sellgo's powerful FBA tools empower private label sellers with the data and resources to
 		 maximize your brand, sales, and profits.`,
-		linkLabel: 'Learn more about our Amazon Private Label resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/productSection2.png'
 	},
 	{
@@ -26,8 +26,8 @@ export const productsDetails = [
 		description: `Uncover new market segments and reach out to thousands of Amazon 
 		sellers to showcase your company, products, or services. Join a network 
 		of existing sellers who are already looking for you. `,
-		linkLabel: 'Learn more about our Brand, Agency, and Enterprise resources.',
-		navigateTo: '/',
+		linkLabel: '',
+		navigateTo: '',
 		imageUrl: '/productSection3.png'
 	}
 ];

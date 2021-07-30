@@ -1,26 +1,23 @@
 export const recomDataCardDetails = [
 	{
-		title: 'Free Trial',
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-			sed do eiusmod tempor adipiscing elit, sed do eiusmod tempor`,
+		title: 'Search Management',
+		description: `Catalog management tool to help bulk analyze suppliers' list 
+		and organize winning products.`,
 		navigateLabel: 'Learn more about the feature',
-		navigateTo: '/'
+		navigateTo: '/search-management'
 	},
 	{
-		title: 'Free Trial',
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-			sed do eiusmod tempor adipiscing elit, sed do eiusmod tempor`,
+		title: 'Seller Finder',
+		description: `Seller scouting tool to scope out competitors with profitable 
+		products and brands you can add to your own inventory.`,
 		navigateLabel: 'Learn more about the feature',
-		navigateTo: '/'
+		navigateTo: '/seller-finder'
 	},
 	{
-		title: 'Free Trial',
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-			sed do eiusmod tempor adipiscing elit, sed do eiusmod tempor`,
+		title: 'Product Tracker',
+		description: `Product research tool to help you analyze sales performances, 
+		daily revenue, and profit margins to grow your Amazon business.`,
 		navigateLabel: 'Learn more about the feature',
-		navigateTo: '/'
+		navigateTo: '/product-tracker'
 	}
 ];

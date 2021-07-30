@@ -18,7 +18,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection}>
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-					Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+					The Most Innovative Amazon Wholesale Tools <br />
+					to Catch Your Opportunity
 				</h2>
 
 				<div className={styles.benefitsCardsWrapper}>
@@ -34,15 +35,15 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading">
-					Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit
+					Pinpoint Profit Search - The Most Powerful Sourcing Tools Available
 				</h2>
 				<CTAButton
 					type="primary"
 					size="small"
-					navigateTo="/"
+					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Get Started
+					Start Sourcing with Sellgo Today
 				</CTAButton>
 			</div>
 		</section>

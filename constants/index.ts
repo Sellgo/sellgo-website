@@ -2,7 +2,7 @@ import { countryList } from '../data/Contact/countryList';
 
 export const plansWithHeaderGradient = [
 	'Starter',
-	'Suite',
+	'Team',
 	'Professional',
 	'Browser Extension',
 	'Product Research',
@@ -11,14 +11,14 @@ export const plansWithHeaderGradient = [
 
 export const pricingCardHeaderGradients: { [key: string]: string } = {
 	Starter: `linear-gradient(90deg,#FDDBBD,#7F6E5F)`,
-	Suite: `linear-gradient(90deg,#FAB57A,#7D5B3D)`,
-	Professional: `linear-gradient(90deg,#EA8731,#754419)`,
+	Professional: `linear-gradient(90deg,#FAB57A,#7D5B3D)`,
+	Team: `linear-gradient(90deg,#EA8731,#754419)`,
 	'Browser Extension': `linear-gradient(90deg,#FDDBBD,#7F6E5F)`,
 	'Product Research': `linear-gradient(90deg,#FAB57A,#7D5B3D)`,
 	'Seller Research': `linear-gradient(90deg,#EA8731,#754419)`
 };
 
-export const hideNavigationOnRoutes = ['/some-route'];
+export const hideNavigationOnRoutes = ['/affiliates-signup'];
 
 /* Employess size list on contact forms */
 export const employSizeList = [

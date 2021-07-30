@@ -27,7 +27,7 @@ const ClosingCTASection: React.FC<Props> = () => {
 						navigateTo="/pricing"
 						className={styles.closingCTA}
 					>
-						Pay Only $1 to Sell
+						Get started
 					</CTAButton>
 
 					<small>

@@ -1,11 +1,14 @@
 import React from 'react';
+import axios from 'axios';
+import { GetStaticProps } from 'next';
 
 /* Containers */
 import HeroBox from '../../containers/SearchManagementCont/HeroBox';
 import InfoSection from '../../containers/SearchManagementCont/InfoSection';
 import NewBenefitsSection from '../../containers/SearchManagementCont/NewBenefitsSection';
-import CommonFeaturesSection from '../../containers/SearchManagementCont/CommomFeaturesSection';
+import CommonFeaturesSection from '../../containers/SearchManagementCont/CommonFeaturesSection';
 import RecommendationSection from '../../containers/SearchManagementCont/RecommendationSection';
+import FAQSection from '../../containers/SearchManagementCont/FAQSection';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -16,9 +19,19 @@ import { seoData } from '../../data/SEO/searchManagement';
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
 
-interface Props {}
+/* Config */
+import AppConfig from '../../config';
 
-const SearchManagementContPage: React.FC<Props> = () => {
+/* Types */
+import { FAQDetails } from '../../interfaces/FAQ';
+
+interface Props {
+	faqDetails: FAQDetails;
+}
+
+const SearchManagementContPage: React.FC<Props> = (props) => {
+	const { faqDetails } = props;
+
 	return (
 		<>
 			<SEOHead
@@ -32,9 +45,23 @@ const SearchManagementContPage: React.FC<Props> = () => {
 			<InfoSection />
 			<NewBenefitsSection />
 			<CommonFeaturesSection />
+			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />
 		</>
 	);
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+	const response = await axios.get(
+		`${AppConfig.FAQ_BUCKET}/searchManagement.json`
+	);
+	const { data } = response;
+	return {
+		props: {
+			faqDetails: data
+		},
+		revalidate: 60 * 15 // 15 minutes
+	};
 };
 
 export default SearchManagementContPage;

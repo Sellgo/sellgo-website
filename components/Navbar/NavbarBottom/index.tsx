@@ -40,7 +40,11 @@ const NavbarBottom: React.FC<Props> = () => {
 					</li>
 
 					<li className={styles.navbarBottomLink}>
-						<Link href="/pricing" passHref>
+						<Link
+							href="/pricing?type=monthly-and-annual-plans"
+							passHref
+							prefetch={false}
+						>
 							<a className={styles.navLink}>Pricing</a>
 						</Link>
 					</li>
@@ -59,10 +63,10 @@ const NavbarBottom: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="/pricing"
+				navigateTo="/pricing?type=wholesale"
 				className={styles.navbarCTA}
 			>
-				Pay Only $1 to Sell
+				Get started
 			</CTAButton>
 		</div>
 	);

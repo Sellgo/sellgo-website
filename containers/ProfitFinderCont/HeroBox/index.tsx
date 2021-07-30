@@ -22,7 +22,7 @@ const HeroBox: React.FC<Props> = () => {
 				src="/pfHerobox_600x360.png"
 				width={600}
 				height={360}
-				alt="Product Finder Product Cover Image"
+				alt="Profit Finder Product Cover Image"
 			/>
 
 			<div className={styles.heroBox__Details}>
@@ -36,7 +36,7 @@ const HeroBox: React.FC<Props> = () => {
 					<h2 className={styles.subHeading}>Profit Finder</h2>
 				</div>
 				<h1 className={styles.heading}>
-					Discover Best Selling Products on Amazon
+					Calculate your profit for each product on the fly
 				</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"

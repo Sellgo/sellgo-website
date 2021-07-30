@@ -7,6 +7,9 @@ import styles from './index.module.scss';
 /* Components */
 import User from '../../Icons/Person';
 
+/* Config */
+import AppConfig from '../../../config';
+
 interface Props {}
 
 const NavbarTop: React.FC<Props> = () => {
@@ -22,12 +25,12 @@ const NavbarTop: React.FC<Props> = () => {
 			<ul className={styles.navbarTopLinksList}>
 				<li className={styles.navbarTopLink}>
 					<a
-						href="https://app.sellgo.com/"
+						href={AppConfig.APP_URL}
 						className={styles.navbarLink}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Go to my account
+						Login to my account
 					</a>
 				</li>
 				<li className={styles.navbarTopLink}>

@@ -5,7 +5,7 @@ export const accordionData = [
 		profitable products you can add to your own Amazon business!`,
 		listDetails: [],
 		ctaLinkDetails: {}
-	},
+	} /*
 	{
 		title: 'Pricing Overview',
 		description: `Tools and pricing plans that grow with you and your business.`,
@@ -18,7 +18,7 @@ export const accordionData = [
 			name: 'View all Pricing plans',
 			linkTo: '/pricing?type=monthly-and-annual-plans'
 		}
-	},
+	}, */,
 	{
 		title: 'Features',
 		description: `Scout out competitve sellers and discover products that can bring your 
