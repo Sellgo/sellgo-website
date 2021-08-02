@@ -30,7 +30,11 @@ const Layout: React.FC<Props> = ({ children }) => {
 
 	useEffect(() => {
 		// track only on production and window based environment: fullstory and analytics
-		if (!isSSR && Cookies.get('consent') === 'true') {
+		if (
+			process.env.NEXT_PUBLIC_NODE_ENV === 'production' &&
+			!isSSR &&
+			Cookies.get('consent') === 'true'
+		) {
 			analytics.page({
 				url: generatePageURL(asPath),
 				title: window.document.title,
