@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Cookies from 'js-cookie';
-import { useRouter } from 'next/router';
 
 /* Styles */
 import styles from './index.module.scss';
+import analytics from '../../analytics';
 
 interface Props {}
 
-const CookieConsentBanner: React.FC<Props> = () => {
-	const router = useRouter();
+const analyticsPlugins = ['google-analytics', 'fullstory'];
 
-	const handleClick = () => {
+const CookieConsentBanner: React.FC<Props> = () => {
+	const [hideCookieBanner, setHideCookieBanner] = useState(
+		() => Cookies.get('consent') === 'true'
+	);
+
+	const handleClick = async () => {
 		Cookies.set('consent', 'true', { expires: 365, path: '/' });
-		router.reload();
+		setHideCookieBanner(true);
+
+		// @ts-ignore
+		await analytics.plugins.enable(analyticsPlugins);
 	};
+
+	if (hideCookieBanner) {
+		return null;
+	}
 
 	return (
 		<>

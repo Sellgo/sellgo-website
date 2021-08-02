@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Cookies from 'js-cookie';
 
 /* Analytics */
 import analytics from '../../analytics';
@@ -16,7 +17,9 @@ import { hideNavigationOnRoutes } from '../../constants';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
-import { isSSR, isCookieConsentAccepted } from '../../utils';
+
+/* Utils */
+import { isSSR } from '../../utils';
 
 interface Props {
 	children: React.ReactNode;
@@ -27,24 +30,20 @@ const Layout: React.FC<Props> = ({ children }) => {
 
 	useEffect(() => {
 		// track only on production and window based environment: fullstory and analytics
-		if (
-			process.env.NEXT_PUBLIC_ENV === 'production' &&
-			!isSSR &&
-			isCookieConsentAccepted
-		) {
+		if (!isSSR && Cookies.get('consent') === 'true') {
 			analytics.page({
 				url: generatePageURL(asPath),
 				title: window.document.title,
 				path: asPath
 			});
 		}
-	}, [asPath, isCookieConsentAccepted]);
+	}, [asPath]);
 
 	return (
 		<>
 			<Head>
 				{/* Facebook Pixel Code */}
-				{isCookieConsentAccepted && (
+				{Cookies.get('consent') === 'true' && (
 					<script
 						defer
 						// eslint-disable-next-line react/no-danger
@@ -68,7 +67,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 			<MobileNavBar />
 			{children}
 			<Footer />
-			{!isCookieConsentAccepted && <CookieConsentBanner />}
+			{<CookieConsentBanner />}
 		</>
 	);
 };
