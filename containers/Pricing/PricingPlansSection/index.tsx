@@ -54,12 +54,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						handleChange={() => setIsMonthly(!isMonthly)}
 						className={styles.paymentModeToggle}
 					/>
-
-					<PricingInfoAlert
-						{...infoAlertDetails}
-						background="#F2EFE4"
-						className={styles.singleLineAlert}
-					/>
 				</div>
 			</section>
 

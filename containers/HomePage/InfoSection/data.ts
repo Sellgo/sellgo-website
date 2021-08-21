@@ -2,7 +2,7 @@ export const featureSectionList = [
 	{
 		title: 'Go Private Label',
 		description: `Amazon tools for Private Label sellers to find new, 
-		profitable, and replensishable white label products to grow your 
+		profitable, and replenishable white label products to grow your 
 		Private Label business.`,
 		featureList: [
 			'Product Analysis',
