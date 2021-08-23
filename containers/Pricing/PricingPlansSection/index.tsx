@@ -6,7 +6,6 @@ import { Element } from 'react-scroll';
 import styles from './index.module.scss';
 
 /* Components */
-import PricingInfoAlert from '../../../components/PricingInfoAlert';
 import PricingPlansCard from '../../../components/PricingPlansCard';
 import AllfeaturesTable from '../../../components/AllFeaturesTable';
 import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
@@ -19,23 +18,17 @@ import { getAllFeaturesForPlans } from '../../../data/Pricing';
 interface Props {
 	planName: string;
 	summary: string;
-	infoAlertMessage: any;
 	productsIncluded: any;
 	selectedPlanType: number;
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
-	const { planName, summary, productsIncluded, infoAlertMessage } = props;
+	const { planName, summary, productsIncluded } = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
 
 	/* Get all features based on plan names */
 	const allPlanFeatures = getAllFeaturesForPlans(planName);
-
-	/* Select the message alert message based on mode */
-	const infoAlertDetails = isMonthly
-		? infoAlertMessage.monthly
-		: infoAlertMessage.yearly;
 
 	return (
 		<>

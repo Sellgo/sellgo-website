@@ -16,13 +16,6 @@ const GemGenerator: React.FC<Props> = (props) => {
 			gems = [<Gem key={uuid()} width={12} height={12} fill="#fc7900" />];
 			break;
 		}
-		case 'Suite': {
-			gems = [
-				<Gem key={uuid()} width={12} height={12} fill="#fc7900" />,
-				<Gem key={uuid()} width={12} height={12} fill="#5dc560" />
-			];
-			break;
-		}
 
 		case 'Professional': {
 			gems = [
