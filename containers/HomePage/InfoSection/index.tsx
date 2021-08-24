@@ -31,14 +31,6 @@ const InfoSection: React.FC<Props> = () => {
 
 				<div className={styles.infoSectionCTAWrapper}>
 					<CTAButton
-						type="primary"
-						size="small"
-						navigateTo="/pricing?type=wholesale"
-						className={styles.infoSectionCTA}
-					>
-						Try Free Tools
-					</CTAButton>
-					<CTAButton
 						type="secondary"
 						size="small"
 						navigateTo="/demo"

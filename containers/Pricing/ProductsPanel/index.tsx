@@ -121,7 +121,6 @@ const ProductsPanel: React.FC<Props> = (props) => {
 							<PricingPlansSection
 								planName={plan.planName}
 								summary={plan.summary}
-								infoAlertMessage={plan.infoAlertMessage}
 								productsIncluded={plan.productsIncluded}
 								selectedPlanType={selectedPlanType}
 							/>

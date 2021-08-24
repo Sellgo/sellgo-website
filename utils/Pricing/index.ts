@@ -2,7 +2,7 @@
 import { KeyValuePair } from '../../interfaces';
 
 /* Default active tab */
-export const DEFAULT_TAB_VALUE = 2;
+export const DEFAULT_TAB_VALUE = 1;
 
 /* Map plan names with tabs */
 export const plansTabMapper: KeyValuePair = {

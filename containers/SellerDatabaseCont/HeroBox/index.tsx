@@ -30,7 +30,7 @@ const HeroBox: React.FC<Props> = () => {
 						width={30}
 						height={30}
 						fill="#ef7818"
-						name="sellerFinder"
+						name="sellerDatabase"
 					/>
 					<h2 className={styles.subHeading}>Seller Database</h2>
 				</div>
