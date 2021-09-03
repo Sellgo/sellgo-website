@@ -40,7 +40,7 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 					navigateLabel="Premium Tools"
 					head={`Start selling on Amazon today with Sellgo's premium tools`}
 					desc={`	Want to try our advanced Amazon tools? Review our FBA tools and pricing
-									packages.Our premium tools empower you to track and research more products to
+									packages. Our premium tools empower you to track and research more products to
 										optimize your Amazon business.`}
 					background="#F2EFE4"
 				/>
