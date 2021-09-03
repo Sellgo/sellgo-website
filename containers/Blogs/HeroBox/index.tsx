@@ -11,6 +11,7 @@ import { fallBackImageURL, imageLoaderForBlogs } from '../../../utils/Blogs';
 import { FeaturedImage, Author } from '../../../interfaces/Blogs';
 
 interface Props {
+	date: Date;
 	title: string;
 	author: Author;
 	shortSummary: string;
@@ -18,7 +19,7 @@ interface Props {
 }
 
 const HeroBox: React.FC<Props> = (props) => {
-	const { title, author, shortSummary, featuredImage } = props;
+	const { date, title, author, shortSummary, featuredImage } = props;
 
 	return (
 		<section className={styles.heroboxWrapper}>
@@ -26,6 +27,9 @@ const HeroBox: React.FC<Props> = (props) => {
 				<div className={styles.herobox__Left}>
 					<div className={`page-container ${styles.contentWrapper}`}>
 						<h1>{title}</h1>
+						<p>
+							Published on: <span>{new Date(date).toDateString()}</span>
+						</p>
 						<p>
 							Written by{' '}
 							<span>
