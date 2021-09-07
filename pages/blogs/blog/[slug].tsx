@@ -33,6 +33,7 @@ import {
 } from '../../../interfaces/Blogs';
 
 interface Props {
+	date: Date;
 	author: Author;
 	seo: any;
 	content: string;
@@ -51,6 +52,7 @@ const BlogPage: React.FC<Props> = (props) => {
 		slug,
 		featuredImage,
 		title,
+		date,
 		author,
 		shortSummary,
 		keywords,
@@ -69,6 +71,7 @@ const BlogPage: React.FC<Props> = (props) => {
 			<HeroBox
 				title={title}
 				author={author}
+				date={date}
 				shortSummary={shortSummary}
 				featuredImage={featuredImage}
 			/>
@@ -125,6 +128,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	}
 
 	const {
+		date,
 		author,
 		title,
 		content,
@@ -138,6 +142,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 	return {
 		props: {
+			date,
 			author: author.node,
 			title,
 			content,
