@@ -15,8 +15,8 @@ const InfoSection: React.FC<Props> = () => {
 					<h2>Wholesale Sourcing Has Never Been So Easy</h2>
 					<p>
 						Welcome to a better sourcing experience. The intelligent bulk
-						calculator, Leads Tracker, calculates profit in the background
-						for each product based on your supplier price.
+						calculator, Leads Tracker, calculates profit in the background for
+						each product based on your supplier price.
 					</p>
 				</div>
 				<div className={styles.infoSection__Image}>
