@@ -8,7 +8,7 @@ export const commonFeaturesList = [
 	},
 	{
 		title: 'Business Breakdowns',
-		detail: `Highlight any seller and breakdown their business' model, brands, 
+		detail: `Highlight any seller and break down their business model, brands, 
 		products, and more.`,
 		iconImageLink: '/businesstimeIcon.svg',
 		alt: `Describe the icon here`

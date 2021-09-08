@@ -5,12 +5,12 @@ export const approvalSteps = [
 	},
 	{
 		title: 'Qualify',
-		description: `Get Approved And Receive Your Affliate Links 
+		description: `Get Approved And Receive Your Affiliate Links 
 			And Marketing Materials`
 	},
 	{
 		title: 'Earn',
-		description: `Start Sharing Your Affliate Link With Your 
+		description: `Start Sharing Your Affiliate Link With Your 
 			Audience And Earn`
 	}
 ];

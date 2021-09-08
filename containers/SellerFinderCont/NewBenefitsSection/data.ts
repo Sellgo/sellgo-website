@@ -24,7 +24,7 @@ export const newBenefitsData = [
 	{
 		title: 'Amazon Catalog',
 		subTitle: 'Magnify the Buy Box',
-		description: `Spot all the competitve sellers in the Buy Box 
+		description: `Spot all the competitive sellers in the Buy Box 
 		and examine their catalogs for the other products they sell. 
 		Lookout for leads and potential products you can take over.`,
 		linkLabel: '',

@@ -14,8 +14,8 @@ const InfoSection: React.FC<Props> = () => {
 				<div className={styles.infoSection__Text}>
 					<h2>Wholesale Sourcing Has Never Been So Easy</h2>
 					<p>
-						Welcome to better sourcing experience. The intelligent bulk
-						calculator, Leads Tracker, that calculates profit in the background
+						Welcome to a better sourcing experience. The intelligent bulk
+						calculator, Leads Tracker, calculates profit in the background
 						for each product based on your supplier price.
 					</p>
 				</div>

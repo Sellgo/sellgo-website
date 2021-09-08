@@ -15,9 +15,9 @@ const InfoSection: React.FC<Props> = () => {
 					<h2>The Perfect Seller Locator</h2>
 					<p>
 						Whether you&apos;re looking for new products to sell or you&apos;re
-						an agency who provides services to Amazon sellers, locate thousands
+						an agency that provides services to Amazon sellers, locate thousands
 						of sellers across the planet. The Seller Map shows you a global map
-						and narrow down where sellers are located.
+						and narrows down where sellers are located.
 					</p>
 				</div>
 				<div className={styles.infoSection__Image}>

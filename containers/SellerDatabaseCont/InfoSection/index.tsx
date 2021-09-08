@@ -16,7 +16,7 @@ const InfoSection: React.FC<Props> = () => {
 					<p>
 						As Amazon selling becomes more and more popular, there has been an
 						emergence of sellers joining Amazon FBA and FBM. What if you could
-						find hundred of thousands of sellers instantly? Now you can.
+						find hundreds of thousands of sellers instantly? Now you can.
 					</p>
 				</div>
 				<div className={styles.infoSection__Image}>

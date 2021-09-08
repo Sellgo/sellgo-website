@@ -82,7 +82,7 @@ export const benefitsData = [
 		benefitSummary: `Evaluate Key Performance Metrics`,
 		details: `Energize and organize your product management system with meaningful 
 		key performance indicators. Dissect key metrics like average profit margins, sales ranks, 
-		daily revenue, and average return on investment and make business decisions based off of real-time, 
+		daily revenue, and average returns on investment and make business decisions based off of real-time, 
 		authentic data.`,
 		popularFeaturesList: [
 			{

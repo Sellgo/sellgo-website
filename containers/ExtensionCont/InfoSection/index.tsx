@@ -16,8 +16,8 @@ const InfoSection: React.FC<Props> = () => {
 					<p>
 						Sellgo&apos;s Chrome Extension is definitely the first important
 						step in your Amazon selling workflow. Get a bird&apos;s-eye view of
-						a market when you browse through Amazon, it&apos;s easy, quick and
-						practical. Start your business growth from browser extension.
+						a market when you browse through Amazon, it&apos;s easy, quick, and
+						practical. Start your business growth from the browser extension.
 					</p>
 					<p></p>
 				</div>
