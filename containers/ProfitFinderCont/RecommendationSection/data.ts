@@ -1,7 +1,7 @@
 export const recomDataCardDetails = [
 	{
 		title: 'Search Management',
-		description: `Catalog management tool to help bulk analyze suppliers' list 
+		description: `Catalog management tool to help bulk analyze suppliers' lists 
 		and organize winning products.`,
 		navigateLabel: 'Learn more about the feature',
 		navigateTo: '/search-management'

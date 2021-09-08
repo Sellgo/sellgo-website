@@ -23,13 +23,13 @@ export const newBenefitsData = [
 		imageUrl: '/ptrBenefit2_450x270.png'
 	},
 	{
-		title: 'Key Performance Metics',
+		title: 'Key Performance Metrics',
 		subTitle: 'Evaluate Key Performance Metrics',
 		description: `Energize and organize your product management 
 		system with meaningful key performance indicators. Dissect 
 		key metrics like average profit margins, sales ranks, daily 
-		revenue, and average return on investment and make business 
-		decisions based off of real-time, authentic data.`,
+		revenue, and average returns on investment and make business 
+		decisions based on real-time, authentic data.`,
 		linkLabel: '',
 		navigateTo: '',
 		imageUrl: '/ptrBenefit3_450x270.png'

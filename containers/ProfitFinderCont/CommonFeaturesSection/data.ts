@@ -13,7 +13,7 @@ export const commonFeaturesList = [
 	},
 	{
 		title: 'Inventory Insight',
-		detail: `Get inventory data and make informed decisions based on supply, demand and market share.`,
+		detail: `Get inventory data and make informed decisions based on supply, demand, and market share.`,
 		iconImageLink: '/inventoryIcon.svg',
 		alt: `Describe the icon here`
 	},

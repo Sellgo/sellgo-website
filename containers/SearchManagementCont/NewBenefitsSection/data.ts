@@ -28,10 +28,10 @@ export const newBenefitsData = [
 		title: 'Catalog Errors Alerts',
 		subTitle: 'Find Unique Opportunities',
 		description: `With thousands of products within a single 
-		catalog, data from supplier can get mixed up! Get alerts when 
+		catalog, data from suppliers can get mixed up! Get alerts when 
 		you upload catalogs with file errors including missing ASINs, 
 		repetitive SKUs, and more. Find unique opportunities beyond 
-		the erronous product identifier that other sellers missing out.`,
+		the erroneous product identifier that other sellers are missing out on.`,
 		linkLabel: '',
 		navigateTo: '',
 		imageUrl: '/smBenefit3_450x270.png'

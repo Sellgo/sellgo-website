@@ -21,7 +21,7 @@ const RecommendationSection: React.FC<Props> = () => {
 					The Profit Finder tool is just one part of Sellgo&apos;s toolbox to
 					help your business grow.
 					<br />
-					While each product is amazing on their own, they work best when used
+					While each product is amazing on its own, they work best when used
 					alongside one another.
 				</p>
 

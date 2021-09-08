@@ -13,7 +13,7 @@ export const newBenefitsData = [
 		title: 'Seller Data',
 		subTitle: 'Gain Inside Knowledge on Amazon Businesses',
 		description: `Each seller's information includes their name, 
-		business entity, address, brands, products and more.`,
+		business entity, address, brands, products, and more.`,
 		linkLabel: '',
 		navigateTo: '',
 		imageUrl: '/pfBenefit2_450x270.png'

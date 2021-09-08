@@ -12,7 +12,9 @@ const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.heroBox}`}>
-				<h1 className={styles.heroBoxTitle}>Sellgo Affliate Partner Program</h1>
+				<h1 className={styles.heroBoxTitle}>
+					Sellgo Affiliate Partner Program
+				</h1>
 				<h2 className={styles.heroBoxSubtitle}>Get Paid to Promote Sellgo</h2>
 				<p className={styles.heroBoxContent}>
 					Earn <span className={`${styles.bold}`}>25%</span> UNLIMITED
@@ -31,7 +33,7 @@ const HeroBox: React.FC<Props> = () => {
 				</CTAButton>
 
 				<p className={styles.heroBoxContent}>
-					Already an affliate?
+					Already an affiliate?
 					<a
 						href="https://sellgo.getrewardful.com/login"
 						target="_blank"

@@ -1,7 +1,7 @@
 export const commonFeaturesList = [
 	{
 		title: 'Reveal Product Insights',
-		detail: `Evaluate dozens of products and gain in-depth insight for any product including sales 
+		detail: `Evaluate dozens of products and gain in-depth insight into any product including sales 
 		estimations, seller rankings, profit margins using data directly from Amazon.`,
 		iconImageLink: '/eyeIcon.svg',
 		alt: `Describe the icon here`

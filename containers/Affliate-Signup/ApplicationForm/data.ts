@@ -1,5 +1,5 @@
 export const typesOfUsersData = [
-	'Affliate Marketer',
+	'Affiliate Marketer',
 	'Amazon Seller',
 	'Consultant',
 	'Course Owner',
@@ -18,7 +18,7 @@ export const businessModelsData = [
 	'Retail/ Online Arbitrage',
 	'Entrepreneurship',
 	'Shopify',
-	'Affliate Marketing',
+	'Affiliate Marketing',
 	'Other'
 ];
 
