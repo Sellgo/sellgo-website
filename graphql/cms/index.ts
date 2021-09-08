@@ -98,6 +98,7 @@ export const GET_BLOG_BY_SLUG = gql`
 					firstName
 				}
 			}
+			date
 			title
 			slug
 			content

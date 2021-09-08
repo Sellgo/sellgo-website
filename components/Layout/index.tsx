@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 /* Components */
@@ -9,17 +9,35 @@ import Footer from '../Footer';
 /* Constants */
 import { hideNavigationOnRoutes } from '../../constants';
 
+/* Utils */
+import { isSSR } from '../../utils';
+import { generatePageURL } from '../../utils/SEO';
+
+/* Analytics */
+import analytics from '../../analytics';
+
 interface Props {
 	children: React.ReactNode;
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
 	const router = useRouter();
-	const currentPath = router.pathname || '';
+	const { asPath } = router;
+
+	useEffect(() => {
+		// track only on production and window based environment: fullstory and analytics
+		if (process.env.NEXT_PUBLIC_NODE_ENV === 'production' && !isSSR) {
+			analytics.page({
+				url: generatePageURL(asPath),
+				title: window.document.title,
+				path: asPath
+			});
+		}
+	}, [asPath]);
 
 	return (
 		<>
-			{!hideNavigationOnRoutes.includes(currentPath) && <Navbar />}
+			{!hideNavigationOnRoutes.includes(asPath) && <Navbar />}
 			<MobileNavBar />
 			{children}
 			<Footer />
