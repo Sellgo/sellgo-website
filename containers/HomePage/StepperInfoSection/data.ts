@@ -57,8 +57,8 @@ export const productsDetails = [
 		title: 'Profit Finder',
 		subTitle: 'Calculate Bulk Profit On The Fly',
 		description: `The Profit Finder calculates your profit for each product based on 
-		supplier price. It compares all of the products in Amazon database to identify brands
-		and the fast furnover, high profit items to sell on Amazon. We love it, you'll love it,
+		supplier price. It compares all of the products in Amazon's database to identify brands
+		and the fast turnover, high profit items to sell on Amazon. We love it, you'll love it,
 		and your supplier will love it too!`,
 		linkLabel: 'Learn more about Sellgo Profit Finder.',
 		navigateTo: '/profit-finder',
@@ -76,7 +76,7 @@ export const productsDetails = [
 	},
 	{
 		title: 'Product Tracker',
-		subTitle: 'Pricing, Inventory and Market Share Tracking',
+		subTitle: 'Pricing, Inventory, and Market Share Tracking',
 		description: `Get an overview of product pricing, including benchmark and tracking, market 
 		share data, and trendspotting. Make intelligent price decisions to drive sales based on 
 		comprehensive market data. `,

@@ -1,9 +1,9 @@
 export const accordionData = [
 	{
 		title: 'Product Description',
-		description: `The Leads Tracker is an intelligent calculator drives new sourcing
-		experience. Run daily in the background. When there is changing in price, Leads 
-		Tracker will send alert that some products may become profitable.`,
+		description: `The Leads Tracker is an intelligent calculator that drives new sourcing
+		experience. Run daily in the background. When there is a change in price, Leads 
+		Tracker will send an alert that some products may become profitable.`,
 		listDetails: [],
 		ctaLinkDetails: {}
 	} /*

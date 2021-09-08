@@ -3,7 +3,7 @@ export const newBenefitsData = [
 		title: 'Product Insights',
 		subTitle: 'Detailed Product Analysis and Product Research',
 		description: `Evaluate dozens of products and gain in-depth insight 
-		for any product including sales estimations, seller rankings, profit 
+		into any product including sales estimations, seller rankings, profit 
 		margins using data directly from Amazon.`,
 		linkLabel: '',
 		navigateTo: '',

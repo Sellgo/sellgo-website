@@ -5,7 +5,7 @@ export const benefitsData = [
 		details: `Whether you're working with one supplier or hundreds, easily 
 		manage all your suppliers and their catalogs in one place. 
 		Gain detailed insights on your suppliers before you source their products. 
-		Organize their catalogs based on ASINs*, profitability, price to listing ratio and more.`,
+		Organize their catalogs based on ASINs*, profitability, price to listing ratio, and more.`,
 		popularFeaturesList: [
 			{
 				title: 'Feature 1',
@@ -43,7 +43,7 @@ export const benefitsData = [
 		title: 'Supplier Analysis',
 		benefitSummary: `Painless Supplier Analysis`,
 		details: `Each supplier's catalog can contain hundreds or even 
-		thousands of different products and ASINs. Highlight suppliers with best quality, 
+		thousands of different products and ASINs. Highlight suppliers with the best quality, 
 		most profitable, and replenishable products for your Amazon business.`,
 		popularFeaturesList: [
 			{

@@ -15,8 +15,8 @@ export const newBenefitsData = [
 		subTitle: 'Streamline Amazon Product Research',
 		description: `Product research can be a pain! Hundreds of suppliers, 
 		thousands of catalogs, and millions of products. Observe how well 
-		a product is doing with price, Best Seller Rank, Sales Estimation, 
-		buybox information and existing sellers, and simulate your profit 
+		a product is doing with Price, Best Seller Rank, Sales Estimation, 
+		Buybox information, and existing sellers. Stimulate your profit 
 		margin with prices that suppliers give you.`,
 		linkLabel: '',
 		navigateTo: '',

@@ -2,7 +2,7 @@ import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
 	title: `Sellgo - About Us`,
-	description: `Sellgo was founded in 2018 and is headquarted in Portland, Oregon. 
+	description: `Sellgo was founded in 2018 and is headquartered in Portland, Oregon. 
 	Sellgo is an Amazon FBA product research tool to empower sellers to grow their Amazon businesses. 
 	Expand your business with our FBA tools and resources.`,
 	imageUrl: ``,

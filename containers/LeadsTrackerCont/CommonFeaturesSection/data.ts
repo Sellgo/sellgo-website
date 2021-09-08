@@ -1,7 +1,7 @@
 export const commonFeaturesList = [
 	{
 		title: 'Price-Driven Sourcing',
-		detail: `Most of the time big profits can be earned through changing price and opportunities.`,
+		detail: `Most of the time big profits can be earned through changing prices and opportunities.`,
 		iconImageLink: '/dataIcon.svg',
 		alt: `Describe the icon here`
 	},
@@ -20,7 +20,7 @@ export const commonFeaturesList = [
 	},
 	{
 		title: 'Less Spreadsheet Distraction',
-		detail: `Avoid complicating whats already complicated with Spreadsheet, focus on the results.`,
+		detail: `Avoid complicating what's already complicated with Spreadsheet, focus on the results.`,
 		iconImageLink: '/watchIcon.svg',
 		alt: `Describe the icon here`
 	},

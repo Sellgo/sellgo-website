@@ -14,8 +14,8 @@ const InfoSection: React.FC<Props> = () => {
 				<div className={styles.infoSection__Text}>
 					<h2>Find a Supplier First, Then Go After the Products</h2>
 					<p>
-						The Profit Finder calculates your profits for each products on the
-						fly. It compares all the products in Amazon catalog including
+						The Profit Finder calculates your profits for each product on the
+						fly. It compares all the products in Amazon&apos;s catalog including
 						product variations and multipacks. Hand-pick the winning products to
 						begin sourcing and build your profits.
 					</p>

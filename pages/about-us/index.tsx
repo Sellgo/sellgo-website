@@ -47,7 +47,7 @@ const AboutUsPage: React.FC<Props> = () => {
 						</p>
 
 						<p>
-							While our company is headquarter in Portland, Oregon, our team
+							While our company is headquartered in Portland, Oregon, our team
 							members span across the globe and are unified with the same
 							passion and mission: to help Amazon sellers flourish. If you would
 							like to learn more about Sellgo, our team, or our mission, we

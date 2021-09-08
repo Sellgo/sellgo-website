@@ -2,7 +2,7 @@ export const accordionData = [
 	{
 		title: 'Product Description',
 		description: `Locate and scout dozens of sellers in your area. Gauge the 
-		competition and find new strategies to increase you inventory and sales.`,
+		competition and find new strategies to increase your inventory and sales.`,
 		listDetails: [],
 		ctaLinkDetails: {}
 	} /*

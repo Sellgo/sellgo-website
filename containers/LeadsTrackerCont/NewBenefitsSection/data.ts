@@ -20,8 +20,8 @@ export const newBenefitsData = [
 	{
 		title: 'Big Data Automation',
 		subTitle: 'Less Spreadsheet Distractions',
-		description: `Why bugging your team with gazilion number of daily Spreadsheet in the midst of 
-		constant price changing? Just focus on accurate analytics that matter to your business
+		description: `Why bug your team with a gazillion number of daily Spreadsheets in the midst of 
+		constant price changes? Just focus on accurate analytics that matter to your business
 		the most. `,
 		linkLabel: '',
 		navigateTo: '',

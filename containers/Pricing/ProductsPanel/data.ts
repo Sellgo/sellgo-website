@@ -114,7 +114,7 @@ export const plansAndProductsDetails = [
 				annualPrice: 1763,
 				featureSubName: 'Professional Plan Plus',
 				desc: `For 7-figure sellers who need the best tools. 
-				Track more products, obtain more data, \nand optimize your entire Amazon business.`,
+				Track more products, obtain more data \nand optimize your entire Amazon business.`,
 				featuresLists: [
 					{
 						title: 'Wholesale or Private Label Team',
