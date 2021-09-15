@@ -16,12 +16,12 @@
 .productAccordionHeading {
 	cursor: pointer;
 	border: 1px solid $grey_2;
-	padding: 1.2rem 2rem;
 	font-size: $fontsize_content_14;
 	color: $prim_dark_2;
 }
 
 .productAccordionButton {
+	padding: 1.2rem 2rem;
 	&:focus-visible {
 		outline: none;
 	}
