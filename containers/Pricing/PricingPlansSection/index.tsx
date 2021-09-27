@@ -20,10 +20,11 @@ interface Props {
 	summary: string;
 	productsIncluded: any;
 	selectedPlanType: number;
+	showOnlyGeneralPlanDetails?: boolean;
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
-	const { planName, summary, productsIncluded } = props;
+	const { planName, summary, productsIncluded, showOnlyGeneralPlanDetails } = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
 
@@ -76,7 +77,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			</section>
 
 			{/*  Main pricing table comparision section section */}
-			<section className={`big-page-container ${styles.allFeaturesSection}`}>
+			{!showOnlyGeneralPlanDetails && <section className={`big-page-container ${styles.allFeaturesSection}`}>
 				<Element name="featuresTable">
 					{allPlanFeatures.map((feature: any) => {
 						return (
@@ -115,11 +116,12 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						);
 					})}
 				</div>
-			</section>
+			</section>}
 
+			{!showOnlyGeneralPlanDetails && 
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
 				<ContactInfo message="" />
-			</section>
+			</section>}
 		</>
 	);
 };
