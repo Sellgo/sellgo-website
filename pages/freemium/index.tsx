@@ -25,13 +25,13 @@ import AppConfig from '../../config';
 import { FAQDetails } from '../../interfaces/FAQ';
 
 interface Props {
-	faqDetails: FAQDetails
+	faqDetails: FAQDetails;
 }
 
 const Freemium: React.FC<Props> = (props) => {
 	const { faqDetails } = props;
 
-    return (
+	return (
 		<>
 			<SEOHead
 				title={seoData.title}
@@ -42,9 +42,9 @@ const Freemium: React.FC<Props> = (props) => {
 			/>
 			<main>
 				<BlueBannerSection />
-                <FreemiumSection />
-                <StandardPlansPricingSection/>
-                <FAQSection faqDetails={faqDetails} />
+				<FreemiumSection />
+				<StandardPlansPricingSection />
+				<FAQSection faqDetails={faqDetails} />
 				<ClosingCTASection />
 			</main>
 		</>

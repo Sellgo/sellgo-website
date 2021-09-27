@@ -24,7 +24,12 @@ interface Props {
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
-	const { planName, summary, productsIncluded, showOnlyGeneralPlanDetails } = props;
+	const {
+		planName,
+		summary,
+		productsIncluded,
+		showOnlyGeneralPlanDetails
+	} = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
 
@@ -77,51 +82,54 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			</section>
 
 			{/*  Main pricing table comparision section section */}
-			{!showOnlyGeneralPlanDetails && <section className={`big-page-container ${styles.allFeaturesSection}`}>
-				<Element name="featuresTable">
-					{allPlanFeatures.map((feature: any) => {
-						return (
-							<AllfeaturesTable
-								header={feature.header}
-								body={feature.body}
-								key={uuid()}
-							/>
-						);
-					})}
-				</Element>
-
-				{/* Summary pricing card head below table  */}
-				<div className={styles.priceSummaryWrapper}>
-					{productsIncluded.map((product: any) => {
-						return (
-							<div className={styles.priceSummaryCard} key={uuid()}>
-								<PricingPlansCardHead
-									// product details
-									id={product.id}
-									name={product.name}
-									productsDatabase={product.productsDatabase}
-									salesEstimateCount={product.salesEstimateCount}
-									monthlyPrice={product.monthlyPrice}
-									annualPrice={product.annualPrice}
-									desc={product.desc}
-									// plan details
-									isMonthly={isMonthly}
-									planName={planName}
-									// optional props for comparision table cards
-									withToggle
-									className={styles.tablePricingSummary}
-									handleChange={() => setIsMonthly(!isMonthly)}
+			{!showOnlyGeneralPlanDetails && (
+				<section className={`big-page-container ${styles.allFeaturesSection}`}>
+					<Element name="featuresTable">
+						{allPlanFeatures.map((feature: any) => {
+							return (
+								<AllfeaturesTable
+									header={feature.header}
+									body={feature.body}
+									key={uuid()}
 								/>
-							</div>
-						);
-					})}
-				</div>
-			</section>}
+							);
+						})}
+					</Element>
 
-			{!showOnlyGeneralPlanDetails && 
-			<section className={`big-page-container ${styles.contactInfoSection}`}>
-				<ContactInfo message="" />
-			</section>}
+					{/* Summary pricing card head below table  */}
+					<div className={styles.priceSummaryWrapper}>
+						{productsIncluded.map((product: any) => {
+							return (
+								<div className={styles.priceSummaryCard} key={uuid()}>
+									<PricingPlansCardHead
+										// product details
+										id={product.id}
+										name={product.name}
+										productsDatabase={product.productsDatabase}
+										salesEstimateCount={product.salesEstimateCount}
+										monthlyPrice={product.monthlyPrice}
+										annualPrice={product.annualPrice}
+										desc={product.desc}
+										// plan details
+										isMonthly={isMonthly}
+										planName={planName}
+										// optional props for comparision table cards
+										withToggle
+										className={styles.tablePricingSummary}
+										handleChange={() => setIsMonthly(!isMonthly)}
+									/>
+								</div>
+							);
+						})}
+					</div>
+				</section>
+			)}
+
+			{!showOnlyGeneralPlanDetails && (
+				<section className={`big-page-container ${styles.contactInfoSection}`}>
+					<ContactInfo message="" />
+				</section>
+			)}
 		</>
 	);
 };
