@@ -5,12 +5,44 @@ import styles from './index.module.scss';
 
 /* Components */
 import FormInput from '../../../components/FormInput';
+import FbaCalculator from './FbaCalculator';
+
+/* Constants */
+import { isValidAsin, getAsinFromLink } from '../../../constants/Freemium';
 
 interface Props {}
 
-const OpportunityBannerSection: React.FC<Props> = () => {
+const FreemiumSection: React.FC<Props> = () => {
+	const [productInput, setProductInput] = React.useState<string>('');
+	const [isCalculatorOpen, setCalculatorOpen] = React.useState<boolean>(false);
+	const [asin, setAsin] = React.useState<string>('');
+	const [inputError, setInputError] = React.useState<boolean>(false);
+
+	React.useEffect(() => {
+		if (productInput.length > 0) {
+			const asinFromLink = getAsinFromLink(productInput);
+			/* If is link */
+			if (asinFromLink) {
+				setInputError(false);
+				setAsin(asinFromLink);
+			
+			/* If is asin */
+			} else if (isValidAsin(productInput)) {
+				setInputError(false);
+				setAsin(productInput);
+			
+			/* Neither asin nor link */
+			} else {
+				setInputError(true);
+				setAsin('');
+			}
+		} else {
+			setInputError(false);
+		}
+	}, [productInput])
+
 	const handleGetSalesEstimate = () => {
-		console.log('Run');
+		console.log(asin);
 	};
 
 	return (
@@ -23,46 +55,30 @@ const OpportunityBannerSection: React.FC<Props> = () => {
 				<div className={styles.freemiumForm}>
 					<form onSubmit={handleGetSalesEstimate}>
 						<FormInput
-							label="Best Seller's Rank #"
-							id="bsr"
+							label="Find your product on Amazon"
+							id="asin	"
 							type="text"
-							name="bsr"
-							onChange={() => null}
-							value=""
-							className={styles.formInput}
-							placeholder="Enter BSR here"
+							name="asin"
+							onChange={(e:any) => {setProductInput(e.target.value)}}
+							value={productInput}
+							className={inputError ? `${styles.formInput} ${styles.formInput__error}` : styles.formInput}
+							placeholder="Enter Amazon Link or ASIN or ISBN"
 						/>
-						<FormInput
-							label="Best Seller's Rank #"
-							id="bsr"
-							type="text"
-							name="bsr"
-							onChange={() => null}
-							value=""
-							className={styles.formInput}
-							placeholder="Enter BSR here"
-						/>
-						<FormInput
-							label="Best Seller's Rank #"
-							id="bsr"
-							type="text"
-							name="bsr"
-							onChange={() => null}
-							value=""
-							className={styles.formInput}
-							placeholder="Enter BSR here"
-						/>
-
 						<div className={styles.buttonsRow}>
-							<button className={styles.resetButton}>Reset</button>
-
 							<button className={styles.estimateButton}>Estimate</button>
 						</div>
 					</form>
+					<button 
+						className={styles.showCalculatorLink}
+						onClick={() => (setCalculatorOpen(!isCalculatorOpen))}
+					>
+						{!isCalculatorOpen ? `Show FBA Opportunity calculator >` : `See less >`}
+					</button>
+					{isCalculatorOpen && <FbaCalculator/>}
 				</div>
 			</div>
 		</section>
 	);
 };
 
-export default OpportunityBannerSection;
+export default FreemiumSection;

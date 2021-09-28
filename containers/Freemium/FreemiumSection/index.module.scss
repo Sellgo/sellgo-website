@@ -47,6 +47,14 @@
 		border-radius: 5px;
 		padding: 0 10px;
 		font-size: 14px;
+
+		&:focus {
+			outline: none !important;
+		}
+	}
+
+	&__error input {
+		border: 1px solid $system_red;
 	}
 }
 
@@ -57,28 +65,30 @@
 	flex-direction: row;
 	justify-content: flex-end;
 
-	button {
+	.estimateButton {
 		border-radius: 7px;
 		font-weight: $fontweight_medium;
 		width: 14rem;
 		height: 3.5rem;
-		font-family: 'Work Sans', sans-serif;
+		color: $prim_white;
+		border: 1px solid $accent_orange;
+		background: $accent_orange;
 
 		&:hover {
 			cursor: pointer;
 		}
 	}
+}
 
-	.resetButton {
-		color: $grey_6;
-		border: 1px solid $grey_3;
-		background: none;
-		margin-right: 18px;
-	}
+.showCalculatorLink {
+	margin-top: 5rem;
+	background: none;
+	border: none;
+	font-size: 14px;
+	color: $accent_blue;
+	font-weight: normal;
 
-	.estimateButton {
-		color: $prim_white;
-		border: 1px solid $accent_orange;
-		background: $accent_orange;
+	&:hover {
+		cursor: pointer;
 	}
 }
