@@ -9,7 +9,7 @@
 .headingRow {
 	margin-top: 5rem;
 	margin-bottom: 5rem;
-	min-width: 65rem;
+	width: 65rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -30,7 +30,7 @@
 
 .formInput {
 	margin-bottom: 18px;
-	min-width: 65rem;
+	width: 65rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;

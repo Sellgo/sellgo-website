@@ -1,6 +1,6 @@
 import React from 'react';
 
-/* Conatiners */
+/* Containers */
 import PricingPlansSection from '../../Pricing/PricingPlansSection';
 
 /* Data */

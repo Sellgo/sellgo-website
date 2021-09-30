@@ -3,7 +3,8 @@
 .ctaBannerSectionWrapper {
 	margin-top: 4rem;
 	background: $grey_1;
-	height: 12rem;
+	height: max-content;
+	padding: 4rem 0;
 }
 
 .ctaBannerSection {
@@ -19,6 +20,16 @@
 		color: $prim_dark_1;
 		font-size: 20px;
 		font-weight: $fontweight_bold;
+	}
+
+	@media only screen and(max-width: 800px) {
+		flex-direction: column;
+		padding: 0 3rem;
+
+		h2 {
+			font-size: 18px;
+			margin-bottom: 30px;
+		}
 	}
 }
 
