@@ -26,7 +26,7 @@ const FreemiumSection = () => {
 	const [productInput, setProductInput] = React.useState<string>('');
 	const [isCalculatorOpen, setCalculatorOpen] = React.useState<boolean>(false);
 	const [productIdentifierType, setProductIdentifierType] = React.useState<
-		'ASIN' | 'ISBN'
+		'ASIN' | 'isbn'
 	>('ASIN');
 	const [productIdentifier, setProductIdentifier] = React.useState<string>('');
 	const [inputError, setInputError] = React.useState<boolean>(false);
@@ -66,20 +66,21 @@ const FreemiumSection = () => {
 
 	/* Input validation */
 	React.useEffect(() => {
-		if (productInput.length > 0) {
+		const trimmedProductInput = productInput.trim();
+		if (trimmedProductInput.length > 0) {
 			/* Asin */
-			if (isValidAsin(productInput)) {
+			if (isValidAsin(trimmedProductInput)) {
 				setInputError(false);
-				setProductIdentifier(productInput);
+				setProductIdentifier(trimmedProductInput);
 				setProductIdentifierType('ASIN');
 
 				/* Isbn */
-			} else if (isValidIsbn(productInput)) {
+			} else if (isValidIsbn(trimmedProductInput)) {
 				setInputError(false);
-				setProductIdentifier(productInput);
-				setProductIdentifierType('ISBN');
+				setProductIdentifier(trimmedProductInput);
+				setProductIdentifierType('isbn');
 			} else {
-				const asinFromLink = parseAsinFromLink(productInput);
+				const asinFromLink = parseAsinFromLink(trimmedProductInput);
 				/* Amazon link */
 				if (asinFromLink) {
 					setInputError(false);
