@@ -8,6 +8,7 @@ import FreemiumSection from '../../containers/Freemium/FreemiumSection';
 import StandardPlansPricingSection from '../../containers/Freemium/StandardPlansPricingSection';
 import ClosingCTASection from '../../containers/HomePage/ClosingCTASection';
 import FAQSection from '../../containers/Freemium/FAQSection';
+import CTABannerSection from '../../containers/Freemium/CTABannerSection';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -21,11 +22,8 @@ import { generatePageURL } from '../../utils/SEO';
 /* Config */
 import AppConfig from '../../config';
 
-/* Types */
-import { FAQDetails } from '../../interfaces/FAQ';
-
 interface Props {
-	faqDetails: FAQDetails;
+	faqDetails: { products: any; bundles: any };
 }
 
 const Freemium: React.FC<Props> = (props) => {
@@ -43,8 +41,9 @@ const Freemium: React.FC<Props> = (props) => {
 			<main>
 				<BlueBannerSection />
 				<FreemiumSection />
+				<CTABannerSection />
 				<StandardPlansPricingSection />
-				<FAQSection faqDetails={faqDetails} />
+				<FAQSection faqDetails={faqDetails.products[2]} />
 				<ClosingCTASection />
 			</main>
 		</>
@@ -52,7 +51,8 @@ const Freemium: React.FC<Props> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/partners.json`);
+	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/pricing.json`);
+	console.log(response);
 	const { data } = response;
 	return {
 		props: {

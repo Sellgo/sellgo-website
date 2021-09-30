@@ -23,7 +23,7 @@
 	row-gap: 10px;
 	column-gap: 40px;
 	align-items: center !important;
-	grid-template-columns: 30rem 14rem 14rem;
+	grid-template-columns: 29rem 14rem 14rem;
 }
 
 .calculatorLabel {
@@ -126,6 +126,11 @@
 
 		&:hover {
 			cursor: pointer;
+		}
+
+		&:disabled {
+			opacity: 0.6;
+			cursor: unset;
 		}
 	}
 }
