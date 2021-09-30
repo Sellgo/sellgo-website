@@ -131,7 +131,7 @@ const FreemiumSection = () => {
 
 	return (
 		<section className={styles.freemiumSectionWrapper}>
-			<div className="page-container">
+			<div className={`${styles.freemiumSection} page-container`}>
 				<div className={styles.headingRow}>
 					<h3 className={styles.title}>Amazon Sales Estimator</h3>
 					<h3 className={styles.counter}>{formatFloat(productDetails.sales) || 0}</h3>
