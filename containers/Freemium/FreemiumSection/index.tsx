@@ -19,9 +19,10 @@ import {
 /* Config */
 import AppConfig from '../../../config';
 
-interface Props {}
+/* Utils */
+import { formatFloat } from '../../../utils/Format';
 
-const FreemiumSection: React.FC<Props> = () => {
+const FreemiumSection = () => {
 	const [productInput, setProductInput] = React.useState<string>('');
 	const [isCalculatorOpen, setCalculatorOpen] = React.useState<boolean>(false);
 	const [productIdentifierType, setProductIdentifierType] = React.useState<
@@ -133,7 +134,7 @@ const FreemiumSection: React.FC<Props> = () => {
 			<div className="page-container">
 				<div className={styles.headingRow}>
 					<h3 className={styles.title}>Amazon Sales Estimator</h3>
-					<h3 className={styles.counter}>{productDetails.sales || 0}</h3>
+					<h3 className={styles.counter}>{formatFloat(productDetails.sales) || 0}</h3>
 				</div>
 				<div>
 					<FormInput
