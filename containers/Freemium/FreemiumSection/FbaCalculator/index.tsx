@@ -177,7 +177,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 			const merchantNetProfit =
 				merchantSellerProceeds - stringToFloat(merchantProductCost);
 			const merchantNetMargin =
-				(merchantNetProfit / merchantTotalRevenue) * 100;
+				merchantTotalRevenue !== 0 ? (merchantNetProfit / merchantTotalRevenue) * 100 : 0;
 			const merchantROI =
 				(merchantSellerProceeds /
 					Math.max(stringToFloat(merchantProductCost), 1)) *
@@ -206,9 +206,9 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 				amazonTotalStorageCost;
 			const amazonNetProfit =
 				amazonSellerProceeds - stringToFloat(amazonProductCost);
-			const amazonNetMargin = (amazonNetProfit / amazonTotalRevenue) * 100;
+			const amazonNetMargin = amazonTotalRevenue !== 0 ? (amazonNetProfit / amazonTotalRevenue) * 100 : 0;
 			const amazonROI =
-				(amazonSellerProceeds / Math.max(stringToFloat(amazonProductCost)), 1) *
+				(amazonSellerProceeds / Math.max(stringToFloat(amazonProductCost), 1)) *
 				100;
 
 			setAmazonTotalRevenue(amazonTotalRevenue);
