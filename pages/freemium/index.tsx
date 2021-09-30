@@ -52,7 +52,6 @@ const Freemium: React.FC<Props> = (props) => {
 
 export const getStaticProps: GetStaticProps = async () => {
 	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/pricing.json`);
-	console.log(response);
 	const { data } = response;
 	return {
 		props: {
