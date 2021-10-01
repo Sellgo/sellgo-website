@@ -38,6 +38,9 @@ const FreemiumSection = () => {
 		false
 	);
 	const isProductRetrieved = Object.keys(productDetails).length > 0;
+	const productImage = productDetails.img 
+		? productDetails.img.replace('SL75', 'SL140')
+		: './placeholderImage.svg';
 
 	const handleCaptchaChange = (token: any) => {
 		if (token.trim().length > 0) {
@@ -137,89 +140,87 @@ const FreemiumSection = () => {
 					<h3 className={styles.title}>Amazon Sales Estimator</h3>
 					<h3 className={styles.counter}>{formatFloat(productDetails.sales) || 0}</h3>
 				</div>
-				<div>
-					<FormInput
-						label="Find your product on Amazon"
-						id="asin	"
-						type="text"
-						name="asin"
-						onChange={(e: any) => {
-							setProductInput(e.target.value);
-						}}
-						value={productInput}
-						className={
-							inputError
-								? `${styles.formInput} ${styles.formInput__error}`
-								: styles.formInput
-						}
-						placeholder="Enter Amazon Link or ASIN or ISBN"
-					/>
-					<p className={styles.errorMessage}> {error} </p>
-					<div className={styles.buttonsRow}>
-						{!isUserWhiteListed && (
-							<div className={styles.captchaWrapper}>
-								<ReCAPTCHA
-									sitekey={String(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY)}
-									theme="light"
-									size="normal"
-									onChange={handleCaptchaChange}
-								/>
-							</div>
-						)}
-						<button
-							className={styles.estimateButton}
-							onClick={handleGetSalesEstimate}
-							disabled={
-								isProductLoading ||
-								(!isUserWhiteListed && captcha.length === 0) ||
-								inputError
-							}
-						>
-							Search
-						</button>
-					</div>
-					{isProductRetrieved && (
-						<div className={styles.productRow}>
-							<img
-								className={styles.productImage}
-								src={productDetails.img}
-								alt="product"
+				<FormInput
+					label="Find your product on Amazon"
+					id="asin	"
+					type="text"
+					name="asin"
+					onChange={(e: any) => {
+						setProductInput(e.target.value);
+					}}
+					value={productInput}
+					className={
+						inputError
+							? `${styles.formInput} ${styles.formInput__error}`
+							: styles.formInput
+					}
+					placeholder="Enter Amazon Link or ASIN or ISBN"
+				/>
+				<p className={styles.errorMessage}> {error} </p>
+				<div className={styles.buttonsRow}>
+					{!isUserWhiteListed && (
+						<div className={styles.captchaWrapper}>
+							<ReCAPTCHA
+								sitekey={String(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY)}
+								theme="light"
+								size="normal"
+								onChange={handleCaptchaChange}
 							/>
-							<div className={styles.productText}>
-								<p className={styles.productTitle}> {productDetails.title} </p>
-								<div className={styles.productAsin}>
-									{
-										<img
-											className={styles.flagImg}
-											src="./usFlag.png"
-											alt="us-flag"
-										/>
-									}
-									<a
-										className={styles.asinLink}
-										href={`https://amazon.com/dp/${productDetails.asin}`}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										{productDetails.asin}
-									</a>
-								</div>
-							</div>
 						</div>
 					)}
 					<button
-						className={styles.showCalculatorLink}
-						onClick={() => setCalculatorOpen(!isCalculatorOpen)}
-						disabled={isProductLoading || !isProductRetrieved}
+						className={styles.estimateButton}
+						onClick={handleGetSalesEstimate}
+						disabled={
+							isProductLoading ||
+							(!isUserWhiteListed && captcha.length === 0) ||
+							inputError
+						}
 					>
-						{!isCalculatorOpen
-							? `Show FBA Opportunity calculator >`
-							: `See less >`}
+						Search
 					</button>
-					{isCalculatorOpen && (
-						<FbaCalculator productDetails={productDetails} />
-					)}
 				</div>
+				{isProductRetrieved && (
+					<div className={styles.productRow}>
+						<img
+							className={styles.productImage}
+							src={productImage}
+							alt="product"
+						/>
+						<div className={styles.productText}>
+							<p className={styles.productTitle}> {productDetails.title} </p>
+							<div className={styles.productAsin}>
+								{
+									<img
+										className={styles.flagImg}
+										src="./usFlag.png"
+										alt="us-flag"
+									/>
+								}
+								<a
+									className={styles.asinLink}
+									href={`https://amazon.com/dp/${productDetails.asin}`}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{productDetails.asin}
+								</a>
+							</div>
+						</div>
+					</div>
+				)}
+				<button
+					className={styles.showCalculatorLink}
+					onClick={() => setCalculatorOpen(!isCalculatorOpen)}
+					disabled={isProductLoading || !isProductRetrieved}
+				>
+					{!isCalculatorOpen
+						? `Show FBA Opportunity calculator >`
+						: `See less >`}
+				</button>
+				{isCalculatorOpen && (
+					<FbaCalculator productDetails={productDetails} />
+				)}
 			</div>
 		</section>
 	);

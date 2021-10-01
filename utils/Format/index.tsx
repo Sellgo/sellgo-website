@@ -1,5 +1,5 @@
 export const formatFloat = (num: number) => {
-	return num ? Number(num).toFixed(2) : null;
+	return num ? Number(num).toFixed(2) : num;
 };
 
 export const formatPrice = (num: number) => {

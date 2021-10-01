@@ -232,18 +232,20 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 
 	return (
 		<section className={styles.fbaCalculatorWrapper}>
-			<div className="page-container">
+			<div className={styles.fbaCalculator}>
 				<div className={styles.fbaCalculatorGrid}>
-					<p
-						className={`${styles.calculatorLabel} ${styles.calculatorLabel__mainHeader}`}
-					>
-						FBM/ Fulfillment by Merchant
-					</p>
-					<p
-						className={`${styles.calculatorLabel} ${styles.calculatorLabel__mainHeader2}`}
-					>
-						FBA/ Fulfillment by Amazon
-					</p>
+					<div className={`${styles.fbaCalculatorInputGrid} ${styles.fbaCalculatorInputGrid__header}`}>
+						<p
+							className={`${styles.calculatorLabel} ${styles.calculatorLabel__mainHeader}`}
+						>
+							FBM/ Fulfillment by Merchant
+						</p>
+						<p
+							className={`${styles.calculatorLabel} ${styles.calculatorLabel__mainHeader2}`}
+						>
+							FBA/ Fulfillment by Amazon
+						</p>
+					</div>
 				</div>
 
 				{/* Revenue */}
@@ -261,64 +263,74 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 							{' '}
 							Item price{' '}
 						</p>
-						<FormInput
-							label="$"
-							id="merchantItemPrice"
-							type="number"
-							name="merchantItemPrice"
-							onChange={(e: any) => setMerchantItemPrice(e.target.value)}
-							value={merchantItemPrice.toString()}
-							className={styles.formInput}
-							placeholder="Item price"
-						/>
-						<FormInput
-							label="$"
-							id="amazonItemPrice"
-							type="number"
-							name="amazonItemPrice"
-							onChange={(e: any) => setAmazonItemPrice(e.target.value)}
-							value={amazonItemPrice.toString()}
-							className={styles.formInput}
-							placeholder="Item price"
-						/>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<FormInput
+								label="$"
+								id="merchantItemPrice"
+								type="number"
+								name="merchantItemPrice"
+								onChange={(e: any) => setMerchantItemPrice(e.target.value)}
+								value={merchantItemPrice.toString()}
+								className={styles.formInput}
+								placeholder="Item price"
+							/>
+							<FormInput
+								label="$"
+								id="amazonItemPrice"
+								type="number"
+								name="amazonItemPrice"
+								onChange={(e: any) => setAmazonItemPrice(e.target.value)}
+								value={amazonItemPrice.toString()}
+								className={styles.formInput}
+								placeholder="Item price"
+							/>
+						</div>
+					</div>
 
-						{/* Shipping cost row */}
+					{/* Shipping cost row */}
+					<div className={styles.fbaCalculatorGrid}>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
 							Shipping Cost
 						</p>
-						<FormInput
-							label="$"
-							id="merchantShippingCost"
-							type="number"
-							name="merchantShippingCost"
-							onChange={(e: any) => setMerchantShippingCost(e.target.value)}
-							value={merchantShippingCost.toString()}
-							className={styles.formInput}
-							placeholder="Shipping cost"
-						/>
-						<p className={styles.calculatedValues}>
-							{' '}
-							{formatPrice(amazonShippingCost)}{' '}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<FormInput
+								label="$"
+								id="merchantShippingCost"
+								type="number"
+								name="merchantShippingCost"
+								onChange={(e: any) => setMerchantShippingCost(e.target.value)}
+								value={merchantShippingCost.toString()}
+								className={styles.formInput}
+								placeholder="Shipping cost"
+							/>
+							<p className={styles.calculatedValues}>
+								{' '}
+								{formatPrice(amazonShippingCost)}{' '}
+							</p>
+						</div>
+					</div>
 
-						{/* Total Revenue row */}
+					{/* Total Revenue row */}
+					<div className={styles.fbaCalculatorGrid}>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__totalLabel}`}
 						>
 							Total Revenue
 						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
-						>
-							{formatPrice(merchantTotalRevenue)}
-						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
-						>
-							{formatPrice(amazonTotalRevenue)}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
+							>
+								{formatPrice(merchantTotalRevenue)}
+							</p>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
+							>
+								{formatPrice(amazonTotalRevenue)}
+							</p>
+						</div>
 					</div>
 				</div>
 
@@ -330,14 +342,16 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						>
 							Selling on Amazon fees
 						</p>
-						<p className={styles.calculatedValues}>
-							{' '}
-							{formatPrice(merchantAmazonSellingFees)}{' '}
-						</p>
-						<p className={styles.calculatedValues}>
-							{' '}
-							{formatPrice(amazonSellingFees)}{' '}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p className={styles.calculatedValues}>
+								{' '}
+								{formatPrice(merchantAmazonSellingFees)}{' '}
+							</p>
+							<p className={styles.calculatedValues}>
+								{' '}
+								{formatPrice(amazonSellingFees)}{' '}
+							</p>
+						</div>
 					</div>
 				</div>
 
@@ -348,73 +362,87 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 					>
 						Fulfilment cost
 					</p>
+					{/* Seller fulfilment cost row */}
 					<div className={styles.fbaCalculatorGrid}>
-						{/* Seller fulfilment cost row */}
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
 							Seller fulfillment cost
 						</p>
-						<FormInput
-							label="$"
-							id="merchantSellerFulfillmentCost"
-							type="number"
-							name="merchantSellerFulfillmentCost"
-							onChange={(e: any) =>
-								setMerchantSellerFulfillmentCost(e.target.value)
-							}
-							value={merchantSellerFulfillmentCost}
-							className={styles.formInput}
-							placeholder="Fulfilment cost"
-						/>
-						<p className={styles.calculatedValues}> N/A </p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<FormInput
+								label="$"
+								id="merchantSellerFulfillmentCost"
+								type="number"
+								name="merchantSellerFulfillmentCost"
+								onChange={(e: any) =>
+									setMerchantSellerFulfillmentCost(e.target.value)
+								}
+								value={merchantSellerFulfillmentCost}
+								className={styles.formInput}
+								placeholder="Fulfilment cost"
+							/>
+							<p className={styles.calculatedValues}> N/A </p>
+						</div>
+					</div>
 
-						{/* Amazon FBA fee row */}
+					{/* Amazon FBA fee row */}
+					<div className={styles.fbaCalculatorGrid}>	
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
 							Amazon FBA fee
 						</p>
-						<p className={styles.calculatedValues}> N/A </p>
-						<p className={styles.calculatedValues}>
-							{' '}
-							{formatPrice(amazonFbaFee)}{' '}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p className={styles.calculatedValues}> N/A </p>
+							<p className={styles.calculatedValues}>
+								{' '}
+								{formatPrice(amazonFbaFee)}{' '}
+							</p>
+						</div>
+					</div>
 
-						{/* Ship to Amazon row */}
+					{/* Ship to Amazon row */}
+					<div className={styles.fbaCalculatorGrid}>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
 							Ship to Amazon
 						</p>
-						<p className={styles.calculatedValues}> N/A </p>
-						<FormInput
-							label="$"
-							id="amazonShipToAmazonCost"
-							type="number"
-							name="amazonShipToAmazonCost"
-							onChange={(e: any) => setAmazonShipToAmazonCost(e.target.value)}
-							value={amazonShipToAmazonCost}
-							className={styles.formInput}
-							placeholder="Shipping cost"
-						/>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p className={styles.calculatedValues}> N/A </p>
+							<FormInput
+								label="$"
+								id="amazonShipToAmazonCost"
+								type="number"
+								name="amazonShipToAmazonCost"
+								onChange={(e: any) => setAmazonShipToAmazonCost(e.target.value)}
+								value={amazonShipToAmazonCost}
+								className={styles.formInput}
+								placeholder="Shipping cost"
+							/>
+						</div>
+					</div>
 
-						{/* Total fulfillment cost row */}
+					{/* Total fulfillment cost row */}
+					<div className={styles.fbaCalculatorGrid}>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__totalLabel}`}
 						>
 							Total fulfillment cost
 						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
-						>
-							{formatPrice(merchantTotalFulfilmentCost)}
-						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
-						>
-							{formatPrice(amazonTotalFulfilmentCost)}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
+							>
+								{formatPrice(merchantTotalFulfilmentCost)}
+							</p>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
+							>
+								{formatPrice(amazonTotalFulfilmentCost)}
+							</p>
+						</div>
 					</div>
 				</div>
 
@@ -425,73 +453,83 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 					>
 						Storage cost{' '}
 					</p>
+					{/* Monthly storage cost per unit row */}
 					<div className={styles.fbaCalculatorGrid}>
-						{/* Monthly storage cost per unit row */}
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
 							Monthly storage cost per unit
 						</p>
-						<FormInput
-							label="$"
-							id="merchantStorageCost"
-							type="number"
-							name="merchantStorageCost"
-							onChange={(e: any) => setMerchantStorageCost(e.target.value)}
-							value={merchantStorageCost}
-							className={styles.formInput}
-							placeholder="Storage cost"
-						/>
-						<p className={styles.calculatedValues}>
-							{' '}
-							{formatPrice(amazonStorageCost)}{' '}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<FormInput
+								label="$"
+								id="merchantStorageCost"
+								type="number"
+								name="merchantStorageCost"
+								onChange={(e: any) => setMerchantStorageCost(e.target.value)}
+								value={merchantStorageCost}
+								className={styles.formInput}
+								placeholder="Storage cost"
+							/>
+							<p className={styles.calculatedValues}>
+								{' '}
+								{formatPrice(amazonStorageCost)}{' '}
+							</p>
+						</div>
+					</div>
 
-						{/* Average inventory units stored row */}
+					{/* Average inventory units stored row */}
+					<div className={styles.fbaCalculatorGrid}>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
 							Average inventory units stored
 						</p>
-						<FormInput
-							label=""
-							id="merchantAvgInventoryUnits"
-							type="number"
-							name="merchantAvgInventoryUnits"
-							onChange={(e: any) =>
-								setMerchantAvgInventoryUnits(e.target.value)
-							}
-							value={merchantAvgInventoryUnits}
-							className={styles.formInput}
-							placeholder="Avg stored"
-						/>
-						<FormInput
-							label=""
-							id="amazonAvgInventoryUnits"
-							type="number"
-							name="amazonAvgInventoryUnits"
-							onChange={(e: any) => setAmazonAvgInventoryUnits(e.target.value)}
-							value={amazonAvgInventoryUnits}
-							className={styles.formInput}
-							placeholder="Avg stored"
-						/>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<FormInput
+								label=""
+								id="merchantAvgInventoryUnits"
+								type="number"
+								name="merchantAvgInventoryUnits"
+								onChange={(e: any) =>
+									setMerchantAvgInventoryUnits(e.target.value)
+								}
+								value={merchantAvgInventoryUnits}
+								className={styles.formInput}
+								placeholder="Avg stored"
+							/>
+							<FormInput
+								label=""
+								id="amazonAvgInventoryUnits"
+								type="number"
+								name="amazonAvgInventoryUnits"
+								onChange={(e: any) => setAmazonAvgInventoryUnits(e.target.value)}
+								value={amazonAvgInventoryUnits}
+								className={styles.formInput}
+								placeholder="Avg stored"
+							/>
+						</div>
+					</div>
 
-						{/* Total Storage cost per unit sold cost row */}
+					{/* Total Storage cost per unit sold cost row */}
+					<div className={styles.fbaCalculatorGrid}>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__totalLabel}`}
 						>
 							Storage cost per unit sold
 						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
-						>
-							{formatPrice(merchantTotalStorageCost)}
-						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
-						>
-							{formatPrice(amazonTotalStorageCost)}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
+							>
+								{formatPrice(merchantTotalStorageCost)}
+							</p>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
+							>
+								{formatPrice(amazonTotalStorageCost)}
+							</p>
+						</div>
 					</div>
 				</div>
 
@@ -499,50 +537,57 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 
 				{/* Seller proceeds */}
 				<div className={styles.calculatorGroup}>
+
+					{/* Seller proceeds row */}
 					<div className={styles.fbaCalculatorGrid}>
-						{/* Seller proceeds row */}
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__header}`}
 						>
 							Seller proceeds
 						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
-						>
-							{formatPrice(merchantSellerProceeds)}
-						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
-						>
-							{formatPrice(amazonSellerProceeds)}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
+							>
+								{formatPrice(merchantSellerProceeds)}
+							</p>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__totalValue}`}
+							>
+								{formatPrice(amazonSellerProceeds)}
+							</p>
+						</div>
+					</div>
 
-						{/* Cost of product row */}
+					{/* Cost of product row */}
+					<div className={styles.fbaCalculatorGrid}>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
 							Cost of product
 						</p>
-						<FormInput
-							label="$"
-							id="merchantProductCost"
-							type="number"
-							name="merchantProductCost"
-							onChange={(e: any) => setMerchantProductCost(e.target.value)}
-							value={merchantProductCost}
-							className={styles.formInput}
-							placeholder="Cost"
-						/>
-						<FormInput
-							label="$"
-							id="amazonProductCost"
-							type="number"
-							name="amazonProductCost"
-							onChange={(e: any) => setAmazonProductCost(e.target.value)}
-							value={amazonProductCost}
-							className={styles.formInput}
-							placeholder="Cost"
-						/>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<FormInput
+								label="$"
+								id="merchantProductCost"
+								type="number"
+								name="merchantProductCost"
+								onChange={(e: any) => setMerchantProductCost(e.target.value)}
+								value={merchantProductCost}
+								className={styles.formInput}
+								placeholder="Cost"
+							/>
+							<FormInput
+								label="$"
+								id="amazonProductCost"
+								type="number"
+								name="amazonProductCost"
+								onChange={(e: any) => setAmazonProductCost(e.target.value)}
+								value={amazonProductCost}
+								className={styles.formInput}
+								placeholder="Cost"
+							/>
+						</div>
 					</div>
 				</div>
 
@@ -554,58 +599,69 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						className={`${styles.calculatorLabel} ${styles.calculatorLabel__header}`}
 					>
 						Net Profitability
-					</p>
+					</p>						
+
+					{/* Net Profitability row */}
 					<div className={styles.fbaCalculatorGrid}>
-						{/* Net Profitability row */}
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
 							Net Profit
 						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__large}`}
-						>
-							{formatPrice(merchantNetProfit)}
-						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__largeBold}`}
-						>
-							{formatPrice(amazonNetProfit)}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__large}`}
+							>
+								{formatPrice(merchantNetProfit)}
+							</p>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__largeBold}`}
+							>
+								{formatPrice(amazonNetProfit)}
+							</p>
+						</div>
+					</div>
 
-						{/* Net margin row */}
+					{/* Net margin row */}
+					<div className={styles.fbaCalculatorGrid}>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
 							Net margin
 						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__large}`}
-						>
-							{formatPercent(merchantNetMargin)}
-						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__largeBold}`}
-						>
-							{formatPercent(amazonNetMargin)}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__large}`}
+							>
+								{formatPercent(merchantNetMargin)}
+							</p>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__largeBold}`}
+							>
+								{formatPercent(amazonNetMargin)}
+							</p>
+						</div>
+					</div>
 
-						{/* Net ROI/ Return On Investment row */}
+					{/* Net ROI/ Return On Investment row */}
+					<div className={styles.fbaCalculatorGrid}>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
 							Net ROI/ Return On Investment
 						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__large}`}
-						>
-							{formatPercent(merchantROI)}
-						</p>
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__largeBold}`}
-						>
-							{formatPercent(amazonROI)}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__large}`}
+							>
+								{formatPercent(merchantROI)}
+							</p>
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__largeBold}`}
+							>
+								{formatPercent(amazonROI)}
+							</p>
+						</div>
 					</div>
 				</div>
 
@@ -634,12 +690,14 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						>
 							Estimated Annual Revenue
 						</p>
-						<p /> {/* Empty p tag to act as an empty cell in the grid */}
-						<p
-							className={`${styles.calculatedValues} ${styles.calculatedValues__largeBold}`}
-						>
-							{formatPrice(annualRevenue)}
-						</p>
+						<div className={styles.fbaCalculatorInputGrid}>
+							<p /> {/* Empty p tag to act as an empty cell in the grid */}
+							<p
+								className={`${styles.calculatedValues} ${styles.calculatedValues__largeBold}`}
+							>
+								{formatPrice(annualRevenue)}
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
