@@ -18,9 +18,9 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 				<h2 className={styles.title}>Why Sellgo is Better Than Competitors</h2>
 				
 				<div className={styles.featureRow}>
-					<p className={styles.headerText}> Wholesale/ Arbitrage </p>
-					<p className={styles.headerText}> Private Label </p>
-					<p className={styles.featureNameCell}/>
+					<p className={`${styles.headerText} ${styles.headerText__plan}`}> Wholesale/ Arbitrage </p>
+					<p className={`${styles.headerText} ${styles.headerText__plan}`}> Private Label </p>
+					<p className={styles.headerText}> </p>
 					<p className={styles.headerText}> Sellgo</p>
 					<p className={styles.headerText}> Jungle Scout</p>
 					<p className={styles.headerText}> Helium 10</p>
@@ -30,11 +30,11 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 					{features.map((feature: any) => {
 						return (
 						<div className={styles.featureRow}>
-							<div className={styles.checkboxCell}>
+							<div className={`${styles.checkboxCell} ${styles.checkboxCell__plan}`}>
 								{feature.featureAvailableInPlans.includes(plans.WHOLESALE) && 
 									<Image src="/checkSquare.svg" width={15} height={15} alt="check-square"/>}
 							</div>
-							<div className={styles.checkboxCell}>
+							<div className={`${styles.checkboxCell} ${styles.checkboxCell__plan}`}>
 								{feature.featureAvailableInPlans.includes(plans.PRIVATE_LABEL) &&
 									<Image src="/checkSquare.svg" width={15} height={15} alt="check-square"/>}
 							</div>

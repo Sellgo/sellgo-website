@@ -2,9 +2,6 @@
 
 .featureComparisonWrapper {
 	background: linear-gradient(0deg, #2F8DDF, #184770);
-	@media only screen and(max-width: 650px) {
-		width: 90%;
-	}
 }
 
 .featureComparisonSection {
@@ -18,7 +15,12 @@
 		font-size: 32px;
 		color: $prim_white;
 		font-weight: $fontweight_bold;
+
+		@media only screen and(max-width: 1000px) {
+			margin: 50px 0;
+		}
 	}
+
 }
 
 .featureComparisonGrid {
@@ -37,10 +39,9 @@
 		background-color: $blue_9;
 	}
 
-	@media only screen and(max-width: 650px) {
-		grid-template-columns: 16% 16% 0% 16% 16% 16% 16%;
-		min-height: 80px;
-		align-items: flex-end;
+	@media only screen and(max-width: 1000px) {
+		grid-template-columns: 40% 15% 15% 15% 15%;
+		min-height: 50px;
 	}
 	
 }
@@ -52,6 +53,15 @@
 	font-weight: $fontweight_semibold;
 	margin-bottom: 10px;
 	line-height: 18px;
+
+	@media only screen and(max-width: 1000px) {
+		font-size: 12px;
+		font-weight: $fontweight_medium;
+
+		&__plan {
+			display: none;
+		}
+	}
 }
 
 .checkboxCell {
@@ -63,6 +73,15 @@
 
 	&__last {
 		border-right: none !important;
+	}
+
+	@media only screen and(max-width: 1000px) {
+		border: none;
+		padding-bottom: 10px;
+
+		&__plan {
+			display: none;
+		}	
 	}
 }
 
@@ -77,12 +96,9 @@
 	font-weight: $fontweight_semibold;
 	border-right: 1px solid $grey_3;
 
-	@media only screen and(max-width: 650px) {
-		// grid-column-start: 1;
-		// grid-column-end: 7;
-		position: absolute;
-		border-right: none;
-		width: 100%;
+	@media only screen and(max-width: 1000px) {
+		font-size: 12px;
+		border: none;
 	}
 }
 
