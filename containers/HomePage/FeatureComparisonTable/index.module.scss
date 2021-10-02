@@ -1,0 +1,100 @@
+@import '../../../styles/guidelines';
+
+.featureComparisonWrapper {
+	background: linear-gradient(0deg, #2F8DDF, #184770);
+	@media only screen and(max-width: 650px) {
+		width: 90%;
+	}
+}
+
+.featureComparisonSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.title {
+		margin: 110px 0;
+		font-size: 32px;
+		color: $prim_white;
+		font-weight: $fontweight_bold;
+	}
+}
+
+.featureComparisonGrid {
+	width: 100%;
+}
+
+.featureRow {
+	position: relative;
+	min-height: 40px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 10% 10% 40% 10% 10% 10% 10%;
+	align-items: center;
+
+	&:nth-child(2n + 1) {
+		background-color: $blue_9;
+	}
+
+	@media only screen and(max-width: 650px) {
+		grid-template-columns: 16% 16% 0% 16% 16% 16% 16%;
+		min-height: 80px;
+		align-items: flex-end;
+	}
+	
+}
+
+.headerText {
+	font-size: 16px;
+	color: $prim_white;
+	text-align: center;
+	font-weight: $fontweight_semibold;
+	margin-bottom: 10px;
+	line-height: 18px;
+}
+
+.checkboxCell {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid $grey_3;
+
+	&__last {
+		border-right: none !important;
+	}
+}
+
+.featureNameCell {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-left: 18px;
+	color: $prim_white !important;
+	font-size: 14px;
+	font-weight: $fontweight_semibold;
+	border-right: 1px solid $grey_3;
+
+	@media only screen and(max-width: 650px) {
+		// grid-column-start: 1;
+		// grid-column-end: 7;
+		position: absolute;
+		border-right: none;
+		width: 100%;
+	}
+}
+
+.pricingButton {
+	margin-top: 80px;
+	margin-bottom: 150px;
+	background: none;
+	color: $prim_white;
+	width: 300px;
+	height: 50px;
+	border-radius: 7px;
+	border: 3px solid $prim_white;
+	font-size: 18px;
+	font-weight: $fontweight_bold;
+}

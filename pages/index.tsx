@@ -17,6 +17,7 @@ import OpportunityBannerSection from '../containers/HomePage/OpportunityBannerSe
 import GlobalSellersBannerSection from '../containers/HomePage/GlobalSellersBannerSection';
 import ProductsSection from '../containers/HomePage/ProductsSection';
 import StatisticsSection from '../containers/HomePage/StatisticsSection';
+import FeatureComparisonTable from '../containers/HomePage/FeatureComparisonTable';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
 import ClosingCTASection from '../containers/HomePage/ClosingCTASection';
@@ -57,6 +58,7 @@ const HomePage: React.FC<Props> = (props) => {
 				<GlobalSellersBannerSection />
 				<ProductsSection />
 				<StatisticsSection />
+				<FeatureComparisonTable/>
 				<TestimonialsSection />
 
 				<div className={styles.divider}></div>
