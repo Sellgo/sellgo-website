@@ -14,7 +14,7 @@ import CTABannerSection from '../../containers/Freemium/CTABannerSection';
 import SEOHead from '../../components/SEOHead';
 
 /* Data */
-import { seoData } from '../../data/SEO/affiliate';
+import { seoData } from '../../data/SEO/freemium';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
