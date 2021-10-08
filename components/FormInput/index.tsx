@@ -6,7 +6,7 @@ interface Props {
 	className?: string;
 	hasError?: boolean;
 	errorMessage?: string;
-	type: 'text' | 'email' | 'password' | 'checkbox';
+	type: 'text' | 'email' | 'password' | 'checkbox' | 'number';
 	name: string;
 	autoComplete?: 'on' | 'off';
 	placeholder?: string;

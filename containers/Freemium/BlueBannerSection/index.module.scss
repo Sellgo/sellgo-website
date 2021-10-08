@@ -1,0 +1,31 @@
+@import '../../../styles/guidelines';
+
+.globalSellersBannerWrapper {
+	background: linear-gradient(180deg, $blue_8, #133858);
+	height: 20rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media only screen and(max-width: 800px) {
+		height: max-content;
+		padding: 5rem 0;
+	}
+
+	h2 {
+		color: $prim_white;
+		font-size: 28px;
+	}
+
+	p {
+		color: $prim_white;
+		text-align: center;
+		font-size: 14px;
+		font-weight: lighter;
+	}
+
+	a {
+		color: $system_blue;
+		text-decoration: underline;
+	}
+}
