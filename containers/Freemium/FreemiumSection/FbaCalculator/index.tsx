@@ -177,7 +177,9 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 			const merchantNetProfit =
 				merchantSellerProceeds - stringToFloat(merchantProductCost);
 			const merchantNetMargin =
-				merchantTotalRevenue !== 0 ? (merchantNetProfit / merchantTotalRevenue) * 100 : 0;
+				merchantTotalRevenue !== 0
+					? (merchantNetProfit / merchantTotalRevenue) * 100
+					: 0;
 			const merchantROI =
 				(merchantSellerProceeds /
 					Math.max(stringToFloat(merchantProductCost), 1)) *
@@ -206,7 +208,10 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 				amazonTotalStorageCost;
 			const amazonNetProfit =
 				amazonSellerProceeds - stringToFloat(amazonProductCost);
-			const amazonNetMargin = amazonTotalRevenue !== 0 ? (amazonNetProfit / amazonTotalRevenue) * 100 : 0;
+			const amazonNetMargin =
+				amazonTotalRevenue !== 0
+					? (amazonNetProfit / amazonTotalRevenue) * 100
+					: 0;
 			const amazonROI =
 				(amazonSellerProceeds / Math.max(stringToFloat(amazonProductCost), 1)) *
 				100;
@@ -234,7 +239,9 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 		<section className={styles.fbaCalculatorWrapper}>
 			<div className={styles.fbaCalculator}>
 				<div className={styles.fbaCalculatorGrid}>
-					<div className={`${styles.fbaCalculatorInputGrid} ${styles.fbaCalculatorInputGrid__header}`}>
+					<div
+						className={`${styles.fbaCalculatorInputGrid} ${styles.fbaCalculatorInputGrid__header}`}
+					>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__mainHeader}`}
 						>
@@ -387,7 +394,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 					</div>
 
 					{/* Amazon FBA fee row */}
-					<div className={styles.fbaCalculatorGrid}>	
+					<div className={styles.fbaCalculatorGrid}>
 						<p
 							className={`${styles.calculatorLabel} ${styles.calculatorLabel__label}`}
 						>
@@ -503,7 +510,9 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 								id="amazonAvgInventoryUnits"
 								type="number"
 								name="amazonAvgInventoryUnits"
-								onChange={(e: any) => setAmazonAvgInventoryUnits(e.target.value)}
+								onChange={(e: any) =>
+									setAmazonAvgInventoryUnits(e.target.value)
+								}
 								value={amazonAvgInventoryUnits}
 								className={styles.formInput}
 								placeholder="Avg stored"
@@ -537,7 +546,6 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 
 				{/* Seller proceeds */}
 				<div className={styles.calculatorGroup}>
-
 					{/* Seller proceeds row */}
 					<div className={styles.fbaCalculatorGrid}>
 						<p
@@ -599,7 +607,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						className={`${styles.calculatorLabel} ${styles.calculatorLabel__header}`}
 					>
 						Net Profitability
-					</p>						
+					</p>
 
 					{/* Net Profitability row */}
 					<div className={styles.fbaCalculatorGrid}>

@@ -38,7 +38,7 @@ const FreemiumSection = () => {
 		false
 	);
 	const isProductRetrieved = Object.keys(productDetails).length > 0;
-	const productImage = productDetails.img 
+	const productImage = productDetails.img
 		? productDetails.img.replace('SL75', 'SL140')
 		: './placeholderImage.svg';
 
@@ -138,10 +138,14 @@ const FreemiumSection = () => {
 			<div className={`${styles.freemiumSection} page-container`}>
 				<div className={styles.headingRow}>
 					<h3 className={styles.title}>Amazon Sales Estimator</h3>
-					<h3 className={styles.counter}>{formatFloat(productDetails.sales) || 0}</h3>
+					<h3 className={styles.counter}>
+						{productDetails.sales === 'N/A'
+							? 'N/A'
+							: formatFloat(productDetails.sales)}
+					</h3>
 				</div>
 				<FormInput
-					label="Find your product on Amazon"
+					label="Find your product on Amazon.com"
 					id="asin	"
 					type="text"
 					name="asin"
@@ -218,9 +222,7 @@ const FreemiumSection = () => {
 						? `Show FBA Opportunity calculator >`
 						: `See less >`}
 				</button>
-				{isCalculatorOpen && (
-					<FbaCalculator productDetails={productDetails} />
-				)}
+				{isCalculatorOpen && <FbaCalculator productDetails={productDetails} />}
 			</div>
 		</section>
 	);
