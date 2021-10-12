@@ -20,9 +20,14 @@ import {
 import AppConfig from '../../../config';
 
 /* Utils */
-import { formatFloat } from '../../../utils/Format';
+import { formatNumber } from '../../../utils/Format';
 
-const FreemiumSection = () => {
+interface Props {
+	setShowCTABanner: (showCTABanner: boolean) => void;
+}
+const FreemiumSection = (props: Props) => {
+	const { setShowCTABanner } = props;
+
 	const [productInput, setProductInput] = React.useState<string>('');
 	const [isCalculatorOpen, setCalculatorOpen] = React.useState<boolean>(false);
 	const [productIdentifierType, setProductIdentifierType] = React.useState<
@@ -45,6 +50,7 @@ const FreemiumSection = () => {
 	const handleCaptchaChange = (token: any) => {
 		if (token.trim().length > 0) {
 			setCaptcha(token);
+			setUserWhiteListed(true);
 		} else {
 			setCaptcha('');
 		}
@@ -124,6 +130,7 @@ const FreemiumSection = () => {
 				setProductDetails({});
 				if (err.response && err.response.status === 429) {
 					setError(err.response.data.message);
+					setShowCTABanner(true);
 				} else {
 					setError(err.response.data.message);
 				}
@@ -137,11 +144,11 @@ const FreemiumSection = () => {
 		<section className={styles.freemiumSectionWrapper}>
 			<div className={`${styles.freemiumSection} page-container`}>
 				<div className={styles.headingRow}>
-					<h3 className={styles.title}>Amazon Sales Estimator</h3>
+					<h3 className={styles.title}>Estimated Sales per Month</h3>
 					<h3 className={styles.counter}>
 						{productDetails.sales === 'N/A'
 							? 'N/A'
-							: formatFloat(productDetails.sales)}
+							: formatNumber(productDetails.sales)}
 					</h3>
 				</div>
 				<FormInput
@@ -216,13 +223,26 @@ const FreemiumSection = () => {
 				<button
 					className={styles.showCalculatorLink}
 					onClick={() => setCalculatorOpen(!isCalculatorOpen)}
-					disabled={isProductLoading || !isProductRetrieved}
+					// disabled={isProductLoading || !isProductRetrieved}
+					disabled={
+						/* User has to input an ASIN */
+						inputError ||
+						productIdentifier.length === 0 ||
+						/* User has to verify captcha */
+						(!isUserWhiteListed && captcha.length === 0)
+					}
 				>
 					{!isCalculatorOpen
 						? `Show FBA Opportunity calculator >`
 						: `See less >`}
 				</button>
-				{isCalculatorOpen && <FbaCalculator productDetails={productDetails} />}
+				{isCalculatorOpen && (
+					<FbaCalculator
+						productIdentifierType={productIdentifierType}
+						productIdentifier={productIdentifier}
+						productDetails={productDetails}
+					/>
+				)}
 			</div>
 		</section>
 	);
