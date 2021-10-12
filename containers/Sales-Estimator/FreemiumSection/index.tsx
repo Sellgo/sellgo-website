@@ -223,7 +223,6 @@ const FreemiumSection = (props: Props) => {
 				<button
 					className={styles.showCalculatorLink}
 					onClick={() => setCalculatorOpen(!isCalculatorOpen)}
-					// disabled={isProductLoading || !isProductRetrieved}
 					disabled={
 						/* User has to input an ASIN */
 						inputError ||

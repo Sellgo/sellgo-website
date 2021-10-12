@@ -15,6 +15,7 @@ interface Props {
 	onChange: (e: any) => void;
 	labelLast?: boolean;
 	checked?: boolean;
+	disabled?: boolean;
 }
 
 const FormInput: React.FC<Props> = (props) => {
