@@ -137,6 +137,8 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 				productIdentifierType.length === 0
 			) {
 				setErrorMessage('Please enter a valid ASIN');
+				setLoading(false);
+				return;
 			}
 			
 			let amazonFbaFee = 0;
@@ -164,7 +166,10 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 				setMerchantAmazonSellingFees(0);
 				setAmazonSellingFees(0);
 				setAmazonFbaFee(0);
-				console.error(err);
+				setAmazonStorageCost(0);
+				if (err.response && err.response.status === 429) {
+					setErrorMessage("You have submitted too many requests. Please try again later.");
+				}
 			}
 
 			if (amazonAvgInventoryUnits === '') {
@@ -689,6 +694,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						</div>
 					</div>
 				</div>
+				{errorMessage && <p className={styles.error}>{errorMessage}</p>}
 				<div className={styles.buttonsRow}>
 					<button
 						className={styles.calculateButton}
@@ -698,8 +704,6 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						Calculate
 					</button>
 				</div>
-				<p className={styles.error}>{errorMessage}</p>
-
 				<div className={styles.calculatorGroup}>
 					{/* Estimated Revenue Group Header */}
 					<p
