@@ -136,7 +136,9 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 				productIdentifier.length === 0 ||
 				productIdentifierType.length === 0
 			) {
-				setErrorMessage('Please enter a valid ASIN');
+				setErrorMessage('Please enter a valid ASIN/ISBN.');
+				setLoading(false);
+				return;
 			}
 			
 			let amazonFbaFee = 0;
@@ -164,7 +166,10 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 				setMerchantAmazonSellingFees(0);
 				setAmazonSellingFees(0);
 				setAmazonFbaFee(0);
-				console.error(err);
+				setAmazonStorageCost(0);
+				if (err.response && err.response.status === 429) {
+					setErrorMessage("You have submitted too many requests. Please try again later.");
+				}
 			}
 
 			if (amazonAvgInventoryUnits === '') {
@@ -181,10 +186,12 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 			const merchantTotalFulfilmentCost = stringToFloat(
 				merchantSellerFulfillmentCost
 			);
-			const merchantTotalStorageCost =
-				(stringToFloat(merchantStorageCost) *
-					stringToFloat(merchantAvgInventoryUnits, 1)) /
-				Math.max(merchantEstimatedSales, 1);
+			const merchantTotalStorageCost = (
+				stringToFloat(merchantStorageCost) * stringToFloat(merchantAvgInventoryUnits, 1)) /
+					(merchantEstimatedSales && merchantEstimatedSales !== "N/A" 
+					? Math.max(merchantEstimatedSales, 1) 
+					: 1)
+				
 			const merchantSellerProceeds =
 				merchantTotalRevenue -
 				merchantAmazonSellingFees -
@@ -216,7 +223,9 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 				amazonFbaFee + stringToFloat(amazonShipToAmazonCost);
 			const amazonTotalStorageCost =
 				(amazonStorageCost * stringToFloat(amazonAvgInventoryUnits, 1)) /
-				Math.max(amazonEstimatedSales, 1);
+					(amazonEstimatedSales && amazonEstimatedSales !== "N/A" 
+					? Math.max(amazonEstimatedSales, 1) 
+					: 1)
 			const amazonSellerProceeds =
 				amazonTotalRevenue -
 				amazonSellingFees -
@@ -520,6 +529,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 								value={merchantAvgInventoryUnits}
 								className={styles.formInput}
 								placeholder="Avg stored"
+								disabled={!productDetails.sales || productDetails.sales === "N/A"}
 							/>
 							<FormInput
 								label=""
@@ -532,7 +542,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 								value={amazonAvgInventoryUnits}
 								className={styles.formInput}
 								placeholder="Avg stored"
-								disabled={!productDetails.sales}
+								disabled={!productDetails.sales || productDetails.sales === "N/A"}
 							/>
 						</div>
 					</div>
@@ -689,6 +699,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						</div>
 					</div>
 				</div>
+				{errorMessage && <p className={styles.error}>{errorMessage}</p>}
 				<div className={styles.buttonsRow}>
 					<button
 						className={styles.calculateButton}
@@ -698,8 +709,6 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						Calculate
 					</button>
 				</div>
-				<p className={styles.error}>{errorMessage}</p>
-
 				<div className={styles.calculatorGroup}>
 					{/* Estimated Revenue Group Header */}
 					<p
