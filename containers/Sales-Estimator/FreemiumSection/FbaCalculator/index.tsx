@@ -186,10 +186,12 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 			const merchantTotalFulfilmentCost = stringToFloat(
 				merchantSellerFulfillmentCost
 			);
-			const merchantTotalStorageCost =
-				(stringToFloat(merchantStorageCost) *
-					stringToFloat(merchantAvgInventoryUnits, 1)) /
-				Math.max(merchantEstimatedSales, 1);
+			const merchantTotalStorageCost = (
+				stringToFloat(merchantStorageCost) * stringToFloat(merchantAvgInventoryUnits, 1)) /
+					(merchantEstimatedSales && merchantEstimatedSales !== "N/A" 
+					? Math.max(merchantEstimatedSales, 1) 
+					: 1)
+				
 			const merchantSellerProceeds =
 				merchantTotalRevenue -
 				merchantAmazonSellingFees -
@@ -221,7 +223,9 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 				amazonFbaFee + stringToFloat(amazonShipToAmazonCost);
 			const amazonTotalStorageCost =
 				(amazonStorageCost * stringToFloat(amazonAvgInventoryUnits, 1)) /
-				Math.max(amazonEstimatedSales, 1);
+					(amazonEstimatedSales && amazonEstimatedSales !== "N/A" 
+					? Math.max(amazonEstimatedSales, 1) 
+					: 1)
 			const amazonSellerProceeds =
 				amazonTotalRevenue -
 				amazonSellingFees -
@@ -525,6 +529,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 								value={merchantAvgInventoryUnits}
 								className={styles.formInput}
 								placeholder="Avg stored"
+								disabled={!productDetails.sales || productDetails.sales === "N/A"}
 							/>
 							<FormInput
 								label=""
@@ -537,7 +542,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 								value={amazonAvgInventoryUnits}
 								className={styles.formInput}
 								placeholder="Avg stored"
-								disabled={!productDetails.sales}
+								disabled={!productDetails.sales || productDetails.sales === "N/A"}
 							/>
 						</div>
 					</div>
