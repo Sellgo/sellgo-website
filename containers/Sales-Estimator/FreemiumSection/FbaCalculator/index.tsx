@@ -136,7 +136,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 				productIdentifier.length === 0 ||
 				productIdentifierType.length === 0
 			) {
-				setErrorMessage('Please enter a valid ASIN');
+				setErrorMessage('Please enter a valid ASIN/ISBN.');
 				setLoading(false);
 				return;
 			}
