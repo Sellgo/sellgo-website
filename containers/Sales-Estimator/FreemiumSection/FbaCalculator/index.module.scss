@@ -141,6 +141,7 @@
 	}
 
 	input {
+		background: $prim_white;
 		height: 3rem;
 		width: 13rem;
 		border: 1px solid $grey_3;
@@ -160,6 +161,14 @@
 			color: $grey_6;
 		}
 	}
+}
+
+.error {
+	margin-top: -40px;
+	text-align: center;
+	font-size: 14px;
+	color: $system_red;
+	margin-bottom: 40px;
 }
 
 .buttonsRow {

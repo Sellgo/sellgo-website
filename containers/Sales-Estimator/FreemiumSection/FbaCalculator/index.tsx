@@ -11,17 +11,21 @@ import FormInput from '../../../../components/FormInput';
 import {
 	stringToFloat,
 	formatPrice,
-	formatPercent
+	formatPercent,
+	prettyPrintNumber
 } from '../../../../utils/Format';
 import AppConfig from '../../../../config';
 
 interface Props {
 	productDetails: any;
+	productIdentifierType: string;
+	productIdentifier: string;
 }
 
 const FbaCalculator: React.FC<Props> = (props: Props) => {
-	const { productDetails } = props;
+	const { productDetails, productIdentifier, productIdentifierType } = props;
 	const [loading, setLoading] = React.useState<boolean>(false);
+	const [errorMessage, setErrorMessage] = React.useState<string>('');
 	/* ------------------------------------------------------------------------------------------ */
 	/* -------------------------- Fulfilment by Merchant calculator  ------------------------------ */
 	/* ------------------------------------------------------------------------------------------ */
@@ -111,7 +115,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 	const [amazonSellingFees, setAmazonSellingFees] = React.useState<number>(0); // From Amazon
 	const [amazonFbaFee, setAmazonFbaFee] = React.useState<number>(0); // From Amazon
 	const amazonShippingCost = 0;
-	const amazonStorageCost = productDetails.amazon_storage_cost || 0;
+	const [amazonStorageCost, setAmazonStorageCost] = React.useState<number>(0); // From Amazon
 	const amazonEstimatedSales = productDetails.sales || 1;
 
 	const [annualRevenue, setAnnualRevenue] = React.useState<number>(0); // Calculated
@@ -126,17 +130,24 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 	const handleCalculate = () => {
 		const calculate = async () => {
 			setLoading(true);
+			setErrorMessage("");
+			
+			if (productIdentifier.length === 0 || productIdentifierType.length === 0) {
+				setErrorMessage("Please enter a valid ASIN");
+			}
+			/* Validating available sales estimate or product identifier */
 			let amazonFbaFee = 0;
 			let amazonSellingFees = 0;
 			let merchantAmazonSellingFees = 0;
 			try {
-				const URL = `${AppConfig.API_URL}/freemium/fees-estimate/${
-					productDetails.asin
-				}/
-					${stringToFloat(amazonItemPrice)}/${stringToFloat(merchantItemPrice)}`;
+				const URL = `${AppConfig.API_URL}/freemium/fees-estimate/${productIdentifierType}/
+					${productIdentifier}/${stringToFloat(amazonItemPrice)}/${stringToFloat(
+					merchantItemPrice
+				)}`;
 				const response = await axios.get(URL);
 				if (response.status === 200) {
 					const { data } = response;
+					setAmazonStorageCost(data.amazon_storage_cost);
 					setMerchantAmazonSellingFees(data.fbm_amazon_fees);
 					merchantAmazonSellingFees = data.fbm_amazon_fees;
 					setAmazonSellingFees(data.fba_amazon_fees);
@@ -516,6 +527,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 								value={amazonAvgInventoryUnits}
 								className={styles.formInput}
 								placeholder="Avg stored"
+								disabled={!productDetails.sales}
 							/>
 						</div>
 					</div>
@@ -672,7 +684,6 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						</div>
 					</div>
 				</div>
-
 				<div className={styles.buttonsRow}>
 					<button
 						className={styles.calculateButton}
@@ -682,6 +693,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						Calculate
 					</button>
 				</div>
+				<p className={styles.error}>{errorMessage}</p>
 
 				<div className={styles.calculatorGroup}>
 					{/* Estimated Revenue Group Header */}
@@ -708,6 +720,7 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</section>
 	);
