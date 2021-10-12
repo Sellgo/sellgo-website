@@ -12,7 +12,6 @@ import {
 	stringToFloat,
 	formatPrice,
 	formatPercent,
-	prettyPrintNumber
 } from '../../../../utils/Format';
 import AppConfig from '../../../../config';
 
