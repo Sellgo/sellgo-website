@@ -25,7 +25,7 @@ import { formatNumber } from '../../../utils/Format';
 interface Props {
 	setShowCTABanner: (showCTABanner: boolean) => void;
 }
-const FreemiumSection = (props:Props) => {
+const FreemiumSection = (props: Props) => {
 	const { setShowCTABanner } = props;
 
 	const [productInput, setProductInput] = React.useState<string>('');

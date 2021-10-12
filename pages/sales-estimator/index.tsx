@@ -44,7 +44,7 @@ const SalesEstimator: React.FC<Props> = (props) => {
 			/>
 			<main className={styles.freemiumPage}>
 				<BlueBannerSection />
-				<FreemiumSection setShowCTABanner={setShowCTABanner}/>
+				<FreemiumSection setShowCTABanner={setShowCTABanner} />
 				{showCTABanner && <CTABannerSection />}
 				<StandardPlansPricingSection />
 				<FAQSection faqDetails={faqDetails.products[2]} />

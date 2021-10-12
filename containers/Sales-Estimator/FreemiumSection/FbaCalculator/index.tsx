@@ -11,7 +11,7 @@ import FormInput from '../../../../components/FormInput';
 import {
 	stringToFloat,
 	formatPrice,
-	formatPercent,
+	formatPercent
 } from '../../../../utils/Format';
 import AppConfig from '../../../../config';
 
@@ -129,17 +129,23 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 	const handleCalculate = () => {
 		const calculate = async () => {
 			setLoading(true);
-			setErrorMessage("");
+			setErrorMessage('');
 			
-			if (productIdentifier.length === 0 || productIdentifierType.length === 0) {
-				setErrorMessage("Please enter a valid ASIN");
+			/* Validating available product identifier (asin) */
+			if (
+				productIdentifier.length === 0 ||
+				productIdentifierType.length === 0
+			) {
+				setErrorMessage('Please enter a valid ASIN');
 			}
-			/* Validating available sales estimate or product identifier */
+			
 			let amazonFbaFee = 0;
 			let amazonSellingFees = 0;
 			let merchantAmazonSellingFees = 0;
 			try {
-				const URL = `${AppConfig.API_URL}/freemium/fees-estimate/${productIdentifierType}/
+				const URL = `${
+					AppConfig.API_URL
+				}/freemium/fees-estimate/${productIdentifierType}/
 					${productIdentifier}/${stringToFloat(amazonItemPrice)}/${stringToFloat(
 					merchantItemPrice
 				)}`;
@@ -719,7 +725,6 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</section>
 	);
