@@ -1,6 +1,7 @@
 import React from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
+import publicIp from 'public-ip';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -60,7 +61,8 @@ const FreemiumSection = (props: Props) => {
 	React.useEffect(() => {
 		const checkWhiteListStatus = async () => {
 			try {
-				const URL = `${AppConfig.API_URL}/freemium/white-list-status`;
+				const ipAddr = await publicIp.v4();
+				const URL = `${AppConfig.API_URL}/freemium/white-list-status?ipv4=${ipAddr}`;
 				const response = await axios.get(URL);
 				if (response.status === 200) {
 					const status = response.data.white_list_status;
@@ -110,13 +112,16 @@ const FreemiumSection = (props: Props) => {
 		const getSalesEstimate = async () => {
 			setError('');
 			setProductLoading(true);
+			const ipAddr = await publicIp.v4();
+
 			try {
 				let URL = `${AppConfig.API_URL}/freemium/sales-estimate/
-					${productIdentifierType}/${productIdentifier}`;
+					${productIdentifierType}/${productIdentifier}?ipv4=${ipAddr}`;
 
 				if (captcha) {
-					URL = `${URL}?captcha=${captcha}`;
+					URL = `${URL}&captcha=${captcha}`;
 				}
+
 				const response = await axios.get(URL);
 				if (response.status === 200) {
 					const product = response.data;
