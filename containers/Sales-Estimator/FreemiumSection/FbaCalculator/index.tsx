@@ -1,4 +1,5 @@
 import React from 'react';
+import publicIp from 'public-ip';
 
 /* Styling */
 import axios from 'axios';
@@ -145,12 +146,12 @@ const FbaCalculator: React.FC<Props> = (props: Props) => {
 			let amazonSellingFees = 0;
 			let merchantAmazonSellingFees = 0;
 			try {
+				const ipAddr = await publicIp.v4();
 				const URL = `${
 					AppConfig.API_URL
 				}/freemium/fees-estimate/${productIdentifierType}/
 					${productIdentifier}/${stringToFloat(amazonItemPrice)}/${stringToFloat(
-					merchantItemPrice
-				)}`;
+					merchantItemPrice)}?ipv4=${ipAddr}`;
 				const response = await axios.get(URL);
 				if (response.status === 200) {
 					const { data } = response;
