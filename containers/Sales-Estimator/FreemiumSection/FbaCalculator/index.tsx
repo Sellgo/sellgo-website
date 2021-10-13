@@ -1,4 +1,5 @@
 import React from 'react';
+import publicIp from 'public-ip';
 
 /* Styling */
 import axios from 'axios';
@@ -14,7 +15,6 @@ import {
 	formatPercent
 } from '../../../../utils/Format';
 import AppConfig from '../../../../config';
-import publicIp from 'public-ip';
 
 interface Props {
 	productDetails: any;
