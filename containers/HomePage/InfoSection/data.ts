@@ -25,7 +25,7 @@ export const featureSectionList = [
 			'Seller Database'
 		],
 		isPopular: true,
-		navigateTo: '/pricing'
+		navigateTo: '/pricing?type=wholesale'
 	},
 	{
 		title: 'Go Agency',

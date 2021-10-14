@@ -1,0 +1,58 @@
+@import '../../../styles/guidelines';
+
+.ctaBannerSectionWrapper {
+	background: $grey_1;
+	height: max-content;
+	padding: 4rem 0;
+}
+
+.ctaBannerSection {
+	height: 100%;
+	padding: 0 7rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	h2 {
+		text-align: left;
+		color: $prim_dark_1;
+		font-size: 20px;
+		font-weight: $fontweight_bold;
+	}
+
+	@media only screen and(max-width: 750px) {
+		flex-direction: column;
+		padding: 0 3rem;
+
+		h2 {
+			font-size: 18px;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+	}
+}
+
+.ctaBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.loginButton {
+		background: none;
+		width: 14rem;
+		height: 3.5rem;
+		border: 2px solid $blue_8;
+		color: $blue_8;
+		font-size: 14px;
+		font-weight: $fontweight_medium !important;
+	}
+
+	.signUpLink {
+		margin-top: 5px;
+		font-size: 12px;
+		color: $system_blue;
+		text-decoration: none;
+	}
+}
