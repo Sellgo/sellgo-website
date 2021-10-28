@@ -97,6 +97,11 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Resources</li>
 				<li className="footerNavigationLinks">
+					<Link href="/sales-estimator" passHref>
+						<a>Free Sales Estimator</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
 					<Link href="/blogs" passHref>
 						<a>Blogs</a>
 					</Link>

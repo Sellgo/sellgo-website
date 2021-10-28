@@ -23,12 +23,9 @@
 	color: $prim_dark_2;
 	&__sales {
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		justify-content: flex-start;
+		align-items: flex-start;
 		color: $prim_dark_2;
-		span {
-			margin-left: 10px;
-		}
 	}
 }
 

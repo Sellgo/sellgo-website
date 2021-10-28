@@ -1,0 +1,214 @@
+@import '../../../../styles/guidelines';
+
+.fbaCalculatorWrapper {
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.fbaCalculator {
+	width: 100%;
+
+	@media only screen and(max-width: 700px) {
+		width: 90%;
+	}
+}
+
+.calculatorGroup {
+	margin-bottom: 30px;
+}
+
+.divider {
+	border-top: 2px solid $grey_3;
+	margin-bottom: 18px;
+	width: 100%;
+	height: 0;
+}
+
+.fbaCalculatorGrid {
+	display: grid;
+	margin-bottom: 10px;
+	align-items: center !important;
+	grid-template-columns: 40% 60%;
+
+	@media only screen and(max-width: 700px) {
+		grid-template-columns: 100%;
+		align-items: flex-start;
+	}
+}
+
+.fbaCalculatorInputGrid {
+	display: grid;
+	grid-template-columns: 45% 45%;
+	column-gap: 10%;
+	align-items: center;
+
+	&__header {
+		grid-column-start: 2;
+	}
+
+	@media only screen and(max-width: 700px) {
+		&__header {
+			grid-column-start: 1;
+		}
+	}
+}
+
+.calculatorLabel {
+	font-size: 14px;
+	color: $grey_8;
+
+	@media only screen and(max-width: 700px) {
+		font-size: 12px;
+	}
+
+	&__mainHeader {
+		font-weight: $fontweight_semibold;
+	}
+
+	&__mainHeader2 {
+		font-weight: $fontweight_semibold;
+	}
+
+	&__header {
+		font-weight: $fontweight_semibold;
+	}
+
+	&__label {
+		margin-left: 18px;
+		font-weight: $fontweight_regular;
+	}
+
+	&__totalLabel {
+		margin-top: 10px;
+		margin-left: 18px;
+		font-weight: $fontweight_medium;
+	}
+
+	@media only screen and(max-width: 700px) {
+		margin-left: 0 !important;
+
+		&__header {
+			margin-bottom: 8px;
+		}
+
+		&__label {
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.calculatedValues {
+	font-size: 14px;
+	color: $grey_3;
+	text-align: right !important;
+
+	@media only screen and(max-width: 700px) {
+		font-size: 12px;
+		text-align: center !important;
+	}
+
+	&__totalValue {
+		margin-top: 10px;
+	}
+
+	&__large {
+		font-size: 24px;
+		font-weight: $fontweight_medium;
+	}
+
+	&__largeBold {
+		font-size: 24px;
+		font-weight: $fontweight_bold;
+		color: $prim_dark_1;
+	}
+}
+
+.formInput {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+
+	label {
+		line-height: 3rem;
+		font-size: 14px;
+		font-weight: $fontweight_regular;
+		color: $prim_dark_1;
+		margin-right: 5px;
+	}
+
+	input {
+		background: $prim_white;
+		height: 3rem;
+		width: 13rem;
+		border: 1px solid $grey_3;
+		border-radius: 5px;
+		padding: 0 10px;
+		font-size: 12px;
+
+		@media only screen and(max-width: 700px) {
+			width: 100%;
+		}
+
+		&:focus {
+			outline: none !important;
+		}
+
+		&::placeholder {
+			color: $grey_6;
+		}
+	}
+}
+
+.error {
+	margin-bottom: -20px;
+	height: 3.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $system_red;
+	border-radius: 7px;
+	font-size: 12px;
+	color: $prim_white;
+	padding: 0 30px;
+	width: 100%;
+}
+
+.buttonsRow {
+	margin: 40px 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+
+	@media only screen and(max-width: 700px) {
+		width: 100%;
+	}
+
+	.calculateButton {
+		border-radius: 7px;
+		font-weight: $fontweight_medium;
+		width: 14rem;
+		height: 3.5rem;
+		color: $prim_white;
+		border: 1px solid $accent_orange;
+		background: $accent_orange;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:disabled {
+			opacity: 0.6;
+			cursor: unset;
+		}
+
+		@media only screen and(max-width: 700px) {
+			width: 100%;
+		}
+	}
+}

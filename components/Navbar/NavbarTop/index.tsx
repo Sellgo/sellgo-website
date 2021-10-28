@@ -15,10 +15,9 @@ interface Props {}
 const NavbarTop: React.FC<Props> = () => {
 	return (
 		<div className={styles.navbarTop}>
-			<Link href="/contact-sales" passHref>
+			<Link href="/sales-estimator" passHref>
 				<a className={styles.navbarLink__sales}>
-					<User width={14} height={12} fill="#2e3b4a" />
-					<span>Contact Sales</span>
+					<span>Free Sales Estimator</span>
 				</a>
 			</Link>
 
