@@ -40,17 +40,13 @@ const Stepper: React.FC<Props> = (props) => {
 									onKeyPress={() => handleStepChange(index)}
 									className={styles.step}
 								>
-									<div className={
-										`${styles.iconWrapper} ${isActiveStep(index) ? styles.iconWrapper__active : ''}`
-									}>
-										<ExpandedNavbarIcons
-											width={25}
-											height={25}
-											fill={"#95a1ac"}
-											name={product.icon}
-											isRainbow={isActiveStep(index)}
-										/>
-									</div>
+									<ExpandedNavbarIcons
+										width={25}
+										height={25}
+										fill={"#95a1ac"}
+										name={product.icon}
+										isRainbow={isActiveStep(index)}
+									/>
 									<h3 className={styles.stepTitle}> {product.title} </h3>
 								</div>
 							</div>

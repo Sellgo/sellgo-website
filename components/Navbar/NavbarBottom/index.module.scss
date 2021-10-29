@@ -6,7 +6,7 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 3rem;
-	padding-bottom: 3rem;
+	padding-bottom: 2rem;
 
 	&__left {
 		flex: 1;
@@ -124,7 +124,7 @@
 		display: block;
 		width: 100%;
 		height: 4px;
-		background: #707070;
+		background: $orange_purple_gradient;
 		position: absolute;
 		bottom: -2rem;
 		transform: scaleX(0);

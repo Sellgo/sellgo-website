@@ -7,5 +7,11 @@ export const resourcesNavigationList: GroupedNavLinks[] = [
 		desc: 'Amazon Seller Tips & News',
 		navigateTo: '/blogs',
 		iconName: 'blogs'
+	},
+	{
+		head: 'Free Sales Estimator',
+		desc: 'Amazon Sales Estimator and FBA Calculator',
+		navigateTo: '/sales-estimator',
+		iconName: 'salesEstimator'
 	}
 ];

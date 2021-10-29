@@ -11,7 +11,7 @@ interface Props {
 const SeasonalAdjustor: React.FC<Props> = (props) => {
 	const { width, height, fill, isRainbow } = props;
 	if (isRainbow) {
-		return <Image src="/products-seasonalAdjustor.svg" width={width} height={height} />;
+		return <Image src="/products-seasonalityAdjustor.svg" width={width} height={height} />;
 	}
 	return (
         <svg

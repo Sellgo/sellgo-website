@@ -21,14 +21,6 @@ const NavbarTop: React.FC<Props> = () => {
 
 			<ul className={styles.navbarTopLinksList}>
 				<li className={styles.navbarTopLink}>
-					<div className={styles.navbarTopLink__icon}>
-						<Image
-							src="/magnifyingGlass.svg"
-							alt="Magnifying glass"
-							width={15}
-							height={15}
-						/>
-					</div>
 					<a
 						href={AppConfig.APP_URL}
 						className={styles.navbarLink}

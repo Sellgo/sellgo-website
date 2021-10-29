@@ -34,7 +34,6 @@ const ProfitFinder: React.FC<Props> = (props) => {
 						style={{
 							isolation: 'isolate'
 						}}
-						opacity={0.4}
 					/>
 					<path
 						d="M235.13 199.42l-45-13.5c-5.16-1.55-8.77-6.78-8.77-12.73 0-7.27 5.3-13.19

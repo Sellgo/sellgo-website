@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import styles from './ExpandedNavbarIcons.module.scss';
 
 /* Product Icon Components */
 import ChromeExtension from './Products/ChromeExtension';
@@ -25,6 +26,7 @@ import AffiliateProgram from './Resources/AffiliateProgram';
 
 /* Types */
 import { Products, Resources } from '../../interfaces/Navbar';
+import SalesEstimator from './Resources/SalesEstimator';
 
 interface Props {
 	name: Products | Resources;
@@ -35,101 +37,106 @@ interface Props {
 }
 
 const ProductsIconMapper: React.FC<Props> = (props) => {
-	const { name, ...otherProps } = props;
+	const { name, isRainbow, ...otherProps } = props;
 	let productIcon: React.ReactNode;
 
 	switch (name) {
 		// products
 		case 'extension': {
-			productIcon = <ChromeExtension {...otherProps} />;
+			productIcon = <ChromeExtension {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 		case 'searchManagement': {
-			productIcon = <SearchManagement {...otherProps} />;
+			productIcon = <SearchManagement {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 		case 'profitFinder': {
-			productIcon = <ProfitFinder {...otherProps} />;
+			productIcon = <ProfitFinder {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 		case 'productTracker': {
-			productIcon = <ProductTracker {...otherProps} />;
+			productIcon = <ProductTracker {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 		case 'leadsTracker': {
-			productIcon = <LeadsTracker {...otherProps} />;
+			productIcon = <LeadsTracker {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
-		case 'productsDatabase': {
-			productIcon = <ProductsDatabase {...otherProps} />;
+		case 'productDatabase': {
+			productIcon = <ProductsDatabase {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		case 'sellerFinder': {
-			productIcon = <SellerFinder {...otherProps} />;
+			productIcon = <SellerFinder {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		case 'sellerDatabase': {
-			productIcon = <SellerDatabase {...otherProps} />;
+			productIcon = <SellerDatabase {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		case 'sellerMap': {
-			productIcon = <SellerMap {...otherProps} />;
+			productIcon = <SellerMap {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		case 'keywordFinder': {
-			productIcon = <KeywordFinder {...otherProps} />;
+			productIcon = <KeywordFinder {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		case 'keywordDatabase': {
-			productIcon = <KeywordDatabase {...otherProps} />;
+			productIcon = <KeywordDatabase {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		// Inventory Management
 		case 'productRankTracker': {
-			productIcon = <ProductRankTracker {...otherProps} />;
+			productIcon = <ProductRankTracker {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		case 'dashboard': {
-			productIcon = <Dashboard {...otherProps} />;
+			productIcon = <Dashboard {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		case 'orderPlanning': {
-			productIcon = <OrderPlanning {...otherProps} />;
+			productIcon = <OrderPlanning {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		case 'salesProjection': {
-			productIcon = <SalesProjection {...otherProps} />;
+			productIcon = <SalesProjection {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
-		case 'seasonalAdjustor': {
-			productIcon = <SeasonalAdjustor {...otherProps} />;
+		case 'seasonalityAdjustor': {
+			productIcon = <SeasonalAdjustor {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		case 'catalogPlanning': {
-			productIcon = <CatalogPlanning {...otherProps} />;
+			productIcon = <CatalogPlanning {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		// resources
 		case 'blogs': {
-			productIcon = <Blogs {...otherProps} />;
+			productIcon = <Blogs {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 
 		case 'affiliateProgram': {
-			productIcon = <AffiliateProgram {...otherProps} />;
+			productIcon = <AffiliateProgram {...otherProps}/>;
+			break;
+		}
+
+		case 'salesEstimator': {
+			productIcon = <SalesEstimator {...otherProps} isRainbow={isRainbow}/>;
 			break;
 		}
 		default: {
@@ -137,7 +144,10 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 		}
 	}
 
-	return <>{productIcon}</>;
+	return (
+		<div className={`${styles.iconWrapper} ${isRainbow ? styles.iconWrapper__active : ''}`}>
+			{productIcon}
+		</div>);
 };
 
 export default memo(ProductsIconMapper);

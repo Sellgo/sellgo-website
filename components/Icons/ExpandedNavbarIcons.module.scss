@@ -1,0 +1,16 @@
+
+@import '../../styles/guidelines';
+
+.iconWrapper {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $grey_3;
+	border-radius: 3px;
+
+	&__active {
+		background-color: $black_1;
+	}
+}

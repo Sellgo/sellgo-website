@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 
 /* Styling */
@@ -17,7 +18,9 @@ interface Props {
 const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 	const { className } = props;
 
+	const [currentHoverId, setCurrentHoverId] = React.useState<string>('wholesale');
 	const handleChange = (e: any, customID: string) => {
+		setCurrentHoverId(customID);
 		const tabContent = document.querySelectorAll('.tabContent');
 		const tabLinks = document.querySelectorAll('.tabLinks');
 		const hoverTabPanel = document.getElementById(customID);
@@ -46,11 +49,11 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 					<h3>Products</h3>
 
 					{productsNavigationList.map(
-						(productListDetails: any, index: number) => {
+						(productListDetails: any) => {
 							return (
 								<div
 									className={`${styles.tabLinks} tabLinks ${
-										index === 0 ? 'active' : ''
+										currentHoverId === productListDetails.hoverId ? styles.tabLinks__active : ''
 									}`}
 									key={uuid()}
 									onMouseOver={(e: any) => {
@@ -63,7 +66,10 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 									tabIndex={0}
 								>
 									<h2>{productListDetails.head}</h2>
-									<p>{productListDetails.desc}</p>
+									<p>
+										{productListDetails.desc} 
+										&nbsp;
+										<Image src={'/blueLongArrowRight.svg'} width={12} height={7}/> </p>
 								</div>
 							);
 						}

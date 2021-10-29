@@ -5,7 +5,7 @@ export type Products =
 	| 'profitFinder'
 	| 'productTracker'
 	| 'leadsTracker'
-	| 'productsDatabase'
+	| 'productDatabase'
 	| 'sellerFinder'
 	| 'sellerDatabase'
 	| 'sellerMap'
@@ -15,10 +15,10 @@ export type Products =
 	| 'dashboard'
 	| 'orderPlanning'
 	| 'salesProjection'
-	| 'seasonalAdjustor'
+	| 'seasonalityAdjustor'
 	| 'catalogPlanning'
 
-export type Resources = 'blogs' | 'affiliateProgram';
+export type Resources = 'blogs' | 'affiliateProgram' | 'salesEstimator';
 
 export interface ProductsNavigationList {
 	head: string;
@@ -31,6 +31,8 @@ export interface GroupedNavLinks {
 	desc: string;
 	navigateTo: string;
 	iconName: Products | Resources;
+	isNew?: boolean;
+	isComingSoon?: boolean;
 }
 
 export interface ProductsPanelData {

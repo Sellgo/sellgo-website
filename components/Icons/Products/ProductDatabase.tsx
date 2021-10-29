@@ -11,7 +11,7 @@ interface Props {
 const ProductsDatabase: React.FC<Props> = (props) => {
 	const { width, height, fill, isRainbow } = props;
 	if (isRainbow) {
-		return <Image src="/products-productsDatabase.svg" width={width} height={height} />;
+		return <Image src="/products-productDatabase.svg" width={width} height={height} />;
 	}
 	return (
         <svg
