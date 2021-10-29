@@ -1,7 +1,7 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Sellgo - Amazon Product Research Tools for FBA Sellers`,
+	title: `Sellgo - Amazon All-In-One Tool for FBA Sellers`,
 	keywords: [
 		'sellgo',
 		'product tracker',

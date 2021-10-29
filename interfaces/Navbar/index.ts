@@ -5,9 +5,18 @@ export type Products =
 	| 'profitFinder'
 	| 'productTracker'
 	| 'leadsTracker'
+	| 'productsDatabase'
 	| 'sellerFinder'
 	| 'sellerDatabase'
-	| 'sellerMap';
+	| 'sellerMap'
+	| 'keywordFinder'
+	| 'keywordDatabase'
+	| 'productRankTracker'
+	| 'dashboard'
+	| 'orderPlanning'
+	| 'salesProjection'
+	| 'seasonalAdjustor'
+	| 'catalogPlanning'
 
 export type Resources = 'blogs' | 'affiliateProgram';
 

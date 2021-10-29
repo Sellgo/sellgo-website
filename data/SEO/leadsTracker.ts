@@ -1,7 +1,7 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Sellgo - Amazon Leads Tracker:`,
+	title: `Sellgo - Amazon Leads Tracker: Amazon All-In-One Tool`,
 	description: `Monitor thousands of products and track price history to find leads on newly profitable 
 	products with the Amazon price tracker. 
 	Keep tabs on any product's day to day changes to stock up on winning, high demand products. 

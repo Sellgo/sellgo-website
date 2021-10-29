@@ -1,13 +1,18 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface Props {
 	width: number;
 	height: number;
 	fill: string;
+	isRainbow?: boolean;
 }
 
 const LeadsTracker: React.FC<Props> = (props) => {
-	const { width, height, fill } = props;
+	const { width, height, fill, isRainbow } = props;
+	if (isRainbow) {
+		return <Image src="/products-leadsTracker.svg" width={width} height={height} />;
+	}
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

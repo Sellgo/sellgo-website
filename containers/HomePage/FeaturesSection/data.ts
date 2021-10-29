@@ -15,7 +15,8 @@ export const features: {
 		icon: '/features-keyword-research.svg',
 		title: 'KEYWORD RESEARCH',
 		subTitle: 'Boost more sales with better keywords',
-		description: `Boost more sales with better keywords`
+		description: `What if we have a tool that showed you the exact search terms that 
+			would drive traffic to your Amazon listing?`
 	},
 	{
 		icon: '/features-product-research.svg',

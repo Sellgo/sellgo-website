@@ -43,13 +43,16 @@
 	}
 }
 
-.line {
-	margin-top: 1.5rem;
-	align-self: flex-start;
-	border-top: 1px solid $border-color-1;
-	width: 100px;
+.iconWrapper {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $grey_3;
+	border-radius: 3px;
 
-	@media only screen and(max-width: 900px) {
-		display: none;
+	&__active {
+		background-color: $black_1;
 	}
 }

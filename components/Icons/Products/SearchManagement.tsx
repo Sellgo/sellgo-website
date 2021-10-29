@@ -1,14 +1,19 @@
 /* eslint-disable max-len */
 import React from 'react';
+import Image from 'next/image';
 
 interface Props {
 	width: number;
 	height: number;
 	fill: string;
+	isRainbow?: boolean;
 }
 
 const SearchManagement: React.FC<Props> = (props) => {
-	const { width, height, fill } = props;
+	const { width, height, fill, isRainbow } = props;
+	if (isRainbow) {
+		return <Image src="/products-searchManagement.svg" width={width} height={height} />;
+	}
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

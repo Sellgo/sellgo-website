@@ -1,7 +1,7 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Sellgo - Chrome Extension: Amazon Product Research Tool`,
+	title: `Sellgo - Chrome Extension: Amazon All-In-One Tool`,
 	description: `Powerful browser extension and Amazon product research tool. 
 	Evalute thousands of products, analyze sales performances, and identify high demand, 
 	profitable products to grow your Amazon business. 

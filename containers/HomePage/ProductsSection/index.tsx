@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -18,10 +19,11 @@ const ProductsSection: React.FC<Props> = () => {
 			<div className={styles.productsWrapper}>
 				{productsDetails.map((product, index) => (
 					<div className={styles.product} key={index}>
-						<img
-							className={styles.icon}
+						<Image
 							src={product.icon}
 							alt={product.title}
+							width={75}
+							height={56.25}
 						/>
 						<p className={styles.title}>{product.title}</p>
 						<p className={styles.action}>{product.action}</p>

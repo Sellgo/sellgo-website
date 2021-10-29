@@ -1,7 +1,7 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Sellgo - Seller Database`,
+	title: `Sellgo - Seller Database: Amazon All-In-One Tool`,
 	description: `Access a database full of Amazon sellers and businesses selling profitable, high-demand products. 
 	Compare ASINs, brands, seller reviews ratings, and more.`,
 	imageUrl: ``,

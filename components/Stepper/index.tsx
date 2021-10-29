@@ -25,17 +25,14 @@ const Stepper: React.FC<Props> = (props) => {
 		setActiveStep(step);
 	};
 
-	const isFirstStep = (index: number) => index === 0;
 	const isActiveStep = (index: number) => index === activeStep;
 
 	return (
 		<div>
 			<div className={styles.stepperWrapper}>
 				{steps.map((product: StepDetail, index: number) => {
-					const fillColour = isActiveStep(index) ? '#b318f1' : '#ced4d9';
 					return (
 						<>
-							{!isFirstStep(index) ? <div className={styles.line} /> : null}
 							<div key={index} className={styles.stepWrapper}>
 								<div
 									key={product.title}
@@ -43,12 +40,17 @@ const Stepper: React.FC<Props> = (props) => {
 									onKeyPress={() => handleStepChange(index)}
 									className={styles.step}
 								>
-									<ExpandedNavbarIcons
-										width={30}
-										height={30}
-										fill={fillColour}
-										name={product.icon}
-									/>
+									<div className={
+										`${styles.iconWrapper} ${isActiveStep(index) ? styles.iconWrapper__active : ''}`
+									}>
+										<ExpandedNavbarIcons
+											width={25}
+											height={25}
+											fill={"#95a1ac"}
+											name={product.icon}
+											isRainbow={isActiveStep(index)}
+										/>
+									</div>
 									<h3 className={styles.stepTitle}> {product.title} </h3>
 								</div>
 							</div>

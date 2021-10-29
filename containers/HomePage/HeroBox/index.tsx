@@ -11,7 +11,7 @@ import RainbowText from '../../../components/RainbowText';
 interface Props {}
 
 const HeroBox: React.FC<Props> = () => {
-	const textList = ['Every Amazon Seller', 'Wholesale', 'Private Label'];
+	const textList = ['Private Label.', 'Wholesale.', 'Service Provider.', 'Every Amazon Seller.'];
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
 	const [isAnimationIncreasing, setAnimationIncreasing] = React.useState(true);
 	const [animationIndex, setAnimationIndex] = React.useState(0);
@@ -91,8 +91,7 @@ const HeroBox: React.FC<Props> = () => {
 				</CTAButton>
 
 				<small className={`${styles.ctaOverText}`}>
-					Start an Amazon business with $1, <br /> upgrade your tools as you
-					grow.
+					Enjoy 50% off 1st month or 1st year <br/>for the first 1,000 Beta Users
 				</small>
 				<div className={styles.heroboxImage}>
 					<Image
