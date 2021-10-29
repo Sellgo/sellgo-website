@@ -5,7 +5,7 @@ import styles from './index.module.scss';
 import CTAButton from '../CTAButton';
 
 interface Props {
-	showCtaNavBar?: boolean;
+	showCtaNavBar: boolean;
 }
 const CtaNavBar = (props: Props) => {
 	const { showCtaNavBar } = props;
