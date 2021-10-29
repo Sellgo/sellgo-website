@@ -21,14 +21,16 @@
 		}
 
 		small {
-			color: $orange_6;
+			text-transform: uppercase;
+			color: $grey_8;
 			font-size: $fontsize_content_14;
 			font-weight: $fontweight_semibold;
 		}
 
 		h3 {
 			font-size: $fontsize_subtitle_28;
-			font-weight: $fontweight_medium;
+			font-weight: $fontweight_semibold;
+			color: $black_1;
 			line-height: 1;
 			margin-bottom: 3rem;
 		}

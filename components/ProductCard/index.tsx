@@ -49,7 +49,7 @@ const ProductCard: React.FC<Props> = (props) => {
 			</div>
 
 			<div className={`${imageClass}`}>
-				<Image src={imageUrl} alt="Seller Finder" width={450} height={270} />
+				<Image src={imageUrl} alt="Seller Finder" width={450} height={450} />
 			</div>
 		</article>
 	);

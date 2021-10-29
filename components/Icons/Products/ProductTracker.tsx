@@ -15,6 +15,12 @@ const ProductTracker: React.FC<Props> = (props) => {
 			width={width}
 			height={height}
 		>
+			<defs>
+				<linearGradient id="MyGradient">
+					<stop offset="5%" stopColor="#FF61DF" />
+					<stop offset="95%" stopColor="#04F1FF" />
+				</linearGradient>
+			</defs>
 			<g data-name="Layer 2">
 				<g data-name="Layer 1" fill={fill}>
 					<path

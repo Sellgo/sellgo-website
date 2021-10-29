@@ -1,0 +1,78 @@
+@import '../../styles/guidelines';
+
+/* Style Guide for cta button */
+.ctabutton {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 7px;
+
+	&__primary {
+		&__orange {
+			background: $accent_orange;
+			color: #fff;
+			border: none;
+		}
+
+		&__white {
+			background: $prim_white;
+			color: $black_1;
+			border: none;
+		}
+
+		&__rainbow {
+			background: $orange_purple_gradient;
+			color: $prim_white;
+			border: none;
+		}
+	}
+
+	&__secondary {
+		&__orange {
+			background: $prim_white;
+			color: $accent_orange;
+			border: none;
+		}
+
+		&__white {
+			background: $prim_white;
+			color: $black_1;
+			border: 1px solid $black_1;
+		}
+
+		&__rainbow {
+			background: $orange_purple_gradient;
+			color: $prim_white;
+			padding: 3px !important;
+			border: none;
+		}
+	}
+
+	&__medium {
+		width: max-content;
+		padding: 0 3rem;
+		font-size: 20px;
+		height: 50px;
+		font-weight: 600;
+	}
+
+	&__small {
+		width: max-content;
+		padding: 0 2rem;
+		font-size: 14px;
+		height: 40px;
+		font-weight: 600;
+	}
+
+	&__rainbowWrapper {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $prim_white;
+		border-radius: 6px;
+		color: $black_1;
+	}
+}

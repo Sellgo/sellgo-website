@@ -13,7 +13,7 @@ import { GET_SHOW_CASE_BLOGS } from '../graphql/cms';
 /* Containers */
 import HeroBox from '../containers/HomePage/HeroBox';
 import InfoSection from '../containers/HomePage/InfoSection';
-import GlobalSellersBannerSection from '../containers/HomePage/GlobalSellersBannerSection';
+import FeaturesSection from '../containers/HomePage/FeaturesSection';
 import ProductsSection from '../containers/HomePage/ProductsSection';
 import StatisticsSection from '../containers/HomePage/StatisticsSection';
 import FeatureComparisonTable from '../containers/HomePage/FeatureComparisonTable';
@@ -51,12 +51,12 @@ const HomePage: React.FC<Props> = (props) => {
 			/>
 			<HeroBox />
 			<main>
-				<StepperInfoSection />
-				<StatisticsSection />
 				<InfoSection />
-				<GlobalSellersBannerSection />
+				<StatisticsSection />
+				<StepperInfoSection />
+				<FeaturesSection />
 				<ProductsSection />
-				<FeatureComparisonTable/>
+				<FeatureComparisonTable />
 				<TestimonialsSection />
 
 				<div className={styles.divider}></div>

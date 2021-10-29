@@ -1,0 +1,65 @@
+@import '../../../styles/guidelines';
+
+.featuresSectionWrapper {
+	background-color: $black_1;
+	color: $prim_white;
+}
+
+.featuresSection {
+	padding: 5rem 0;
+	min-height: 80rem;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+}
+
+.featuresWrapper {
+	display: flex;
+	flex-direction: row;
+	align-content: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 5rem;
+}
+
+.feature {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: flex-start;
+	width: 30rem;
+	margin: 2rem 2rem;
+	text-align: left;
+}
+
+.title {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	font-size: $fontsize_content_14;
+	font-weight: $fontweight_medium;
+	text-transform: uppercase;
+	color: $prim_white !important;
+
+	img {
+		margin-right: 10px;
+	}
+}
+
+.subTitle {
+	margin-top: 10px;
+	height: 50px;
+	margin-bottom: 18px;
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_bold;
+	color: $prim_white !important;
+}
+
+.description {
+	font-size: $fontsize_content_14;
+	font-weight: $fontweight_medium;
+	color: $prim_white !important;
+}

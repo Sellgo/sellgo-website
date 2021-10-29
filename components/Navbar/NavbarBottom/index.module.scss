@@ -6,7 +6,7 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 3rem;
-	padding-bottom: 1.5rem;
+	padding-bottom: 3rem;
 
 	&__left {
 		flex: 1;
@@ -85,7 +85,7 @@
 
 .navbarBottomLink {
 	font-size: $fontsize_content_14;
-	color: $prim_dark_2;
+	color: $prim_white;
 	cursor: pointer;
 	position: relative;
 	margin: 0 4rem;
@@ -106,7 +106,7 @@
 }
 
 .navLink {
-	color: $prim_dark_2;
+	color: $prim_white;
 	font-weight: $fontweight_semibold;
 	position: relative;
 	width: max-content;
@@ -139,5 +139,10 @@
 }
 
 .navbarCTA {
+	width: 23rem !important;
 	justify-self: flex-end;
+
+	&__arrow {
+		margin-left: 10px;
+	}
 }

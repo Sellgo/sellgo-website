@@ -1,11 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
-
-/* Components */
-import User from '../../Icons/Person';
 
 /* Config */
 import AppConfig from '../../../config';
@@ -23,13 +21,21 @@ const NavbarTop: React.FC<Props> = () => {
 
 			<ul className={styles.navbarTopLinksList}>
 				<li className={styles.navbarTopLink}>
+					<div className={styles.navbarTopLink__icon}>
+						<Image
+							src="/magnifyingGlass.svg"
+							alt="Magnifying glass"
+							width={15}
+							height={15}
+						/>
+					</div>
 					<a
 						href={AppConfig.APP_URL}
 						className={styles.navbarLink}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Login to my account
+						Go to my account
 					</a>
 				</li>
 				<li className={styles.navbarTopLink}>

@@ -6,44 +6,34 @@ import styles from './index.module.scss';
 /* Data */
 import { productsDetails } from './data';
 
-/* Components */
-import ProductCard from '../../../components/ProductCard';
-import CTAButton from '../../../components/CTAButton';
-
 interface Props {}
 
 const ProductsSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.productsSection}`}>
 			<h2 className="secondary-heading">
-				From Wholesale to Private Label to Agencies. <br />
-				Whatever your business model and needs, <br />
-				Sellgo is here to help you grow.
+				The Amazon Selling Solution Your Business Will Love
 			</h2>
 
 			<div className={styles.productsWrapper}>
-				{productsDetails.map((productDetail: any, index: number) => {
-					return (
-						<ProductCard
-							key={index}
-							{...productDetail}
-							reversed={(index + 1) % 2 === 0}
+				{productsDetails.map((product, index) => (
+					<div className={styles.product} key={index}>
+						<img
+							className={styles.icon}
+							src={product.icon}
+							alt={product.title}
 						/>
-					);
-				})}
+						<p className={styles.title}>{product.title}</p>
+						<p className={styles.action}>{product.action}</p>
+						<p className={styles.popularFeatures}> Popular Features </p>
+						{product.features.map((feature, index) => (
+							<p className={styles.productFeature} key={index}>
+								{feature.name}
+							</p>
+						))}
+					</div>
+				))}
 			</div>
-
-			<h2 className="secondary-heading">
-				Get Started and Access Sellgo&apos;s Tools to Grow Your Business.
-			</h2>
-			<CTAButton
-				type="primary"
-				size="small"
-				navigateTo="/pricing"
-				className={styles.productsSectionCTA}
-			>
-				See Pricing Plans
-			</CTAButton>
 		</section>
 	);
 };

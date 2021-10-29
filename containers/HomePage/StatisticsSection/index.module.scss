@@ -1,15 +1,18 @@
 @import '../../../styles/guidelines';
 
 .statisticsSection {
-	background: linear-gradient(180deg, $blue_6, #184770);
+	background: $black_1;
 	display: flex;
 }
 
 .statisticsWrapper {
 	color: $prim_white;
 	height: 100%;
-	padding: 15rem 0;
 	text-align: center;
+	background-image: url('../../../public/sellerWorldMap.png');
+	background-size: 90% 90%;
+	background-repeat: no-repeat;
+	background-position: center;
 
 	h2 {
 		color: inherit;

@@ -1,14 +1,8 @@
 import React from 'react';
+import RainbowText from '../../../components/RainbowText';
 
 /* Styling */
 import styles from './index.module.scss';
-
-/* Components */
-import CTAButton from '../../../components/CTAButton';
-import InfoCard from '../../../components/InfoCard';
-
-/* Data */
-import { featureSectionList } from './data';
 
 interface Props {}
 
@@ -16,35 +10,26 @@ const InfoSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
+				<p className={styles.orangeHeading}> What is Sellgo? </p>
 				<h2 className="secondary-heading">
-					The Amazon Opportunity Finder to Make Your Business Thrive
+					All-In-One Amazon tool to generate
+					<br />
+					<RainbowText type="purple_orange_gradient">more revenue</RainbowText>
 				</h2>
 
 				<p className={styles.infoSectionDescription}>
-					Sellgo&apos;s tools provide any Amazon seller with endless
-					opportunities to grow and expand your wholesale or private label
-					business. <br />
-					Whether you need help with product scouting or product research, our
-					powerful FBA tools can help you exceed <br />
-					limitations and accelerate your Amazon business.
+					<br />
+					We consulted with the world&apos;s best Amazon Private Label and
+					Wholesale
+					<br />
+					entrepreneurs to define how to effectively find profitable products,
+					<br />
+					dominate your ranking launch with the best keywords,
+					<br />
+					automate PPC re-campaign with Zapier,
+					<br />
+					prevent stockouts, and more ...
 				</p>
-
-				<div className={styles.infoSectionCTAWrapper}>
-					<CTAButton
-						type="secondary"
-						size="small"
-						navigateTo="/demo"
-						className={styles.infoSectionCTA}
-					>
-						Demo Enterprise Solution
-					</CTAButton>
-				</div>
-
-				<div className={styles.infoSectionCardsWrapper}>
-					{featureSectionList.map((feature: any) => {
-						return <InfoCard key={feature.title} {...feature} />;
-					})}
-				</div>
 			</div>
 		</section>
 	);

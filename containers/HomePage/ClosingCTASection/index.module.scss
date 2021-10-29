@@ -2,65 +2,46 @@
 
 .closingCTASection {
 	margin-top: 10rem;
+	background: $black_1;
 }
 
 .closingCTAWrapper {
 	padding: 10rem 0;
+	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
+	text-align: center;
 
 	@media only screen and(max-width: 800px) {
 		flex-direction: column;
 		padding: 5rem 0;
 	}
 
-	&__left {
-		color: $prim_dark_2;
-
-		@media only screen and(max-width: 800px) {
-			order: 2;
-		}
-
-		@media only screen and(max-width: 500px) {
-			text-align: center;
-		}
-
-		h2 {
-			font-size: $fontsize_subtitle_32;
-			font-weight: $fontweight_bold;
-			max-width: 48rem;
-		}
-
-		p {
-			font-size: $fontsize_content_14;
-			max-width: 51rem;
-			margin: 3rem 0;
-		}
-
-		small {
-			font-size: $fontsize_content_12;
-			max-width: 21.5rem;
-			margin-top: 2rem;
-			display: inline-block;
-		}
+	h2 {
+		font-size: $fontsize_title_46;
+		font-weight: $fontweight_bold;
 	}
 
-	&__right {
-		width: 45rem;
-		height: 42rem;
-		@media only screen and(max-width: 800px) {
-			order: 1;
-		}
-
-		@media only screen and(max-width: 500px) {
-			width: 90%;
-		}
+	p {
+		font-size: $fontsize_content_14;
+		margin: 3rem 0;
+		color: $prim_white;
 	}
-}
 
-.closingCTA {
-	@media only screen and(max-width: 500px) {
-		margin: 0 auto;
+	small {
+		font-size: $fontsize_content_12;
+		margin-top: 2rem;
+		display: inline-block;
+		color: $prim_white;
+		max-width: 27rem;
+	}
+
+	.closingCTA {
+		width: 27rem;
+		@media only screen and(max-width: 500px) {
+			margin: 0 auto;
+		}
 	}
 }
