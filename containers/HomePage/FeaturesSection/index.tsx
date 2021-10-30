@@ -12,7 +12,7 @@ const FeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.featuresSectionWrapper}>
 			<div className={`page-container ${styles.featuresSection}`}>
-				<h2 className="secondary-heading">
+				<h2 className={styles.featuresSectionTitle}>
 					<RainbowText type="pink_purple_blue_gradient">
 						Sellgo will help you ...
 					</RainbowText>

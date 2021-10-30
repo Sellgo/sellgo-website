@@ -24,16 +24,16 @@ const StepperInfoSection: React.FC<Props> = () => {
 			className={`page-container ${styles.stepperInfoSectionWrapper}`}
 			id="stepperSection"
 		>
-			<h2 className="secondary-heading">How Sellgo Works For</h2>
+			<h2 className={styles.stepperTitle}>How Sellgo Works For</h2>
 			<Tabs
 				selectedTabClassName={styles.stepperTab__selected}
 				onSelect={setSelectedPlanType}
 				selectedIndex={selectedPlanType}
 			>
 				<TabList className={styles.tabListWrapper}>
-					<Tab className={styles.stepperTab}>WHOLESALE</Tab>
-					<Tab className={styles.stepperTab}>PRIVATE LABEL</Tab>
-					<Tab className={styles.stepperTab}>SERVICE PROVIDER</Tab>
+					<Tab className={styles.stepperTab}>WHOLESALE<div className={styles.underline}/></Tab>
+					<Tab className={styles.stepperTab}>PRIVATE LABEL<div className={styles.underline}/></Tab>
+					<Tab className={styles.stepperTab}>SERVICE PROVIDER<div className={styles.underline}/></Tab>
 				</TabList>
 				<TabPanel>
 					<Stepper steps={wholesaleFeatures} />

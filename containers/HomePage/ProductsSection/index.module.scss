@@ -9,6 +9,12 @@
 	justify-content: center;
 }
 
+.productsSectionTitle {
+	font-size: 32px;
+	font-weight: $fontweight_bold;
+	color: $prim_dark_2;
+}
+
 .productsWrapper {
 	margin-top: 3rem;
 	display: flex;
@@ -41,14 +47,16 @@
 	}
 
 	.popularFeatures {
-		color: $black_0;
+		color: $grey_8;
 		font-size: $fontsize_content_16;
+		font-weight: $fontweight_medium;
 		margin: 18px 0;
 	}
 
 	.productFeature {
 		color: $black_0;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_medium;
 		margin-top: 5px;
 	}
 }

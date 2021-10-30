@@ -14,7 +14,9 @@ const InfoSection: React.FC<Props> = () => {
 				<h2 className="secondary-heading">
 					All-In-One Amazon tool to generate
 					<br />
-					<RainbowText type="purple_orange_gradient">more revenue</RainbowText>
+					<span className={styles.moreRevenue}>
+						<RainbowText type="purple_orange_gradient">more revenue</RainbowText>
+					</span>
 				</h2>
 
 				<p className={styles.infoSectionDescription}>

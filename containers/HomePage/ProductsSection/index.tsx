@@ -12,7 +12,7 @@ interface Props {}
 const ProductsSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.productsSection}`}>
-			<h2 className="secondary-heading">
+			<h2 className={styles.productsSectionTitle}>
 				The Amazon Selling Solution Your Business Will Love
 			</h2>
 
@@ -22,7 +22,7 @@ const ProductsSection: React.FC<Props> = () => {
 						<Image
 							src={product.icon}
 							alt={product.title}
-							width={75}
+							width={60}
 							height={56.25}
 						/>
 						<p className={styles.title}>{product.title}</p>

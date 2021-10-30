@@ -9,9 +9,9 @@
 	text-align: center;
 	height: 100%;
 	h2 {
-		color: #1e3767;
+		color: $black_1;
 		font-size: $fontsize_subtitle_32;
-		font-weight: $fontweight_extrabold;
+		font-weight: $fontweight_bold;
 		span {
 			color: $accent_orange;
 		}
@@ -49,7 +49,8 @@
 	}
 
 	small {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_medium;
 		color: $prim_dark_2;
 		display: inline-block;
 		width: 100%;

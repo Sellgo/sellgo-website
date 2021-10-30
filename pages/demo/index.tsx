@@ -499,7 +499,7 @@ const DemoPage: React.FC<Props> = () => {
 					</p>
 
 					<button
-						className="ctabutton ctabutton--primary ctabutton--medium"
+						className={`ctabutton ctabutton--primary ctabutton--medium ${styles.submitButton}`}
 						type="submit"
 						disabled={
 							firstNameErr ||

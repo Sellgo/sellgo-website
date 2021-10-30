@@ -7,7 +7,8 @@
 .scheduleMeetingWrapper {
 	width: 85rem;
 	min-height: 108rem;
-	border: 1px solid $grey_2;
+	background: $grey_1;
+	border: 1px solid $grey_3;
 	box-shadow: $box-shadow-1;
 	border-radius: 7px;
 	margin: 0 auto;
@@ -19,9 +20,9 @@
 	}
 
 	p {
-		font-size: $fontsize_content_12;
-		color: $second_grey;
-		max-width: 75rem;
+		font-size: $fontsize_content_14;
+		color: $prim_dark_1;
+		max-width: 80rem;
 		margin: 0 auto;
 		text-align: center;
 		margin-top: 2rem;
@@ -64,7 +65,7 @@
 	label {
 		color: $prim_dark_2;
 		font-size: $fontsize_content_14;
-		font-weight: $fontweight_semibold;
+		font-weight: $fontweight_medium;
 		width: 100%;
 		margin-bottom: 5px;
 		display: inline-block;
@@ -73,7 +74,7 @@
 	input {
 		width: 100%;
 		height: 4rem;
-		background: $grey_1;
+		background: $prim_white;
 		border: 1px solid $second_silver;
 		border-radius: 3px;
 		color: $prim_dark_2;
@@ -98,7 +99,7 @@
 		width: 100%;
 
 		textarea {
-			background: $grey_1;
+			background: $prim_white;
 			outline: 0;
 			width: 100%;
 			font-size: $fontsize_content_14;
@@ -130,7 +131,7 @@
 	label {
 		color: $prim_dark_2;
 		font-size: $fontsize_content_14;
-		font-weight: $fontweight_semibold;
+		font-weight: $fontweight_medium;
 		width: 100%;
 		margin-bottom: 5px;
 		display: inline-block;
@@ -139,6 +140,10 @@
 
 .countrySelect {
 	height: 8.2rem;
+
+	>div {
+		background-color: $prim_white !important;
+	}
 }
 
 .selectDropdown {
@@ -155,7 +160,7 @@
 
 	&__control {
 		width: 24rem;
-		background: $grey_1;
+		background: $prim_white;
 		border: 1px solid $second_silver;
 		font-size: $fontsize_content_14;
 		padding: 1rem;
@@ -172,7 +177,7 @@
 	}
 
 	&__menu {
-		background: $grey_1;
+		background: $prim_white;
 		border: 1px solid $second_silver;
 		border-radius: 3px;
 		border-top: 0;
@@ -214,6 +219,7 @@
 	font-size: $fontsize_content_14 !important;
 	color: $prim_dark_2 !important;
 	text-align: left !important;
+	line-height: 30px;
 
 	a {
 		color: inherit;
@@ -221,4 +227,8 @@
 		cursor: pointer;
 		margin-left: 5px;
 	}
+}
+
+.submitButton {
+	background: $orange_purple_gradient;
 }

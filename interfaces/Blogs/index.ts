@@ -45,4 +45,5 @@ export interface FilteredBlog {
 	title: string;
 	categories: Categories;
 	readingTime: ReadingTime;
+	date: Date;
 }

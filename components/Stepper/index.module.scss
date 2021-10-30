@@ -1,5 +1,9 @@
 @import '../../styles/guidelines';
 
+.stepperGrid {
+	display: grid;
+	grid-template-columns: 15% 70% 15%;
+}
 .stepperWrapper {
 	display: flex;
 	flex-direction: row;
@@ -30,9 +34,9 @@
 	justify-content: center;
 	text-align: center;
 	margin-top: 1.4rem;
-	font-size: $fontsize_content_16;
+	font-size: $fontsize_content_12;
 	color: $prim_dark_2;
-	font-weight: $fontweight_semibold;
+	font-weight: $fontweight_medium;
 
 	@media only screen and(max-width: 1650px) {
 		width: 9rem;
@@ -41,4 +45,16 @@
 	@media only screen and(max-width: 900px) {
 		display: none;
 	}
+
+	&__selected {
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_bold;
+	}
+}
+
+.arrowButton {
+	margin: 0 auto;
+	background: none;
+	border: none;
+	cursor: pointer;
 }

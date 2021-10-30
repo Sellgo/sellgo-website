@@ -20,8 +20,14 @@
 .infoSectionDescription {
 	text-align: center;
 	font-size: $fontsize_content_14;
+	font-weight: $fontweight_medium;
+
 	width: 100%;
 	@media only screen and(max-width: 650px) {
 		width: 90%;
 	}
+}
+
+.moreRevenue {
+	font-weight: $fontweight_extrabold;
 }

@@ -24,3 +24,13 @@ export const generateCategoryDisplayName = (categoriesList: Category[]) => {
 export const formatBlogReadTime = (time: number) => {
 	return Math.abs(time);
 };
+
+/* Format blog date dd month yyyy */
+export const formatBlogDate = (date: string) => {
+	const dateObj = new Date(date);
+	const day = dateObj.getDate();
+	const month = dateObj.toLocaleString('default', { month: 'short' });
+	const year = dateObj.getFullYear();
+
+	return `${day} ${month} ${year}`;
+}

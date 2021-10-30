@@ -1,6 +1,7 @@
 import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
+import Image from 'next/image';
+
 /* Styling */
 import styles from './index.module.scss';
 
@@ -10,8 +11,6 @@ import ProductCard from '../ProductCard';
 
 /* Interfaces */
 import { StepDetail } from '../../interfaces/Stepper';
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 interface Props {
 	steps: StepDetail[];
@@ -29,36 +28,68 @@ const Stepper: React.FC<Props> = (props) => {
 
 	return (
 		<div>
-			<div className={styles.stepperWrapper}>
-				{steps.map((product: StepDetail, index: number) => {
-					return (
-						<>
-							<div key={index} className={styles.stepWrapper}>
-								<div
-									key={product.title}
-									onClick={() => handleStepChange(index)}
-									onKeyPress={() => handleStepChange(index)}
-									className={styles.step}
-								>
-									<ExpandedNavbarIcons
-										width={25}
-										height={25}
-										fill={"#95a1ac"}
-										name={product.icon}
-										isRainbow={isActiveStep(index)}
-									/>
-									<h3 className={styles.stepTitle}> {product.title} </h3>
+			<div className={styles.stepperGrid}>
+				{activeStep !== 0 ?
+					<button 
+						className={styles.arrowButton}
+						onClick={() => setActiveStep(activeStep - 1)}
+					>
+						<Image
+							src='/leftArrow.svg'
+							width={25}
+							height={25}
+						/>
+					</button>
+					: <div/>
+				}
+				<div className={styles.stepperWrapper}>
+					{steps.map((product: StepDetail, index: number) => {
+						return (
+							<>
+								<div key={index} className={styles.stepWrapper}>
+									<div
+										key={product.title}
+										onClick={() => handleStepChange(index)}
+										onKeyPress={() => handleStepChange(index)}
+										className={styles.step}
+									>
+										<ExpandedNavbarIcons
+											width={25}
+											height={25}
+											fill={"#95a1ac"}
+											name={product.icon}
+											isRainbow={isActiveStep(index)}
+										/>
+										<h3 className={
+											`${styles.stepTitle} 
+											${isActiveStep(index) ? styles.stepTitle__selected : ''}`}
+										> 
+											{product.title} 
+										</h3>
+									</div>
 								</div>
-							</div>
-						</>
-					);
-				})}
+							</>
+						);
+					})}
+				</div>
+				{
+					activeStep !== steps.length - 1 ?
+					<button 
+					className={styles.arrowButton}
+					onClick={() => setActiveStep(activeStep + 1)}
+				>
+					<Image
+						src='/rightArrow.svg'
+						width={25}
+						height={25}
+					/>
+				</button>
+				: <div/>}
 			</div>
 			<div>
-				<AutoPlaySwipeableViews
+				<SwipeableViews
 					index={activeStep}
 					onChangeIndex={handleStepChange}
-					interval={5000} // = 5seconds
 					enableMouseEvents
 				>
 					{steps.map((step: StepDetail, index: number) => {
@@ -70,7 +101,7 @@ const Stepper: React.FC<Props> = (props) => {
 							/>
 						);
 					})}
-				</AutoPlaySwipeableViews>
+				</SwipeableViews>
 			</div>
 		</div>
 	);

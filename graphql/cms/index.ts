@@ -193,6 +193,32 @@ export const GET_FILTERED_BLOGS = gql`
 				readingTime {
 					readtime
 				}
+				date
+			}
+		}
+	}
+`;
+
+export const GET_FILTERED_LATEST_BLOGS = gql`
+	query getFilteredBlogsBy {
+		posts(
+			where: {
+				orderby: { field: DATE, order: DESC }
+			}
+			first: 6
+		) {
+			nodes {
+				slug
+				title
+				categories {
+					nodes {
+						name
+					}
+				}
+				readingTime {
+					readtime
+				}
+				date
 			}
 		}
 	}

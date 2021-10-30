@@ -438,7 +438,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 						<button
 							type="submit"
-							className="ctabutton ctabutton--primary ctabutton--medium"
+							className={`ctabutton ctabutton--primary ctabutton--medium ${styles.submitButton}`}
 							disabled={
 								firstNameErr ||
 								lastNameErr ||

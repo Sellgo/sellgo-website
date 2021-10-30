@@ -45,6 +45,8 @@ const Layout: React.FC<Props> = ({ children }) => {
 			} else {
 				setShowCtaNavBar(false);
 			}
+		} else {
+			setShowCtaNavBar(false);
 		}
 	};
 

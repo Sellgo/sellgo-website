@@ -33,6 +33,7 @@
 
 	small {
 		font-size: $fontsize_content_12;
+		font-weight: $fontweight_medium;
 		margin-top: 2rem;
 		display: inline-block;
 		color: $prim_white;
@@ -41,6 +42,8 @@
 
 	.closingCTA {
 		width: 27rem;
+		font-size: 20px !important;
+		font-weight: $fontweight_bold !important;
 		@media only screen and(max-width: 500px) {
 			margin: 0 auto;
 		}

@@ -14,7 +14,7 @@
 }
 
 .banner {
-	background: linear-gradient(180deg, #f99e4e, #7d4f27);
+	background: linear-gradient(180deg, $black_1, #686868);
 	border-radius: 7px;
 	min-height: 14.8rem;
 	display: flex;
@@ -32,7 +32,7 @@
 	&__left {
 		flex: 1;
 		h3 {
-			font-size: $fontsize_subtitle_32;
+			font-size: 30px;
 			color: inherit;
 		}
 

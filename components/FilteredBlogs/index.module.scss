@@ -3,20 +3,24 @@
 .filteredBlogs {
 	min-width: 34.8rem;
 	max-width: 34.8rem;
-	height: 28.2rem;
+	height: 28rem;
 	margin-bottom: 1.1rem;
+
+	&__large {
+		height: 53.8rem !important
+	}
 	@media only screen and(max-width: 1080px) {
 		display: none;
 	}
 }
 
 .filterBlogLabel {
-	background: $orange_5;
+	background: $black_1;
 	border-radius: 3px;
 	color: $prim_white;
 	font-size: $fontsize_content_14;
 	font-weight: $fontweight_bold;
-	width: 80%;
+	width: 21rem;
 	height: 2.8rem;
 	display: flex;
 	justify-content: flex-start;
@@ -29,7 +33,7 @@
 }
 
 .blogTeaser {
-	background: $grey_0;
+	background: $grey_1;
 	color: $prim_dark_2;
 	width: 100%;
 	border-radius: 3px;
@@ -42,6 +46,7 @@
 	max-height: 8rem;
 
 	p {
+		color: $prim_dark_1;
 		font-size: $fontsize_content_14;
 		font-weight: $fontweight_medium;
 		text-decoration: underline;
@@ -50,7 +55,7 @@
 	small {
 		text-transform: uppercase;
 		font-size: $fontsize_content_12;
-		font-weight: $fontweight_light;
-		color: $second_grey;
+		font-weight: $fontweight_semibold;
+		color: $prim_dark_1;
 	}
 }
