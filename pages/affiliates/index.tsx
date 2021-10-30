@@ -45,7 +45,6 @@ const Partners: React.FC<Props> = (props) => {
 				<FirstCTASection />
 				<BenefitsSection />
 				<ApprovalProcessSection />
-				<ClosingCTASection />
 				<FAQSection faqDetails={faqDetails} />
 			</main>
 		</>

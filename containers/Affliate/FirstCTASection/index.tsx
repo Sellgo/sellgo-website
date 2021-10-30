@@ -15,15 +15,18 @@ const FirstCTASection: React.FC<Props> = () => {
 				Become apart of the Sellgo Community
 			</h2>
 			<p className={styles.firstCTAContent}>
-				Join the Sellgo family and one of the best programs in our industry.
-				<br />
-				After approval, promote our innovative, powerful tools with your
-				audience and make money!
+				Join one of the best programs in our industry become a member of the Sellgo family.
+				<br/> 
+				Once approved, promote our innovative, powerful tools with 
+				your audience and start making money with Sellgo! 
+				<br/>
+				Earn 25% of every purchase when one of your audience members signs up using your affiliate link.
 			</p>
 
 			<CTAButton
 				type="secondary"
 				size="medium"
+				variant="rainbow"
 				navigateTo="/affiliates-signup"
 				className={`${styles.ctaButton}`}
 				asExternal

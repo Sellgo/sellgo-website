@@ -25,6 +25,7 @@ const CTABannerSection: React.FC<Props> = () => {
 						className={styles.loginButton}
 						type="secondary"
 						size="small"
+						variant="rainbow"
 						navigateTo={AppConfig.APP_URL}
 					>
 						Login

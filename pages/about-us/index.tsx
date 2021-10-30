@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
-import CTAButton from '../../components/CTAButton';
 import SEOHead from '../../components/SEOHead';
 
 /* Data */
@@ -29,7 +28,7 @@ const AboutUsPage: React.FC<Props> = () => {
 				<section className={`page-container ${styles.welcomeSection}`}>
 					<div className={styles.welcomeSection__text}>
 						<h1>
-							Welcome to Sell<span>go</span>
+							Welcome to Sellgo
 						</h1>
 
 						<p>
@@ -114,15 +113,6 @@ const AboutUsPage: React.FC<Props> = () => {
 							based on the size and needs of your business. Check out of pricing
 							plans below.
 						</p>
-
-						<CTAButton
-							size="small"
-							type="secondary"
-							navigateTo="/pricing"
-							className={styles.aboutUsCTA}
-						>
-							Get Started
-						</CTAButton>
 					</div>
 
 					<div className={styles.contentSection__image}>

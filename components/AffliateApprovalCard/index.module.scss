@@ -20,11 +20,11 @@
 	.stepNumber {
 		width: 4rem;
 		height: 4rem;
-		background-color: $grey_1;
+		background-color: $prim_dark_2;
 		border-radius: 0.3rem;
 		font-size: $fontsize_subtitle_20;
 		font-weight: $fontweight_bold;
-		color: $prim_dark_2;
+		color: $prim_white;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -40,7 +40,7 @@
 	}
 
 	.stepDescription {
-		color: $prim_dark_2;
+		color: $prim_dark_1;
 		font-size: $fontsize_content_12;
 		font-weight: $fontweight_regular;
 		line-height: $fontlineheight_content_20;

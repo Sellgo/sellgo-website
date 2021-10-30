@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40.481" height="35" viewBox="0 0 40.481 35"><defs><style>.a{fill:#fc7900;opacity:0.4;}.b{fill:#636d76;}</style></defs><g transform="translate(-854 -1275)"><path class="a" d="M273.281,32a18.1,18.1,0,0,1-16.215,18,20.713,20.713,0,0,0-4.767-8.693A18.082,18.082,0,0,1,268.111,32Z" transform="translate(621.2 1243)"/><path class="b" d="M22.5,113.5v11.25A1.25,1.25,0,0,1,21.25,126h-2.5a1.25,1.25,0,0,1-1.25-1.25V113.5A17.5,17.5,0,0,1,0,96H5A17.5,17.5,0,0,1,22.5,113.5Z" transform="translate(854 1184)"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40.481" height="35" viewBox="0 0 40.481 35">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#00f0ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_4573" data-name="Group 4573" transform="translate(-854 -1275)">
+    <path id="Path_315" data-name="Path 315" d="M273.281,32a18.1,18.1,0,0,1-16.215,18,20.713,20.713,0,0,0-4.767-8.693A18.082,18.082,0,0,1,268.111,32Z" transform="translate(621.2 1243)" fill="url(#linear-gradient)"/>
+    <path id="Path_316" data-name="Path 316" d="M22.5,113.5v11.25A1.25,1.25,0,0,1,21.25,126h-2.5a1.25,1.25,0,0,1-1.25-1.25V113.5A17.5,17.5,0,0,1,0,96H5A17.5,17.5,0,0,1,22.5,113.5Z" transform="translate(854 1184)" fill="#636d76"/>
+  </g>
+</svg>

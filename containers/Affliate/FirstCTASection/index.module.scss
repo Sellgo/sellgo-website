@@ -1,6 +1,7 @@
 @import '../../../styles/guidelines';
 
 .firstCTASectionBox {
+	background: $grey_0;
 	padding-top: 9rem;
 	padding-bottom: 12rem;
 	display: flex;
@@ -19,6 +20,6 @@
 }
 
 .ctaButton {
-	width: 21rem;
+	width: 25rem;
 	margin-top: 5rem;
 }

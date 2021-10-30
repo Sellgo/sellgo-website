@@ -17,11 +17,13 @@ const FAQSection: React.FC<Props> = (props) => {
 	const { faqDetails } = props;
 
 	return (
-		<section className={`page-container ${styles.faqSection}`}>
-			<h2 className="secondary-heading">Frequently Asked Questions</h2>
-			{faqDetails.data && faqDetails.data.length > 0 && (
-				<FAQAccordion data={faqDetails.data} horizontalFocus />
-			)}
+		<section className={styles.faqWrapper}>
+			<div className={`page-container ${styles.faqSection}`}>
+				<h2 className="secondary-heading">Frequently Asked Questions</h2>
+				{faqDetails.data && faqDetails.data.length > 0 && (
+					<FAQAccordion data={faqDetails.data} horizontalFocus />
+				)}
+			</div>
 		</section>
 	);
 };
