@@ -86,10 +86,16 @@ export const getStaticProps: GetStaticProps = async () => {
 	const blogsForHome = blogResponse.data.posts.nodes;
 	
 	const limitDate = new Date("2021-10-16").getTime();
-	const customerCountResponse = await axios.get(
-		`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
-	);
-	const customerCount = customerCountResponse.data.count;
+	let customerCount;
+	try {
+		const customerCountResponse = await axios.get(
+			`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
+		);
+		customerCount = customerCountResponse.data.count;
+	} catch (error) {
+		customerCount = 56;
+		console.log(error);
+	}
 
 	return {
 		props: {
