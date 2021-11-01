@@ -21,7 +21,7 @@ export const accordionData = [
 	}, */,
 	{
 		title: 'Features',
-		description: `Scout out competitve sellers and discover products that can bring your 
+		description: `Scout out competitive sellers and discover products that can bring your 
 		business to the next level. Track different brands, products, ASINs and more. 
 		Gain a competitive edge to grow your business.`,
 		listDetails: [],

@@ -47,7 +47,6 @@ const HeroBox: React.FC<Props> = () => {
 			) {
 				setTimeout(() => {
 					setAnimationIncreasing(false);
-					incrementToNextWord();
 				}, 1500);
 
 				// If animation reaches 0 letters

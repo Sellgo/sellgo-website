@@ -1,7 +1,10 @@
 @import '../../../styles/guidelines';
 
-.firstCTASectionBox {
+.firstCTASectionBoxWrapper {
 	background: $grey_0;
+}
+
+.firstCTASectionBox {
 	padding-top: 9rem;
 	padding-bottom: 12rem;
 	display: flex;

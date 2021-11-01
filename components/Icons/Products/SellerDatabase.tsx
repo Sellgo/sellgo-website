@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Image from 'next/image';
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 const SellerDatabase: React.FC<Props> = (props) => {
 	const { width, height, fill, isRainbow } = props;
 	if (isRainbow) {
-		return <Image src="/products-sellerDatabase.svg" width={width} height={height} />;
+		return <Image src="/products-sellerDatabase.svg" width={width} height={height} priority/>;
 	}
 	return (
 		<svg
@@ -41,4 +41,4 @@ const SellerDatabase: React.FC<Props> = (props) => {
 	);
 };
 
-export default SellerDatabase;
+export default memo(SellerDatabase);
