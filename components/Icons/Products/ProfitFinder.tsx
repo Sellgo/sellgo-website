@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import Image from 'next/image';
 
 interface Props {
 	width: number;
@@ -10,9 +9,7 @@ interface Props {
 
 const ProfitFinder: React.FC<Props> = (props) => {
 	const { width, height, fill, isRainbow } = props;
-	if (isRainbow) {
-		return <Image src="/products-profitFinder.svg" width={width} height={height} priority />;
-	}
+
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -20,14 +17,14 @@ const ProfitFinder: React.FC<Props> = (props) => {
 			width={width}
 			height={height}
 		>
-			<defs>
-				<linearGradient id="MyGradient">
-					<stop offset="5%" stopColor="#FF61DF" />
-					<stop offset="95%" stopColor="#04F1FF" />
+			{isRainbow && <defs>
+				<linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+				<stop offset="0" stopColor="#ff61df"/>
+				<stop offset="1" stopColor="#04f1ff"/>
 				</linearGradient>
-			</defs>
+			</defs>}
 			<g data-name="Layer 2">
-				<g data-name="Layer 1" fill={fill}>
+				<g data-name="Layer 1" fill={isRainbow ? "url(#linear-gradient)" : fill}>
 					<path
 						d="M208 80a128 128 0 11-90.51 37.49A128 128 0 01208 80m0-80C93.12 0 0 93.12 0 208s93.12 
 						208 208 208 208-93.12 208-208S322.88 0 208 0z"

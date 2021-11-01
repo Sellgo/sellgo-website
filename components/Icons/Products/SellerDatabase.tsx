@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import Image from 'next/image';
 
 interface Props {
 	width: number;
@@ -10,9 +9,7 @@ interface Props {
 
 const SellerDatabase: React.FC<Props> = (props) => {
 	const { width, height, fill, isRainbow } = props;
-	if (isRainbow) {
-		return <Image src="/products-sellerDatabase.svg" width={width} height={height} priority/>;
-	}
+
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -20,8 +17,14 @@ const SellerDatabase: React.FC<Props> = (props) => {
 			width={width}
 			height={height}
 		>
+			{isRainbow && <defs>
+				<linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+				<stop offset="0" stopColor="#ff61df"/>
+				<stop offset="1" stopColor="#04f1ff"/>
+				</linearGradient>
+			</defs>}
 			<g id="prefix__Layer_2" data-name="Layer 2">
-				<g id="prefix__Layer_1-2" data-name="Layer 1" fill={fill}>
+				<g id="prefix__Layer_1-2" data-name="Layer 1" fill={isRainbow ? "url(#linear-gradient)" : fill}>
 					<path
 						d="M608,288H464V208.67c0-17.44,13.67-32.18,31.1-32.66A32,32,0,0,
 					1,528,208h0a16,16,0,0,0,16,16h17a15,15,0,0,0,
