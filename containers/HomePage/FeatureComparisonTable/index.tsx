@@ -36,9 +36,9 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 					<p className={styles.headerText}> Keepa</p>
 				</div>
 				<div className={styles.featureComparisonGrid}>
-					{features.map((feature: any) => {
+					{features.map((feature: any, index: number) => {
 						return (
-							<div className={styles.featureRow}>
+							<div className={styles.featureRow} key={index}>
 								<div
 									className={`${styles.checkboxCell} ${styles.checkboxCell__plan}`}
 								>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
+import axios from 'axios';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -34,12 +35,16 @@ import { generatePageURL } from '../utils/SEO';
 /* Types */
 import { ShowcaseBlogDetails } from '../interfaces/Blogs';
 
+/* Config */
+import AppConfig from '../config';
+
 interface Props {
 	homeBlogs: ShowcaseBlogDetails[];
+	customerCount: number;
 }
 
 const HomePage: React.FC<Props> = (props) => {
-	const { homeBlogs } = props;
+	const { homeBlogs, customerCount} = props;
 	return (
 		<>
 			<SEOHead
@@ -49,7 +54,7 @@ const HomePage: React.FC<Props> = (props) => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<HeroBox />
+			<HeroBox customerCount={customerCount}/>
 			<main>
 				<InfoSection />
 				<StatisticsSection />
@@ -64,25 +69,32 @@ const HomePage: React.FC<Props> = (props) => {
 				<RecentBlogsSection recentBlogs={homeBlogs} />
 				<div className={styles.divider}></div>
 
-				<ClosingCTASection />
+				<ClosingCTASection customerCount={customerCount}/>
 			</main>
 		</>
 	);
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const response = await client.query({
+	const blogResponse = await client.query({
 		query: GET_SHOW_CASE_BLOGS,
 		variables: {
 			count: 12
 		}
 	});
 
-	const blogsForHome = response.data.posts.nodes;
+	const blogsForHome = blogResponse.data.posts.nodes;
+	
+	const limitDate = new Date("2021-10-16").getTime();
+	const customerCountResponse = await axios.get(
+		`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
+	);
+	const customerCount = customerCountResponse.data.count;
 
 	return {
 		props: {
-			homeBlogs: blogsForHome
+			homeBlogs: blogsForHome,
+			customerCount
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};

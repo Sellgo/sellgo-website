@@ -3,20 +3,25 @@
 .stepperGrid {
 	display: grid;
 	grid-template-columns: 15% 70% 15%;
+	align-items: center;
 }
+
 .stepperWrapper {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .stepWrapper {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 	position: relative;
 	height: 10rem;
+	margin: 0 0.5rem;
 
 	.step {
 		display: flex;
@@ -37,12 +42,13 @@
 	font-size: $fontsize_content_12;
 	color: $prim_dark_2;
 	font-weight: $fontweight_medium;
+	height: 30px;
 
 	@media only screen and(max-width: 1650px) {
 		width: 9rem;
 	}
 
-	@media only screen and(max-width: 900px) {
+	@media only screen and(max-width: 1100px) {
 		display: none;
 	}
 
@@ -54,7 +60,12 @@
 
 .arrowButton {
 	margin: 0 auto;
+	margin-bottom: 40px;
 	background: none;
 	border: none;
 	cursor: pointer;
+
+	@media only screen and(max-width: 1100px) {
+		margin-bottom: 0;
+	}
 }

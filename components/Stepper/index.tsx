@@ -1,6 +1,7 @@
 import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import Image from 'next/image';
+import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -45,39 +46,36 @@ const Stepper: React.FC<Props> = (props) => {
 				<div className={styles.stepperWrapper}>
 					{steps.map((product: StepDetail, index: number) => {
 						return (
-							<>
-								<div key={index} className={styles.stepWrapper}>
-									<div
-										key={product.title}
-										onClick={() => handleStepChange(index)}
-										onKeyPress={() => handleStepChange(index)}
-										className={styles.step}
-									>
-										<ExpandedNavbarIcons
-											width={25}
-											height={25}
-											fill={"#95a1ac"}
-											name={product.icon}
-											isRainbow={isActiveStep(index)}
-										/>
-										<h3 className={
-											`${styles.stepTitle} 
-											${isActiveStep(index) ? styles.stepTitle__selected : ''}`}
-										> 
-											{product.title} 
-										</h3>
-									</div>
+							<div key={uuid()} className={styles.stepWrapper}>
+								<div
+									onClick={() => handleStepChange(index)}
+									onKeyPress={() => handleStepChange(index)}
+									className={styles.step}
+								>
+									<ExpandedNavbarIcons
+										width={25}
+										height={25}
+										fill={"#95a1ac"}
+										name={product.icon}
+										isRainbow={isActiveStep(index)}
+									/>
+									<h3 className={
+										`${styles.stepTitle} 
+										${isActiveStep(index) ? styles.stepTitle__selected : ''}`}
+									> 
+										{product.title} 
+									</h3>
 								</div>
-							</>
+							</div>
 						);
 					})}
 				</div>
 				{
 					activeStep !== steps.length - 1 ?
 					<button 
-					className={styles.arrowButton}
-					onClick={() => setActiveStep(activeStep + 1)}
-				>
+						className={styles.arrowButton}
+						onClick={() => setActiveStep(activeStep + 1)}
+					>
 					<Image
 						src='/rightArrow.svg'
 						width={25}
@@ -94,11 +92,13 @@ const Stepper: React.FC<Props> = (props) => {
 				>
 					{steps.map((step: StepDetail, index: number) => {
 						return (
-							<ProductCard
-								key={index}
-								{...step}
-								reversed={(index + 1) % 2 === 0}
-							/>
+							<div key={index}>
+								<ProductCard
+									key={index}
+									{...step}
+									reversed={(index + 1) % 2 === 0}
+								/>
+							</div>
 						);
 					})}
 				</SwipeableViews>

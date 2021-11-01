@@ -7,10 +7,11 @@ import styles from './index.module.scss';
 
 interface Props {
 	items: ReactNode[];
+	className?: string;
 }
 
 const Carousel: React.FC<Props> = (props) => {
-	const { items } = props;
+	const { items, className } = props;
 
 	const [activeStep, setActiveStep] = React.useState(0);
 	const handleStepChange = (step: number) => {
@@ -21,7 +22,7 @@ const Carousel: React.FC<Props> = (props) => {
 
 	return (
 		<div>
-			<div className={styles.mainContentWrapper}>
+			<div className={`${styles.mainContentWrapper} ${className}`}>
 				{activeStep !== 0 ?
 					<button 
 						className={styles.arrowButton}
@@ -53,9 +54,9 @@ const Carousel: React.FC<Props> = (props) => {
 				{
 					activeStep !== items.length - 1 ?
 					<button 
-					className={styles.arrowButton}
-					onClick={() => setActiveStep(activeStep + 1)}
-				>
+						className={styles.arrowButton}
+						onClick={() => setActiveStep(activeStep + 1)}
+					>
 					<Image
 						src='/rightArrow.svg'
 						width={25}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
+import { Tabs, TabList, Tab, TabPanel, resetIdCounter } from 'react-tabs';
+import { v4 as uuid } from 'uuid';
 
 /* Data */
 import {
@@ -18,6 +19,8 @@ interface Props {}
 
 const StepperInfoSection: React.FC<Props> = () => {
 	const [selectedPlanType, setSelectedPlanType] = useState<number>(0);
+	resetIdCounter();
+
 
 	return (
 		<section
@@ -31,17 +34,35 @@ const StepperInfoSection: React.FC<Props> = () => {
 				selectedIndex={selectedPlanType}
 			>
 				<TabList className={styles.tabListWrapper}>
-					<Tab className={styles.stepperTab}>WHOLESALE<div className={styles.underline}/></Tab>
-					<Tab className={styles.stepperTab}>PRIVATE LABEL<div className={styles.underline}/></Tab>
-					<Tab className={styles.stepperTab}>SERVICE PROVIDER<div className={styles.underline}/></Tab>
+					<Tab 
+						key={uuid()} 
+						className={styles.stepperTab}
+					>
+						WHOLESALE
+						<div className={styles.underline}/>
+					</Tab>
+					<Tab 
+						key={uuid()} 
+						className={styles.stepperTab}
+					>
+						PRIVATE LABEL
+						<div className={styles.underline}/>
+					</Tab>
+					<Tab 
+						key={uuid()} 
+						className={styles.stepperTab}
+					>
+						SERVICE PROVIDER
+						<div className={styles.underline}/>
+					</Tab>
 				</TabList>
-				<TabPanel>
+				<TabPanel key={uuid()}>
 					<Stepper steps={wholesaleFeatures} />
 				</TabPanel>
-				<TabPanel>
+				<TabPanel key={uuid()}>
 					<Stepper steps={privateLabelFeatures} />
 				</TabPanel>
-				<TabPanel>
+				<TabPanel key={uuid()}>
 					<Stepper steps={serviceProviderFeatures} />
 				</TabPanel>
 			</Tabs>

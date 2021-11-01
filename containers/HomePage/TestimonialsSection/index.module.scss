@@ -61,3 +61,10 @@
 		font-weight: $fontweight_bold;
 	}
 }
+
+.carousel {
+	/* To adjust the arrow button in the carousel */
+	button {
+		margin-bottom: 5rem;
+	}
+}

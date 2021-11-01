@@ -65,7 +65,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 					Our <span>Success</span> Stories
 				</h2>
 
-				<Carousel items={videos} />
+				<Carousel items={videos} className={styles.carousel}/>
 			</div>
 		</section>
 	);

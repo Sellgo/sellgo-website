@@ -66,10 +66,10 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 									tabIndex={0}
 								>
 									<h2>{productListDetails.head}</h2>
-									<p>
+									<div className={styles.linkDesc}>
 										{productListDetails.desc} 
 										&nbsp;
-										<Image src={'/blueLongArrowRight.svg'} width={12} height={7}/> </p>
+										<Image src={'/blueLongArrowRight.svg'} width={12} height={7}/> </div>
 								</div>
 							);
 						}

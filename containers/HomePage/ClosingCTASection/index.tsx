@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'
 
 /* Styling */
 import styles from './index.module.scss';
@@ -7,9 +8,12 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
 
-interface Props {}
+interface Props {
+	customerCount: number;
+}
 
-const ClosingCTASection: React.FC<Props> = () => {
+const ClosingCTASection: React.FC<Props> = (props: Props) => {
+	const { customerCount } = props;
 	return (
 		<section className={styles.closingCTASection}>
 			<div className={`page-container`}>
@@ -26,15 +30,25 @@ const ClosingCTASection: React.FC<Props> = () => {
 						building a successful Amazon business has never been easier.
 					</p>
 
-					<CTAButton
-						type="primary"
-						size="medium"
-						variant="white"
-						navigateTo="/pricing"
-						className={styles.closingCTA}
-					>
-						Get 50% OFF Today
-					</CTAButton>
+					<div className={styles.ctaRow}>
+						<CTAButton
+							type="primary"
+							size="medium"
+							variant="white"
+							navigateTo="/pricing"
+							className={styles.closingCTA}
+						>
+							Get 50% OFF Today
+						</CTAButton>
+						<div className={styles.signUpDetails}>
+						<Image
+							src="/smileyFace.svg"
+							width={25}
+							height={25}
+						/>
+						<p> {customerCount} people have signed up.</p>
+					</div>
+				</div>
 
 					<small>
 						Enjoy 50% off 1st month or 1st year for the 1,000 Beta Users

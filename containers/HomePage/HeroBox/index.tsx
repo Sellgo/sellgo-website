@@ -8,9 +8,12 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
 
-interface Props {}
+interface Props {
+	customerCount: number
+}
 
-const HeroBox: React.FC<Props> = () => {
+const HeroBox: React.FC<Props> = (props: Props) => {
+	const { customerCount } = props;
 	const textList = ['Private Label.', 'Wholesale.', 'Service Provider.', 'Every Amazon Seller.'];
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
 	const [isAnimationIncreasing, setAnimationIncreasing] = React.useState(true);
@@ -78,16 +81,25 @@ const HeroBox: React.FC<Props> = () => {
 					<br />
 					Keyword Research, 1M Database of Amazon Sellers, and more!
 				</p>
-
-				<CTAButton
-					type="primary"
-					size="small"
-					variant="rainbow"
-					navigateTo="/pricing?type=monthly-and-annual-plans"
-					className={styles.ctaHeroBox}
-				>
-					Get 50% OFF Now
-				</CTAButton>
+				<div className={styles.ctaRow}>
+					<CTAButton
+						type="primary"
+						size="small"
+						variant="rainbow"
+						navigateTo="/pricing?type=monthly-and-annual-plans"
+						className={styles.ctaHeroBox}
+					>
+						Get 50% OFF Now
+					</CTAButton>
+					<div className={styles.signUpDetails}>
+						<Image
+							src="/smileyFace.svg"
+							width={25}
+							height={25}
+						/>
+						<p> {customerCount} people have signed up.</p>
+					</div>
+				</div>
 
 				<small className={`${styles.ctaOverText}`}>
 					Enjoy 50% off 1st month or 1st year <br/>for the first 1,000 Beta Users

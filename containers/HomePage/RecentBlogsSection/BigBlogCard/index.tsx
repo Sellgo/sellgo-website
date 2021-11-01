@@ -41,8 +41,9 @@ const BigBlogCard: React.FC<Props> = (props) => {
 
 					<div className={styles.blogText}>
 						<h4>{title}</h4>
-						<p className={styles.blogDate}> {formatBlogDate(date.toString())} </p>
 						<p className={styles.blogDetails}>
+							{formatBlogDate(date.toString())}
+							<br/>
 							{generateCategoryDisplayName(categories.nodes)}{' '}
 							{formatBlogReadTime(readingTime.readtime)} Min Read
 						</p>

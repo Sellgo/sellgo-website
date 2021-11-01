@@ -5,6 +5,11 @@
 	grid-template-columns: 15% 70% 15%;
 	align-items: center;
 	justify-content: center;
+
+	/* Hide if only screen is smaller than 1000px */
+	@media (max-width: 1000px) {
+		display: block;
+	}
 }
 
 .stepperWrapper {
@@ -31,8 +36,12 @@
 }
 
 .arrowButton {
-	margin: 0 auto;
 	background: none;
 	border: none;
 	cursor: pointer;
+
+	/* Hide if only screen is smaller than 1000px */
+	@media (max-width: 1000px) {
+		display: none;
+	}
 }

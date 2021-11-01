@@ -13,7 +13,8 @@ import {
 	formatBlogReadTime,
 	generateCategoryDisplayName,
 	imageLoaderForBlogs,
-	fallBackImageURL
+	fallBackImageURL,
+	formatBlogDate
 } from '../../../utils/Blogs';
 
 interface Props {
@@ -28,7 +29,8 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 		slug,
 		title,
 		categories,
-		readingTime
+		readingTime,
+		date
 	} = showcaseBlogDetails;
 
 	if (!showcaseBlogDetails) {
@@ -52,6 +54,8 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 					<div className={styles.blogText}>
 						<h2>{title}</h2>
 						<p>
+							{formatBlogDate(date.toString())}
+							<br/>
 							{generateCategoryDisplayName(categories.nodes)}{' '}
 							{formatBlogReadTime(readingTime.readtime)} mins read
 						</p>

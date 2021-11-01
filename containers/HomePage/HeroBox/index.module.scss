@@ -2,7 +2,7 @@
 
 .heroboxWrapper {
 	min-height: 90vh;
-	background: $grey_0;
+	background: $tab_active;
 }
 
 .herobox {
@@ -46,6 +46,33 @@
 
 	@media only screen and(max-width: 1080px) {
 		width: 100%;
+	}
+}
+
+.ctaRow {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	.signUpDetails {
+		height: 100%;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		left: 30rem;
+		width: max-content;
+
+		p {
+			margin-left: 10px;
+			font-size: 20px;
+			font-weight: $fontweight_semibold;
+			color: $prim_dark_2;
+		}
+
+		@media only screen and(max-width: 1000px) {
+			margin-top: 15px;
+			position: static;
+		}
 	}
 }
 
