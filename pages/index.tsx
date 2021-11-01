@@ -93,7 +93,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		);
 		customerCount = customerCountResponse.data.count;
 	} catch (error) {
-		customerCount = 56;
+		customerCount = 56; // Random number for now
 		console.log(error);
 	}
 
