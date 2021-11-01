@@ -75,7 +75,7 @@ const HomePage: React.FC<Props> = (props) => {
 	);
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async (reva) => {
 	const blogResponse = await client.query({
 		query: GET_SHOW_CASE_BLOGS,
 		variables: {
@@ -86,21 +86,21 @@ export const getStaticProps: GetStaticProps = async () => {
 	const blogsForHome = blogResponse.data.posts.nodes;
 	
 	const limitDate = new Date("2021-10-16").getTime();
-	let customerCount;
-	try {
-		const customerCountResponse = await axios.get(
-			`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
-		);
-		customerCount = customerCountResponse.data.count;
-	} catch (error) {
-		customerCount = 56; // Random number for now
-		console.log(error);
-	}
+	// let customerCount;
+	// try {
+	// 	const customerCountResponse = await axios.get(
+	// 		`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
+	// 	);
+	// 	customerCount = customerCountResponse.data.count;
+	// } catch (error) {
+	// 	customerCount = 56; // Random number for now
+	// 	console.log(error);
+	// }
 
 	return {
 		props: {
 			homeBlogs: blogsForHome,
-			customerCount
+			customerCount: 56,
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};
