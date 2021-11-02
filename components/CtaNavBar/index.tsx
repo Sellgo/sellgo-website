@@ -11,8 +11,16 @@ const CtaNavBar = (props: Props) => {
 	const { showCtaNavBar } = props;
 
 	return (
-		<div className={`${styles.ctaNavBarWrapper} ${!showCtaNavBar ? styles.ctaNavBarWrapper__hidden : ''}`}>
-			<div className={`page-container ${styles.ctaNavBar} ${!showCtaNavBar ? styles.ctaNavBar__hidden : ''}`}>
+		<div
+			className={`${styles.ctaNavBarWrapper} ${
+				!showCtaNavBar ? styles.ctaNavBarWrapper__hidden : ''
+			}`}
+		>
+			<div
+				className={`page-container ${styles.ctaNavBar} ${
+					!showCtaNavBar ? styles.ctaNavBar__hidden : ''
+				}`}
+			>
 				<div className={styles.sellgoLogo}>
 					<Image
 						src="/sellgoLogo.png"

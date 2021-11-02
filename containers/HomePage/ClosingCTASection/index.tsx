@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -41,14 +41,10 @@ const ClosingCTASection: React.FC<Props> = (props: Props) => {
 							Get 50% OFF Today
 						</CTAButton>
 						<div className={styles.signUpDetails}>
-						<Image
-							src="/smileyFace.svg"
-							width={25}
-							height={25}
-						/>
-						<p> {customerCount} people have signed up.</p>
+							<Image src="/smileyFace.svg" width={25} height={25} />
+							<p> {customerCount} people have signed up.</p>
+						</div>
 					</div>
-				</div>
 
 					<small>
 						Enjoy 50% off 1st month or 1st year for the 1,000 Beta Users

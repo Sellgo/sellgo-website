@@ -4,9 +4,6 @@ import Link from 'next/link';
 /* Styling */
 import styles from './index.module.scss';
 
-/* Components */
-import User from '../Icons/Person';
-
 interface Props {
 	className?: string;
 	message: string;
@@ -26,10 +23,7 @@ const ContactInfo: React.FC<Props> = (props) => {
 			<div className={styles.capsule}>
 				<p>{message}</p>
 				<Link href="/contact-sales" passHref>
-					<a className={styles.navbarLink__sales}>
-						<User width={14} height={12} fill="#2e3b4a" />
-						<span>Contact Sales</span>
-					</a>
+					<a className={styles.navbarLink__sales}>Contact Sales</a>
 				</Link>
 			</div>
 		</div>

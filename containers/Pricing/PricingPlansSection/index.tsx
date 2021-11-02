@@ -66,6 +66,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							key={uuid()}
 							id={product.id}
 							name={product.name}
+							isNew={product.isNew}
 							productsDatabase={product.productsDatabase}
 							salesEstimateCount={product.salesEstimateCount}
 							monthlyPrice={product.monthlyPrice}
@@ -110,6 +111,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 										monthlyPrice={product.monthlyPrice}
 										annualPrice={product.annualPrice}
 										desc={product.desc}
+										isNew={product.isNew}
 										// plan details
 										isMonthly={isMonthly}
 										planName={planName}
@@ -117,6 +119,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 										withToggle
 										className={styles.tablePricingSummary}
 										handleChange={() => setIsMonthly(!isMonthly)}
+										isSmall
 									/>
 								</div>
 							);

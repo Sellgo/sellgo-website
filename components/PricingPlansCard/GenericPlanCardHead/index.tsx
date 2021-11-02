@@ -1,11 +1,11 @@
 import React from 'react';
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../CTAButton';
-import GemGenerator from '../../GemGenerator';
 import PricePlanToggleButton from '../../PricePlanToggleButton';
 
 /* Utils */
@@ -16,6 +16,8 @@ interface Props {
 	desc: string;
 	monthlyPrice: number;
 	annualPrice: number;
+	isNew?: boolean;
+	isSmall?: boolean;
 
 	// plan details
 	isMonthly: boolean;
@@ -33,6 +35,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		monthlyPrice,
 		annualPrice,
 		desc,
+		isNew,
+		isSmall,
 		withToggle,
 		className,
 		handleChange
@@ -44,14 +48,26 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 	);
 
 	return (
-		<div className={className}>
-			<div className={styles.pricingCardHead}>
+		<div
+			className={`
+			${className} 
+			${styles.pricingHeadWrapper} 
+			${isNew && isSmall ? styles.pricingHeadWrapper__new : ''}
+			${!isNew && isSmall ? styles.pricingHeadWrapper__notNew : ''}
+			${isSmall && styles.pricingHeadWrapper__bordered}`}
+		>
+			{isNew && isSmall && (
+				<div className={styles.newFeatureBanner}>
+					<Image src="/star.svg" width={25} height={25} />
+					New Features!
+				</div>
+			)}
+			<div
+				className={`
+				${styles.pricingCardHead}
+			`}
+			>
 				<div className={styles.pricingCardHead__Left}>
-					{!withToggle && (
-						<div className={styles.planGems}>
-							<GemGenerator name={name} />
-						</div>
-					)}
 					<h2>{name}</h2>
 					{!withToggle && <p>{desc}</p>}
 				</div>
@@ -96,6 +112,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			<CTAButton
 				type="primary"
 				size="medium"
+				variant={isNew ? 'purplePinkRainbow' : 'green'}
 				navigateTo={checkoutLink}
 				className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 				asExternal

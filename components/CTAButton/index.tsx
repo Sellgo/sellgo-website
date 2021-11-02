@@ -7,7 +7,7 @@ interface Props {
 	size: 'small' | 'medium' | 'large';
 	navigateTo: string;
 	children: React.ReactNode;
-	variant?: 'white' | 'rainbow' | 'orange';
+	variant?: 'white' | 'rainbow' | 'orange' | 'purplePinkRainbow' | 'green';
 	className?: string;
 	asExternal?: boolean;
 	newTarget?: boolean;
@@ -28,7 +28,9 @@ const CTAButton: React.FC<Props> = (props) => {
 	const baseClassName = styles.ctabutton;
 	const sizeClassName = styles[`ctabutton__${size}`];
 	const variantAndTypeClassName = styles[`ctabutton__${type}__${variant}`];
-	const isRainbowBordered = variant === 'rainbow' && type === 'secondary';
+	const isRainbowBordered =
+		(variant === 'rainbow' || variant === 'purplePinkRainbow') &&
+		type === 'secondary';
 
 	// render as normal <a> tag
 	if (asExternal) {

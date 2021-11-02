@@ -55,7 +55,7 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 						<h1>{title}</h1>
 						<p>
 							{formatBlogDate(date.toString())}
-							<br/>
+							<br />
 							{generateCategoryDisplayName(categories.nodes)}{' '}
 							{formatBlogReadTime(readingTime.readtime)} Min Read
 						</p>

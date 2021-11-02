@@ -43,100 +43,102 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 	switch (name) {
 		// products
 		case 'extension': {
-			productIcon = <ChromeExtension {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <ChromeExtension {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 		case 'searchManagement': {
-			productIcon = <SearchManagement {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <SearchManagement {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 		case 'profitFinder': {
-			productIcon = <ProfitFinder {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <ProfitFinder {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 		case 'productTracker': {
-			productIcon = <ProductTracker {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <ProductTracker {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 		case 'leadsTracker': {
-			productIcon = <LeadsTracker {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <LeadsTracker {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'productDatabase': {
-			productIcon = <ProductsDatabase {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <ProductsDatabase {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'sellerFinder': {
-			productIcon = <SellerFinder {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <SellerFinder {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'sellerDatabase': {
-			productIcon = <SellerDatabase {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <SellerDatabase {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'sellerMap': {
-			productIcon = <SellerMap {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <SellerMap {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'keywordFinder': {
-			productIcon = <KeywordFinder {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <KeywordFinder {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'keywordDatabase': {
-			productIcon = <KeywordDatabase {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <KeywordDatabase {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		// Inventory Management
 		case 'productRankTracker': {
-			productIcon = <ProductRankTracker {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = (
+				<ProductRankTracker {...otherProps} isRainbow={isRainbow} />
+			);
 			break;
 		}
 
 		case 'dashboard': {
-			productIcon = <Dashboard {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <Dashboard {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'orderPlanning': {
-			productIcon = <OrderPlanning {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <OrderPlanning {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'salesProjection': {
-			productIcon = <SalesProjection {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <SalesProjection {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'seasonalityAdjustor': {
-			productIcon = <SeasonalAdjustor {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <SeasonalAdjustor {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'catalogPlanning': {
-			productIcon = <CatalogPlanning {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <CatalogPlanning {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		// resources
 		case 'blogs': {
-			productIcon = <Blogs {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <Blogs {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
 		case 'affiliateProgram': {
-			productIcon = <AffiliateProgram {...otherProps}/>;
+			productIcon = <AffiliateProgram {...otherProps} />;
 			break;
 		}
 
 		case 'salesEstimator': {
-			productIcon = <SalesEstimator {...otherProps} isRainbow={isRainbow}/>;
+			productIcon = <SalesEstimator {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 		default: {
@@ -145,9 +147,14 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 	}
 
 	return (
-		<div className={`${styles.iconWrapper} ${isRainbow ? styles.iconWrapper__active : ''}`}>
+		<div
+			className={`${styles.iconWrapper} ${
+				isRainbow ? styles.iconWrapper__active : ''
+			}`}
+		>
 			{productIcon}
-		</div>);
+		</div>
+	);
 };
 
 export default memo(ProductsIconMapper);

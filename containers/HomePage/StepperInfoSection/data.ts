@@ -150,7 +150,7 @@ export const privateLabelFeatures: StepDetail[] = [
 		linkLabel: 'Learn more ',
 		navigateTo: '/seller-database',
 		imageUrl: '/extensionSection.png'
-	},
+	}
 ];
 export const serviceProviderFeatures: StepDetail[] = [
 	{

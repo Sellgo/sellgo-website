@@ -8,25 +8,22 @@ interface Props {}
 
 const TestimonialsSection: React.FC<Props> = () => {
 	const videos = [
-		(
-			<div className={styles.testimonialVideo}>
-				<div className={styles.videoWrapper}>
-					<video controls>
-						<track kind="captions" />
-						<source src="Testimonial_David_W.mp4" type="video/mp4" />
-						<source src="movie.ogg" type="video/ogg" />
-						Your browser does not support the video tag.
-					</video>
-				</div>
+		<div className={styles.testimonialVideo}>
+			<div className={styles.videoWrapper}>
+				<video controls>
+					<track kind="captions" />
+					<source src="Testimonial_David_W.mp4" type="video/mp4" />
+					<source src="movie.ogg" type="video/ogg" />
+					Your browser does not support the video tag.
+				</video>
+			</div>
 			<small>
 				{`"I like that their profit margin and ROI are more accurate than any
 					other tools I've used before."`}
 			</small>
 			<p>David W.</p>
-		</div>
-		),
-		(
-			<div className={styles.testimonialVideo}>
+		</div>,
+		<div className={styles.testimonialVideo}>
 			<div className={styles.videoWrapper}>
 				<video controls>
 					<track kind="captions" />
@@ -35,14 +32,10 @@ const TestimonialsSection: React.FC<Props> = () => {
 					Your browser does not support the video tag.
 				</video>
 			</div>
-			<small>
-				{`"Video 2."`}
-			</small>
+			<small>{`"Video 2."`}</small>
 			<p>David W.</p>
-		</div>
-		),
-		(
-			<div className={styles.testimonialVideo}>
+		</div>,
+		<div className={styles.testimonialVideo}>
 			<div className={styles.videoWrapper}>
 				<video controls>
 					<track kind="captions" />
@@ -51,13 +44,10 @@ const TestimonialsSection: React.FC<Props> = () => {
 					Your browser does not support the video tag.
 				</video>
 			</div>
-			<small>
-				{`"Video 3."`}
-			</small>
+			<small>{`"Video 3."`}</small>
 			<p>David W.</p>
 		</div>
-		)
-	]
+	];
 	return (
 		<section className={styles.testimonialsSection}>
 			<div className={`page-container ${styles.testimonialsSectionWrapper}`}>
@@ -65,7 +55,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 					Our <span>Success</span> Stories
 				</h2>
 
-				<Carousel items={videos} className={styles.carousel}/>
+				<Carousel items={videos} className={styles.carousel} />
 			</div>
 		</section>
 	);

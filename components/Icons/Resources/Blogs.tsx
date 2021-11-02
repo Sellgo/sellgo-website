@@ -13,7 +13,7 @@ const Blogs: React.FC<Props> = (props) => {
 	if (isRainbow) {
 		return <Image src="/resources-blog.svg" width={width} height={height} />;
 	}
-	
+
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

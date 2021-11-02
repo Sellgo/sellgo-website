@@ -11,7 +11,11 @@ import SmallBlogCard from './SmallBlogCard';
 
 /* Types */
 import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
-import { formatBlogDate, formatBlogReadTime, generateCategoryDisplayName } from '../../../utils/Blogs';
+import {
+	formatBlogDate,
+	formatBlogReadTime,
+	generateCategoryDisplayName
+} from '../../../utils/Blogs';
 
 interface Props {
 	recentBlogs: ShowcaseBlogDetails[];
@@ -49,9 +53,9 @@ const RecentBlogsSection: React.FC<Props> = (props) => {
 										</a>
 									</Link>
 									<small>
-											{formatBlogDate(blog.date.toString())} |&nbsp;
-											{generateCategoryDisplayName(blog.categories.nodes)}{' '}
-											{formatBlogReadTime(blog.readingTime.readtime)} Min Read
+										{formatBlogDate(blog.date.toString())} |&nbsp;
+										{generateCategoryDisplayName(blog.categories.nodes)}{' '}
+										{formatBlogReadTime(blog.readingTime.readtime)} Min Read
 									</small>
 								</div>
 							);

@@ -2,6 +2,7 @@
 
 .pricingPanelTabsWrapper {
 	width: 100%;
+	background: $tab_active;
 	min-height: 7.5rem;
 }
 
@@ -15,6 +16,7 @@
 	max-width: 100%;
 	margin: 0 auto;
 	border-bottom: 1px solid $second_silver;
+	background: #f0f0f0;
 	box-shadow: $box-shadow-2;
 
 	@media only screen and(max-width: 900px) {
@@ -26,7 +28,7 @@
 .pricingPanelTab {
 	font-size: $fontsize_content_16;
 	font-weight: $fontweight_medium;
-	color: inherit;
+	color: $grey_8;
 	display: flex;
 	justify-content: center;
 	padding: 2rem;
@@ -39,9 +41,17 @@
 	}
 
 	&__Selected {
-		border-bottom: 2px solid #707070;
-		background: $blue_1;
+		color: $prim_white;
+		background: #a4a3a4;
 		font-weight: $fontweight_semibold;
+
+		.rainbowLine {
+			position: absolute;
+			bottom: 0;
+			background: $purple_pink_gradient;
+			width: 100%;
+			height: 5px;
+		}
 	}
 }
 

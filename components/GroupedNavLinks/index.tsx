@@ -22,7 +22,7 @@ const GroupedNavLink: React.FC<Props> = (props) => {
 	const [isHoveredOver, setHoveredOver] = React.useState<boolean>(false);
 
 	return (
-		<div 
+		<div
 			className={`${styles.groupedNavLinks} ${className}`}
 			onMouseEnter={() => setHoveredOver(true)}
 			onMouseLeave={() => setHoveredOver(false)}

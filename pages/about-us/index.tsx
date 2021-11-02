@@ -27,9 +27,7 @@ const AboutUsPage: React.FC<Props> = () => {
 			<main className={styles.aboutUs}>
 				<section className={`page-container ${styles.welcomeSection}`}>
 					<div className={styles.welcomeSection__text}>
-						<h1>
-							Welcome to Sellgo
-						</h1>
+						<h1>Welcome to Sellgo</h1>
 
 						<p>
 							Our mission at Sellgo is to empower Amazon sellers with the right

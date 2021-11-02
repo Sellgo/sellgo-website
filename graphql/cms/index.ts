@@ -201,12 +201,7 @@ export const GET_FILTERED_BLOGS = gql`
 
 export const GET_FILTERED_LATEST_BLOGS = gql`
 	query getFilteredBlogsBy {
-		posts(
-			where: {
-				orderby: { field: DATE, order: DESC }
-			}
-			first: 6
-		) {
+		posts(where: { orderby: { field: DATE, order: DESC } }, first: 6) {
 			nodes {
 				slug
 				title

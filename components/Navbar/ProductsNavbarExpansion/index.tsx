@@ -18,7 +18,9 @@ interface Props {
 const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 	const { className } = props;
 
-	const [currentHoverId, setCurrentHoverId] = React.useState<string>('wholesale');
+	const [currentHoverId, setCurrentHoverId] = React.useState<string>(
+		'wholesale'
+	);
 	const handleChange = (e: any, customID: string) => {
 		setCurrentHoverId(customID);
 		const tabContent = document.querySelectorAll('.tabContent');
@@ -48,32 +50,37 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 				<div className={styles.productsNavbar__left}>
 					<h3>Products</h3>
 
-					{productsNavigationList.map(
-						(productListDetails: any) => {
-							return (
-								<div
-									className={`${styles.tabLinks} tabLinks ${
-										currentHoverId === productListDetails.hoverId ? styles.tabLinks__active : ''
-									}`}
-									key={uuid()}
-									onMouseOver={(e: any) => {
-										handleChange(e, productListDetails.hoverId);
-									}}
-									onFocus={(e: any) => {
-										handleChange(e, productListDetails.hoverId);
-									}}
-									role="button"
-									tabIndex={0}
-								>
-									<h2>{productListDetails.head}</h2>
-									<div className={styles.linkDesc}>
-										{productListDetails.desc} 
-										&nbsp;
-										<Image src={'/blueLongArrowRight.svg'} width={12} height={7}/> </div>
+					{productsNavigationList.map((productListDetails: any) => {
+						return (
+							<div
+								className={`${styles.tabLinks} tabLinks ${
+									currentHoverId === productListDetails.hoverId
+										? styles.tabLinks__active
+										: ''
+								}`}
+								key={uuid()}
+								onMouseOver={(e: any) => {
+									handleChange(e, productListDetails.hoverId);
+								}}
+								onFocus={(e: any) => {
+									handleChange(e, productListDetails.hoverId);
+								}}
+								role="button"
+								tabIndex={0}
+							>
+								<h2>{productListDetails.head}</h2>
+								<div className={styles.linkDesc}>
+									{productListDetails.desc}
+									&nbsp;
+									<Image
+										src={'/blueLongArrowRight.svg'}
+										width={12}
+										height={7}
+									/>{' '}
 								</div>
-							);
-						}
-					)}
+							</div>
+						);
+					})}
 				</div>
 
 				<div className={`${styles.productsNavbar__right}`}>

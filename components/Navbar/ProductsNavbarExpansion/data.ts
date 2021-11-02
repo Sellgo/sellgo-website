@@ -9,22 +9,22 @@ export const productsNavigationList: ProductsNavigationList[] = [
 		head: 'Wholesale',
 		desc: 'Reseller, Online Arbitrage',
 		hoverId: 'wholesale'
-	}, 
+	},
 	{
 		head: 'Private Label',
 		desc: 'Brand, White Label',
 		hoverId: 'privateLabel'
-	}, 
+	},
 	{
 		head: 'Service Provider',
 		desc: 'Enabler, 3PL, Mastermind',
 		hoverId: 'serviceProvider'
-	}, 
+	},
 	{
 		head: 'Perfect Stock',
 		desc: 'Private Label, Wholesale',
 		hoverId: 'perfectStock'
-	}, 
+	}
 ];
 
 export const productsRightPanelData: ProductsPanelData[] = [
@@ -91,29 +91,29 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				desc: 'Reveal Competitor Keywords',
 				navigateTo: '/keyword-finder',
 				iconName: 'keywordFinder',
-				isNew: true,
+				isNew: true
 			},
 			{
 				head: 'Keyword Database',
 				desc: 'Check High-Volume Keywords',
 				navigateTo: '/keyword-database',
 				iconName: 'keywordDatabase',
-				isNew: true,
+				isNew: true
 			},
 			{
 				head: 'Product Rank Tracker',
 				desc: 'Get to #1 Search Results',
 				navigateTo: '/product-rank-tracker',
 				iconName: 'productRankTracker',
-				isNew: true,
+				isNew: true
 			},
 			{
 				head: 'Product Database',
 				desc: 'Amazon Product Catalogue',
 				navigateTo: '/product-database',
 				iconName: 'productDatabase',
-				isComingSoon: true,
-			},
+				isComingSoon: true
+			}
 		]
 	},
 	{
@@ -143,30 +143,29 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				desc: 'Get to #1 Search Results',
 				navigateTo: '/product-rank-tracker',
 				iconName: 'productRankTracker',
-				isNew: true,
+				isNew: true
 			},
 			{
 				head: 'Keyword Finder',
 				desc: 'Reveal Competitor Keywords',
 				navigateTo: '/keyword-finder',
 				iconName: 'keywordFinder',
-				isNew: true,
+				isNew: true
 			},
 			{
 				head: 'Keyword Database',
 				desc: 'Check High-Volume Keywords',
 				navigateTo: '/keyword-database',
 				iconName: 'keywordDatabase',
-				isNew: true,
+				isNew: true
 			},
 			{
 				head: 'Product Database',
 				desc: 'Amazon Product Catalogue',
 				navigateTo: '/product-database',
 				iconName: 'productDatabase',
-				isComingSoon: true,
-			},
-			
+				isComingSoon: true
+			}
 		]
 	},
 	{
@@ -196,15 +195,15 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				desc: 'Catalog Planning and Inventory',
 				navigateTo: '/catalog-planning',
 				iconName: 'catalogPlanning',
-				isNew: true,
+				isNew: true
 			},
 			{
 				head: 'Order Planning',
 				desc: 'Get Perfect Order',
 				navigateTo: '/order-planning',
 				iconName: 'orderPlanning',
-				isNew: true,
-			},
+				isNew: true
+			}
 		]
-	},
+	}
 ];

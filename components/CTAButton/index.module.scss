@@ -15,6 +15,12 @@
 			border: none;
 		}
 
+		&__green {
+			background: $sellgo_neon_green;
+			color: $prim_dark_1;
+			border: none;
+		}
+
 		&__white {
 			background: $prim_white;
 			color: $black_1;
@@ -26,12 +32,24 @@
 			color: $prim_white;
 			border: none;
 		}
+
+		&__purplePinkRainbow {
+			background: $purple_pink_gradient;
+			color: $prim_white;
+			border: none;
+		}
 	}
 
 	&__secondary {
 		&__orange {
 			background: $prim_white;
 			color: $accent_orange;
+			border: none;
+		}
+
+		&__green {
+			background: $prim_white;
+			color: $sellgo_neon_green;
 			border: none;
 		}
 
@@ -47,18 +65,25 @@
 			padding: 3px !important;
 			border: none;
 		}
+
+		&__purplePinkRainbow {
+			background: $purple_pink_gradient;
+			color: $prim_white;
+			padding: 3px !important;
+			border: none;
+		}
 	}
 
 	&__medium {
-		width: max-content;
+		min-width: max-content;
 		padding: 0 3rem;
-		font-size: 20px;
+		font-size: 16px;
 		height: 50px;
-		font-weight: 600;
+		font-weight: $fontweight_semibold;
 	}
 
 	&__small {
-		width: max-content;
+		min-width: max-content;
 		padding: 0 2rem;
 		font-size: 14px;
 		height: 40px;

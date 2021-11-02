@@ -53,11 +53,7 @@ const BlogsShowCaseSection: React.FC<Props> = (props) => {
 					<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[2]} />
 				</div>
 				<aside className={styles.recommededSection__Right}>
-					<FilteredChoiceBlogs
-						isLarge
-						label="By Date"
-						blogs={latestBlogs}
-					/>
+					<FilteredChoiceBlogs isLarge label="By Date" blogs={latestBlogs} />
 				</aside>
 			</section>
 

@@ -15,7 +15,9 @@ const InfoSection: React.FC<Props> = () => {
 					All-In-One Amazon tool to generate
 					<br />
 					<span className={styles.moreRevenue}>
-						<RainbowText type="purple_orange_gradient">more revenue</RainbowText>
+						<RainbowText type="purple_orange_gradient">
+							more revenue
+						</RainbowText>
 					</span>
 				</h2>
 

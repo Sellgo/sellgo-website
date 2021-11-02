@@ -7,16 +7,8 @@ export const planTypes: PlanTypes[] = [
 		isNew: true
 	},
 	{
-		name: 'Private Label $1',
-		isNew: true
-	},
-	{
 		name: 'Monthly and Annual Plans',
 		isNew: false
-	},
-	{
-		name: 'Seller Scout Pro',
-		isNew: true
 	}
 ];
 
@@ -80,6 +72,7 @@ export const plansAndProductsDetails = [
 				annualPrice: 971,
 				featureSubName: 'Starter Plan Plus',
 				desc: `For experienced sellers looking to grow \n their businesses and maximize their earnings.`,
+				isNew: true,
 				featuresLists: [
 					{
 						title: 'Optimize Wholesale leads',

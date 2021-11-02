@@ -11,7 +11,11 @@ import styles from './index.module.scss';
 import client from '../../apollo';
 
 /* GraphQL */
-import { GET_FILTERED_BLOGS, GET_SHOW_CASE_BLOGS, GET_FILTERED_LATEST_BLOGS } from '../../graphql/cms';
+import {
+	GET_FILTERED_BLOGS,
+	GET_SHOW_CASE_BLOGS,
+	GET_FILTERED_LATEST_BLOGS
+} from '../../graphql/cms';
 
 /* Containers */
 import ShowCaseHeroBox from '../../containers/Blogs/ShowCaseHerobox';
@@ -28,7 +32,6 @@ import { seoData } from '../../data/SEO/blogsShowcase';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
-import { _ } from 'numeral';
 
 interface Props {
 	showcaseBlogs: any;

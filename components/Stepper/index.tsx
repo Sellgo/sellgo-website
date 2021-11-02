@@ -30,19 +30,16 @@ const Stepper: React.FC<Props> = (props) => {
 	return (
 		<div>
 			<div className={styles.stepperGrid}>
-				{activeStep !== 0 ?
-					<button 
+				{activeStep !== 0 ? (
+					<button
 						className={styles.arrowButton}
 						onClick={() => setActiveStep(activeStep - 1)}
 					>
-						<Image
-							src='/leftArrow.svg'
-							width={25}
-							height={25}
-						/>
+						<Image src="/leftArrow.svg" width={25} height={25} />
 					</button>
-					: <div/>
-				}
+				) : (
+					<div />
+				)}
 				<div className={styles.stepperWrapper}>
 					{steps.map((product: StepDetail, index: number) => {
 						return (
@@ -55,34 +52,31 @@ const Stepper: React.FC<Props> = (props) => {
 									<ExpandedNavbarIcons
 										width={25}
 										height={25}
-										fill={"#95a1ac"}
+										fill={'#95a1ac'}
 										name={product.icon}
 										isRainbow={isActiveStep(index)}
 									/>
-									<h3 className={
-										`${styles.stepTitle} 
+									<h3
+										className={`${styles.stepTitle} 
 										${isActiveStep(index) ? styles.stepTitle__selected : ''}`}
-									> 
-										{product.title} 
+									>
+										{product.title}
 									</h3>
 								</div>
 							</div>
 						);
 					})}
 				</div>
-				{
-					activeStep !== steps.length - 1 ?
-					<button 
+				{activeStep !== steps.length - 1 ? (
+					<button
 						className={styles.arrowButton}
 						onClick={() => setActiveStep(activeStep + 1)}
 					>
-					<Image
-						src='/rightArrow.svg'
-						width={25}
-						height={25}
-					/>
-				</button>
-				: <div/>}
+						<Image src="/rightArrow.svg" width={25} height={25} />
+					</button>
+				) : (
+					<div />
+				)}
 			</div>
 			<div>
 				<SwipeableViews

@@ -42,7 +42,7 @@ const SmallBlogCard: React.FC<Props> = (props) => {
 						<h4>{title}</h4>
 						<p className={styles.blogDetails}>
 							{formatBlogDate(date.toString())}
-							<br/>
+							<br />
 							{generateCategoryDisplayName(categories.nodes)}{' '}
 							{formatBlogReadTime(readingTime.readtime)} Min Read
 						</p>

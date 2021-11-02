@@ -33,4 +33,4 @@ export const formatBlogDate = (date: string) => {
 	const year = dateObj.getFullYear();
 
 	return `${day} ${month} ${year}`;
-}
+};

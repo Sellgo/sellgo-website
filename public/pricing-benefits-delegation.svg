@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="35" viewBox="0 0 50 35">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#00f0ff"/>
+    </linearGradient>
+  </defs>
+  <path id="cloud-download-solid" d="M42,47.2A7.509,7.509,0,0,0,35,37a7.462,7.462,0,0,0-4.164,1.266A12.5,12.5,0,0,0,7.5,44.5c0,.211.008.422.016.633A11.253,11.253,0,0,0,11.25,67H40a10,10,0,0,0,2-19.8ZM31.07,54.469l-7.242,7.242a1.867,1.867,0,0,1-2.648,0l-7.242-7.242a1.867,1.867,0,0,1,0-2.648l.844-.844a1.882,1.882,0,0,1,2.7.039l2.531,2.7V43.875A1.871,1.871,0,0,1,21.883,42h1.25a1.871,1.871,0,0,1,1.875,1.875v9.836l2.531-2.7a1.875,1.875,0,0,1,2.7-.039l.844.844A1.889,1.889,0,0,1,31.07,54.469Z" transform="translate(0 -32)" fill="url(#linear-gradient)"/>
+</svg>

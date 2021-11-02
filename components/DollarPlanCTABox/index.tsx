@@ -26,9 +26,9 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
-					<h2>Pay $1 for a day</h2>
+					<h2>Pay $1.99 for a day</h2>
 					<p>
-						Access Sellgo&apos;s $1 Amazon tools and integrate them into your
+						Access Sellgo&apos;s $1.99 Amazon tools and integrate them into your
 						Amazon business.
 					</p>
 				</div>
@@ -37,6 +37,7 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 					<CTAButton
 						type={isPrimary ? 'primary' : 'secondary'}
 						size="medium"
+						variant="purplePinkRainbow"
 						navigateTo={dollarPlanLink}
 						asExternal
 						newTarget

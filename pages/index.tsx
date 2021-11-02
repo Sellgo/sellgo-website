@@ -44,7 +44,7 @@ interface Props {
 }
 
 const HomePage: React.FC<Props> = (props) => {
-	const { homeBlogs, customerCount} = props;
+	const { homeBlogs, customerCount } = props;
 	return (
 		<>
 			<SEOHead
@@ -54,7 +54,7 @@ const HomePage: React.FC<Props> = (props) => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<HeroBox customerCount={customerCount}/>
+			<HeroBox customerCount={customerCount} />
 			<main>
 				<InfoSection />
 				<StatisticsSection />
@@ -69,13 +69,13 @@ const HomePage: React.FC<Props> = (props) => {
 				<RecentBlogsSection recentBlogs={homeBlogs} />
 				<div className={styles.divider}></div>
 
-				<ClosingCTASection customerCount={customerCount}/>
+				<ClosingCTASection customerCount={customerCount} />
 			</main>
 		</>
 	);
 };
 
-export const getStaticProps: GetStaticProps = async (reva) => {
+export const getStaticProps: GetStaticProps = async () => {
 	const blogResponse = await client.query({
 		query: GET_SHOW_CASE_BLOGS,
 		variables: {
@@ -84,23 +84,23 @@ export const getStaticProps: GetStaticProps = async (reva) => {
 	});
 
 	const blogsForHome = blogResponse.data.posts.nodes;
-	
-	const limitDate = new Date("2021-10-16").getTime();
-	// let customerCount;
-	// try {
-	// 	const customerCountResponse = await axios.get(
-	// 		`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
-	// 	);
-	// 	customerCount = customerCountResponse.data.count;
-	// } catch (error) {
-	// 	customerCount = 56; // Random number for now
-	// 	console.log(error);
-	// }
+
+	const limitDate = new Date('2021-10-16').getTime();
+	let customerCount;
+	try {
+		const customerCountResponse = await axios.get(
+			`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
+		);
+		customerCount = customerCountResponse.data.count;
+	} catch (error) {
+		customerCount = 56; // Random number for now
+		console.log(error);
+	}
 
 	return {
 		props: {
 			homeBlogs: blogsForHome,
-			customerCount: 56,
+			customerCount
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};

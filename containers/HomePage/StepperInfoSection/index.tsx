@@ -21,7 +21,6 @@ const StepperInfoSection: React.FC<Props> = () => {
 	const [selectedPlanType, setSelectedPlanType] = useState<number>(0);
 	resetIdCounter();
 
-
 	return (
 		<section
 			className={`page-container ${styles.stepperInfoSectionWrapper}`}
@@ -34,26 +33,17 @@ const StepperInfoSection: React.FC<Props> = () => {
 				selectedIndex={selectedPlanType}
 			>
 				<TabList className={styles.tabListWrapper}>
-					<Tab 
-						key={uuid()} 
-						className={styles.stepperTab}
-					>
+					<Tab key={uuid()} className={styles.stepperTab}>
 						WHOLESALE
-						<div className={styles.underline}/>
+						<div className={styles.underline} />
 					</Tab>
-					<Tab 
-						key={uuid()} 
-						className={styles.stepperTab}
-					>
+					<Tab key={uuid()} className={styles.stepperTab}>
 						PRIVATE LABEL
-						<div className={styles.underline}/>
+						<div className={styles.underline} />
 					</Tab>
-					<Tab 
-						key={uuid()} 
-						className={styles.stepperTab}
-					>
+					<Tab key={uuid()} className={styles.stepperTab}>
 						SERVICE PROVIDER
-						<div className={styles.underline}/>
+						<div className={styles.underline} />
 					</Tab>
 				</TabList>
 				<TabPanel key={uuid()}>

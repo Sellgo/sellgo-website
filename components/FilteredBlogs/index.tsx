@@ -23,7 +23,11 @@ const FilteredChoiceBlogs: React.FC<Props> = (props) => {
 	const { label, blogs, isLarge } = props;
 
 	return (
-		<div className={`${styles.filteredBlogs} ${isLarge ? styles.filteredBlogs__large : ''}`}>
+		<div
+			className={`${styles.filteredBlogs} ${
+				isLarge ? styles.filteredBlogs__large : ''
+			}`}
+		>
 			<div className={styles.filterBlogLabel}>
 				<p>{label}</p>
 			</div>
@@ -37,9 +41,9 @@ const FilteredChoiceBlogs: React.FC<Props> = (props) => {
 							</a>
 						</Link>
 						<small>
-								{formatBlogDate(blog.date.toString())} |&nbsp;
-								{generateCategoryDisplayName(blog.categories.nodes)}{' '}
-								{formatBlogReadTime(blog.readingTime.readtime)} Min Read
+							{formatBlogDate(blog.date.toString())} |&nbsp;
+							{generateCategoryDisplayName(blog.categories.nodes)}{' '}
+							{formatBlogReadTime(blog.readingTime.readtime)} Min Read
 						</small>
 					</div>
 				);

@@ -58,7 +58,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 		<>
 			{!hideNavigationOnRoutes.includes(asPath) && <Navbar />}
 			<MobileNavBar />
-			{<CtaNavBar showCtaNavBar={showCtaNavBar}/>}
+			{<CtaNavBar showCtaNavBar={showCtaNavBar} />}
 			{children}
 			<Footer />
 		</>

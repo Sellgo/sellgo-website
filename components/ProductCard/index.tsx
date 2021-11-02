@@ -47,30 +47,23 @@ const ProductCard: React.FC<Props> = (props) => {
 						<a className={styles.productCard__Link}>
 							{linkLabel}
 							&nbsp;
-							<Image 
-								src="/blueLongArrowRight.svg"
-								width={20}
-								height={8}
-							/>
+							<Image src="/blueLongArrowRight.svg" width={20} height={8} />
 						</a>
 					</Link>
 				)}
 
-				{title.toUpperCase() === 'EXTENSION' && <CTAButton
-					variant="white"
-					type="secondary"
-					size="medium"
-					navigateTo="/"
-					className={styles.extensionCTA}
-				>
-					<Image 
-						src="/chromeOriginalLogo.svg"
-						width={25}
-						height={25}
-					/>
-					&nbsp;
-					Get Sellgo Chrome Extension
-				</CTAButton>}
+				{title.toUpperCase() === 'EXTENSION' && (
+					<CTAButton
+						variant="white"
+						type="secondary"
+						size="medium"
+						navigateTo="/"
+						className={styles.extensionCTA}
+					>
+						<Image src="/chromeOriginalLogo.svg" width={25} height={25} />
+						&nbsp; Get Sellgo Chrome Extension
+					</CTAButton>
+				)}
 			</div>
 
 			<div className={`${imageClass}`}>
