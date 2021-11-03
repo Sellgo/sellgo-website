@@ -15,7 +15,7 @@ interface Props {}
 
 const NewBenefitsSection: React.FC<Props> = () => {
 	return (
-		<section className={styles.newBenefitsSection}>
+		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
 					The Most Innovative Amazon Wholesale Tools <br />
@@ -34,16 +34,18 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					})}
 				</div>
 
-				<h2 className="secondary-heading">
-					Pinpoint Profit Search - The Most Powerful Sourcing Tools Available
+				<h2 className="secondary-heading-small">
+					Capture Products That Suddenly Became Profitable And Price Change
+					Reports.
 				</h2>
 				<CTAButton
-					type="primary"
-					size="small"
+					type="secondary"
+					size="productPageSmall"
+					variant="rainbow"
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Start Sourcing with Sellgo Today
+					Get Started
 				</CTAButton>
 			</div>
 		</section>

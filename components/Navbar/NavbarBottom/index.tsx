@@ -39,7 +39,9 @@ const NavbarBottom: React.FC<Props> = () => {
 						/>
 					</li>
 
-					<li className={styles.navbarBottomLink}>
+					<li
+						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
+					>
 						<Link
 							href="/pricing?type=monthly-and-annual-plans"
 							passHref

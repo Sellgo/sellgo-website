@@ -15,7 +15,7 @@ interface Props {}
 
 const NewBenefitsSection: React.FC<Props> = () => {
 	return (
-		<section className={styles.newBenefitsSection}>
+		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
 					Build Relationships with Local Amazon Businesses
@@ -33,12 +33,13 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					})}
 				</div>
 
-				<h2 className="secondary-heading">
+				<h2 className="secondary-heading-small">
 					Discover sellers across the globe that match your needs with the
 					Seller Map.
 				</h2>
 				<CTAButton
-					type="primary"
+					type="secondary"
+					variant="rainbow"
 					size="small"
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}

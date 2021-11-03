@@ -2,9 +2,6 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 
-/* Styling */
-import styles from './index.module.scss';
-
 /* Containers */
 import HeroBox from '../../containers/LeadsTrackerCont/HeroBox';
 import InfoSection from '../../containers/LeadsTrackerCont/InfoSection';
@@ -47,7 +44,6 @@ const LeadsTrackerContPage: React.FC<Props> = (props) => {
 			<HeroBox />
 			<InfoSection />
 			<NewBenefitsSection />
-			<section className={styles.newBanner}></section>
 			<CommonFeaturesSection />
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 			<RecommendationSection />

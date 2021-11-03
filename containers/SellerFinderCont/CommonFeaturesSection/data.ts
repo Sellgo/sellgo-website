@@ -1,43 +1,38 @@
 export const commonFeaturesList = [
 	{
-		title: 'Brand Inspector',
-		detail: `Get a glimpse into your competitor's brands they are currently selling 
-		and use it to expand your catalogs.`,
-		iconImageLink: '/chartpieIcon.svg',
+		title: 'Seller Search',
+		detail: `Search by ASINs or Seller IDs to locate any Amazon seller account.`,
+		iconImageLink: '/userCheckIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'ASIN Explorer',
-		detail: `Reveal all the ASINs your competitors are selling and reverse source to 
-		find new suppliers and profitable products.`,
-		iconImageLink: '/printsearchIcon.svg',
+		title: 'Stock Scout',
+		detail: `Check the inventory levels of your competitors and develop a competitive strategy.`,
+		iconImageLink: '/cubesIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'SKU Shadowing',
-		detail: `Spy on your competitor's stock levels and integrate the intel 
-		into your Buy Box strategy.`,
-		iconImageLink: '/sunglassesIcon.svg',
+		title: 'Simple Super Targeting',
+		detail: `View a seller's entire inventory and discover new sellers with the same products.`,
+		iconImageLink: '/userTagIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'Seller Comparison',
-		detail: `Measure your stats against your competitors like seller ratings, seller scores, 
-		and product reviews. `,
-		iconImageLink: '/rulercombinedIcon.svg',
+		title: 'ASINs and Brands',
+		detail: `Identify any seller's ASINs and brands and cherry pick their best products for yourself. `,
+		iconImageLink: '/tagIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'Cherry Pick Strategy',
-		detail: `Choose and take the most profitable items from other catalogs
-		 and make them your own.`,
-		iconImageLink: '/trophyIcon.svg',
+		title: 'Ratings and Reviews',
+		detail: `Compare seller reviews and ratings over the last 30, 90 and 365 Days.`,
+		iconImageLink: '/starIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
 		title: 'Sync with Our FBA Tools',
-		detail: `Take your findings from the Seller Finder and use the Product Tracker and discover 
-		more Buy Box opportunities.`,
+		detail: `Analyze different sellers and explore new products, 
+		then track your findings with the Product Tracker.`,
 		iconImageLink: '/linkIcon.svg',
 		alt: `Describe the icon here`
 	}

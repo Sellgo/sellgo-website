@@ -2,7 +2,7 @@
 
 .infoSectionWrapper {
 	margin-top: 10rem;
-	background: $blue_9;
+	background: $prim_dark_2;
 }
 
 .infoSection {
@@ -22,16 +22,17 @@
 	flex: 0 0 50%;
 
 	h2 {
-		font-size: $fontsize_subtitle_38;
+		font-size: $fontsize_title_46;
 		font-weight: $fontweight_bold;
+		line-height: 50px;
 		color: inherit;
 	}
 
 	p {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_subtitle_20;
 		color: inherit;
-		font-weight: $fontweight_regular;
-		margin: 1rem 0;
+		font-weight: $fontweight_medium;
+		margin: 3rem 0;
 	}
 }
 

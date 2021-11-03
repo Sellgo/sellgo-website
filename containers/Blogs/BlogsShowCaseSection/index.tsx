@@ -29,7 +29,7 @@ const BlogsShowCaseSection: React.FC<Props> = (props) => {
 	return (
 		<>
 			{/* Hero Section */}
-			<section className={styles.blogsHeroSection}>
+			<section className={styles.blogsHeroSection} id="showCtaNavBar">
 				<div className={styles.blogsHeroSection__Left}>
 					<BigFeatureCard showcaseBlogDetails={showcaseBlogs[0]} />
 				</div>

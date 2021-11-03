@@ -8,7 +8,10 @@ import Footer from '../Footer';
 import CtaNavBar from '../CtaNavBar';
 
 /* Constants */
-import { hideNavigationOnRoutes } from '../../constants';
+import {
+	hideNavigationOnRoutes,
+	showCtaNavBarFixedRoutes
+} from '../../constants';
 
 /* Utils */
 import { isSSR } from '../../utils';
@@ -38,7 +41,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 	}, [asPath]);
 
 	const trackScrolling = () => {
-		const trigger = document.querySelector('#stepperSection');
+		const trigger = document.querySelector('#showCtaNavBar');
 		if (trigger) {
 			if (trigger.getBoundingClientRect().top <= 0) {
 				setShowCtaNavBar(true);
@@ -54,11 +57,18 @@ const Layout: React.FC<Props> = ({ children }) => {
 		document.addEventListener('scroll', trackScrolling);
 	}, []);
 
+	const showCtaNavBarFixed = showCtaNavBarFixedRoutes.includes(asPath);
+
 	return (
 		<>
 			{!hideNavigationOnRoutes.includes(asPath) && <Navbar />}
 			<MobileNavBar />
-			{<CtaNavBar showCtaNavBar={showCtaNavBar} />}
+			{
+				<CtaNavBar
+					showCtaNavBar={showCtaNavBarFixed || showCtaNavBar}
+					showMobile={!showCtaNavBarFixed}
+				/>
+			}
 			{children}
 			<Footer />
 		</>

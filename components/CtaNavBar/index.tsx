@@ -6,22 +6,23 @@ import CTAButton from '../CTAButton';
 
 interface Props {
 	showCtaNavBar: boolean;
+	showMobile: boolean;
 }
 const CtaNavBar = (props: Props) => {
-	const { showCtaNavBar } = props;
+	const { showCtaNavBar, showMobile } = props;
 
 	return (
 		<div
-			className={`${styles.ctaNavBarWrapper} ${
-				!showCtaNavBar ? styles.ctaNavBarWrapper__hidden : ''
-			}`}
+			className={`${styles.ctaNavBarWrapper} 
+			${!showCtaNavBar ? styles.ctaNavBarWrapper__hidden : ''}
+			${!showMobile && styles.ctaNavBarWrapper__hideOnMobile}`}
 		>
 			<div
 				className={`page-container ${styles.ctaNavBar} ${
 					!showCtaNavBar ? styles.ctaNavBar__hidden : ''
 				}`}
 			>
-				<div className={styles.sellgoLogo}>
+				<a className={styles.sellgoLogo} href="/">
 					<Image
 						src="/sellgoLogo.png"
 						width={100}
@@ -29,7 +30,7 @@ const CtaNavBar = (props: Props) => {
 						priority
 						alt="Sellgo Inc. Company Logo"
 					/>
-				</div>
+				</a>
 				<CTAButton
 					type="secondary"
 					size="small"

@@ -24,7 +24,7 @@ const StepperInfoSection: React.FC<Props> = () => {
 	return (
 		<section
 			className={`page-container ${styles.stepperInfoSectionWrapper}`}
-			id="stepperSection"
+			id="showCtaNavBar"
 		>
 			<h2 className={styles.stepperTitle}>How Sellgo Works For</h2>
 			<Tabs

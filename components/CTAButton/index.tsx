@@ -4,7 +4,7 @@ import styles from './index.module.scss';
 
 interface Props {
 	type: 'primary' | 'secondary';
-	size: 'small' | 'medium' | 'large';
+	size: 'small' | 'medium' | 'large' | 'productPageBig' | 'productPageSmall';
 	navigateTo: string;
 	children: React.ReactNode;
 	variant?: 'white' | 'rainbow' | 'orange' | 'purplePinkRainbow' | 'green';
@@ -36,7 +36,11 @@ const CTAButton: React.FC<Props> = (props) => {
 	if (asExternal) {
 		return (
 			<a
-				className={`${baseClassName} ${sizeClassName} ${variantAndTypeClassName} ${className}`}
+				className={`
+					${baseClassName} 
+					${sizeClassName} 
+					${variantAndTypeClassName} 
+					${className}`}
 				href={navigateTo}
 				target={newTarget ? '_blank' : ''}
 				rel="noreferrer noopener"
@@ -52,7 +56,11 @@ const CTAButton: React.FC<Props> = (props) => {
 		return (
 			<Link href={navigateTo} passHref>
 				<a
-					className={`${baseClassName} ${sizeClassName} ${variantAndTypeClassName} ${className}`}
+					className={`
+						${baseClassName} 
+						${sizeClassName} 
+						${variantAndTypeClassName} 
+						${className}`}
 				>
 					{isRainbowBordered ? (
 						<span className={styles.ctabutton__rainbowWrapper}>{children}</span>

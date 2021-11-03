@@ -3,7 +3,7 @@ import { PlanTypes } from '../../../interfaces/Pricing';
 
 export const planTypes: PlanTypes[] = [
 	{
-		name: 'Pay $1 for a day',
+		name: 'Pay $1.99 for a day',
 		isNew: true
 	},
 	{
@@ -15,16 +15,16 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and Annual Pricing Plans',
-		summary: 'Try Our Premium Tools and Access Real-Data for $1!',
+		summary: 'Try Our Premium Tools and Access Real-Data for $1.99!',
 		infoAlertMessage: {
 			monthly: {
-				head: `Pay only $1 for the entire first month of starter membership`,
+				head: `Pay only $1.99 for the entire first month of starter membership`,
 				desc: ``,
 				navigateTo: '/pricing?type=free-trial',
 				navigateLabel: 'Learn More'
 			},
 			yearly: {
-				head: `Pay only $1 for the entire first month of starter membership`,
+				head: `Pay only $1.99 for the entire first month of starter membership`,
 				desc: ``,
 				navigateTo: '/pricing?type=free-trial',
 				navigateLabel: 'Learn More'

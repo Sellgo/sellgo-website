@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 384"><defs><style>.cls-1,.cls-2{fill:#ef7818;}.cls-1{opacity:0.4;isolation:isolate;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M572.52,177.4C518.29,71.59,410.93,0,288,0S57.68,71.64,3.48,177.41a32.35,32.35,0,0,0,0,29.19C57.71,312.41,165.07,384,288,384s230.32-71.64,284.52-177.41A32.35,32.35,0,0,0,572.52,177.4ZM288.14,336H288a143.93,143.93,0,1,1,.14,0Z"/><path class="cls-2" d="M380.66,216.87a95.78,95.78,0,0,1-185-49.66c0-.18.09-.35.14-.52a47.85,47.85,0,0,0,66.9-66.9,95.3,95.3,0,0,1,118,117.08Z"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="33.333" viewBox="0 0 50 33.333">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#545454"/>
+    </linearGradient>
+  </defs>
+  <path id="eye-solid" d="M49.7,79.4A27.842,27.842,0,0,0,25,64,27.846,27.846,0,0,0,.3,79.4a2.808,2.808,0,0,0,0,2.534A27.842,27.842,0,0,0,25,97.333a27.846,27.846,0,0,0,24.7-15.4,2.808,2.808,0,0,0,0-2.534ZM25,93.167a12.5,12.5,0,1,1,12.5-12.5A12.5,12.5,0,0,1,25,93.167Zm0-20.833a8.273,8.273,0,0,0-2.2.329A4.154,4.154,0,0,1,17,78.47a8.314,8.314,0,1,0,8-6.136Z" transform="translate(-0.001 -64)" fill="url(#linear-gradient)"/>
+</svg>

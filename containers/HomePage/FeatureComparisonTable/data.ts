@@ -12,7 +12,7 @@ export const competitors = {
 
 export const features = [
 	{
-		name: 'Bulk calculation/ Profit Finder',
+		name: 'Bulk calculation/ zProfit Finder',
 		featureAvailableInPlans: [plans.WHOLESALE],
 		featureAvailableInCompetitors: [competitors.SELLGO]
 	},

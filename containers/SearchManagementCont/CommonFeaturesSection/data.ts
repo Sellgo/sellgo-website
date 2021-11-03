@@ -39,7 +39,7 @@ export const commonFeaturesList = [
 		detail: `Stay above the competition by being better prepared 
 		when contacting suppliers, and save time by filtering out 
 		the more profitable opportunities with the Search Management.`,
-		iconImageLink: '/linkIcon.svg',
+		iconImageLink: '/handIcon.svg',
 		alt: `Describe the icon here`
 	}
 ];

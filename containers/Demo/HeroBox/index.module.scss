@@ -1,10 +1,10 @@
 @import '../../../styles/guidelines';
 
 .heroboxWrapper {
-	min-height: 48rem;
+	min-height: 58rem;
 	color: $prim_white;
 	background: linear-gradient(180deg, $prim_dark_2, #767676);
-	padding-top: 10rem;
+	padding-top: 20rem;
 
 	@media only screen and (max-width: 1080px) {
 		text-align: center;

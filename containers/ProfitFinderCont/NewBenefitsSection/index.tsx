@@ -15,7 +15,7 @@ interface Props {}
 
 const NewBenefitsSection: React.FC<Props> = () => {
 	return (
-		<section className={styles.newBenefitsSection}>
+		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
 					The #1 Amazon wholesale bulk calculation software
@@ -35,12 +35,14 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					})}
 				</div>
 
-				<h2 className="secondary-heading">
-					Also a Perfect Pair for Reverse Wholesale Sourcing.
+				<h2 className="secondary-heading-small">
+					Bolden Your Amazon Business And Optimize Your Efficiency With Our
+					Powerful Chrome Extension.
 				</h2>
 				<CTAButton
-					type="primary"
+					type="secondary"
 					size="small"
+					variant="rainbow"
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>

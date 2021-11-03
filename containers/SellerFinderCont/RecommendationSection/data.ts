@@ -7,11 +7,11 @@ export const recomDataCardDetails = [
 		navigateTo: '/profit-finder'
 	},
 	{
-		title: 'Product Tracker',
-		description: `Product research tool to help you analyze sales performances, 
-		daily revenue, and profit margins to grow your Amazon business.`,
-		navigateLabel: 'Learn more about the Product Tracker',
-		navigateTo: '/product-tracker'
+		title: 'Seller Database',
+		description: `Connect with a community of Amazon sellers and network with 
+		potential brands to expand your business.`,
+		navigateLabel: 'Learn more about the Seller Database',
+		navigateTo: '/seller-database'
 	},
 	{
 		title: 'Chrome Extension',

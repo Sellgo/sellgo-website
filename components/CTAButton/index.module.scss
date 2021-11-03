@@ -100,4 +100,18 @@
 		border-radius: 6px;
 		color: $black_1;
 	}
+
+	&__productPageBig {
+		width: 21rem;
+		height: 5rem;
+		font-size: 18px;
+		font-weight: $fontweight_bold;
+	}
+
+	&__productPageSmall {
+		width: 17.5rem;
+		height: 4rem;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
+	}
 }
