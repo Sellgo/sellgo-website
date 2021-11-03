@@ -191,3 +191,8 @@ input.error {
 		}
 	}
 }
+
+/* Global reset for sidebar */
+#react-sidebar .sidebar-main {
+	z-index: 100;
+}
