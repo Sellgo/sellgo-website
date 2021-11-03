@@ -12,6 +12,7 @@ import CTAButton from '../../../components/CTAButton';
 interface Props {}
 
 const FeatureComparisonTable: React.FC<Props> = () => {
+	const [showAllFeatures, setShowAllFeatures] = React.useState<boolean>(false);
 	return (
 		<section className={styles.featureComparisonWrapper}>
 			<div className={`page-container ${styles.featureComparisonSection}`}>
@@ -37,6 +38,11 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 				</div>
 				<div className={styles.featureComparisonGrid}>
 					{features.map((feature: any, index: number) => {
+						/* Dont show the feature table is unexpanded and feature is not shown on default */
+						if (!showAllFeatures && !feature.showOnDefault) {
+							return null;
+						}
+
 						return (
 							<div className={styles.featureRow} key={index}>
 								<div
@@ -67,7 +73,12 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 										/>
 									)}
 								</div>
-								<div className={styles.featureNameCell}>{feature.name}</div>
+								<div className={styles.featureNameCell}>
+									<span className={styles.featureNameCellContent}>
+										{feature.name}
+										{feature.isNew && <div className={styles.newLabel}> New </div>}
+									</span>
+								</div>
 								<div className={styles.checkboxCell}>
 									{feature.featureAvailableInCompetitors.includes(
 										competitors.SELLGO
@@ -122,6 +133,12 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 						);
 					})}
 				</div>
+				<button className={
+					styles.viewAllFeatures} 
+					onClick={() => setShowAllFeatures(!showAllFeatures)}
+				> 
+					{showAllFeatures ? 'View less >' : 'View all comparisons >'}
+				</button>
 				<CTAButton
 					type="primary"
 					variant="white"

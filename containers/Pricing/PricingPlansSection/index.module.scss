@@ -47,6 +47,10 @@
 
 .paymentModeToggle {
 	margin: 5rem auto !important;
+
+	@media screen and(max-width: 860px) {
+		display: none !important;
+	}
 }
 
 .singleLineAlert {

@@ -8,7 +8,6 @@
 	min-width: 38rem;
 	min-height: 111rem;
 	border: 1px solid $second_silver;
-
 	&__new {
 		border-top-left-radius: 0 !important;
 		border-top-right-radius: 0 !important;
@@ -19,6 +18,9 @@
 	}
 
 	@media only screen and(max-width: 850px) {
+		&__new {
+			margin-top: 8rem;
+		}
 		min-height: auto;
 	}
 
@@ -58,4 +60,10 @@
 	font-size: $fontsize_content_14;
 	color: $prim_dark_1;
 	font-weight: $fontweight_medium;
+}
+
+.paymentModeToggle {
+		@media screen and(min-width: 860px) {
+		display: none !important;
+	}
 }

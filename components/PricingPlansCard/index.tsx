@@ -8,11 +8,13 @@ import styles from './index.module.scss';
 /* Components */
 import PricingPlansCardHead from './PricingPlansCardHead';
 import PricingPlansCardFeaturesList from './PricingPlansCardFeaturesList';
+import PricePlanToggleButton from '../PricePlanToggleButton';
 
 interface Props {
 	// product details
 	id: number;
 	name: string;
+	setIsMonthly: (isMonthly: boolean) => void;
 	productsDatabase: number;
 	salesEstimateCount: number;
 	monthlyPrice: number;
@@ -32,6 +34,7 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 		id,
 		name,
 		isNew,
+		setIsMonthly,
 		productsDatabase,
 		salesEstimateCount,
 		monthlyPrice,
@@ -79,6 +82,12 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 						);
 					})}
 				</div>
+
+				<PricePlanToggleButton
+					isMonthly={isMonthly}
+					handleChange={() => setIsMonthly(!isMonthly)}
+					className={styles.paymentModeToggle}
+				/>
 			</div>
 		</div>
 	);

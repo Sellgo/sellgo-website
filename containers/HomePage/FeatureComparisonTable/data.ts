@@ -14,32 +14,38 @@ export const features = [
 	{
 		name: 'Bulk calculation/ Profit Finder',
 		featureAvailableInPlans: [plans.WHOLESALE],
-		featureAvailableInCompetitors: [competitors.SELLGO]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		showOnDefault: true,
 	},
 	{
 		name: 'Product Variation Analysis',
 		featureAvailableInPlans: [plans.WHOLESALE],
-		featureAvailableInCompetitors: [competitors.SELLGO]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		showOnDefault: true,
 	},
 	{
 		name: 'Product Multipack Analysis',
 		featureAvailableInPlans: [plans.WHOLESALE],
-		featureAvailableInCompetitors: [competitors.SELLGO]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		showOnDefault: true,
 	},
 	{
 		name: 'Inventory analysis',
 		featureAvailableInPlans: [plans.WHOLESALE],
-		featureAvailableInCompetitors: [competitors.SELLGO]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		showOnDefault: true,
 	},
 	{
 		name: 'Wholesale Leads Tracking',
 		featureAvailableInPlans: [plans.WHOLESALE],
-		featureAvailableInCompetitors: [competitors.SELLGO]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		showOnDefault: true,
 	},
 	{
 		name: 'Brand Level Category Filter',
 		featureAvailableInPlans: [plans.WHOLESALE],
-		featureAvailableInCompetitors: [competitors.SELLGO, competitors.KEEPA]
+		featureAvailableInCompetitors: [competitors.SELLGO, competitors.KEEPA],
+		showOnDefault: true,
 	},
 	{
 		name: 'Chrome Extension',
@@ -188,7 +194,8 @@ export const features = [
 	{
 		name: 'Zapier Integration for PPC Recampaign',
 		featureAvailableInPlans: [plans.WHOLESALE, plans.PRIVATE_LABEL],
-		featureAvailableInCompetitors: [competitors.SELLGO]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		isNew: true
 	},
 	{
 		name: 'Chrome Extension',
