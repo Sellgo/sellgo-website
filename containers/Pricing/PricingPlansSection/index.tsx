@@ -19,7 +19,6 @@ interface Props {
 	planName: string;
 	summary: string;
 	productsIncluded: any;
-	selectedPlanType: number;
 	showOnlyGeneralPlanDetails?: boolean;
 }
 
@@ -64,11 +63,8 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					return (
 						<PricingPlansCard
 							key={uuid()}
-							id={product.id}
 							name={product.name}
 							isNew={product.isNew}
-							productsDatabase={product.productsDatabase}
-							salesEstimateCount={product.salesEstimateCount}
 							monthlyPrice={product.monthlyPrice}
 							annualPrice={product.annualPrice}
 							desc={product.desc}
@@ -76,7 +72,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							featuresLists={product.featuresLists}
 							setIsMonthly={setIsMonthly}
 							// Plan details
-							planName={planName}
 							isMonthly={isMonthly}
 						/>
 					);
@@ -105,17 +100,13 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 								<div className={styles.priceSummaryCard} key={uuid()}>
 									<PricingPlansCardHead
 										// product details
-										id={product.id}
 										name={product.name}
-										productsDatabase={product.productsDatabase}
-										salesEstimateCount={product.salesEstimateCount}
 										monthlyPrice={product.monthlyPrice}
 										annualPrice={product.annualPrice}
 										desc={product.desc}
 										isNew={product.isNew}
 										// plan details
 										isMonthly={isMonthly}
-										planName={planName}
 										// optional props for comparision table cards
 										withToggle
 										className={styles.tablePricingSummary}
@@ -136,6 +127,10 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			)}
 		</>
 	);
+};
+
+PricingPlansSection.defaultProps = {
+	showOnlyGeneralPlanDetails: false
 };
 
 export default PricingPlansSection;

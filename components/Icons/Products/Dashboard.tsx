@@ -40,4 +40,8 @@ const Dashboard: React.FC<Props> = (props) => {
 	);
 };
 
+Dashboard.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(Dashboard);

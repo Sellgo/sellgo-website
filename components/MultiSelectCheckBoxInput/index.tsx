@@ -91,4 +91,14 @@ const MultiSelectCheckBoxInput: React.FC<Props> = (props) => {
 	);
 };
 
+MultiSelectCheckBoxInput.defaultProps = {
+	label: '',
+	acknowledge: false,
+	className: '',
+	optionClassName: '',
+	hasError: false,
+	required: false,
+	errorMessage: ''
+};
+
 export default memo(MultiSelectCheckBoxInput);

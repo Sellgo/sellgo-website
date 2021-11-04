@@ -19,4 +19,8 @@ const RainbowText: React.FC<Props> = (props) => {
 	return <span className={`${styles[type]} ${className}`}>{children}</span>;
 };
 
+RainbowText.defaultProps = {
+	className: ''
+};
+
 export default RainbowText;

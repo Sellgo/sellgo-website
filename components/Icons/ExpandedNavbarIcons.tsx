@@ -157,4 +157,8 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 	);
 };
 
+ProductsIconMapper.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(ProductsIconMapper);

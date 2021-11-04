@@ -52,4 +52,8 @@ const FilteredChoiceBlogs: React.FC<Props> = (props) => {
 	);
 };
 
+FilteredChoiceBlogs.defaultProps = {
+	isLarge: false
+};
+
 export default memo(FilteredChoiceBlogs);

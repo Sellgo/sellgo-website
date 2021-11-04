@@ -19,10 +19,10 @@ const CTAButton: React.FC<Props> = (props) => {
 		type,
 		size,
 		children,
-		className,
-		asExternal,
+		className = '',
+		asExternal = false,
 		variant = 'orange',
-		newTarget
+		newTarget = false
 	} = props;
 
 	const baseClassName = styles.ctabutton;
@@ -71,6 +71,13 @@ const CTAButton: React.FC<Props> = (props) => {
 			</Link>
 		);
 	}
+};
+
+CTAButton.defaultProps = {
+	className: '',
+	asExternal: false,
+	variant: 'orange',
+	newTarget: false
 };
 
 export default CTAButton;

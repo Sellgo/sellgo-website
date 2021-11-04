@@ -30,4 +30,8 @@ const ContactInfo: React.FC<Props> = (props) => {
 	);
 };
 
+ContactInfo.defaultProps = {
+	className: ''
+};
+
 export default ContactInfo;

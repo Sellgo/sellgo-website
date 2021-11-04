@@ -69,3 +69,5 @@ export const defaultPhoneCode = {
 	value: '+1',
 	type: 'countryCode'
 };
+
+export const limitDateForCustomerCount = '2021-10-16';

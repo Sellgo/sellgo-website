@@ -12,11 +12,8 @@ import PricePlanToggleButton from '../PricePlanToggleButton';
 
 interface Props {
 	// product details
-	id: number;
 	name: string;
 	setIsMonthly: (isMonthly: boolean) => void;
-	productsDatabase: number;
-	salesEstimateCount: number;
 	monthlyPrice: number;
 	annualPrice: number;
 	desc: string;
@@ -25,25 +22,20 @@ interface Props {
 	isNew?: boolean;
 
 	// plan details
-	planName: string;
 	isMonthly: boolean;
 }
 
 const PricingPlansCard: React.FC<Props> = (props) => {
 	const {
-		id,
 		name,
 		isNew,
 		setIsMonthly,
-		productsDatabase,
-		salesEstimateCount,
 		monthlyPrice,
 		annualPrice,
 		desc,
 		featureSubName,
 		featuresLists,
-		isMonthly,
-		planName
+		isMonthly
 	} = props;
 
 	return (
@@ -60,16 +52,12 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 			)}
 			<div className={`${styles.pricingPlansCard}`}>
 				<PricingPlansCardHead
-					id={id}
 					name={name}
 					desc={desc}
 					isNew={isNew}
-					productsDatabase={productsDatabase}
-					salesEstimateCount={salesEstimateCount}
 					monthlyPrice={monthlyPrice}
 					annualPrice={annualPrice}
 					// plan details
-					planName={planName}
 					isMonthly={isMonthly}
 				/>
 
@@ -91,6 +79,10 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 			</div>
 		</div>
 	);
+};
+
+PricingPlansCard.defaultProps = {
+	isNew: false
 };
 
 export default PricingPlansCard;

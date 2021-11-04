@@ -67,4 +67,9 @@ const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 	);
 };
 
+PayAsYouGoCardHead.defaultProps = {
+	className: '',
+	withToggle: false
+};
+
 export default PayAsYouGoCardHead;

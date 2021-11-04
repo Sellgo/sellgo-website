@@ -41,4 +41,8 @@ const SalesProjection: React.FC<Props> = (props) => {
 	);
 };
 
+SalesProjection.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(SalesProjection);

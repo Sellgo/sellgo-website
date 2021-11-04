@@ -44,4 +44,8 @@ const GroupedNavLink: React.FC<Props> = (props) => {
 	);
 };
 
+GroupedNavLink.defaultProps = {
+	className: ''
+};
+
 export default GroupedNavLink;

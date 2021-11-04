@@ -40,4 +40,8 @@ const SeasonalAdjustor: React.FC<Props> = (props) => {
 	);
 };
 
+SeasonalAdjustor.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(SeasonalAdjustor);

@@ -11,7 +11,7 @@ interface Props {
 }
 
 const Carousel: React.FC<Props> = (props) => {
-	const { items, className } = props;
+	const { items, className = '' } = props;
 
 	const [activeStep, setActiveStep] = React.useState(0);
 	const handleStepChange = (step: number) => {
@@ -75,4 +75,7 @@ const Carousel: React.FC<Props> = (props) => {
 	);
 };
 
+Carousel.defaultProps = {
+	className: ''
+};
 export default Carousel;

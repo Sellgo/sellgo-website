@@ -41,4 +41,8 @@ const PricingInfoAlert: React.FC<Props> = (props) => {
 	);
 };
 
+PricingInfoAlert.defaultProps = {
+	className: ''
+};
+
 export default memo(PricingInfoAlert);

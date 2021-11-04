@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuid } from 'uuid';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -10,7 +11,7 @@ interface Props {
 }
 
 const BenefitsPanel: React.FC<Props> = (props) => {
-	const { benefitSummary, details } = props;
+	const { benefitSummary, details, popularFeaturesList } = props;
 
 	return (
 		<article className={styles.benefitsPanel}>
@@ -20,7 +21,7 @@ const BenefitsPanel: React.FC<Props> = (props) => {
 			</div>
 			<div className={styles.benefitsPanel__Right}>
 				<div className={styles.benefitsImage}></div>
-				{/* <div className={styles.benefitsDescription}>
+				<div className={styles.benefitsDescription}>
 					<h3>popular Features:</h3>
 
 					<div className={styles.featureListWrapper}>
@@ -34,7 +35,7 @@ const BenefitsPanel: React.FC<Props> = (props) => {
 								);
 							})}
 					</div>
-				</div> */}
+				</div>
 			</div>
 		</article>
 	);

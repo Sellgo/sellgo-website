@@ -40,4 +40,8 @@ const SearchManagement: React.FC<Props> = (props) => {
 	);
 };
 
+SearchManagement.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(SearchManagement);

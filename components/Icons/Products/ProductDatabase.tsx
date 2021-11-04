@@ -39,4 +39,8 @@ const ProductsDatabase: React.FC<Props> = (props) => {
 	);
 };
 
+ProductsDatabase.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(ProductsDatabase);
