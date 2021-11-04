@@ -1,9 +1,7 @@
 import React from 'react';
 
 /* Data */
-import {
-	wholesaleFeatures,
-} from './data';
+import { wholesaleFeatures } from './data';
 
 /* Components */
 import Stepper from '../../../components/Stepper';

@@ -11,7 +11,11 @@ import styles from './index.module.scss';
 import client from '../../../apollo';
 
 /* GraphQL */
-import { GET_FILTERED_BLOGS, GET_FILTERED_LATEST_BLOGS, GET_PAGINATED_BLOGS } from '../../../graphql/cms';
+import {
+	GET_FILTERED_BLOGS,
+	GET_FILTERED_LATEST_BLOGS,
+	GET_PAGINATED_BLOGS
+} from '../../../graphql/cms';
 
 /* Containers */
 import ShowCaseHeroBox from '../../../containers/Blogs/ShowCaseHerobox';

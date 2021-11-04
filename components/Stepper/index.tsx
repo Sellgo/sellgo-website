@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
@@ -32,7 +32,7 @@ const Stepper: React.FC<Props> = (props) => {
 			setStartIndex(overflowLeftLength);
 			setEndIndex(stepsLength - overflowLength);
 		}
-	}, [steps])
+	}, [steps]);
 
 	const handleStepChange = (step: number) => {
 		setActiveStep(step);
@@ -44,13 +44,14 @@ const Stepper: React.FC<Props> = (props) => {
 		}
 
 		/* Only shift the parameter indexes if the active step is the first step */
-		if ((activeStep === startIndex
-			|| activeStep - 1 === startIndex)
-			&& startIndex > 0) {
+		if (
+			(activeStep === startIndex || activeStep - 1 === startIndex) &&
+			startIndex > 0
+		) {
 			setStartIndex(startIndex - 1);
 			setEndIndex(endIndex - 1);
 		}
-	}
+	};
 
 	const handleRightArrow = () => {
 		if (activeStep < stepsLength - 1) {
@@ -58,13 +59,14 @@ const Stepper: React.FC<Props> = (props) => {
 		}
 
 		/* Only shift the parameter indexes if the active step is the last step */
-		if ((activeStep === endIndex
-			|| activeStep + 1 === endIndex) 
-			&& endIndex < stepsLength - 1) {
+		if (
+			(activeStep === endIndex || activeStep + 1 === endIndex) &&
+			endIndex < stepsLength - 1
+		) {
 			setEndIndex(endIndex + 1);
 			setStartIndex(startIndex + 1);
 		}
-	}
+	};
 
 	const isActiveStep = (index: number) => index === activeStep;
 
@@ -72,10 +74,7 @@ const Stepper: React.FC<Props> = (props) => {
 		<div>
 			<div className={styles.stepperGrid}>
 				{!(startIndex === 0 && activeStep === 0) ? (
-					<button
-						className={styles.arrowButton}
-						onClick={handleLeftArrow}
-					>
+					<button className={styles.arrowButton} onClick={handleLeftArrow}>
 						<Image src="/leftArrow.svg" width={25} height={25} />
 					</button>
 				) : (
@@ -90,8 +89,12 @@ const Stepper: React.FC<Props> = (props) => {
 										onClick={() => handleStepChange(index)}
 										onKeyPress={() => handleStepChange(index)}
 										className={`${styles.step} 
-										${(index === startIndex || index === endIndex)
-											&& (activeStep !== index) ? styles.translucent : ''}`}
+										${
+											(index === startIndex || index === endIndex) &&
+											activeStep !== index
+												? styles.translucent
+												: ''
+										}`}
 									>
 										<ExpandedNavbarIcons
 											width={25}
@@ -115,10 +118,7 @@ const Stepper: React.FC<Props> = (props) => {
 					})}
 				</div>
 				{!(activeStep === steps.length - 1 && endIndex === steps.length - 1) ? (
-					<button
-						className={styles.arrowButton}
-						onClick={handleRightArrow}
-					>
+					<button className={styles.arrowButton} onClick={handleRightArrow}>
 						<Image src="/rightArrow.svg" width={25} height={25} />
 					</button>
 				) : (

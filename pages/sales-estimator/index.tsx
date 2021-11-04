@@ -52,7 +52,7 @@ const SalesEstimator: React.FC<Props> = (props) => {
 				{showCTABanner && <CTABannerSection />}
 				<StandardPlansPricingSection />
 				<FAQSection faqDetails={faqDetails.products[2]} />
-				<ClosingCTASection customerCount={customerCount}/>
+				<ClosingCTASection customerCount={customerCount} />
 			</main>
 		</>
 	);
