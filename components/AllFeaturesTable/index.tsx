@@ -19,7 +19,7 @@ const AllFeaturesTable: React.FC<Props> = (props) => {
 					{header.map((headerVal: string, index: number) => {
 						return (
 							<th key={uuid()} className={index === 0 ? styles.first : ''}>
-								<span>{headerVal}</span>
+								<div>{headerVal}</div>
 							</th>
 						);
 					})}
