@@ -17,7 +17,7 @@ const BannerCTASection: React.FC<Props> = () => {
 
 			<div className={`page-container ${styles.bannerCTASection}`}>
 				<div className={styles.capsule}>
-					<p>This is the banner CTA wordings</p>
+					<p>Lorem ipsum dolor sit amet</p>
 					<Link href="/contact-sales" passHref>
 						<a className="anchor">Contact Sales</a>
 					</Link>

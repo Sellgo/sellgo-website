@@ -57,43 +57,6 @@
 	}
 }
 
-// .recentArticleSummary {
-// 	border-bottom: 1px solid $border-color-1;
-// 	padding: 1rem 0;
-// 	min-width: 33rem;
-
-// 	@media only screen and(max-width: 400px) {
-// 		width: 100%;
-// 		min-width: auto;
-// 	}
-
-// 	small {
-// 		color: $grey_8;
-// 		font-size: $fontsize_content_14;
-// 	}
-
-// 	p {
-// 		color: inherit;
-// 		font-size: $fontsize_content_14;
-// 		max-width: 30rem;
-// 		a {
-// 			color: $prim_dark_2;
-// 			&:active,
-// 			&:visited {
-// 				color: $prim_dark_2;
-// 			}
-// 			&:hover {
-// 				text-decoration: underline;
-// 				font-weight: $fontweight_semibold;
-// 			}
-// 		}
-// 	}
-
-// 	&:last-child {
-// 		border-bottom: 0;
-// 	}
-// }
-
 .filterBlogLabel {
 	background: $black_1;
 	border-radius: 3px;

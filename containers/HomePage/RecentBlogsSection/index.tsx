@@ -60,18 +60,6 @@ const RecentBlogsSection: React.FC<Props> = (props) => {
 								</div>
 							);
 						})}
-						{/* {recentArticlesSummary.map((blog: any) => {
-							return (
-								<div className={styles.recentArticleSummary} key={uuid()}>
-									<small>{new Date(blog.date).toDateString()}</small>
-									<p>
-										<Link href={`/blogs/blog/${blog.slug}`} passHref>
-											<a>{blog.title}</a>
-										</Link>
-									</p>
-								</div>
-							);
-						})} */}
 					</div>
 
 					<Link href="/blogs" passHref>
