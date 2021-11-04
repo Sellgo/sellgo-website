@@ -21,6 +21,7 @@
 		&__new {
 			margin-top: 8rem;
 		}
+
 		min-height: auto;
 	}
 
@@ -63,7 +64,7 @@
 }
 
 .paymentModeToggle {
-		@media screen and(min-width: 860px) {
+	@media screen and(min-width: 860px) {
 		display: none !important;
 	}
 }
