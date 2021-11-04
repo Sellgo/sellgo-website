@@ -22,7 +22,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 					other tools I've used before."`}
 			</small>
 			<p>David W.</p>
-		</div>,
+		</div>
 	];
 	return (
 		<section className={styles.testimonialsSection}>
