@@ -23,30 +23,6 @@ const TestimonialsSection: React.FC<Props> = () => {
 			</small>
 			<p>David W.</p>
 		</div>,
-		<div className={styles.testimonialVideo}>
-			<div className={styles.videoWrapper}>
-				<video controls>
-					<track kind="captions" />
-					<source src="Testimonial_David_W.mp4" type="video/mp4" />
-					<source src="movie.ogg" type="video/ogg" />
-					Your browser does not support the video tag.
-				</video>
-			</div>
-			<small>{`"Video 2."`}</small>
-			<p>David W.</p>
-		</div>,
-		<div className={styles.testimonialVideo}>
-			<div className={styles.videoWrapper}>
-				<video controls>
-					<track kind="captions" />
-					<source src="Testimonial_David_W.mp4" type="video/mp4" />
-					<source src="movie.ogg" type="video/ogg" />
-					Your browser does not support the video tag.
-				</video>
-			</div>
-			<small>{`"Video 3."`}</small>
-			<p>David W.</p>
-		</div>
 	];
 	return (
 		<section className={styles.testimonialsSection}>
