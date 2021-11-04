@@ -14,38 +14,29 @@ export const features = [
 	{
 		name: 'Bulk calculation/ Profit Finder',
 		featureAvailableInPlans: [plans.WHOLESALE],
-		featureAvailableInCompetitors: [competitors.SELLGO],
-		showOnDefault: true,
+		featureAvailableInCompetitors: [competitors.SELLGO]
 	},
 	{
-		name: 'Product Variation Analysis',
+		name: 'Product Variation and Multipack Analysis',
 		featureAvailableInPlans: [plans.WHOLESALE],
 		featureAvailableInCompetitors: [competitors.SELLGO],
-		showOnDefault: true,
-	},
-	{
-		name: 'Product Multipack Analysis',
-		featureAvailableInPlans: [plans.WHOLESALE],
-		featureAvailableInCompetitors: [competitors.SELLGO],
-		showOnDefault: true,
+		showOnDefault: true
 	},
 	{
 		name: 'Inventory analysis',
 		featureAvailableInPlans: [plans.WHOLESALE],
-		featureAvailableInCompetitors: [competitors.SELLGO],
-		showOnDefault: true,
+		featureAvailableInCompetitors: [competitors.SELLGO]
 	},
 	{
 		name: 'Wholesale Leads Tracking',
 		featureAvailableInPlans: [plans.WHOLESALE],
-		featureAvailableInCompetitors: [competitors.SELLGO],
-		showOnDefault: true,
+		featureAvailableInCompetitors: [competitors.SELLGO]
 	},
 	{
 		name: 'Brand Level Category Filter',
 		featureAvailableInPlans: [plans.WHOLESALE],
 		featureAvailableInCompetitors: [competitors.SELLGO, competitors.KEEPA],
-		showOnDefault: true,
+		showOnDefault: true
 	},
 	{
 		name: 'Chrome Extension',
@@ -55,7 +46,8 @@ export const features = [
 			competitors.JUNGLE_SCOUT,
 			competitors.HELIUM_10,
 			competitors.KEEPA
-		]
+		],
+		showOnDefault: true
 	},
 	{
 		name: 'Sales Estimation',
@@ -64,7 +56,8 @@ export const features = [
 			competitors.SELLGO,
 			competitors.JUNGLE_SCOUT,
 			competitors.HELIUM_10
-		]
+		],
+		showOnDefault: true
 	},
 	{
 		name: 'Revenue Estimation',
@@ -98,12 +91,16 @@ export const features = [
 	{
 		name: 'Seller Analysis at Brand, Category and Product Level',
 		featureAvailableInPlans: [plans.WHOLESALE, plans.PRIVATE_LABEL],
-		featureAvailableInCompetitors: [competitors.SELLGO]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		showOnDefault: true,
+		isNew: true
 	},
 	{
 		name: 'Map of Global Amazon Sellers',
 		featureAvailableInPlans: [plans.WHOLESALE, plans.PRIVATE_LABEL],
-		featureAvailableInCompetitors: [competitors.SELLGO]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		showOnDefault: true,
+		isNew: true
 	},
 	{
 		name: 'Average Number of Sellers per Brand',
@@ -113,17 +110,14 @@ export const features = [
 	{
 		name: 'Revenue Estimate for Sellers',
 		featureAvailableInPlans: [plans.WHOLESALE, plans.PRIVATE_LABEL],
-		featureAvailableInCompetitors: [
-			competitors.SELLGO,
-			competitors.JUNGLE_SCOUT,
-			competitors.HELIUM_10,
-			competitors.KEEPA
-		]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		isNew: true
 	},
 	{
 		name: 'Collect Sellers Inventory',
 		featureAvailableInPlans: [plans.WHOLESALE, plans.PRIVATE_LABEL],
-		featureAvailableInCompetitors: [competitors.SELLGO]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		isNew: true
 	},
 	{
 		name: 'Keyword Analysis',
@@ -132,7 +126,9 @@ export const features = [
 			competitors.SELLGO,
 			competitors.JUNGLE_SCOUT,
 			competitors.HELIUM_10
-		]
+		],
+		showOnDefault: true,
+		isNew: true
 	},
 	{
 		name: 'Keyword Search Volume Analysis',
@@ -150,7 +146,9 @@ export const features = [
 			competitors.SELLGO,
 			competitors.JUNGLE_SCOUT,
 			competitors.HELIUM_10
-		]
+		],
+		showOnDefault: true,
+		isNew: true
 	},
 	{
 		name: 'Product Rank Tracker',
@@ -159,52 +157,34 @@ export const features = [
 			competitors.SELLGO,
 			competitors.JUNGLE_SCOUT,
 			competitors.HELIUM_10
-		]
+		],
+		showOnDefault: true,
+		isNew: true
 	},
 	{
 		name: 'Rank Parent + Variation Tracking',
 		featureAvailableInPlans: [plans.WHOLESALE, plans.PRIVATE_LABEL],
-		featureAvailableInCompetitors: [
-			competitors.SELLGO,
-			competitors.JUNGLE_SCOUT,
-			competitors.HELIUM_10,
-			competitors.KEEPA
-		]
+		featureAvailableInCompetitors: [competitors.SELLGO, competitors.HELIUM_10]
 	},
 	{
 		name: 'Rank Drop/ Raise Index',
 		featureAvailableInPlans: [plans.WHOLESALE, plans.PRIVATE_LABEL],
-		featureAvailableInCompetitors: [
-			competitors.SELLGO,
-			competitors.JUNGLE_SCOUT,
-			competitors.HELIUM_10,
-			competitors.KEEPA
-		]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		showOnDefault: true,
+		isNew: true
 	},
 	{
 		name: 'True Rank Performance Index',
 		featureAvailableInPlans: [plans.WHOLESALE, plans.PRIVATE_LABEL],
-		featureAvailableInCompetitors: [
-			competitors.SELLGO,
-			competitors.JUNGLE_SCOUT,
-			competitors.HELIUM_10,
-			competitors.KEEPA
-		]
+		featureAvailableInCompetitors: [competitors.SELLGO],
+		showOnDefault: true,
+		isNew: true
 	},
 	{
 		name: 'Zapier Integration for PPC Recampaign',
 		featureAvailableInPlans: [plans.WHOLESALE, plans.PRIVATE_LABEL],
 		featureAvailableInCompetitors: [competitors.SELLGO],
+		showOnDefault: true,
 		isNew: true
-	},
-	{
-		name: 'Chrome Extension',
-		featureAvailableInPlans: [plans.WHOLESALE, plans.PRIVATE_LABEL],
-		featureAvailableInCompetitors: [
-			competitors.SELLGO,
-			competitors.JUNGLE_SCOUT,
-			competitors.HELIUM_10,
-			competitors.KEEPA
-		]
 	}
 ];
