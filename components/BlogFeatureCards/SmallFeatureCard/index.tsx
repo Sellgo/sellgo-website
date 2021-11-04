@@ -54,7 +54,7 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 					<div className={styles.blogText}>
 						<h2>{title}</h2>
 						<p>
-							{formatBlogDate(date.toString())}
+							{date && formatBlogDate(date.toString())}
 							<br />
 							{generateCategoryDisplayName(categories.nodes)}{' '}
 							{formatBlogReadTime(readingTime.readtime)} mins read

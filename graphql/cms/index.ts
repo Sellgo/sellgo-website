@@ -230,6 +230,7 @@ export const GET_PAGINATED_BLOGS = gql`
 			nodes {
 				slug
 				title
+				date
 				featuredImage {
 					node {
 						altText
