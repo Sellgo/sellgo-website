@@ -20,7 +20,7 @@ const InfoSection: React.FC<Props> = () => {
 						them but have become much more.
 						<br />
 						<br />
-						Sellgo Keyword Reverse helps you to discover the keywords with the
+						Sellgo Keyword Finder helps you to discover the keywords with the
 						most sales volume by using your competitors as a reference point.
 						You can now reverse engineer your competitors’ ranking strategy so
 						you will know how you can use the same wordings and keywords for

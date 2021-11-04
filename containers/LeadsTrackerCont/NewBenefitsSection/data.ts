@@ -8,7 +8,7 @@ export const newBenefitsData = [
 		Leads Tracker for automated monitoring.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_tracker_1.png'
+		imageUrl: '/product_tracker_3.png'
 	},
 	{
 		title: 'WHOLESALE CATALOG MONITORING',
@@ -18,7 +18,7 @@ export const newBenefitsData = [
 		Once you've added your products to the Profit Finder, simply activate Leads Tracker for automated monitoring.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_tracker_2.png'
+		imageUrl: '/product_tracker_4.png'
 	},
 	{
 		title: 'WHOLESALE LEADS AUTOMATION',
@@ -27,6 +27,6 @@ export const newBenefitsData = [
 		constant price changes? Just focus on accurate analytics that matter to your business the most.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_tracker_3.png'
+		imageUrl: '/product_tracker_5.png'
 	}
 ];

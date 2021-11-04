@@ -58,7 +58,7 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.welcomeSection__image}>
 						<Image
-							src="/ptrHerobox_600x360.png"
+							src="/extension_1.png"
 							width={600}
 							height={360}
 							alt="Welcome to sellgo"
@@ -86,7 +86,7 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.contentSection__image}>
 						<Image
-							src="/pfHerobox_600x360.png"
+							src="/seller_map_1.png"
 							width={600}
 							height={360}
 							alt="Tools and Services"
@@ -115,7 +115,7 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.contentSection__image}>
 						<Image
-							src="/smHerobox_600x360.png"
+							src="/product_tracker_1.png"
 							width={600}
 							height={360}
 							alt="Pricing Plans section showcase"
