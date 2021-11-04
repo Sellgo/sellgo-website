@@ -38,6 +38,9 @@ import { ShowcaseBlogDetails } from '../interfaces/Blogs';
 /* Config */
 import AppConfig from '../config';
 
+/* Constants */
+import { limitDateForCustomerCount } from '../constants';
+
 interface Props {
 	homeBlogs: ShowcaseBlogDetails[];
 	customerCount: number;
@@ -85,7 +88,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 	const blogsForHome = blogResponse.data.posts.nodes;
 
-	const limitDate = new Date('2021-10-16').getTime();
+	const limitDate = new Date(limitDateForCustomerCount).getTime();
 	let customerCount;
 	try {
 		const customerCountResponse = await axios.get(
