@@ -57,7 +57,7 @@ const ProductCard: React.FC<Props> = (props) => {
 						variant="white"
 						type="secondary"
 						size="medium"
-						navigateTo="/"
+						navigateTo="/extension"
 						className={styles.extensionCTA}
 					>
 						<Image src="/chromeOriginalLogo.svg" width={25} height={25} />
