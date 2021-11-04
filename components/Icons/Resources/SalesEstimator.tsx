@@ -40,4 +40,8 @@ const SalesEstimator: React.FC<Props> = (props) => {
 	);
 };
 
+SalesEstimator.defaultProps = {
+	isRainbow: false
+};
+
 export default SalesEstimator;

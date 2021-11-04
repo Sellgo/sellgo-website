@@ -44,4 +44,8 @@ const ChromeExtension: React.FC<Props> = (props) => {
 	);
 };
 
+ChromeExtension.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(ChromeExtension);

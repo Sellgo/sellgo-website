@@ -89,4 +89,9 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 	);
 };
 
+DollarPlanCTABox.defaultProps = {
+	className: '',
+	isPrimary: false
+};
+
 export default DollarPlanCTABox;

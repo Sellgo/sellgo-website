@@ -61,4 +61,8 @@ const ProfitFinder: React.FC<Props> = (props) => {
 	);
 };
 
+ProfitFinder.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(ProfitFinder);

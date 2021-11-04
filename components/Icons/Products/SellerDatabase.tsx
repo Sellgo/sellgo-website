@@ -56,4 +56,8 @@ const SellerDatabase: React.FC<Props> = (props) => {
 	);
 };
 
+SellerDatabase.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(SellerDatabase);

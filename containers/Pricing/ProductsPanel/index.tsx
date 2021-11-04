@@ -122,7 +122,6 @@ const ProductsPanel: React.FC<Props> = (props) => {
 								planName={plan.planName}
 								summary={plan.summary}
 								productsIncluded={plan.productsIncluded}
-								selectedPlanType={selectedPlanType}
 							/>
 						</TabPanel>
 					);

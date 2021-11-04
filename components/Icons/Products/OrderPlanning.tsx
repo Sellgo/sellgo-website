@@ -40,4 +40,8 @@ const OrderPlanning: React.FC<Props> = (props) => {
 	);
 };
 
+OrderPlanning.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(OrderPlanning);

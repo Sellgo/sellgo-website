@@ -55,4 +55,8 @@ const LeadsTracker: React.FC<Props> = (props) => {
 	);
 };
 
+LeadsTracker.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(LeadsTracker);

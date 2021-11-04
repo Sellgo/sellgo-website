@@ -41,4 +41,8 @@ const SellerMap: React.FC<Props> = (props) => {
 	);
 };
 
+SellerMap.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(SellerMap);

@@ -124,4 +124,12 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 	);
 };
 
+GenericPriceCardHead.defaultProps = {
+	isNew: false,
+	isSmall: false,
+	withToggle: false,
+	className: '',
+	handleChange: () => null
+};
+
 export default GenericPriceCardHead;

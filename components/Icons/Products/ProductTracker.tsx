@@ -68,4 +68,8 @@ const ProductTracker: React.FC<Props> = (props) => {
 	);
 };
 
+ProductTracker.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(ProductTracker);

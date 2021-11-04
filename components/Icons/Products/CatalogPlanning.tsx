@@ -41,4 +41,8 @@ const CatalogPlanning: React.FC<Props> = (props) => {
 	);
 };
 
+CatalogPlanning.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(CatalogPlanning);

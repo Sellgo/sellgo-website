@@ -41,4 +41,8 @@ const KeywordFinder: React.FC<Props> = (props) => {
 	);
 };
 
+KeywordFinder.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(KeywordFinder);

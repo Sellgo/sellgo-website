@@ -41,4 +41,8 @@ const PricePlanToggleButton: React.FC<Props> = (props) => {
 	);
 };
 
+PricePlanToggleButton.defaultProps = {
+	className: ''
+};
+
 export default PricePlanToggleButton;

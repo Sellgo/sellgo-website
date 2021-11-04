@@ -41,4 +41,8 @@ const KeywordDatabase: React.FC<Props> = (props) => {
 	);
 };
 
+KeywordDatabase.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(KeywordDatabase);

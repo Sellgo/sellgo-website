@@ -56,4 +56,8 @@ const SellerFinder: React.FC<Props> = (props) => {
 	);
 };
 
+SellerFinder.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(SellerFinder);

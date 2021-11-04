@@ -79,16 +79,12 @@ const SellerScoutProPanel: React.FC<Props> = () => {
 						<div className={styles.sellerScoutPriceCardWrapper}>
 							<PricingPlansCardHead
 								// product details
-								id={0}
 								name={'Seller Scout Pro'}
-								productsDatabase={sellerScoutGoPlanDetails.productsDatabase}
-								salesEstimateCount={sellerScoutGoPlanDetails.salesEstimate}
 								monthlyPrice={sellerScoutGoPlanDetails.monthlyPrice}
 								annualPrice={sellerScoutGoPlanDetails.annualPrice}
 								desc={''}
 								// plan details
 								isMonthly={isMonthly}
-								planName={'Seller Scout Pro'}
 								// // optional props for comparision table cards
 								withToggle
 								className={styles.sellerScoutPriceCard}

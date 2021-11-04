@@ -40,4 +40,8 @@ const ProductRankTracker: React.FC<Props> = (props) => {
 	);
 };
 
+ProductRankTracker.defaultProps = {
+	isRainbow: false
+};
+
 export default memo(ProductRankTracker);

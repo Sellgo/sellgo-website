@@ -38,4 +38,8 @@ const Blogs: React.FC<Props> = (props) => {
 	);
 };
 
+Blogs.defaultProps = {
+	isRainbow: false
+};
+
 export default Blogs;
