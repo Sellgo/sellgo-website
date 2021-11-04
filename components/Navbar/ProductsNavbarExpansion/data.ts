@@ -20,11 +20,11 @@ export const productsNavigationList: ProductsNavigationList[] = [
 		desc: 'Enabler, 3PL, Mastermind',
 		hoverId: 'serviceProvider'
 	},
-	{
-		head: 'Perfect Stock',
-		desc: 'Private Label, Wholesale',
-		hoverId: 'perfectStock'
-	}
+	// {
+	// 	head: 'Perfect Stock',
+	// 	desc: 'Private Label, Wholesale',
+	// 	hoverId: 'perfectStock'
+	// }
 ];
 
 export const productsRightPanelData: ProductsPanelData[] = [
@@ -107,13 +107,13 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				iconName: 'productRankTracker',
 				isNew: true
 			},
-			{
-				head: 'Product Database',
-				desc: 'Amazon Product Catalogue',
-				navigateTo: '/product-database',
-				iconName: 'productDatabase',
-				isComingSoon: true
-			}
+			// {
+			// 	head: 'Product Database',
+			// 	desc: 'Amazon Product Catalogue',
+			// 	navigateTo: '/product-database',
+			// 	iconName: 'productDatabase',
+			// 	isComingSoon: true
+			// }
 		]
 	},
 	{
@@ -159,13 +159,13 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				iconName: 'keywordDatabase',
 				isNew: true
 			},
-			{
-				head: 'Product Database',
-				desc: 'Amazon Product Catalogue',
-				navigateTo: '/product-database',
-				iconName: 'productDatabase',
-				isComingSoon: true
-			}
+			// {
+			// 	head: 'Product Database',
+			// 	desc: 'Amazon Product Catalogue',
+			// 	navigateTo: '/product-database',
+			// 	iconName: 'productDatabase',
+			// 	isComingSoon: true
+			// }
 		]
 	},
 	{

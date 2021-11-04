@@ -38,12 +38,14 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 		'pages/leads-tracker/index.tsx',
 		'pages/pricing/index.tsx',
 		'pages/privacy-policy/index.tsx',
-		'pages/product-tracker/index.tsx',
 		'pages/profit-finder/index.tsx',
 		'pages/search-management/index.tsx',
 		'pages/seller-database/index.tsx',
 		'pages/seller-finder/index.tsx',
 		'pages/seller-map/index.tsx',
+		'pages/keyword-database/index.tsx',
+		'pages/keyword-finder/index.tsx',
+		'pages/product-rank-tracker/index.tsx',
 		'pages/terms-of-use/index.tsx'
 	];
 
