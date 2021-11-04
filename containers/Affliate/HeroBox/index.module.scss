@@ -2,7 +2,7 @@
 
 .heroboxWrapper {
 	color: $prim_white;
-	background: linear-gradient(90deg, $blue_9, $blue_8, $blue_7, $blue_7);
+	background: linear-gradient(180deg, $prim_dark_2, #767676);
 	padding-top: 4.7rem;
 	padding-bottom: 6rem;
 }
@@ -15,7 +15,7 @@
 }
 
 .heroBoxTitle {
-	color: $accent_orange;
+	color: $sellgo_neon_blue;
 	font-size: $fontsize_subtitle_20;
 	font-weight: $fontweight_bold;
 }
@@ -45,7 +45,8 @@
 	font-weight: $fontweight_bold;
 }
 .signinLink {
-	color: $blue_4;
+	color: $sellgo_neon_blue;
+	font-weight: $fontweight_semibold;
 	margin-left: 2px;
 
 	&:hover {

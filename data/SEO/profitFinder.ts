@@ -1,7 +1,7 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Sellgo - Amazon Profit Finder:`,
+	title: `Sellgo - Amazon Profit Finder: Amazon All-In-One Tool`,
 	description: `Bulk analyze thousands of products with advanced filters to sort and identify high demand 
 	products with amazing profit potential. Use key metrics profit margins, return on investments, and 
 	more to expand your Amazon catalog with winning products.`,

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 
 /* Styles */
@@ -7,17 +8,13 @@ import styles from './index.module.scss';
 /* Components */
 import PricingPlansCardHead from './PricingPlansCardHead';
 import PricingPlansCardFeaturesList from './PricingPlansCardFeaturesList';
-
-/* Constants */
-import {
-	plansWithHeaderGradient,
-	pricingCardHeaderGradients
-} from '../../constants';
+import PricePlanToggleButton from '../PricePlanToggleButton';
 
 interface Props {
 	// product details
 	id: number;
 	name: string;
+	setIsMonthly: (isMonthly: boolean) => void;
 	productsDatabase: number;
 	salesEstimateCount: number;
 	monthlyPrice: number;
@@ -25,6 +22,7 @@ interface Props {
 	desc: string;
 	featureSubName: string;
 	featuresLists: any;
+	isNew?: boolean;
 
 	// plan details
 	planName: string;
@@ -35,6 +33,8 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 	const {
 		id,
 		name,
+		isNew,
+		setIsMonthly,
 		productsDatabase,
 		salesEstimateCount,
 		monthlyPrice,
@@ -46,24 +46,24 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 		planName
 	} = props;
 
-	const isGradientHeader = plansWithHeaderGradient.includes(name);
-
 	return (
-		<div className={styles.pricingPlansCardWrapper}>
-			{/* Header gradients for plans */}
-
-			{isGradientHeader && (
-				<div
-					className={styles.headerGradient}
-					style={{ background: `${pricingCardHeaderGradients[name]}` }}
-				/>
+		<div
+			className={`${styles.pricingPlansCardWrapper} ${
+				isNew ? styles.pricingPlansCardWrapper__new : ''
+			}`}
+		>
+			{isNew && (
+				<div className={styles.newFeatureBanner}>
+					<Image src="/star.svg" width={25} height={25} />
+					Most Popular
+				</div>
 			)}
-
-			<div className={styles.pricingPlansCard}>
+			<div className={`${styles.pricingPlansCard}`}>
 				<PricingPlansCardHead
 					id={id}
 					name={name}
 					desc={desc}
+					isNew={isNew}
 					productsDatabase={productsDatabase}
 					salesEstimateCount={salesEstimateCount}
 					monthlyPrice={monthlyPrice}
@@ -82,6 +82,12 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 						);
 					})}
 				</div>
+
+				<PricePlanToggleButton
+					isMonthly={isMonthly}
+					handleChange={() => setIsMonthly(!isMonthly)}
+					className={styles.paymentModeToggle}
+				/>
 			</div>
 		</div>
 	);

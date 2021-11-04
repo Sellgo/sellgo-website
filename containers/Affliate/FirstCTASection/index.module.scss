@@ -1,5 +1,9 @@
 @import '../../../styles/guidelines';
 
+.firstCTASectionBoxWrapper {
+	background: $tab_active;
+}
+
 .firstCTASectionBox {
 	padding-top: 9rem;
 	padding-bottom: 12rem;
@@ -19,6 +23,6 @@
 }
 
 .ctaButton {
-	width: 21rem;
+	width: 25rem;
 	margin-top: 5rem;
 }

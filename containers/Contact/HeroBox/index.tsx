@@ -23,11 +23,12 @@ const HeroBox: React.FC<Props> = () => {
 						</p>
 
 						<div className={styles.requestDemoCard}>
-							<Comment width={50} height={39} fill="#808080" />
+							<Comment width={50} height={39} fill="#1E1E1E" />
 							<CTAButton
 								navigateTo="/demo"
 								type="primary"
 								size="small"
+								variant="rainbow"
 								className={styles.requestDemoCard__CTA}
 							>
 								Request a demo
@@ -36,7 +37,7 @@ const HeroBox: React.FC<Props> = () => {
 					</div>
 
 					<div className={styles.contactCard}>
-						<PaperAirplane width={40} height={40} fill="#FC7900" />
+						<PaperAirplane width={40} height={40} fill="#B318F1" />
 						<div>
 							<h2>Need to contact us? Send us a message!</h2>
 							<a href="mailto:support@sellgo.com">support@sellgo.com</a>

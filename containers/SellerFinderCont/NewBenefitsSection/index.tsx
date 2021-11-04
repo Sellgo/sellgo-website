@@ -15,7 +15,7 @@ interface Props {}
 
 const NewBenefitsSection: React.FC<Props> = () => {
 	return (
-		<section className={styles.newBenefitsSection}>
+		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
 					A Scope into the Competitive Landscape
@@ -33,12 +33,13 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					})}
 				</div>
 
-				<h2 className="secondary-heading">
+				<h2 className="secondary-heading-small">
 					Scout out million of sellers and find profitable products and brands
 					to build your catalog.
 				</h2>
 				<CTAButton
-					type="primary"
+					type="secondary"
+					variant="rainbow"
 					size="small"
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}

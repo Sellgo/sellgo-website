@@ -1,9 +1,51 @@
 @import '../../../styles/guidelines';
 
 .stepperInfoSectionWrapper {
-	margin-top: 12rem;
+	padding-top: 12rem;
 }
 
-.stepperWrapper {
-	margin-top: 8rem;
+.stepperTitle {
+	font-weight: $fontweight_bold;
+	font-size: 48px;
+	text-align: center;
+	color: $prim_dark_2;
+}
+
+.tabListWrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 4rem;
+	margin-bottom: 7.5rem;
+}
+
+.stepperTab {
+	color: $grey_8;
+	font-size: $fontsize_subtitle_24;
+	margin: 0 2.5rem;
+	text-align: center;
+	font-weight: $fontweight_medium;
+
+	&__selected {
+		background: $orange_purple_gradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: $fontweight_bold;
+
+		.underline {
+			width: 100%;
+			margin: auto;
+			margin-top: 4px;
+			height: 3px;
+			background: $orange_purple_gradient;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	@media only screen and(max-width: 900px) {
+		font-size: $fontsize_content_18;
+	}
 }

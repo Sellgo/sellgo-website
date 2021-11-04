@@ -1,58 +1,61 @@
 import React, { useState } from 'react';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
+import { Tabs, TabList, Tab, TabPanel, resetIdCounter } from 'react-tabs';
+import { v4 as uuid } from 'uuid';
 
 /* Data */
-import { productsLabels, productsDetails } from './data';
+import {
+	wholesaleFeatures,
+	privateLabelFeatures,
+	serviceProviderFeatures
+} from './data';
 
 /* Components */
-import ProductCard from '../../../components/ProductCard';
 import Stepper from '../../../components/Stepper';
 
 /* Styling */
 import styles from './index.module.scss';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-
 interface Props {}
 
 const StepperInfoSection: React.FC<Props> = () => {
-	const [activeStep, setActiveStep] = useState(0);
-	const handleStepChange = (step: number) => {
-		setActiveStep(step);
-	};
+	const [selectedPlanType, setSelectedPlanType] = useState<number>(0);
+	resetIdCounter();
 
 	return (
-		<section className={`page-container ${styles.stepperInfoSectionWrapper}`}>
-			<h2 className="secondary-heading">
-				The Amazon Opportunity Finder Your Business Will Love
-			</h2>
-			<div className={styles.stepperWrapper}>
-				<Stepper
-					steps={productsLabels}
-					handleStepChange={handleStepChange}
-					activeStep={activeStep}
-				/>
-			</div>
-
-			<div>
-				<AutoPlaySwipeableViews
-					index={activeStep}
-					onChangeIndex={handleStepChange}
-					interval={5000} // = 5seconds
-					enableMouseEvents
-				>
-					{productsDetails.map((productDetail: any, index: number) => {
-						return (
-							<ProductCard
-								key={index}
-								{...productDetail}
-								reversed={(index + 1) % 2 === 0}
-							/>
-						);
-					})}
-				</AutoPlaySwipeableViews>
-			</div>
+		<section
+			className={`page-container ${styles.stepperInfoSectionWrapper}`}
+			id="showCtaNavBar"
+		>
+			<h2 className={styles.stepperTitle}>How Sellgo Works For</h2>
+			<Tabs
+				selectedTabClassName={styles.stepperTab__selected}
+				onSelect={setSelectedPlanType}
+				selectedIndex={selectedPlanType}
+			>
+				<TabList className={styles.tabListWrapper}>
+					<Tab key={uuid()} className={styles.stepperTab}>
+						WHOLESALE
+						<div className={styles.underline} />
+					</Tab>
+					<Tab key={uuid()} className={styles.stepperTab}>
+						PRIVATE LABEL
+						<div className={styles.underline} />
+					</Tab>
+					<Tab key={uuid()} className={styles.stepperTab}>
+						SERVICE PROVIDER
+						<div className={styles.underline} />
+					</Tab>
+				</TabList>
+				<TabPanel key={uuid()}>
+					<Stepper steps={wholesaleFeatures} />
+				</TabPanel>
+				<TabPanel key={uuid()}>
+					<Stepper steps={privateLabelFeatures} />
+				</TabPanel>
+				<TabPanel key={uuid()}>
+					<Stepper steps={serviceProviderFeatures} />
+				</TabPanel>
+			</Tabs>
 		</section>
 	);
 };

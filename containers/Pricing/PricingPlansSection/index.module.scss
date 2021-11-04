@@ -47,6 +47,10 @@
 
 .paymentModeToggle {
 	margin: 5rem auto !important;
+
+	@media screen and(max-width: 860px) {
+		display: none !important;
+	}
 }
 
 .singleLineAlert {
@@ -108,13 +112,11 @@
 	width: 30rem;
 	min-height: 25rem;
 	max-height: 35rem;
-	border: 1px solid $second_silver;
 	border-radius: 3px;
 	margin-left: 10px;
 }
 
 .tablePricingSummary {
-	padding: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

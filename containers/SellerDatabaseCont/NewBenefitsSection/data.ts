@@ -6,7 +6,7 @@ export const newBenefitsData = [
 		who can become potential clients for your business.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit1_450x270.png'
+		imageUrl: '/seller_database_3.png'
 	},
 	{
 		title: 'User Segments',
@@ -16,7 +16,7 @@ export const newBenefitsData = [
 		their businesses.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit2_450x270.png'
+		imageUrl: '/seller_database_4.png'
 	},
 	{
 		title: 'Brand and Business Finder',
@@ -26,6 +26,6 @@ export const newBenefitsData = [
 		Buy Box strategy and take over new profitable products.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit3_450x270.png'
+		imageUrl: '/seller_database_5.png'
 	}
 ];

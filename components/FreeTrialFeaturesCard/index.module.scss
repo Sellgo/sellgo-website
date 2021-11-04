@@ -1,6 +1,7 @@
 @import '../../styles/guidelines';
 
 .featuresCard {
+	background: $prim_white;
 	border: 1px solid $grey_2;
 	width: 34rem;
 	color: $prim_dark_2;
@@ -39,8 +40,9 @@
 	min-height: 35rem;
 	width: 100%;
 	color: inherit;
-	padding: 2rem;
+	padding: 3rem;
 	h3 {
+		margin-left: 1rem;
 		color: $prim_dark_2;
 		font-size: $fontsize_subtitle_24;
 		font-weight: $fontweight_medium;
@@ -49,6 +51,7 @@
 
 	ul {
 		margin-top: 2.5rem;
+		color: $prim_dark_1;
 		font-size: $fontsize_content_14;
 		li {
 			margin-bottom: 1rem;
@@ -62,6 +65,7 @@
 .popularFeaturesList {
 	font-size: $fontsize_content_12;
 	border-bottom: 1px solid $grey_2;
+	color: $prim_dark_1;
 	width: 100%;
 	text-align: left;
 	padding: 2rem;

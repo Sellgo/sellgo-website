@@ -1,0 +1,51 @@
+@import '../../styles/guidelines';
+
+/* Style Guide for cta button */
+.ctaNavBarWrapper {
+	position: fixed;
+	padding: 0 5rem;
+	height: 10rem;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	background: linear-gradient(180deg, rgba(30, 30, 30, 1), rgba(30, 30, 30, 0));
+	transition-duration: 400ms;
+
+	&__hidden {
+		height: 0;
+	}
+
+	&__hideOnMobile {
+		transition-duration: 0;
+		@media screen and (max-width: 950px) {
+			display: none;
+		}
+	}
+}
+
+.ctaNavBar {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	transition-duration: 400ms;
+
+	&__hidden {
+		display: none;
+	}
+}
+
+.ctaButton {
+	width: 20rem;
+
+	@media screen and (max-width: 600px) {
+		width: 100%;
+	}
+}
+
+.sellgoLogo {
+	@media screen and (max-width: 600px) {
+		display: none;
+	}
+}

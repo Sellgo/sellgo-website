@@ -16,8 +16,6 @@
 .productAccordionHeading {
 	cursor: pointer;
 	border: 1px solid $grey_2;
-	font-size: $fontsize_content_14;
-	color: $prim_dark_2;
 }
 
 .productAccordionButton {
@@ -30,6 +28,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_semibold;
+		color: $prim_dark_2 !important;
 		span {
 			color: $blue_7;
 			font-weight: bold;
@@ -41,8 +42,8 @@
 .productAccordionPanel {
 	text-align: left;
 	padding: 1.5rem 2rem;
-	font-size: $fontsize_content_14;
-	color: $prim_dark_2;
+	font-size: $fontsize_content_12;
+	font-weight: $fontweight_medium;
 	border: 1px solid $grey_2;
 	border-top: 0;
 

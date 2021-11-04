@@ -5,7 +5,7 @@ import styles from './index.module.scss';
 
 interface Props {}
 
-const OpportunityBannerSection: React.FC<Props> = () => {
+const BlackBannerSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.globalSellersBannerWrapper}>
 			<div className="page-container">
@@ -25,4 +25,4 @@ const OpportunityBannerSection: React.FC<Props> = () => {
 	);
 };
 
-export default OpportunityBannerSection;
+export default BlackBannerSection;

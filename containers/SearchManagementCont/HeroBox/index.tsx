@@ -19,7 +19,7 @@ const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.heroBox}`}>
 			<div className={styles.heroBox__Image}>
-				<Image src="/smHerobox_600x360.png" width={600} height={360} alt="" />
+				<Image src="/search_management_1.png" width={600} height={360} alt="" />
 			</div>
 			<div className={styles.heroBox__Details}>
 				<div className={styles.subHeadingWrapper}>
@@ -28,6 +28,7 @@ const HeroBox: React.FC<Props> = () => {
 						height={30}
 						fill="#ef7818"
 						name="searchManagement"
+						isRainbow
 					/>
 					<h2 className={styles.subHeading}>Search Management</h2>
 				</div>
@@ -37,7 +38,8 @@ const HeroBox: React.FC<Props> = () => {
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"
-					size="medium"
+					size="productPageBig"
+					variant="rainbow"
 					className={styles.heroBoxCTA}
 				>
 					Get Started

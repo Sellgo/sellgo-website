@@ -3,36 +3,28 @@ import { PlanTypes } from '../../../interfaces/Pricing';
 
 export const planTypes: PlanTypes[] = [
 	{
-		name: 'Pay $1 for a day',
-		isNew: true
-	},
-	{
-		name: 'Private Label $1',
+		name: 'Pay $1.99 for a day',
 		isNew: true
 	},
 	{
 		name: 'Monthly and Annual Plans',
 		isNew: false
-	},
-	{
-		name: 'Seller Scout Pro',
-		isNew: true
 	}
 ];
 
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and Annual Pricing Plans',
-		summary: 'Try Our Premium Tools and Access Real-Data for $1!',
+		summary: `Invest on a research tool that's dependable, powerful and can scale up your business.`,
 		infoAlertMessage: {
 			monthly: {
-				head: `Pay only $1 for the entire first month of starter membership`,
+				head: `Pay only $1.99 for the entire first month of starter membership`,
 				desc: ``,
 				navigateTo: '/pricing?type=free-trial',
 				navigateLabel: 'Learn More'
 			},
 			yearly: {
-				head: `Pay only $1 for the entire first month of starter membership`,
+				head: `Pay only $1.99 for the entire first month of starter membership`,
 				desc: ``,
 				navigateTo: '/pricing?type=free-trial',
 				navigateLabel: 'Learn More'
@@ -43,9 +35,9 @@ export const plansAndProductsDetails = [
 				id: 6, // subscriptionID if needed
 				name: 'Starter',
 				productsDatabase: 0,
-				salesEstimateCount: 500,
-				monthlyPrice: 37,
-				annualPrice: 323,
+				salesEstimateCount: 1000,
+				monthlyPrice: 49,
+				annualPrice: 348,
 				desc: `The toolbox for beginner sellers. \n Get access to our tools and chrome extension!`,
 				featureSubName: 'Start with',
 				featuresLists: [
@@ -56,8 +48,7 @@ export const plansAndProductsDetails = [
 							'Profit Finder FBA bulk calculation',
 							'Data input as UPC, EAN, ASIN, ISBN',
 							'Instant analytics with Data Buster',
-							'Historical Data',
-							'Product Tracker'
+							'Historical Data'
 						]
 					},
 					{
@@ -75,11 +66,12 @@ export const plansAndProductsDetails = [
 				id: 1,
 				name: 'Professional',
 				productsDatabase: 0,
-				salesEstimateCount: 5000,
-				monthlyPrice: 97,
-				annualPrice: 971,
+				salesEstimateCount: 2000,
+				monthlyPrice: 99,
+				annualPrice: 828,
 				featureSubName: 'Starter Plan Plus',
 				desc: `For experienced sellers looking to grow \n their businesses and maximize their earnings.`,
+				isNew: true,
 				featuresLists: [
 					{
 						title: 'Optimize Wholesale leads',
@@ -102,6 +94,15 @@ export const plansAndProductsDetails = [
 							'Check sellers inventory',
 							'Brand finder'
 						]
+					},
+					{
+						title: 'Keyword Research',
+						featuresIncluded: [
+							'Seller Database',
+							'Seller Map',
+							'Check sellers inventory',
+							'Brand finder'
+						]
 					}
 				]
 			},
@@ -109,9 +110,9 @@ export const plansAndProductsDetails = [
 				id: 2,
 				name: 'Team',
 				productsDatabase: 0,
-				salesEstimateCount: 10000,
-				monthlyPrice: 177,
-				annualPrice: 1763,
+				salesEstimateCount: 3000,
+				monthlyPrice: 119,
+				annualPrice: 1068,
 				featureSubName: 'Professional Plan Plus',
 				desc: `For 7-figure sellers who need the best tools. 
 				Track more products, obtain more data \nand optimize your entire Amazon business.`,

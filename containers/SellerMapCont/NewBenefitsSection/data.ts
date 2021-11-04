@@ -7,7 +7,7 @@ export const newBenefitsData = [
 		discover sellers within U.S. states.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit1_450x270.png'
+		imageUrl: '/seller_map_3.png'
 	},
 	{
 		title: 'Seller Data',
@@ -16,7 +16,7 @@ export const newBenefitsData = [
 		business entity, address, brands, products, and more.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit2_450x270.png'
+		imageUrl: '/seller_map_4.png'
 	},
 	{
 		title: 'Enterprise Tools',
@@ -26,6 +26,6 @@ export const newBenefitsData = [
 		you want to work with.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit3_450x270.png'
+		imageUrl: '/seller_map_5.png'
 	}
 ];

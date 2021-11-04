@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 interface Props {
 	width: number;
 	height: number;
 	fill: string;
+	isRainbow?: boolean;
 }
 
 const ProfitFinder: React.FC<Props> = (props) => {
-	const { width, height, fill } = props;
+	const { width, height, fill, isRainbow } = props;
+
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -15,15 +17,31 @@ const ProfitFinder: React.FC<Props> = (props) => {
 			width={width}
 			height={height}
 		>
+			{isRainbow && (
+				<defs>
+					<linearGradient
+						id="linear-gradient"
+						x1="0.5"
+						x2="0.5"
+						y2="1"
+						gradientUnits="objectBoundingBox"
+					>
+						<stop offset="0" stopColor="#ff61df" />
+						<stop offset="1" stopColor="#04f1ff" />
+					</linearGradient>
+				</defs>
+			)}
 			<g data-name="Layer 2">
-				<g data-name="Layer 1" fill={fill}>
+				<g
+					data-name="Layer 1"
+					fill={isRainbow ? 'url(#linear-gradient)' : fill}
+				>
 					<path
 						d="M208 80a128 128 0 11-90.51 37.49A128 128 0 01208 80m0-80C93.12 0 0 93.12 0 208s93.12 
 						208 208 208 208-93.12 208-208S322.88 0 208 0z"
 						style={{
 							isolation: 'isolate'
 						}}
-						opacity={0.4}
 					/>
 					<path
 						d="M235.13 199.42l-45-13.5c-5.16-1.55-8.77-6.78-8.77-12.73 0-7.27 5.3-13.19
@@ -43,4 +61,4 @@ const ProfitFinder: React.FC<Props> = (props) => {
 	);
 };
 
-export default ProfitFinder;
+export default memo(ProfitFinder);

@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
+import axios from 'axios';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -13,10 +14,10 @@ import { GET_SHOW_CASE_BLOGS } from '../graphql/cms';
 /* Containers */
 import HeroBox from '../containers/HomePage/HeroBox';
 import InfoSection from '../containers/HomePage/InfoSection';
-import OpportunityBannerSection from '../containers/HomePage/OpportunityBannerSection';
-import GlobalSellersBannerSection from '../containers/HomePage/GlobalSellersBannerSection';
+import FeaturesSection from '../containers/HomePage/FeaturesSection';
 import ProductsSection from '../containers/HomePage/ProductsSection';
 import StatisticsSection from '../containers/HomePage/StatisticsSection';
+import FeatureComparisonTable from '../containers/HomePage/FeatureComparisonTable';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
 import ClosingCTASection from '../containers/HomePage/ClosingCTASection';
@@ -34,12 +35,16 @@ import { generatePageURL } from '../utils/SEO';
 /* Types */
 import { ShowcaseBlogDetails } from '../interfaces/Blogs';
 
+/* Config */
+import AppConfig from '../config';
+
 interface Props {
 	homeBlogs: ShowcaseBlogDetails[];
+	customerCount: number;
 }
 
 const HomePage: React.FC<Props> = (props) => {
-	const { homeBlogs } = props;
+	const { homeBlogs, customerCount } = props;
 	return (
 		<>
 			<SEOHead
@@ -49,14 +54,14 @@ const HomePage: React.FC<Props> = (props) => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<HeroBox />
+			<HeroBox customerCount={customerCount} />
 			<main>
-				<StepperInfoSection />
-				<OpportunityBannerSection />
 				<InfoSection />
-				<GlobalSellersBannerSection />
-				<ProductsSection />
 				<StatisticsSection />
+				<StepperInfoSection />
+				<FeaturesSection />
+				<ProductsSection />
+				<FeatureComparisonTable />
 				<TestimonialsSection />
 
 				<div className={styles.divider}></div>
@@ -64,25 +69,38 @@ const HomePage: React.FC<Props> = (props) => {
 				<RecentBlogsSection recentBlogs={homeBlogs} />
 				<div className={styles.divider}></div>
 
-				<ClosingCTASection />
+				<ClosingCTASection customerCount={customerCount} />
 			</main>
 		</>
 	);
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const response = await client.query({
+	const blogResponse = await client.query({
 		query: GET_SHOW_CASE_BLOGS,
 		variables: {
 			count: 12
 		}
 	});
 
-	const blogsForHome = response.data.posts.nodes;
+	const blogsForHome = blogResponse.data.posts.nodes;
+
+	const limitDate = new Date('2021-10-16').getTime();
+	let customerCount;
+	try {
+		const customerCountResponse = await axios.get(
+			`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
+		);
+		customerCount = customerCountResponse.data.count;
+	} catch (error) {
+		customerCount = 56; // Random number for now
+		console.log(error);
+	}
 
 	return {
 		props: {
-			homeBlogs: blogsForHome
+			homeBlogs: blogsForHome,
+			customerCount
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};

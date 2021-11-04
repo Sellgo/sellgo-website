@@ -13,6 +13,7 @@ interface Props {
 	showcaseBlogs: any;
 	popularChoiceBlogs: any;
 	editorsChoiceBlogs: any;
+	latestBlogs: any;
 	openNewsletterModal: () => void;
 }
 
@@ -21,13 +22,14 @@ const BlogsShowCaseSection: React.FC<Props> = (props) => {
 		showcaseBlogs,
 		popularChoiceBlogs,
 		editorsChoiceBlogs,
+		latestBlogs,
 		openNewsletterModal
 	} = props;
 
 	return (
 		<>
 			{/* Hero Section */}
-			<section className={styles.blogsHeroSection}>
+			<section className={styles.blogsHeroSection} id="showCtaNavBar">
 				<div className={styles.blogsHeroSection__Left}>
 					<BigFeatureCard showcaseBlogDetails={showcaseBlogs[0]} />
 				</div>
@@ -51,9 +53,7 @@ const BlogsShowCaseSection: React.FC<Props> = (props) => {
 					<SmallFeatureCard showcaseBlogDetails={showcaseBlogs[2]} />
 				</div>
 				<aside className={styles.recommededSection__Right}>
-					<div className={styles.message}>
-						<h3>Go Sell With Sellgo</h3>
-					</div>
+					<FilteredChoiceBlogs isLarge label="By Date" blogs={latestBlogs} />
 				</aside>
 			</section>
 

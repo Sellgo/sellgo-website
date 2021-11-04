@@ -5,9 +5,13 @@ import { useRouter } from 'next/router';
 import Navbar from '../Navbar';
 import MobileNavBar from '../MobileNavbar';
 import Footer from '../Footer';
+import CtaNavBar from '../CtaNavBar';
 
 /* Constants */
-import { hideNavigationOnRoutes } from '../../constants';
+import {
+	hideNavigationOnRoutes,
+	showCtaNavBarFixedRoutes
+} from '../../constants';
 
 /* Utils */
 import { isSSR } from '../../utils';
@@ -23,6 +27,7 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
 	const router = useRouter();
 	const { asPath } = router;
+	const [showCtaNavBar, setShowCtaNavBar] = React.useState<boolean>(false);
 
 	useEffect(() => {
 		// track only on production and window based environment: fullstory and analytics
@@ -35,10 +40,35 @@ const Layout: React.FC<Props> = ({ children }) => {
 		}
 	}, [asPath]);
 
+	const trackScrolling = () => {
+		const trigger = document.querySelector('#showCtaNavBar');
+		if (trigger) {
+			if (trigger.getBoundingClientRect().top <= 0) {
+				setShowCtaNavBar(true);
+			} else {
+				setShowCtaNavBar(false);
+			}
+		} else {
+			setShowCtaNavBar(false);
+		}
+	};
+
+	useEffect(() => {
+		document.addEventListener('scroll', trackScrolling);
+	}, []);
+
+	const showCtaNavBarFixed = showCtaNavBarFixedRoutes.includes(asPath);
+
 	return (
 		<>
 			{!hideNavigationOnRoutes.includes(asPath) && <Navbar />}
 			<MobileNavBar />
+			{
+				<CtaNavBar
+					showCtaNavBar={showCtaNavBarFixed || showCtaNavBar}
+					showMobile={!showCtaNavBarFixed}
+				/>
+			}
 			{children}
 			<Footer />
 		</>

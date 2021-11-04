@@ -1,6 +1,7 @@
 @import '../../styles/guidelines';
 
 .queryCardsWrapper {
+	background: $tab_active;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -14,7 +15,8 @@
 
 .queryCard {
 	width: 34rem;
-	border: 1px solid $grey_2;
+	border: 1px solid $second_silver;
+	background: $grey_1;
 	border-radius: 3px;
 	text-align: center;
 	color: $prim_dark_2;

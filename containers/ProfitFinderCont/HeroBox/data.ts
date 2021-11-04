@@ -1,10 +1,9 @@
 export const accordionData = [
 	{
 		title: 'Product Description',
-		description: `The Profit Finder calculates your profit for each product based 
-		on supplier price. It compares all of the products in a catalog and gives you 
-		real-time data to optimize your inventory and profitability. Hand-pick the 
-		winning products to begin sourcing and build your profits.`,
+		description: `The Profit Finder calculates your profit for each product based on supplier price. 
+		It compares all of the products in a catalog and gives you real-time data to optimize your inventory 
+		and profitability. Hand-pick the winning products to begin sourcing and build your profits.`,
 		listDetails: [],
 		ctaLinkDetails: {}
 	} /*

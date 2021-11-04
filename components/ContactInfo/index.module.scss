@@ -33,8 +33,10 @@
 	}
 
 	a {
-		text-decoration: underline;
-		color: $prim_dark_2;
+		text-decoration: none;
+		color: $blue_link_bg_light;
+		font-size: $fontsize_subtitle_20;
+		font-weight: $fontweight_medium;
 		display: flex;
 		align-items: center;
 		span {

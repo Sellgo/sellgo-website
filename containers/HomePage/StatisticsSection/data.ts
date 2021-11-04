@@ -1,6 +1,6 @@
 export const statisticsData = [
 	{
-		statsCount: '100M',
+		statsCount: '150M',
 		statsLabel: 'Products',
 		iconImageLink: '/stats-products.svg'
 	},
@@ -10,7 +10,7 @@ export const statisticsData = [
 		iconImageLink: '/stats-categories.svg'
 	},
 	{
-		statsCount: '850K',
+		statsCount: '1.5M',
 		statsLabel: 'Sellers',
 		iconImageLink: '/stats-sellers.svg'
 	},

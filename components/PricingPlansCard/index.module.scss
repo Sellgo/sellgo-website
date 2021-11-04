@@ -1,19 +1,26 @@
 @import '../../styles/guidelines';
 
 .pricingPlansCardWrapper {
+	margin-top: 5rem;
 	position: relative;
 	background: $prim_white;
 	border-radius: 7px;
 	min-width: 38rem;
 	min-height: 111rem;
 	border: 1px solid $second_silver;
-
+	&__new {
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 0 !important;
+	}
 	@media only screen and(max-width: 1200px) {
 		margin-top: 3rem;
 		min-height: 80rem;
 	}
 
 	@media only screen and(max-width: 850px) {
+		&__new {
+			margin-top: 8rem;
+		}
 		min-height: auto;
 	}
 
@@ -22,15 +29,25 @@
 	}
 }
 
-.headerGradient {
+.newFeatureBanner {
 	position: absolute;
-	top: 0;
-	height: 8px;
-	width: 100%;
-	left: 0;
+	top: -5rem;
+	height: 5rem;
+	background: $purple_pink_gradient;
+
+	/* To compensate for the 1px from border */
+	width: calc(100% + 2px);
+	left: -1px;
 	right: 0;
 	border-top-left-radius: 7px;
 	border-top-right-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_medium;
+	color: $prim_white;
+	padding: 0 9rem;
 }
 
 .pricingPlansCard {
@@ -41,4 +58,12 @@
 
 .planType {
 	font-size: $fontsize_content_14;
+	color: $prim_dark_1;
+	font-weight: $fontweight_medium;
+}
+
+.paymentModeToggle {
+		@media screen and(min-width: 860px) {
+		display: none !important;
+	}
 }

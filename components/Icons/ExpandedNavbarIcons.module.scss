@@ -1,0 +1,15 @@
+@import '../../styles/guidelines';
+
+.iconWrapper {
+	width: 40px;
+	height: 40px;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	background-color: $grey_3;
+	border-radius: 3px;
+
+	&__active {
+		background-color: $black_1;
+	}
+}

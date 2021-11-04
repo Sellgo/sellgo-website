@@ -26,12 +26,13 @@
 	}
 }
 
+/* THIS CHANGED ! */
 .subHeadingWrapper {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 
-	svg {
+	> div {
 		margin-right: 1rem;
 	}
 }

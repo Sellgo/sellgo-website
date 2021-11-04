@@ -15,7 +15,7 @@ interface Props {}
 
 const NewBenefitsSection: React.FC<Props> = () => {
 	return (
-		<section className={styles.newBenefitsSection}>
+		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
 					From Product Research to Product Launch, <br />
@@ -34,18 +34,18 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					})}
 				</div>
 
-				<h2 className="secondary-heading">
-					Bolden your Amazon business and optimize your efficiency
-					<br />
-					with our powerful Chrome Extension.
+				<h2 className="secondary-heading-small">
+					Bolden your Amazon business and optimize your efficiency with our
+					powerful Chrome Extension.
 				</h2>
 				<CTAButton
-					type="primary"
-					size="small"
+					type="secondary"
+					size="productPageSmall"
+					variant="rainbow"
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Start Scouting with Sellgo Today
+					Get Started Today
 				</CTAButton>
 			</div>
 		</section>

@@ -4,9 +4,6 @@ import Link from 'next/link';
 /* Styling */
 import styles from './index.module.scss';
 
-/* Components */
-import User from '../../Icons/Person';
-
 /* Config */
 import AppConfig from '../../../config';
 
@@ -29,7 +26,7 @@ const NavbarTop: React.FC<Props> = () => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Login to my account
+						Go to my account
 					</a>
 				</li>
 				<li className={styles.navbarTopLink}>

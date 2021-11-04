@@ -10,7 +10,7 @@ const StandardPlansPricingSection = () => {
 	const GENERIC_PLANS_ID = 0;
 
 	return (
-		<>
+		<section>
 			{/* Generic pricing plans section	 */}
 			{plansAndProductsDetails.map((plan: any) => {
 				return (
@@ -25,7 +25,7 @@ const StandardPlansPricingSection = () => {
 					/>
 				);
 			})}
-		</>
+		</section>
 	);
 };
 

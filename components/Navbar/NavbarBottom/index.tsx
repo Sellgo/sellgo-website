@@ -21,8 +21,8 @@ const NavbarBottom: React.FC<Props> = () => {
 					<a>
 						<Image
 							src="/sellgoLogo.png"
-							width={73}
-							height={29}
+							width={100}
+							height={32}
 							priority
 							alt="Sellgo Inc. Company Logo"
 						/>
@@ -32,14 +32,16 @@ const NavbarBottom: React.FC<Props> = () => {
 				<ul className={styles.navbarBottomLinksList}>
 					<li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
-							Products <Bottom width={10} height={8} fill="#2e3b4a" />
+							Products <Bottom width={10} height={8} fill="#fff" />
 						</a>
 						<ProductsNavbarExpansion
 							className={styles.expandedProductsNavbar}
 						/>
 					</li>
 
-					<li className={styles.navbarBottomLink}>
+					<li
+						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
+					>
 						<Link
 							href="/pricing?type=monthly-and-annual-plans"
 							passHref
@@ -51,7 +53,7 @@ const NavbarBottom: React.FC<Props> = () => {
 
 					<li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
-							Resources <Bottom width={10} height={8} fill="#2e3b4a" />
+							Resources <Bottom width={10} height={8} fill="#fff" />
 						</a>
 						<ResourcesNavBarExpansion
 							className={styles.expandedResourcesNavbar}
@@ -64,9 +66,18 @@ const NavbarBottom: React.FC<Props> = () => {
 				type="primary"
 				size="small"
 				navigateTo="/pricing?type=wholesale"
+				variant="white"
 				className={styles.navbarCTA}
 			>
-				Get started
+				Sign Up
+				<div className={styles.navbarCTA__arrow}>
+					<Image
+						src="/longArrowRightIcon.svg"
+						width={20}
+						height={10}
+						alt="right-arrow"
+					/>
+				</div>
 			</CTAButton>
 		</div>
 	);

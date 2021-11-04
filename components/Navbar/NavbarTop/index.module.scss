@@ -1,12 +1,13 @@
 @import '../../../styles/guidelines';
 
 .navbarTop {
-	color: $prim_dark_2;
-	font-weight: $fontweight_bold;
+	color: $prim_white;
+	font-weight: $fontweight_medium;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 0;
+	font-size: 14px;
 }
 
 .navbarTopLinksList {
@@ -20,15 +21,17 @@
 }
 
 .navbarLink {
-	color: $prim_dark_2;
+	color: $prim_white;
 	&__sales {
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-start;
-		color: $prim_dark_2;
+		color: $prim_white;
 	}
 }
 
 .navbarTopLink {
 	margin-left: 4rem;
+	display: flex;
+	align-items: center;
 }

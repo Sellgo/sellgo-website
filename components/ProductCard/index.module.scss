@@ -21,14 +21,18 @@
 		}
 
 		small {
-			color: $orange_6;
+			text-transform: uppercase;
+			color: $grey_8;
 			font-size: $fontsize_content_14;
-			font-weight: $fontweight_semibold;
+			font-weight: $fontweight_bold;
+			letter-spacing: 1.5px;
 		}
 
 		h3 {
+			margin-top: 8px;
 			font-size: $fontsize_subtitle_28;
-			font-weight: $fontweight_medium;
+			font-weight: $fontweight_bold;
+			color: $black_1;
 			line-height: 1;
 			margin-bottom: 3rem;
 		}
@@ -36,7 +40,8 @@
 		p {
 			width: 100%;
 			font-size: $fontsize_content_14;
-			font-weight: $fontweight_regular;
+			font-weight: $fontweight_medium;
+			color: $prim_dark_1;
 			@media only screen and(max-width: 1280px) {
 				width: 70%;
 			}
@@ -47,12 +52,15 @@
 	}
 
 	&__Link {
-		color: $system-blue;
-		text-decoration: underline;
+		color: $blue_link_bg_light;
 		display: inline-block;
 		margin: 2rem 0;
 		font-size: $fontsize_content_14;
-		font-weight: $fontweight_regular;
+		font-weight: $fontweight_medium;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__Image {
@@ -72,4 +80,11 @@
 
 .reversedImage {
 	order: 1;
+}
+
+.extensionCTA {
+	border: 1px solid $grey_3;
+	color: $prim_dark_2;
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_bold;
 }

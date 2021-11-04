@@ -35,7 +35,7 @@ const FreeTrialFeaturesCard: React.FC<Props> = (props) => {
 			</div>
 
 			<button onClick={() => setIsExpanded(!isExpanded)}>
-				Popular Features
+				See All Features
 				{isExpanded ? <span>&#8722; </span> : <span>&#43;</span>}
 			</button>
 

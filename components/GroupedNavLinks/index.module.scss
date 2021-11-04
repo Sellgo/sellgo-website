@@ -1,8 +1,8 @@
 @import '../../styles/guidelines';
 
 .groupedNavLinks {
+	cursor: pointer;
 	margin-bottom: 3rem;
-	cursor: auto;
 	padding: 1rem;
 	border-radius: 7px;
 	border: 1px solid #fff;
@@ -11,12 +11,11 @@
 	width: 31rem;
 
 	&:hover {
-		border: 1px solid rgba($border-color-1, 0.3);
+		border: 1px solid $border-color-1;
 		box-shadow: $box-shadow-1;
 	}
 
 	a {
-		cursor: pointer !important;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
@@ -39,7 +38,8 @@
 	}
 
 	p {
-		color: $grey_8;
+		color: $grey_8 !important;
 		font-size: $fontsize_content_12;
+		font-weight: $fontweight_regular;
 	}
 }
