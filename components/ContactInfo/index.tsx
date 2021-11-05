@@ -15,7 +15,7 @@ const ContactInfo: React.FC<Props> = (props) => {
 	return (
 		<div className={`${styles.contactInfo} ${className}`}>
 			<h2>
-				Need an enterprise account for your business?
+				*Need more sellers/ keywords data with an Enterprise account?
 				<br />
 				We&apos;d be happy to talk!
 			</h2>

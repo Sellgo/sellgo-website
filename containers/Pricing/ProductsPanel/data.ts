@@ -15,7 +15,7 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and Annual Pricing Plans',
-		summary: `Invest on a research tool that's dependable, powerful and can scale up your business.`,
+		summary: `Invest on a research tool that's dependable, powerful and can scale up your business with 7-day money back guarantee.`,
 		infoAlertMessage: {
 			monthly: {
 				head: `Pay only $1.99 for the entire first month of starter membership`,
@@ -37,7 +37,7 @@ export const plansAndProductsDetails = [
 				productsDatabase: 0,
 				salesEstimateCount: 1000,
 				monthlyPrice: 49,
-				annualPrice: 348,
+				annualPrice: 349,
 				desc: `The toolbox for beginner sellers. \n Get access to our tools and chrome extension!`,
 				featureSubName: 'Start with',
 				featuresLists: [
@@ -61,7 +61,7 @@ export const plansAndProductsDetails = [
 						]
 					},
 					{
-						title: 'Basic Use',
+						title: 'Limited Access',
 						featuresIncluded: ['Seller Research', 'Keyword Research']
 					}
 				]
@@ -72,8 +72,8 @@ export const plansAndProductsDetails = [
 				productsDatabase: 0,
 				salesEstimateCount: 2000,
 				monthlyPrice: 99,
-				annualPrice: 828,
-				featureSubName: 'Starter Plan Plus',
+				annualPrice: 948,
+				featureSubName: 'Full Single-user Access, Plus',
 				desc: `For experienced sellers looking to grow \n their businesses and maximize their earnings.`,
 				isNew: true,
 				featuresLists: [
@@ -121,9 +121,9 @@ export const plansAndProductsDetails = [
 				name: 'Team',
 				productsDatabase: 0,
 				salesEstimateCount: 3000,
-				monthlyPrice: 119,
-				annualPrice: 1068,
-				featureSubName: 'Professional Plan Plus',
+				monthlyPrice: 199,
+				annualPrice: 1788,
+				featureSubName: 'Everything in Professional Plan, Plus',
 				desc: `For 7-figure sellers who need the best tools. 
 				Track more products, obtain more data \nand optimize your entire Amazon business.`,
 				featuresLists: [
@@ -142,8 +142,7 @@ export const plansAndProductsDetails = [
 						title: 'Seller Research',
 						featuresIncluded: [
 							'Full use of Seller Database',
-							'Seller Map Top View 20,000 Sellers',
-							'Brand finder'
+							'Seller Map Top View 20,000 Sellers*'
 						]
 					},
 					{
@@ -154,16 +153,12 @@ export const plansAndProductsDetails = [
 							'Advance tracking with Product Rank Tracker',
 							'Rank drop/ raise index',
 							'True Rank Performance index',
-							'PPC Recampaign with Zapier integration'
+							'PPC Recampaign with Zapier integration*'
 						]
 					},
 					{
 						title: 'Advanced access',
-						featuresIncluded: [
-							'3 users included',
-							'Additional users',
-							'Priority onboarding'
-						]
+						featuresIncluded: ['Multi-user login', 'Priority onboarding']
 					}
 				]
 			}
