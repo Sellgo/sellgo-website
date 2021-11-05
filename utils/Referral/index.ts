@@ -28,7 +28,7 @@ export const createCheckoutLink = (paymentMode: string, name: string) => {
 	}/subscription?mode=${paymentMode}&type=${name
 		.split(' ')
 		.join('')
-		.toLowerCase()}`;
+		.toLowerCase()}&promo=beta`;
 
 	const checkoutLink = appendReferralCode(webCheckOutLink);
 	return checkoutLink;
