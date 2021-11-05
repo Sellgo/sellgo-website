@@ -51,75 +51,90 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 			</div>
 
 			<div className={styles.detailsListWrapper}>
-				<a href="/extension" className={styles.detailsList}>
+				<a href="/extension" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Browser Extension
 				</a>
 
-				{showAllFeatures && <a href="/search-management" className={styles.detailsList}>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Search Management
-				</a>}
+				{showAllFeatures && 
+					<a 
+						href="/search-management" 
+						className={styles.detailsList} 
+						target="_blank" 
+						rel="noopener noreferrer"
+					>
+						<span>
+							<Check fill="#3b4557" width={10} height={8} />
+						</span>
+						Search Management
+					</a>}
 
-				<a href="/profit-finder" className={styles.detailsList}>
+				<a href="/profit-finder" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Profit Finder
 				</a>
 
-				{showAllFeatures && <a href="/leads-tracker" className={styles.detailsList}>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Leads Tracker
-				</a>}
+				{showAllFeatures && 
+					<a href="/leads-tracker" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+						<span>
+							<Check fill="#3b4557" width={10} height={8} />
+						</span>
+						Leads Tracker
+					</a>}
 
-				{showAllFeatures && <a href="/seller-finder" className={styles.detailsList}>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Seller Finder
-				</a>}
+				{showAllFeatures && 
+					<a href="/seller-finder" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+						<span>
+							<Check fill="#3b4557" width={10} height={8} />
+						</span>
+						Seller Finder
+					</a>}
 
-				<a href="/seller-database" className={styles.detailsList}>
+				<a href="/seller-database" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Seller Database
 				</a>
 
-				<a href="/seller-map" className={styles.detailsList}>
+				<a href="/seller-map" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Seller Map
 				</a>
 
-				{showAllFeatures && <a href="/keyword-finder" className={styles.detailsList}>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Keyword Finder
-				</a>}
+				{showAllFeatures && 
+					<a href="/keyword-finder" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+						<span>
+							<Check fill="#3b4557" width={10} height={8} />
+						</span>
+						Keyword Finder
+					</a>}
 
-				<a href="/keyword-database" className={styles.detailsList}>
+				<a href="/keyword-database" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Keyword Database
 				</a>
 
-				{showAllFeatures && <a href="/product-rank-tracker" className={styles.detailsList}>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Product Rank Tracker
-				</a>}
+				{showAllFeatures && 
+					<a 
+						href="/product-rank-tracker" 
+						className={styles.detailsList} 
+						target="_blank" 
+						rel="noopener noreferrer"
+					>
+						<span>
+							<Check fill="#3b4557" width={10} height={8} />
+						</span>
+						Product Rank Tracker
+					</a>}
 
 				<button 
 					className={styles.viewAllFeatures}
