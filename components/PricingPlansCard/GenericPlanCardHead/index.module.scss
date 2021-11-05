@@ -119,3 +119,9 @@
 	color: $prim_white;
 	padding: 0 5rem;
 }
+
+.paymentModeToggle {
+	@media screen and(min-width: 870px) {
+		display: none !important;
+	}
+}

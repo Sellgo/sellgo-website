@@ -21,6 +21,7 @@ interface Props {
 
 	// plan details
 	isMonthly: boolean;
+	setIsMonthly: (isMonthly: boolean) => void;
 
 	// used for pricing cards on comparision table
 	withToggle?: boolean;
@@ -33,6 +34,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		name,
 		isMonthly,
 		monthlyPrice,
+		setIsMonthly,
 		annualPrice,
 		desc,
 		isNew,
@@ -72,7 +74,11 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					{!withToggle && <p>{desc}</p>}
 				</div>
 			</div>
-
+			<PricePlanToggleButton
+					isMonthly={isMonthly}
+					handleChange={() => setIsMonthly(!isMonthly)}
+					className={styles.paymentModeToggle}
+			/>
 			<div className={styles.startingAt}>
 				<p>
 					Starts At{' '}

@@ -19,11 +19,6 @@ const options = [
 	{
 		title: 'Products',
 		content: [
-			{
-				id: uuid(),
-				name: 'Extension',
-				to: '/extension'
-			},
 			{ id: uuid(), name: 'Extension', to: '/extension' },
 			{ id: uuid(), name: 'Search Management', to: '/search-management' },
 			{ id: uuid(), name: 'Profit Finder', to: '/profit-finder' },

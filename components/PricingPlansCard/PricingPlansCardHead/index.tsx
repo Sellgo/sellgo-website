@@ -12,7 +12,8 @@ interface Props {
 
 	// plan details
 	isMonthly: boolean;
-
+	setIsMonthly: (isMonthly: boolean) => void;
+	
 	// used for price summary card head inside table comparision
 	withToggle?: boolean;
 	className?: string;
@@ -29,6 +30,7 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 		desc,
 		isNew,
 		isMonthly,
+		setIsMonthly,
 		withToggle,
 		handleChange,
 		isSmall,
@@ -43,6 +45,7 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 				name={name}
 				desc={desc}
 				monthlyPrice={monthlyPrice}
+				setIsMonthly={setIsMonthly}
 				annualPrice={annualPrice}
 				isMonthly={isMonthly}
 				// Optional props

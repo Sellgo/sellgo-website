@@ -8,7 +8,6 @@ import styles from './index.module.scss';
 /* Components */
 import PricingPlansCardHead from './PricingPlansCardHead';
 import PricingPlansCardFeaturesList from './PricingPlansCardFeaturesList';
-import PricePlanToggleButton from '../PricePlanToggleButton';
 
 interface Props {
 	// product details
@@ -59,6 +58,7 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 					annualPrice={annualPrice}
 					// plan details
 					isMonthly={isMonthly}
+					setIsMonthly={setIsMonthly}
 				/>
 
 				<p className={styles.planType}>{featureSubName}</p>
@@ -70,12 +70,6 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 						);
 					})}
 				</div>
-
-				<PricePlanToggleButton
-					isMonthly={isMonthly}
-					handleChange={() => setIsMonthly(!isMonthly)}
-					className={styles.paymentModeToggle}
-				/>
 			</div>
 		</div>
 	);
