@@ -51,96 +51,141 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 			</div>
 
 			<div className={styles.detailsListWrapper}>
-				<a href="/extension" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+				<a
+					href="/extension"
+					className={styles.detailsList}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Browser Extension
 				</a>
 
-				{showAllFeatures && 
-					<a 
-						href="/search-management" 
-						className={styles.detailsList} 
-						target="_blank" 
+				{showAllFeatures && (
+					<a
+						href="/search-management"
+						className={styles.detailsList}
+						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<span>
 							<Check fill="#3b4557" width={10} height={8} />
 						</span>
 						Search Management
-					</a>}
+					</a>
+				)}
 
-				<a href="/profit-finder" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+				<a
+					href="/profit-finder"
+					className={styles.detailsList}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Profit Finder
 				</a>
 
-				{showAllFeatures && 
-					<a href="/leads-tracker" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+				{showAllFeatures && (
+					<a
+						href="/leads-tracker"
+						className={styles.detailsList}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<span>
 							<Check fill="#3b4557" width={10} height={8} />
 						</span>
 						Leads Tracker
-					</a>}
+					</a>
+				)}
 
-				{showAllFeatures && 
-					<a href="/seller-finder" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+				{showAllFeatures && (
+					<a
+						href="/seller-finder"
+						className={styles.detailsList}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<span>
 							<Check fill="#3b4557" width={10} height={8} />
 						</span>
 						Seller Finder
-					</a>}
+					</a>
+				)}
 
-				<a href="/seller-database" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+				<a
+					href="/seller-database"
+					className={styles.detailsList}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Seller Database
 				</a>
 
-				<a href="/seller-map" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+				<a
+					href="/seller-map"
+					className={styles.detailsList}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Seller Map
 				</a>
 
-				{showAllFeatures && 
-					<a href="/keyword-finder" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+				{showAllFeatures && (
+					<a
+						href="/keyword-finder"
+						className={styles.detailsList}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<span>
 							<Check fill="#3b4557" width={10} height={8} />
 						</span>
 						Keyword Finder
-					</a>}
+					</a>
+				)}
 
-				<a href="/keyword-database" className={styles.detailsList} target="_blank" rel="noopener noreferrer">
+				<a
+					href="/keyword-database"
+					className={styles.detailsList}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
 					Keyword Database
 				</a>
 
-				{showAllFeatures && 
-					<a 
-						href="/product-rank-tracker" 
-						className={styles.detailsList} 
-						target="_blank" 
+				{showAllFeatures && (
+					<a
+						href="/product-rank-tracker"
+						className={styles.detailsList}
+						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<span>
 							<Check fill="#3b4557" width={10} height={8} />
 						</span>
 						Product Rank Tracker
-					</a>}
+					</a>
+				)}
 
-				<button 
+				<button
 					className={styles.viewAllFeatures}
 					onClick={() => setShowAllFeatures(!showAllFeatures)}
 				>
-					{showAllFeatures ? "View less" : "View all features >"}
+					{showAllFeatures ? 'View less' : 'View all features >'}
 				</button>
 			</div>
 		</section>
