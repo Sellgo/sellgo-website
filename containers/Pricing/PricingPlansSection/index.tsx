@@ -102,6 +102,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 										// product details
 										name={product.name}
 										monthlyPrice={product.monthlyPrice}
+										setIsMonthly={setIsMonthly}
 										annualPrice={product.annualPrice}
 										desc={product.desc}
 										isNew={product.isNew}

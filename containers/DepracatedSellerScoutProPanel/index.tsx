@@ -79,6 +79,7 @@ const SellerScoutProPanel: React.FC<Props> = () => {
 						<div className={styles.sellerScoutPriceCardWrapper}>
 							<PricingPlansCardHead
 								// product details
+								setIsMonthly={setIsMonthly}
 								name={'Seller Scout Pro'}
 								monthlyPrice={sellerScoutGoPlanDetails.monthlyPrice}
 								annualPrice={sellerScoutGoPlanDetails.annualPrice}
