@@ -35,6 +35,14 @@ const Stepper: React.FC<Props> = (props) => {
 	}, [steps]);
 
 	const handleStepChange = (step: number) => {
+		if (step === startIndex && startIndex > 0) {
+			setStartIndex(startIndex - 1);
+			setEndIndex(endIndex - 1);
+		} else if (step === endIndex && endIndex < stepsLength - 1) {
+			setStartIndex(startIndex + 1);
+			setEndIndex(endIndex + 1);
+		}
+		
 		setActiveStep(step);
 	};
 
