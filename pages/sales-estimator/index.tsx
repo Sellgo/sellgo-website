@@ -68,7 +68,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		const customerCountResponse = await axios.get(
 			`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
 		);
-		customerCount = customerCountResponse.data.count;
+		customerCount = Math.max(customerCountResponse.data.count, 23);
 	} catch (error) {
 		customerCount = 56; // Random number for now
 		console.log(error);
