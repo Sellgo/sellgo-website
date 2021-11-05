@@ -55,7 +55,7 @@ export const payMonthlyAndAnnualPlan = [
 		body: [
 			[
 				'Seller Database/ Map',
-				'500 sellers/ mo',
+				'100 sellers/ mo',
 				'1,500 sellers/ mo',
 				'5,000 sellers/ mo'
 			],

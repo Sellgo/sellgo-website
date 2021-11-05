@@ -59,6 +59,10 @@ export const plansAndProductsDetails = [
 							'Bulk variation analysis',
 							'Basic Private Label Product Analysis'
 						]
+					},
+					{
+						title: 'Basic Use',
+						featuresIncluded: ['Seller Research', 'Keyword Research']
 					}
 				]
 			},
@@ -82,27 +86,33 @@ export const plansAndProductsDetails = [
 							'Inventory insight',
 							'Market share insight',
 							'Bulk filtered data export',
-							'Leads Tracker',
-							'Historical Data up to 1-year'
+							'Variation and Multipack analysis',
+							'Leads Tracker'
 						]
 					},
 					{
 						title: 'Seller Research',
 						featuresIncluded: [
-							'Seller Database',
-							'Seller Map',
+							'Browse Amazon sellers with Seller Database',
+							'Locate Amazon Sellers with Seller Map',
 							'Check sellers inventory',
-							'Brand finder'
+							'Brand level category filter'
 						]
 					},
 					{
 						title: 'Keyword Research',
 						featuresIncluded: [
-							'Seller Database',
-							'Seller Map',
-							'Check sellers inventory',
-							'Brand finder'
+							'Reveal competitor keywords with Keyword Finder',
+							'Keyword research with Keyword Database',
+							'Keyword tracking with Product Rank Tracker',
+							'Rank drop/ raise index',
+							'True Rank Performance index',
+							'PPC Recampaign with Zapier integration'
 						]
+					},
+					{
+						title: 'Product Research - Incoming soon',
+						featuresIncluded: []
 					}
 				]
 			},
@@ -120,24 +130,33 @@ export const plansAndProductsDetails = [
 					{
 						title: 'Wholesale or Private Label Team',
 						featuresIncluded: [
+							'Full access to Chrome Extension Sales Estimation',
 							'Full access to Leads Tracker',
-							'Bulk multipack analysis',
 							'Process up to 1,000,000 ASINs monthly',
 							'Track up to 3,000 ASINs daily',
 							'Extension sales estimator up to 300,000 monthly',
-							'Historical Data up to 1-year',
-							'Product Database'
+							'Historical Data up to 1-year'
 						]
 					},
 					{
 						title: 'Seller Research',
 						featuresIncluded: [
-							'Advanced Seller Database',
+							'Full use of Seller Database',
 							'Seller Map Top View 20,000 Sellers',
 							'Brand finder'
 						]
 					},
-
+					{
+						title: 'Keyword Research',
+						featuresIncluded: [
+							'Full Access to Keyword Finder',
+							'Advance research with Keyword Database',
+							'Advance tracking with Product Rank Tracker',
+							'Rank drop/ raise index',
+							'True Rank Performance index',
+							'PPC Recampaign with Zapier integration'
+						]
+					},
 					{
 						title: 'Advanced access',
 						featuresIncluded: [
@@ -145,14 +164,6 @@ export const plansAndProductsDetails = [
 							'Additional users',
 							'Priority onboarding'
 						]
-					},
-					{
-						title: 'Product Research - Incoming soon',
-						featuresIncluded: []
-					},
-					{
-						title: 'Keyword Research - Incoming soon',
-						featuresIncluded: []
 					}
 				]
 			}

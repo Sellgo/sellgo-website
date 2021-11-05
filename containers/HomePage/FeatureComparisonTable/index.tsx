@@ -76,7 +76,9 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 								<div className={styles.featureNameCell}>
 									<span className={styles.featureNameCellContent}>
 										{feature.name}
-										{feature.isNew && <div className={styles.newLabel}> New </div>}
+										{feature.isNew && (
+											<div className={styles.newLabel}> New </div>
+										)}
 									</span>
 								</div>
 								<div className={styles.checkboxCell}>
@@ -133,10 +135,10 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 						);
 					})}
 				</div>
-				<button className={
-					styles.viewAllFeatures} 
+				<button
+					className={styles.viewAllFeatures}
 					onClick={() => setShowAllFeatures(!showAllFeatures)}
-				> 
+				>
 					{showAllFeatures ? 'View less >' : 'View all comparisons >'}
 				</button>
 				<CTAButton

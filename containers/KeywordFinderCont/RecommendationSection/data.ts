@@ -17,6 +17,6 @@ export const recomDataCardDetails = [
 		title: 'Chrome Extension',
 		description: `Seller Scouting tools to show important key metrics 
 		directly on your Amazon search and product listing pages.`,
-		navigateTo: '/extension',
+		navigateTo: '/extension'
 	}
 ];

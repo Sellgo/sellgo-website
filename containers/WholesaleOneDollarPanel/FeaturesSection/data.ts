@@ -8,7 +8,7 @@ export const featuresData = [
 			'Connect to Product Tracker'
 		],
 		popularFeaturesList: [
-			'Amazon Sales Estimator 3 estimates daily',
+			'Amazon Sales Estimator 10 estimates daily',
 			'True Sales Estimates',
 			'Leaf Sourcing',
 			'Bulk Export to .CSV or .XLSX',
@@ -20,23 +20,14 @@ export const featuresData = [
 		featuresList: [
 			'Search Management',
 			'Profit Finder',
-			'Product Tracker',
 			'Variation Analysis',
 			'Multipack Analysis'
 		],
 		popularFeaturesList: [
 			'Search Management with bulk export',
-			'Profit Finder with 30 products bulk processing daily',
+			'Profit Finder with 10 products bulk processing daily',
 			'Data Input as UPC, EAN, ASIN, ISBN',
-			'Upload Error Analysis',
-			'Data Buster with 3 products processing daily',
-			'Smart Preset',
-			'Variation Analysis',
-			'Multipack Analysis',
-			'Product Tracker with 3 products tracking',
-			'Data Visualization',
-			'True Sales Estimates',
-			'Historical Product Tracking 1 Month'
+			'Upload Error Analysis'
 		]
 	},
 	{
@@ -48,11 +39,25 @@ export const featuresData = [
 			'Seller Finder'
 		],
 		popularFeaturesList: [
-			'Seller Database 5-seller per search',
-			'40 sellers/ day',
-			'Seller Map Top View 1,000 sellers',
-			'Show 50 products by sellers/ day',
-			'Show 5 other sellers by seller`s product/ day'
+			'Seller Database 3-seller per search',
+			'10 sellers/ day',
+			'Seller Map Top View 3 sellers',
+			'Show 10 products by sellers/ day',
+			'Show 3 other sellers by seller`s product/ day'
+		]
+	},
+	{
+		title: 'Keyword Research',
+		featuresList: [
+			'Keyword Finder',
+			'Keyword Database',
+			'Product Rank Tracker',
+			'Zapier Integration for PPC Recampaign'
+		],
+		popularFeaturesList: [
+			'Keyword Finder 3 search per day',
+			'Keyword Database 3 search per day',
+			'Product Rank Tracker 3 keywords tracking per day'
 		]
 	}
 ];
