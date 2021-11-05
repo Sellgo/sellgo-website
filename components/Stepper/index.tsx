@@ -19,10 +19,53 @@ interface Props {
 
 const Stepper: React.FC<Props> = (props) => {
 	const { steps } = props;
-
+	const stepsLength = steps.length;
 	const [activeStep, setActiveStep] = React.useState(0);
+	const [startIndex, setStartIndex] = React.useState(1);
+	const [endIndex, setEndIndex] = React.useState(stepsLength);
+
+	React.useEffect(() => {
+		if (stepsLength > 7) {
+			const overflowLength = stepsLength - 7;
+			const overflowLeftLength = Math.floor(overflowLength / 2);
+			setActiveStep(overflowLeftLength + 1);
+			setStartIndex(overflowLeftLength);
+			setEndIndex(stepsLength - overflowLength);
+		}
+	}, [steps]);
+
 	const handleStepChange = (step: number) => {
 		setActiveStep(step);
+	};
+
+	const handleLeftArrow = () => {
+		if (activeStep > 0) {
+			setActiveStep(activeStep - 1);
+		}
+
+		/* Only shift the parameter indexes if the active step is the first step */
+		if (
+			(activeStep === startIndex || activeStep - 1 === startIndex) &&
+			startIndex > 0
+		) {
+			setStartIndex(startIndex - 1);
+			setEndIndex(endIndex - 1);
+		}
+	};
+
+	const handleRightArrow = () => {
+		if (activeStep < stepsLength - 1) {
+			setActiveStep(activeStep + 1);
+		}
+
+		/* Only shift the parameter indexes if the active step is the last step */
+		if (
+			(activeStep === endIndex || activeStep + 1 === endIndex) &&
+			endIndex < stepsLength - 1
+		) {
+			setEndIndex(endIndex + 1);
+			setStartIndex(startIndex + 1);
+		}
 	};
 
 	const isActiveStep = (index: number) => index === activeStep;
@@ -30,11 +73,8 @@ const Stepper: React.FC<Props> = (props) => {
 	return (
 		<div>
 			<div className={styles.stepperGrid}>
-				{activeStep !== 0 ? (
-					<button
-						className={styles.arrowButton}
-						onClick={() => setActiveStep(activeStep - 1)}
-					>
+				{!(startIndex === 0 && activeStep === 0) ? (
+					<button className={styles.arrowButton} onClick={handleLeftArrow}>
 						<Image src="/leftArrow.svg" width={25} height={25} />
 					</button>
 				) : (
@@ -42,36 +82,43 @@ const Stepper: React.FC<Props> = (props) => {
 				)}
 				<div className={styles.stepperWrapper}>
 					{steps.map((product: StepDetail, index: number) => {
-						return (
-							<div key={uuid()} className={styles.stepWrapper}>
-								<div
-									onClick={() => handleStepChange(index)}
-									onKeyPress={() => handleStepChange(index)}
-									className={styles.step}
-								>
-									<ExpandedNavbarIcons
-										width={25}
-										height={25}
-										fill={'#95a1ac'}
-										name={product.icon}
-										isRainbow={isActiveStep(index)}
-									/>
-									<h3
-										className={`${styles.stepTitle} 
-										${isActiveStep(index) ? styles.stepTitle__selected : ''}`}
+						if (index >= startIndex && index <= endIndex) {
+							return (
+								<div key={uuid()} className={styles.stepWrapper}>
+									<div
+										onClick={() => handleStepChange(index)}
+										onKeyPress={() => handleStepChange(index)}
+										className={`${styles.step} 
+										${
+											(index === startIndex || index === endIndex) &&
+											activeStep !== index
+												? styles.translucent
+												: ''
+										}`}
 									>
-										{product.title}
-									</h3>
+										<ExpandedNavbarIcons
+											width={25}
+											height={25}
+											fill={'#95a1ac'}
+											name={product.icon}
+											isRainbow={isActiveStep(index)}
+										/>
+										<h3
+											className={`${styles.stepTitle} 
+											${isActiveStep(index) ? styles.stepTitle__selected : ''}`}
+										>
+											{product.title}
+										</h3>
+									</div>
 								</div>
-							</div>
-						);
+							);
+						} else {
+							return null;
+						}
 					})}
 				</div>
-				{activeStep !== steps.length - 1 ? (
-					<button
-						className={styles.arrowButton}
-						onClick={() => setActiveStep(activeStep + 1)}
-					>
+				{!(activeStep === steps.length - 1 && endIndex === steps.length - 1) ? (
+					<button className={styles.arrowButton} onClick={handleRightArrow}>
 						<Image src="/rightArrow.svg" width={25} height={25} />
 					</button>
 				) : (
@@ -86,13 +133,11 @@ const Stepper: React.FC<Props> = (props) => {
 				>
 					{steps.map((step: StepDetail, index: number) => {
 						return (
-							<div key={index}>
-								<ProductCard
-									key={index}
-									{...step}
-									reversed={(index + 1) % 2 === 0}
-								/>
-							</div>
+							<ProductCard
+								key={index}
+								{...step}
+								reversed={(index + 1) % 2 === 0}
+							/>
 						);
 					})}
 				</SwipeableViews>

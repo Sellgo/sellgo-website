@@ -52,7 +52,9 @@ const KeywordFinderContPage: React.FC<Props> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/extension.json`);
+	const response = await axios.get(
+		`${AppConfig.FAQ_BUCKET}/keywordFinder.json`
+	);
 	const { data } = response;
 	return {
 		props: {

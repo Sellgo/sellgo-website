@@ -74,7 +74,7 @@ const TopFooter: React.FC<Props> = () => {
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/keyword-finder" passHref>
+					<Link href="/keyword-database" passHref>
 						<a>Keyword Database</a>
 					</Link>
 				</li>

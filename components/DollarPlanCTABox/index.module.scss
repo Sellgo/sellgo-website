@@ -90,11 +90,11 @@
 .detailsListWrapper {
 	border-top: 1px solid $second_silver;
 	list-style: none;
-	padding: 2rem 0;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
+	padding-bottom: 2rem;
 	flex-wrap: wrap;
 
 	@media only screen and(max-width: 750px) {
@@ -113,8 +113,13 @@
 	font-weight: $fontweight_regular;
 	color: inherit;
 	margin-right: 4rem;
+	margin-top: 2rem;
 	span {
 		margin-right: 5px;
+	}
+
+	&:hover {
+		text-decoration: underline;
 	}
 
 	@media only screen and(max-width: 1080px) {
@@ -124,4 +129,16 @@
 	@media only screen and(max-width: 750px) {
 		margin-bottom: 1rem;
 	}
+}
+
+.viewAllFeatures {
+	color: $blue_link_bg_light;
+	background: none;
+	border: none;
+	font-weight: $fontweight_medium;
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	cursor: pointer;
 }
