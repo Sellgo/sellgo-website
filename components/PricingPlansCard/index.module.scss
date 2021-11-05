@@ -62,9 +62,3 @@
 	color: $prim_dark_1;
 	font-weight: $fontweight_medium;
 }
-
-.paymentModeToggle {
-	@media screen and(min-width: 860px) {
-		display: none !important;
-	}
-}
