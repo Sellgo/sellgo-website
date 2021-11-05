@@ -70,4 +70,4 @@ export const defaultPhoneCode = {
 	type: 'countryCode'
 };
 
-export const limitDateForCustomerCount = '2021-10-16';
+export const limitDateForCustomerCount = '2021-11-5';
