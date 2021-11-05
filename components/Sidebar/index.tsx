@@ -72,8 +72,8 @@ const Sidebar: React.FC<Props> = (props) => {
 		<div className={className}>
 			{/* Implementing custom overlay to close sidebar on screen click
 			Manual override is needed because the library is buggy */}
-			<div 
-				onClick={() => handleClose()} 
+			<div
+				onClick={() => handleClose()}
 				className={styles.backdrop}
 				onKeyDown={() => handleClose()}
 			/>
@@ -81,7 +81,7 @@ const Sidebar: React.FC<Props> = (props) => {
 				open={isOpen}
 				options={options}
 				onItemClick={handleClose}
-				style={{zIndex: '105 !important'}}
+				style={{ zIndex: '105 !important' }}
 			/>
 			{/* using in our button to open the sidebar */}
 			<div

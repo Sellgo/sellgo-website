@@ -19,5 +19,5 @@ export const recomDataCardDetails = [
 		and organize winning products.`,
 		navigateLabel: 'Learn more about the feature',
 		navigateTo: '/search-management'
-	},
+	}
 ];

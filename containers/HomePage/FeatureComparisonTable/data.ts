@@ -15,37 +15,37 @@ export const features = [
 		name: 'Bulk calculation/ Profit Finder',
 		featureAvailableInPlans: [plans.WHOLESALE],
 		featureAvailableInCompetitors: [competitors.SELLGO],
-		showOnDefault: true,
+		showOnDefault: true
 	},
 	{
 		name: 'Product Variation Analysis',
 		featureAvailableInPlans: [plans.WHOLESALE],
 		featureAvailableInCompetitors: [competitors.SELLGO],
-		showOnDefault: true,
+		showOnDefault: true
 	},
 	{
 		name: 'Product Multipack Analysis',
 		featureAvailableInPlans: [plans.WHOLESALE],
 		featureAvailableInCompetitors: [competitors.SELLGO],
-		showOnDefault: true,
+		showOnDefault: true
 	},
 	{
 		name: 'Inventory analysis',
 		featureAvailableInPlans: [plans.WHOLESALE],
 		featureAvailableInCompetitors: [competitors.SELLGO],
-		showOnDefault: true,
+		showOnDefault: true
 	},
 	{
 		name: 'Wholesale Leads Tracking',
 		featureAvailableInPlans: [plans.WHOLESALE],
 		featureAvailableInCompetitors: [competitors.SELLGO],
-		showOnDefault: true,
+		showOnDefault: true
 	},
 	{
 		name: 'Brand Level Category Filter',
 		featureAvailableInPlans: [plans.WHOLESALE],
 		featureAvailableInCompetitors: [competitors.SELLGO, competitors.KEEPA],
-		showOnDefault: true,
+		showOnDefault: true
 	},
 	{
 		name: 'Chrome Extension',
