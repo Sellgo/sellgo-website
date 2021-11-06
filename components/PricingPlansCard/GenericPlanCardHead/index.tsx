@@ -145,9 +145,11 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					<p className={styles.billedAtPrice}>
 						Billed At <span className="strike-text">${monthlyPrice * 12}</span>
 						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
-							${Math.round(annualPrice)}/yr
+							${showBetaPricing ? Math.round(annualPrice / 2 ) : Math.round(annualPrice)}/yr
 						</span>
-						Save ${Math.round(monthlyPrice * 12 - annualPrice)}
+						Save ${showBetaPricing ? 
+							Math.round(monthlyPrice * 12 - (annualPrice / 2))
+							: Math.round(monthlyPrice * 12 - (annualPrice))}
 					</p>
 				) : (
 					<p>Billed Monthly</p>
