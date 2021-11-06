@@ -125,3 +125,40 @@
 		display: none !important;
 	}
 }
+
+.betaPriceContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.betaPrice {
+	width: 100%;
+	white-space: nowrap;
+
+	&__hidden {
+		width: 0;
+		overflow: hidden;
+	}
+}
+
+.actualPrice {
+	&__hidden {
+		color: $sellgo_purple !important;
+		position: absolute;
+		left: 35px;
+		font-size: $fontsize_content_16 !important;
+		text-decoration: line-through;
+	}
+}
+
+.animate {
+	&__short {
+		transition-duration: 500ms !important;
+	}
+
+	&__long {
+		transition-duration: 1500ms !important;
+	}
+}

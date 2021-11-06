@@ -20,6 +20,7 @@ interface Props {
 	summary: string;
 	productsIncluded: any;
 	showOnlyGeneralPlanDetails?: boolean;
+	showBetaPricing: boolean;
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
@@ -27,7 +28,8 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 		planName,
 		summary,
 		productsIncluded,
-		showOnlyGeneralPlanDetails
+		showOnlyGeneralPlanDetails,
+		showBetaPricing
 	} = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
@@ -63,6 +65,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					return (
 						<PricingPlansCard
 							key={uuid()}
+							showBetaPricing={showBetaPricing}
 							name={product.name}
 							isNew={product.isNew}
 							monthlyPrice={product.monthlyPrice}
@@ -102,6 +105,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 										// product details
 										name={product.name}
 										monthlyPrice={product.monthlyPrice}
+										showBetaPricing={showBetaPricing}
 										setIsMonthly={setIsMonthly}
 										annualPrice={product.annualPrice}
 										desc={product.desc}

@@ -196,3 +196,7 @@ input.error {
 #react-sidebar .sidebar-main {
 	z-index: 100;
 }
+
+.ReactModal__Content {
+	outline: none !important;
+}
