@@ -1,0 +1,42 @@
+@import '../../../styles/guidelines';
+
+.betaPopupModal {
+	outline: none !important;
+	width: 70rem;
+	height: 43rem;
+	padding: 7rem 10rem;
+	background: $prim_white;
+	border: 1px solid $border-color-1;
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	h2 {
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_bold;
+		margin-bottom: 20px;
+	}
+}
+
+.betaDescription {
+	font-size: $fontsize_subtitle_24;
+	font-weight: $fontweight_semibold;
+}
+
+.purpleText {
+	margin-left: calc(50% - 120px);
+	color: $sellgo_purple;
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_semibold;
+	display: flex;
+	align-items: center;
+	margin: 18px 0;
+}
+
+.betaTerms {
+	font-size: $fontsize_content_14;
+	font-weight: $fontweight_semibold;
+}

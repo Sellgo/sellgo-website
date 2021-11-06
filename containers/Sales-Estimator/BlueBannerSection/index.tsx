@@ -9,7 +9,7 @@ const BlackBannerSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.globalSellersBannerWrapper}>
 			<div className="page-container">
-				<h2 className="secondary-heading">Amazon Sales Estimator</h2>
+				<h1 className="secondary-heading">Amazon Sales Estimator</h1>
 				<p>
 					Use Sellgo Free Estimator Tool to check sales numbers for your
 					competitors in a specific category on Amazon,
