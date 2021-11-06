@@ -31,7 +31,7 @@ interface Props {
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
-	const [showBetaText, setShowBetaText]  = React.useState(false);
+	const [showBetaText, setShowBetaText] = React.useState(false);
 	const [showAnimation, setShowAnimation] = React.useState(false);
 	const {
 		name,
@@ -54,7 +54,9 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 	);
 
 	React.useEffect(() => {
-		const hasShownBetaAnimation = sessionStorage.getItem('hasShownBetaAnimation');
+		const hasShownBetaAnimation = sessionStorage.getItem(
+			'hasShownBetaAnimation'
+		);
 		if (showBetaPricing && !hasShownBetaAnimation) {
 			setTimeout(() => {
 				setShowBetaText(true);
@@ -62,7 +64,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				sessionStorage.setItem('hasShownBetaAnimation', 'true');
 			}, 500);
 		} else if (showBetaPricing) {
-			setShowBetaText(true)
+			setShowBetaText(true);
 		}
 	}, [showBetaPricing]);
 
@@ -105,9 +107,9 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</div>
 			</div>
 			<PricePlanToggleButton
-					isMonthly={isMonthly}
-					handleChange={() => setIsMonthly(!isMonthly)}
-					className={styles.paymentModeToggle}
+				isMonthly={isMonthly}
+				handleChange={() => setIsMonthly(!isMonthly)}
+				className={styles.paymentModeToggle}
 			/>
 			<div className={styles.startingAt}>
 				<p>
@@ -122,7 +124,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						<h3 className={actualPricingClassName}>
 							${Math.round(monthlyPrice)}/ Mo
 						</h3>
-						
+
 						<h3 className={betaPricingClassName}>
 							${Math.round(monthlyPrice / 2)}/ Mo
 						</h3>
@@ -132,7 +134,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						<h3 className={actualPricingClassName}>
 							${Math.round(annualPrice / 12)}/ Mo
 						</h3>
-						
+
 						<h3 className={betaPricingClassName}>
 							${Math.round(annualPrice / 24)}/ Mo
 						</h3>

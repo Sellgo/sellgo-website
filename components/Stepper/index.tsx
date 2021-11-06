@@ -42,7 +42,7 @@ const Stepper: React.FC<Props> = (props) => {
 			setStartIndex(startIndex + 1);
 			setEndIndex(endIndex + 1);
 		}
-		
+
 		setActiveStep(step);
 	};
 

@@ -14,15 +14,11 @@ const BetaPopupModal: React.FC<Props> = (props: Props) => {
 	return (
 		<div className={styles.betaPopupModal}>
 			<h2> Welcome to our Beta program. </h2>
-			<p className={styles.betaDescription}> 
+			<p className={styles.betaDescription}>
 				Enjoy 50% off 1st month or 1st year for the first 1,000 Beta users.
 			</p>
 			<p className={styles.purpleText}>
-				<Image 
-					src="/glassIcon.svg"
-					width={100}
-					height={80}
-				/>
+				<Image src="/glassIcon.svg" width={100} height={80} />
 				&nbsp;{1000 - customerCount} seats left.
 			</p>
 			<p className={styles.betaTerms}>

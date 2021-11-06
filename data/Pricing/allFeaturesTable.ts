@@ -2,7 +2,7 @@ export const payMonthlyAndAnnualPlan = [
 	{
 		header: ['Basic', 'Starter', 'Professional', 'Team'],
 		body: [
-			['7-day Money-back guarantee help', '✓', '✓', '✓'],
+			['7-day money-back guarantee help', '✓', '✓', '✓'],
 			['Cancel any time help', '✓', '✓', '✓']
 			// ['Included users', '1', '1', '3'],
 			// ['Eligible for additional users', '-', '✓', '✓'],
@@ -34,7 +34,7 @@ export const payMonthlyAndAnnualPlan = [
 	{
 		header: ['Bulk Profit Research', 'Starter', 'Professional', 'Team'],
 		body: [
-			['Profit Finder', '25,000 products/ day', '100,000 products/ day', '✓'],
+			['Profit Finder', '25,000 products/ day', '✓', '✓'],
 			['Additional bulk processing', '-', '✓', '✓'],
 			['Data input (UPC, EAN, ASIN, ISBN)', '✓', '✓', '✓'],
 			['Data Buster', '-', '✓', '✓'],
@@ -57,9 +57,14 @@ export const payMonthlyAndAnnualPlan = [
 				'Seller Database/ Map',
 				'100 sellers/ mo',
 				'1,500 sellers/ mo',
-				'5,000 sellers/ mo'
+				'10,000 sellers/ mo*'
 			],
-			['Seller Map Top View', '10 sellers', '10,000 sellers', '20,000 sellers'],
+			[
+				'Seller Map Top View',
+				'10 sellers',
+				'10,000 sellers',
+				'20,000 sellers*'
+			],
 			[`Extract Seller's Product`, '20 products/ day', '✓', '✓'],
 			[
 				`Extract other sellers by seller's products`,
@@ -87,17 +92,13 @@ export const payMonthlyAndAnnualPlan = [
 			[
 				'Product Rank Tracker',
 				'3 keywords/ day',
-				'5,000 keywords',
-				'8,000 keywords'
+				'4,000 keywords',
+				'7,000 keywords*'
 			],
-			['Boost Tracker', '-', '✓', '✓'],
-			['Zapier Integration', '-', '✓', '✓'],
-			[
-				'Drop/ Raise Trigger',
-				'-',
-				'10 keywords included',
-				'20 keywords included'
-			]
+			['Boost Trackier', '-', '✓', '✓'],
+			['True Rank Performance', '-', '✓', '✓'],
+			['Zapier Integration', '-', '-', '✓'],
+			['Drop/ Raise Trigger', '-', '-', '✓']
 		]
 	},
 	{

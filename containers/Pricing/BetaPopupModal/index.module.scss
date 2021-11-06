@@ -28,12 +28,17 @@
 
 .purpleText {
 	margin-left: calc(50% - 120px);
+	margin-top: 18px;
+	margin-bottom: 18px;
 	color: $sellgo_purple;
 	font-size: $fontsize_subtitle_20;
 	font-weight: $fontweight_semibold;
 	display: flex;
 	align-items: center;
-	margin: 18px 0;
+
+	div {
+		margin-right: 20px;
+	}
 }
 
 .betaTerms {

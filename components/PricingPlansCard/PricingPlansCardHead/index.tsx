@@ -14,7 +14,7 @@ interface Props {
 	// plan details
 	isMonthly: boolean;
 	setIsMonthly: (isMonthly: boolean) => void;
-	
+
 	// used for price summary card head inside table comparision
 	withToggle?: boolean;
 	className?: string;

@@ -31,7 +31,7 @@ const PricingPage: React.FC<Props> = (props) => {
 	const { pricingFaqDetails, customerCount } = props;
 	const [modalOpen, setModalOpen] = useState<boolean>(false);
 	const [showBetaPricing, setShowBetaPricing] = useState<boolean>(false);
-	
+
 	React.useEffect(() => {
 		const hasShownBetaModal = sessionStorage.getItem('hasShownBetaModal');
 		if (hasShownBetaModal && hasShownBetaModal === 'true') {
@@ -40,14 +40,14 @@ const PricingPage: React.FC<Props> = (props) => {
 		} else {
 			setModalOpen(true);
 		}
-	})
+	});
 
 	const handleModalClose = () => {
 		setModalOpen(false);
 		setShowBetaPricing(true);
 		sessionStorage.setItem('hasShownBetaModal', 'true');
 	};
-	
+
 	const [
 		isProductsPanelSelected,
 		setIsProductsPanelSelected
@@ -69,7 +69,10 @@ const PricingPage: React.FC<Props> = (props) => {
 			/>
 			{/* render either prcing panel or bundles panel */}
 			{isProductsPanelSelected ? (
-				<ProductsPanel productsPanelFaqList={pricingFaqDetails.products} showBetaPricing={showBetaPricing}/>
+				<ProductsPanel
+					productsPanelFaqList={pricingFaqDetails.products}
+					showBetaPricing={showBetaPricing}
+				/>
 			) : (
 				<BundlesPanel />
 			)}
@@ -80,7 +83,7 @@ const PricingPage: React.FC<Props> = (props) => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<BetaPopupModal customerCount={customerCount}/>
+				<BetaPopupModal customerCount={customerCount} />
 			</Modal>
 		</>
 	);
