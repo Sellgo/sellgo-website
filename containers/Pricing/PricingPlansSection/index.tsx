@@ -57,12 +57,17 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							className={styles.paymentModeToggleButton}
 						/>
 						<div className={styles.paymentToggleTextWrapper}>
-							<Image width={25} height={21} src="/handPointIcon.svg" alt="handpointicon"/>
-							 <p className={styles.paymentToggleText}> 
-								Up to 
-								{showBetaPricing ? ' 7 ' : ' 5 '} 
+							<Image
+								width={25}
+								height={21}
+								src="/handPointIcon.svg"
+								alt="handpointicon"
+							/>
+							<p className={styles.paymentToggleText}>
+								Up to
+								{showBetaPricing ? ' 7 ' : ' 5 '}
 								months free.
-							 </p>
+							</p>
 						</div>
 					</div>
 				</div>

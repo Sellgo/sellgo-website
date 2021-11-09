@@ -63,7 +63,7 @@ const PricingPage: React.FC<Props> = (props) => {
 				imageUrl={seoData.imageUrl}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			{<BetaBanner showBetaPricing={showBetaPricing}/>}
+			{<BetaBanner showBetaPricing={showBetaPricing} />}
 			<HeroBox
 				isProductsPlanSelected={isProductsPanelSelected}
 				setProductsPanel={() => setIsProductsPanelSelected(true)}

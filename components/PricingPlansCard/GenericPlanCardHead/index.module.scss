@@ -137,13 +137,13 @@
 	.betaPrice {
 		width: 100%;
 		white-space: nowrap;
-	
+
 		&__hidden {
 			width: 0;
 			overflow: hidden;
 		}
 	}
-	
+
 	.actualPrice {
 		&__hidden {
 			color: $sellgo_purple !important;
@@ -153,12 +153,12 @@
 			text-decoration: line-through;
 		}
 	}
-	
+
 	.animate {
 		&__short {
 			transition-duration: 500ms !important;
 		}
-	
+
 		&__long {
 			transition-duration: 1500ms !important;
 		}

@@ -12,9 +12,15 @@ const BetaBanner = (props: Props) => {
 
 	return (
 		<>
-			<section className={showBetaPricing 
-				? styles.betaBannerSection : `${styles.betaBannerSection} ${styles.betaBannerSection__hidden}`}>
-				Enjoy 50% off 1st month or 1st year for the 1,000 Beta Users. Professional/ Team Plan.
+			<section
+				className={
+					showBetaPricing
+						? styles.betaBannerSection
+						: `${styles.betaBannerSection} ${styles.betaBannerSection__hidden}`
+				}
+			>
+				Enjoy 50% off 1st month or 1st year for the 1,000 Beta Users.
+				Professional/ Team Plan.
 			</section>
 		</>
 	);

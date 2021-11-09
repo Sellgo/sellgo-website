@@ -123,7 +123,11 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 
 				{isMonthly ? (
 					<span className={styles.betaPriceContainer}>
-						<h3 className={`${actualPricingClassName} ${withToggle && styles.toggledPrice}`}>
+						<h3
+							className={`${actualPricingClassName} ${
+								withToggle && styles.toggledPrice
+							}`}
+						>
 							${Math.round(monthlyPrice)}/ Mo
 						</h3>
 
@@ -133,7 +137,11 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					</span>
 				) : (
 					<span className={styles.betaPriceContainer}>
-						<h3 className={`${actualPricingClassName} ${withToggle && styles.toggledPrice}`}>
+						<h3
+							className={`${actualPricingClassName} ${
+								withToggle && styles.toggledPrice
+							}`}
+						>
 							${Math.round(annualPrice / 12)}/ Mo
 						</h3>
 
@@ -145,13 +153,19 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 
 				{!isMonthly ? (
 					<p className={styles.billedAtPrice}>
-						Originally billed At <span className="strike-text">${monthlyPrice * 12}</span>
+						Originally billed At{' '}
+						<span className="strike-text">${monthlyPrice * 12}</span>
 						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
-							${showBetaPricing ? Math.round(annualPrice / 2 ) : Math.round(annualPrice)}/yr
+							$
+							{showBetaPricing
+								? Math.round(annualPrice / 2)
+								: Math.round(annualPrice)}
+							/yr
 						</span>
-						Save ${showBetaPricing ? 
-							Math.round(monthlyPrice * 12 - (annualPrice / 2))
-							: Math.round(monthlyPrice * 12 - (annualPrice))}
+						Save $
+						{showBetaPricing
+							? Math.round(monthlyPrice * 12 - annualPrice / 2)
+							: Math.round(monthlyPrice * 12 - annualPrice)}
 					</p>
 				) : (
 					<p>Billed Monthly</p>
@@ -176,7 +190,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				asExternal
 				newTarget
 			>
-				{(showBetaText && !isStarterPlan) ? 'Get the 50% OFF Now' : 'Buy Now'}
+				{showBetaText && !isStarterPlan ? 'Get the 50% OFF Now' : 'Buy Now'}
 			</CTAButton>
 		</div>
 	);
