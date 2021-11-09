@@ -71,7 +71,7 @@
 .billedAtPrice {
 	span {
 		font-size: $fontsize_content_12;
-		margin: 0 6px;
+		margin: 0 3px;
 	}
 }
 
@@ -148,7 +148,7 @@
 		&__hidden {
 			color: $sellgo_purple !important;
 			position: absolute;
-			left: 30px;
+			left: 25px;
 			font-size: $fontsize_content_16 !important;
 			text-decoration: line-through;
 		}
