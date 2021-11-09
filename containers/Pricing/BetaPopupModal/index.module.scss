@@ -20,13 +20,12 @@
 		font-weight: $fontweight_bold;
 		margin-bottom: 20px;
 
-		@media screen and (max-width: 800px){
+		@media screen and (max-width: 800px) {
 			font-size: $fontsize_subtitle_28;
-
 		}
 	}
 
-	@media screen and (max-width: 800px){
+	@media screen and (max-width: 800px) {
 		padding: 3.5rem 5rem;
 		width: 90vw;
 	}
@@ -36,7 +35,7 @@
 	font-size: $fontsize_subtitle_24;
 	font-weight: $fontweight_semibold;
 
-	@media screen and (max-width: 800px){
+	@media screen and (max-width: 800px) {
 		font-size: $fontsize_content_16;
 	}
 }
@@ -58,7 +57,7 @@
 		font-weight: $fontweight_semibold;
 	}
 
-	@media screen and (max-width: 800px){
+	@media screen and (max-width: 800px) {
 		div {
 			height: 50px;
 		}
