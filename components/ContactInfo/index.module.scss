@@ -32,11 +32,14 @@
 		font-weight: $fontweight_semibold;
 	}
 
-	a {
+	.contactSalesButton {
+		width: 24rem;
+		height: 4rem;
+		color: $prim_dark_2 !important;
 		text-decoration: none;
 		color: $blue_link_bg_light;
-		font-size: $fontsize_subtitle_20;
-		font-weight: $fontweight_medium;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
 		display: flex;
 		align-items: center;
 		span {
