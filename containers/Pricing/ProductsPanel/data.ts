@@ -15,7 +15,8 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and Annual Pricing Plans',
-		summary: `Invest on a research tool that's dependable, powerful and can scale up your business with 7-day money back guarantee.`,
+		summary: `Invest on a research tool that's dependable, powerful and can scale up your 
+			business with 7-day money back guarantee.`,
 		infoAlertMessage: {
 			monthly: {
 				head: `Pay only $1.99 for the entire first month of starter membership`,
@@ -44,25 +45,9 @@ export const plansAndProductsDetails = [
 					{
 						title: 'Discover Best Selling',
 						featuresIncluded: [
-							'Full access to the Chrome extension',
-							'Profit Finder FBA bulk calculation',
-							'Data input as UPC, EAN, ASIN, ISBN',
-							'Instant analytics with Data Buster',
-							'Historical Data'
+							'Full access to the Chrome Extension',
+							'Limited access to the rest of Sellgo All-In-One tool'
 						]
-					},
-					{
-						title: 'Understand Wholesale Leads',
-						featuresIncluded: [
-							'Basic Wholesale Supplier analytics',
-							'Bulk product error analysis',
-							'Bulk variation analysis',
-							'Basic Private Label Product Analysis'
-						]
-					},
-					{
-						title: 'Limited Access',
-						featuresIncluded: ['Seller Research', 'Keyword Research']
 					}
 				]
 			},
@@ -81,11 +66,6 @@ export const plansAndProductsDetails = [
 						title: 'Optimize Wholesale leads',
 						featuresIncluded: [
 							'Full access to Profit Finder',
-							'Instant analytics with Data Buster',
-							'Smart filter preset',
-							'Inventory insight',
-							'Market share insight',
-							'Bulk filtered data export',
 							'Variation and Multipack analysis',
 							'Leads Tracker'
 						]
@@ -93,8 +73,7 @@ export const plansAndProductsDetails = [
 					{
 						title: 'Seller Research',
 						featuresIncluded: [
-							'Browse Amazon sellers with Seller Database',
-							'Locate Amazon Sellers with Seller Map',
+							'Locate Amazon sellers with Seller Database/ Map',
 							'Check sellers inventory',
 							'Brand level category filter'
 						]
@@ -103,16 +82,9 @@ export const plansAndProductsDetails = [
 						title: 'Keyword Research',
 						featuresIncluded: [
 							'Reveal competitor keywords with Keyword Finder',
-							'Keyword research with Keyword Database',
 							'Keyword tracking with Product Rank Tracker',
-							'Rank drop/ raise index',
-							'True Rank Performance index',
-							'PPC Recampaign with Zapier integration'
+							'Rank drop/ raise index'
 						]
-					},
-					{
-						title: 'Product Research - Incoming soon',
-						featuresIncluded: []
 					}
 				]
 			},
@@ -124,34 +96,28 @@ export const plansAndProductsDetails = [
 				monthlyPrice: 177,
 				annualPrice: 1764,
 				featureSubName: 'Everything in Professional Plan, Plus',
-				desc: `For 7-figure sellers who need the best tools. 
+				desc: `For top sellers who need the best tools. 
 				Track more products, obtain more data \nand optimize your entire Amazon business.`,
 				featuresLists: [
 					{
-						title: 'Wholesale or Private Label Team',
+						title: 'Product Research',
 						featuresIncluded: [
 							'Full access to Chrome Extension Sales Estimation',
-							'Full access to Leads Tracker',
-							'Process up to 1,000,000 ASINs monthly',
-							'Track up to 3,000 ASINs daily',
-							'Extension sales estimator up to 300,000 monthly',
+							'Full access to Product Research (incoming soon)',
 							'Historical Data up to 1-year'
 						]
 					},
 					{
 						title: 'Seller Research',
 						featuresIncluded: [
-							'Full use of Seller Database',
+							'Full use of Seller Database/ Map',
 							'Seller Map Top View 20,000 Sellers*'
 						]
 					},
 					{
 						title: 'Keyword Research',
 						featuresIncluded: [
-							'Full Access to Keyword Finder',
-							'Advance research with Keyword Database',
-							'Advance tracking with Product Rank Tracker',
-							'Rank drop/ raise index',
+							'Full Access to Keyword Finder/ Database',
 							'True Rank Performance index',
 							'PPC Recampaign with Zapier integration*'
 						]
