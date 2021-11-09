@@ -8,6 +8,7 @@ import HeroBox from '../../containers/Pricing/HeroBox';
 import ProductsPanel from '../../containers/Pricing/ProductsPanel';
 import BundlesPanel from '../../containers/Pricing/BundlesPanel';
 import BetaPopupModal from '../../containers/Pricing/BetaPopupModal';
+import BetaBanner from '../../containers/Pricing/BetaBanner';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -62,6 +63,7 @@ const PricingPage: React.FC<Props> = (props) => {
 				imageUrl={seoData.imageUrl}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
+			{<BetaBanner showBetaPricing={showBetaPricing} />}
 			<HeroBox
 				isProductsPlanSelected={isProductsPanelSelected}
 				setProductsPanel={() => setIsProductsPanelSelected(true)}

@@ -6,6 +6,9 @@
 
 .pricingPlansSection {
 	padding-top: 6rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
 .planName {
@@ -46,10 +49,30 @@
 }
 
 .paymentModeToggle {
-	margin: 5rem auto !important;
+	margin: 5rem 0 !important;
+	position: relative;
+
+	.paymentModeToggleButton {
+		margin: 0;
+	}
 
 	@media screen and(max-width: 870px) {
 		display: none !important;
+	}
+
+	.paymentToggleTextWrapper {
+		position: absolute !important;
+		top: 5px;
+		right: -250px;
+		display: flex;
+		align-items: center;
+	}
+
+	.paymentToggleText {
+		font-size: $fontsize_subtitle_20;
+		color: $sellgo_purple;
+		font-weight: $fontweight_semibold;
+		margin-left: 10px;
 	}
 }
 

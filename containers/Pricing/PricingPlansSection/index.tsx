@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 import { Element } from 'react-scroll';
 
@@ -49,11 +50,26 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						<p>{summary}</p>
 					</div>
 
-					<PricePlanToggleButton
-						isMonthly={isMonthly}
-						handleChange={() => setIsMonthly(!isMonthly)}
-						className={styles.paymentModeToggle}
-					/>
+					<div className={styles.paymentModeToggle}>
+						<PricePlanToggleButton
+							isMonthly={isMonthly}
+							handleChange={() => setIsMonthly(!isMonthly)}
+							className={styles.paymentModeToggleButton}
+						/>
+						<div className={styles.paymentToggleTextWrapper}>
+							<Image
+								width={25}
+								height={21}
+								src="/handPointIcon.svg"
+								alt="handpointicon"
+							/>
+							<p className={styles.paymentToggleText}>
+								Up to
+								{showBetaPricing ? ' 7 ' : ' 5 '}
+								months free.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
