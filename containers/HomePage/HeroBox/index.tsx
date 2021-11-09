@@ -76,9 +76,7 @@ const HeroBox: React.FC<Props> = (props: Props) => {
 					The Next Generation Amazon Tools For
 				</h1>
 				<h2 className={styles.animatedText}>
-					<RainbowText  type="purple_blue_gradient">
-						{animatedText}
-					</RainbowText>
+					<RainbowText type="purple_blue_gradient">{animatedText}</RainbowText>
 				</h2>
 				<p className={`${styles.tagline}`}>
 					All-In-One platform for Selling on Amazon using Extension, Bulk

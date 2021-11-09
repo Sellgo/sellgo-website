@@ -13,7 +13,7 @@ const InfoSection: React.FC<Props> = () => {
 		'find more profitable products',
 		'automate the PPC recampaign process',
 		'find any Amazon sellers in the world',
-		'calculate your perfect stock',
+		'calculate your perfect stock'
 	];
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
 	const [isAnimationIncreasing, setAnimationIncreasing] = React.useState(true);
@@ -72,7 +72,10 @@ const InfoSection: React.FC<Props> = () => {
 					<br />
 				</h2>
 				<h2 className={styles.moreRevenue}>
-					<RainbowText type="purple_orange_gradient" className={styles.animatedText}>
+					<RainbowText
+						type="purple_orange_gradient"
+						className={styles.animatedText}
+					>
 						{animatedText}
 					</RainbowText>
 				</h2>
