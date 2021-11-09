@@ -65,7 +65,7 @@ const NavbarBottom: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="/pricing?type=wholesale"
+				navigateTo="/pricing"
 				variant="white"
 				className={styles.navbarCTA}
 			>
