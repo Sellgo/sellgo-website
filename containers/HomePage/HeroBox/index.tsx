@@ -15,10 +15,12 @@ interface Props {
 const HeroBox: React.FC<Props> = (props: Props) => {
 	const { customerCount } = props;
 	const textList = [
-		'Private Label.',
-		'Wholesale.',
-		'Service Provider.',
-		'Every Amazon Seller.'
+		'dominate #1 search result.',
+		'find profitable products.',
+		'automate PPC with Zapier.',
+		'find Amazon sellers.',
+		'calculate perfect stock.'
+
 	];
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
 	const [isAnimationIncreasing, setAnimationIncreasing] = React.useState(true);
@@ -73,7 +75,7 @@ const HeroBox: React.FC<Props> = (props: Props) => {
 		<section className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
 				<h1 className={`${styles.heading}`}>
-					The Next Generation Amazon Tools For
+					The Next Generation Amazon Tools to
 				</h1>
 				<h2 className={styles.animatedText}>
 					<RainbowText type="purple_blue_gradient">{animatedText}</RainbowText>
