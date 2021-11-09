@@ -1,8 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
+
+import CTAButton from '../CTAButton';
 
 interface Props {
 	className?: string;
@@ -22,9 +23,15 @@ const ContactInfo: React.FC<Props> = (props) => {
 
 			<div className={styles.capsule}>
 				<p>{message}</p>
-				<Link href="/contact-sales" passHref>
-					<a className={styles.navbarLink__sales}>Contact Sales</a>
-				</Link>
+				<CTAButton
+					type="secondary"
+					size="small"
+					navigateTo="/contact-sales"
+					variant="white"
+					className={styles.contactSalesButton}
+				>
+					Contact Sales
+				</CTAButton>
 			</div>
 		</div>
 	);
