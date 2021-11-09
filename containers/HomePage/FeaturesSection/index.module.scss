@@ -8,6 +8,10 @@
 .featuresSectionTitle {
 	font-size: 48px;
 	font-weight: $fontweight_bold;
+
+	@media (max-width: 600px) {
+		font-size: 36px;
+	}
 }
 
 .featuresSection {
