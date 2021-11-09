@@ -23,10 +23,11 @@ const ContactInfo: React.FC<Props> = (props) => {
 
 			<div className={styles.capsule}>
 				<p>{message}</p>
-				<CTAButton type='secondary'
-					size='small'
-					navigateTo='/contact-sales'
-					variant='white'
+				<CTAButton
+					type="secondary"
+					size="small"
+					navigateTo="/contact-sales"
+					variant="white"
 					className={styles.contactSalesButton}
 				>
 					Contact Sales
