@@ -15,8 +15,7 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and Annual Pricing Plans',
-		summary: `Invest on a research tool that's dependable, powerful and can scale up your 
-			business with 7-day money back guarantee.`,
+		summary: `Invest on a research tool that's dependable, powerful and can scale up your business with 7-day money back guarantee.`,
 		infoAlertMessage: {
 			monthly: {
 				head: `Pay only $1.99 for the entire first month of starter membership`,
@@ -166,14 +165,3 @@ export const plansAndProductsDetails = [
 		]
 	}
 ];
-
-export const sellerScoutGoPlanDetails = {
-	monthlyPrice: 117,
-	annualPrice: 1163,
-	salesEstimate: 0,
-	productsDatabase: 0,
-	title: 'Seller Scout Pro Plan',
-	description:
-		'Browse 1M+ Amazon Sellers, 450K+ U.S. Sellers, 700K+ Wholesale Sellers,  100K+ Private Label Sellers',
-	productsList: ['Seller Database', 'Seller Map', 'Seller Finder']
-};
