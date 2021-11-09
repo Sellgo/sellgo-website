@@ -76,7 +76,7 @@ const HeroBox: React.FC<Props> = (props: Props) => {
 					The Next Generation Amazon Tools For
 				</h1>
 				<h2 className={styles.animatedText}>
-					<RainbowText className={styles.animation} type="purple_blue_gradient">
+					<RainbowText  type="purple_blue_gradient">
 						{animatedText}
 					</RainbowText>
 				</h2>
