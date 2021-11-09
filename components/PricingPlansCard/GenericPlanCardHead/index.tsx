@@ -157,13 +157,13 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						<span className="strike-text">${monthlyPrice * 12}</span>
 						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
 							$
-							{showBetaPricing
+							{showBetaPricing && !isStarterPlan
 								? Math.round(annualPrice / 2)
 								: Math.round(annualPrice)}
 							/yr
 						</span>
 						Save $
-						{showBetaPricing
+						{showBetaPricing && !isStarterPlan
 							? Math.round(monthlyPrice * 12 - annualPrice / 2)
 							: Math.round(monthlyPrice * 12 - annualPrice)}
 					</p>
