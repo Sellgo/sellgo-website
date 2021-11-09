@@ -2,8 +2,8 @@
 
 .pricingPlansCardWrapper {
 	margin-top: 5rem;
-	margin-left: 9px;
-	margin-right: 9px;
+	margin-left: 15px;
+	margin-right: 15px;
 	position: relative;
 	background: $prim_white;
 	border-radius: 7px;
@@ -19,7 +19,7 @@
 		min-height: 80rem;
 	}
 
-	@media only screen and(max-width: 885px) {
+	@media only screen and(max-width: 915px) {
 		&__new {
 			margin-top: 8rem;
 		}
