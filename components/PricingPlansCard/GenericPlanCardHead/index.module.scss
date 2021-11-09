@@ -52,7 +52,7 @@
 }
 
 .startingAt {
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_content_10;
 	margin-top: 2rem;
 	text-align: center;
 
@@ -63,7 +63,7 @@
 	}
 
 	p {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_content_10;
 		font-weight: $fontweight_medium;
 		color: $prim_dark_1;
 	}
@@ -71,7 +71,7 @@
 
 .billedAtPrice {
 	span {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_content_10;
 		margin: 0 3px;
 	}
 }
@@ -149,7 +149,7 @@
 		&__hidden {
 			color: $sellgo_purple !important;
 			position: absolute;
-			left: 25px;
+			left: 15px;
 			font-size: $fontsize_content_16 !important;
 			text-decoration: line-through;
 		}
