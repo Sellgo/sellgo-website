@@ -10,6 +10,7 @@ import PricePlanToggleButton from '../../PricePlanToggleButton';
 
 /* Utils */
 import { createCheckoutLink } from '../../../utils/Referral';
+import { prettyPrintNumber } from '../../../utils/Format';
 
 interface Props {
 	name: string;
@@ -160,7 +161,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						>
 							Originally <br />
 							billed At{' '}
-							<span className="strike-text">${monthlyPrice * 12}</span>
+							<span className="strike-text">${prettyPrintNumber(monthlyPrice * 12)}</span>
 						</span>
 						<span
 							className={`${styles.newPrice} ${
@@ -169,8 +170,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						>
 							Now $
 							{showBetaPricing && !isStarterPlan
-								? Math.round(annualPrice / 2)
-								: Math.round(annualPrice)}
+								? prettyPrintNumber(Math.round(annualPrice / 2))
+								: prettyPrintNumber(Math.round(annualPrice))}
 							/yr
 						</span>
 						<span
@@ -180,8 +181,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						>
 							Save $
 							{showBetaPricing && !isStarterPlan
-								? Math.round(monthlyPrice * 12 - annualPrice / 2)
-								: Math.round(monthlyPrice * 12 - annualPrice)}
+								? prettyPrintNumber(Math.round(monthlyPrice * 12 - annualPrice / 2))
+								: prettyPrintNumber(Math.round(monthlyPrice * 12 - annualPrice))}
 						</span>
 					</p>
 				) : (
