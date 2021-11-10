@@ -87,12 +87,20 @@
 	.newPrice {
 		margin-left: 10px;
 		margin-right: 18px;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_content_14;
 		font-weight: $fontweight_bold;
+
+		&__small {
+			font-size: $fontsize_content_12;
+		}
 	}
 
 	.savings {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_content_14;
+
+		&__small {
+			font-size: $fontsize_content_12;
+		}
 	}
 }
 
