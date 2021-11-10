@@ -161,7 +161,9 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						>
 							Originally <br />
 							billed At{' '}
-							<span className="strike-text">${prettyPrintNumber(monthlyPrice * 12)}</span>
+							<span className="strike-text">
+								${prettyPrintNumber(monthlyPrice * 12)}
+							</span>
 						</span>
 						<span
 							className={`${styles.newPrice} ${
@@ -181,8 +183,12 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						>
 							Save $
 							{showBetaPricing && !isStarterPlan
-								? prettyPrintNumber(Math.round(monthlyPrice * 12 - annualPrice / 2))
-								: prettyPrintNumber(Math.round(monthlyPrice * 12 - annualPrice))}
+								? prettyPrintNumber(
+										Math.round(monthlyPrice * 12 - annualPrice / 2)
+								  )
+								: prettyPrintNumber(
+										Math.round(monthlyPrice * 12 - annualPrice)
+								  )}
 						</span>
 					</p>
 				) : (
