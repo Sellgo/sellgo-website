@@ -20,7 +20,6 @@ const HeroBox: React.FC<Props> = (props: Props) => {
 		'automate PPC with Zapier.',
 		'find Amazon sellers.',
 		'calculate perfect stock.'
-
 	];
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
 	const [isAnimationIncreasing, setAnimationIncreasing] = React.useState(true);
