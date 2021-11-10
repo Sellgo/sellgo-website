@@ -153,19 +153,23 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 
 				{!isMonthly ? (
 					<p className={styles.billedAtPrice}>
-						Originally billed At{' '}
-						<span className="strike-text">${monthlyPrice * 12}</span>
-						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
-							$
+						<span className={`${styles.originalPrice} ${withToggle ? styles.originalPrice__small : ''}`}>
+							Originally <br/>billed At{' '}
+							<span className="strike-text">${monthlyPrice * 12}</span>
+						</span>
+						<span className={styles.newPrice}>
+							Now $
 							{showBetaPricing && !isStarterPlan
 								? Math.round(annualPrice / 2)
 								: Math.round(annualPrice)}
 							/yr
 						</span>
+						<span className={styles.savings}>
 						Save $
 						{showBetaPricing && !isStarterPlan
 							? Math.round(monthlyPrice * 12 - annualPrice / 2)
 							: Math.round(monthlyPrice * 12 - annualPrice)}
+						</span>
 					</p>
 				) : (
 					<p>Billed Monthly</p>

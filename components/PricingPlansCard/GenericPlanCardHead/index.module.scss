@@ -70,9 +70,29 @@
 }
 
 .billedAtPrice {
-	span {
-		font-size: $fontsize_content_10;
-		margin: 0 3px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.originalPrice {
+		font-size: $fontsize_content_14;
+		line-height: 16px;
+		font-weight: $fontweight_regular;
+
+		&__small {
+			font-size: $fontsize_content_12;
+		}
+	}
+
+	.newPrice {
+		margin-left: 10px;
+		margin-right: 18px;
+		font-size: $fontsize_content_12;
+		font-weight: $fontweight_bold;
+	}
+
+	.savings {
+		font-size: $fontsize_content_12;
 	}
 }
 
