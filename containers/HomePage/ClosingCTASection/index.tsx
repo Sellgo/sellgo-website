@@ -8,12 +8,7 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
 
-interface Props {
-	customerCount: number;
-}
-
-const ClosingCTASection: React.FC<Props> = (props: Props) => {
-	const { customerCount } = props;
+const ClosingCTASection = () => {
 	return (
 		<section className={styles.closingCTASection}>
 			<div className={`page-container`}>
@@ -40,10 +35,10 @@ const ClosingCTASection: React.FC<Props> = (props: Props) => {
 						>
 							Get 50% OFF Today
 						</CTAButton>
-						<div className={styles.signUpDetails}>
+						{/* <div className={styles.signUpDetails}>
 							<Image src="/smileyFace.svg" width={25} height={25} />
 							<p> {customerCount} people have signed up.</p>
-						</div>
+						</div> */}
 					</div>
 
 					<small>

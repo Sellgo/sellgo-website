@@ -10,7 +10,7 @@ export const commonFeaturesList = [
 		title: 'Business Breakdowns',
 		detail: `Highlight any seller and break down their business model, brands, 
 		products, and more.`,
-		iconImageLink: '/businessTimeIcon.svg',
+		iconImageLink: '/businesstimeIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
@@ -24,14 +24,14 @@ export const commonFeaturesList = [
 		title: 'Find Warm Leads',
 		detail: `Explore which products and brands the competition is selling to 
 		find hidden gems and winning products.`,
-		iconImageLink: '/commentDollarIcon.svg',
+		iconImageLink: '/commentdollarIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
 		title: 'Seller Network',
 		detail: `For agencies looking to find new clientele, the Seller Map 
 		provides sellers that match your exact needs!`,
-		iconImageLink: '/chartNetworkIcon.svg',
+		iconImageLink: '/chartnetworkIcon.svg',
 		alt: `Describe the icon here`
 	},
 	{
