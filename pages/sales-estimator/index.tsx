@@ -25,16 +25,12 @@ import AppConfig from '../../config';
 /* Styles */
 import styles from './index.module.scss';
 
-/* Constants */
-import { limitDateForCustomerCount } from '../../constants';
-
 interface Props {
 	faqDetails: { products: any; bundles: any };
-	customerCount: number;
 }
 
 const SalesEstimator: React.FC<Props> = (props) => {
-	const { faqDetails, customerCount } = props;
+	const { faqDetails } = props;
 	const [showCTABanner, setShowCTABanner] = React.useState<boolean>(false);
 
 	return (
@@ -52,7 +48,7 @@ const SalesEstimator: React.FC<Props> = (props) => {
 				{showCTABanner && <CTABannerSection />}
 				<StandardPlansPricingSection />
 				<FAQSection faqDetails={faqDetails.products[2]} />
-				<ClosingCTASection customerCount={customerCount} />
+				<ClosingCTASection />
 			</main>
 		</>
 	);
@@ -62,22 +58,21 @@ export const getStaticProps: GetStaticProps = async () => {
 	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/pricing.json`);
 	const { data } = response;
 
-	const limitDate = new Date(limitDateForCustomerCount).getTime();
-	let customerCount;
-	try {
-		const customerCountResponse = await axios.get(
-			`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
-		);
-		customerCount = Math.max(customerCountResponse.data.count, 23);
-	} catch (error) {
-		customerCount = 56; // Random number for now
-		console.log(error);
-	}
+	// const limitDate = new Date(limitDateForCustomerCount).getTime();
+	// let customerCount;
+	// try {
+	// 	const customerCountResponse = await axios.get(
+	// 		`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
+	// 	);
+	// 	customerCount = Math.max(customerCountResponse.data.count, 23);
+	// } catch (error) {
+	// 	customerCount = 56; // Random number for now
+	// 	console.log(error);
+	// }
 
 	return {
 		props: {
-			faqDetails: data,
-			customerCount
+			faqDetails: data
 		},
 		revalidate: 60 * 15 // 15 minutes
 	};

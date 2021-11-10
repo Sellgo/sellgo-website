@@ -4,13 +4,9 @@ import Image from 'next/image';
 /* Styling */
 import styles from './index.module.scss';
 
-interface Props {
-	customerCount: number;
-}
+interface Props {}
 
-const BetaPopupModal: React.FC<Props> = (props: Props) => {
-	const { customerCount } = props;
-
+const BetaPopupModal: React.FC<Props> = () => {
 	return (
 		<div className={styles.betaPopupModal}>
 			<h2> Welcome to our Beta program. </h2>
@@ -19,7 +15,7 @@ const BetaPopupModal: React.FC<Props> = (props: Props) => {
 			</p>
 			<p className={styles.purpleText}>
 				<Image src="/glassIcon.svg" width={100} height={80} />
-				<span>{1000 - customerCount} seats left.</span>
+				{/* <span>{1000 - customerCount} seats left.</span> */}
 			</p>
 			<p className={styles.betaTerms}>
 				7-day money back guarantee too, no questions asked.
