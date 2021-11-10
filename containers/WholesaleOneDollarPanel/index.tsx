@@ -19,7 +19,7 @@ import { createCheckoutLink } from '../../utils/Referral';
 interface Props {}
 
 const WholesaleOneDollar: React.FC<Props> = () => {
-	const dollarPlanLink = createCheckoutLink('daily', 'wholesalearbitrage$1');
+	const dollarPlanLink = createCheckoutLink('daily', 'wholesalearbitrage$2');
 	return (
 		<>
 			<section className={`big-page-container ${styles.dollarPlanSection}`}>
@@ -33,7 +33,7 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 				<DollarPlanCTABox
 					className={styles.dollarPlanCTABox}
 					isPrimary
-					planName="wholesalearbitrage$1"
+					planName="wholesalearbitrage$2"
 				/>
 
 				<PricingInfoAlert
