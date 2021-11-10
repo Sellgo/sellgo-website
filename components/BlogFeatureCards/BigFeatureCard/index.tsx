@@ -11,6 +11,7 @@ import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
 /* Utils */
 import {
 	fallBackImageURL,
+	formatBlogDate,
 	formatBlogReadTime,
 	generateCategoryDisplayName,
 	imageLoaderForBlogs
@@ -32,7 +33,8 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 		slug,
 		title,
 		categories,
-		readingTime
+		readingTime,
+		date
 	} = showcaseBlogDetails;
 
 	return (
@@ -52,6 +54,8 @@ const BigFeatureCard: React.FC<Props> = (props) => {
 					<div className={styles.blogText}>
 						<h1>{title}</h1>
 						<p>
+							{date && formatBlogDate(date.toString())}
+							<br />
 							{generateCategoryDisplayName(categories.nodes)}{' '}
 							{formatBlogReadTime(readingTime.readtime)} Min Read
 						</p>

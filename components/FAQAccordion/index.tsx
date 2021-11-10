@@ -59,4 +59,8 @@ const FAQAccordion: React.FC<Props> = (props) => {
 	);
 };
 
+FAQAccordion.defaultProps = {
+	horizontalFocus: false
+};
+
 export default FAQAccordion;

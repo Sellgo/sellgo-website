@@ -34,13 +34,13 @@
 	}
 
 	.title {
-		color: $prim_dark_2;
+		color: $black_1;
 		font-size: 24px;
 		font-weight: bold;
 	}
 
 	.counter {
-		color: $prim_dark_2;
+		color: $black_1;
 		font-size: 48px;
 		font-weight: bold;
 	}
@@ -53,6 +53,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	color: $black_0 !important;
 
 	label {
 		font-size: 14px;
@@ -157,8 +158,8 @@
 		width: 14rem;
 		height: 3.5rem;
 		color: $prim_white;
-		border: 1px solid $accent_orange;
-		background: $accent_orange;
+		border: none;
+		background: $orange_purple_gradient;
 
 		&:hover {
 			cursor: pointer;

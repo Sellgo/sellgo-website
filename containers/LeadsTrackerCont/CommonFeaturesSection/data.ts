@@ -1,40 +1,38 @@
 export const commonFeaturesList = [
 	{
-		title: 'Price-Driven Sourcing',
-		detail: `Most of the time big profits can be earned through changing prices and opportunities.`,
-		iconImageLink: '/dataIcon.svg',
-		alt: `Describe the icon here`
+		title: 'Maximize Your Productivity',
+		detail: `Conduct in-depth product research in minutes. Invest time saved back into your business!`,
+		iconImageLink: '/chartIcon.svg',
+		alt: `chartIcon`
 	},
 	{
-		title: 'Find Profitable Products',
-		detail: `Monitor alert to find profitable products daily.`,
-		iconImageLink: '/magnifyIcon.svg',
-		alt: `Describe the icon here`
+		title: 'Certified and Approved Products',
+		detail: `Elevate your business with proven, validated products that have been certified by our metrics.`,
+		iconImageLink: '/certIcon.svg',
+		alt: `certIcon`
 	},
 	{
-		title: 'Decisions by the Numbers',
-		detail: `Confidently make critical business decisions with the clear, accurate analytics that matter to 
-		your business the most.`,
-		iconImageLink: '/inventoryIcon.svg',
-		alt: `Describe the icon here`
+		title: 'Guarantee Long-Term Sustainability',
+		detail: `Invest in products and with dependable sales performances that will produce long-term profits.`,
+		iconImageLink: '/badgeIcon.svg',
+		alt: `badgeIcon`
 	},
 	{
-		title: 'Less Spreadsheet Distraction',
-		detail: `Avoid complicating what's already complicated with Spreadsheet, focus on the results.`,
-		iconImageLink: '/watchIcon.svg',
-		alt: `Describe the icon here`
+		title: 'Infinite Product Ideas',
+		detail: `Get endless recommendations for profitable products so you can grow your business.`,
+		iconImageLink: '/bulbIdeaIcon.svg',
+		alt: `bulbIdeaIcon`
 	},
 	{
-		title: 'Valuable Data on the Go',
-		detail: `Export your findings to CSV files and have dependable data whether you're online or offline.`,
-		iconImageLink: '/movingIcon.svg',
-		alt: `Describe the icon here`
+		title: 'Protect Your Profits and Business',
+		detail: `Dump poor performing products and source your catalogs with thriving, successful products.`,
+		iconImageLink: '/shieldIcon.svg',
+		alt: `shieldIcon`
 	},
 	{
-		title: 'Focus on What Matters',
-		detail: `Stay above the competition by focusing on business relationships, and save time by filtering out
-		the more profitable opportunities with Profit Finder.`,
+		title: 'Sync with Our FBA Tools',
+		detail: `Harmonize your Amazon business and FBA all-in-one tools.`,
 		iconImageLink: '/linkIcon.svg',
-		alt: `Describe the icon here`
+		alt: `linkIcon`
 	}
 ];

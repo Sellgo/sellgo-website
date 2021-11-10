@@ -1,7 +1,12 @@
 @import '../../../styles/guidelines';
 
 .heroBoxWrapper {
-	background: linear-gradient(180deg, #256fb0, #133858);
+	padding-top: 10rem;
+	background: linear-gradient(180deg, $prim_dark_2, #767676);
+
+	@media only screen and (max-width: 950px) {
+		padding-top: 0;
+	}
 }
 
 .heroBox {
@@ -42,11 +47,12 @@
 		}
 
 		p {
-			max-width: 54rem;
+			max-width: 59rem;
 			font-size: $fontsize_content_14;
 			color: $prim_white;
 			font-weight: $fontweight_regular;
 			margin-top: 1rem;
+			line-height: 30px;
 
 			@media only screen and(max-width: 1080px) {
 				text-align: center;

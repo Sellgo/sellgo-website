@@ -2,7 +2,6 @@
 
 .newBenefitsSection {
 	min-height: 100vh;
-	background: $grey_0;
 }
 
 .benefitsWrapper {
@@ -12,9 +11,12 @@
 .benefitsCardsWrapper {
 	display: flex;
 	flex-direction: column;
-	margin: 10rem auto;
+	margin: 0 auto;
 }
 
 .newBenefitsCTA {
+	width: 31rem;
 	margin: 4rem auto;
+	font-size: $fontsize_content_16 !important;
+	font-weight: $fontweight_semibold !important;
 }

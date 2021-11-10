@@ -7,6 +7,7 @@ import styles from './index.module.scss';
 
 /* Utility */
 import {
+	formatBlogDate,
 	formatBlogReadTime,
 	generateCategoryDisplayName,
 	imageLoaderForBlogs
@@ -21,7 +22,7 @@ interface Props {
 
 const SmallBlogCard: React.FC<Props> = (props) => {
 	const {
-		blogDetails: { slug, title, featuredImage, categories, readingTime }
+		blogDetails: { slug, title, featuredImage, categories, readingTime, date }
 	} = props;
 
 	return (
@@ -39,7 +40,9 @@ const SmallBlogCard: React.FC<Props> = (props) => {
 					</div>
 					<div className={styles.blogText}>
 						<h4>{title}</h4>
-						<p>
+						<p className={styles.blogDetails}>
+							{date && formatBlogDate(date.toString())}
+							<br />
 							{generateCategoryDisplayName(categories.nodes)}{' '}
 							{formatBlogReadTime(readingTime.readtime)} Min Read
 						</p>

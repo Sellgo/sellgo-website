@@ -11,7 +11,11 @@ import styles from './index.module.scss';
 import client from '../../apollo';
 
 /* GraphQL */
-import { GET_FILTERED_BLOGS, GET_SHOW_CASE_BLOGS } from '../../graphql/cms';
+import {
+	GET_FILTERED_BLOGS,
+	GET_SHOW_CASE_BLOGS,
+	GET_FILTERED_LATEST_BLOGS
+} from '../../graphql/cms';
 
 /* Containers */
 import ShowCaseHeroBox from '../../containers/Blogs/ShowCaseHerobox';
@@ -33,6 +37,7 @@ interface Props {
 	showcaseBlogs: any;
 	editorsChoiceBlogs: any;
 	popularChoiceBlogs: any;
+	latestBlogs: any;
 	totalPages: {
 		total: number;
 	};
@@ -43,6 +48,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 		showcaseBlogs,
 		popularChoiceBlogs,
 		editorsChoiceBlogs,
+		latestBlogs,
 		totalPages
 	} = props;
 	const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -78,6 +84,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 					showcaseBlogs={showcaseBlogs}
 					popularChoiceBlogs={popularChoiceBlogs}
 					editorsChoiceBlogs={editorsChoiceBlogs}
+					latestBlogs={latestBlogs}
 					openNewsletterModal={() => setIsOpen(true)}
 				/>
 
@@ -144,16 +151,22 @@ export const getStaticProps: GetStaticProps = async () => {
 		}
 	});
 
+	const latestBlogsResponse = await client.query({
+		query: GET_FILTERED_LATEST_BLOGS
+	});
+
 	const showcaseBlogs = showCaseBlogsResponse.data.posts.nodes;
 	const totalPages = showCaseBlogsResponse.data.posts.pageInfo;
 	const editorsChoiceBlogs = editorsChoiceBlogsResponse.data.posts.nodes;
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
+	const latestBlogs = latestBlogsResponse.data.posts.nodes;
 
 	return {
 		props: {
 			showcaseBlogs,
 			editorsChoiceBlogs,
 			popularChoiceBlogs,
+			latestBlogs,
 			totalPages
 		},
 		revalidate: 60 * 10 // 10 minutes

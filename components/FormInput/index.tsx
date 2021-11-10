@@ -48,4 +48,17 @@ const FormInput: React.FC<Props> = (props) => {
 	);
 };
 
+FormInput.defaultProps = {
+	label: '',
+	className: '',
+	hasError: false,
+	errorMessage: '',
+	autoComplete: 'off',
+	placeholder: '',
+	required: false,
+	labelLast: false,
+	checked: false,
+	disabled: false
+};
+
 export default memo(FormInput);

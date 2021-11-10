@@ -6,15 +6,15 @@
 	margin: 3rem auto;
 
 	h2 {
-		color: $accent_orange;
-		font-size: $fontsize_content_14;
-		font-weight: $fontweight_bold;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
 		margin-top: 1rem;
 		min-height: 4rem;
 	}
 
 	p {
 		font-size: $fontsize_content_12;
+		font-weight: $fontweight_medium;
 		text-align: center;
 		width: 95%;
 		margin: 0 auto;

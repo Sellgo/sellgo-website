@@ -11,6 +11,11 @@ import SmallBlogCard from './SmallBlogCard';
 
 /* Types */
 import { ShowcaseBlogDetails } from '../../../interfaces/Blogs';
+import {
+	formatBlogDate,
+	formatBlogReadTime,
+	generateCategoryDisplayName
+} from '../../../utils/Blogs';
 
 interface Props {
 	recentBlogs: ShowcaseBlogDetails[];
@@ -25,7 +30,7 @@ const RecentBlogsSection: React.FC<Props> = (props) => {
 
 	return (
 		<section className={`page-container ${styles.recentBlogsWrapper}`}>
-			<h2 className="secondary-heading">
+			<h2 className={styles.blogTitle}>
 				The Latest News and Tips for Your Amazon Business
 			</h2>
 
@@ -38,16 +43,20 @@ const RecentBlogsSection: React.FC<Props> = (props) => {
 
 				<div className={styles.blogsWrapper__right}>
 					<div className={styles.recentArticlesWrapper}>
-						<h3> Latest Articles:</h3>
+						<h3 className={styles.filterBlogLabel}> Latest Articles:</h3>
 						{recentArticlesSummary.map((blog: any) => {
 							return (
-								<div className={styles.recentArticleSummary} key={uuid()}>
-									<small>{new Date(blog.date).toDateString()}</small>
-									<p>
-										<Link href={`/blogs/blog/${blog.slug}`} passHref>
-											<a>{blog.title}</a>
-										</Link>
-									</p>
+								<div className={styles.blogTeaser} key={uuid()}>
+									<Link passHref href={`/blogs/blog/${blog.slug}`}>
+										<a>
+											<p>{blog.title}</p>
+										</a>
+									</Link>
+									<small>
+										{formatBlogDate(blog.date.toString())} |&nbsp;
+										{generateCategoryDisplayName(blog.categories.nodes)}{' '}
+										{formatBlogReadTime(blog.readingTime.readtime)} Min Read
+									</small>
 								</div>
 							);
 						})}

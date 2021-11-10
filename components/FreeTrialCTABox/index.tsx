@@ -88,4 +88,9 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 	);
 };
 
+FreeTrialCTABox.defaultProps = {
+	className: '',
+	isPrimary: false
+};
+
 export default FreeTrialCTABox;

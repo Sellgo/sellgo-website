@@ -6,7 +6,8 @@ import { v4 as uuid } from 'uuid';
 import styles from './index.module.scss';
 import {
 	formatBlogReadTime,
-	generateCategoryDisplayName
+	generateCategoryDisplayName,
+	formatBlogDate
 } from '../../utils/Blogs';
 
 /* Types */
@@ -15,13 +16,18 @@ import { FilteredBlog } from '../../interfaces/Blogs';
 interface Props {
 	label: string;
 	blogs: FilteredBlog[];
+	isLarge?: boolean;
 }
 
 const FilteredChoiceBlogs: React.FC<Props> = (props) => {
-	const { label, blogs } = props;
+	const { label, blogs, isLarge } = props;
 
 	return (
-		<div className={styles.filteredBlogs}>
+		<div
+			className={`${styles.filteredBlogs} ${
+				isLarge ? styles.filteredBlogs__large : ''
+			}`}
+		>
 			<div className={styles.filterBlogLabel}>
 				<p>{label}</p>
 			</div>
@@ -35,16 +41,19 @@ const FilteredChoiceBlogs: React.FC<Props> = (props) => {
 							</a>
 						</Link>
 						<small>
-							<strong>
-								{generateCategoryDisplayName(blog.categories.nodes)}{' '}
-								{formatBlogReadTime(blog.readingTime.readtime)} Min Read
-							</strong>
+							{formatBlogDate(blog.date.toString())} |&nbsp;
+							{generateCategoryDisplayName(blog.categories.nodes)}{' '}
+							{formatBlogReadTime(blog.readingTime.readtime)} Min Read
 						</small>
 					</div>
 				);
 			})}
 		</div>
 	);
+};
+
+FilteredChoiceBlogs.defaultProps = {
+	isLarge: false
 };
 
 export default memo(FilteredChoiceBlogs);

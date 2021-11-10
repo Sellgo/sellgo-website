@@ -1,11 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
 
-/* Components */
-import User from '../Icons/Person';
+import CTAButton from '../CTAButton';
 
 interface Props {
 	className?: string;
@@ -18,22 +16,29 @@ const ContactInfo: React.FC<Props> = (props) => {
 	return (
 		<div className={`${styles.contactInfo} ${className}`}>
 			<h2>
-				Need an enterprise account for your business?
+				*Need more sellers/ keywords data with an Enterprise account?
 				<br />
 				We&apos;d be happy to talk!
 			</h2>
 
 			<div className={styles.capsule}>
 				<p>{message}</p>
-				<Link href="/contact-sales" passHref>
-					<a className={styles.navbarLink__sales}>
-						<User width={14} height={12} fill="#2e3b4a" />
-						<span>Contact Sales</span>
-					</a>
-				</Link>
+				<CTAButton
+					type="secondary"
+					size="small"
+					navigateTo="/contact-sales"
+					variant="white"
+					className={styles.contactSalesButton}
+				>
+					Contact Sales
+				</CTAButton>
 			</div>
 		</div>
 	);
+};
+
+ContactInfo.defaultProps = {
+	className: ''
 };
 
 export default ContactInfo;

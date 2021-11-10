@@ -1,33 +1,64 @@
-export const productsDetails = [
+export const productsDetails: {
+	title: string;
+	action: string;
+	icon: string;
+	features: { name: string; link: string }[];
+}[] = [
 	{
-		title: 'Amazon Wholesale Sellers',
-		subTitle: 'Streamline Your Amazon Wholesale Business',
-		description: `Obtain all the tools you need to scout, source, and sell profitable, 
-		high-demand products for your Amazon inventory. 
-		Use Sellgo's reliable data and sales analytics to build a 
-		thriving Amazon wholesale business.`,
-		linkLabel: '',
-		navigateTo: '',
-		imageUrl: '/productSection1.png'
+		title: 'FIND QUALITY PRODUCTS',
+		action: 'when researching',
+		icon: '/products-products.svg',
+		features: [
+			{
+				name: 'Sales Estimation & Search Volume',
+				link: '/'
+			},
+			{
+				name: 'Product/ Brand Database',
+				link: '/'
+			},
+			{
+				name: 'Seller Database/ Map/ Finder',
+				link: '/'
+			}
+		]
 	},
 	{
-		title: 'Amazon Private Label Sellers',
-		subTitle: 'Expand Your Amazon Private Label',
-		description: `Access the tools you need to grow your Amazon Private Label business. 
-		Sellgo's powerful FBA tools empower private label sellers with the data and resources to
-		 maximize your brand, sales, and profits.`,
-		linkLabel: '',
-		navigateTo: '',
-		imageUrl: '/productSection2.png'
+		title: 'DOMINATE COMPETITIONS',
+		action: 'when launching',
+		icon: '/products-competition.svg',
+		features: [
+			{
+				name: 'Keyword Finder',
+				link: '/'
+			},
+			{
+				name: 'Keyword Database',
+				link: '/'
+			},
+			{
+				name: 'Product Rank Tracker',
+				link: '/'
+			}
+		]
 	},
 	{
-		title: 'Brands, Agencies, and Enterprise',
-		subTitle: 'Connect with the Amazon Network',
-		description: `Uncover new market segments and reach out to thousands of Amazon 
-		sellers to showcase your company, products, or services. Join a network 
-		of existing sellers who are already looking for you. `,
-		linkLabel: '',
-		navigateTo: '',
-		imageUrl: '/productSection3.png'
+		title: 'AUTOMATE PROCESSES',
+		action: 'when selling',
+		icon: '/products-automate.svg',
+		features: [
+			{
+				name: 'Product Rank Tracker',
+				link: '/'
+			},
+			{
+				name: 'Zapier Integration For PPC Re-Campaign',
+				link: '/'
+			},
+			{
+				name: 'Perfect Stock',
+				link: '/'
+			}
+		]
 	}
 ];

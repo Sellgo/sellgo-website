@@ -36,7 +36,7 @@
 	font-size: $fontsize_content_16;
 	font-weight: $fontweight_medium;
 	color: $prim_dark_2;
-	border: 1px solid $grey_2;
+	background: $prim_white;
 	padding: 1.5rem 2rem;
 }
 
@@ -46,7 +46,7 @@
 	align-items: center;
 
 	span {
-		color: $blue_8;
+		color: $prim_dark_2;
 		font-size: 20px;
 		margin-right: 1rem;
 		font-weight: 600;

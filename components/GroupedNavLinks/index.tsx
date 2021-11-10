@@ -19,15 +19,21 @@ interface Props {
 
 const GroupedNavLink: React.FC<Props> = (props) => {
 	const { head, desc, navigateTo, className, iconName } = props;
+	const [isHoveredOver, setHoveredOver] = React.useState<boolean>(false);
 
 	return (
-		<div className={`${styles.groupedNavLinks} ${className}`}>
+		<div
+			className={`${styles.groupedNavLinks} ${className}`}
+			onMouseEnter={() => setHoveredOver(true)}
+			onMouseLeave={() => setHoveredOver(false)}
+		>
 			<a href={navigateTo}>
 				<ExpandedNavbarIcons
 					name={iconName}
-					width={20}
-					height={20}
-					fill="#ef7818"
+					width={25}
+					height={25}
+					fill="#323232"
+					isRainbow={isHoveredOver}
 				/>
 				<div className={styles.linkDetails}>
 					<h2>{head}</h2>
@@ -36,6 +42,10 @@ const GroupedNavLink: React.FC<Props> = (props) => {
 			</a>
 		</div>
 	);
+};
+
+GroupedNavLink.defaultProps = {
+	className: ''
 };
 
 export default GroupedNavLink;

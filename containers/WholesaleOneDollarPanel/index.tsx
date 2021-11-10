@@ -23,10 +23,12 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 	return (
 		<>
 			<section className={`big-page-container ${styles.dollarPlanSection}`}>
-				<h2 className="secondary-heading">Pay $1 to Sell as Wholesale</h2>
+				<h2 className={styles.title}>
+					Pay $1.99 to Sell, Wholesale or Private Label
+				</h2>
 				<p className={styles.info}>
-					Access Sellgo&apos;s $1 Amazon tools for a day and integrate them into
-					your Amazon business.
+					Access Sellgo&apos;s $1.99 Amazon tools for a day and integrate them
+					into your Amazon business.
 				</p>
 				<DollarPlanCTABox
 					className={styles.dollarPlanCTABox}
@@ -42,7 +44,7 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 					desc={`	Want to try our advanced Amazon tools? Review our FBA tools and pricing
 									packages. Our premium tools empower you to track and research more products to
 										optimize your Amazon business.`}
-					background="#F2EFE4"
+					background="#EBEEF0"
 				/>
 			</section>
 
@@ -54,20 +56,19 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 			</section>
 
 			<section className={`big-page-container ${styles.otherInfoSection}`}>
-				<h2 className="secondary-heading">
-					Maximize Your Profits with Sellgo&apos;s Amazon Tools!
-				</h2>
+				<h2>Maximize Your Profits with Sellgo&apos;s Amazon Tools!</h2>
 
 				<div className={styles.otherInfoCTAWrapper}>
 					<CTAButton
 						type="primary"
 						size="medium"
+						variant="purplePinkRainbow"
 						navigateTo={dollarPlanLink}
 						className={styles.otherInfoCTA}
 						asExternal
 						newTarget
 					>
-						Try Now for $1
+						Try Now for $1.99
 					</CTAButton>
 					<p>Pay less on software, invest more in your business.</p>
 				</div>

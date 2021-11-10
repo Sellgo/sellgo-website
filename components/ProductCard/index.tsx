@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
+import CTAButton from '../CTAButton';
 
 interface Props {
 	title: string;
@@ -43,13 +44,30 @@ const ProductCard: React.FC<Props> = (props) => {
 
 				{linkLabel && navigateTo && (
 					<Link href={navigateTo} passHref>
-						<a className={styles.productCard__Link}>{linkLabel}</a>
+						<a className={styles.productCard__Link}>
+							{linkLabel}
+							&nbsp;
+							<Image src="/blueLongArrowRight.svg" width={20} height={8} />
+						</a>
 					</Link>
+				)}
+
+				{title.toUpperCase() === 'EXTENSION' && (
+					<CTAButton
+						variant="white"
+						type="secondary"
+						size="medium"
+						navigateTo="/extension"
+						className={styles.extensionCTA}
+					>
+						<Image src="/chromeOriginalLogo.svg" width={25} height={25} />
+						&nbsp; Get Sellgo Chrome Extension
+					</CTAButton>
 				)}
 			</div>
 
 			<div className={`${imageClass}`}>
-				<Image src={imageUrl} alt="Seller Finder" width={450} height={270} />
+				<Image src={imageUrl} alt="Seller Finder" width={600} height={360} />
 			</div>
 		</article>
 	);

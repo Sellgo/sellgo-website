@@ -1,16 +1,19 @@
 @import '../../../styles/guidelines';
 
 .statisticsSection {
-	background: linear-gradient(180deg, $blue_6, #184770);
+	background: $black_1;
 	display: flex;
-	margin-bottom: 10rem;
 }
 
 .statisticsWrapper {
 	color: $prim_white;
 	height: 100%;
-	padding: 15rem 0;
 	text-align: center;
+	background-image: url('../../../public/sellerWorldMap.png');
+	object-fit: contain;
+	background-size: 90% 70%;
+	background-repeat: no-repeat;
+	background-position: center;
 
 	h2 {
 		color: inherit;
@@ -20,8 +23,7 @@
 	p {
 		color: inherit;
 		font-size: $fontsize_content_14;
-		font-weight: fontweight_regular;
-		line-height: $fontlineheight_content_30;
+		font-weight: $fontweight_regular;
 		width: 85%;
 		margin: 0 auto;
 

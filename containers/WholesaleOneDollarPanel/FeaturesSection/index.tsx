@@ -15,7 +15,7 @@ interface Props {}
 const FeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`big-page-container ${styles.featuresSection}`}>
-			<h2 className="secondary-heading">You&apos;ll get:</h2>
+			<h2 className="secondary-heading">Plus</h2>
 
 			<div className={styles.featuresCardWrapper}>
 				{featuresData.map((features: any) => {

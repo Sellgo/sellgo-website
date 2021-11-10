@@ -6,6 +6,7 @@
 	border-bottom: 1px solid $prim_white;
 	width: 25%;
 	min-width: 20rem;
+	height: 25rem;
 	text-align: center;
 	padding: 3rem 0;
 
@@ -32,7 +33,7 @@
 .statsCount {
 	font-size: $fontsize_title_54;
 	color: inherit;
-	font-weight: fontweight_bold;
+	font-weight: $fontweight_bold;
 	display: flex;
 	justify-content: center;
 	align-items: center;

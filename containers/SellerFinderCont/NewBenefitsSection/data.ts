@@ -9,7 +9,7 @@ export const newBenefitsData = [
 		for your own businesses.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit1_450x270.png'
+		imageUrl: '/seller_map_3.png'
 	},
 	{
 		title: 'Inventory Insight',
@@ -19,16 +19,15 @@ export const newBenefitsData = [
 		which products you should sell too!`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit2_450x270.png'
+		imageUrl: '/seller_map_4.png'
 	},
 	{
-		title: 'Amazon Catalog',
-		subTitle: 'Magnify the Buy Box',
-		description: `Spot all the competitive sellers in the Buy Box 
-		and examine their catalogs for the other products they sell. 
-		Lookout for leads and potential products you can take over.`,
+		title: 'AMAZON CATALOG',
+		subTitle: 'Explore The Buy Box Sellers',
+		description: `Spot all the competitive sellers in the Buy Box and examine their 
+		catalogs for the other products they sell. Lookout for leads and potential products you can take over.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit3_450x270.png'
+		imageUrl: '/seller_map_5.png'
 	}
 ];

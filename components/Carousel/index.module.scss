@@ -1,0 +1,47 @@
+@import '../../styles/guidelines';
+
+.mainContentWrapper {
+	display: grid;
+	grid-template-columns: 15% 70% 15%;
+	align-items: center;
+	justify-content: center;
+
+	/* Hide if only screen is smaller than 1000px */
+	@media (max-width: 1000px) {
+		display: block;
+	}
+}
+
+.stepperWrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.menuIcon {
+	height: 10px;
+	width: 10px;
+	border-radius: 100%;
+	border: 1px solid $grey_6;
+	margin: 0 1.5rem;
+
+	&__active {
+		background: $grey_6;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.arrowButton {
+	background: none;
+	border: none;
+	cursor: pointer;
+
+	/* Hide if only screen is smaller than 1000px */
+	@media (max-width: 1000px) {
+		display: none;
+	}
+}

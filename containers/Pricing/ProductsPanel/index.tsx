@@ -10,9 +10,6 @@ import styles from './index.module.scss';
 import PricingPlansSection from '../PricingPlansSection';
 import FAQSection from '../FAQSection';
 import WholesaleOneDollarPanel from '../../WholesaleOneDollarPanel';
-/* HIDING-PRIVATE-LABEL */
-// import PrivateLabelOneDollar from '../../PrivateLabelOneDollar';
-import SellerScoutProPanel from '../../SellerScoutProPanel';
 
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
@@ -29,13 +26,14 @@ import { FAQDetails } from '../../../interfaces/FAQ';
 
 interface Props {
 	productsPanelFaqList: FAQDetails[];
+	showBetaPricing: boolean;
 }
 
 const ProductsPanel: React.FC<Props> = (props) => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
 
-	const { productsPanelFaqList } = props;
+	const { productsPanelFaqList, showBetaPricing } = props;
 
 	const router = useRouter();
 
@@ -92,10 +90,13 @@ const ProductsPanel: React.FC<Props> = (props) => {
 						if (planType.name !== 'Private Label $1') {
 							return (
 								<Tab key={uuid()} className={styles.pricingPanelTab}>
-									{planType.name}
-									{planType.isNew && (
-										<span className={styles.newBadge}>New</span>
-									)}
+									<span>
+										{planType.name}
+										{planType.isNew && (
+											<span className={styles.newBadge}>New</span>
+										)}
+									</span>
+									<div className={styles.rainbowLine} />
 								</Tab>
 							);
 						} else {
@@ -122,15 +123,11 @@ const ProductsPanel: React.FC<Props> = (props) => {
 								planName={plan.planName}
 								summary={plan.summary}
 								productsIncluded={plan.productsIncluded}
-								selectedPlanType={selectedPlanType}
+								showBetaPricing={showBetaPricing}
 							/>
 						</TabPanel>
 					);
 				})}
-
-				<TabPanel>
-					<SellerScoutProPanel />
-				</TabPanel>
 			</Tabs>
 
 			{/* FAQ Section */}

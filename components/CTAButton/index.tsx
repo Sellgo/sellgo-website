@@ -1,11 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import styles from './index.module.scss';
 
 interface Props {
 	type: 'primary' | 'secondary';
-	size: 'small' | 'medium' | 'large';
+	size: 'small' | 'medium' | 'large' | 'productPageBig' | 'productPageSmall';
 	navigateTo: string;
 	children: React.ReactNode;
+	variant?: 'white' | 'rainbow' | 'orange' | 'purplePinkRainbow' | 'green';
 	className?: string;
 	asExternal?: boolean;
 	newTarget?: boolean;
@@ -17,38 +19,65 @@ const CTAButton: React.FC<Props> = (props) => {
 		type,
 		size,
 		children,
-		className,
-		asExternal,
-		newTarget
+		className = '',
+		asExternal = false,
+		variant = 'orange',
+		newTarget = false
 	} = props;
 
-	const baseClassName = `ctabutton`;
-	const sizeClassName = `ctabutton--${size}`;
-	const typeClassName = `ctabutton--${type}`;
+	const baseClassName = styles.ctabutton;
+	const sizeClassName = styles[`ctabutton__${size}`];
+	const variantAndTypeClassName = styles[`ctabutton__${type}__${variant}`];
+	const isRainbowBordered =
+		(variant === 'rainbow' || variant === 'purplePinkRainbow') &&
+		type === 'secondary';
 
 	// render as normal <a> tag
 	if (asExternal) {
 		return (
 			<a
-				className={`${baseClassName} ${typeClassName} ${sizeClassName} ${className}`}
+				className={`
+					${baseClassName} 
+					${sizeClassName} 
+					${variantAndTypeClassName} 
+					${className}`}
 				href={navigateTo}
 				target={newTarget ? '_blank' : ''}
 				rel="noreferrer noopener"
 			>
-				{children}
+				{isRainbowBordered ? (
+					<span className={styles.ctabutton__rainbowWrapper}>{children}</span>
+				) : (
+					children
+				)}
 			</a>
 		);
 	} else {
 		return (
 			<Link href={navigateTo} passHref>
 				<a
-					className={`${baseClassName} ${typeClassName} ${sizeClassName} ${className}`}
+					className={`
+						${baseClassName} 
+						${sizeClassName} 
+						${variantAndTypeClassName} 
+						${className}`}
 				>
-					{children}
+					{isRainbowBordered ? (
+						<span className={styles.ctabutton__rainbowWrapper}>{children}</span>
+					) : (
+						children
+					)}
 				</a>
 			</Link>
 		);
 	}
+};
+
+CTAButton.defaultProps = {
+	className: '',
+	asExternal: false,
+	variant: 'orange',
+	newTarget: false
 };
 
 export default CTAButton;

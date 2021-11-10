@@ -1,17 +1,18 @@
 export const statisticsData = [
 	{
-		statsCount: '100M',
-		statsLabel: 'Products',
+		statsCount: '150M',
+		statsLabel: 'Top Selling Products',
 		iconImageLink: '/stats-products.svg'
 	},
 	{
 		statsCount: '32K',
-		statsLabel: 'Categories',
+		statsLabel: 'Top Categories',
 		iconImageLink: '/stats-categories.svg'
 	},
 	{
-		statsCount: '850K',
-		statsLabel: 'Sellers',
+		statsCount: '1.5M',
+		statsLabel:
+			'Sellers in Amazon.com, Amazon.ca, Amazon.com.mx, Amazon.co.uk, Amazon.it',
 		iconImageLink: '/stats-sellers.svg'
 	},
 	{
@@ -20,22 +21,22 @@ export const statisticsData = [
 		iconImageLink: '/stats-brands.svg'
 	},
 	{
-		statsCount: '20',
-		statsLabel: 'Countries',
+		statsCount: '76',
+		statsLabel: 'Country of Origin',
 		iconImageLink: '/stats-countries.svg'
 	},
 	{
-		statsCount: '450K',
+		statsCount: '500K',
 		statsLabel: 'U.S. Sellers',
 		iconImageLink: '/stats-us-sellers.svg'
 	},
 	{
-		statsCount: '720K',
-		statsLabel: 'Wholesale Sellers',
+		statsCount: '1M',
+		statsLabel: 'Brand Resellers',
 		iconImageLink: '/stats-wholesale-sellers.svg'
 	},
 	{
-		statsCount: '110K',
+		statsCount: '200K',
 		statsLabel: 'Private Label Sellers',
 		iconImageLink: '/stats-private-label.svg'
 	}

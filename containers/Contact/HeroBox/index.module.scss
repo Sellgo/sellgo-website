@@ -1,7 +1,12 @@
 @import '../../../styles/guidelines';
 
 .heroBoxSection {
-	background: linear-gradient(180deg, #256fb0, #133858);
+	padding-top: 10rem;
+	background: linear-gradient(180deg, $prim_dark_2, #767676);
+
+	@media only screen and (max-width: 950px) {
+		padding-top: 0;
+	}
 }
 
 .heroBox {
@@ -35,8 +40,8 @@
 			color: inherit;
 			max-width: 39.6rem;
 			font-size: $fontsize_content_14;
-			font-weight: $fontweight_light;
 			margin-top: 1rem;
+			line-height: 30px;
 		}
 	}
 }
@@ -94,12 +99,12 @@
 	h2 {
 		color: $prim_dark_2;
 		font-size: $fontsize_content_18;
-		font-weight: $fontweight_bold;
+		font-weight: $fontweight_medium;
 	}
 
 	a {
 		font-size: $fontsize_content_18;
-		color: $system_blue;
+		color: $blue_link_bg_light;
 		font-weight: $fontweight_extrabold;
 	}
 }
@@ -120,7 +125,7 @@
 
 	p {
 		font-size: $fontsize_content_14;
-		color: $prim-dark_2;
+		color: $prim_dark_1;
 		a {
 			font-size: $fontsize_content_14;
 			cursor: pointer;

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 
 /* Styles */
@@ -8,69 +9,59 @@ import styles from './index.module.scss';
 import PricingPlansCardHead from './PricingPlansCardHead';
 import PricingPlansCardFeaturesList from './PricingPlansCardFeaturesList';
 
-/* Constants */
-import {
-	plansWithHeaderGradient,
-	pricingCardHeaderGradients
-} from '../../constants';
-
 interface Props {
 	// product details
-	id: number;
 	name: string;
-	productsDatabase: number;
-	salesEstimateCount: number;
+	setIsMonthly: (isMonthly: boolean) => void;
 	monthlyPrice: number;
 	annualPrice: number;
+	showBetaPricing: boolean;
 	desc: string;
 	featureSubName: string;
 	featuresLists: any;
+	isNew?: boolean;
 
 	// plan details
-	planName: string;
 	isMonthly: boolean;
 }
 
 const PricingPlansCard: React.FC<Props> = (props) => {
 	const {
-		id,
 		name,
-		productsDatabase,
-		salesEstimateCount,
+		isNew,
+		setIsMonthly,
 		monthlyPrice,
 		annualPrice,
+		showBetaPricing,
 		desc,
 		featureSubName,
 		featuresLists,
-		isMonthly,
-		planName
+		isMonthly
 	} = props;
 
-	const isGradientHeader = plansWithHeaderGradient.includes(name);
-
 	return (
-		<div className={styles.pricingPlansCardWrapper}>
-			{/* Header gradients for plans */}
-
-			{isGradientHeader && (
-				<div
-					className={styles.headerGradient}
-					style={{ background: `${pricingCardHeaderGradients[name]}` }}
-				/>
+		<div
+			className={`${styles.pricingPlansCardWrapper} ${
+				isNew ? styles.pricingPlansCardWrapper__new : ''
+			}`}
+		>
+			{isNew && (
+				<div className={styles.newFeatureBanner}>
+					<Image src="/star.svg" width={25} height={25} />
+					Most Popular
+				</div>
 			)}
-
-			<div className={styles.pricingPlansCard}>
+			<div className={`${styles.pricingPlansCard}`}>
 				<PricingPlansCardHead
-					id={id}
 					name={name}
 					desc={desc}
-					productsDatabase={productsDatabase}
-					salesEstimateCount={salesEstimateCount}
+					isNew={isNew}
 					monthlyPrice={monthlyPrice}
 					annualPrice={annualPrice}
+					showBetaPricing={showBetaPricing}
 					// plan details
-					planName={planName}
 					isMonthly={isMonthly}
+					setIsMonthly={setIsMonthly}
 				/>
 
 				<p className={styles.planType}>{featureSubName}</p>
@@ -85,6 +76,10 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 			</div>
 		</div>
 	);
+};
+
+PricingPlansCard.defaultProps = {
+	isNew: false
 };
 
 export default PricingPlansCard;

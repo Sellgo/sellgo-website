@@ -1,30 +1,32 @@
 export const newBenefitsData = [
 	{
-		title: 'Advance Product Sourcing',
-		subTitle: 'Streamline Your Amazon Wholesale Business',
-		description: ``,
+		title: 'PROFIT SOURCING',
+		subTitle: 'Painless Profit Monitoring',
+		description: `Sellgo Leads Tracker will keep an eye on your wholesale products, 
+		and indicate when a product is profitable. Get notifications instantly when a product 
+		becomes profitable. Once you've added your products to the Profit Finder, simply activate 
+		Leads Tracker for automated monitoring.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit1_450x270.png'
+		imageUrl: '/product_tracker_3.png'
 	},
 	{
-		title: 'Intelligent Profit Calculator',
+		title: 'WHOLESALE CATALOG MONITORING',
 		subTitle: 'Find Your Profitable Products Effortlessly',
-		description: `Access the tools you need to grow your Amazon Private Label business. 
-		Sellgo's powerful FBA tools empower private label sellers with the data and resources to
-		 maximize your brand, sales, and profits.`,
+		description: `Sellgo Leads Tracker will keep an eye on your wholesale products, and indicate 
+		when a product is profitable. Get notifications instantly when a product becomes profitable. 
+		Once you've added your products to the Profit Finder, simply activate Leads Tracker for automated monitoring.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit2_450x270.png'
+		imageUrl: '/product_tracker_4.png'
 	},
 	{
-		title: 'Big Data Automation',
+		title: 'WHOLESALE LEADS AUTOMATION',
 		subTitle: 'Less Spreadsheet Distractions',
 		description: `Why bug your team with a gazillion number of daily Spreadsheets in the midst of 
-		constant price changes? Just focus on accurate analytics that matter to your business
-		the most. `,
+		constant price changes? Just focus on accurate analytics that matter to your business the most.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/pfBenefit3_450x270.png'
+		imageUrl: '/product_tracker_5.png'
 	}
 ];

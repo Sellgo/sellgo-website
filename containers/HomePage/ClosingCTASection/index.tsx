@@ -6,42 +6,49 @@ import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../../components/CTAButton';
+import RainbowText from '../../../components/RainbowText';
 
-interface Props {}
+interface Props {
+	customerCount: number;
+}
 
-const ClosingCTASection: React.FC<Props> = () => {
+const ClosingCTASection: React.FC<Props> = (props: Props) => {
+	const { customerCount } = props;
 	return (
-		<section className={`page-container ${styles.closingCTASection}`}>
-			<div className={styles.closingCTAWrapper}>
-				<div className={styles.closingCTAWrapper__left}>
-					<h2>Grow Your Amazon Business with Sellgo</h2>
+		<section className={styles.closingCTASection}>
+			<div className={`page-container`}>
+				<div className={styles.closingCTAWrapper}>
+					<h2>
+						<RainbowText type="pink_blue_gradient">
+							Grow Your Amazon Business with Sellgo
+						</RainbowText>
+					</h2>
 					<p>
 						With reliable tools and data that help you at every stage from
-						product sourcing to product selling, building a successful Amazon
-						business has never been easier.
+						product sourcing to product selling,
+						<br />
+						building a successful Amazon business has never been easier.
 					</p>
 
-					<CTAButton
-						type="primary"
-						size="medium"
-						navigateTo="/pricing"
-						className={styles.closingCTA}
-					>
-						Get started
-					</CTAButton>
+					<div className={styles.ctaRow}>
+						<CTAButton
+							type="primary"
+							size="medium"
+							variant="white"
+							navigateTo="/pricing"
+							className={styles.closingCTA}
+						>
+							Get 50% OFF Today
+						</CTAButton>
+						<div className={styles.signUpDetails}>
+							<Image src="/smileyFace.svg" width={25} height={25} />
+							<p> {customerCount} people have signed up.</p>
+						</div>
+					</div>
 
 					<small>
-						Start an Amazon business with $1, <br /> upgrade your tools as you
-						grow.
+						Enjoy 50% off 1st month or 1st year for the 1,000 Beta Users
 					</small>
-				</div>
-				<div className={styles.closingCTAWrapper__right}>
-					<Image
-						src="/growTogether.png"
-						width={450}
-						height={419}
-						alt="Grow Together"
-					/>
 				</div>
 			</div>
 		</section>

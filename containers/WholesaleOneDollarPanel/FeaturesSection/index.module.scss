@@ -2,6 +2,11 @@
 
 .featuresSection {
 	margin: 4rem auto;
+
+	h2 {
+		font-size: 32px;
+		font-weight: $fontweight_semibold;
+	}
 }
 
 .featuresCardWrapper {

@@ -7,7 +7,6 @@ import HeroBox from '../../containers/Affliate/HeroBox';
 import FirstCTASection from '../../containers/Affliate/FirstCTASection';
 import BenefitsSection from '../../containers/Affliate/BenefitsSection';
 import ApprovalProcessSection from '../../containers/Affliate/ApprovalProcessSection';
-import ClosingCTASection from '../../containers/Affliate/ClosingCTASection';
 import FAQSection from '../../containers/Affliate/FAQSection';
 
 /* Components */
@@ -45,7 +44,6 @@ const Partners: React.FC<Props> = (props) => {
 				<FirstCTASection />
 				<BenefitsSection />
 				<ApprovalProcessSection />
-				<ClosingCTASection />
 				<FAQSection faqDetails={faqDetails} />
 			</main>
 		</>

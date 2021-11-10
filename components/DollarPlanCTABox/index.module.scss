@@ -1,6 +1,7 @@
 @import '../../styles/guidelines';
 
 .dollarPlanCTABox {
+	min-height: 21rem;
 	border: 1px solid $second_silver;
 	border-radius: 7px;
 	margin: 5rem auto;
@@ -37,7 +38,7 @@
 		h2 {
 			color: $prim_dark_2;
 			font-size: $fontsize_subtitle_20;
-			font-weight: $fontweight_medium;
+			font-weight: $fontweight_semibold;
 		}
 
 		p {
@@ -68,6 +69,7 @@
 
 	p {
 		color: $second_grey;
+		font-weight: $fontweight_regular;
 		font-size: 11px;
 		margin-top: 4px;
 		text-align: center;
@@ -75,8 +77,11 @@
 }
 
 .dollarPlanCTA {
-	width: 100%;
+	width: 31rem !important;
+	height: 5rem !important;
 	margin: 0 auto;
+	font-size: $fontsize_content_16 !important;
+	font-weight: $fontweight_semibold !important;
 	@media only screen and(max-width: 750px) {
 		align-self: center;
 	}
@@ -85,11 +90,11 @@
 .detailsListWrapper {
 	border-top: 1px solid $second_silver;
 	list-style: none;
-	padding: 1rem 0;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
+	padding-bottom: 2rem;
 	flex-wrap: wrap;
 
 	@media only screen and(max-width: 750px) {
@@ -108,8 +113,13 @@
 	font-weight: $fontweight_regular;
 	color: inherit;
 	margin-right: 4rem;
+	margin-top: 2rem;
 	span {
 		margin-right: 5px;
+	}
+
+	&:hover {
+		text-decoration: underline;
 	}
 
 	@media only screen and(max-width: 1080px) {
@@ -119,4 +129,16 @@
 	@media only screen and(max-width: 750px) {
 		margin-bottom: 1rem;
 	}
+}
+
+.viewAllFeatures {
+	color: $blue_link_bg_light;
+	background: none;
+	border: none;
+	font-weight: $fontweight_medium;
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	cursor: pointer;
 }

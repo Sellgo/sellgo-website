@@ -18,7 +18,14 @@ export const pricingCardHeaderGradients: { [key: string]: string } = {
 	'Seller Research': `linear-gradient(90deg,#EA8731,#754419)`
 };
 
-export const hideNavigationOnRoutes = ['/affiliates-signup'];
+export const hideNavigationOnRoutes = [
+	'/affiliates-signup',
+	'/contact-sales',
+	'/contact',
+	'/demo'
+];
+export const showCtaNavBarFixedRoutes = ['/contact', '/contact-sales', '/demo'];
+export const showCtaNavBarOnScrollRoutes = ['/home'];
 
 /* Employess size list on contact forms */
 export const employSizeList = [
@@ -62,3 +69,5 @@ export const defaultPhoneCode = {
 	value: '+1',
 	type: 'countryCode'
 };
+
+export const limitDateForCustomerCount = '2021-11-10';

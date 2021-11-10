@@ -16,13 +16,12 @@ const CommonFeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
 			<h2 className="secondary-heading">
-				Sellgo is the tool you&apos;ll need for selling Wholesale on Amazon
+				Sellgo is the tool you&apos;ll need for selling on Amazon
 			</h2>
 			<h3>
-				Streamline your wholesale business, we automate your daily calculation
+				Whether you are doing Wholesale, Brands, or Private Labels,
 				<br />
-				so you can focus on supplier communication and scale your Amazon
-				business.
+				we help you build and grow your Amazon business.
 			</h3>
 
 			<div className={styles.featuresCardWrapper}>

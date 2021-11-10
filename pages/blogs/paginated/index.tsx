@@ -11,7 +11,11 @@ import styles from './index.module.scss';
 import client from '../../../apollo';
 
 /* GraphQL */
-import { GET_FILTERED_BLOGS, GET_PAGINATED_BLOGS } from '../../../graphql/cms';
+import {
+	GET_FILTERED_BLOGS,
+	GET_FILTERED_LATEST_BLOGS,
+	GET_PAGINATED_BLOGS
+} from '../../../graphql/cms';
 
 /* Containers */
 import ShowCaseHeroBox from '../../../containers/Blogs/ShowCaseHerobox';
@@ -33,6 +37,7 @@ interface Props {
 	paginatedBlogs: any;
 	editorsChoiceBlogs: any;
 	popularChoiceBlogs: any;
+	latestBlogs: any;
 	totalPages: {
 		total: number;
 	};
@@ -44,6 +49,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 		paginatedBlogs,
 		popularChoiceBlogs,
 		editorsChoiceBlogs,
+		latestBlogs,
 		totalPages,
 		pageNumber
 	} = props;
@@ -88,6 +94,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 					popularChoiceBlogs={popularChoiceBlogs}
 					editorsChoiceBlogs={editorsChoiceBlogs}
 					openNewsletterModal={() => setIsOpen(true)}
+					latestBlogs={latestBlogs}
 				/>
 
 				<ReactPaginate
@@ -159,10 +166,15 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 		}
 	});
 
+	const latestBlogsResponse = await client.query({
+		query: GET_FILTERED_LATEST_BLOGS
+	});
+
 	const paginatedBlogs = showCaseBlogsResponse.data.posts.nodes;
 	const totalPages = showCaseBlogsResponse.data.posts.pageInfo;
 	const editorsChoiceBlogs = editorsChoiceBlogsResponse.data.posts.nodes;
 	const popularChoiceBlogs = popularChoiceBlogsResponse.data.posts.nodes;
+	const latestBlogs = latestBlogsResponse.data.posts.nodes;
 
 	const isInvalidPage = pageNumber > Math.floor(totalPages.total / 6);
 
@@ -177,6 +189,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 			paginatedBlogs,
 			editorsChoiceBlogs,
 			popularChoiceBlogs,
+			latestBlogs,
 			totalPages,
 			pageNumber
 		}

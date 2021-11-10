@@ -1,24 +1,29 @@
 import React from 'react';
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../CTAButton';
-import GemGenerator from '../../GemGenerator';
 import PricePlanToggleButton from '../../PricePlanToggleButton';
 
 /* Utils */
 import { createCheckoutLink } from '../../../utils/Referral';
+import { prettyPrintNumber } from '../../../utils/Format';
 
 interface Props {
 	name: string;
 	desc: string;
 	monthlyPrice: number;
 	annualPrice: number;
+	isNew?: boolean;
+	isSmall?: boolean;
+	showBetaPricing: boolean;
 
 	// plan details
 	isMonthly: boolean;
+	setIsMonthly: (isMonthly: boolean) => void;
 
 	// used for pricing cards on comparision table
 	withToggle?: boolean;
@@ -27,36 +32,88 @@ interface Props {
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
+	const [showBetaText, setShowBetaText] = React.useState(false);
+	const [showAnimation, setShowAnimation] = React.useState(false);
 	const {
 		name,
 		isMonthly,
 		monthlyPrice,
+		setIsMonthly,
 		annualPrice,
+		showBetaPricing,
 		desc,
+		isNew,
+		isSmall,
 		withToggle,
 		className,
 		handleChange
 	} = props;
 
+	/* Hide beta text if is starter plan */
+	const isStarterPlan = name === 'Starter';
 	const checkoutLink = createCheckoutLink(
 		isMonthly ? 'monthly' : 'yearly',
 		name
 	);
 
+	React.useEffect(() => {
+		const hasShownBetaAnimation = sessionStorage.getItem(
+			'hasShownBetaAnimation'
+		);
+		if (showBetaPricing && !hasShownBetaAnimation) {
+			setTimeout(() => {
+				setShowBetaText(true);
+				setShowAnimation(true);
+				sessionStorage.setItem('hasShownBetaAnimation', 'true');
+			}, 500);
+		} else if (showBetaPricing) {
+			setShowBetaText(true);
+		}
+	}, [showBetaPricing]);
+
+	let betaPricingClassName;
+	let actualPricingClassName;
+	if (showBetaText && showAnimation && !isStarterPlan) {
+		actualPricingClassName = `${styles.actualPrice} ${styles.actualPrice__hidden} ${styles.animate__short}`;
+		betaPricingClassName = `${styles.betaPrice} ${styles.animate__long}`;
+	} else if (showBetaText && !showAnimation && !isStarterPlan) {
+		actualPricingClassName = `${styles.actualPrice} ${styles.actualPrice__hidden}`;
+		betaPricingClassName = `${styles.betaPrice}`;
+	} else {
+		actualPricingClassName = `${styles.actualPrice}`;
+		betaPricingClassName = `${styles.betaPrice} ${styles.betaPrice__hidden}`;
+	}
+
 	return (
-		<div className={className}>
-			<div className={styles.pricingCardHead}>
+		<div
+			className={`
+			${className} 
+			${styles.pricingHeadWrapper} 
+			${isNew && isSmall ? styles.pricingHeadWrapper__new : ''}
+			${!isNew && isSmall ? styles.pricingHeadWrapper__notNew : ''}
+			${isSmall && styles.pricingHeadWrapper__bordered}`}
+		>
+			{isNew && isSmall && (
+				<div className={styles.newFeatureBanner}>
+					<Image src="/star.svg" width={25} height={25} />
+					Most Popular
+				</div>
+			)}
+			<div
+				className={`
+				${styles.pricingCardHead}
+			`}
+			>
 				<div className={styles.pricingCardHead__Left}>
-					{!withToggle && (
-						<div className={styles.planGems}>
-							<GemGenerator name={name} />
-						</div>
-					)}
 					<h2>{name}</h2>
 					{!withToggle && <p>{desc}</p>}
 				</div>
 			</div>
-
+			<PricePlanToggleButton
+				isMonthly={isMonthly}
+				handleChange={() => setIsMonthly(!isMonthly)}
+				className={styles.paymentModeToggle}
+			/>
 			<div className={styles.startingAt}>
 				<p>
 					Starts At{' '}
@@ -66,18 +123,73 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</p>
 
 				{isMonthly ? (
-					<h3>${Math.round(monthlyPrice)}/ Mo</h3>
+					<span className={styles.betaPriceContainer}>
+						<h3
+							className={`${actualPricingClassName} ${
+								withToggle && styles.toggledPrice
+							}`}
+						>
+							${Math.round(monthlyPrice)}/ Mo
+						</h3>
+
+						<h3 className={betaPricingClassName}>
+							${Math.round(monthlyPrice / 2)}/ Mo
+						</h3>
+					</span>
 				) : (
-					<h3>${Math.round(annualPrice / 12)}/ Mo</h3>
+					<span className={styles.betaPriceContainer}>
+						<h3
+							className={`${actualPricingClassName} ${
+								withToggle && styles.toggledPrice
+							}`}
+						>
+							${Math.round(annualPrice / 12)}/ Mo
+						</h3>
+
+						<h3 className={betaPricingClassName}>
+							${Math.round(annualPrice / 24)}/ Mo
+						</h3>
+					</span>
 				)}
 
 				{!isMonthly ? (
 					<p className={styles.billedAtPrice}>
-						Billed At <span className="strike-text">${monthlyPrice * 12}</span>
-						<span style={{ fontWeight: 'bold', textDecoration: 'none' }}>
-							${Math.round(annualPrice)}/yr
+						<span
+							className={`${styles.originalPrice} ${
+								withToggle ? styles.originalPrice__small : ''
+							}`}
+						>
+							Originally <br />
+							billed At{' '}
+							<span className="strike-text">
+								${prettyPrintNumber(monthlyPrice * 12)}
+							</span>
 						</span>
-						Save ${Math.round(monthlyPrice * 12 - annualPrice)}
+						<span
+							className={`${styles.newPrice} ${
+								withToggle ? styles.newPrice__small : ''
+							}`}
+						>
+							Now $
+							{showBetaPricing && !isStarterPlan
+								? prettyPrintNumber(Math.round(annualPrice / 2))
+								: prettyPrintNumber(Math.round(annualPrice))}
+							/yr
+						</span>
+						<span
+							className={`${styles.savings} ${
+								withToggle ? styles.savings__small : ''
+							}`}
+						>
+							Save $
+							{showBetaPricing && !isStarterPlan
+								? prettyPrintNumber(
+										Math.round(monthlyPrice * 12 - annualPrice / 2)
+								  )
+								: prettyPrintNumber(
+										Math.round(monthlyPrice * 12 - annualPrice)
+								  )}
+						</span>
 					</p>
 				) : (
 					<p>Billed Monthly</p>
@@ -96,15 +208,24 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			<CTAButton
 				type="primary"
 				size="medium"
+				variant={isNew ? 'purplePinkRainbow' : 'green'}
 				navigateTo={checkoutLink}
 				className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 				asExternal
 				newTarget
 			>
-				Buy Now
+				{showBetaText && !isStarterPlan ? 'Get the 50% OFF Now' : 'Buy Now'}
 			</CTAButton>
 		</div>
 	);
+};
+
+GenericPriceCardHead.defaultProps = {
+	isNew: false,
+	isSmall: false,
+	withToggle: false,
+	className: '',
+	handleChange: () => null
 };
 
 export default GenericPriceCardHead;

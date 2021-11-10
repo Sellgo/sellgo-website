@@ -1,0 +1,18 @@
+@import '../../../styles/guidelines';
+
+.betaBannerSection {
+	background: $sellgo_pink;
+	height: 4.5rem;
+	color: $prim_white;
+	font-size: $fontsize_content_14;
+	font-weight: $fontweight_medium;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 3rem;
+
+	&__hidden {
+		display: none;
+	}
+}

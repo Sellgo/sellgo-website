@@ -73,6 +73,7 @@
 		}
 
 		p {
+			color: $prim_dark_1;
 			font-size: $fontsize_content_14;
 			margin-bottom: 2rem;
 		}
@@ -91,13 +92,6 @@
 		@media only screen and(max-width: 1080px) {
 			order: 1;
 		}
-	}
-}
-
-.aboutUsCTA {
-	min-width: 15rem;
-	@media only screen and(max-width: 1080px) {
-		margin: 0 auto;
 	}
 }
 

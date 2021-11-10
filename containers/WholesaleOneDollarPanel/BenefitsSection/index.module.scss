@@ -9,7 +9,7 @@
 
 .bgCircle {
 	width: 120rem;
-	background: $grey_0;
+	background: $grey_1;
 	border-radius: 50%;
 	height: 100%;
 	position: absolute;
@@ -59,12 +59,14 @@
 	h3 {
 		margin: 2rem auto;
 		font-size: $fontsize_content_16;
-		font-weight: $fontweight_medium;
+		font-weight: $fontweight_semibold;
+		color: $prim_dark_2;
 	}
 
 	p {
 		font-size: $fontsize_content_14;
-		font-weight: $fontweight_regular;
+		font-weight: $fontweight_medium;
+		color: $prim_dark_1;
 		min-height: 5rem;
 	}
 }
@@ -77,14 +79,11 @@
 		width: 100%;
 		text-align: center;
 	}
-
-	p {
-		font-size: 11px;
-		color: $second_grey;
-		margin-top: 4px;
-	}
 }
 
 .benefitsCTA {
-	width: 100%;
+	width: 30rem !important;
+	height: 4.5rem !important;
+	font-size: $fontsize_content_16 !important;
+	font-weight: $fontweight_semibold !important;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 import { Element } from 'react-scroll';
 
@@ -19,8 +20,8 @@ interface Props {
 	planName: string;
 	summary: string;
 	productsIncluded: any;
-	selectedPlanType: number;
 	showOnlyGeneralPlanDetails?: boolean;
+	showBetaPricing: boolean;
 }
 
 const PricingPlansSection: React.FC<Props> = (props) => {
@@ -28,7 +29,8 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 		planName,
 		summary,
 		productsIncluded,
-		showOnlyGeneralPlanDetails
+		showOnlyGeneralPlanDetails,
+		showBetaPricing
 	} = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
@@ -48,11 +50,26 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 						<p>{summary}</p>
 					</div>
 
-					<PricePlanToggleButton
-						isMonthly={isMonthly}
-						handleChange={() => setIsMonthly(!isMonthly)}
-						className={styles.paymentModeToggle}
-					/>
+					<div className={styles.paymentModeToggle}>
+						<PricePlanToggleButton
+							isMonthly={isMonthly}
+							handleChange={() => setIsMonthly(!isMonthly)}
+							className={styles.paymentModeToggleButton}
+						/>
+						<div className={styles.paymentToggleTextWrapper}>
+							<Image
+								width={25}
+								height={21}
+								src="/handPointIcon.svg"
+								alt="handpointicon"
+							/>
+							<p className={styles.paymentToggleText}>
+								Up to
+								{showBetaPricing ? ' 7 ' : ' 5 '}
+								months free.
+							</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -64,17 +81,16 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					return (
 						<PricingPlansCard
 							key={uuid()}
-							id={product.id}
+							showBetaPricing={showBetaPricing}
 							name={product.name}
-							productsDatabase={product.productsDatabase}
-							salesEstimateCount={product.salesEstimateCount}
+							isNew={product.isNew}
 							monthlyPrice={product.monthlyPrice}
 							annualPrice={product.annualPrice}
 							desc={product.desc}
 							featureSubName={product.featureSubName}
 							featuresLists={product.featuresLists}
+							setIsMonthly={setIsMonthly}
 							// Plan details
-							planName={planName}
 							isMonthly={isMonthly}
 						/>
 					);
@@ -103,20 +119,20 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 								<div className={styles.priceSummaryCard} key={uuid()}>
 									<PricingPlansCardHead
 										// product details
-										id={product.id}
 										name={product.name}
-										productsDatabase={product.productsDatabase}
-										salesEstimateCount={product.salesEstimateCount}
 										monthlyPrice={product.monthlyPrice}
+										showBetaPricing={showBetaPricing}
+										setIsMonthly={setIsMonthly}
 										annualPrice={product.annualPrice}
 										desc={product.desc}
+										isNew={product.isNew}
 										// plan details
 										isMonthly={isMonthly}
-										planName={planName}
 										// optional props for comparision table cards
 										withToggle
 										className={styles.tablePricingSummary}
 										handleChange={() => setIsMonthly(!isMonthly)}
+										isSmall
 									/>
 								</div>
 							);
@@ -132,6 +148,10 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 			)}
 		</>
 	);
+};
+
+PricingPlansSection.defaultProps = {
+	showOnlyGeneralPlanDetails: false
 };
 
 export default PricingPlansSection;

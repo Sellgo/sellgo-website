@@ -16,8 +16,12 @@ const AllFeaturesTable: React.FC<Props> = (props) => {
 		<table className={styles.allFeaturesTable}>
 			<thead>
 				<tr>
-					{header.map((headerVal: string) => {
-						return <th key={uuid()}>{headerVal}</th>;
+					{header.map((headerVal: string, index: number) => {
+						return (
+							<th key={uuid()} className={index === 0 ? styles.first : ''}>
+								<div>{headerVal}</div>
+							</th>
+						);
 					})}
 				</tr>
 			</thead>
@@ -25,8 +29,14 @@ const AllFeaturesTable: React.FC<Props> = (props) => {
 				{body.map((bodyRow: string[]) => {
 					return (
 						<tr key={uuid()}>
-							{bodyRow.map((bodyVal: string) => {
-								return <td key={uuid()}>{bodyVal}</td>;
+							{bodyRow.map((bodyVal: string, index: number) => {
+								return (
+									<td key={uuid()} className={index === 0 ? styles.first : ''}>
+										<div className={bodyVal === '✓' ? styles.blue : ''}>
+											{bodyVal}
+										</div>
+									</td>
+								);
 							})}
 						</tr>
 					);

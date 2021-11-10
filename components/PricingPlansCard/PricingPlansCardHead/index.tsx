@@ -5,21 +5,21 @@ import GenericPlanCardHead from '../GenericPlanCardHead';
 
 interface Props {
 	// product details
-	id: number;
 	name: string;
-	productsDatabase: number;
-	salesEstimateCount: number;
 	monthlyPrice: number;
 	annualPrice: number;
 	desc: string;
+	showBetaPricing: boolean;
 
 	// plan details
 	isMonthly: boolean;
-	planName: string;
+	setIsMonthly: (isMonthly: boolean) => void;
 
 	// used for price summary card head inside table comparision
 	withToggle?: boolean;
 	className?: string;
+	isNew?: boolean;
+	isSmall?: boolean;
 	handleChange?: () => any;
 }
 
@@ -29,18 +29,26 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 		monthlyPrice,
 		annualPrice,
 		desc,
+		isNew,
 		isMonthly,
+		showBetaPricing,
+		setIsMonthly,
 		withToggle,
 		handleChange,
+		isSmall,
 		className
 	} = props;
 
 	return (
 		<>
 			<GenericPlanCardHead
+				isNew={isNew}
+				isSmall={isSmall}
 				name={name}
+				showBetaPricing={showBetaPricing}
 				desc={desc}
 				monthlyPrice={monthlyPrice}
+				setIsMonthly={setIsMonthly}
 				annualPrice={annualPrice}
 				isMonthly={isMonthly}
 				// Optional props
@@ -50,6 +58,14 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 			/>
 		</>
 	);
+};
+
+PricingPlansCardHead.defaultProps = {
+	withToggle: false,
+	className: '',
+	isNew: false,
+	isSmall: false,
+	handleChange: () => null
 };
 
 export default PricingPlansCardHead;

@@ -18,7 +18,7 @@ const MobileNavBar: React.FC<Props> = () => {
 	};
 
 	return (
-		<header className={`mobile-nav-container ${styles.header}`}>
+		<header className={`${styles.header}`}>
 			<nav className={styles.mobileNav}>
 				<Link href="/" passHref>
 					<a>

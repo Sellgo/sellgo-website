@@ -1,7 +1,7 @@
 @import '../../../styles/guidelines';
 
 .heroboxSection {
-	background: linear-gradient(180deg, $blue_8, #133858);
+	background: $tab_active;
 	min-height: 20rem;
 	display: flex;
 	justify-content: center;
@@ -14,12 +14,12 @@
 	h1 {
 		font-size: $fontsize_subtitle_28;
 		font-weight: $fontweight_bold;
-		color: inherit;
+		color: $prim_dark_2;
 		width: 90%;
 	}
 
 	p {
-		color: inherit;
+		color: $prim_dark_1;
 		font-size: $fontsize_content_14;
 		font-weight: $fontweight_regular;
 		margin-bottom: 4rem;

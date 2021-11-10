@@ -21,6 +21,11 @@ export const appendReferralCode = (currentBuyLink: string) => {
 	}
 };
 
+/* Append beta promotion if applicable */
+export const appendBetaPromo = (currentBuyLink: string) => {
+	return `${currentBuyLink}&promo=beta`;
+};
+
 /* Create checkout link for webapp */
 export const createCheckoutLink = (paymentMode: string, name: string) => {
 	const webCheckOutLink = `${
@@ -31,7 +36,12 @@ export const createCheckoutLink = (paymentMode: string, name: string) => {
 		.toLowerCase()}`;
 
 	const checkoutLink = appendReferralCode(webCheckOutLink);
-	return checkoutLink;
+
+	if (name.toUpperCase() !== 'STARTER') {
+		return appendBetaPromo(checkoutLink);
+	} else {
+		return checkoutLink;
+	}
 };
 
 /* Create free trial link for webapp */

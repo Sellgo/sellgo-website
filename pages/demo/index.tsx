@@ -305,6 +305,16 @@ const DemoPage: React.FC<Props> = () => {
 								</Link>
 							</li>
 							<li>
+								<Link href="/seller-database" passHref>
+									<a className="anchor">- Seller Database &#8594; </a>
+								</Link>
+							</li>
+							<li>
+								<Link href="/seller-map" passHref>
+									<a className="anchor">- Seller Map &#8594; </a>
+								</Link>
+							</li>
+							<li>
 								<Link href="/search-management" passHref>
 									<a className="anchor">- Search Management &#8594; </a>
 								</Link>
@@ -320,13 +330,23 @@ const DemoPage: React.FC<Props> = () => {
 								</Link>
 							</li>
 							<li>
-								<Link href="/product-tracker" passHref>
-									<a className="anchor">- Product Tracker &#8594; </a>
+								<Link href="/extension" passHref>
+									<a className="anchor">- Sellgo Chrome Extension &#8594; </a>
 								</Link>
 							</li>
 							<li>
-								<Link href="/extension" passHref>
-									<a className="anchor">- Sellgo Chrome Extension &#8594; </a>
+								<Link href="/keyword-finder" passHref>
+									<a className="anchor">- Keyword Finder &#8594; </a>
+								</Link>
+							</li>
+							<li>
+								<Link href="/product-rank-tracker" passHref>
+									<a className="anchor">- Product Rank Tracker &#8594; </a>
+								</Link>
+							</li>
+							<li>
+								<Link href="/keyword-database" passHref>
+									<a className="anchor">- Keyword Database &#8594; </a>
 								</Link>
 							</li>
 
@@ -499,7 +519,7 @@ const DemoPage: React.FC<Props> = () => {
 					</p>
 
 					<button
-						className="ctabutton ctabutton--primary ctabutton--medium"
+						className={`ctabutton ctabutton--primary ctabutton--medium ${styles.submitButton}`}
 						type="submit"
 						disabled={
 							firstNameErr ||

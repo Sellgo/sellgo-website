@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="37.5" viewBox="0 0 50 37.5">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#545454"/>
+    </linearGradient>
+  </defs>
+  <path id="chart-line-regular_4_" data-name="chart-line-regular (4)" d="M11.489,84.864a1.563,1.563,0,0,0,2.21,0l5.051-5.05,8.271,8.271a1.563,1.563,0,0,0,2.21,0L39.994,77.32l2.88,2.881a2.344,2.344,0,0,0,4-1.657V68.688a1.562,1.562,0,0,0-1.562-1.562H35.456a2.344,2.344,0,0,0-1.657,4l2.881,2.88-8.555,8.555L19.854,74.29a1.563,1.563,0,0,0-2.21,0l-7.26,7.26a1.563,1.563,0,0,0,0,2.21l1.1,1.1ZM48.438,96.813H4.688V65.563A1.562,1.562,0,0,0,3.125,64H1.563A1.562,1.562,0,0,0,0,65.563V98.375A3.125,3.125,0,0,0,3.125,101.5H48.438A1.562,1.562,0,0,0,50,99.938V98.375A1.562,1.562,0,0,0,48.438,96.813Z" transform="translate(0 -64)" fill="url(#linear-gradient)"/>
+</svg>

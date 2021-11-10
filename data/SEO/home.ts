@@ -1,7 +1,7 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Sellgo - Amazon Product Research Tools for FBA Sellers`,
+	title: `Sellgo - Amazon All-In-One Tool for FBA Sellers`,
 	keywords: [
 		'sellgo',
 		'product tracker',
@@ -16,8 +16,10 @@ export const seoData: SEODetails = {
 		'amazon product research',
 		'amazon product research tool'
 	],
-	description: `Explore wholesale solutions and FBA tools for your Amazon business. 
-	Access product research tools to compare profit margin, sales, and more performance metrics. 
+	description: `Explore Amazon FBA All-In-One tool for your Amazon business. 
+	Access Seller Research tool to find Amazon sellers across the world.
+	Access Keyword Research tool to find the high-volume and relevant keywords.
+	Access Product Research tools to compare profit margin, sales, and more performance metrics. 
 	Reliable tools and data to optimize your Amazon FBA business.`,
 	imageUrl: ``,
 	slug: '/'

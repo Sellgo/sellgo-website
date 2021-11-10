@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
-import CTAButton from '../../components/CTAButton';
 import SEOHead from '../../components/SEOHead';
 
 /* Data */
@@ -28,9 +27,7 @@ const AboutUsPage: React.FC<Props> = () => {
 			<main className={styles.aboutUs}>
 				<section className={`page-container ${styles.welcomeSection}`}>
 					<div className={styles.welcomeSection__text}>
-						<h1>
-							Welcome to Sell<span>go</span>
-						</h1>
+						<h1>Welcome to Sellgo</h1>
 
 						<p>
 							Our mission at Sellgo is to empower Amazon sellers with the right
@@ -38,8 +35,8 @@ const AboutUsPage: React.FC<Props> = () => {
 						</p>
 
 						<p>
-							Sellgo was created in 2018 by Amazon sellers for Amazon sellers.
-							While Sellgo started off specializing in Amazon FBA and Amazon
+							Sellgo was created by Amazon sellers for Amazon sellers. While
+							Sellgo started off specializing in Amazon FBA and Amazon
 							Wholesale, we&apos;ve built our tools and services to encompass
 							all sellers with any model and any level of experience including
 							Amazon FBA or Amazon FBA as well as Wholesalers, Private Label
@@ -61,7 +58,7 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.welcomeSection__image}>
 						<Image
-							src="/ptrHerobox_600x360.png"
+							src="/extension_1.png"
 							width={600}
 							height={360}
 							alt="Welcome to sellgo"
@@ -76,10 +73,10 @@ const AboutUsPage: React.FC<Props> = () => {
 						<h2>Our Tools and Services</h2>
 
 						<p>
-							At Sellgo, we have developed 5 different tools that you can start
-							using now. These tools were made to assist sellers at every stage
-							of their selling journey including product scouting to product
-							sourcing to product research.
+							At Sellgo, we have developed useful tools that you can start using
+							now: Chrome Extension, Product Research, Seller Research, Keyword
+							Research, and Perfect Stock. These tools were made to assist
+							sellers at every stage of their selling journey.
 						</p>
 						<p>
 							To learn more about our tools and services, check out our product
@@ -89,7 +86,7 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.contentSection__image}>
 						<Image
-							src="/pfHerobox_600x360.png"
+							src="/seller_map_1.png"
 							width={600}
 							height={360}
 							alt="Tools and Services"
@@ -102,32 +99,21 @@ const AboutUsPage: React.FC<Props> = () => {
 						<h2>Our Pricing Plans</h2>
 
 						<p>
-							We currently offer a free trial and premium plan that you can
-							sign-up for now. Our plans are meant to help any seller at any
-							level of experience. Starting with our free trial, you can use our
-							tools and services for 7-days free.
+							We currently offer a $1.99 and premium plan that you can sign-up
+							for now. Our plans are meant to help any seller at any level of
+							experience.
 						</p>
 
 						<p>
-							For our premium plans, starting with the Starter plan, Suite plan,
-							and ending with the Professional plan. Each plan can be chosen
-							based on the size and needs of your business. Check out of pricing
-							plans below.
+							For our premium plans, starting with the Starter plan, the
+							Professional plan, and ending with the Team plan. Each plan can be
+							chosen based on the size and needs of your business.
 						</p>
-
-						<CTAButton
-							size="small"
-							type="secondary"
-							navigateTo="/pricing"
-							className={styles.aboutUsCTA}
-						>
-							Get Started
-						</CTAButton>
 					</div>
 
 					<div className={styles.contentSection__image}>
 						<Image
-							src="/smHerobox_600x360.png"
+							src="/product_tracker_1.png"
 							width={600}
 							height={360}
 							alt="Pricing Plans section showcase"

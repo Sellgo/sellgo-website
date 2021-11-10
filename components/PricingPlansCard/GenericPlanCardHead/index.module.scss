@@ -1,5 +1,24 @@
 @import '../../../styles/guidelines';
 
+.pricingHeadWrapper {
+	padding: 1rem;
+	position: relative;
+	border-radius: 3px;
+	background: $prim_white;
+
+	&__new {
+		padding-top: 6rem;
+		border-top: none !important;
+	}
+
+	&__notNew {
+		margin-top: 5rem;
+	}
+
+	&__bordered {
+		border: 1px solid $second_silver;
+	}
+}
 .pricingCardHead {
 	display: flex;
 	justify-content: space-between;
@@ -14,15 +33,16 @@
 		width: 100%;
 
 		h2 {
-			font-size: $fontsize_subtitle_24;
+			font-size: $fontsize_subtitle_20;
 			font-weight: $fontweight_bold;
+			color: $prim_dark_2;
 			margin: 0 auto;
 		}
 
 		p {
-			font-size: $fontsize_content_12;
-			font-weight: $fontweight_regular;
-			color: $second_grey;
+			font-size: $fontsize_content_10;
+			font-weight: $fontweight_medium;
+			color: $grey_8;
 			max-width: 33rem;
 			text-align: center;
 			white-space: pre-line;
@@ -31,30 +51,56 @@
 	}
 }
 
-.planGems {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	svg {
-		margin-right: 5px;
-	}
-}
-
 .startingAt {
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_content_10;
 	margin-top: 2rem;
 	text-align: center;
 
 	h3 {
-		color: $blue_8;
+		color: $prim_dark_2;
 		font-size: $fontsize_subtitle_32;
 		font-weight: $fontweight_bold;
+	}
+
+	p {
+		font-size: $fontsize_content_10;
+		font-weight: $fontweight_medium;
+		color: $prim_dark_1;
 	}
 }
 
 .billedAtPrice {
-	span {
-		margin: 0 6px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.originalPrice {
+		font-size: $fontsize_content_14;
+		line-height: 16px;
+		font-weight: $fontweight_regular;
+
+		&__small {
+			font-size: $fontsize_content_12;
+		}
+	}
+
+	.newPrice {
+		margin-left: 10px;
+		margin-right: 18px;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_bold;
+
+		&__small {
+			font-size: $fontsize_content_12;
+		}
+	}
+
+	.savings {
+		font-size: $fontsize_content_14;
+
+		&__small {
+			font-size: $fontsize_content_12;
+		}
 	}
 }
 
@@ -70,11 +116,85 @@
 }
 
 .buyNowCTA {
-	width: 100%;
+	width: 31rem;
+	height: 5rem;
+	font-weight: $fontweight_medium;
 	margin: 3rem auto;
 }
 
 .tableCardCTA {
-	width: 100%;
+	width: 26rem;
+	height: 4rem;
+	font-weight: $fontweight_medium;
 	margin: 0;
+	margin-bottom: 30px;
+}
+
+.newFeatureBanner {
+	position: absolute;
+	top: 0;
+	height: 5rem;
+	background: $purple_pink_gradient;
+
+	/* To compensate for the 1px from border */
+	width: calc(100% + 2px);
+	left: -1px;
+	right: 0;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_medium;
+	color: $prim_white;
+	padding: 0 5rem;
+}
+
+.paymentModeToggle {
+	@media screen and(min-width: 870px) {
+		display: none !important;
+	}
+}
+
+.betaPriceContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	.betaPrice {
+		width: 100%;
+		white-space: nowrap;
+
+		&__hidden {
+			width: 0;
+			overflow: hidden;
+		}
+	}
+
+	.actualPrice {
+		&__hidden {
+			color: $sellgo_purple !important;
+			position: absolute;
+			left: 15px;
+			font-size: $fontsize_content_16 !important;
+			text-decoration: line-through;
+		}
+	}
+
+	.animate {
+		&__short {
+			transition-duration: 500ms !important;
+		}
+
+		&__long {
+			transition-duration: 1500ms !important;
+		}
+	}
+
+	.toggledPrice {
+		/* Override absolute position for the smaller pricing header card */
+		left: 10px;
+	}
 }

@@ -1,27 +1,32 @@
 @import '../../styles/guidelines';
 
 .pricingInfoAlert {
+	background: $grey_1;
 	border: 1px solid $blue_6;
 	color: $prim_dark_2;
 	padding: 1rem 2rem;
 	border-radius: 7px;
-	margin: 2rem auto;
+	margin: 3rem auto;
 
 	h3 {
 		font-size: $fontsize_content_16;
-		color: inherit;
+		font-weight: $fontweight_semibold;
+		color: $prim_dark_2;
 	}
 
 	div {
 		font-size: $fontsize_content_14;
-		color: inherit;
+		color: $prim_dark_1;
 
 		a {
-			text-decoration: underline;
 			color: inherit;
 			font-size: $fontsize_content_12;
 			margin-left: 10px;
 			display: inline-block;
+
+			&:hover {
+				text-decoration: underline;
+			}
 			svg {
 				margin-left: 5px;
 			}

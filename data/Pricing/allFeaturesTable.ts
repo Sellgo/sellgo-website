@@ -2,133 +2,118 @@ export const payMonthlyAndAnnualPlan = [
 	{
 		header: ['Basic', 'Starter', 'Professional', 'Team'],
 		body: [
-			['Money-back guarantee help', '✓', '✓', '✓'],
-			['Cancel any time help', '✓', '✓', '✓'],
-			['Included users', '1', '1', '3'],
-			['Eligible for additional users', '-', '✓', '✓'],
-			['Additional user cost', '-', '$29/mo', '$29/mo']
+			['7-day money-back guarantee help', '✓', '✓', '✓'],
+			['Cancel any time help', '✓', '✓', '✓']
+			// ['Included users', '1', '1', '3'],
+			// ['Eligible for additional users', '-', '✓', '✓'],
+			// ['Additional user cost', '-', '$29/mo', '$29/mo']
 		]
 	},
 	{
 		header: ['Seller Type', 'Starter', 'Professional', 'Team'],
 		body: [
-			['Private Label', '✓', '✓', '✓'],
-			['Wholesale', 'Basic', 'Expert', 'Expert'],
-			['Advanced Seller', '-', '✓', '✓'],
-			['Team', '-', '-', '✓']
+			['Private Label', 'Basic', 'Intermediate', 'Expert'],
+			['Wholesale/ Arbitrage', 'Basic', 'Intermediate', 'Expert'],
+			['Arbitrage', 'Basic', 'Intermediate', 'Expert'],
+			['Brand', '-', '-', '✓'],
+			['Service Provider', '-', '-', '✓']
 		]
 	},
 	{
 		header: ['Product Research', 'Starter', 'Professional', 'Team'],
 		body: [
 			['Chrome Extension', '✓', '✓', '✓'],
-			['Product Tracker', '100 products', '1,000 products', '3,000 products'],
-			[
-				'Amazon Best Sales Estimator',
-				'1,000 estimates/ month',
-				'100,000 estimates/ month',
-				'2000,000 estimates/ month'
-			],
+			['Amazon Best Sales Estimator', '1,000 estimates/ month', '✓', '✓'],
 			['Inventory Insight', '-', '✓', '✓'],
 			['Market share insight', '-', '✓', '✓'],
 			['Product Database', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
-			[
-				'Show Products by Brand',
-				'Incoming soon',
-				'Incoming soon',
-				'Incoming soon'
-			],
-			[
-				'Show Products by Category',
-				'Incoming soon',
-				'Incoming soon',
-				'Incoming soon'
-			]
+			['Brand Database', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
+			['Category Database', 'Incoming soon', 'Incoming soon', 'Incoming soon']
 		]
 	},
 	{
 		header: ['Bulk Profit Research', 'Starter', 'Professional', 'Team'],
 		body: [
-			[
-				'Profit Finder',
-				'25,000 products/ day',
-				'100,000 products/ day',
-				'300,000 products/ day'
-			],
+			['Profit Finder', '25,000 products/ day', '✓', '✓'],
 			['Additional bulk processing', '-', '✓', '✓'],
 			['Data input (UPC, EAN, ASIN, ISBN)', '✓', '✓', '✓'],
 			['Data Buster', '-', '✓', '✓'],
 			['Smart Filter', '-', '✓', '✓'],
-			['Bulk + Filtered Data Export', '✓', '✓', '✓'],
-			['Variation Analysis', '✓', '✓', '✓'],
-			['Multipack Analysis', '✓', '✓', '✓'],
-			['Leads Tracker', '100 products', '5,000 products', '10,000 products']
+			['Bulk + Filtered Data Export', '-', '✓', '✓'],
+			['Variation Analysis', '-', '✓', '✓'],
+			['Multipack Analysis', '-', '✓', '✓'],
+			[
+				'Leads Tracker',
+				'20 products/ day',
+				'200 products/ day',
+				'2,000 products/ day'
+			]
 		]
 	},
 	{
 		header: ['Seller Research', 'Starter', 'Professional', 'Team'],
 		body: [
 			[
-				'Seller Database or Seller Map',
-				'1,000 sellers/ month',
-				'10,000 sellers/ month',
-				'20,000 sellers/ month'
+				'Seller Database/ Map',
+				'100 sellers/ mo',
+				'1,500 sellers/ mo',
+				'10,000 sellers/ mo*'
 			],
 			[
 				'Seller Map Top View',
-				'1,000 sellers',
+				'10 sellers',
 				'10,000 sellers',
-				'20,000 sellers'
+				'20,000 sellers*'
 			],
+			[`Extract Seller's Product`, '20 products/ day', '✓', '✓'],
 			[
-				'Show products by sellers',
-				'500 products/ month',
-				'5,000 products/ month',
-				'10,000 products/ month'
+				`Extract other sellers by seller's products`,
+				'20 sellers/ day',
+				'✓',
+				'✓'
 			],
-			[
-				'Show other sellers by seller&apos;s products',
-				'500 sellers/ month',
-				'5,000 sellers/ month',
-				'10,000 sellers/ month'
-			],
-			['Export Seller Database', '-', 'Annual plan', 'Annual plan'],
-			['Show seller by brand', '-', 'Incoming soon', 'Incoming soon'],
-			['Show seller by category', '-', 'Incoming soon', 'Incoming soon']
+			['Export Seller Database', '-', 'Only Annual plan', 'Only Annual plan'],
+			['Show seller by brand', '-', '✓', '✓'],
+			['Show seller by category', '-', '✓', '✓']
 		]
 	},
 	{
 		header: ['Data Analytics', 'Starter', 'Professional', 'Team'],
 		body: [
 			['True Sales Estimates', '✓', '✓', '✓'],
-			['Historical Product Tracking Data', '1 month', '3 month', '1 year']
+			['Historical Product Tracking Data', '1 month', '1 year', '1 year']
 		]
 	},
 	{
 		header: ['Keyword Research', 'Starter', 'Professional', 'Team'],
 		body: [
-			['Keyword Research', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
-			['Keyword Tracker', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
-			['Keyword Reverse', 'Incoming soon', 'Incoming soon', 'Incoming soon']
+			['Keyword Finder', '3 keywords/ day', '✓', '✓'],
+			['Keyword Database', '3 keywords/ day', '✓', '✓'],
+			[
+				'Product Rank Tracker',
+				'3 keywords/ day',
+				'4,000 keywords',
+				'7,000 keywords*'
+			],
+			['Boost Trackier', '-', '✓', '✓'],
+			['True Rank Performance', '-', '✓', '✓'],
+			['Zapier Integration', '-', '-', '✓'],
+			['Drop/ Raise Trigger', '-', '-', '✓']
 		]
 	},
 	{
-		header: ['Inventory Management', 'Starter', 'Professional', 'Team'],
+		header: ['Perfect Stock', 'Starter', 'Professional', 'Team'],
 		body: [
+			['Dashboard', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
+			['Sales Projection', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
 			[
-				'Simple Inventory Planner',
+				'Seasonality Adjustor',
 				'Incoming soon',
 				'Incoming soon',
 				'Incoming soon'
 			],
-			['Stock Out', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
-			['Cash Flow', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
-			[
-				'Seasonality Analysis',
-				'Incoming soon',
-				'Incoming soon',
-				'Incoming soon'
-			]
+			['Catalog Planning', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
+			['Order Planning', 'Incoming soon', 'Incoming soon', 'Incoming soon']
 		]
 	}
 ];
