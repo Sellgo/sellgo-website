@@ -48,7 +48,7 @@ const SalesEstimator: React.FC<Props> = (props) => {
 				{showCTABanner && <CTABannerSection />}
 				<StandardPlansPricingSection />
 				<FAQSection faqDetails={faqDetails.products[2]} />
-				<ClosingCTASection/>
+				<ClosingCTASection />
 			</main>
 		</>
 	);
@@ -72,7 +72,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 	return {
 		props: {
-			faqDetails: data,
+			faqDetails: data
 		},
 		revalidate: 60 * 15 // 15 minutes
 	};

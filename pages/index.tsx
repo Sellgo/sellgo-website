@@ -49,7 +49,7 @@ const HomePage: React.FC<Props> = (props) => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<HeroBox/>
+			<HeroBox />
 			<main>
 				<InfoSection />
 				<StatisticsSection />
@@ -94,7 +94,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
 	return {
 		props: {
-			homeBlogs: blogsForHome,
+			homeBlogs: blogsForHome
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};
