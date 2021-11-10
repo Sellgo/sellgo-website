@@ -1,6 +1,5 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
-import axios from 'axios';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -35,19 +34,12 @@ import { generatePageURL } from '../utils/SEO';
 /* Types */
 import { ShowcaseBlogDetails } from '../interfaces/Blogs';
 
-/* Config */
-import AppConfig from '../config';
-
-/* Constants */
-import { limitDateForCustomerCount } from '../constants';
-
 interface Props {
 	homeBlogs: ShowcaseBlogDetails[];
-	customerCount: number;
 }
 
 const HomePage: React.FC<Props> = (props) => {
-	const { homeBlogs, customerCount } = props;
+	const { homeBlogs } = props;
 	return (
 		<>
 			<SEOHead
@@ -57,7 +49,7 @@ const HomePage: React.FC<Props> = (props) => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<HeroBox customerCount={customerCount} />
+			<HeroBox />
 			<main>
 				<InfoSection />
 				<StatisticsSection />
@@ -72,7 +64,7 @@ const HomePage: React.FC<Props> = (props) => {
 				<RecentBlogsSection recentBlogs={homeBlogs} />
 				<div className={styles.divider}></div>
 
-				<ClosingCTASection customerCount={customerCount} />
+				<ClosingCTASection />
 			</main>
 		</>
 	);
@@ -88,22 +80,21 @@ export const getStaticProps: GetStaticProps = async () => {
 
 	const blogsForHome = blogResponse.data.posts.nodes;
 
-	const limitDate = new Date(limitDateForCustomerCount).getTime();
-	let customerCount;
-	try {
-		const customerCountResponse = await axios.get(
-			`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
-		);
-		customerCount = Math.max(customerCountResponse.data.count, 23);
-	} catch (error) {
-		customerCount = 56; // Random number for now
-		console.log(error);
-	}
+	// const limitDate = new Date(limitDateForCustomerCount).getTime();
+	// let customerCount;
+	// try {
+	// 	const customerCountResponse = await axios.get(
+	// 		`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
+	// 	);
+	// 	customerCount = Math.max(customerCountResponse.data.count, 23);
+	// } catch (error) {
+	// 	customerCount = 56; // Random number for now
+	// 	console.log(error);
+	// }
 
 	return {
 		props: {
-			homeBlogs: blogsForHome,
-			customerCount
+			homeBlogs: blogsForHome
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};

@@ -8,12 +8,8 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
 
-interface Props {
-	customerCount: number;
-}
-
-const HeroBox: React.FC<Props> = (props: Props) => {
-	const { customerCount } = props;
+const HeroBox = () => {
+	// const { customerCount } = props;
 	const textList = [
 		'dominate #1 search result.',
 		'find profitable products.',
@@ -95,10 +91,10 @@ const HeroBox: React.FC<Props> = (props: Props) => {
 					>
 						Get 50% OFF Now
 					</CTAButton>
-					<div className={styles.signUpDetails}>
+					{/* <div className={styles.signUpDetails}>
 						<Image src="/smileyFace.svg" width={25} height={25} />
 						<p> {customerCount} people have signed up.</p>
-					</div>
+					</div> */}
 				</div>
 
 				<small className={`${styles.ctaOverText}`}>

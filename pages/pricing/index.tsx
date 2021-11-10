@@ -21,15 +21,13 @@ import { generatePageURL } from '../../utils/SEO';
 
 /* App Config */
 import AppConfig from '../../config';
-import { limitDateForCustomerCount } from '../../constants';
 
 interface Props {
 	pricingFaqDetails: { products: any; bundles: any };
-	customerCount: number;
 }
 
 const PricingPage: React.FC<Props> = (props) => {
-	const { pricingFaqDetails, customerCount } = props;
+	const { pricingFaqDetails } = props;
 	const [modalOpen, setModalOpen] = useState<boolean>(false);
 	const [showBetaPricing, setShowBetaPricing] = useState<boolean>(false);
 
@@ -85,7 +83,7 @@ const PricingPage: React.FC<Props> = (props) => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<BetaPopupModal customerCount={customerCount} />
+				<BetaPopupModal />
 			</Modal>
 		</>
 	);
@@ -95,22 +93,21 @@ export const getStaticProps: GetStaticProps = async () => {
 	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/pricing.json`);
 	const pricingFaqDetails = response.data;
 
-	const limitDate = new Date(limitDateForCustomerCount).getTime();
-	let customerCount;
-	try {
-		const customerCountResponse = await axios.get(
-			`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
-		);
-		customerCount = Math.max(customerCountResponse.data.count, 23);
-	} catch (error) {
-		customerCount = 56; // Random number for now
-		console.log(error);
-	}
+	// const limitDate = new Date(limitDateForCustomerCount).getTime();
+	// let customerCount;
+	// try {
+	// 	const customerCountResponse = await axios.get(
+	// 		`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
+	// 	);
+	// 	customerCount = Math.max(customerCountResponse.data.count, 23);
+	// } catch (error) {
+	// 	customerCount = 56; // Random number for now
+	// 	console.log(error);
+	// }
 
 	return {
 		props: {
-			pricingFaqDetails,
-			customerCount
+			pricingFaqDetails
 		}
 	};
 };
