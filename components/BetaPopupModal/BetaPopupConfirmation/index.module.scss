@@ -1,0 +1,45 @@
+@import '../../../styles/guidelines';
+
+.betaPopupModal {
+	position: relative;
+	outline: none !important;
+	width: 70rem;
+	height: 43rem;
+	padding: 3rem 10rem;
+	background: $tab_active;
+	border: 1px solid $border-color-1;
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	p {
+		font-size: $fontsize_content_18;
+		font-weight: $fontweight_semibold;
+		color: $prim_dark_2;
+	}
+}
+
+.title {
+	font-size: $fontsize_subtitle_20 !important;
+	font-weight: $fontweight_bold !important;
+	margin-bottom: 3rem;
+}
+
+.paperPlaneIcon {
+	margin: 4rem 0;
+}
+
+.learnMore {
+	margin-top: 10px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: $blue_link_bg_light !important;
+	font-size: $fontsize_content_14 !important;
+	font-weight: $fontweight_medium !important;
+	display: flex;
+	align-items: center;
+}

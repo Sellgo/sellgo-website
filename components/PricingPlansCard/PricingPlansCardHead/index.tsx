@@ -9,7 +9,6 @@ interface Props {
 	monthlyPrice: number;
 	annualPrice: number;
 	desc: string;
-	showBetaPricing: boolean;
 
 	// plan details
 	isMonthly: boolean;
@@ -31,7 +30,6 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 		desc,
 		isNew,
 		isMonthly,
-		showBetaPricing,
 		setIsMonthly,
 		withToggle,
 		handleChange,
@@ -45,7 +43,6 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 				isNew={isNew}
 				isSmall={isSmall}
 				name={name}
-				showBetaPricing={showBetaPricing}
 				desc={desc}
 				monthlyPrice={monthlyPrice}
 				setIsMonthly={setIsMonthly}

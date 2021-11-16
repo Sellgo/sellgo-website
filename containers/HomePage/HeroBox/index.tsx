@@ -89,7 +89,7 @@ const HeroBox = () => {
 						navigateTo="/pricing?type=monthly-and-annual-plans"
 						className={styles.ctaHeroBox}
 					>
-						Get 50% OFF Now
+						Get Started Now
 					</CTAButton>
 					{/* <div className={styles.signUpDetails}>
 						<Image src="/smileyFace.svg" width={25} height={25} />
@@ -98,8 +98,8 @@ const HeroBox = () => {
 				</div>
 
 				<small className={`${styles.ctaOverText}`}>
-					Enjoy 50% off 1st month or 1st year <br />
-					for the first 1,000 Beta Users
+					Start an Amazon business with $1.99, <br />
+					upgrade your tools as you grow.
 				</small>
 				<div className={styles.heroboxImage}>
 					<Image

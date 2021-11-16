@@ -32,7 +32,7 @@ const ClosingCTASection = () => {
 							navigateTo="/pricing"
 							className={styles.closingCTA}
 						>
-							Get 50% OFF Today
+							Get Started Now
 						</CTAButton>
 						{/* <div className={styles.signUpDetails}>
 							<Image src="/smileyFace.svg" width={25} height={25} />
@@ -41,7 +41,8 @@ const ClosingCTASection = () => {
 					</div>
 
 					<small>
-						Enjoy 50% off 1st month or 1st year for the 1,000 Beta Users
+						Start an Amazon business with $1.99, <br />
+						upgrade your tools as you grow.
 					</small>
 				</div>
 			</div>

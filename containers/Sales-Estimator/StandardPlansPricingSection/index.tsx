@@ -14,7 +14,6 @@ const StandardPlansPricingSection = () => {
 				return (
 					<PricingPlansSection
 						key={plan}
-						showBetaPricing
 						planName={"Research Market and Competitor's Product in Seconds."}
 						summary={`Sellgo will help you find the right markets and the right products to sell, 
 							with access to daily sales data you need to make informed decisions.`}
