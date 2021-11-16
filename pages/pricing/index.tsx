@@ -65,7 +65,10 @@ const PricingPage: React.FC<Props> = (props) => {
 				imageUrl={seoData.imageUrl}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<BetaBanner showBetaPricing={showBetaPricing} customerCount={customerCount}/>
+			<BetaBanner
+				showBetaPricing={showBetaPricing}
+				customerCount={customerCount}
+			/>
 			<HeroBox
 				isProductsPlanSelected={isProductsPanelSelected}
 				setProductsPanel={() => setIsProductsPanelSelected(true)}
@@ -73,10 +76,7 @@ const PricingPage: React.FC<Props> = (props) => {
 			/>
 			{/* render either prcing panel or bundles panel */}
 			{isProductsPanelSelected ? (
-				<ProductsPanel
-					productsPanelFaqList={pricingFaqDetails.products}
-					showBetaPricing={showBetaPricing}
-				/>
+				<ProductsPanel productsPanelFaqList={pricingFaqDetails.products} />
 			) : (
 				<BundlesPanel />
 			)}
@@ -87,7 +87,10 @@ const PricingPage: React.FC<Props> = (props) => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<BetaPopupModal customerCount={customerCount} />
+				<BetaPopupModal
+					customerCount={customerCount}
+					setModalOpen={setModalOpen}
+				/>
 			</Modal>
 		</>
 	);

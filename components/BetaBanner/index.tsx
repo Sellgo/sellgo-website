@@ -19,7 +19,7 @@ const BetaBanner = (props: Props) => {
 	const handleModalClose = () => {
 		setModalOpen(false);
 	};
-	
+
 	return (
 		<>
 			<div
@@ -31,13 +31,9 @@ const BetaBanner = (props: Props) => {
 						: `${styles.betaBannerSection} ${styles.betaBannerSection__hidden}`
 				}
 			>
-				Enjoy 50% off 1st month or 1st year for the 1,000 First Time Members. Get coupon code
-				&nbsp;
-				<Image
-					src={'/longArrowRightWhite.svg'}
-					width={20}
-					height={12}
-				/>
+				Enjoy 50% off 1st month or 1st year for the 1,000 First Time Members.
+				Get coupon code &nbsp;
+				<Image src={'/longArrowRightWhite.svg'} width={20} height={12} />
 			</div>
 			<Modal
 				isOpen={modalOpen}
@@ -45,7 +41,10 @@ const BetaBanner = (props: Props) => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<BetaPopupModal customerCount={customerCount} setModalOpen={setModalOpen}/>
+				<BetaPopupModal
+					customerCount={customerCount}
+					setModalOpen={setModalOpen}
+				/>
 			</Modal>
 		</>
 	);

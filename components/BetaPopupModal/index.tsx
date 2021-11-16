@@ -1,13 +1,12 @@
-
 import React from 'react';
 import Link from 'next/link';
 import validator from 'validator';
 
 /* Styling */
+import axios from 'axios';
 import styles from './index.module.scss';
 import FormInput from '../FormInput';
 import AppConfig from '../../config';
-import axios from 'axios';
 
 interface Props {
 	customerCount: number;
@@ -33,11 +32,11 @@ const BetaPopupModal: React.FC<Props> = (props: Props) => {
 		setEmail('');
 		setEmailErr(false);
 	};
-	
+
 	const handleChange = (e: any) => {
 		const { value } = e.target;
 		setEmail(value);
-	}
+	};
 
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
@@ -62,45 +61,46 @@ const BetaPopupModal: React.FC<Props> = (props: Props) => {
 			<p className={styles.betaDescription}>
 				1st month or 1st year of&nbsp;
 				<span className={styles.seatsLeft}>
-					 1,000
-					 <span className={styles.actualSeatsLeft}>{1000 - customerCount} seats left.</span>
+					1,000
+					<span className={styles.actualSeatsLeft}>
+						{1000 - customerCount} seats left.
+					</span>
 				</span>
 				&nbsp;first time member Professional or team plan only.
 			</p>
-				<FormInput
-					className={styles.formInput}
-					label=""
-					id="email"
-					type="email"
-					name="email"
-					placeholder="youremail@address.com"
-					onChange={handleChange}
-					value={email}
-					autoComplete="off"
-					required
-					hasError={emailErr}
-					errorMessage="Invalid Email"
-				/>
-				<button className={styles.submitButton} onClick={handleSubmit}>
-					<span className={styles.innerButton}>
-						Get My Discount Code Now
-					</span>
-				</button>
+			<FormInput
+				className={styles.formInput}
+				label=""
+				id="email"
+				type="email"
+				name="email"
+				placeholder="youremail@address.com"
+				onChange={handleChange}
+				value={email}
+				autoComplete="off"
+				required
+				hasError={emailErr}
+				errorMessage="Invalid Email"
+			/>
+			<button className={styles.submitButton} onClick={handleSubmit}>
+				<span className={styles.innerButton}>Get My Discount Code Now</span>
+			</button>
 
 			<p className={styles.moneybackTerms}>
 				7-day money back guarantee too, no questions asked.
 			</p>
 
 			<p className={styles.betaTerms}>
-				We&apos;re committed to your privacy. Sellgo uses the information you provide to us 
-				to contact you about our relevant content, products, and services. You may unsubscribe 
-				from these communications at any time.
+				We&apos;re committed to your privacy. Sellgo uses the information you
+				provide to us to contact you about our relevant content, products, and
+				services. You may unsubscribe from these communications at any time.
 			</p>
 			<p className={styles.betaTerms}>
 				For more information, check out our&nbsp;
 				<Link href="/privacy-policy" passHref>
 					<a>Privacy Policy</a>
-				</Link>.
+				</Link>
+				.
 			</p>
 		</div>
 	);

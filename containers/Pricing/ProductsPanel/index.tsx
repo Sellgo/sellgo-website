@@ -26,14 +26,13 @@ import { FAQDetails } from '../../../interfaces/FAQ';
 
 interface Props {
 	productsPanelFaqList: FAQDetails[];
-	showBetaPricing: boolean;
 }
 
 const ProductsPanel: React.FC<Props> = (props) => {
 	// Only for server side isomorphic apps
 	resetIdCounter();
 
-	const { productsPanelFaqList, showBetaPricing } = props;
+	const { productsPanelFaqList } = props;
 
 	const router = useRouter();
 
@@ -123,7 +122,6 @@ const ProductsPanel: React.FC<Props> = (props) => {
 								planName={plan.planName}
 								summary={plan.summary}
 								productsIncluded={plan.productsIncluded}
-								showBetaPricing={showBetaPricing}
 							/>
 						</TabPanel>
 					);

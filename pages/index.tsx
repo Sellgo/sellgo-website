@@ -40,7 +40,6 @@ import { ShowcaseBlogDetails } from '../interfaces/Blogs';
 /* Constants */
 import { limitDateForCustomerCount } from '../constants';
 
-
 interface Props {
 	customerCount: number;
 	homeBlogs: ShowcaseBlogDetails[];
@@ -57,7 +56,7 @@ const HomePage: React.FC<Props> = (props) => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<BetaBanner showBetaPricing customerCount={customerCount}/>
+			<BetaBanner showBetaPricing customerCount={customerCount} />
 			<HeroBox />
 			<main>
 				<InfoSection />

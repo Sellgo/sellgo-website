@@ -19,7 +19,6 @@ interface Props {
 	annualPrice: number;
 	isNew?: boolean;
 	isSmall?: boolean;
-	showBetaPricing: boolean;
 
 	// plan details
 	isMonthly: boolean;
@@ -32,15 +31,12 @@ interface Props {
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
-	const [showBetaText, setShowBetaText] = React.useState(false);
-	const [showAnimation, setShowAnimation] = React.useState(false);
 	const {
 		name,
 		isMonthly,
 		monthlyPrice,
 		setIsMonthly,
 		annualPrice,
-		showBetaPricing,
 		desc,
 		isNew,
 		isSmall,
@@ -49,40 +45,10 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		handleChange
 	} = props;
 
-	/* Hide beta text if is starter plan */
-	const isStarterPlan = name === 'Starter';
 	const checkoutLink = createCheckoutLink(
 		isMonthly ? 'monthly' : 'yearly',
 		name
 	);
-
-	React.useEffect(() => {
-		const hasShownBetaAnimation = sessionStorage.getItem(
-			'hasShownBetaAnimation'
-		);
-		if (showBetaPricing && !hasShownBetaAnimation) {
-			setTimeout(() => {
-				setShowBetaText(true);
-				setShowAnimation(true);
-				sessionStorage.setItem('hasShownBetaAnimation', 'true');
-			}, 500);
-		} else if (showBetaPricing) {
-			setShowBetaText(true);
-		}
-	}, [showBetaPricing]);
-
-	let betaPricingClassName;
-	let actualPricingClassName;
-	if (showBetaText && showAnimation && !isStarterPlan) {
-		actualPricingClassName = `${styles.actualPrice} ${styles.actualPrice__hidden} ${styles.animate__short}`;
-		betaPricingClassName = `${styles.betaPrice} ${styles.animate__long}`;
-	} else if (showBetaText && !showAnimation && !isStarterPlan) {
-		actualPricingClassName = `${styles.actualPrice} ${styles.actualPrice__hidden}`;
-		betaPricingClassName = `${styles.betaPrice}`;
-	} else {
-		actualPricingClassName = `${styles.actualPrice}`;
-		betaPricingClassName = `${styles.betaPrice} ${styles.betaPrice__hidden}`;
-	}
 
 	return (
 		<div
@@ -125,29 +91,21 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				{isMonthly ? (
 					<span className={styles.betaPriceContainer}>
 						<h3
-							className={`${actualPricingClassName} ${
+							className={`${styles.actualPrice} ${
 								withToggle && styles.toggledPrice
 							}`}
 						>
 							${Math.round(monthlyPrice)}/ Mo
 						</h3>
-
-						<h3 className={betaPricingClassName}>
-							${Math.round(monthlyPrice / 2)}/ Mo
-						</h3>
 					</span>
 				) : (
 					<span className={styles.betaPriceContainer}>
 						<h3
-							className={`${actualPricingClassName} ${
+							className={`${styles.actualPrice} ${
 								withToggle && styles.toggledPrice
 							}`}
 						>
 							${Math.round(annualPrice / 12)}/ Mo
-						</h3>
-
-						<h3 className={betaPricingClassName}>
-							${Math.round(annualPrice / 24)}/ Mo
 						</h3>
 					</span>
 				)}
@@ -170,10 +128,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 								withToggle ? styles.newPrice__small : ''
 							}`}
 						>
-							Now $
-							{showBetaPricing && !isStarterPlan
-								? prettyPrintNumber(Math.round(annualPrice / 2))
-								: prettyPrintNumber(Math.round(annualPrice))}
+							Now ${prettyPrintNumber(Math.round(annualPrice))}
 							/yr
 						</span>
 						<span
@@ -182,13 +137,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 							}`}
 						>
 							Save $
-							{showBetaPricing && !isStarterPlan
-								? prettyPrintNumber(
-										Math.round(monthlyPrice * 12 - annualPrice / 2)
-								  )
-								: prettyPrintNumber(
-										Math.round(monthlyPrice * 12 - annualPrice)
-								  )}
+							{prettyPrintNumber(Math.round(monthlyPrice * 12 - annualPrice))}
 						</span>
 					</p>
 				) : (
@@ -214,7 +163,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				asExternal
 				newTarget
 			>
-				{showBetaText && !isStarterPlan ? 'Get the 50% OFF Now' : 'Buy Now'}
+				Buy Now
 			</CTAButton>
 		</div>
 	);
