@@ -7,8 +7,8 @@ import Modal from 'react-modal';
 import HeroBox from '../../containers/Pricing/HeroBox';
 import ProductsPanel from '../../containers/Pricing/ProductsPanel';
 import BundlesPanel from '../../containers/Pricing/BundlesPanel';
-import BetaPopupModal from '../../containers/Pricing/BetaPopupModal';
-import BetaBanner from '../../containers/Pricing/BetaBanner';
+import BetaPopupModal from '../../components/BetaPopupModal';
+import BetaBanner from '../../components/BetaBanner';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -22,12 +22,16 @@ import { generatePageURL } from '../../utils/SEO';
 /* App Config */
 import AppConfig from '../../config';
 
+/* Constants */
+import { limitDateForCustomerCount } from '../../constants';
+
 interface Props {
 	pricingFaqDetails: { products: any; bundles: any };
+	customerCount: number;
 }
 
 const PricingPage: React.FC<Props> = (props) => {
-	const { pricingFaqDetails } = props;
+	const { pricingFaqDetails, customerCount } = props;
 	const [modalOpen, setModalOpen] = useState<boolean>(false);
 	const [showBetaPricing, setShowBetaPricing] = useState<boolean>(false);
 
@@ -61,7 +65,10 @@ const PricingPage: React.FC<Props> = (props) => {
 				imageUrl={seoData.imageUrl}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			{<BetaBanner showBetaPricing={showBetaPricing} />}
+			<BetaBanner
+				showBetaPricing={showBetaPricing}
+				customerCount={customerCount}
+			/>
 			<HeroBox
 				isProductsPlanSelected={isProductsPanelSelected}
 				setProductsPanel={() => setIsProductsPanelSelected(true)}
@@ -69,10 +76,7 @@ const PricingPage: React.FC<Props> = (props) => {
 			/>
 			{/* render either prcing panel or bundles panel */}
 			{isProductsPanelSelected ? (
-				<ProductsPanel
-					productsPanelFaqList={pricingFaqDetails.products}
-					showBetaPricing={showBetaPricing}
-				/>
+				<ProductsPanel productsPanelFaqList={pricingFaqDetails.products} />
 			) : (
 				<BundlesPanel />
 			)}
@@ -83,7 +87,10 @@ const PricingPage: React.FC<Props> = (props) => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<BetaPopupModal />
+				<BetaPopupModal
+					customerCount={customerCount}
+					setModalOpen={setModalOpen}
+				/>
 			</Modal>
 		</>
 	);
@@ -93,21 +100,21 @@ export const getStaticProps: GetStaticProps = async () => {
 	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/pricing.json`);
 	const pricingFaqDetails = response.data;
 
-	// const limitDate = new Date(limitDateForCustomerCount).getTime();
-	// let customerCount;
-	// try {
-	// 	const customerCountResponse = await axios.get(
-	// 		`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
-	// 	);
-	// 	customerCount = Math.max(customerCountResponse.data.count, 23);
-	// } catch (error) {
-	// 	customerCount = 56; // Random number for now
-	// 	console.log(error);
-	// }
+	const limitDate = new Date(limitDateForCustomerCount).getTime();
+	let customerCount;
+	try {
+		const customerCountResponse = await axios.get(
+			`${AppConfig.API_URL}/customer-count?limit_date=${limitDate}`
+		);
+		customerCount = Math.max(customerCountResponse.data.count, 23);
+	} catch (error) {
+		customerCount = 23; // Random number for now
+	}
 
 	return {
 		props: {
-			pricingFaqDetails
+			pricingFaqDetails,
+			customerCount
 		}
 	};
 };
