@@ -1,0 +1,140 @@
+@import '../../styles/guidelines';
+
+.betaPopupModal {
+	position: relative;
+	outline: none !important;
+	width: 70rem;
+	height: 53rem;
+	padding: 3rem 10rem;
+	background: $prim_white;
+	border: 1px solid $border-color-1;
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	h2 {
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_bold;
+		margin-bottom: 4rem;
+
+		@media screen and (max-width: 800px) {
+			font-size: $fontsize_subtitle_28;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		padding: 3.5rem 5rem;
+		width: 90vw;
+	}
+}
+
+.betaDescription {
+	font-size: $fontsize_subtitle_24;
+	font-weight: $fontweight_semibold;
+
+	.seatsLeft {
+		position: relative !important;
+		text-decoration: line-through;
+		
+	}
+	
+	.actualSeatsLeft {
+		position: absolute;
+		width: 200px;
+		left: -20px;
+		color: $sellgo_purple;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_semibold;
+		top: -20px;
+	}
+
+	@media screen and (max-width: 800px) {
+		font-size: $fontsize_content_16;
+	}
+}
+
+.betaTerms {
+	font-size: $fontsize_content_12;
+	font-weight: $fontweight_light;
+	color: $black_1;
+	margin-bottom: 5px;
+
+	a {
+		color: $black_1 !important;
+		text-decoration: underline;
+	}
+}
+
+.moneybackTerms {
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	color: $black_1;
+	font-size: $fontsize_content_12;
+	font-weight: $fontweight_regular;
+}
+
+.formInput {
+	margin-top: 18px;
+	margin-bottom: 10px;
+	width: 30rem;
+
+	@media only screen and(max-width: 750px) {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	input {
+		width: 100%;
+		height: 4rem;
+		background: $prim_white;
+		border: 1px solid $second_silver;
+		border-radius: 3px;
+		color: $prim_dark_2;
+		font-size: $fontsize_content_14;
+		font-family: inherit;
+		padding: 0 1rem;
+		&:focus {
+			outline: 0;
+		}
+
+		&__error {
+			border: 1px solid $system_red;
+		}
+	}
+
+	small {
+		font-size: $fontsize_content_12;
+		color: $system_red;
+	}
+}
+
+.submitButton {
+	cursor: pointer;
+	width: 30rem;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 7px;
+	background: $orange_purple_gradient;
+	color: $prim_white;
+	padding: 3px !important;
+	border: none;
+
+	.innerButton {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $prim_white;
+		border-radius: 6px;
+		color: $black_1;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_bold;
+	}
+}
+
