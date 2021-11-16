@@ -1,22 +1,27 @@
 import React from 'react';
 import Link from 'next/link';
 import validator from 'validator';
+import axios from 'axios';
 
 /* Styling */
-import axios from 'axios';
 import styles from './index.module.scss';
+
+/* Components */
+import BetaPopupConfirmation from './BetaPopupConfirmation';
 import FormInput from '../FormInput';
 import AppConfig from '../../config';
 
 interface Props {
 	customerCount: number;
 	setModalOpen: (open: boolean) => void;
+	isPricingPage?: boolean;
 }
 
 const BetaPopupModal: React.FC<Props> = (props: Props) => {
-	const { customerCount, setModalOpen } = props;
+	const { customerCount, setModalOpen, isPricingPage } = props;
 	const [email, setEmail] = React.useState('');
 	const [emailErr, setEmailErr] = React.useState(false);
+	const [formSubmitted, setFormSubmitted] = React.useState(false);
 
 	/* Effects for Email validation */
 	React.useEffect(() => {
@@ -52,13 +57,22 @@ const BetaPopupModal: React.FC<Props> = (props: Props) => {
 			const response = await axios.post(URL, formData);
 			if (response.status === 201) {
 				clearForm();
-				setModalOpen(false);
+				setFormSubmitted(true);
 			}
 		} catch (err) {
 			console.error('Error Sending data to hubspot');
 			clearForm();
 		}
 	};
+
+	if (formSubmitted) {
+		return (
+			<BetaPopupConfirmation
+				setModalOpen={setModalOpen}
+				isPricingPage={isPricingPage}
+			/>
+		);
+	}
 
 	return (
 		<div className={styles.betaPopupModal}>
@@ -87,7 +101,11 @@ const BetaPopupModal: React.FC<Props> = (props: Props) => {
 				hasError={emailErr}
 				errorMessage="Invalid Email"
 			/>
-			<button className={styles.submitButton} onClick={handleSubmit} disabled={emailErr || !email}>
+			<button
+				className={styles.submitButton}
+				onClick={handleSubmit}
+				disabled={emailErr || !email}
+			>
 				<span className={styles.innerButton}>Get My Discount Code Now</span>
 			</button>
 
@@ -109,6 +127,10 @@ const BetaPopupModal: React.FC<Props> = (props: Props) => {
 			</p>
 		</div>
 	);
+};
+
+BetaPopupModal.defaultProps = {
+	isPricingPage: false
 };
 
 export default BetaPopupModal;

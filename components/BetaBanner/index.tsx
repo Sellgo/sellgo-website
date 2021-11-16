@@ -11,10 +11,11 @@ import BetaPopupModal from '../BetaPopupModal';
 interface Props {
 	showBetaPricing: boolean;
 	customerCount: number;
+	isPricingPage?: boolean;
 }
 
 const BetaBanner = (props: Props) => {
-	const { showBetaPricing, customerCount } = props;
+	const { showBetaPricing, customerCount, isPricingPage } = props;
 	const [modalOpen, setModalOpen] = React.useState<boolean>(false);
 	const handleModalClose = () => {
 		setModalOpen(false);
@@ -44,10 +45,15 @@ const BetaBanner = (props: Props) => {
 				<BetaPopupModal
 					customerCount={customerCount}
 					setModalOpen={setModalOpen}
+					isPricingPage={isPricingPage}
 				/>
 			</Modal>
 		</>
 	);
+};
+
+BetaBanner.defaultProps = {
+	isPricingPage: false
 };
 
 export default BetaBanner;

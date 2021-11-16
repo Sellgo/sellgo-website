@@ -68,6 +68,7 @@ const PricingPage: React.FC<Props> = (props) => {
 			<BetaBanner
 				showBetaPricing={showBetaPricing}
 				customerCount={customerCount}
+				isPricingPage
 			/>
 			<HeroBox
 				isProductsPlanSelected={isProductsPanelSelected}
