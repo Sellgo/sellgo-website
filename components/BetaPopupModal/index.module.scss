@@ -134,5 +134,10 @@
 		color: $black_1;
 		font-size: $fontsize_content_16;
 		font-weight: $fontweight_bold;
+
+		&:hover {
+			background: none;
+			color: $prim_white;
+		}
 	}
 }
