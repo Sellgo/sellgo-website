@@ -40,6 +40,11 @@ const BetaPopupModal: React.FC<Props> = (props: Props) => {
 
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
+
+		if (emailErr) {
+			return;
+		}
+
 		const formData = new FormData();
 		formData.append('email', email);
 		try {
@@ -82,7 +87,7 @@ const BetaPopupModal: React.FC<Props> = (props: Props) => {
 				hasError={emailErr}
 				errorMessage="Invalid Email"
 			/>
-			<button className={styles.submitButton} onClick={handleSubmit}>
+			<button className={styles.submitButton} onClick={handleSubmit} disabled={emailErr || !email}>
 				<span className={styles.innerButton}>Get My Discount Code Now</span>
 			</button>
 

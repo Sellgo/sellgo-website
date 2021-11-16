@@ -131,7 +131,7 @@
 		justify-content: center;
 		background: $prim_white;
 		border-radius: 6px;
-		color: $black_1;
+		color: $prim_dark_2;
 		font-size: $fontsize_content_16;
 		font-weight: $fontweight_bold;
 
@@ -139,5 +139,11 @@
 			background: none;
 			color: $prim_white;
 		}
+	}
+
+	&:disabled {
+		opacity: 0.8;
+		cursor: default;
+		pointer-events: none;
 	}
 }
