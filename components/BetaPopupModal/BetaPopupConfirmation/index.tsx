@@ -21,7 +21,9 @@ const BetaPopupConfirmation = (props: Props) => {
 		<div className={styles.betaPopupModal}>
 			<p className={styles.title}> You&apos;re all set. </p>
 			<p> Your 50% OFF coupon code has been sent to your email. </p>
-			<Image src="/pinkPaperPlane.svg" width={70} height={70} />
+			<div className={styles.paperPlaneIcon}>
+				<Image src="/pinkPaperPlane.svg" width={70} height={70} />
+			</div>
 			<p>
 				Crush your Amazon selling in 2021 and beyond with
 				<br/>
