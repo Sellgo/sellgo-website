@@ -25,7 +25,6 @@ import StepperInfoSection from '../containers/HomePage/StepperInfoSection';
 
 /* Components */
 import SEOHead from '../components/SEOHead';
-import BetaBanner from '../components/BetaBanner';
 
 /* Data */
 import { seoData } from '../data/SEO/home';
@@ -41,12 +40,11 @@ import { ShowcaseBlogDetails } from '../interfaces/Blogs';
 import { limitDateForCustomerCount } from '../constants';
 
 interface Props {
-	customerCount: number;
 	homeBlogs: ShowcaseBlogDetails[];
 }
 
 const HomePage: React.FC<Props> = (props) => {
-	const { homeBlogs, customerCount } = props;
+	const { homeBlogs } = props;
 	return (
 		<>
 			<SEOHead
@@ -56,7 +54,6 @@ const HomePage: React.FC<Props> = (props) => {
 				keywords={seoData.keywords.join(',')}
 				pageUrl={generatePageURL(seoData.slug)}
 			/>
-			<BetaBanner showBetaPricing customerCount={customerCount} />
 			<HeroBox />
 			<main>
 				<InfoSection />
