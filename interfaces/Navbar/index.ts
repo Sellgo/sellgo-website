@@ -16,7 +16,8 @@ export type Products =
 	| 'orderPlanning'
 	| 'salesProjection'
 	| 'seasonalityAdjustor'
-	| 'catalogPlanning';
+	| 'catalogPlanning'
+	| 'Tpl';
 
 export type Resources = 'blogs' | 'affiliateProgram' | 'salesEstimator';
 

@@ -2,6 +2,50 @@ import { StepDetail } from '../../../interfaces/Stepper';
 
 export const wholesaleFeatures: StepDetail[] = [
 	{
+		title: 'Sales Forecast',
+		icon: 'salesProjection',
+		subTitle: 'Quick Product Validation in Your Browser',
+		description: `Get Amazon Product Research capabilities inside the Sellgo Chrome
+		Extension, helps give Amazon sellers a quick validation of a market while they browse 
+		through Amazon.`,
+		linkLabel: 'Learn more ',
+		navigateTo: '/salesProjection',
+		imageUrl: '/extension_1.png'
+	},
+	{
+		title: 'Order Planning',
+		icon: 'orderPlanning',
+		subTitle: 'Quick Product Validation in Your Browser',
+		description: `Get Amazon Product Research capabilities inside the Sellgo Chrome
+		Extension, helps give Amazon sellers a quick validation of a market while they browse 
+		through Amazon.`,
+		linkLabel: 'Learn more ',
+		navigateTo: '/extension',
+		imageUrl: '/extension_1.png'
+	},
+	{
+		title: 'Cashflow',
+		icon: 'dashboard',
+		subTitle: 'Quick Product Validation in Your Browser',
+		description: `Get Amazon Product Research capabilities inside the Sellgo Chrome
+		Extension, helps give Amazon sellers a quick validation of a market while they browse 
+		through Amazon.`,
+		linkLabel: 'Learn more ',
+		navigateTo: '/extension',
+		imageUrl: '/extension_1.png'
+	},
+	{
+		title: '3PL Manager',
+		icon: 'Tpl',
+		subTitle: 'Quick Product Validation in Your Browser',
+		description: `Get Amazon Product Research capabilities inside the Sellgo Chrome
+		Extension, helps give Amazon sellers a quick validation of a market while they browse 
+		through Amazon.`,
+		linkLabel: 'Learn more ',
+		navigateTo: '/extension',
+		imageUrl: '/extension_1.png'
+	},
+	{
 		title: 'Extension',
 		icon: 'extension',
 		subTitle: 'Quick Product Validation in Your Browser',

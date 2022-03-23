@@ -2,63 +2,24 @@ export const productsDetails: {
 	title: string;
 	action: string;
 	icon: string;
-	features: { name: string; link: string }[];
+	desc: string;
 }[] = [
 	{
 		title: 'FIND QUALITY PRODUCTS',
 		action: 'when researching',
 		icon: '/products-products.svg',
-		features: [
-			{
-				name: 'Sales Estimation & Search Volume',
-				link: '/'
-			},
-			{
-				name: 'Product/ Brand Database',
-				link: '/'
-			},
-			{
-				name: 'Seller Database/ Map/ Finder',
-				link: '/'
-			}
-		]
+		desc: 'Find quality products that are in demand and are in stock.',
 	},
 	{
 		title: 'DOMINATE COMPETITIONS',
 		action: 'when launching',
 		icon: '/products-competition.svg',
-		features: [
-			{
-				name: 'Keyword Finder',
-				link: '/'
-			},
-			{
-				name: 'Keyword Database',
-				link: '/'
-			},
-			{
-				name: 'Product Rank Tracker',
-				link: '/'
-			}
-		]
+		desc: 'Find quality products that are in demand and are in stock.',
 	},
 	{
 		title: 'AUTOMATE PROCESSES',
 		action: 'when selling',
 		icon: '/products-automate.svg',
-		features: [
-			{
-				name: 'Product Rank Tracker',
-				link: '/'
-			},
-			{
-				name: 'Zapier Integration For PPC Re-Campaign',
-				link: '/'
-			},
-			{
-				name: 'Perfect Stock',
-				link: '/'
-			}
-		]
+		desc: 'Find quality products that are in demand and are in stock.',
 	}
 ];

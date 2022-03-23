@@ -20,17 +20,13 @@ interface Props {
 const Stepper: React.FC<Props> = (props) => {
 	const { steps } = props;
 	const stepsLength = steps.length;
-	const [activeStep, setActiveStep] = React.useState(0);
-	const [startIndex, setStartIndex] = React.useState(1);
+	const [activeStep, setActiveStep] = React.useState(1);
+	const [startIndex, setStartIndex] = React.useState(0);
 	const [endIndex, setEndIndex] = React.useState(stepsLength);
-
 	React.useEffect(() => {
 		if (stepsLength > 7) {
 			const overflowLength = stepsLength - 7;
-			const overflowLeftLength = Math.floor(overflowLength / 2);
-			setActiveStep(overflowLeftLength + 1);
-			setStartIndex(overflowLeftLength);
-			setEndIndex(stepsLength - overflowLength);
+			setEndIndex(stepsLength - overflowLength - 1);
 		}
 	}, [steps]);
 
@@ -145,6 +141,7 @@ const Stepper: React.FC<Props> = (props) => {
 								key={index}
 								{...step}
 								reversed={(index + 1) % 2 === 0}
+								isStepper
 							/>
 						);
 					})}

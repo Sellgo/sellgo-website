@@ -16,7 +16,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 	return (
 		<section className={styles.featureComparisonWrapper}>
 			<div className={`page-container ${styles.featureComparisonSection}`}>
-				<h2 className={styles.title}>Why Sellgo is Better</h2>
+				<h2 className={styles.title}>Why AiStock is Better</h2>
 
 				<div className={styles.featureRow}>
 					<p className={`${styles.headerText} ${styles.headerText__plan}`}>

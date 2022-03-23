@@ -13,7 +13,8 @@
 	}
 
 	&__Text {
-		flex: 0 0 45%;
+		flex: 0 0 40%;
+
 		@media only screen and(max-width: 750px) {
 			order: 2;
 			text-align: center;
@@ -51,8 +52,26 @@
 		}
 	}
 
+	.linkWrapper {
+		display: flex;
+		flex-direction: column;
+		margin: 2rem 0;
+
+		.multipleLink {
+			color: $sellgo_purple;
+			margin-bottom: 10px;
+			display: inline-block;
+			font-size: $fontsize_content_14;
+			font-weight: $fontweight_medium;
+	
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
 	&__Link {
-		color: $blue_link_bg_light;
+		color: $sellgo_purple;
 		display: inline-block;
 		margin: 2rem 0;
 		font-size: $fontsize_content_14;
@@ -64,7 +83,7 @@
 	}
 
 	&__Image {
-		flex: 0 0 45%;
+		flex: 0 0 55%;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
@@ -76,6 +95,15 @@
 
 .reversedText {
 	order: 2;
+}
+
+.stepperText {
+	background: $grey_1;
+	flex: 0 0 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 50px;
 }
 
 .reversedImage {

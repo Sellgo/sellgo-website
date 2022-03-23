@@ -27,6 +27,7 @@ import AffiliateProgram from './Resources/AffiliateProgram';
 /* Types */
 import { Products, Resources } from '../../interfaces/Navbar';
 import SalesEstimator from './Resources/SalesEstimator';
+import Tpl from './Products/Tpl';
 
 interface Props {
 	name: Products | Resources;
@@ -123,6 +124,11 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 
 		case 'catalogPlanning': {
 			productIcon = <CatalogPlanning {...otherProps} isRainbow={isRainbow} />;
+			break;
+		}
+
+		case 'Tpl': {
+			productIcon = <Tpl {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 

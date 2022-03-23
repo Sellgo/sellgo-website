@@ -10,10 +10,11 @@ interface Props {
 	title: string;
 	subTitle: string;
 	description: string;
-	navigateTo: string;
-	linkLabel: string;
+	navigateTo: string | string[];
+	linkLabel: string | string[];
 	reversed: boolean;
 	imageUrl: string;
+	isStepper?: boolean;
 }
 
 const ProductCard: React.FC<Props> = (props) => {
@@ -24,12 +25,13 @@ const ProductCard: React.FC<Props> = (props) => {
 		reversed,
 		imageUrl,
 		navigateTo,
-		linkLabel
+		linkLabel,
+		isStepper,
 	} = props;
 
 	const textClass = `${styles.productCard__Text} ${
 		reversed ? styles.reversedText : ''
-	}`;
+	} ${isStepper ? styles.stepperText : ''}`;
 
 	const imageClass = `${styles.productCard__Image} ${
 		reversed ? styles.reversedImage : ''
@@ -42,7 +44,24 @@ const ProductCard: React.FC<Props> = (props) => {
 				<h3>{subTitle}</h3>
 				<p>{description}</p>
 
-				{linkLabel && navigateTo && (
+				{
+					/* If link label is string array */
+					Array.isArray(linkLabel) && Array.isArray(navigateTo) && (
+						<div className={styles.linkWrapper}>
+							{linkLabel.map((label, index) => {
+								return (
+								<Link href={navigateTo[index]} passHref>
+									<a className={styles.multipleLink}>
+										{label}
+										&nbsp;
+										<Image src="/blueLongArrowRight.svg" width={20} height={8} />
+									</a>
+								</Link>);
+							})}
+						</div>)
+				}
+
+				{!Array.isArray(linkLabel) && !Array.isArray(navigateTo) && linkLabel && navigateTo && (
 					<Link href={navigateTo} passHref>
 						<a className={styles.productCard__Link}>
 							{linkLabel}
