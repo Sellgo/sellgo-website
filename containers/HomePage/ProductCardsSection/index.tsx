@@ -6,7 +6,6 @@ import styles from './index.module.scss';
 
 /* Components */
 import ProductCard from '../../../components/ProductCard';
-import CTAButton from '../../../components/CTAButton';
 
 /* Data */
 import { newBenefitsData } from './data';

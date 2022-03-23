@@ -92,4 +92,9 @@ const ProductCard: React.FC<Props> = (props) => {
 	);
 };
 
+
+ProductCard.defaultProps = {
+	isStepper: false,
+};
+
 export default ProductCard;

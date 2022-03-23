@@ -1,18 +1,9 @@
 import React from 'react';
 
 /* Styling */
+import Image from 'next/image';
 import styles from './index.module.scss';
 import Carousel from '../../../components/Carousel';
-
-
-/* Assets */
-import TenFactorLogo from '../../../assets/images/TenFactorLogo.png';
-import MetkixLogo from '../../../assets/images/MetkixLogo.png';
-import LuxeLogo from '../../../assets/images/LuxeLogo.png';
-import SkopeLogo from '../../../assets/images/SkopeLogo.png';
-import BBLogo from '../../../assets/images/BBLogo.png';
-import BFLogo from '../../../assets/images/BFLogo.png';
-import Image from 'next/image';
 
 interface Props {}
 

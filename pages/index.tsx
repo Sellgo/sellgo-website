@@ -2,8 +2,6 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 
-/* Styling */
-import styles from './index.module.scss';
 
 /* Apollo */
 import client from '../apollo';
@@ -13,14 +11,12 @@ import { GET_SHOW_CASE_BLOGS } from '../graphql/cms';
 
 /* Containers */
 import HeroBox from '../containers/HomePage/HeroBox';
-import InfoSection from '../containers/HomePage/InfoSection';
 import FeaturesSection from '../containers/HomePage/FeaturesSection';
 import ProductsSection from '../containers/HomePage/ProductsSection';
 import StatisticsSection from '../containers/HomePage/StatisticsSection';
 import FeatureComparisonTable from '../containers/HomePage/FeatureComparisonTable';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
-import ClosingCTASection from '../containers/HomePage/ClosingCTASection';
 import StepperInfoSection from '../containers/HomePage/StepperInfoSection';
 import FAQSection from '../containers/HomePage/FAQSection';
 /* Components */

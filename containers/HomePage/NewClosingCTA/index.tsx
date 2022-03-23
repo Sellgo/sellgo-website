@@ -6,7 +6,6 @@ import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../../components/CTAButton';
-import RainbowText from '../../../components/RainbowText';
 
 const NewClosingCTASection = () => {
 	return (
