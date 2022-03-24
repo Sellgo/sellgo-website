@@ -7,9 +7,10 @@ import HeroBox from '../../containers/UseCase/HeroBox';
 import InfoSection from '../../containers/UseCase/InfoSection';
 import CommonFeaturesSection from '../../containers/UseCase/CommonFeaturesSection';
 import PlansSection from '../../containers/UseCase/PlansSection';
-import FAQSection from '../../containers/UseCase/FAQSection';
+import TrustedBySection from '../../containers/UseCase/TrustedBySection';
 import BenefitsSection from '../../containers/UseCase/BenefitsSection';
 import OtherInfoSection from '../../containers/UseCase/OtherInfoSection';
+import NewClosingCTASection from '../../containers/UseCase/NewClosingCTA';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -48,7 +49,8 @@ const ExtensionContPage: React.FC<Props> = (props) => {
 			<CommonFeaturesSection />
 			<PlansSection />
 			<OtherInfoSection />
-			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
+			<TrustedBySection />
+			<NewClosingCTASection/>
 		</>
 	);
 };

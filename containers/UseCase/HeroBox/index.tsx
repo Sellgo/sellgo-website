@@ -18,36 +18,32 @@ interface Props {}
 const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.heroBox}`}>
-			<Image
-				src="/extension_1.png"
-				width={600}
-				height={360}
-				alt="Product Finder Product Cover Image"
-			/>
-
-			<div className={styles.heroBox__Details}>
-				<div className={styles.subHeadingWrapper}>
-					<ExpandedNavbarIcons
-						width={30}
-						height={30}
-						fill="#ef7818"
-						name="extension"
-						isRainbow
-					/>
-					<h2 className={styles.subHeading}>Chrome Extension</h2>
-				</div>
-				<h1 className={styles.heading}>Quick Product Validation on Browser</h1>
+			<h2 className='secondary-heading'>
+				Lorem Ipsum
+			</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+				sed do eiusmod tempor incididunt ut labore et dolore
+			</p>
+			<div className={styles.buttonsRow}>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"
-					size="productPageBig"
+					size="medium"
 					variant="rainbow"
 					className={styles.heroBoxCTA}
 				>
 					Get Started
 				</CTAButton>
-
-				<ProductAccordion data={accordionData} />
+				<CTAButton
+					navigateTo="/pricing?type=monthly-and-annual-plans"
+					type="secondary"
+					size="medium"
+					variant="rainbow"
+					className={styles.heroBoxCTA}
+				>
+					Request a demo
+				</CTAButton>
 			</div>
 		</section>
 	);

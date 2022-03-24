@@ -1,5 +1,6 @@
 import React from 'react';
 import CTAButton from '../../../components/CTAButton';
+import RainbowText from '../../../components/RainbowText';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -33,18 +34,19 @@ const OtherInfoSection: React.FC<Props> = () => {
 			</div>
 
 			<h2 className="secondary-heading">
-				Find new winning products and take your earning
-				<br />
-				potential to the next level with Sellgo&apos; tools.
+				Partnership?
 			</h2>
-			<CTAButton
-				type="primary"
-				size="small"
-				navigateTo="/pricing?type=monthly-and-annual-plans"
+			<p className={styles.partnershipDesc}>
+				Help your clients streamline their supply chain and 
+				reach their healthy cash flow by becoming a certified partner.
+			</p>
+			<button
 				className={styles.otherInfoSectionCTA}
 			>
-				Get Started
-			</CTAButton>
+				<RainbowText type="orange_purple_gradient">
+					Get Started
+				</RainbowText>
+			</button>
 		</section>
 	);
 };

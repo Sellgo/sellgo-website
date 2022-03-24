@@ -61,6 +61,19 @@
 	}
 }
 
-.otherInfoSectionCTA {
+.partnershipDesc {
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_medium;
+	color: $black_0;
+	text-align: center;
+	max-width: 70rem;
 	margin: 3rem auto;
+}
+.otherInfoSectionCTA {
+	width: 100%;
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_medium;
+	border: none;
+	text-align: center;
+	background: none;
 }
