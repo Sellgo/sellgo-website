@@ -1,11 +1,12 @@
 @import '../../../styles/guidelines';
 
 .applicationForm {
+	margin-top: 5rem;
+	margin-bottom: 10rem;
 	width: 65rem;
 	padding-left: 4rem;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-	background-color: $tab_active;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -176,4 +177,8 @@
 	font-size: $fontsize_content_14;
 	color: $prim_dark_2;
 	line-height: $fontlineheight_content_30;
+}
+
+.submitButton {
+	background: $orange_purple_gradient;
 }

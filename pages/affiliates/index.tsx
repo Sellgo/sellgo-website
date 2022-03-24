@@ -8,6 +8,7 @@ import FirstCTASection from '../../containers/Affliate/FirstCTASection';
 import BenefitsSection from '../../containers/Affliate/BenefitsSection';
 import ApprovalProcessSection from '../../containers/Affliate/ApprovalProcessSection';
 import FAQSection from '../../containers/Affliate/FAQSection';
+import ApplicationForm from '../../containers/Affliate-Signup/ApplicationForm';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -41,10 +42,8 @@ const Partners: React.FC<Props> = (props) => {
 			/>
 			<main>
 				<HeroBox />
-				<FirstCTASection />
 				<BenefitsSection />
-				<ApprovalProcessSection />
-				<FAQSection faqDetails={faqDetails} />
+				<ApplicationForm/>
 			</main>
 		</>
 	);

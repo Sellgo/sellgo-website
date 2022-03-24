@@ -1,15 +1,22 @@
 @import '../../../styles/guidelines';
 
 .benefitsSection {
-	background: $tab_active;
 	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	background: #EEF7F9;
+	border-radius: 50px;
+	padding: 5rem 5rem;
+	max-width: max-content;
+	width: 100%;
+	margin-bottom: 10rem;
 }
 
 .benefitsGrid {
+	margin-top: 5rem;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
-	margin: 8rem auto;
 	flex-wrap: wrap;
 
 	@media only screen and(max-width: 1000px) {

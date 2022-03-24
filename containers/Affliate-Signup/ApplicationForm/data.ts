@@ -10,6 +10,13 @@ export const typesOfUsersData = [
 	'Other'
 ];
 
+export const lengthOfBeingInBusiness = [
+	'Less than 6 months',
+	'6 - 12 months',
+	'12 - 24 months',
+	'More than 2 years'
+]
+
 export const businessModelsData = [
 	'Amazon FBA',
 	'Wholesale',

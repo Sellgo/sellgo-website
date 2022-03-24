@@ -19,6 +19,7 @@ import AppConfig from '../../../config';
 
 /* Data */
 import {
+	lengthOfBeingInBusiness,
 	typesOfUsersData,
 	businessModelsData,
 	audienceConnectionMethodsData,
@@ -33,6 +34,8 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		firstName: '',
 		lastName: '',
 		email: '',
+		companyName: '',
+		beenInBusiness: '',
 		typeOfUser: typesOfUsersData[0],
 		businessModels: '',
 		audienceConnectionMethods: '',
@@ -45,7 +48,6 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		couponMarketingAck: '',
 		privacyPolicyAck: ''
 	});
-
 	const [formDataError, setFormDataError] = useState({
 		firstNameErr: false,
 		lastNameErr: false,
@@ -76,6 +78,16 @@ const ScheduleMeeting: React.FC<Props> = () => {
 	};
 
 	/* Handler for type of user change */
+	const handleBeenInBusinessChange = (selectedOption: any) => {
+		setFormData((prevState) => {
+			return {
+				...prevState,
+				beenInBusiness: selectedOption.value
+			};
+		});
+	};
+
+	/* Handler for type of user change */
 	const handleFamiliarityWithSellgoChange = (selectedOption: any) => {
 		setFormData((prevState) => {
 			return {
@@ -94,6 +106,8 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		firstName,
 		lastName,
 		email,
+		beenInBusiness,
+		companyName,
 		typeOfUser,
 		businessModels,
 		audienceConnectionMethods,
@@ -177,6 +191,8 @@ const ScheduleMeeting: React.FC<Props> = () => {
 			firstName: '',
 			lastName: '',
 			email: '',
+			beenInBusiness: '',
+			companyName: '',
 			typeOfUser: typesOfUsersData[0],
 			businessModels: '',
 			audienceConnectionMethods: '',
@@ -198,6 +214,8 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		formData.append('firstname', firstName);
 		formData.append('lastname', lastName);
 		formData.append('email', email);
+		formData.append('been_in_business', beenInBusiness);
+		formData.append('company_name', companyName);
 		formData.append('type_of_user', typeOfUser);
 		formData.append('business_models', businessModels);
 		formData.append('audience_connection_methods', audienceConnectionMethods);
@@ -225,9 +243,11 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 	return (
 		<>
+			<h2 className={`secondary-heading`}> Join the Sellgo partner program </h2>
 			<form
 				className={`page-container ${styles.applicationForm}`}
 				onSubmit={handleSubmit}
+				id='affiliateForm'
 			>
 				<FormInput
 					className={styles.formInput}
@@ -271,6 +291,19 @@ const ScheduleMeeting: React.FC<Props> = () => {
 					errorMessage="Invalid Email"
 				/>
 
+				<FormInput
+					className={styles.formInput}
+					label="Company Name *"
+					id="companyName"
+					type="text"
+					name="companyName"
+					onChange={handleChange}
+					value={companyName}
+					autoComplete="off"
+					required
+					errorMessage="Invalid Company Name"
+				/>
+
 				<div className={styles.formInput}>
 					<label>Select the best that applies to you * </label>
 					<Dropdown
@@ -299,7 +332,34 @@ const ScheduleMeeting: React.FC<Props> = () => {
 						}
 					/>
 				</div>
-
+				<div className={styles.formInput}>
+					<label>How long have you been in business?* </label>
+					<Dropdown
+						options={lengthOfBeingInBusiness}
+						onChange={handleBeenInBusinessChange}
+						className={styles.selectDropdown}
+						placeholderClassName={styles.selectDropdown__placeholder}
+						controlClassName={styles.selectDropdown__control}
+						menuClassName={styles.selectDropdown__menu}
+						value={beenInBusiness}
+						arrowClosed={
+							<Image
+								src="/dropdownArrow.svg"
+								width={10}
+								height={10}
+								alt="Dropdown Arrow"
+							/>
+						}
+						arrowOpen={
+							<Image
+								src="/dropdownArrow.svg"
+								width={10}
+								height={10}
+								alt="Dropdown Arrow"
+							/>
+						}
+					/>
+				</div>
 				<MultiSelectCheckBoxInput
 					label="Do you work with any of these business models? *"
 					options={businessModelsData}
@@ -447,10 +507,10 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 				<button
 					type="submit"
-					className="ctabutton ctabutton--primary ctabutton--medium"
+					className={`ctabutton ctabutton--primary ctabutton--medium ${styles.submitButton}`}
 					disabled={firstNameErr || lastNameErr || emailErr}
 				>
-					Next
+					Submit
 				</button>
 
 				<p className={styles.formSubmitInfo}>

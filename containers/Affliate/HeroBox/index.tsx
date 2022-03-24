@@ -1,49 +1,49 @@
 import React from 'react';
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
 
-/* Components */
-import CTAButton from '../../../components/CTAButton';
-
-interface Props {}
-
-const HeroBox: React.FC<Props> = () => {
+const HeroBox = () => {
+	/* Scroll to element with id = affiliateForm */
+	const scrollToForm = () => {
+		const element = document.getElementById('affiliateForm');
+		element?.scrollIntoView({ behavior: 'smooth' });
+	};
 	return (
 		<section className={`${styles.heroboxWrapper}`}>
-			<div className={`page-container ${styles.heroBox}`}>
-				<h1 className={styles.heroBoxTitle}>
-					Sellgo Affiliate Partner Program
-				</h1>
-				<h2 className={styles.heroBoxSubtitle}>Get Paid to Promote Sellgo</h2>
-				<p className={styles.heroBoxContent}>
-					Earn <span className={`${styles.bold}`}>25%</span> UNLIMITED
-					Commission for Every Referral
-				</p>
-
-				<CTAButton
-					type="primary"
-					size="medium"
-					variant="rainbow"
-					navigateTo="/affiliates-signup"
-					className={`${styles.ctaButton}`}
-					newTarget
-					asExternal
-				>
-					Get Started
-				</CTAButton>
-
-				<p className={styles.heroBoxContent}>
-					Already an affiliate?
-					<a
-						href="https://sellgo.getrewardful.com/login"
-						target="_blank"
-						rel="noreferrer noopener"
-						className={`${styles.signinLink}`}
-					>
-						Sign in
-					</a>
-				</p>
+			<div className={`page-container ${styles.herobox}`}>
+				<div className={styles.textColumn}>
+					<p className={styles.title}>Agency?</p>
+					<h1 className={`${styles.heading}`}>Become a Partner</h1>
+					<p className={`${styles.tagline}`}>
+						Partner with Autopilot to empower your clients 
+						to unify their customer data, segment and activate 
+						their audiences and deliver personalized experiences 
+						at scale.
+					</p>
+					<div className={styles.ctaBox}>
+						<div className={styles.ctaButtonWrapper}>
+							<button 
+								className={styles.submitButton}
+								onClick={scrollToForm}
+							>
+								Get Started
+							</button>
+						</div>
+					</div>
+				</div>
+				<div className={styles.imageColumn}>
+					<div className={styles.heroImagewWrapper}>
+						<Image
+							src="/heroImage.png"
+							width={500}
+							height={600}
+							alt="alt"
+							className={styles.heroImage}
+						/>
+					</div>
+				</div>
 			</div>
 		</section>
 	);

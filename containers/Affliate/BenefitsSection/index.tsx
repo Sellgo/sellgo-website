@@ -15,6 +15,7 @@ interface Props {}
 const BenefitsSection: React.FC<Props> = () => {
 	return (
 		<section className={`${styles.benefitsSection}`}>
+			<h2 className='secondary-heading'> Why partner with us? </h2>
 			<div className={`page-container ${styles.benefitsGrid}`}>
 				{benefitsData.map((benefit: any) => {
 					return <AffliateBenefitCard key={uuid()} {...benefit} />;
