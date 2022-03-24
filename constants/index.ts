@@ -21,10 +21,9 @@ export const pricingCardHeaderGradients: { [key: string]: string } = {
 export const hideNavigationOnRoutes = [
 	'/affiliates-signup',
 	'/contact-sales',
-	'/contact',
-	'/demo'
+	'/contact'
 ];
-export const showCtaNavBarFixedRoutes = ['/contact', '/contact-sales', '/demo'];
+export const showCtaNavBarFixedRoutes = ['/contact', '/contact-sales'];
 export const showCtaNavBarOnScrollRoutes = ['/home'];
 
 /* Employess size list on contact forms */
