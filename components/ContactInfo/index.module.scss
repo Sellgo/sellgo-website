@@ -2,7 +2,6 @@
 
 .contactInfo {
 	text-align: center;
-	color: $prim_dark_2;
 
 	h2 {
 		font-size: $fontsize_subtitle_20;
@@ -25,7 +24,6 @@
 
 	@media only screen and(max-width: 500px) {
 		width: 100%;
-		padding: 10px 0;
 	}
 
 	p {
@@ -33,16 +31,17 @@
 	}
 
 	.contactSalesButton {
+		background: $prim_dark_2;
+		border-radius: 7px;
+		color: $prim_white;
 		width: 24rem;
 		height: 4rem;
-		color: $prim_dark_2 !important;
+		cursor: pointer;
 		text-decoration: none;
 		font-size: $fontsize_content_16;
 		font-weight: $fontweight_semibold;
 		display: flex;
 		align-items: center;
-		span {
-			margin-left: 5px;
-		}
+		justify-content: center;
 	}
 }

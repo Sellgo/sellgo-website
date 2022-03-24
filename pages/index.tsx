@@ -2,7 +2,6 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 
-
 /* Apollo */
 import client from '../apollo';
 
@@ -62,10 +61,10 @@ const HomePage: React.FC<Props> = (props) => {
 				<FeaturesSection />
 				<FeatureComparisonTable />
 				<TestimonialsSection />
-				<ProductsSection />	
+				<ProductsSection />
 				<RecentBlogsSection recentBlogs={homeBlogs} />
 				{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
-				<NewClosingCTASection/>
+				<NewClosingCTASection />
 			</main>
 		</>
 	);
@@ -99,7 +98,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		props: {
 			homeBlogs: blogsForHome,
 			customerCount,
-			faqDetails: data,
+			faqDetails: data
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};

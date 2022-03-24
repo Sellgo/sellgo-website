@@ -7,8 +7,7 @@ import styles from './index.module.scss';
 
 /* Components */
 import RainbowText from '../../../components/RainbowText';
-import BetaPopupConfirmation from '../../../components/BetaPopupModal/BetaPopupConfirmation';
-
+import DemoForm from '../../Demo/DemoForm';
 
 const HeroBox = () => {
 	const textList = [
@@ -20,11 +19,11 @@ const HeroBox = () => {
 		'Accurate Planning.',
 		'Easier Delegation to VAs.'
 	];
+	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
 	const [isAnimationIncreasing, setAnimationIncreasing] = React.useState(true);
 	const [animationIndex, setAnimationIndex] = React.useState(0);
 	const [animatedText, setAnimatedText] = React.useState<string>('');
-	const [isSuccessModalOpen, setSuccessModalOpen] = React.useState(false);
 
 	// Increment to next word
 	const incrementToNextWord = () => {
@@ -81,27 +80,23 @@ const HeroBox = () => {
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						We keep your best-seller Amazon inventory 
-						always in-stock while adding more sales, 
-						automatically - it&apos;s like a self-driving business.
+						We keep your best-seller Amazon inventory always in-stock while
+						adding more sales, automatically - it&apos;s like a self-driving
+						business.
 					</p>
 					<div className={styles.ctaBox}>
 						<div className={styles.ctaButtonWrapper}>
-							<button
-								className={styles.submitButton}
-								onClick={() => {
-									console.log("Sign Up")
-								}}
-							>
+							<a className={styles.submitButton} href="/pricing">
 								Get Started
-							</button>
-							<span className={styles.ctaDesc}>
-								No credit card required
-							</span>
+							</a>
+							<span className={styles.ctaDesc}>No credit card required</span>
 						</div>
-						<a>
+						<button
+							className={styles.demoButton}
+							onClick={() => setIsDemoFormOpen(true)}
+						>
 							Talk to an expert
-						</a>
+						</button>
 					</div>
 				</div>
 				<div className={styles.imageColumn}>
@@ -130,23 +125,25 @@ const HeroBox = () => {
 							before Stockout
 						</span>
 					</div>
-					<Image
-						src="/heroImage.png"
-						width={500}
-						height={600}
-						alt="alt"
-						className={styles.heroImage}
-					/>
+					<div className={styles.heroImagewWrapper}>
+						<Image
+							src="/heroImage.png"
+							width={500}
+							height={600}
+							alt="alt"
+							className={styles.heroImage}
+						/>
+					</div>
 				</div>
 			</div>
 
 			<Modal
-				isOpen={isSuccessModalOpen}
-				onRequestClose={() => setSuccessModalOpen(false)}
+				isOpen={isDemoFormOpen}
+				onRequestClose={() => setIsDemoFormOpen(false)}
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<BetaPopupConfirmation setModalOpen={setSuccessModalOpen} />
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
 			</Modal>
 		</section>
 	);

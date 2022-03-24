@@ -1,11 +1,16 @@
 export const newBenefitsData = [
 	{
 		title: 'ONE-CLICK SUPPLY CHAIN',
-		subTitle: 'Discover how inventory planning is your secret weapon when it comes to scaling',
+		subTitle:
+			'Discover how inventory planning is your secret weapon when it comes to scaling',
 		description: `Evaluate dozens of products and gain in-depth insight 
 		into any product including sales estimations, seller rankings, profit 
 		margins using data directly from Amazon.`,
-		linkLabel: ['Product Use Cases', 'Sales and Seasonality', 'Product Research'],
+		linkLabel: [
+			'Product Use Cases',
+			'Sales and Seasonality',
+			'Product Research'
+		],
 		navigateTo: ['/', '/', '/'],
 		imageUrl: '/extension_3.png'
 	},
@@ -16,7 +21,11 @@ export const newBenefitsData = [
 		business decisions using real-time, accurate data. View a product's 
 		sales history and price tracking history to ensure a product's long-term 
 		sustainability and profitability.`,
-		linkLabel: ['Keyword Finder', 'Rank Tracker Optimization', 'Re-PPC Automation'],
+		linkLabel: [
+			'Keyword Finder',
+			'Rank Tracker Optimization',
+			'Re-PPC Automation'
+		],
 		navigateTo: ['/', '/', '/'],
 		imageUrl: '/extension_4.png'
 	},

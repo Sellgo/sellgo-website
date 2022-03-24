@@ -10,6 +10,7 @@ import CTAButton from '../../CTAButton';
 import ProductsNavbarExpansion from '../ProductsNavbarExpansion';
 import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
+import AppConfig from '../../../config';
 
 interface Props {}
 
@@ -61,7 +62,14 @@ const NavbarBottom: React.FC<Props> = () => {
 					</li>
 				</ul>
 			</div>
-
+			<a
+				href={AppConfig.APP_URL}
+				className={styles.login}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Sign In
+			</a>
 			<CTAButton
 				type="primary"
 				size="small"

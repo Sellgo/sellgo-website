@@ -26,7 +26,7 @@ const BetaPopupConfirmation = (props: Props) => {
 			</div>
 			<p>
 				Crush your Amazon selling in 2021 and beyond with
-				<br/>
+				<br />
 				The next generation Amazon All-In-One tool.
 			</p>
 			{isPricingPage ? (

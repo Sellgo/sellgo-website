@@ -20,14 +20,17 @@
 	}
 }
 
-.navbarLink {
+.salesEstimator {
 	color: $prim_white;
-	&__sales {
-		display: flex;
-		justify-content: flex-start;
-		align-items: flex-start;
-		color: $prim_white;
-	}
+}
+
+.demoButton {
+	cursor: pointer;
+	background: none;
+	font-size: $fontsize_content_14;
+	color: $prim_white;
+	border: none;
+	font-weight: $fontweight_semibold;
 }
 
 .navbarTopLink {

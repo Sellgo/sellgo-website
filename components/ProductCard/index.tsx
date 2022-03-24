@@ -15,6 +15,8 @@ interface Props {
 	reversed: boolean;
 	imageUrl: string;
 	isStepper?: boolean;
+	imageWidth?: number;
+	imageHeight?: number;
 }
 
 const ProductCard: React.FC<Props> = (props) => {
@@ -27,6 +29,8 @@ const ProductCard: React.FC<Props> = (props) => {
 		navigateTo,
 		linkLabel,
 		isStepper,
+		imageWidth = 600,
+		imageHeight = 360
 	} = props;
 
 	const textClass = `${styles.productCard__Text} ${
@@ -50,26 +54,35 @@ const ProductCard: React.FC<Props> = (props) => {
 						<div className={styles.linkWrapper}>
 							{linkLabel.map((label, index) => {
 								return (
-								<Link href={navigateTo[index]} passHref>
-									<a className={styles.multipleLink}>
-										{label}
-										&nbsp;
-										<Image src="/blueLongArrowRight.svg" width={20} height={8} />
-									</a>
-								</Link>);
+									<Link href={navigateTo[index]} passHref>
+										<a className={styles.multipleLink}>
+											{label}
+											&nbsp;
+											<Image
+												src="/blueLongArrowRight.svg"
+												width={20}
+												height={8}
+											/>
+										</a>
+									</Link>
+								);
 							})}
-						</div>)
+						</div>
+					)
 				}
 
-				{!Array.isArray(linkLabel) && !Array.isArray(navigateTo) && linkLabel && navigateTo && (
-					<Link href={navigateTo} passHref>
-						<a className={styles.productCard__Link}>
-							{linkLabel}
-							&nbsp;
-							<Image src="/blueLongArrowRight.svg" width={20} height={8} />
-						</a>
-					</Link>
-				)}
+				{!Array.isArray(linkLabel) &&
+					!Array.isArray(navigateTo) &&
+					linkLabel &&
+					navigateTo && (
+						<Link href={navigateTo} passHref>
+							<a className={styles.productCard__Link}>
+								{linkLabel}
+								&nbsp;
+								<Image src="/blueLongArrowRight.svg" width={20} height={8} />
+							</a>
+						</Link>
+					)}
 
 				{title.toUpperCase() === 'EXTENSION' && (
 					<CTAButton
@@ -86,15 +99,21 @@ const ProductCard: React.FC<Props> = (props) => {
 			</div>
 
 			<div className={`${imageClass}`}>
-				<Image src={imageUrl} alt="Seller Finder" width={600} height={360} />
+				<Image
+					src={imageUrl}
+					alt="Seller Finder"
+					width={imageWidth}
+					height={imageHeight}
+				/>
 			</div>
 		</article>
 	);
 };
 
-
 ProductCard.defaultProps = {
 	isStepper: false,
+	imageWidth: 600,
+	imageHeight: 360
 };
 
 export default ProductCard;

@@ -5,6 +5,11 @@
 	margin-top: 30rem;
 	background: $black_1;
 	position: relative;
+
+	@media only screen and(max-width: 1080px) {
+		height: 50rem;
+		padding: 5rem 0;
+	}
 }
 
 .closingCTA {
@@ -34,6 +39,10 @@
 	h2 {
 		font-size: $fontsize_subtitle_32;
 		font-weight: $fontweight_semibold;
+
+		@media only screen and(max-width: 1080px) {
+			font-size: $fontsize_subtitle_24;
+		}
 	}
 
 	p {
@@ -44,9 +53,9 @@
 		color: $black_1;
 	}
 
-	@media only screen and(max-width: 800px) {
+	@media only screen and(max-width: 1080px) {
 		flex-direction: column;
-		padding: 5rem 0;
+		padding: 5rem;
 	}
 }
 
@@ -54,16 +63,31 @@
 	display: flex;
 	align-items: center;
 	position: relative;
+	width: 100%;
 
 	.closingCTA {
 		width: 25rem;
+
+		@media only screen and(max-width: 1080px) {
+			width: 100%;
+		}
 	}
 
-	small {
+	.demoButton {
+		background: none;
+		border: none;
 		cursor: pointer;
 		color: $black_1;
 		font-size: $fontsize_content_14;
 		margin-left: 3rem;
 		font-weight: $fontweight_medium;
+		@media only screen and(max-width: 1080px) {
+			margin-top: 18px;
+			width: 100%;
+		}
+	}
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
 	}
 }

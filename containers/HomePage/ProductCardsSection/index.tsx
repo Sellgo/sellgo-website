@@ -17,29 +17,17 @@ const ProductCardsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={styles.blueCardWrapper}>
 				<div className={`page-container ${styles.benefitsWrapper}`}>
-					<ProductCard
-						key={uuid()}
-						{...newBenefitsData[0]}
-						reversed={false}
-					/>
+					<ProductCard key={uuid()} {...newBenefitsData[0]} reversed={false} />
 				</div>
 			</div>
 			<div className={styles.whiteCardWrapper}>
 				<div className={`page-container ${styles.benefitsWrapper}`}>
-					<ProductCard
-						key={uuid()}
-						{...newBenefitsData[1]}
-						reversed
-					/>
+					<ProductCard key={uuid()} {...newBenefitsData[1]} reversed />
 				</div>
 			</div>
 			<div className={styles.purpleCardWrapper}>
 				<div className={`page-container ${styles.benefitsWrapper}`}>
-					<ProductCard
-						key={uuid()}
-						{...newBenefitsData[2]}
-						reversed={false}
-					/>
+					<ProductCard key={uuid()} {...newBenefitsData[2]} reversed={false} />
 				</div>
 			</div>
 		</section>

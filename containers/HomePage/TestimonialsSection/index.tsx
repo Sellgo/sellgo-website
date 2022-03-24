@@ -11,22 +11,21 @@ const TestimonialsSection: React.FC<Props> = () => {
 	const testimonials = [
 		<div className={styles.testimonialTextWrapper}>
 			<p>
-				AiStock really helped me to avoid stockout, 
-				when to plan my next order and forecast my sales 
-				with seasonality - simply been impossible with any 
+				AiStock really helped me to avoid stockout, when to plan my next order
+				and forecast my sales with seasonality - simply been impossible with any
 				other software or Spreadsheets.
 			</p>
 
 			<div className={styles.testimonialAuthor}>
-				<img src='x' alt='author' />
+				<img src="x" alt="author" />
 				<div className={styles.authorDetails}>
 					<span className={styles.name}>Andrew Erickson</span>
 					<span className={styles.title}>CEO of XXX Brand, Titan leader</span>
-					<a 
+					<a
 						className={styles.email}
-						href='andrewknowsamazon.com'
-						target='_blank'
-						rel='noopener noreferrer'
+						href="andrewknowsamazon.com"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						andrewknowsamazon.com
 					</a>
@@ -62,41 +61,31 @@ const TestimonialsSection: React.FC<Props> = () => {
 					</h2>
 					<div className={styles.socialProofIcons}>
 						<Image
-							src={"/TenFactorLogo.png"}
+							src={'/TenFactorLogo.png'}
 							alt="TenFactorLogo"
 							width={100}
 							height={100}
 						/>
 						<Image
-							src={"/MetkixLogo.png"}
+							src={'/MetkixLogo.png'}
 							alt="TenFactorLogo"
 							width={70}
 							height={30}
 						/>
 						<Image
-							src={"/LuxeLogo.png"}
+							src={'/LuxeLogo.png'}
 							alt="LuxeLogo"
 							width={100}
 							height={52}
 						/>
 						<Image
-							src={"/SkopeLogo.png"}
+							src={'/SkopeLogo.png'}
 							alt="SkopeLogo"
 							width={100}
 							height={100}
 						/>
-						<Image
-							src={"/BBLogo.png"}
-							alt="BBLogo"
-							width={100}
-							height={17}
-						/>
-						<Image
-							src={"/BFLogo.png"}
-							alt="BFLogo"
-							width={100}
-							height={50}
-						/>
+						<Image src={'/BBLogo.png'} alt="BBLogo" width={100} height={17} />
+						<Image src={'/BFLogo.png'} alt="BFLogo" width={100} height={50} />
 					</div>
 				</div>
 

@@ -110,8 +110,16 @@
 	}
 }
 
+.login {
+	color: $prim_white;
+	font-weight: $fontweight_semibold;
+	font-size: $fontsize_content_14;
+	margin: auto;
+	margin-right: 3rem;
+}
+
 .navbarCTA {
-	width: 23rem !important;
+	width: 15rem !important;
 	justify-self: flex-end;
 
 	&__arrow {

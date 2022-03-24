@@ -1,16 +1,23 @@
 import React from 'react';
 import Image from 'next/image';
+import Modal from 'react-modal';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Data */
 import { productsDetails } from './data';
+
+/* Components */
 import RainbowText from '../../../components/RainbowText';
+import DemoForm from '../../Demo/DemoForm';
 
 interface Props {}
 
 const ProductsSection: React.FC<Props> = () => {
+	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
+
 	return (
 		<section className={styles.productSectionWrapper}>
 			<div className={`page-container ${styles.productsSection}`}>
@@ -33,22 +40,32 @@ const ProductsSection: React.FC<Props> = () => {
 						</div>
 					))}
 				</div>
-				<button className={styles.textButton}>
-					<RainbowText type="orange_purple_gradient">
-						Request Demo
-					</RainbowText>
+				<button
+					className={styles.textButton}
+					onClick={() => setIsDemoFormOpen(true)}
+				>
+					<RainbowText type="orange_purple_gradient">Request Demo</RainbowText>
 				</button>
 				<h2 className={styles.agencyTitle}>Agency?</h2>
 				<p className={styles.agencyDetails}>
-					Help your clients streamline their supply chain and 
-					reach their healthy cash flow by becoming a certified partner.
+					Help your clients streamline their supply chain and reach their
+					healthy cash flow by becoming a certified partner.
 				</p>
 				<button className={styles.textButton}>
 					<RainbowText type="orange_purple_gradient">
-						Learn More
+						<Link href="affiliates">Learn More</Link>
 					</RainbowText>
 				</button>
 			</div>
+
+			<Modal
+				isOpen={isDemoFormOpen}
+				onRequestClose={() => setIsDemoFormOpen(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+			</Modal>
 		</section>
 	);
 };

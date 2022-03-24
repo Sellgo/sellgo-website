@@ -1,73 +1,114 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import BuyPlanPriceCard from '../../../components/BuyPlanPriceCard';
+import FormInput from '../../../components/FormInput';
+import { ORDER_NUMBERS, getPlanPrice } from './data';
 
-interface Props {
-	selectedPlanType: number;
-}
-
-const CalculateYourPriceSection: React.FC<Props> = (props) => {
+const CalculateYourPriceSection = () => {
 	const [isMonthly, setIsMonthly] = useState<boolean>(true);
-
-	const { selectedPlanType } = props;
+	const [selectedPlan, setSelectedPlan] = useState<number>(0);
+	const [planPrice, setPlanPrice] = useState<number>(0);
+	const [orderNumber, setOrderNumber] = useState<any>('0');
 
 	const handleChange = () => {
 		setIsMonthly(!isMonthly);
 	};
 
+	React.useEffect(() => {
+		setPlanPrice(getPlanPrice('professional', isMonthly, orderNumber));
+	}, [isMonthly, orderNumber]);
 	return (
 		<section
 			className={`big-page-container ${styles.calculatePriceSection}`}
 			id="calculatePrice"
 		>
-			<h2 className="secondary-heading">Calculate your price</h2>
+			<h2 className="secondary-heading">
+				Calculate your price
+				<Link href="/pricing" passHref>
+					<a className="anchor">
+						&#8593; <span>Back to top</span>
+					</a>
+				</Link>
+			</h2>
 
 			<div className={styles.calculatePriceWrapper}>
 				<div className={styles.priceCalculator}>
+					<p className={styles.planSelectionTitle}>Select a AiStock plan</p>
 					<div className={styles.planTypesWrapper}>
-						<div
+						<button
 							className={`${styles.planName} ${
-								selectedPlanType === 1 ? styles.planName__Active : ''
+								selectedPlan === 0 ? styles.planName__Active : ''
 							}`}
+							onClick={() => setSelectedPlan(0)}
 						>
-							Pay As You Go
-						</div>
-						<div
+							Starter
+						</button>
+						<button
 							className={`${styles.planName} ${
-								selectedPlanType === 2 ? styles.planName__Active : ''
+								selectedPlan === 1 ? styles.planName__Active : ''
 							}`}
+							onClick={() => setSelectedPlan(1)}
 						>
-							Wholesale Go
-						</div>
-						<div
+							Professional
+						</button>
+						<button
 							className={`${styles.planName} ${
-								selectedPlanType === 3 ? styles.planName__Active : ''
+								selectedPlan === 2 ? styles.planName__Active : ''
 							}`}
+							onClick={() => setSelectedPlan(2)}
 						>
-							Private Label
-						</div>
-						<div
-							className={`${styles.planName} ${
-								selectedPlanType === 4 ? styles.planName__Active : ''
-							}`}
-						>
-							Seller Scout Pro
-						</div>
+							Team
+						</button>
 					</div>
+
+					<p className={styles.planSelectionTitle}>Orders Per Month</p>
+					<div className={styles.ordersPerMonthDisplay}>
+						<p>
+							Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
+							Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.
+						</p>
+						<FormInput
+							className={`
+								${styles.formInput}
+							`}
+							label=""
+							placeholder="Company*"
+							id="company"
+							type="text"
+							name="company"
+							onChange={() => null}
+							value={orderNumber}
+							autoComplete="off"
+							disabled
+							errorMessage="Please enter company name"
+						/>
+					</div>
+					<Slider
+						className="slider"
+						min={-10}
+						marks={ORDER_NUMBERS}
+						step={null}
+						onChange={(key: any) => {
+							setOrderNumber(ORDER_NUMBERS[key]);
+							return null;
+						}}
+						defaultValue={-10}
+					/>
 				</div>
 
 				<div className={styles.buyPlan}>
-					<Link href="/pricing" passHref>
-						<a className="anchor">
-							&#8593; <span>Back to top</span>
-						</a>
-					</Link>
-					<BuyPlanPriceCard isMonthly={isMonthly} handleChange={handleChange} />
+					<BuyPlanPriceCard
+						isMonthly={isMonthly}
+						handleChange={handleChange}
+						price={planPrice}
+					/>
 
 					<p className={styles.description}>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
