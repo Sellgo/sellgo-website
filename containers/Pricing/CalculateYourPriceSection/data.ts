@@ -1,3 +1,19 @@
+export type ORDER_NUMBERS_TYPE = 
+	'0' | 
+	'100' | 
+	'1,000' | 
+	'2,000' | 
+	'3,000' |
+	'5,000' |
+	'8,000' |
+	'13,000' |
+	'21,000' |
+	'34,000' |
+	'55,000' |
+	'89,000' |
+	'144,000' |
+	'233,000'
+
 export const ORDER_NUMBERS = {
 	'-10': '0',
 	0: '100',
@@ -52,14 +68,14 @@ export const PLAN_PRICE_PROFESSIONAL_ANNUAL = {
 export const getPlanPrice = (
 	planType: 'professional',
 	isMonthly: boolean,
-	orderNumber: string
+	orderNumber: ORDER_NUMBERS_TYPE
 ) => {
 	if (planType === 'professional') {
 		if (isMonthly) {
-			return PLAN_PRICE_PROFESSIONAL_MONTHLY[orderNumber] || '';
+			return PLAN_PRICE_PROFESSIONAL_MONTHLY[orderNumber];
 		} else {
-			return PLAN_PRICE_PROFESSIONAL_ANNUAL[orderNumber] || '';
+			return PLAN_PRICE_PROFESSIONAL_ANNUAL[orderNumber];
 		}
 	}
-	return '';
+	return 0;
 };

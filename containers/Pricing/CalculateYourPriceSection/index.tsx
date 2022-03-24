@@ -9,13 +9,13 @@ import styles from './index.module.scss';
 /* Components */
 import BuyPlanPriceCard from '../../../components/BuyPlanPriceCard';
 import FormInput from '../../../components/FormInput';
-import { ORDER_NUMBERS, getPlanPrice } from './data';
+import { ORDER_NUMBERS, ORDER_NUMBERS_TYPE, getPlanPrice } from './data';
 
 const CalculateYourPriceSection = () => {
 	const [isMonthly, setIsMonthly] = useState<boolean>(true);
 	const [selectedPlan, setSelectedPlan] = useState<number>(0);
 	const [planPrice, setPlanPrice] = useState<number>(0);
-	const [orderNumber, setOrderNumber] = useState<any>('0');
+	const [orderNumber, setOrderNumber] = useState<ORDER_NUMBERS_TYPE>('0');
 
 	const handleChange = () => {
 		setIsMonthly(!isMonthly);
@@ -96,6 +96,7 @@ const CalculateYourPriceSection = () => {
 						marks={ORDER_NUMBERS}
 						step={null}
 						onChange={(key: any) => {
+							// @ts-ignore
 							setOrderNumber(ORDER_NUMBERS[key]);
 							return null;
 						}}
