@@ -243,14 +243,15 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		const formData = new FormData();
 		formData.append('email', email);
 		formData.append('firstname', firstName);
-		formData.append('lastname', lastName);
+		formData.append('lastname', lastName);;
 		formData.append('phone', `${countryCode.value}-${phoneNumber}`);
 		formData.append('company', company);
 		formData.append('numemployees', companySize);
 		formData.append(
-			'isexistingcustomer',
+			'is_existing_customer',
 			isExistingCustomer ? 'true' : 'false'
 		);
+		formData.append('total_orders_per_month', totalOrders);
 
 		try {
 			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
