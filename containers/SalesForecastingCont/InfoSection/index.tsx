@@ -12,12 +12,12 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>The Best Tracking Tool with Zapier Integration.</h2>
+					<h2>The Best Sales Projection with Seasonality Adjustor</h2>
 					<p>
-						Not ranking as high as you’d wish on Amazon and Walmart can break a
-						brand. Keyword Rank Tracker helps you to find out exactly what you
-						need to do to boost your products&apos; ranking and gain visibility
-						for your brand.
+					Inventories come and go fast when your product is on demand. Accurate demand forecasting 
+					is a critical factor in determining your business&apos; financial opportunities. We 
+					calculate future sales using historical statistical approach, seasonality and fulfillable
+					inventory data.
 					</p>
 					<p></p>
 				</div>

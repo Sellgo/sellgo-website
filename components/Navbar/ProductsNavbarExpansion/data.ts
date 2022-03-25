@@ -59,29 +59,29 @@ export const productsRightPanelData: ProductsPanelData[] = [
 			{
 				head: 'Sales Forecasting',
 				desc: 'Product Validation on Amazon Page',
-				navigateTo: '/extension',
-				iconName: 'extension',
+				navigateTo: '/sales-forecasting',
+				iconName: 'salesForecasting',
 				isComingSoon: true
 			},
 			{
 				head: 'Order Planning',
 				desc: 'Product Validation on Amazon Page',
-				navigateTo: '/extension',
-				iconName: 'extension',
+				navigateTo: '/order-planning',
+				iconName: 'orderPlanning',
 				isComingSoon: true
 			},
 			{
 				head: '3PL Manager',
 				desc: 'Product Validation on Amazon Page',
-				navigateTo: '/extension',
-				iconName: 'extension',
+				navigateTo: '/tpl-manager',
+				iconName: 'tplManager',
 				isComingSoon: true
 			},
 			{
 				head: 'Cash Flow',
 				desc: 'Product Validation on Amazon Page',
-				navigateTo: '/extension',
-				iconName: 'extension',
+				navigateTo: '/fash-flow',
+				iconName: 'cashFlow',
 				isComingSoon: true
 			},
 			{

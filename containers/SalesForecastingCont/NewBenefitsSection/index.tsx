@@ -18,8 +18,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-					Monitor Where Your Product Is Ranking With Those Keywords, And Then
-					Optimize Your Strategy!
+				Sales Forecasting Helps to Set Inventory Levels, Maximizing Cash Flow and Minimizing Costs
 				</h2>
 
 				<div className={styles.benefitsCardsWrapper}>
