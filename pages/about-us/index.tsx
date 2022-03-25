@@ -185,17 +185,17 @@ const AboutUsPage: React.FC<Props> = () => {
 					</div>
 
 					<div className={styles.queryCard}>
-						<h3>Affiliate Partner</h3>
+						<h3>Partnership</h3>
 						<p>Please Contact:</p>
 
 						<div className={styles.queryCard__links}>
-							<a href="mailto:affiliate@sellgo.com" className="anchor">
-								affiliate@sellgo.com
+							<a href="mailto:partnership@sellgo.com" className="anchor">
+								partnership@sellgo.com
 							</a>
 							<p>
 								or visit{' '}
-								<Link href="/affiliates" passHref>
-									<a className="anchor">Affiliate Program</a>
+								<Link href="/partnerships" passHref>
+									<a className="anchor">Partnership Program</a>
 								</Link>
 							</p>
 						</div>

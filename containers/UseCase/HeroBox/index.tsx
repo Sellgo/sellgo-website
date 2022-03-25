@@ -18,12 +18,10 @@ interface Props {}
 const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.heroBox}`}>
-			<h2 className='secondary-heading'>
-				Lorem Ipsum
-			</h2>
+			<h2 className="secondary-heading">Lorem Ipsum</h2>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-				sed do eiusmod tempor incididunt ut labore et dolore
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore
 			</p>
 			<div className={styles.buttonsRow}>
 				<CTAButton

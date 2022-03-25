@@ -18,7 +18,10 @@ const NewClosingCTASection = () => {
 				<div className={styles.closingCTABox}>
 					<div className={styles.closingCTABox__left}>
 						<h2>Ready to switch on Sellgo?</h2>
-						<p>14-day free trial, no credit card required</p>
+						<p>
+							Avoid stockouts and overstock, so you can focus on increasing
+							sales
+						</p>
 
 						<div className={styles.ctaRow}>
 							<CTAButton

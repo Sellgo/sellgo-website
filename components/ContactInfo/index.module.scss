@@ -33,12 +33,13 @@
 	.contactSalesButton {
 		background: $prim_dark_2;
 		border-radius: 7px;
+		border-color: $prim_dark_2;
 		color: $prim_white;
 		width: 24rem;
 		height: 4rem;
 		cursor: pointer;
 		text-decoration: none;
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_content_14;
 		font-weight: $fontweight_semibold;
 		display: flex;
 		align-items: center;

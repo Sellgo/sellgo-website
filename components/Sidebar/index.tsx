@@ -44,7 +44,7 @@ const options = [
 		content: [
 			{ id: uuid(), name: 'Blogs', to: '/blogs' },
 			{ id: uuid(), name: 'Sales Estimator', to: '/sales-estimator' },
-			{ id: uuid(), name: 'Affiliate Program', to: '/affiliates' }
+			{ id: uuid(), name: 'Partnership Program', to: '/partnerships' }
 		]
 	},
 

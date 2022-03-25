@@ -21,7 +21,7 @@ const StepperInfoSection: React.FC<Props> = () => {
 				Build your healthy cash flow, instantly.
 			</h2>
 			<p className={styles.stepperSubtitle}>
-				All-in-one platform for Selling on Amazon
+				All-in-one platform for selling on Amazon
 			</p>
 			<Stepper steps={wholesaleFeatures} />
 		</section>

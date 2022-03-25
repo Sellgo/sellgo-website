@@ -49,30 +49,6 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				desc: 'Wholesale Bulk Calculator',
 				navigateTo: '/profit-finder',
 				iconName: 'profitFinder'
-			},
-			{
-				head: 'Leads Tracker',
-				desc: 'Intelligent Leads Calculator',
-				navigateTo: '/leads-tracker',
-				iconName: 'leadsTracker'
-			},
-			{
-				head: 'Seller Finder',
-				desc: 'Take Advantage of Competition',
-				navigateTo: '/seller-finder',
-				iconName: 'sellerFinder'
-			},
-			{
-				head: 'Seller Database',
-				desc: 'Scout a network of great Amazon sellers',
-				navigateTo: '/seller-database',
-				iconName: 'sellerDatabase'
-			},
-			{
-				head: 'Seller Map',
-				desc: 'Locate dozens of sellers instantly',
-				navigateTo: '/seller-map',
-				iconName: 'sellerMap'
 			}
 		]
 	},
@@ -80,6 +56,34 @@ export const productsRightPanelData: ProductsPanelData[] = [
 		hoverId: 'privateLabel',
 		header: 'Features',
 		groupedNavLinksData: [
+			{
+				head: 'Sales Forecasting',
+				desc: 'Product Validation on Amazon Page',
+				navigateTo: '/extension',
+				iconName: 'extension',
+				isComingSoon: true
+			},
+			{
+				head: 'Order Planning',
+				desc: 'Product Validation on Amazon Page',
+				navigateTo: '/extension',
+				iconName: 'extension',
+				isComingSoon: true
+			},
+			{
+				head: '3PL Manager',
+				desc: 'Product Validation on Amazon Page',
+				navigateTo: '/extension',
+				iconName: 'extension',
+				isComingSoon: true
+			},
+			{
+				head: 'Cash Flow',
+				desc: 'Product Validation on Amazon Page',
+				navigateTo: '/extension',
+				iconName: 'extension',
+				isComingSoon: true
+			},
 			{
 				head: 'Extension',
 				desc: 'Product Validation on Amazon Page',
@@ -106,14 +110,13 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				navigateTo: '/product-rank-tracker',
 				iconName: 'productRankTracker',
 				isNew: true
+			},
+			{
+				head: 'Product Database',
+				desc: 'Amazon Product Catalogue',
+				navigateTo: '/product-database',
+				iconName: 'productDatabase'
 			}
-			// {
-			// 	head: 'Product Database',
-			// 	desc: 'Amazon Product Catalogue',
-			// 	navigateTo: '/product-database',
-			// 	iconName: 'productDatabase',
-			// 	isComingSoon: true
-			// }
 		]
 	},
 	{
@@ -137,35 +140,7 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				desc: 'Take Advantage of Competition',
 				navigateTo: '/seller-finder',
 				iconName: 'sellerFinder'
-			},
-			{
-				head: 'Product Rank Tracker',
-				desc: 'Get to #1 Search Results',
-				navigateTo: '/product-rank-tracker',
-				iconName: 'productRankTracker',
-				isNew: true
-			},
-			{
-				head: 'Keyword Finder',
-				desc: 'Reveal Competitor Keywords',
-				navigateTo: '/keyword-finder',
-				iconName: 'keywordFinder',
-				isNew: true
-			},
-			{
-				head: 'Keyword Database',
-				desc: 'Check High-Volume Keywords',
-				navigateTo: '/keyword-database',
-				iconName: 'keywordDatabase',
-				isNew: true
 			}
-			// {
-			// 	head: 'Product Database',
-			// 	desc: 'Amazon Product Catalogue',
-			// 	navigateTo: '/product-database',
-			// 	iconName: 'productDatabase',
-			// 	isComingSoon: true
-			// }
 		]
 	},
 	{

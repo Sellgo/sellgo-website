@@ -22,7 +22,7 @@ import CatalogPlanning from './Products/CatalogPlanning';
 
 /* Resources Icons */
 import Blogs from './Resources/Blogs';
-import AffiliateProgram from './Resources/AffiliateProgram';
+import PartnershipProgram from './Resources/partnershipProgram';
 
 /* Types */
 import { Products, Resources } from '../../interfaces/Navbar';
@@ -138,8 +138,8 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 			break;
 		}
 
-		case 'affiliateProgram': {
-			productIcon = <AffiliateProgram {...otherProps} />;
+		case 'PartnershipProgram': {
+			productIcon = <PartnershipProgram {...otherProps} />;
 			break;
 		}
 

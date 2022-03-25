@@ -50,7 +50,7 @@ const ExtensionContPage: React.FC<Props> = (props) => {
 			<PlansSection />
 			<OtherInfoSection />
 			<TrustedBySection />
-			<NewClosingCTASection/>
+			<NewClosingCTASection />
 		</>
 	);
 };

@@ -53,7 +53,7 @@ const ProductsSection: React.FC<Props> = () => {
 				</p>
 				<button className={styles.textButton}>
 					<RainbowText type="orange_purple_gradient">
-						<Link href="affiliates">Learn More</Link>
+						<Link href="partnership">Learn More</Link>
 					</RainbowText>
 				</button>
 			</div>

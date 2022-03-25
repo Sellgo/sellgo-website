@@ -157,8 +157,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-weight: $fontweight_medium;
+	font-weight: $fontweight_semibold;
 	font-size: $fontsize_content_14;
 	color: $black_1;
 	margin-bottom: 18px;
+	border-radius: 7px;
 }

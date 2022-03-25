@@ -19,7 +19,7 @@ export const pricingCardHeaderGradients: { [key: string]: string } = {
 };
 
 export const hideNavigationOnRoutes = [
-	'/affiliates-signup',
+	'/partnerships-signup',
 	'/contact-sales',
 	'/contact',
 	'/demo'
