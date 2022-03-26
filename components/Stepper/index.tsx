@@ -20,7 +20,7 @@ interface Props {
 const Stepper: React.FC<Props> = (props) => {
 	const { steps } = props;
 	const stepsLength = steps.length;
-	const [activeStep, setActiveStep] = React.useState(1);
+	const [activeStep, setActiveStep] = React.useState(0);
 	const [startIndex, setStartIndex] = React.useState(0);
 	const [endIndex, setEndIndex] = React.useState(stepsLength);
 	React.useEffect(() => {

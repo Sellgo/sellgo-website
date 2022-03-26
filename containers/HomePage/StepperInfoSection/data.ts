@@ -2,7 +2,7 @@ import { StepDetail } from '../../../interfaces/Stepper';
 
 export const wholesaleFeatures: StepDetail[] = [
 	{
-		title: 'Sales Forecast',
+		title: 'Sales Forecasting',
 		icon: 'salesProjection',
 		subTitle: 'Quick sales projection and Validation',
 		description: `The AiStock projects your future sales for each SKU in your Amazon 
@@ -48,13 +48,13 @@ export const wholesaleFeatures: StepDetail[] = [
 		imageUrl: '/extension_1.png'
 	},
 	{
-		title: 'Extension',
+		title: 'Browser Extension',
 		icon: 'extension',
 		subTitle: 'Quick product validation in your browser',
 		description: `Get Amazon Product Research capabilities inside the Sellgo Chrome
 		Extension, helps give Amazon sellers a quick validation of a market while they browse 
 		through Amazon.`,
-		linkLabel: 'More about Extension',
+		linkLabel: 'More about Browser Extension',
 		navigateTo: '/extension',
 		imageUrl: '/extension_1.png'
 	},

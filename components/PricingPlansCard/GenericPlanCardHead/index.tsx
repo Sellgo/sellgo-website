@@ -117,8 +117,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 								withToggle ? styles.originalPrice__small : ''
 							}`}
 						>
-							Originally <br />
-							billed At{' '}
+							Originally {' '}
 							<span className="strike-text">
 								${prettyPrintNumber(monthlyPrice * 12)}
 							</span>
@@ -163,7 +162,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				asExternal
 				newTarget
 			>
-				Buy Now
+				Buy now
 			</CTAButton>
 		</div>
 	);
