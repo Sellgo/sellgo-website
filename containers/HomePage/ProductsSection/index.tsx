@@ -22,7 +22,7 @@ const ProductsSection: React.FC<Props> = () => {
 		<section className={styles.productSectionWrapper}>
 			<div className={`page-container ${styles.productsSection}`}>
 				<h2 className={styles.productsSectionTitle}>
-					The Amazon Selling Solution Your Business Will Love
+					The Amazon selling solution your business will love
 				</h2>
 
 				<div className={styles.productsWrapper}>
@@ -46,14 +46,14 @@ const ProductsSection: React.FC<Props> = () => {
 				>
 					<RainbowText type="orange_purple_gradient">Request Demo</RainbowText>
 				</button>
-				<h2 className={styles.agencyTitle}>Agency?</h2>
+				<h2 className={styles.agencyTitle}>Partnerships?</h2>
 				<p className={styles.agencyDetails}>
 					Help your clients streamline their supply chain and reach their
 					healthy cash flow by becoming a certified partner.
 				</p>
 				<button className={styles.textButton}>
 					<RainbowText type="orange_purple_gradient">
-						<Link href="partnership">Learn More</Link>
+						<Link href="partnership-program">Learn More</Link>
 					</RainbowText>
 				</button>
 			</div>

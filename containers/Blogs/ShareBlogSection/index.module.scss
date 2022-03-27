@@ -5,7 +5,9 @@
 	margin: 10rem auto;
 
 	h3 {
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
+		color: $grey_8;
 		text-align: center;
 	}
 }

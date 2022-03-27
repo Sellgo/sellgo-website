@@ -15,7 +15,7 @@ const HeroBox = () => {
 			<div className={`page-container ${styles.herobox}`}>
 				<div className={styles.textColumn}>
 					<p className={styles.title}>Agency?</p>
-					<h1 className={`${styles.heading}`}>Become a Partner</h1>
+					<h1 className={`${styles.heading}`}>Become a partner</h1>
 					<p className={`${styles.tagline}`}>
 						Partner with Sellgo to empower your clients to unlock their growth,
 						profit and cash flow.

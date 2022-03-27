@@ -17,7 +17,7 @@ const ContactInfo: React.FC<Props> = (props) => {
 
 	return (
 		<div className={`${styles.contactInfo} ${className}`}>
-			<h2>*Need an Enterprise account? We&apos;d be happy to talk!</h2>
+			<h2>*Need an enterprise account? We&apos;d be happy to talk!</h2>
 
 			<div className={styles.capsule}>
 				<p>{message}</p>

@@ -20,7 +20,7 @@ const ShowCaseHeroBox: React.FC<Props> = () => {
 	return (
 		<div className={styles.heroBoxWrapper}>
 			<div className={`page-container ${styles.heroBoxContent}`}>
-				<h1>Amazon Seller Tips & News</h1>
+				<h1>Amazon seller tips & news</h1>
 				<p>
 					Stay up to date on the latest news and tips impacting your business
 					and the Amazon marketplace. Access resourceful guides, learn unique

@@ -32,12 +32,13 @@
 	&__left {
 		flex: 1;
 		h3 {
-			font-size: 30px;
+			font-size: $fontsize_subtitle_24;
+			font-weight: $fontweight_bold;
 			color: inherit;
 		}
 
 		p {
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_content_12;
 			color: inherit;
 			font-weight: $fontweight_regular;
 		}
@@ -50,7 +51,9 @@
 
 		button {
 			height: 5rem;
-			color: $second_grey;
+			color: $prim_dark_1;
+			font-size: $fontsize_content_16;
+			font-weight: $fontweight_semibold;
 			border: 0;
 			outline: 0;
 			background: $prim_white;

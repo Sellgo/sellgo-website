@@ -19,7 +19,7 @@ const RelatedBlogsSection: React.FC<Props> = (props) => {
 
 	return (
 		<section className={`page-container ${styles.relatedBlogs}`}>
-			<h3>Related Articles</h3>
+			<h3>Related articles</h3>
 			<div className={styles.relatedBlogsWrapper}>
 				{relatedBlogs.map((blog: ShowcaseBlogDetails) => {
 					return <RelatedBlogCard key={uuid()} {...blog} />;

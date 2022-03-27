@@ -1,7 +1,7 @@
 @import '../../styles/guidelines';
 
 .contactInfo {
-	text-align: center;
+	text-align: center;	
 
 	h2 {
 		font-size: $fontsize_subtitle_20;
@@ -15,7 +15,8 @@
 	border-radius: 10rem;
 	margin: 0 auto;
 	margin-top: 2rem;
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_semibold;
 	color: $prim_dark_2;
 	display: flex;
 	flex-direction: column;
@@ -31,16 +32,16 @@
 	}
 
 	.contactSalesButton {
-		background: $prim_dark_2;
+		background: none;
 		border-radius: 7px;
-		border-color: $prim_dark_2;
-		color: $prim_white;
+		border-color: $prim_dark_2;		
+		color: $prim_dark_2;
 		width: 24rem;
 		height: 4rem;
 		cursor: pointer;
 		text-decoration: none;
-		font-size: $fontsize_content_14;
-		font-weight: $fontweight_semibold;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;		
 		display: flex;
 		align-items: center;
 		justify-content: center;

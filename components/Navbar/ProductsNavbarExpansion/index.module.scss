@@ -2,10 +2,11 @@
 
 .productsNavbar {
 	background: $grey_0;
+	margin-top: 0.3rem;
 	width: 100%;
 	display: flex;
 	box-shadow: 0 5px 10px rgba(#000, 0.5);
-	min-height: 34rem;
+	min-height: 50rem;
 }
 
 .productsNavbar__left {
@@ -15,13 +16,13 @@
 	max-width: 24rem;
 
 	h3 {
-		font-size: $fontsize_content_10;
+		font-size: $fontsize_content_12;
 		color: $prim_white;
 		text-align: left;
 		margin-top: 1rem;
 		margin-left: 2rem;
 		margin-bottom: 1rem;
-		font-weight: $fontweight_semibold;
+		font-weight: $fontweight_medium;
 	}
 }
 
@@ -32,13 +33,13 @@
 	max-height: 44.4rem;
 
 	h3 {
-		font-size: $fontsize_content_10;
+		font-size: $fontsize_content_12;
 		color: $prim_dark_2;
 		text-align: left;
 		margin-top: 1rem;
 		margin-left: 5rem;
 		margin-bottom: 1rem;
-		font-weight: $fontweight_semibold;
+		font-weight: $fontweight_medium;
 	}
 }
 
@@ -66,15 +67,16 @@
 
 	h2 {
 		color: $prim_white;
-		font-size: $fontsize_subtitle_20;
+		font-size: $fontsize_content_16;
 		font-weight: $fontweight_semibold;
 		margin-top: 5px;
 	}
 
 	.linkDesc {
-		color: $sellgo_blue;
+		color: $grey_7;
 		font-size: $fontsize_content_12;
 		margin-right: 5px;
+		font-weight: $fontweight_medium;
 	}
 
 	&__active {
@@ -83,6 +85,8 @@
 
 		h2 {
 			color: $black_1;
+			font-size: $fontsize_content_16;
+			font-weight: $fontweight_bold;
 		}
 	}
 }

@@ -33,8 +33,8 @@ const ContactUsPage: React.FC<Props> = () => {
 
 				<section className={`page-container ${styles.queryCardsWrapper}`}>
 					<div className={styles.queryCard}>
-						<h3>Media Inquiry</h3>
-						<p>Please Contact:</p>
+						<h3>Media inquiry</h3>
+						<p>Please contact:</p>
 						<div className={styles.queryCard__links}>
 							<a href="mailto:press@sellgo.com" className="anchor">
 								press@sellgo.com
@@ -44,7 +44,7 @@ const ContactUsPage: React.FC<Props> = () => {
 
 					<div className={styles.queryCard}>
 						<h3>Partnership</h3>
-						<p>Please Contact:</p>
+						<p>Please contact:</p>
 
 						<div className={styles.queryCard__links}>
 							<a href="mailto:partnership@sellgo.com" className="anchor">
@@ -61,7 +61,7 @@ const ContactUsPage: React.FC<Props> = () => {
 
 					<div className={styles.queryCard}>
 						<h3>Questions</h3>
-						<p>Please Contact:</p>
+						<p>Please contact:</p>
 						<div className={styles.queryCard__links}>
 							<a href="mailto:support@sellgo.com" className="anchor">
 								support@sellgo.com
@@ -69,7 +69,7 @@ const ContactUsPage: React.FC<Props> = () => {
 							<p>
 								or visit{' '}
 								<Link href="/contact">
-									<a className="anchor">Contact Us</a>
+									<a className="anchor">Contact us</a>
 								</Link>
 							</p>
 						</div>
