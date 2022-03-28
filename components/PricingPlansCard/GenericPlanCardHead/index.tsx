@@ -117,7 +117,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 								withToggle ? styles.originalPrice__small : ''
 							}`}
 						>
-							Originally {' '}
+							Originally{' '}
 							<span className="strike-text">
 								${prettyPrintNumber(monthlyPrice * 12)}
 							</span>

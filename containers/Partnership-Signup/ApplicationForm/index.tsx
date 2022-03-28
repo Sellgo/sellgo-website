@@ -243,7 +243,10 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 	return (
 		<>
-			<h2 className={`secondary-heading`}> Join the Sellgo partnership program </h2>
+			<h2 className={`secondary-heading`}>
+				{' '}
+				Join the Sellgo partnership program{' '}
+			</h2>
 			<form
 				className={`page-container ${styles.applicationForm}`}
 				onSubmit={handleSubmit}

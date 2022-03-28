@@ -18,7 +18,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-				Sales Forecasting Helps to Set Inventory Levels, Maximizing Cash Flow and Minimizing Costs
+					Sales Forecasting Helps to Set Inventory Levels, Maximizing Cash Flow
+					and Minimizing Costs
 				</h2>
 
 				<div className={styles.benefitsCardsWrapper}>

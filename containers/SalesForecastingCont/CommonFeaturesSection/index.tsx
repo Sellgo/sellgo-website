@@ -15,10 +15,13 @@ interface Props {}
 const CommonFeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
-			<h2 className="secondary-heading">Never Miss Out on Any Sales Opportunity</h2>
+			<h2 className="secondary-heading">
+				Never Miss Out on Any Sales Opportunity
+			</h2>
 			<h3>
-			We forecast the sales that your business will make so that you can be confident 
-			in the data when placing inventory orders. Never ever stockout again.
+				We forecast the sales that your business will make so that you can be
+				confident in the data when placing inventory orders. Never ever stockout
+				again.
 			</h3>
 
 			<div className={styles.featuresCardWrapper}>

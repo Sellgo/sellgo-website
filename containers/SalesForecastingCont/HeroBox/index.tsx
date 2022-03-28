@@ -36,7 +36,9 @@ const HeroBox: React.FC<Props> = () => {
 					/>
 					<h2 className={styles.subHeading}>Sales Forecasting</h2>
 				</div>
-				<h1 className={styles.heading}>Accurately Project Long-term Sales and Seasonality</h1>
+				<h1 className={styles.heading}>
+					Accurately Project Long-term Sales and Seasonality
+				</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"
