@@ -17,9 +17,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
-				<h2 className="secondary-heading">
-				3PL inventory management solved
-				</h2>
+				<h2 className="secondary-heading">3PL inventory management solved</h2>
 
 				<div className={styles.benefitsCardsWrapper}>
 					{newBenefitsData.map((benefitsData: any, index: number) => {
@@ -34,8 +32,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading-small">
-				Deep down you know there has to be a better way for Inventory Forecasting ... 
-				a repeatable process without the pain.
+					Deep down you know there has to be a better way for Inventory
+					Forecasting ... a repeatable process without the pain.
 				</h2>
 				<CTAButton
 					type="secondary"

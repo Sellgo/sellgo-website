@@ -35,8 +35,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading-small">
-				Deep down you know there has to be a better way for Inventory Forecasting ... 
-				a repeatable process without the pain.
+					Deep down you know there has to be a better way for Inventory
+					Forecasting ... a repeatable process without the pain.
 				</h2>
 				<CTAButton
 					type="secondary"

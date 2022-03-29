@@ -18,7 +18,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-				AiStock unlocks growth, profits and healthy cash flow
+					AiStock unlocks growth, profits and healthy cash flow
 				</h2>
 
 				<div className={styles.benefitsCardsWrapper}>
@@ -34,8 +34,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading-small">
-				Deep down you know there has to be a better way for Inventory Forecasting ... 
-				a repeatable process without the pain.
+					Deep down you know there has to be a better way for Inventory
+					Forecasting ... a repeatable process without the pain.
 				</h2>
 				<CTAButton
 					type="secondary"

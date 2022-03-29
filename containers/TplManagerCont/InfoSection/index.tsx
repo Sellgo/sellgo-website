@@ -14,11 +14,13 @@ const InfoSection: React.FC<Props> = () => {
 				<div className={styles.infoSection__Text}>
 					<h2>Fast track your Amazon FBA &apos; 3PL inventory</h2>
 					<p>
-					With the power of AI and machine learning, AiStock analyzes your inventory levels, 
-					selling velocity and seasonality trends to automate your best-seller reordering needs: 
-					know when to restock, what to transfer, how much stock to buy from suppliers, 
-					how much stock to send from FBA to FBM (and vice versa), and get detailed reports 
-					that show progress over time, from factory lead time to domestics last leg.
+						With the power of AI and machine learning, AiStock analyzes your
+						inventory levels, selling velocity and seasonality trends to
+						automate your best-seller reordering needs: know when to restock,
+						what to transfer, how much stock to buy from suppliers, how much
+						stock to send from FBA to FBM (and vice versa), and get detailed
+						reports that show progress over time, from factory lead time to
+						domestics last leg.
 					</p>
 					<p></p>
 				</div>
