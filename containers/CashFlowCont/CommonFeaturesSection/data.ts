@@ -1,40 +1,45 @@
 export const commonFeaturesList = [
 	{
-		title: 'Position Checker',
-		detail: `Check your product’s proximity to the #1 search result for each particular keyword.`,
+		title: 'Cash Flow Analysis',
+		detail: `Cash flow analysis calculates your future inventory stats for you. In just 
+		a few seconds you will know how much cash, and when, you need to pay for inventory 
+		before you make the plunge, and how much you make to go to inventory.`,
 		iconImageLink: '/crossHairsIcon.svg',
 		alt: `crossHairsIcon`
 	},
 	{
-		title: 'Geolocation Keyword Monitoring',
-		detail: `Use Zip Code Tracking to view how listings are seen for different states, cities, and regions.`,
+		title: 'Breakdown Everything',
+		detail: `Forecast what you need to get started (inventory, equipment and more), or 
+		take it to the next level (new marketing efforts, etc.) and forecast the impact on 
+		your business over time.`,
 		iconImageLink: '/mapMarkedIcon.svg',
 		alt: `mapMarkedIcon`
 	},
 	{
-		title: 'Hourly Tracking',
-		detail: `Real-time high-resolution hourly tracking. Nothing better than 
-		having a digital watchdog on your product ranking.`,
+		title: 'Estimate Everything',
+		detail: `Growth is expensive, but you gotta invest. Estimate when the high season 
+		bonus will save you. Estimate how much of future cash will go to inventory.`,
 		iconImageLink: '/analyticsRisingIcon.svg',
 		alt: `analyticsRisingIcon`
 	},
 	{
-		title: 'Zapier Integration',
-		detail: `Spend less time waiting for alerts and more time running your business. 
-		This feature would change how you play your game.`,
+		title: 'Explore Opportunity',
+		detail: `Make sure you get the best deal with all of your suppliers and third party 
+		logistics providers before the holiday rush. `,
 		iconImageLink: '/zapierIcon.svg',
 		alt: `zapierIconre`
 	},
 	{
-		title: 'PPC Re-Campaign Integration',
-		detail: `Define your best action when there is a decline/ incline 
-		of product ranking with the searched keyword in their title.`,
+		title: 'Beyond Annual Projection',
+		detail: `You need to plan these things out. Plans don't always turn out like you expect 
+		them too, but if you fail to plan, you plan to fail.`,
 		iconImageLink: '/adIcon.svg',
 		alt: `adIconn here`
 	},
 	{
-		title: 'True Rank Performance (TRP) Score',
-		detail: `Ranking drops/ thrusts alerts are noisy, use TRP as a real indicator of your sales change.`,
+		title: 'Scale Up',
+		detail: `There is no better feeling than seeing your business take off. You worked hard 
+		to get this point, now see how long it will take to pay off what it cost you.`,
 		iconImageLink: '/childIcon.svg',
 		alt: `childIconere`
 	}

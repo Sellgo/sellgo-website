@@ -12,12 +12,13 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>The Best Tracking Tool with Zapier Integration.</h2>
+					<h2>Fast track your Amazon FBA &apos; 3PL inventory</h2>
 					<p>
-						Not ranking as high as you’d wish on Amazon and Walmart can break a
-						brand. Keyword Rank Tracker helps you to find out exactly what you
-						need to do to boost your products&apos; ranking and gain visibility
-						for your brand.
+					With the power of AI and machine learning, AiStock analyzes your inventory levels, 
+					selling velocity and seasonality trends to automate your best-seller reordering needs: 
+					know when to restock, what to transfer, how much stock to buy from suppliers, 
+					how much stock to send from FBA to FBM (and vice versa), and get detailed reports 
+					that show progress over time, from factory lead time to domestics last leg.
 					</p>
 					<p></p>
 				</div>

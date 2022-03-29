@@ -1,40 +1,37 @@
 export const commonFeaturesList = [
 	{
-		title: 'Position Checker',
-		detail: `Check your product’s proximity to the #1 search result for each particular keyword.`,
+		title: 'Easy Inventory Reconcilation',
+		detail: ``,
 		iconImageLink: '/crossHairsIcon.svg',
 		alt: `crossHairsIcon`
 	},
 	{
-		title: 'Geolocation Keyword Monitoring',
-		detail: `Use Zip Code Tracking to view how listings are seen for different states, cities, and regions.`,
+		title: 'Connect Order to 3PL',
+		detail: ``,
 		iconImageLink: '/mapMarkedIcon.svg',
 		alt: `mapMarkedIcon`
 	},
 	{
-		title: 'Hourly Tracking',
-		detail: `Real-time high-resolution hourly tracking. Nothing better than 
-		having a digital watchdog on your product ranking.`,
+		title: '3PL Scheduling',
+		detail: ``,
 		iconImageLink: '/analyticsRisingIcon.svg',
 		alt: `analyticsRisingIcon`
 	},
 	{
-		title: 'Zapier Integration',
-		detail: `Spend less time waiting for alerts and more time running your business. 
-		This feature would change how you play your game.`,
+		title: 'Accurate Shipment Quantity',
+		detail: ``,
 		iconImageLink: '/zapierIcon.svg',
 		alt: `zapierIconre`
 	},
 	{
-		title: 'PPC Re-Campaign Integration',
-		detail: `Define your best action when there is a decline/ incline 
-		of product ranking with the searched keyword in their title.`,
+		title: '3PL Cost Calculator',
+		detail: ``,
 		iconImageLink: '/adIcon.svg',
 		alt: `adIconn here`
 	},
 	{
-		title: 'True Rank Performance (TRP) Score',
-		detail: `Ranking drops/ thrusts alerts are noisy, use TRP as a real indicator of your sales change.`,
+		title: 'Connect to Your Fulfillment',
+		detail: ``,
 		iconImageLink: '/childIcon.svg',
 		alt: `childIconere`
 	}

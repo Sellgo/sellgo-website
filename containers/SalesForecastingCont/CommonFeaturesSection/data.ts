@@ -1,40 +1,40 @@
 export const commonFeaturesList = [
 	{
-		title: 'Position Checker',
-		detail: `Check your product’s proximity to the #1 search result for each particular keyword.`,
+		title: 'Days Until Stockout',
+		detail: `Be ready when an unexpected wave of orders comes crashing down on you.`,
 		iconImageLink: '/crossHairsIcon.svg',
 		alt: `crossHairsIcon`
 	},
 	{
-		title: 'Geolocation Keyword Monitoring',
-		detail: `Use Zip Code Tracking to view how listings are seen for different states, cities, and regions.`,
+		title: 'Seasonality Adjustor',
+		detail: `AiStock's algorithm instantly enables you how to estimate high season 
+		of sales. Don't miss out on holiday sales due to out of stock.`,
 		iconImageLink: '/mapMarkedIcon.svg',
 		alt: `mapMarkedIcon`
 	},
 	{
-		title: 'Hourly Tracking',
-		detail: `Real-time high-resolution hourly tracking. Nothing better than 
-		having a digital watchdog on your product ranking.`,
+		title: 'In-stock Rate',
+		detail: `The inventory in-stock rate provides an important indicator of historic 
+		inventory, showing how well you have done in delivering products to the customers.`,
 		iconImageLink: '/analyticsRisingIcon.svg',
 		alt: `analyticsRisingIcon`
 	},
 	{
-		title: 'Zapier Integration',
-		detail: `Spend less time waiting for alerts and more time running your business. 
-		This feature would change how you play your game.`,
+		title: 'Inventory Threshold',
+		detail: `Inventory threshold calibrates your sales projection better by filtering 
+		all sales noise when your inventory falls below the threshold.`,
 		iconImageLink: '/zapierIcon.svg',
 		alt: `zapierIconre`
 	},
 	{
-		title: 'PPC Re-Campaign Integration',
-		detail: `Define your best action when there is a decline/ incline 
-		of product ranking with the searched keyword in their title.`,
+		title: 'Averaging Historical Sales',
+		detail: ``,
 		iconImageLink: '/adIcon.svg',
 		alt: `adIconn here`
 	},
 	{
-		title: 'True Rank Performance (TRP) Score',
-		detail: `Ranking drops/ thrusts alerts are noisy, use TRP as a real indicator of your sales change.`,
+		title: 'Export Data',
+		detail: ``,
 		iconImageLink: '/childIcon.svg',
 		alt: `childIconere`
 	}

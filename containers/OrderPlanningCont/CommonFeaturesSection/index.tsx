@@ -15,10 +15,10 @@ interface Props {}
 const CommonFeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
-			<h2 className="secondary-heading">Track Your Keywords with Confidence</h2>
+			<h2 className="secondary-heading">Inventory planning made easy</h2>
 			<h3>
-				Ensure your high-volume search keywords are boosting your product
-				ranking. Don&apos;t miss out!
+			We streamline and automate what is often the most stressful, time consuming 
+			and costly process of your Amazon business.
 			</h3>
 
 			<div className={styles.featuresCardWrapper}>

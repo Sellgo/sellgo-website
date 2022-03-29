@@ -1,9 +1,11 @@
 export const accordionData = [
 	{
 		title: 'Product Description',
-		description: `The Best Tracking Tool to Make Sure You Know Where Your Product Rank is at All Times. 
-		Find out exactly how each keyword performs to boost your products' rank and gain visibility for your brand. 
-		Dominate Your Keywords and Get to #1 Spot of Search Results.`,
+		description: `Project Your Actual Business Cash Flow - Monthly and Yearly! Calculate and 
+		Project Cashflow Instantly projecting out EVERY bit of income and expense you expect to 
+		have in the coming years: inventory payments, Amazon fees, PPC, freight, 3PL, launch, 
+		salaries, etc. Spend less time with spreadsheets and more time running your business, 
+		using all profits to grow.`,
 		listDetails: [],
 		ctaLinkDetails: {
 			name: '',
@@ -12,12 +14,11 @@ export const accordionData = [
 	},
 	{
 		title: 'Features',
-		description: `Sellgo Keyword Rank Tracker is a fantastic tool for guiding you through your 
-		keywords' performance so you win the fight against your competition. We let you know which 
-		keywords to rank at different geolocation and how to optimize them through integration 
-		with other PPC platforms, so you can beat out the bigger guys who have better marketing budgets than you. 
-		With Sellgo Keyword Rank Tracker, we’ll even let you know what 
-		your competitors are doing and alert you to where they rank in the Amazon search result pages.`,
+		description: `Understanding your cashflow is critical to long term success as an Amazon 
+		seller. Take guesswork out of the equation and instantly project out 2 years worth every 
+		incoming and outgoing penny that affects your business: inventory payments, product costs, 
+		shipping, etc. Spend less time with spreadsheets and more time running your business, 
+		using all profits to grow.`,
 		listDetails: [],
 		ctaLinkDetails: {
 			name: '',

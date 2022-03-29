@@ -15,8 +15,8 @@
 }
 
 .featuresSection {
-	padding: 5rem 0;
-	min-height: 80rem;
+	padding: 10rem 0;
+	min-height: 50rem;
 	text-align: center;
 	height: 100%;
 	display: flex;
@@ -48,27 +48,27 @@
 	display: flex;
 	flex-direction: row;
 	align-content: center;
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_content_12;
 	font-weight: $fontweight_medium;
 	text-transform: uppercase;
 	color: $prim_white !important;
 
 	img {
-		margin-right: 10px;
+		margin-right: 11px;
 	}
 }
 
 .subTitle {
 	margin-top: 10px;
 	height: 50px;
-	margin-bottom: 18px;
+	margin-bottom: 11px;
 	font-size: $fontsize_content_16;
-	font-weight: $fontweight_bold;
+	font-weight: $fontweight_semibold;
 	color: $prim_white !important;
 }
 
 .description {
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_content_12;
 	font-weight: $fontweight_medium;
 	color: $prim_white !important;
 }

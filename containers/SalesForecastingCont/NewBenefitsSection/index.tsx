@@ -35,8 +35,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading-small">
-					The Powerful Yet Simple Interface Allows You To See Exactly Where Your
-					Product Ranks For Any Given Keyword Phrase.
+				Deep down you know there has to be a better way for Inventory Forecasting ... 
+				a repeatable process without the pain.
 				</h2>
 				<CTAButton
 					type="secondary"

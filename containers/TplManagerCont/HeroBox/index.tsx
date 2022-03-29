@@ -34,9 +34,9 @@ const HeroBox: React.FC<Props> = () => {
 						name="productRankTracker"
 						isRainbow
 					/>
-					<h2 className={styles.subHeading}>Product Rank Tracker</h2>
+					<h2 className={styles.subHeading}>3PL Manager</h2>
 				</div>
-				<h1 className={styles.heading}>Get to #1 Spot of Search Results</h1>
+				<h1 className={styles.heading}>Intelligent 3PL Manager</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"
@@ -44,7 +44,7 @@ const HeroBox: React.FC<Props> = () => {
 					variant="rainbow"
 					className={styles.heroBoxCTA}
 				>
-					Get Started
+					Get started
 				</CTAButton>
 
 				<ProductAccordion data={accordionData} />

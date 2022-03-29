@@ -1,7 +1,7 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Sellgo - Product Rank Tracker: Amazon All-In-One Tool`,
+	title: `Sellgo - AiStock 3PL Manager: Amazon All-In-One Tool`,
 	description: `Powerful Amazon Keyword Research and Product Rank Tracker tool. 
 	Sellgo Keyword Rank Tracker is a fantastic tool for guiding you through your keywords' performance 
 	so you win the fight against your competition. We let you know which keywords to rank at different 

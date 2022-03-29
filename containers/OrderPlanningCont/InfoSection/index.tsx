@@ -12,12 +12,15 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>The Best Tracking Tool with Zapier Integration.</h2>
+					<h2>Never stockout and rarely overstock</h2>
 					<p>
-						Not ranking as high as you’d wish on Amazon and Walmart can break a
-						brand. Keyword Rank Tracker helps you to find out exactly what you
-						need to do to boost your products&apos; ranking and gain visibility
-						for your brand.
+					AiStock easily creates intelligent and precise replenishment 
+					order plan for you based on sales history and other factors 
+					that can potentially impact inventory. From then, you can 
+					adjust or add the requirements you want to include in the 
+					order plan. AiStock is designed to help you manage your stock 
+					with a high level of accuracy, so that your products are 
+					never out of stock again.
 					</p>
 					<p></p>
 				</div>

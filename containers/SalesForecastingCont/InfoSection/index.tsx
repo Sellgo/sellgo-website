@@ -12,7 +12,7 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>The Best Sales Projection with Seasonality Adjustor</h2>
+					<h2>AI-based sales projection with seasonality adjustor</h2>
 					<p>
 						Inventories come and go fast when your product is on demand.
 						Accurate demand forecasting is a critical factor in determining your
