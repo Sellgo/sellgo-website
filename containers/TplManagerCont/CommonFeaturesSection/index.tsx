@@ -17,7 +17,8 @@ const CommonFeaturesSection: React.FC<Props> = () => {
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
 			<h2 className="secondary-heading">Inventory replenishment made easy</h2>
 			<h3>
-			It’s easy to sell more when you have the right fulfillable inventory levels.
+				It’s easy to sell more when you have the right fulfillable inventory
+				levels.
 			</h3>
 
 			<div className={styles.featuresCardWrapper}>

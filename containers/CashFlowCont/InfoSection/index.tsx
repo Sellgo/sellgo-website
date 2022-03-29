@@ -12,11 +12,14 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>Pain killer for all ecommerce business</h2>
+					<h2>#1 pain killer for all ecommerce business</h2>
 					<p>
-						Inventory is the lifeblood for any successful retail business. Being able to accurately 
-						assess and replenish inventory is mission-critical for your business. So what if you didn’t 
-						have to do any “guesstimations” or rely on hunches for filling up your inventory? You don’t.
+						Project Your Actual Business Cash Flow - Monthly and Yearly!
+						Calculate and Project Cashflow Instantly projecting out EVERY bit of
+						income and expense you expect to have in the coming years: inventory
+						payments, Amazon fees, PPC, freight, 3PL, launch, salaries, etc.
+						Spend less time with spreadsheets and more time running your
+						business, using all profits to grow.
 					</p>
 					<p></p>
 				</div>

@@ -16,9 +16,7 @@ const CommonFeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
 			<h2 className="secondary-heading">Cash flow made easy</h2>
-			<h3>
-				
-			</h3>
+			<h3></h3>
 
 			<div className={styles.featuresCardWrapper}>
 				{commonFeaturesList.map((commonFeatureDetails: any) => {

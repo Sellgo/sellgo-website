@@ -80,7 +80,7 @@ export const productsRightPanelData: ProductsPanelData[] = [
 			{
 				head: 'Cash Flow',
 				desc: 'Product Validation on Amazon Page',
-				navigateTo: '/fash-flow',
+				navigateTo: '/cash-flow',
 				iconName: 'cashFlow',
 				isComingSoon: true
 			},
