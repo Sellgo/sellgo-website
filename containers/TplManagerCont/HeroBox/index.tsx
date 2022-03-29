@@ -37,7 +37,7 @@ const HeroBox: React.FC<Props> = () => {
 					<h2 className={styles.subHeading}>3PL Manager</h2>
 				</div>
 				<h1 className={styles.heading}>
-					Intelligent 3PL and pre-fulfillment manager
+					Intelligent pre-fulfillment manager
 				</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"

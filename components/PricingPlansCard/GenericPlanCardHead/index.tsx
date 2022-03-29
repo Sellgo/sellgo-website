@@ -62,7 +62,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			{isNew && isSmall && (
 				<div className={styles.newFeatureBanner}>
 					<Image src="/star.svg" width={25} height={25} />
-					Most Popular
+					Most popular
 				</div>
 			)}
 			<div

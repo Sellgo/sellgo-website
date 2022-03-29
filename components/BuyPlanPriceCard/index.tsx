@@ -48,7 +48,7 @@ const BuyPlanPriceCard: React.FC<Props> = (props) => {
 			</CTAButton>
 
 			<a href="#!" className="anchor">
-				View Price Breakdown
+				View price breakdown
 			</a>
 		</div>
 	);
