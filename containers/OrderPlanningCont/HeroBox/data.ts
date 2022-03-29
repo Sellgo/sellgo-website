@@ -12,9 +12,10 @@ export const accordionData = [
 	},
 	{
 		title: 'Features',
-		description: `AiStock brings the power of powerful algorithms to inventory management. Our 
-		lightning-speed predictive software estimates the perfect order quantity at the perfect time, 
-		giving you freedom to focus on growing your business.`,
+		description: `AiStock accurately calculates the restocking proposal based on multiple factors: 
+		the turnover rate of each SKU, the incoming selling orders, and even the actual outgoing inventory 
+		quantity in warehouse. Sellers just need to accept it, or make a decision based on the insights 
+		provided by AiStock."`,
 		listDetails: [],
 		ctaLinkDetails: {
 			name: '',

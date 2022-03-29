@@ -39,7 +39,7 @@ const OtherInfoSection: React.FC<Props> = () => {
 				cash flow by becoming a certified partner.
 			</p>
 			<button className={styles.otherInfoSectionCTA}>
-				<RainbowText type="orange_purple_gradient">Get Started</RainbowText>
+				<RainbowText type="orange_purple_gradient">Get started</RainbowText>
 			</button>
 		</section>
 	);

@@ -44,7 +44,7 @@ const InfoCard: React.FC<Props> = (props) => {
 				navigateTo={navigateTo}
 				className={styles.featureCTA}
 			>
-				Get Started
+				Get started
 			</CTAButton>
 		</div>
 	);

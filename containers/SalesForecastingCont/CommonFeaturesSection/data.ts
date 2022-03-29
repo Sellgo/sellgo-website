@@ -28,13 +28,16 @@ export const commonFeaturesList = [
 	},
 	{
 		title: 'Averaging Historical Sales',
-		detail: ``,
+		detail: `Averaging historical sales over different periods during the last 1 year 
+		gives you a precise and reliable calculated result for the next quarter, month, or 
+		week to make better decision for your business.`,
 		iconImageLink: '/adIcon.svg',
 		alt: `adIconn here`
 	},
 	{
 		title: 'Export Data',
-		detail: ``,
+		detail: `You can now export your data to .XLSX file, which makes analyzing and 
+		reporting even easier.`,
 		iconImageLink: '/childIcon.svg',
 		alt: `childIconere`
 	}

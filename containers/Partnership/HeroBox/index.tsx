@@ -23,7 +23,7 @@ const HeroBox = () => {
 					<div className={styles.ctaBox}>
 						<div className={styles.ctaButtonWrapper}>
 							<button className={styles.submitButton} onClick={scrollToForm}>
-								Get Started
+								Get started
 							</button>
 						</div>
 					</div>

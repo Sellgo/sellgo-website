@@ -9,7 +9,7 @@ export const commonFeaturesList = [
 	},
 	{
 		title: 'Breakdown Everything',
-		detail: `Forecast what you need to get started (inventory, equipment and more), or 
+		detail: `Forecast what you need to Get started (inventory, equipment and more), or 
 		take it to the next level (new marketing efforts, etc.) and forecast the impact on 
 		your business over time.`,
 		iconImageLink: '/mapMarkedIcon.svg',

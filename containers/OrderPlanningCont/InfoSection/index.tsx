@@ -14,7 +14,7 @@ const InfoSection: React.FC<Props> = () => {
 				<div className={styles.infoSection__Text}>
 					<h2>Never stockout and rarely overstock</h2>
 					<p>
-					AiStock easily creates intelligent and precise replenishment 
+					AiStock easily creates intelligent and precise inventory 
 					order plan for you based on sales history and other factors 
 					that can potentially impact inventory. From then, you can 
 					adjust or add the requirements you want to include in the 

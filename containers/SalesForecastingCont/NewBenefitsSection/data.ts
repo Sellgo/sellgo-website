@@ -1,7 +1,7 @@
 export const newBenefitsData = [
 	{
 		title: 'Days of Inventory',
-		subTitle: 'Always in-stock no matter what',
+		subTitle: 'It`s always in-stock, no matter what',
 		description: `Our accurate demand forecasting automatically 
 		calculates optimal safety stock levels, taking into account 
 		any seasonality, holidays, shipping delays and spikes in 

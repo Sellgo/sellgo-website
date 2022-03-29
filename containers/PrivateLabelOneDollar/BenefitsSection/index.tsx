@@ -52,7 +52,7 @@ const BenefitsSection: React.FC<Props> = () => {
 						asExternal
 						newTarget
 					>
-						Get Started
+						Get started
 					</CTAButton>
 					<p>We offer a 7-day free trial with no credit card required.</p>
 				</div>

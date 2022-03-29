@@ -43,7 +43,7 @@ const OtherInfoSection: React.FC<Props> = () => {
 				navigateTo="/pricing?type=monthly-and-annual-plans"
 				className={styles.otherInfoSectionCTA}
 			>
-				Get Started
+				Get started
 			</CTAButton>
 		</section>
 	);
