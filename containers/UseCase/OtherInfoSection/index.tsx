@@ -1,5 +1,4 @@
 import React from 'react';
-import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
 
 /* Styling */

@@ -7,11 +7,11 @@ import LeadsTracker from './Products/LeadsTracker';
 import ProductTracker from './Products/ProductTracker';
 import ProfitFinder from './Products/ProfitFinder';
 import SearchManagement from './Products/SearchManagement';
+import KeywordFinder from './Products/KeywordFinder';
 import SellerFinder from './Products/SellerFinder';
 import SellerDatabase from './Products/SellerDatabase';
 import SellerMap from './Products/SellerMap';
 import ProductsDatabase from './Products/ProductDatabase';
-import KeywordFinder from './Products/KeywordFinder';
 import KeywordDatabase from './Products/KeywordDatabase';
 import ProductRankTracker from './Products/ProductRankTracker';
 import Dashboard from './Products/Dashboard';
@@ -22,7 +22,7 @@ import CatalogPlanning from './Products/CatalogPlanning';
 
 /* Resources Icons */
 import Blogs from './Resources/Blogs';
-import PartnershipProgram from './Resources/partnershipProgram';
+import PartnershipProgram from './Resources/PartnershipProgram';
 
 /* Types */
 import { Products, Resources } from '../../interfaces/Navbar';

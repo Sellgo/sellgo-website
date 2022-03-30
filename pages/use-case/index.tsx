@@ -1,6 +1,4 @@
 import React from 'react';
-import axios from 'axios';
-import { GetStaticProps } from 'next';
 
 /* Containers */
 import HeroBox from '../../containers/UseCase/HeroBox';
@@ -21,19 +19,9 @@ import { seoData } from '../../data/SEO/extension';
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
 
-/* Config */
-import AppConfig from '../../config';
+interface Props {}
 
-/* Types */
-import { FAQDetails } from '../../interfaces/FAQ';
-
-interface Props {
-	faqDetails: FAQDetails;
-}
-
-const ExtensionContPage: React.FC<Props> = (props) => {
-	const { faqDetails } = props;
-
+const ExtensionContPage: React.FC<Props> = () => {
 	return (
 		<>
 			<SEOHead
@@ -53,17 +41,6 @@ const ExtensionContPage: React.FC<Props> = (props) => {
 			<NewClosingCTASection />
 		</>
 	);
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/extension.json`);
-	const { data } = response;
-	return {
-		props: {
-			faqDetails: data
-		},
-		revalidate: 60 * 15 // 15 minutes
-	};
 };
 
 export default ExtensionContPage;

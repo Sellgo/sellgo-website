@@ -1,17 +1,10 @@
 import React from 'react';
 
-import Image from 'next/image';
-
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../../components/CTAButton';
-import ProductAccordion from '../../../components/ProductAccordion';
-import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
-
-/* Data */
-import { accordionData } from './data';
 
 interface Props {}
 

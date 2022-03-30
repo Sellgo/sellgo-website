@@ -17,8 +17,8 @@ const CommonFeaturesSection: React.FC<Props> = () => {
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
 			<h2 className="secondary-heading">Manage your cash flow easily</h2>
 			<h3>
-			Instantly find into what products your cash should be invested in <br/>
-			with year-end cashflow analytics of your inventory.
+				Instantly find into what products your cash should be invested in <br />
+				with year-end cashflow analytics of your inventory.
 			</h3>
 
 			<div className={styles.featuresCardWrapper}>
