@@ -10,6 +10,8 @@
 			position: absolute;
 			right: 0;
 			top: 30px;
+			font-size: 12px;
+			font-weight: $fontweight_regular;
 
 			@media only screen and(max-width: 1000px) {
 				display: none;
@@ -64,7 +66,7 @@
 	justify-content: space-between;
 	align-items: center;
 	color: $prim_dark_2;
-	margin: 3rem 0;
+	margin: 2rem 0;
 
 	@media only screen and(max-width: 650px) {
 		flex-wrap: wrap;
@@ -72,7 +74,7 @@
 	}
 
 	.planName {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_content_16;
 		color: inherit;
 		border: 1px solid $grey_3;
 		border-radius: 7px;
@@ -85,8 +87,8 @@
 		cursor: pointer;
 
 		&__Active {
-			background: $blue_1;
-			font-weight: $fontweight_bold;
+			background: $grey_1;
+			font-weight: $fontweight_semibold;
 		}
 
 		@media only screen and(max-width: 500px) {

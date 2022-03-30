@@ -16,7 +16,7 @@ const HeroBox: React.FC<Props> = () => {
 			<section className={styles.heroBoxSection}>
 				<div className={`page-container ${styles.heroBox}`}>
 					<div className={styles.heroBox__text}>
-						<h1>Contact Us</h1>
+						<h1>Contact us</h1>
 						<p>
 							Sellgo was made for Amazon sellers, by Amazon Sellers to provide
 							the tools and resources to build a successful Amazon business.

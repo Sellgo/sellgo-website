@@ -1,23 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
 
+/* Components */
+import DemoForm from '../../../containers/Demo/DemoForm';
+
 interface Props {}
 
 const TopFooter: React.FC<Props> = () => {
+	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	return (
 		<div className={styles.topFooter}>
 			<div className={styles.logoWrapper}>
 				<Link href="/" passHref>
 					<a>
 						<Image
-							src="/footerLogo.png"
+							src="/sellgoLogo.png"
 							alt="Sellgo Coompany Logo"
-							width={75}
-							height={30}
+							width={100}
+							height={32}
 						/>
 					</a>
 				</Link>
@@ -34,23 +39,43 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Software</li>
 				<li className="footerNavigationLinks">
+					<Link href="/sales-forecasting" passHref>
+						<a>Sales Forecasting</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/order-planning" passHref>
+						<a>Order Planning</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/tpl-manager" passHref>
+						<a>3PL Manager</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/cash-flow" passHref>
+						<a>Cash Flow</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/keyword-finder" passHref>
+						<a>Keyword Finder</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/keyword-database" passHref>
+						<a>Keyword Database</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/product-rank-tracker" passHref>
+						<a>Product Rank Tracker</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
 					<Link href="/extension" passHref>
 						<a>Extension</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/search-management" passHref>
-						<a>Search Management</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/profit-finder" passHref>
-						<a>Profit Finder</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/leads-tracker" passHref>
-						<a>Leads Tracker</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
@@ -69,18 +94,13 @@ const TopFooter: React.FC<Props> = () => {
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/keyword-finder" passHref>
-						<a>Keyword Finder</a>
+					<Link href="/search-management" passHref>
+						<a>Search Management</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/keyword-database" passHref>
-						<a>Keyword Database</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/product-rank-tracker" passHref>
-						<a>Product Rank Tracker</a>
+					<Link href="/profit-finder" passHref>
+						<a>Profit Finder</a>
 					</Link>
 				</li>
 			</ul>
@@ -94,7 +114,7 @@ const TopFooter: React.FC<Props> = () => {
 				</li>
 				<li className="footerNavigationLinks">
 					<Link href="/pricing" passHref>
-						<a>Monthly and Annual Plans</a>
+						<a>Monthly and annual plans</a>
 					</Link>
 				</li>
 			</ul>
@@ -103,7 +123,7 @@ const TopFooter: React.FC<Props> = () => {
 				<li className="footerNavigationLinks">Resources</li>
 				<li className="footerNavigationLinks">
 					<Link href="/sales-estimator" passHref>
-						<a>Free Sales Estimator</a>
+						<a>Free sales estimator</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
@@ -112,8 +132,8 @@ const TopFooter: React.FC<Props> = () => {
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/affiliates" passHref>
-						<a>Affiliate Program</a>
+					<Link href="/partnership-program" passHref>
+						<a>Partnership program</a>
 					</Link>
 				</li>
 			</ul>
@@ -122,25 +142,33 @@ const TopFooter: React.FC<Props> = () => {
 				<li className="footerNavigationLinks">Support</li>
 				<li className="footerNavigationLinks">
 					<Link href="/contact" passHref>
-						<a>Contact Us</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/contact-sales" passHref>
-						<a>Contact Sales</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/demo" passHref>
-						<a>Request Free Demo</a>
+						<a>Contact us</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
 					<Link href="/about-us" passHref>
-						<a>About Us</a>
+						<a>About us</a>
 					</Link>
 				</li>
+
+				<li className={styles.footerNavigation}>
+					<button
+						onClick={() => setIsDemoFormOpen(true)}
+						className={styles.footerNavigation}
+					>
+						<a>Talk to an expert</a>
+					</button>
+				</li>
 			</ul>
+
+			<Modal
+				isOpen={isDemoFormOpen}
+				onRequestClose={() => setIsDemoFormOpen(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+			</Modal>
 		</div>
 	);
 };

@@ -41,7 +41,7 @@
 	position: relative;
 
 	h4 {
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_subtitle_32;
 		margin-bottom: 2rem;
 		font-weight: $fontweight_semibold;
 	}
@@ -49,7 +49,7 @@
 	.blogDetails {
 		text-transform: uppercase;
 		font-size: $fontsize_content_12;
-		font-weight: $fontweight_semibold;
+		font-weight: $fontweight_medium;
 		color: $second_grey;
 		position: absolute;
 		bottom: 1rem;

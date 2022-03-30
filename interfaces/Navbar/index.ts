@@ -19,7 +19,7 @@ export type Products =
 	| 'catalogPlanning'
 	| 'Tpl';
 
-export type Resources = 'blogs' | 'affiliateProgram' | 'salesEstimator';
+export type Resources = 'blogs' | 'PartnershipProgram' | 'salesEstimator';
 
 export interface ProductsNavigationList {
 	head: string;

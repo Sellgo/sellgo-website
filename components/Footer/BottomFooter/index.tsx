@@ -80,7 +80,7 @@ const BottomFooter: React.FC<Props> = () => {
 					</Link>
 				</li>
 				<li>
-					<p className="copyright">Copyright &copy; Sellgo 2021</p>
+					<p className="copyright">Copyright &copy; Sellgo 2022</p>
 				</li>
 			</ul>
 		</div>

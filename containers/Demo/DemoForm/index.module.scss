@@ -7,7 +7,7 @@
 	background: $grey_0;
 	width: 100rem;
 	height: 80rem;
-	border-radius: 7px;
+	border-radius: 20px;
 	display: flex;
 
 	/* Mobile view */
@@ -25,7 +25,7 @@
 	height: max-content;
 
 	h2 {
-		font-size: $fontsize_title_46;
+		font-size: $fontsize_title_40;
 		font-weight: $fontweight_bold;
 		color: $black_1;
 		line-height: 50px;

@@ -68,7 +68,7 @@ const PrivateLabelOneDollar: React.FC<Props> = () => {
 						asExternal
 						newTarget
 					>
-						Try Now for $1
+						Try now for $1
 					</CTAButton>
 					<p>Pay less on software, invest more in your business.</p>
 				</div>

@@ -31,7 +31,7 @@ const RecentBlogsSection: React.FC<Props> = (props) => {
 	return (
 		<section className={`page-container ${styles.recentBlogsWrapper}`}>
 			<h2 className={styles.blogTitle}>
-				The Latest News and Tips for Your Amazon Business
+				The latest news and tips for your Amazon business
 			</h2>
 
 			<div className={styles.blogsWrapper}>
@@ -55,7 +55,7 @@ const RecentBlogsSection: React.FC<Props> = (props) => {
 									<small>
 										{formatBlogDate(blog.date.toString())} |&nbsp;
 										{generateCategoryDisplayName(blog.categories.nodes)}{' '}
-										{formatBlogReadTime(blog.readingTime.readtime)} Min Read
+										{formatBlogReadTime(blog.readingTime.readtime)} Minute Read
 									</small>
 								</div>
 							);

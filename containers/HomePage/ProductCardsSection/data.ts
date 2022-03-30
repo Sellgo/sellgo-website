@@ -7,9 +7,9 @@ export const newBenefitsData = [
 		into any product including sales estimations, seller rankings, profit 
 		margins using data directly from Amazon.`,
 		linkLabel: [
-			'Product Use Cases',
+			/* 'Product Use Cases',
 			'Sales and Seasonality',
-			'Product Research'
+			'Product Research' */
 		],
 		navigateTo: ['/', '/', '/'],
 		imageUrl: '/extension_3.png'
@@ -22,9 +22,9 @@ export const newBenefitsData = [
 		sales history and price tracking history to ensure a product's long-term 
 		sustainability and profitability.`,
 		linkLabel: [
-			'Keyword Finder',
+			/* 'Keyword Finder',
 			'Rank Tracker Optimization',
-			'Re-PPC Automation'
+			'Re-PPC Automation' */
 		],
 		navigateTo: ['/', '/', '/'],
 		imageUrl: '/extension_4.png'
@@ -36,7 +36,9 @@ export const newBenefitsData = [
 		the best products that fit your business model and needs. Uncover 
 		the products with the best sales records and profitability to add 
 		to your Amazon catalogs.`,
-		linkLabel: 'Report & Analytics',
+		linkLabel: [
+			/* 'Report & Analytics', */
+		],
 		navigateTo: '/',
 		imageUrl: '/extension_5.png'
 	}

@@ -11,13 +11,13 @@ import DemoForm from '../../Demo/DemoForm';
 
 const HeroBox = () => {
 	const textList = [
-		'No More Stockouts.',
-		'More Sales.',
-		'Higher Cash Flow.',
-		'Faster Growth.',
-		'Better Business.',
-		'Accurate Planning.',
-		'Easier Delegation to VAs.'
+		'No more stockouts.',
+		'More sales.',
+		'Higher cash flow.',
+		'Faster growth.',
+		'Better business.',
+		'Accurate planning.',
+		'Easier delegations.'
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
@@ -73,7 +73,7 @@ const HeroBox = () => {
 		<section className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
 				<div className={styles.textColumn}>
-					<h1 className={`${styles.heading}`}>Always In-Stock</h1>
+					<h1 className={`${styles.heading}`}>Always in-stock</h1>
 					<h2 className={styles.animatedText}>
 						<RainbowText type="purple_blue_gradient">
 							{animatedText}
@@ -87,9 +87,12 @@ const HeroBox = () => {
 					<div className={styles.ctaBox}>
 						<div className={styles.ctaButtonWrapper}>
 							<a className={styles.submitButton} href="/pricing">
-								Get Started
+								Get started now
 							</a>
-							<span className={styles.ctaDesc}>No credit card required</span>
+							<span className={styles.ctaDesc}>
+								Start an Amazon business with $1.99, upgrade your tools as you
+								grow.
+							</span>
 						</div>
 						<button
 							className={styles.demoButton}
