@@ -22,8 +22,9 @@ const BenefitsPanel: React.FC<Props> = (props) => {
 			<div className={styles.benefitsPanel__Right}>
 				<div className={styles.benefitsImage}></div>
 				<div className={styles.benefitsDescription}>
-					{popularFeaturesList && popularFeaturesList.length > 0 && 
-						<h3>popular Features:</h3>}
+					{popularFeaturesList && popularFeaturesList.length > 0 && (
+						<h3>popular Features:</h3>
+					)}
 
 					<div className={styles.featureListWrapper}>
 						{popularFeaturesList &&

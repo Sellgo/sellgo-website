@@ -1,5 +1,4 @@
 import React from 'react';
-import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
 
 /* Styling */
@@ -33,19 +32,13 @@ const OtherInfoSection: React.FC<Props> = () => {
 				</div>
 			</div>
 
-			<h2 className="secondary-heading">
-				Partnership?
-			</h2>
+			<h2 className="secondary-heading">Partnerships?</h2>
 			<p className={styles.partnershipDesc}>
-				Help your clients streamline their supply chain and 
-				reach their healthy cash flow by becoming a certified partner.
+				Help your clients streamline their supply chain and reach their healthy
+				cash flow by becoming a certified partner.
 			</p>
-			<button
-				className={styles.otherInfoSectionCTA}
-			>
-				<RainbowText type="orange_purple_gradient">
-					Get Started
-				</RainbowText>
+			<button className={styles.otherInfoSectionCTA}>
+				<RainbowText type="orange_purple_gradient">Get started</RainbowText>
 			</button>
 		</section>
 	);

@@ -16,7 +16,7 @@ const NavbarTop: React.FC<Props> = () => {
 		<div className={styles.navbarTop}>
 			<Link href="/sales-estimator" passHref>
 				<a className={styles.salesEstimator}>
-					<span>Free Sales Estimator</span>
+					<span>Free sales estimator</span>
 				</a>
 			</Link>
 

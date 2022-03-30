@@ -38,7 +38,7 @@
 
 	h2 {
 		font-size: $fontsize_subtitle_32;
-		font-weight: $fontweight_semibold;
+		font-weight: $fontweight_bold;
 
 		@media only screen and(max-width: 1080px) {
 			font-size: $fontsize_subtitle_24;
@@ -46,9 +46,9 @@
 	}
 
 	p {
-		font-size: $fontsize_subtitle_20;
-		margin-top: 3rem;
-		margin-bottom: 5rem;
+		font-size: $fontsize_content_14;
+		margin-top: 1rem;
+		margin-bottom: 6rem;
 		font-weight: $fontweight_semibold;
 		color: $black_1;
 	}

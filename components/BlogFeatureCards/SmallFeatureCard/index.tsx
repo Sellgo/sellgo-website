@@ -57,7 +57,7 @@ const SmallFeatureCard: React.FC<Props> = (props) => {
 							{date && formatBlogDate(date.toString())}
 							<br />
 							{generateCategoryDisplayName(categories.nodes)}{' '}
-							{formatBlogReadTime(readingTime.readtime)} mins read
+							{formatBlogReadTime(readingTime.readtime)} minute read
 						</p>
 					</div>
 				</article>

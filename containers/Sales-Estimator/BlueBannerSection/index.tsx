@@ -11,7 +11,7 @@ const BlackBannerSection: React.FC<Props> = () => {
 			<div className="page-container">
 				<h1 className="secondary-heading">Amazon Sales Estimator</h1>
 				<p>
-					Use Sellgo Free Estimator Tool to check sales numbers for your
+					Use Sellgo free estimator Tool to check sales numbers for your
 					competitors in a specific category on Amazon,
 					{<br />}
 					or any product in a specific category. This will give a more realistic

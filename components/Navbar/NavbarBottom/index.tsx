@@ -68,7 +68,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				Sign In
+				Sign in
 			</a>
 			<CTAButton
 				type="primary"
@@ -77,7 +77,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				variant="white"
 				className={styles.navbarCTA}
 			>
-				Sign Up
+				Sign up
 				<div className={styles.navbarCTA__arrow}>
 					<Image
 						src="/longArrowRightIcon.svg"

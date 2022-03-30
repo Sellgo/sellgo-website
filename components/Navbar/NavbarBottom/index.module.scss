@@ -27,7 +27,7 @@
 	overflow: hidden;
 	padding: 2.2rem 2rem;
 	z-index: 999;
-	max-height: 50rem;
+	max-height: 54rem;
 	will-change: transform;
 	display: none;
 	visibility: none;
@@ -123,6 +123,6 @@
 	justify-self: flex-end;
 
 	&__arrow {
-		margin-left: 10px;
+		margin-left: 11px;
 	}
 }

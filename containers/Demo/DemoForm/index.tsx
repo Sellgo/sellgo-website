@@ -276,7 +276,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 						<h2>See how Sellgo can work for you</h2>
 						<p>
 							Leave a few details below and we&apos;ll connect you with a Sellgo
-							expert who can show you how AiStock can help your business.
+							expert who can show you how Sellgo can help your business.
 						</p>
 						<div className={styles.inputControlWrapper}>
 							<FormInput
@@ -415,10 +415,12 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 							Submit
 						</button>
 						<p className={styles.terms}>
-							By subscribing to the Sellgo blog, you agree to receiving relevant
-							content regarding our services, products, and promotions. You may
-							unsubscribe from these communications at any time. For more
-							information, check out our
+							By subscribing, you agree to receive recurring automated marketing
+							text messages (e.g. cart reminders, promotional offers) from
+							Sellgo at the phone number provided on the subscription form.
+							Consent is not a condition to purchase. Msg & data rates may
+							apply. Msg frequency varies. Reply HELP for help and STOP to
+							cancel. View our
 							<Link href="/privacy-policy" passHref>
 								<a> Privacy Policy </a>
 							</Link>
@@ -426,6 +428,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 							<Link href="/terms-of-use" passHref>
 								<a> Terms of Use. </a>
 							</Link>
+							By clicking submit, you agree to our Terms of Service.
 						</p>
 					</form>
 					<div className={styles.existingBrands}>

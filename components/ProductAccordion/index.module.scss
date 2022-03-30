@@ -29,12 +29,12 @@
 		justify-content: space-between;
 		align-items: center;
 		font-size: $fontsize_content_14;
-		font-weight: $fontweight_semibold;
+		font-weight: $fontweight_medium;
 		color: $prim_dark_2 !important;
 		span {
-			color: $blue_7;
-			font-weight: bold;
-			font-size: 18px;
+			color: $grey_8;
+			font-weight: regular;
+			font-size: 16px;
 		}
 	}
 }
@@ -43,7 +43,7 @@
 	text-align: left;
 	padding: 1.5rem 2rem;
 	font-size: $fontsize_content_12;
-	font-weight: $fontweight_medium;
+	font-weight: $fontweight_regular;
 	border: 1px solid $grey_2;
 	border-top: 0;
 

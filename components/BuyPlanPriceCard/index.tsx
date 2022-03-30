@@ -40,15 +40,15 @@ const BuyPlanPriceCard: React.FC<Props> = (props) => {
 			<CTAButton
 				type="primary"
 				size="medium"
-				variant="rainbow"
+				variant="purplePinkRainbow"
 				navigateTo="/"
 				className={styles.priceCardCTA}
 			>
-				Buy Now
+				Buy now
 			</CTAButton>
 
 			<a href="#!" className="anchor">
-				View Price Breakdown
+				View price breakdown
 			</a>
 		</div>
 	);

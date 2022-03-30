@@ -42,7 +42,7 @@ const HeroBox: React.FC<Props> = () => {
 					variant="rainbow"
 					className={styles.heroBoxCTA}
 				>
-					Get Started
+					Get started
 				</CTAButton>
 
 				<ProductAccordion data={accordionData} />

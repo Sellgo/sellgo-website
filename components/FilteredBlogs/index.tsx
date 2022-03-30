@@ -43,7 +43,7 @@ const FilteredChoiceBlogs: React.FC<Props> = (props) => {
 						<small>
 							{formatBlogDate(blog.date.toString())} |&nbsp;
 							{generateCategoryDisplayName(blog.categories.nodes)}{' '}
-							{formatBlogReadTime(blog.readingTime.readtime)} Min Read
+							{formatBlogReadTime(blog.readingTime.readtime)} Minute Read
 						</small>
 					</div>
 				);

@@ -17,7 +17,7 @@ const ContactInfo: React.FC<Props> = (props) => {
 
 	return (
 		<div className={`${styles.contactInfo} ${className}`}>
-			<h2>*Need Agency/Enterprise account? We&apos;d be happy to talk!</h2>
+			<h2>*Need an enterprise account? We&apos;d be happy to talk!</h2>
 
 			<div className={styles.capsule}>
 				<p>{message}</p>
@@ -25,7 +25,7 @@ const ContactInfo: React.FC<Props> = (props) => {
 					onClick={() => setIsDemoFormOpen(true)}
 					className={styles.contactSalesButton}
 				>
-					Learn More
+					Talk to an expert
 				</button>
 			</div>
 
