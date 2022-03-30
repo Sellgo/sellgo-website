@@ -60,7 +60,7 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				head: 'Sales Forecasting',
 				desc: 'Product Validation on Amazon Page',
 				navigateTo: '/sales-forecasting',
-				iconName: 'salesForecasting',
+				iconName: 'salesProjection',
 				isComingSoon: true
 			},
 			{
@@ -74,14 +74,14 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				head: '3PL Manager',
 				desc: 'Product Validation on Amazon Page',
 				navigateTo: '/tpl-manager',
-				iconName: 'tplManager',
+				iconName: 'Tpl',
 				isComingSoon: true
 			},
 			{
 				head: 'Cash Flow',
 				desc: 'Product Validation on Amazon Page',
 				navigateTo: '/cash-flow',
-				iconName: 'cashFlow',
+				iconName: 'dashboard',
 				isComingSoon: true
 			},
 			{
