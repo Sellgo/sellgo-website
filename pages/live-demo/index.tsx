@@ -31,7 +31,7 @@ const LiveDemo: React.FC<Props> = () => {
 							title="SellGo Demo Video"
 							width="860"
 							height="500"
-							src={"https://www.youtube.com/embed/p8AalSy21BA"}
+							src={'https://www.youtube.com/embed/p8AalSy21BA'}
 							frameBorder="0"
 							allow="accelerometer; autoplay; clipboard-write; 
 								encrypted-media; gyroscope; picture-in-picture"
