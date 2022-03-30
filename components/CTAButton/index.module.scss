@@ -9,6 +9,12 @@
 	border-radius: 7px;
 
 	&__primary {
+		&__black {
+			background: $prim_dark_2;
+			color: #fff;
+			border: none;
+		}
+
 		&__orange {
 			background: $accent_orange;
 			color: #fff;
@@ -41,6 +47,12 @@
 	}
 
 	&__secondary {
+		&__black {
+			background: $prim_dark_2;
+			color: #fff;
+			border: none;
+		}
+
 		&__orange {
 			background: $prim_white;
 			color: $accent_orange;

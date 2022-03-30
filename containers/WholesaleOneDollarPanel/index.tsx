@@ -24,7 +24,7 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 		<>
 			<section className={`big-page-container ${styles.dollarPlanSection}`}>
 				<h2 className={styles.title}>
-					Pay $1.99 to Sell, Wholesale or Private Label
+					Pay $1.99 to sell, wholesale or private label
 				</h2>
 				<p className={styles.info}>
 					Access Sellgo&apos;s $1.99 Amazon tools for a day and integrate them
@@ -56,7 +56,7 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 			</section>
 
 			<section className={`big-page-container ${styles.otherInfoSection}`}>
-				<h2>Maximize Your Profits with Sellgo&apos;s Amazon Tools!</h2>
+				<h2>Maximize your profits with Sellgo&apos;s Amazon tools!</h2>
 
 				<div className={styles.otherInfoCTAWrapper}>
 					<CTAButton
@@ -68,7 +68,7 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 						asExternal
 						newTarget
 					>
-						Try Now for $1.99
+						Try now for $1.99
 					</CTAButton>
 					<p>Pay less on software, invest more in your business.</p>
 				</div>

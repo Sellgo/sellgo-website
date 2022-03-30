@@ -1,20 +1,27 @@
 @import '../../../styles/guidelines';
 
 .stepperInfoSectionWrapper {
-	padding-top: 12rem;
+	padding-top: 0;
 }
 
 .stepperTitle {
 	font-weight: $fontweight_bold;
-	font-size: 48px;
+	font-size: 46px;
 	text-align: center;
 	color: $prim_dark_2;
-	margin-bottom: 5rem;
 
 	/* Max width 600px */
 	@media (max-width: 600px) {
 		font-size: 36px;
 	}
+}
+
+.stepperSubtitle {
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_medium;
+	color: $grey_8;
+	text-align: center;
+	margin: 3rem 0;
 }
 
 .tabListWrapper {

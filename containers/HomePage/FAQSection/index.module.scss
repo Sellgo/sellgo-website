@@ -1,0 +1,17 @@
+@import '../../../styles/guidelines';
+
+.faqWrapper {
+	background: $prim_white;
+	width: 100%;
+}
+.faqSection {
+	color: $prim_dark_2;
+	padding: 5rem 0;
+
+	h2 {
+		color: inherit;
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_bold;
+		text-align: center;
+	}
+}

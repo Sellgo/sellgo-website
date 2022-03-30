@@ -7,11 +7,11 @@ import LeadsTracker from './Products/LeadsTracker';
 import ProductTracker from './Products/ProductTracker';
 import ProfitFinder from './Products/ProfitFinder';
 import SearchManagement from './Products/SearchManagement';
+import KeywordFinder from './Products/KeywordFinder';
 import SellerFinder from './Products/SellerFinder';
 import SellerDatabase from './Products/SellerDatabase';
 import SellerMap from './Products/SellerMap';
 import ProductsDatabase from './Products/ProductDatabase';
-import KeywordFinder from './Products/KeywordFinder';
 import KeywordDatabase from './Products/KeywordDatabase';
 import ProductRankTracker from './Products/ProductRankTracker';
 import Dashboard from './Products/Dashboard';
@@ -22,11 +22,12 @@ import CatalogPlanning from './Products/CatalogPlanning';
 
 /* Resources Icons */
 import Blogs from './Resources/Blogs';
-import AffiliateProgram from './Resources/AffiliateProgram';
+import PartnershipProgram from './Resources/PartnershipProgram';
 
 /* Types */
 import { Products, Resources } from '../../interfaces/Navbar';
 import SalesEstimator from './Resources/SalesEstimator';
+import Tpl from './Products/Tpl';
 
 interface Props {
 	name: Products | Resources;
@@ -126,14 +127,19 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 			break;
 		}
 
+		case 'Tpl': {
+			productIcon = <Tpl {...otherProps} isRainbow={isRainbow} />;
+			break;
+		}
+
 		// resources
 		case 'blogs': {
 			productIcon = <Blogs {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 
-		case 'affiliateProgram': {
-			productIcon = <AffiliateProgram {...otherProps} />;
+		case 'PartnershipProgram': {
+			productIcon = <PartnershipProgram {...otherProps} />;
 			break;
 		}
 

@@ -149,7 +149,7 @@ const FreemiumSection = (props: Props) => {
 		<section className={styles.freemiumSectionWrapper}>
 			<div className={`${styles.freemiumSection} page-container`}>
 				<div className={styles.headingRow}>
-					<h3 className={styles.title}>Estimated Sales per Month</h3>
+					<h3 className={styles.title}>Estimated sales per month</h3>
 					<h3 className={styles.counter}>
 						{productDetails.sales === 'N/A'
 							? 'N/A'

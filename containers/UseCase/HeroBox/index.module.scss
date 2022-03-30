@@ -1,0 +1,27 @@
+@import '../../../styles/guidelines';
+
+.heroBox {
+	padding-top: 15rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 10rem;
+
+	p {
+		font-size: $fontsize_subtitle_20;
+		color: $prim_dark_2;
+		max-width: 60rem;
+		margin-top: 18px;
+		margin-bottom: 4rem;
+	}
+}
+
+.buttonsRow {
+	display: flex;
+
+	.heroBoxCTA {
+		width: 20rem;
+		margin-right: 18px;
+	}
+}

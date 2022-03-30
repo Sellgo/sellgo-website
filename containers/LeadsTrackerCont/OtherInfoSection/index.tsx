@@ -41,7 +41,7 @@ const OtherInfoSection: React.FC<Props> = () => {
 				navigateTo="https://app.sellgo.com/signup/?type=free"
 				className={styles.otherInfoSectionCTA}
 			>
-				Get Started
+				Get started
 			</CTAButton>
 		</section>
 	);

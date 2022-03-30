@@ -44,7 +44,7 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 						newTarget
 						className={styles.dollarPlanCTA}
 					>
-						Try Now for $1.99
+						Try now for $1.99
 					</CTAButton>
 					<p>Pay less on software, invest more in your business.</p>
 				</div>

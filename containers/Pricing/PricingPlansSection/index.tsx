@@ -47,7 +47,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					<div className={styles.planShortSummary}>
 						<p>{summary}</p>
 					</div>
-
 					<div className={styles.paymentModeToggle}>
 						<PricePlanToggleButton
 							isMonthly={isMonthly}
@@ -63,6 +62,9 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							/>
 							<p className={styles.paymentToggleText}>Up to 5 months free.</p>
 						</div>
+					</div>
+					<div className={styles.banner}>
+						Enjoy flat price forever for the first 1,000 AiStock beta users.
 					</div>
 				</div>
 			</section>

@@ -21,7 +21,7 @@ const Carousel: React.FC<Props> = (props) => {
 	const isActiveStep = (index: number) => index === activeStep;
 
 	return (
-		<div>
+		<>
 			<div className={`${styles.mainContentWrapper} ${className}`}>
 				{activeStep !== 0 ? (
 					<button
@@ -71,7 +71,7 @@ const Carousel: React.FC<Props> = (props) => {
 					})}
 				</div>
 			)}
-		</div>
+		</>
 	);
 };
 

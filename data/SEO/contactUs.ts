@@ -1,7 +1,7 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Sellgo - Contact Us`,
+	title: `Sellgo - Contact us`,
 	description: `Contact us for any concerns at Sellgo. We're here to put Amazon FBA sellers first. 
 	Whatever you need to grow your Amazon business, we can provide help and resources. 
 	Contact us with any comments, questions, or concerns!`,

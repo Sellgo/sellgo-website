@@ -23,6 +23,8 @@ import {
 
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
+import CalculateYourPriceSection from '../CalculateYourPriceSection';
+import ProductCard from '../../../components/ProductCard';
 
 interface Props {
 	productsPanelFaqList: FAQDetails[];
@@ -127,7 +129,25 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					);
 				})}
 			</Tabs>
-
+			<CalculateYourPriceSection />
+			<div className="page-container">
+				<ProductCard
+					title={'CUSTOMER SUCCESS'}
+					subTitle={'Sellgo is more than just software.'}
+					description={`You don't have to do it alone. Sellgo customer 
+				success and training teams are here to answer your questions, 
+				help you master the inbound methodology, and make sure you're getting
+				the most out of your tools. All that — plus our detailed help documentation,
+				educational resources, and training programs — means you'll never feel 
+				left out in the cold.`}
+					linkLabel={''}
+					navigateTo={''}
+					imageUrl={'/heroImage.png'}
+					imageWidth={400}
+					imageHeight={400}
+					reversed
+				/>
+			</div>
 			{/* FAQ Section */}
 			<FAQSection faqData={productsPanelFaqList[selectedPlanType].data} />
 		</>

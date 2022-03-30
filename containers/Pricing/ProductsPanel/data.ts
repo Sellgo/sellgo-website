@@ -7,14 +7,14 @@ export const planTypes: PlanTypes[] = [
 		isNew: true
 	},
 	{
-		name: 'Monthly and Annual Plans',
+		name: 'Monthly and annual plans',
 		isNew: false
 	}
 ];
 
 export const plansAndProductsDetails = [
 	{
-		planName: 'Monthly and Annual Pricing Plans',
+		planName: 'Monthly and annual pricing plans',
 		summary: `Invest on a research tool that's dependable, powerful and can scale up your 
 			business with 7-day money back guarantee.`,
 		infoAlertMessage: {

@@ -62,7 +62,7 @@ const BlogsShowCaseSection: React.FC<Props> = (props) => {
 				<div className={styles.otherBlogsSection__Left}>
 					<div className={styles.newsLetter}>
 						<div className={styles.newsLetterContentWrapper}>
-							<h3>Subscribe via Email</h3>
+							<h3>Subscribe via email</h3>
 							<div className={styles.newsLetterContentWrapper__underline} />
 							<p>
 								We&apos;re committed to your privacy. Sellgo uses the
