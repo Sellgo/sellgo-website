@@ -225,7 +225,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 		formData.append('audience_count', existingAudience);
 		formData.append('ideas', easierLifeMessage);
 		formData.append('ppc_tos_acq', ppcTosAck);
-		formData.append('no_coupon_partnership_acq', couponMarketingAck);
+		formData.append('no_coupon_affiliate_acq', couponMarketingAck);
 		formData.append('privacy_policy_acq', privacyPolicyAck);
 
 		try {
