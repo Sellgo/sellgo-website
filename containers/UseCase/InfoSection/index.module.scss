@@ -1,0 +1,54 @@
+@import '../../../styles/guidelines';
+
+.infoSectionWrapper {
+	margin: 0 auto;
+	margin-top: 10rem;
+	background: #eef7f9;
+	border-radius: 50px;
+	padding: 15rem 5rem;
+	max-width: max-content;
+	width: 100%;
+}
+
+.infoSection {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: $black_1;
+
+	@media only screen and(max-width: 1000px) {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+.infoSection__Text {
+	flex: 0 0 50%;
+
+	h2 {
+		font-size: $fontsize_subtitle_38;
+		font-weight: $fontweight_bold;
+		line-height: 50px;
+		color: inherit;
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		color: inherit;
+		font-weight: $fontweight_regular;
+		margin: 3rem 0;
+	}
+}
+
+.infoSection__Image {
+	width: 60rem;
+	height: 36rem;
+	@media only screen and(max-width: 1000px) {
+		margin-top: 4rem;
+	}
+
+	@media only screen and(max-width: 650px) {
+		width: 100%;
+	}
+}

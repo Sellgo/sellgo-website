@@ -42,13 +42,21 @@
 }
 
 .footerNavigation {
+	cursor: pointer;
+	border: none;
 	color: $prim_white;
 	list-style: none;
-	font-weight: 400;
 	text-align: left;
+	background: none;
 
 	@media only screen and(max-width: 800px) {
 		width: 100%;
 		text-align: center;
+	}
+
+	a {
+		font-size: $fontsize_content_12;
+		font-weight: $fontweight_medium;
+		color: $grey_4;
 	}
 }

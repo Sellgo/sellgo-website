@@ -41,7 +41,7 @@ const MultiSelectCheckBoxInput: React.FC<Props> = (props) => {
 			newResult = result.filter((option) => option !== value);
 		}
 
-		setResult(newResult);
+		setResult([...newResult]);
 		let event;
 		if (otherProps.acknowledge) {
 			event = {
@@ -77,6 +77,7 @@ const MultiSelectCheckBoxInput: React.FC<Props> = (props) => {
 							label={option}
 							id={name + option}
 							type="checkbox"
+							checked={result.includes(option)}
 							name={option}
 							value={option}
 							onChange={handleChange}

@@ -32,8 +32,9 @@
 	height: 100%;
 	position: relative;
 	p {
-		color: $prim_dark_2;
-		font-size: $fontsize_content_12;
+		color: $grey_6;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_regular;
 		margin: 0 !important;
 	}
 
@@ -54,6 +55,7 @@
 			width: 100%;
 			height: 100%;
 			font-weight: $fontweight_semibold;
+			color: $prim_dark_2;
 			background-color: $prim_white;
 			display: flex;
 			align-items: center;

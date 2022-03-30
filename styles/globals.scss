@@ -2,6 +2,7 @@
 @import './components/mobileNavbar';
 @import './components/reactSelect';
 @import './components/modals';
+@import './components/sliderReset';
 
 /* Animations */
 @import './animations';
@@ -78,9 +79,9 @@
 /* Footer Links Style guide */
 a.public-footer-link,
 p.copyright {
-	text-decoration: underline;
+	text-decoration: none;
 	color: #fff;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 400;
 	display: inline-block;
 

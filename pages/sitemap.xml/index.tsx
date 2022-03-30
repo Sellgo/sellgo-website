@@ -28,8 +28,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 	const staticPages = [
 		'pages/index.tsx',
 		'pages/about-us/index.tsx',
-		'pages/affiliates/index.tsx',
-		'pages/affliates-signup/index.tsx',
+		'pages/Partnerships/index.tsx',
+		'pages/Partnerships-signup/index.tsx',
 		'pages/blogs/index.tsx',
 		'pages/contact/index.tsx',
 		'pages/contact-sales/index.tsx',
@@ -46,6 +46,10 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 		'pages/keyword-database/index.tsx',
 		'pages/keyword-finder/index.tsx',
 		'pages/product-rank-tracker/index.tsx',
+		'pages/sales-forecasting/index.tsx',
+		'pages/order-planning/index.tsx',
+		'pages/tpl-manager/index.tsx',
+		'pages/cash-flow/index.tsx',
 		'pages/terms-of-use/index.tsx'
 	];
 

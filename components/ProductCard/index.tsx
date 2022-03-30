@@ -10,10 +10,13 @@ interface Props {
 	title: string;
 	subTitle: string;
 	description: string;
-	navigateTo: string;
-	linkLabel: string;
+	navigateTo: string | string[];
+	linkLabel: string | string[];
 	reversed: boolean;
 	imageUrl: string;
+	isStepper?: boolean;
+	imageWidth?: number;
+	imageHeight?: number;
 }
 
 const ProductCard: React.FC<Props> = (props) => {
@@ -24,12 +27,15 @@ const ProductCard: React.FC<Props> = (props) => {
 		reversed,
 		imageUrl,
 		navigateTo,
-		linkLabel
+		linkLabel,
+		isStepper,
+		imageWidth = 600,
+		imageHeight = 360
 	} = props;
 
 	const textClass = `${styles.productCard__Text} ${
 		reversed ? styles.reversedText : ''
-	}`;
+	} ${isStepper ? styles.stepperText : ''}`;
 
 	const imageClass = `${styles.productCard__Image} ${
 		reversed ? styles.reversedImage : ''
@@ -42,15 +48,41 @@ const ProductCard: React.FC<Props> = (props) => {
 				<h3>{subTitle}</h3>
 				<p>{description}</p>
 
-				{linkLabel && navigateTo && (
-					<Link href={navigateTo} passHref>
-						<a className={styles.productCard__Link}>
-							{linkLabel}
-							&nbsp;
-							<Image src="/blueLongArrowRight.svg" width={20} height={8} />
-						</a>
-					</Link>
-				)}
+				{
+					/* If link label is string array */
+					Array.isArray(linkLabel) && Array.isArray(navigateTo) && (
+						<div className={styles.linkWrapper}>
+							{linkLabel.map((label, index) => {
+								return (
+									<Link href={navigateTo[index]} passHref>
+										<a className={styles.multipleLink}>
+											{label}
+											&nbsp;
+											<Image
+												src="/blueLongArrowRight.svg"
+												width={20}
+												height={8}
+											/>
+										</a>
+									</Link>
+								);
+							})}
+						</div>
+					)
+				}
+
+				{!Array.isArray(linkLabel) &&
+					!Array.isArray(navigateTo) &&
+					linkLabel &&
+					navigateTo && (
+						<Link href={navigateTo} passHref>
+							<a className={styles.productCard__Link}>
+								{linkLabel}
+								&nbsp;
+								<Image src="/blueLongArrowRight.svg" width={20} height={8} />
+							</a>
+						</Link>
+					)}
 
 				{title.toUpperCase() === 'EXTENSION' && (
 					<CTAButton
@@ -67,10 +99,21 @@ const ProductCard: React.FC<Props> = (props) => {
 			</div>
 
 			<div className={`${imageClass}`}>
-				<Image src={imageUrl} alt="Seller Finder" width={600} height={360} />
+				<Image
+					src={imageUrl}
+					alt="Seller Finder"
+					width={imageWidth}
+					height={imageHeight}
+				/>
 			</div>
 		</article>
 	);
+};
+
+ProductCard.defaultProps = {
+	isStepper: false,
+	imageWidth: 600,
+	imageHeight: 360
 };
 
 export default ProductCard;

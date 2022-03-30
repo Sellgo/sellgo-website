@@ -4,13 +4,13 @@ import { GroupedNavLinks } from '../../../interfaces/Navbar';
 export const resourcesNavigationList: GroupedNavLinks[] = [
 	{
 		head: 'Blog',
-		desc: 'Amazon Seller Tips & News',
+		desc: 'Amazon seller tips & news',
 		navigateTo: '/blogs',
 		iconName: 'blogs'
 	},
 	{
 		head: 'Free Sales Estimator',
-		desc: 'Amazon Sales Estimator and FBA Calculator',
+		desc: 'Amazon sales estimator and FBA calculator',
 		navigateTo: '/sales-estimator',
 		iconName: 'salesEstimator'
 	}

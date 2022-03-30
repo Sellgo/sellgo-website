@@ -17,7 +17,12 @@ const StepperInfoSection: React.FC<Props> = () => {
 			className={`page-container ${styles.stepperInfoSectionWrapper}`}
 			id="showCtaNavBar"
 		>
-			<h2 className={styles.stepperTitle}>How Sellgo Works</h2>
+			<h2 className={styles.stepperTitle}>
+				Build your healthy cash flow, instantly.
+			</h2>
+			<p className={styles.stepperSubtitle}>
+				All-in-one platform for selling on Amazon
+			</p>
 			<Stepper steps={wholesaleFeatures} />
 		</section>
 	);
