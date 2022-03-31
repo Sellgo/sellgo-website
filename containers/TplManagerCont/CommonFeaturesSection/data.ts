@@ -2,37 +2,37 @@ export const commonFeaturesList = [
 	{
 		title: 'Easy Inventory Reconcilation',
 		detail: ``,
-		iconImageLink: '/crossHairsIcon.svg',
-		alt: `crossHairsIcon`
+		iconImageLink: '/reconcileIcon.svg',
+		alt: `reconcileIcon`
 	},
 	{
 		title: 'Connect Order to 3PL',
 		detail: ``,
-		iconImageLink: '/mapMarkedIcon.svg',
-		alt: `mapMarkedIcon`
+		iconImageLink: '/linktplIcon.svg',
+		alt: `linktplIcon`
 	},
 	{
 		title: '3PL Scheduling',
 		detail: ``,
-		iconImageLink: '/analyticsRisingIcon.svg',
-		alt: `analyticsRisingIcon`
+		iconImageLink: '/scheduleIcon.svg',
+		alt: `scheduleIcon`
 	},
 	{
 		title: 'Accurate Shipment Quantity',
 		detail: ``,
-		iconImageLink: '/zapierIcon.svg',
-		alt: `zapierIconre`
+		iconImageLink: '/onehundredIcon.svg',
+		alt: `onehundredIcon`
 	},
 	{
 		title: '3PL Cost Calculator',
 		detail: ``,
-		iconImageLink: '/adIcon.svg',
-		alt: `adIconn here`
+		iconImageLink: '/calculatorIcon.svg',
+		alt: `calculatorIcon`
 	},
 	{
 		title: 'Connect to Your Fulfillment',
 		detail: ``,
-		iconImageLink: '/childIcon.svg',
-		alt: `childIconere`
+		iconImageLink: '/prefulfillmentIcon.svg',
+		alt: `prefulfillmentIcon`
 	}
 ];

@@ -103,36 +103,11 @@ const HeroBox = () => {
 					</div>
 				</div>
 				<div className={styles.imageColumn}>
-					<div className={styles.stockoutBox}>
-						<span className={styles.numberText}>
-							<Image
-								src="/exclamation-triangle.svg"
-								width={30}
-								height={26}
-								alt="alt"
-								className={styles.icon}
-							/>
-							17
-						</span>
-						<span className={styles.labelText}>Days Until Stockout</span>
-						<span className={styles.purchaseOrderText}>
-							<Image
-								src="/greenCheckCircle.svg"
-								width={30}
-								height={30}
-								alt="alt"
-								className={styles.icon}
-							/>
-							Your P.O. will arrive
-							<br />
-							before Stockout
-						</span>
-					</div>
 					<div className={styles.heroImagewWrapper}>
 						<Image
 							src="/heroImage.png"
 							width={500}
-							height={600}
+							height={700}
 							alt="alt"
 							className={styles.heroImage}
 						/>

@@ -5,7 +5,7 @@ export const features: {
 	description: string;
 }[] = [
 	{
-		icon: '/features-extension.svg',
+		icon: '/chart-line-up-solid.svg',
 		title: 'Sales Projection',
 		subTitle: 'Build Accurate Sales Projection',
 		description: `In a single glance, our algorithm will project your sales to accurately 
@@ -13,7 +13,7 @@ export const features: {
 		to order for the next 24 months.`
 	},
 	{
-		icon: '/features-keyword-research.svg',
+		icon: '/seedling-solid.svg',
 		title: 'Always In-stock',
 		subTitle: 'Make Fast and Accurate Buying Decisions',
 		description: `In retail businesses, the most important part of the buying decision is timing. 
@@ -21,21 +21,21 @@ export const features: {
 		of e-commerce.`
 	},
 	{
-		icon: '/features-product-research.svg',
+		icon: '/leaf-maple-solid.svg',
 		title: 'Seasonality Adjustor',
 		subTitle: 'Sell More During High Season',
 		description: `Easily explore the richest in the nichest. 
             Quickly focus on The Nichest in the Richest. Analyze your dream products in seconds.`
 	},
 	{
-		icon: '/features-seller-research.svg',
+		icon: '/list-timeline-solid.svg',
 		title: 'Inventory Planning',
 		subTitle: 'Build Simple and Robust Inventory Planner',
 		description: `No more hours staring and tinkering with massive spreadsheets that is easily 
 		broken within seconds. We simplify inventory planner processes for you and your team.`
 	},
 	{
-		icon: '/features-wholesale.svg',
+		icon: '/bars-staggered-solid.svg',
 		title: 'Smart Orders',
 		subTitle: 'Solidify Supply Chain',
 		description: `Calculate POs easily from your dashboard for the next 24 months, share your 
@@ -43,7 +43,7 @@ export const features: {
 		with us.`
 	},
 	{
-		icon: '/features-perfect-stock.svg',
+		icon: '/sack-dollar-solid.svg',
 		title: 'Cash Flow Projection',
 		subTitle: 'Monthly and Yearly Business Cash Flow Projection',
 		description: `Instantly and accurately projecting out income and expense you expect to have in 

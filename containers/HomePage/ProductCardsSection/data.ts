@@ -12,7 +12,7 @@ export const newBenefitsData = [
 			'Product Research' */
 		],
 		navigateTo: ['/', '/', '/'],
-		imageUrl: '/extension_3.png'
+		imageUrl: '/heroUsecase_1.png'
 	},
 	{
 		title: 'KEYWORD OPTIMIZATION',
@@ -27,7 +27,7 @@ export const newBenefitsData = [
 			'Re-PPC Automation' */
 		],
 		navigateTo: ['/', '/', '/'],
-		imageUrl: '/extension_4.png'
+		imageUrl: '/heroUsecase_2.png'
 	},
 	{
 		title: 'Competitive Snapshot',
@@ -40,6 +40,6 @@ export const newBenefitsData = [
 			/* 'Report & Analytics', */
 		],
 		navigateTo: '/',
-		imageUrl: '/extension_5.png'
+		imageUrl: '/heroUsecase_3.png'
 	}
 ];

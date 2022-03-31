@@ -23,7 +23,6 @@ import {
 
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
-import CalculateYourPriceSection from '../CalculateYourPriceSection';
 import ProductCard from '../../../components/ProductCard';
 
 interface Props {
@@ -129,7 +128,6 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					);
 				})}
 			</Tabs>
-			<CalculateYourPriceSection />
 			<div className="page-container">
 				<ProductCard
 					title={'CUSTOMER SUCCESS'}
@@ -142,9 +140,9 @@ const ProductsPanel: React.FC<Props> = (props) => {
 				left out in the cold.`}
 					linkLabel={''}
 					navigateTo={''}
-					imageUrl={'/heroImage.png'}
-					imageWidth={400}
-					imageHeight={400}
+					imageUrl={'/successImage.png'}
+					imageWidth={1080}
+					imageHeight={810}
 					reversed
 				/>
 			</div>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="38.889" viewBox="0 0 50 38.889">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#545454"/>
+    </linearGradient>
+  </defs>
+  <path id="stairs-solid" d="M50,34.778a2.777,2.777,0,0,1-2.778,2.778H38.889v8.333a2.777,2.777,0,0,1-2.778,2.778H27.778V57A2.777,2.777,0,0,1,25,59.778H16.667v8.333a2.777,2.777,0,0,1-2.778,2.778H2.778a2.778,2.778,0,0,1,0-5.556h8.333V57a2.777,2.777,0,0,1,2.778-2.778h8.333V45.889A2.777,2.777,0,0,1,25,43.111h8.333V34.778A2.777,2.777,0,0,1,36.111,32H47.222A2.776,2.776,0,0,1,50,34.778Z" transform="translate(0 -32)" fill="url(#linear-gradient)"/>
+</svg>

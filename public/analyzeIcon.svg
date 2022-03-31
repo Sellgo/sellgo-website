@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#545454"/>
+    </linearGradient>
+  </defs>
+  <path id="magnifying-glass-chart-solid" d="M40.627,20.313A19.755,19.755,0,0,1,36.633,32.3L49.084,44.67a3.121,3.121,0,0,1-4.414,4.414L32.3,36.633a19.755,19.755,0,0,1-11.983,3.994A20.313,20.313,0,1,1,40.627,20.313Zm-30.47,7.032a2.344,2.344,0,0,0,4.688,0v-6.25a2.344,2.344,0,0,0-4.688,0Zm7.813,0a2.344,2.344,0,0,0,4.688,0V11.719a2.344,2.344,0,0,0-4.688,0Zm7.813,0a2.344,2.344,0,1,0,4.688,0V17.97a2.344,2.344,0,1,0-4.688,0Z" fill="url(#linear-gradient)"/>
+</svg>
