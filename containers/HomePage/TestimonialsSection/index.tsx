@@ -23,11 +23,11 @@ const TestimonialsSection: React.FC<Props> = () => {
 					<span className={styles.title}>CEO of Private Label Brand, Titan leader</span>
 					<a
 						className={styles.email}
-						href="andrewknowsamazon.com"
+						href="https://zonconpodcast.com/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						andrewknowsamazon.com
+						zonconpodcast.com
 					</a>
 				</div>
 			</div>
