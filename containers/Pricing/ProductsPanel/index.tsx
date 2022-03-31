@@ -23,7 +23,6 @@ import {
 
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
-import CalculateYourPriceSection from '../CalculateYourPriceSection';
 import ProductCard from '../../../components/ProductCard';
 
 interface Props {
@@ -129,7 +128,6 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					);
 				})}
 			</Tabs>
-			<CalculateYourPriceSection />
 			<div className="page-container">
 				<ProductCard
 					title={'CUSTOMER SUCCESS'}
