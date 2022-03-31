@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -8,9 +10,12 @@ import PaperAirplane from '../../../components/Icons/PaperAirplane';
 import Comment from '../../../components/Icons/Comment';
 import CTAButton from '../../../components/CTAButton';
 
+import DemoForm from '../../Demo/DemoForm';
+
 interface Props {}
 
 const HeroBox: React.FC<Props> = () => {
+	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	return (
 		<>
 			<section className={styles.heroBoxSection}>
@@ -18,12 +23,22 @@ const HeroBox: React.FC<Props> = () => {
 					<div className={styles.heroBox__text}>
 						<h1>Contact us</h1>
 						<p>
-							Sellgo was made for Amazon sellers, by Amazon Sellers to provide
+							AiStock/ Sellgo was made for Amazon sellers, by Amazon Sellers to provide
 							the tools and resources to build a successful Amazon business.
+							<br/><br/> Headquarter address:
+							<br/>Sellgo, Inc. <br/>
+							2828 S Corbet ave., Portland, OR 97201 USA
 						</p>
+						
+						<button
+							className={styles.demoButton}
+							onClick={() => setIsDemoFormOpen(true)}
+						>
+							<br/><br/>Request a demo							
+						</button>
 
-						<div className={styles.requestDemoCard}>
-							<Comment width={50} height={39} fill="#1E1E1E" />
+						{/*<div className={styles.requestDemoCard}>
+							<Comment width={50} height={39} fill="#636D76" />
 							<CTAButton
 								navigateTo="/demo"
 								type="primary"
@@ -32,19 +47,25 @@ const HeroBox: React.FC<Props> = () => {
 								className={styles.requestDemoCard__CTA}
 							>
 								Request a demo
-							</CTAButton>
-						</div>
+						</CTAButton>*
+						<button
+							className={styles.demoButton}
+							onClick={() => setIsDemoFormOpen(true)}
+						>
+							Request a demo
+						</button>
+						</div>*/}
 					</div>
 
 					<div className={styles.contactCard}>
-						<PaperAirplane width={40} height={40} fill="#B318F1" />
+						<PaperAirplane width={40} height={40} fill="#636d76" />
 						<div>
-							<h2>Need to contact us? Send us a message!</h2>
+							<h2>Need to send us a message?</h2>
 							<a href="mailto:support@sellgo.com">support@sellgo.com</a>
 						</div>
 						<div className={styles.chat}>
 							<p>
-								For faster response, talk with us via
+								or talk with us via
 								<a id="chat-link" href="#">
 									{' '}
 									chat.
@@ -53,6 +74,14 @@ const HeroBox: React.FC<Props> = () => {
 						</div>
 					</div>
 				</div>
+				<Modal
+				isOpen={isDemoFormOpen}
+				onRequestClose={() => setIsDemoFormOpen(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+			</Modal>
 			</section>
 		</>
 	);

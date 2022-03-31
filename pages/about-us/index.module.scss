@@ -136,8 +136,17 @@
 		}
 
 		a {
-			text-decoration: underline;
+			text-decoration: none;
 			font-size: $fontsize_content_12;
+			font-weight: $fontweight_regular;
+			color: $system_blue;
+		}
+
+		b {
+			text-decoration: none;
+			font-size: $fontsize_content_12;
+			font-weight: $fontweight_regular;
+			color: $sellgo_purple;
 		}
 	}
 }

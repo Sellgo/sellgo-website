@@ -193,34 +193,21 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.queryCard}>
 						<h3>Partnership</h3>
-						<p>Please contact:</p>
-
-						<div className={styles.queryCard__links}>
-							<a href="mailto:partnership@sellgo.com" className="anchor">
-								partnership@sellgo.com
-							</a>
-							<p>
-								or visit{' '}
-								<Link href="/partnerships" passHref>
-									<a className="anchor">Partnership Program</a>
+						<p>Please visit:</p>
+						<div className={styles.queryCard__links}>							
+								<Link href="/partnership-program" passHref>
+									<b className="anchor">Partnership Program</b>
 								</Link>
-							</p>
 						</div>
 					</div>
 
 					<div className={styles.queryCard}>
 						<h3>Questions</h3>
-						<p>Please contact:</p>
+						<p>Please visit:</p>
 						<div className={styles.queryCard__links}>
-							<a href="mailto:support@sellgo.com" className="anchor">
-								support@sellgo.com
-							</a>
-							<p>
-								or visit{' '}
 								<Link href="/contact" passHref>
-									<a className="anchor">Contact us</a>
+									<b className="anchor">Contact us</b>
 								</Link>
-							</p>
 						</div>
 					</div>
 				</section>

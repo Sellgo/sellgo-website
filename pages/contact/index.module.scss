@@ -5,8 +5,9 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	margin: 20rem auto;
+	margin: 10rem auto;
 	flex-wrap: wrap;
+	background: none;
 
 	@media only screen and(max-width: 1080px) {
 		margin-top: 5rem;
@@ -16,8 +17,7 @@
 .queryCard {
 	width: 34rem;
 	border: 1px solid $second_silver;
-	background: $grey_1;
-	border-radius: 3px;
+	border-radius: 25px;
 	text-align: center;
 	color: $prim_dark_2;
 	height: 27rem;
@@ -30,7 +30,7 @@
 	}
 
 	h3 {
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_subtitle_20;
 		font-weight: $fontweight_bold;
 	}
 
@@ -48,9 +48,17 @@
 		}
 
 		a {
-			text-decoration: underline;
+			text-decoration: none;
 			font-size: $fontsize_content_12;
+			font-weight: $fontweight_regular;
 			color: $system_blue;
+		}
+		
+		b {
+			text-decoration: none;
+			font-size: $fontsize_content_12;
+			font-weight: $fontweight_regular;
+			color: $sellgo_purple;
 		}
 	}
 }
