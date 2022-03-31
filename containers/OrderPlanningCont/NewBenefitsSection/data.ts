@@ -9,7 +9,7 @@ export const newBenefitsData = [
 		and quantity for placing an order to maximize revenue.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_rank_tracker_3.png'
+		imageUrl: '/order_planning_3.png'
 	},
 	{
 		title: 'Smart Orders',
@@ -19,7 +19,7 @@ export const newBenefitsData = [
 		to order.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_rank_tracker_4.png'
+		imageUrl: '/order_planning_4.png'
 	},
 	{
 		title: 'Order Optimization',
@@ -29,6 +29,6 @@ export const newBenefitsData = [
 		step-by-step approach, you’ll be an inventory expert in no time.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_rank_tracker_5.png'
+		imageUrl: '/order_planning_5.png'
 	}
 ];

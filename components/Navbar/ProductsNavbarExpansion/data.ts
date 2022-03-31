@@ -6,15 +6,16 @@ import {
 
 export const productsNavigationList: ProductsNavigationList[] = [
 	{
-		head: 'Wholesale',
-		desc: 'Reseller, Online Arbitrage',
-		hoverId: 'wholesale'
-	},
-	{
 		head: 'Private Label',
 		desc: 'Brand, White Label',
 		hoverId: 'privateLabel'
 	},
+	{
+		head: 'Wholesale',
+		desc: 'Reseller, Online Arbitrage',
+		hoverId: 'wholesale'
+	},
+	
 	{
 		head: 'Service Provider',
 		desc: 'Enabler, 3PL, Mastermind',
@@ -34,19 +35,19 @@ export const productsRightPanelData: ProductsPanelData[] = [
 		groupedNavLinksData: [
 			{
 				head: 'Extension',
-				desc: 'Product Validation on Amazon Page',
+				desc: 'Product validation on Amazon page',
 				navigateTo: '/extension',
 				iconName: 'extension'
 			},
 			{
 				head: 'Search Management',
-				desc: 'Streamline Wholesale Inventories',
+				desc: 'Streamline wholesale inventories',
 				navigateTo: '/search-management',
 				iconName: 'searchManagement'
 			},
 			{
 				head: 'Profit Finder',
-				desc: 'Wholesale Bulk Calculator',
+				desc: 'Wholesale bulk calculator',
 				navigateTo: '/profit-finder',
 				iconName: 'profitFinder'
 			}
@@ -58,28 +59,28 @@ export const productsRightPanelData: ProductsPanelData[] = [
 		groupedNavLinksData: [
 			{
 				head: 'Sales Forecasting',
-				desc: 'Product Validation on Amazon Page',
+				desc: 'Accurately project high seasonal sales',
 				navigateTo: '/sales-forecasting',
 				iconName: 'salesProjection',
 				isComingSoon: true
 			},
 			{
 				head: 'Order Planning',
-				desc: 'Product Validation on Amazon Page',
+				desc: 'Easily create smart orders',
 				navigateTo: '/order-planning',
 				iconName: 'orderPlanning',
 				isComingSoon: true
 			},
 			{
 				head: '3PL Manager',
-				desc: 'Product Validation on Amazon Page',
+				desc: 'Pre-fulfillment solved',
 				navigateTo: '/tpl-manager',
 				iconName: 'Tpl',
 				isComingSoon: true
 			},
 			{
 				head: 'Cash Flow',
-				desc: 'Product Validation on Amazon Page',
+				desc: 'Instant cash flow projection',
 				navigateTo: '/cash-flow',
 				iconName: 'dashboard',
 				isComingSoon: true
@@ -92,28 +93,28 @@ export const productsRightPanelData: ProductsPanelData[] = [
 			},
 			{
 				head: 'Keyword Finder',
-				desc: 'Reveal Competitor Keywords',
+				desc: 'Reveal competitor keywords',
 				navigateTo: '/keyword-finder',
 				iconName: 'keywordFinder',
 				isNew: true
 			},
 			{
 				head: 'Keyword Database',
-				desc: 'Check High-Volume Keywords',
+				desc: 'Check high-volume keywords',
 				navigateTo: '/keyword-database',
 				iconName: 'keywordDatabase',
 				isNew: true
 			},
 			{
 				head: 'Product Rank Tracker',
-				desc: 'Get to #1 Search Results',
+				desc: 'Get to #1 search results',
 				navigateTo: '/product-rank-tracker',
 				iconName: 'productRankTracker',
 				isNew: true
 			},
 			{
 				head: 'Product Database',
-				desc: 'Amazon Product Catalogue',
+				desc: 'Amazon product catalogue',
 				navigateTo: '/product-database',
 				iconName: 'productDatabase'
 			}
@@ -137,7 +138,7 @@ export const productsRightPanelData: ProductsPanelData[] = [
 			},
 			{
 				head: 'Seller Finder',
-				desc: 'Take Advantage of Competition',
+				desc: 'Take advantage of competition',
 				navigateTo: '/seller-finder',
 				iconName: 'sellerFinder'
 			}

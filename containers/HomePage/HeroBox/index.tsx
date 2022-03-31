@@ -132,7 +132,7 @@ const HeroBox = () => {
 						<Image
 							src="/heroImage.png"
 							width={500}
-							height={600}
+							height={700}
 							alt="alt"
 							className={styles.heroImage}
 						/>

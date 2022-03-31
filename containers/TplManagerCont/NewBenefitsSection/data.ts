@@ -9,7 +9,7 @@ export const newBenefitsData = [
 		ready to buy.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_rank_tracker_3.png'
+		imageUrl: '/tpl_manager_3.png'
 	},
 	{
 		title: 'Smart Transfer',
@@ -19,7 +19,7 @@ export const newBenefitsData = [
 		using AiStock and unlock more sales.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_rank_tracker_4.png'
+		imageUrl: '/tpl_manager_4.png'
 	},
 	{
 		title: 'Stock Optimization',
@@ -28,6 +28,6 @@ export const newBenefitsData = [
 		rate as well as domestic inbounds.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_rank_tracker_5.png'
+		imageUrl: '/tpl_manager_5.png'
 	}
 ];

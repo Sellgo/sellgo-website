@@ -8,7 +8,7 @@ export const newBenefitsData = [
 		customer demand. The result? No more surprises.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_rank_tracker_3.png'
+		imageUrl: '/sales_forecasting_3.png'
 	},
 	{
 		title: 'Seasonality',
@@ -22,7 +22,7 @@ export const newBenefitsData = [
 		trending.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_rank_tracker_4.png'
+		imageUrl: '/sales_forecasting_4.png'
 	},
 	{
 		title: 'Sales Calendar',
@@ -36,6 +36,6 @@ export const newBenefitsData = [
 		accurate in the industry.`,
 		linkLabel: '',
 		navigateTo: '',
-		imageUrl: '/product_rank_tracker_5.png'
+		imageUrl: '/sales_forecasting_5.png'
 	}
 ];

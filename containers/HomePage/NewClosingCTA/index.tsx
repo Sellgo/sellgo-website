@@ -31,7 +31,7 @@ const NewClosingCTASection = () => {
 								navigateTo="/pricing"
 								className={styles.closingCTA}
 							>
-								Get started - it&apos;s free
+								Get started now
 							</CTAButton>
 							<button
 								className={styles.demoButton}

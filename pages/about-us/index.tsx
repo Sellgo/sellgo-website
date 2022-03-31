@@ -8,6 +8,7 @@ import SEOHead from '../../components/SEOHead';
 
 /* Data */
 import { seoData } from '../../data/SEO/aboutPage';
+import LinkedIn from '../../components/Icons/SocialIcons/LinkedIn';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
@@ -54,13 +55,19 @@ const AboutUsPage: React.FC<Props> = () => {
 							</a>
 							.
 						</p>
+
+						<p>
+							Richard Prasojo - CEO/ Founder
+						</p>
+						
+
 					</div>
 
 					<div className={styles.welcomeSection__image}>
 						<Image
-							src="/extension_1.png"
-							width={600}
-							height={360}
+							src="/richardImage.png"
+							width={300}
+							height={300}
 							alt="Welcome to sellgo"
 						/>
 					</div>

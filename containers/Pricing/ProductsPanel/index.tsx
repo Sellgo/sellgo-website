@@ -142,9 +142,9 @@ const ProductsPanel: React.FC<Props> = (props) => {
 				left out in the cold.`}
 					linkLabel={''}
 					navigateTo={''}
-					imageUrl={'/heroImage.png'}
-					imageWidth={400}
-					imageHeight={400}
+					imageUrl={'/successImage.png'}
+					imageWidth={1080}
+					imageHeight={810}
 					reversed
 				/>
 			</div>

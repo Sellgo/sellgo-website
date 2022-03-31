@@ -19,10 +19,10 @@ const HeroBox: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.heroBox}`}>
 			<Image
-				src="/product_rank_tracker_1.png"
+				src="/tpl_manager_1.png"
 				width={600}
 				height={360}
-				alt="Product Finder Product Cover Image"
+				alt="3PL Manager Cover Image"
 			/>
 
 			<div className={styles.heroBox__Details}>
@@ -31,7 +31,7 @@ const HeroBox: React.FC<Props> = () => {
 						width={30}
 						height={30}
 						fill="#ef7818"
-						name="productRankTracker"
+						name="Tpl"
 						isRainbow
 					/>
 					<h2 className={styles.subHeading}>3PL Manager</h2>

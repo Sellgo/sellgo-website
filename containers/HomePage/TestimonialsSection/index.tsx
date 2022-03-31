@@ -17,7 +17,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 			</p>
 
 			<div className={styles.testimonialAuthor}>
-				<img src="x" alt="author" />
+				<img src="andrewErickson.png" alt="author" />
 				<div className={styles.authorDetails}>
 					<span className={styles.name}>Andrew Erickson</span>
 					<span className={styles.title}>CEO of XXX Brand, Titan leader</span>
@@ -68,7 +68,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 						/>
 						<Image
 							src={'/MetkixLogo.png'}
-							alt="TenFactorLogo"
+							alt="MetkixLogo"
 							width={70}
 							height={30}
 						/>
