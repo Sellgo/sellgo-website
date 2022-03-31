@@ -54,7 +54,6 @@ const options = [
 		title: 'Support',
 		content: [
 			{ id: uuid(), name: 'Contact Us', to: '/contact' },
-			{ id: uuid(), name: 'Contact Sales', to: '/contact-sales' },
 			{ id: uuid(), name: 'Request Free Demo'},
 			{ id: uuid(), name: 'About Us', to: '/about-us' }
 		]
