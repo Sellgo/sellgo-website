@@ -1,22 +1,25 @@
 import React from 'react';
 import Image from 'next/image';
+import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
-import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
+import DemoForm from '../../Demo/DemoForm';
 
 const HeroBox = () => {
-	// const { customerCount } = props;
 	const textList = [
-		'dominate #1 search result.',
-		'find profitable products.',
-		'automate PPC with Zapier.',
-		'find Amazon sellers.',
-		'calculate perfect stock.'
+		'No more stockouts.',
+		'More sales.',
+		'Higher cash flow.',
+		'Faster growth.',
+		'Better business.',
+		'Accurate planning.',
+		'Easier delegations.'
 	];
+	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
 	const [isAnimationIncreasing, setAnimationIncreasing] = React.useState(true);
 	const [animationIndex, setAnimationIndex] = React.useState(0);
@@ -69,105 +72,57 @@ const HeroBox = () => {
 	return (
 		<section className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
-				<h1 className={`${styles.heading}`}>
-					The Next Generation Amazon Tools to
-				</h1>
-				<h2 className={styles.animatedText}>
-					<RainbowText type="purple_blue_gradient">{animatedText}</RainbowText>
-				</h2>
-				<p className={`${styles.tagline}`}>
-					All-In-One platform for Selling on Amazon using Extension, Bulk
-					Calculation,
-					<br />
-					Keyword Research, 1M Database of Amazon Sellers, and more!
-				</p>
-				<div className={styles.ctaRow}>
-					<CTAButton
-						type="primary"
-						size="small"
-						variant="rainbow"
-						navigateTo="/pricing?type=monthly-and-annual-plans"
-						className={styles.ctaHeroBox}
-					>
-						Get Started Now
-					</CTAButton>
-					{/* <div className={styles.signUpDetails}>
-						<Image src="/smileyFace.svg" width={25} height={25} />
-						<p> {customerCount} people have signed up.</p>
-					</div> */}
-				</div>
-
-				<small className={`${styles.ctaOverText}`}>
-					Start an Amazon business with $1.99, <br />
-					upgrade your tools as you grow.
-				</small>
-				<div className={styles.heroboxImage}>
-					<Image
-						src="/heroboxImage.png"
-						alt="hero-box"
-						width={800}
-						height={560}
-					/>
-					<div className={styles.heroboxImageOverlay}>
-						<Image src="/HexBG.png" alt="hero-box" width={370} height={240} />
+				<div className={styles.textColumn}>
+					<h1 className={`${styles.heading}`}>Always in-stock</h1>
+					<h2 className={styles.animatedText}>
+						<RainbowText type="purple_blue_gradient">
+							{animatedText}
+						</RainbowText>
+					</h2>
+					<p className={`${styles.tagline}`}>
+						We keep your best-seller Amazon inventory always in-stock while
+						adding more sales, automatically - it&apos;s like a self-driving
+						business.
+					</p>
+					<div className={styles.ctaBox}>
+						<div className={styles.ctaButtonWrapper}>
+							<a className={styles.submitButton} href="/pricing">
+								Get started now
+							</a>
+							<span className={styles.ctaDesc}>
+								Start an Amazon business with $1.99, upgrade your tools as you
+								grow.
+							</span>
+						</div>
+						<button
+							className={styles.demoButton}
+							onClick={() => setIsDemoFormOpen(true)}
+						>
+							Talk to an expert
+						</button>
 					</div>
 				</div>
-
-				<p className={`${styles.tagline}`}>
-					Trusted by Many Entrepreneurs at Amazon including
-				</p>
-
-				<div className={`${styles.logoRow}`}>
-					<div className={`${styles.socialProofLogoWrapper}`}>
+				<div className={styles.imageColumn}>
+					<div className={styles.heroImagewWrapper}>
 						<Image
-							src="/BBLogo.png"
-							alt="amazon-logo"
-							width={100}
-							height={17}
+							src="/heroImage.png"
+							width={500}
+							height={700}
+							alt="alt"
+							className={styles.heroImage}
 						/>
-					</div>
-
-					<div className={`${styles.socialProofLogoWrapper}`}>
-						<Image
-							src="/TenFactorLogo.png"
-							alt="amazon-logo"
-							width={100}
-							height={100}
-						/>
-					</div>
-
-					<div className={`${styles.socialProofLogoWrapper}`}>
-						<Image
-							src="/MetkixLogo.png"
-							alt="amazon-logo"
-							width={70}
-							height={20}
-						/>
-					</div>
-
-					<div className={`${styles.socialProofLogoWrapper}`}>
-						<Image
-							src="/LuxeLogo.png"
-							alt="amazon-logo"
-							width={100}
-							height={52}
-						/>
-					</div>
-
-					<div className={`${styles.socialProofLogoWrapper}`}>
-						<Image
-							src="/SkopeLogo.png"
-							alt="amazon-logo"
-							width={100}
-							height={100}
-						/>
-					</div>
-
-					<div className={`${styles.socialProofLogoWrapper}`}>
-						<Image src="/BFLogo.png" alt="amazon-logo" width={50} height={25} />
 					</div>
 				</div>
 			</div>
+
+			<Modal
+				isOpen={isDemoFormOpen}
+				onRequestClose={() => setIsDemoFormOpen(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+			</Modal>
 		</section>
 	);
 };

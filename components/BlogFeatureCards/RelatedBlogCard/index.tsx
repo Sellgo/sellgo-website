@@ -49,7 +49,7 @@ const RelatedBlogCard: React.FC<Props> = (props) => {
 						<h2>{title}</h2>
 						<p>
 							{generateCategoryDisplayName(categories.nodes)}{' '}
-							{formatBlogReadTime(readingTime.readtime)} mins read
+							{formatBlogReadTime(readingTime.readtime)} minute read
 						</p>
 					</div>
 				</a>

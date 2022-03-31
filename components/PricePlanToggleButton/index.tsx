@@ -29,12 +29,12 @@ const PricePlanToggleButton: React.FC<Props> = (props) => {
 			onKeyPress={() => {}}
 		>
 			<div className={monthlyToggleTextClass}>
-				<p>Pay Monthly</p>
+				<p>Pay monthly</p>
 				{/* <small>Commit Monthly</small> */}
 			</div>
 
 			<div className={annualToggleTextClass}>
-				<p>Pay Annually</p>
+				<p>Pay annually</p>
 				{/* <small>Commit Anually</small> */}
 			</div>
 		</div>

@@ -2,9 +2,6 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import axios from 'axios';
 
-/* Styling */
-import styles from './index.module.scss';
-
 /* Apollo */
 import client from '../apollo';
 
@@ -13,16 +10,14 @@ import { GET_SHOW_CASE_BLOGS } from '../graphql/cms';
 
 /* Containers */
 import HeroBox from '../containers/HomePage/HeroBox';
-import InfoSection from '../containers/HomePage/InfoSection';
 import FeaturesSection from '../containers/HomePage/FeaturesSection';
 import ProductsSection from '../containers/HomePage/ProductsSection';
 import StatisticsSection from '../containers/HomePage/StatisticsSection';
 import FeatureComparisonTable from '../containers/HomePage/FeatureComparisonTable';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
-import ClosingCTASection from '../containers/HomePage/ClosingCTASection';
 import StepperInfoSection from '../containers/HomePage/StepperInfoSection';
-
+import FAQSection from '../containers/HomePage/FAQSection';
 /* Components */
 import SEOHead from '../components/SEOHead';
 
@@ -38,13 +33,17 @@ import { ShowcaseBlogDetails } from '../interfaces/Blogs';
 
 /* Constants */
 import { limitDateForCustomerCount } from '../constants';
+import ProductCardsSection from '../containers/HomePage/ProductCardsSection';
+import NewClosingCTASection from '../containers/HomePage/NewClosingCTA';
+import { FAQDetails } from '../interfaces/FAQ';
 
 interface Props {
 	homeBlogs: ShowcaseBlogDetails[];
+	faqDetails: FAQDetails;
 }
 
 const HomePage: React.FC<Props> = (props) => {
-	const { homeBlogs } = props;
+	const { homeBlogs, faqDetails } = props;
 	return (
 		<>
 			<SEOHead
@@ -56,20 +55,16 @@ const HomePage: React.FC<Props> = (props) => {
 			/>
 			<HeroBox />
 			<main>
-				<InfoSection />
-				<StatisticsSection />
 				<StepperInfoSection />
+				<StatisticsSection />
+				<ProductCardsSection />
 				<FeaturesSection />
-				<ProductsSection />
 				<FeatureComparisonTable />
 				<TestimonialsSection />
-
-				<div className={styles.divider}></div>
-
+				<ProductsSection />
 				<RecentBlogsSection recentBlogs={homeBlogs} />
-				<div className={styles.divider}></div>
-
-				<ClosingCTASection />
+				{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
+				<NewClosingCTASection />
 			</main>
 		</>
 	);
@@ -96,10 +91,14 @@ export const getStaticProps: GetStaticProps = async () => {
 		customerCount = 23; // Random number for now
 	}
 
+	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/aistock.json`);
+	const { data } = response;
+
 	return {
 		props: {
 			homeBlogs: blogsForHome,
-			customerCount
+			customerCount,
+			faqDetails: data
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};

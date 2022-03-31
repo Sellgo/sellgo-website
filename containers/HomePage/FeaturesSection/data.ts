@@ -5,45 +5,48 @@ export const features: {
 	description: string;
 }[] = [
 	{
-		icon: '/features-extension.svg',
-		title: 'Chrome Extension',
-		subTitle: 'Scope out high demand products while browsing',
-		description: `Validate any product before sourcing and make confident business decisions, 
-            done quickly while browsing on Amazon.`
+		icon: '/chart-line-up-solid.svg',
+		title: 'Sales Projection',
+		subTitle: 'Build Accurate Sales Projection',
+		description: `In a single glance, our algorithm will project your sales to accurately 
+		estimate days until stockout. So now you can easily estimate when to order and how much 
+		to order for the next 24 months.`
 	},
 	{
-		icon: '/features-keyword-research.svg',
-		title: 'KEYWORD RESEARCH',
-		subTitle: 'Boost more sales with better keywords',
-		description: `What if we have a tool that showed you the exact search terms that 
-			would drive traffic to your Amazon listing?`
+		icon: '/seedling-solid.svg',
+		title: 'Always In-stock',
+		subTitle: 'Make Fast and Accurate Buying Decisions',
+		description: `In retail businesses, the most important part of the buying decision is timing. 
+		AiStock helps sellers make fast and accurate order decision in the quick-moving Amazon world 
+		of e-commerce.`
 	},
 	{
-		icon: '/features-product-research.svg',
-		title: 'PRODUCT RESEARCH',
-		subTitle: 'Analyze products easy and quick from',
+		icon: '/leaf-maple-solid.svg',
+		title: 'Seasonality Adjustor',
+		subTitle: 'Sell More During High Season',
 		description: `Easily explore the richest in the nichest. 
             Quickly focus on The Nichest in the Richest. Analyze your dream products in seconds.`
 	},
 	{
-		icon: '/features-seller-research.svg',
-		title: 'SELLER RESEARCH',
-		subTitle: 'Find your neighborhood Amazon sellers, in a Google Map style',
-		description: `Locate and scout sellers worldwide. Break- down millions of 
-            sellers by location, brands, products, and more ...`
+		icon: '/list-timeline-solid.svg',
+		title: 'Inventory Planning',
+		subTitle: 'Build Simple and Robust Inventory Planner',
+		description: `No more hours staring and tinkering with massive spreadsheets that is easily 
+		broken within seconds. We simplify inventory planner processes for you and your team.`
 	},
 	{
-		icon: '/features-wholesale.svg',
-		title: 'WHOLESALE BULK CALCULATION',
-		subTitle: 'Calculate your profit for each product on the fly',
-		description: `Accurately calculate and compare all the products in Amazon catalog 
-            including product variations and multipacks.`
+		icon: '/bars-staggered-solid.svg',
+		title: 'Smart Orders',
+		subTitle: 'Solidify Supply Chain',
+		description: `Calculate POs easily from your dashboard for the next 24 months, share your 
+		future POs with your suppliers to get more competitive pricings, easily integrate PO tracking 
+		with us.`
 	},
 	{
-		icon: '/features-perfect-stock.svg',
-		title: 'PERFECT STOCK',
-		subTitle: 'Never stockout, rarely overstock.',
-		description: `Accurately calculates when sellers should order to prevent a stockout, 
-            and how many units to restock.`
+		icon: '/sack-dollar-solid.svg',
+		title: 'Cash Flow Projection',
+		subTitle: 'Monthly and Yearly Business Cash Flow Projection',
+		description: `Instantly and accurately projecting out income and expense you expect to have in 
+		the coming months or years. Spend less time with spreadsheets and more time running your business.`
 	}
 ];

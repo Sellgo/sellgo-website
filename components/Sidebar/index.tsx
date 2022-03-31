@@ -1,5 +1,6 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
+import Modal from 'react-modal';
 
 // @ts-ignore : cannot find typed utils
 import MultilevelSidebar from 'react-multilevel-sidebar';
@@ -9,6 +10,7 @@ import styles from './index.module.scss';
 
 /* Components */
 import Close from '../Icons/Close';
+import DemoForm from '../../containers/Demo/DemoForm';
 
 interface Props {
 	isOpen: boolean;
@@ -35,7 +37,7 @@ const options = [
 	{
 		title: 'Pricing',
 		content: [
-			{ id: uuid(), name: 'Monthly and Annual Plans', to: '/pricing' },
+			{ id: uuid(), name: 'Monthly and annual plans', to: '/pricing' },
 			{ id: uuid(), name: 'Pay $1.99 for a day', to: '/pricing?type=wholesale' }
 		]
 	},
@@ -44,7 +46,7 @@ const options = [
 		content: [
 			{ id: uuid(), name: 'Blogs', to: '/blogs' },
 			{ id: uuid(), name: 'Sales Estimator', to: '/sales-estimator' },
-			{ id: uuid(), name: 'Affiliate Program', to: '/affiliates' }
+			{ id: uuid(), name: 'Partnership Program', to: '/partnership-program' }
 		]
 	},
 
@@ -52,8 +54,7 @@ const options = [
 		title: 'Support',
 		content: [
 			{ id: uuid(), name: 'Contact Us', to: '/contact' },
-			{ id: uuid(), name: 'Contact Sales', to: '/contact-sales' },
-			{ id: uuid(), name: 'Request Free Demo', to: '/demo' },
+			{ id: uuid(), name: 'Request Free Demo'},
 			{ id: uuid(), name: 'About Us', to: '/about-us' }
 		]
 	}
@@ -61,8 +62,15 @@ const options = [
 
 const Sidebar: React.FC<Props> = (props) => {
 	const { isOpen, handleClose } = props;
+	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 
 	const className = `${isOpen ? styles.sidebar : styles.closeSidebar}`;
+	const onItemClick = (e: any) => {
+		if (e.name === 'Request Free Demo') {
+			setIsDemoFormOpen(true);
+		}
+		handleClose();
+	}
 	return (
 		<div className={className}>
 			{/* Implementing custom overlay to close sidebar on screen click
@@ -75,7 +83,7 @@ const Sidebar: React.FC<Props> = (props) => {
 			<MultilevelSidebar
 				open={isOpen}
 				options={options}
-				onItemClick={handleClose}
+				onItemClick={onItemClick}
 				style={{ zIndex: '105 !important' }}
 			/>
 			{/* using in our button to open the sidebar */}
@@ -88,6 +96,15 @@ const Sidebar: React.FC<Props> = (props) => {
 			>
 				<Close width={15} height={15} fill="#2E3B4A" />
 			</div>
+
+			<Modal
+				isOpen={isDemoFormOpen}
+				onRequestClose={() => setIsDemoFormOpen(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+			</Modal>
 		</div>
 	);
 };

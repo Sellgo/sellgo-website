@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="43.75" viewBox="0 0 50 43.75">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#545454"/>
+    </linearGradient>
+  </defs>
+  <path id="diagram-subtask-solid" d="M0,38.25A6.25,6.25,0,0,1,6.25,32h37.5A6.253,6.253,0,0,1,50,38.25V44.5a6.256,6.256,0,0,1-6.25,6.25H15.625v9.375A3.122,3.122,0,0,0,18.75,63.25h3.125A6.256,6.256,0,0,1,28.125,57H43.75A6.256,6.256,0,0,1,50,63.25V69.5a6.256,6.256,0,0,1-6.25,6.25H28.125a6.256,6.256,0,0,1-6.25-6.25H18.75a9.322,9.322,0,0,1-9.375-9.375V50.75H6.25A6.253,6.253,0,0,1,0,44.5Zm43.75,25H28.125V69.5H43.75Z" transform="translate(0 -32)" fill="url(#linear-gradient)"/>
+</svg>

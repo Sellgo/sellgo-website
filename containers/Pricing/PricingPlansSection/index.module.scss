@@ -149,3 +149,17 @@
 .freeTrialBox {
 	margin: 10rem auto;
 }
+
+.banner {
+	background: $sellgo_yellow;
+	width: 100%;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: $fontweight_semibold;
+	font-size: $fontsize_content_14;
+	color: $black_1;
+	margin-bottom: 18px;
+	border-radius: 7px;
+}

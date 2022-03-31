@@ -8,6 +8,7 @@ import SEOHead from '../../components/SEOHead';
 
 /* Data */
 import { seoData } from '../../data/SEO/aboutPage';
+import LinkedIn from '../../components/Icons/SocialIcons/LinkedIn';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
@@ -54,13 +55,19 @@ const AboutUsPage: React.FC<Props> = () => {
 							</a>
 							.
 						</p>
+
+						<p>
+							Richard Prasojo - CEO/ Founder
+						</p>
+						
+
 					</div>
 
 					<div className={styles.welcomeSection__image}>
 						<Image
-							src="/extension_1.png"
-							width={600}
-							height={360}
+							src="/richardImage.png"
+							width={300}
+							height={300}
 							alt="Welcome to sellgo"
 						/>
 					</div>
@@ -70,7 +77,7 @@ const AboutUsPage: React.FC<Props> = () => {
 					<div
 						className={`${styles.contentSection__text} ${styles.contentSection__text__reversed}`}
 					>
-						<h2>Our Tools and Services</h2>
+						<h2>Our tools and services</h2>
 
 						<p>
 							At Sellgo, we have developed useful tools that you can start using
@@ -96,7 +103,7 @@ const AboutUsPage: React.FC<Props> = () => {
 
 				<section className={`page-container ${styles.contentSection}`}>
 					<div className={`${styles.contentSection__text}`}>
-						<h2>Our Pricing Plans</h2>
+						<h2>Our pricing plans</h2>
 
 						<p>
 							We currently offer a $1.99 and premium plan that you can sign-up
@@ -125,7 +132,7 @@ const AboutUsPage: React.FC<Props> = () => {
 					<div
 						className={`${styles.contentSection__text} ${styles.contentSection__text__reversed}`}
 					>
-						<h2>Our Team</h2>
+						<h2>Our team</h2>
 
 						<p>
 							Our team members and leadership consist of Amazon sellers just
@@ -175,8 +182,8 @@ const AboutUsPage: React.FC<Props> = () => {
 
 				<section className={`page-container ${styles.queryCardsWrapper}`}>
 					<div className={styles.queryCard}>
-						<h3>Media Inquiry</h3>
-						<p>Please Contact:</p>
+						<h3>Media inquiry</h3>
+						<p>Please contact:</p>
 						<div className={styles.queryCard__links}>
 							<a href="mailto:press@sellgo.com" className="anchor">
 								press@sellgo.com
@@ -185,17 +192,17 @@ const AboutUsPage: React.FC<Props> = () => {
 					</div>
 
 					<div className={styles.queryCard}>
-						<h3>Affiliate Partner</h3>
-						<p>Please Contact:</p>
+						<h3>Partnership</h3>
+						<p>Please contact:</p>
 
 						<div className={styles.queryCard__links}>
-							<a href="mailto:affiliate@sellgo.com" className="anchor">
-								affiliate@sellgo.com
+							<a href="mailto:partnership@sellgo.com" className="anchor">
+								partnership@sellgo.com
 							</a>
 							<p>
 								or visit{' '}
-								<Link href="/affiliates" passHref>
-									<a className="anchor">Affiliate Program</a>
+								<Link href="/partnerships" passHref>
+									<a className="anchor">Partnership Program</a>
 								</Link>
 							</p>
 						</div>
@@ -203,7 +210,7 @@ const AboutUsPage: React.FC<Props> = () => {
 
 					<div className={styles.queryCard}>
 						<h3>Questions</h3>
-						<p>Please Contact:</p>
+						<p>Please contact:</p>
 						<div className={styles.queryCard__links}>
 							<a href="mailto:support@sellgo.com" className="anchor">
 								support@sellgo.com
@@ -211,7 +218,7 @@ const AboutUsPage: React.FC<Props> = () => {
 							<p>
 								or visit{' '}
 								<Link href="/contact" passHref>
-									<a className="anchor">Contact Us</a>
+									<a className="anchor">Contact us</a>
 								</Link>
 							</p>
 						</div>

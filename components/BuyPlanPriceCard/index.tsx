@@ -10,10 +10,11 @@ import CTAButton from '../CTAButton';
 interface Props {
 	isMonthly: boolean;
 	handleChange: () => void;
+	price: number;
 }
 
 const BuyPlanPriceCard: React.FC<Props> = (props) => {
-	const { isMonthly, handleChange } = props;
+	const { isMonthly, handleChange, price } = props;
 	return (
 		<div className={styles.buyPlanCard}>
 			<PricePlanToggleButton
@@ -23,7 +24,7 @@ const BuyPlanPriceCard: React.FC<Props> = (props) => {
 			/>
 
 			<p className={styles.price}>
-				$49 <span>/mo</span>
+				${price || 0} <span>/mo</span>
 			</p>
 
 			<p className={styles.billedAt}>
@@ -39,14 +40,15 @@ const BuyPlanPriceCard: React.FC<Props> = (props) => {
 			<CTAButton
 				type="primary"
 				size="medium"
+				variant="purplePinkRainbow"
 				navigateTo="/"
 				className={styles.priceCardCTA}
 			>
-				Buy Now
+				Buy now
 			</CTAButton>
 
 			<a href="#!" className="anchor">
-				View Price Breakdown
+				View price breakdown
 			</a>
 		</div>
 	);

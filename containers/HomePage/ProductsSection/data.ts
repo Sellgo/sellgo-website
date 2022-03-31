@@ -2,63 +2,24 @@ export const productsDetails: {
 	title: string;
 	action: string;
 	icon: string;
-	features: { name: string; link: string }[];
+	desc: string;
 }[] = [
 	{
-		title: 'FIND QUALITY PRODUCTS',
-		action: 'when researching',
-		icon: '/products-products.svg',
-		features: [
-			{
-				name: 'Sales Estimation & Search Volume',
-				link: '/'
-			},
-			{
-				name: 'Product/ Brand Database',
-				link: '/'
-			},
-			{
-				name: 'Seller Database/ Map/ Finder',
-				link: '/'
-			}
-		]
+		title: 'FREE MIGRATION',
+		action: '',
+		icon: '/handshake-alt-solid.svg',
+		desc: 'Your data, Our problem: Easily migrate from Spreadsheet, software or other systems to StackStock . We’ll help you to get there.'
 	},
 	{
-		title: 'DOMINATE COMPETITIONS',
-		action: 'when launching',
-		icon: '/products-competition.svg',
-		features: [
-			{
-				name: 'Keyword Finder',
-				link: '/'
-			},
-			{
-				name: 'Keyword Database',
-				link: '/'
-			},
-			{
-				name: 'Product Rank Tracker',
-				link: '/'
-			}
-		]
+		title: 'QUICK ONBOARDING',
+		action: '',
+		icon: '/person-skiing-solid.svg',
+		desc: 'We’re here to help. We’ll reach out after you sign-up because we’re excited about helping you succeed! You can also do it yourself with self-guided onboarding.'
 	},
 	{
-		title: 'AUTOMATE PROCESSES',
-		action: 'when selling',
-		icon: '/products-automate.svg',
-		features: [
-			{
-				name: 'Product Rank Tracker',
-				link: '/'
-			},
-			{
-				name: 'Zapier Integration For PPC Re-Campaign',
-				link: '/'
-			},
-			{
-				name: 'Perfect Stock',
-				link: '/'
-			}
-		]
+		title: 'EASY DELEGATION',
+		action: '',
+		icon: '/users-medical-solid.svg',
+		desc: 'Our full stock automation stack guarantee your inventory success 365 days a year. Easily delegate the process to your team or virtual assistants.'
 	}
 ];

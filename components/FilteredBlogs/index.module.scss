@@ -49,13 +49,12 @@
 		color: $prim_dark_1;
 		font-size: $fontsize_content_14;
 		font-weight: $fontweight_medium;
-		text-decoration: underline;
 	}
 
 	small {
 		text-transform: uppercase;
-		font-size: $fontsize_content_12;
-		font-weight: $fontweight_semibold;
-		color: $prim_dark_1;
+		font-size: $fontsize_content_10;
+		font-weight: $fontweight_medium;
+		color: $second_grey;
 	}
 }

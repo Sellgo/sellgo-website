@@ -19,7 +19,7 @@ const InfoCard: React.FC<Props> = (props) => {
 	const { title, isPopular, description, featureList, navigateTo } = props;
 	return (
 		<div className={styles.infoCard}>
-			{isPopular && <div className={styles.infoCardLabel}>Most Popular</div>}
+			{isPopular && <div className={styles.infoCardLabel}>Most popular</div>}
 
 			<h3 className={styles.infoCardTitle}>{title}</h3>
 
@@ -44,7 +44,7 @@ const InfoCard: React.FC<Props> = (props) => {
 				navigateTo={navigateTo}
 				className={styles.featureCTA}
 			>
-				Get Started
+				Get started
 			</CTAButton>
 		</div>
 	);

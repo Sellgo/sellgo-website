@@ -6,14 +6,14 @@
 	display: flex;
 	justify-content: space-between;
 
-	@media only screen and(max-width: 1080px) {
+	@media only screen and(max-width: 1280px) {
 		flex-direction: column;
 		align-items: center;
 	}
 
 	&__Left {
 		flex: 0 0 25%;
-		@media only screen and(max-width: 1080px) {
+		@media only screen and(max-width: 1280px) {
 			width: 100%;
 			text-align: center;
 			margin-bottom: 2rem;
@@ -23,7 +23,7 @@
 	&__Right {
 		flex: 0 0 70%;
 		margin-bottom: 5rem;
-		@media only screen and(max-width: 1080px) {
+		@media only screen and(max-width: 1280px) {
 			width: 100%;
 		}
 	}
@@ -49,11 +49,11 @@
 	height: 37rem;
 	background: $prim_white;
 	border: 1px solid #000;
-	@media only screen and(max-width: 1080px) {
+	@media only screen and(max-width: 1280px) {
 		margin: 2rem auto;
 	}
 
-	@media only screen and(max-width: 800px) {
+	@media only screen and(max-width: 1280px) {
 		width: 100%;
 	}
 }

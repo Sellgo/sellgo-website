@@ -86,7 +86,7 @@ const ReCaptchaNewsLetter: React.FC<Props> = (props) => {
 
 	return (
 		<div className={styles.newsLetter}>
-			<h1>Subscribe to Our Newsletter</h1>
+			<h1>Subscribe to our newsletter</h1>
 			<p>
 				Join our subscriber&apos;s list to get the latest update and articles
 				delivered directly to your inbox.

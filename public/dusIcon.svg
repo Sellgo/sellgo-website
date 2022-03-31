@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="44.444" viewBox="0 0 50 44.444">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#545454"/>
+    </linearGradient>
+  </defs>
+  <path id="calendar-circle-exclamation-solid" d="M8.333,2.778a2.778,2.778,0,1,1,5.556,0V5.556H25V2.778a2.778,2.778,0,1,1,5.556,0V5.556h4.167a4.167,4.167,0,0,1,4.167,4.167v4.167H0V9.722A4.167,4.167,0,0,1,4.167,5.556H8.333Zm27.778,13.95a15.28,15.28,0,0,0-7.4,27.717H4.167A4.167,4.167,0,0,1,0,40.278V16.667H36.111ZM50,31.944a12.5,12.5,0,1,1-12.5-12.5A12.5,12.5,0,0,1,50,31.944ZM37.5,36.111a2.083,2.083,0,1,0,2.083,2.083A2.078,2.078,0,0,0,37.5,36.111ZM38.811,25a1.345,1.345,0,0,0-1.389-1.389A1.446,1.446,0,0,0,36.033,25v6.944a1.446,1.446,0,0,0,1.389,1.389,1.345,1.345,0,0,0,1.389-1.389Z" fill="url(#linear-gradient)"/>
+</svg>

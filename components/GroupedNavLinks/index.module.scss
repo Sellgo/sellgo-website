@@ -11,8 +11,9 @@
 	width: 31rem;
 
 	&:hover {
-		border: 1px solid $border-color-1;
+		border: 1px solid $grey_3;
 		box-shadow: $box-shadow-1;
+		background: $grey_1;
 	}
 
 	a {
@@ -33,13 +34,13 @@
 	justify-content: flex-start;
 
 	h2 {
-		font-size: $fontsize_content_18;
-		font-weight: $fontweight_medium;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
 	}
 
 	p {
 		color: $grey_8 !important;
 		font-size: $fontsize_content_12;
-		font-weight: $fontweight_regular;
+		font-weight: $fontweight_medium;
 	}
 }

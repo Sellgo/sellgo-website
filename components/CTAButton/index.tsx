@@ -7,7 +7,13 @@ interface Props {
 	size: 'small' | 'medium' | 'large' | 'productPageBig' | 'productPageSmall';
 	navigateTo: string;
 	children: React.ReactNode;
-	variant?: 'white' | 'rainbow' | 'orange' | 'purplePinkRainbow' | 'green';
+	variant?:
+		| 'white'
+		| 'rainbow'
+		| 'orange'
+		| 'purplePinkRainbow'
+		| 'green'
+		| 'black';
 	className?: string;
 	asExternal?: boolean;
 	newTarget?: boolean;
