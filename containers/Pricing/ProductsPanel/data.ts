@@ -39,14 +39,28 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 1000,
 				monthlyPrice: 37,
 				annualPrice: 324,
-				desc: `The toolbox for beginner sellers. \n Get access to our tools and chrome extension!`,
+				desc: `Get access to our tools and chrome extension!`,
 				featureSubName: 'Start with',
 				featuresLists: [
 					{
 						title: 'Discover Best Selling',
 						featuresIncluded: [
 							'Full access to the Chrome Extension',
+							'Basic access to AiStock',
 							'Limited access to the rest of Sellgo All-In-One tool'
+						]
+					},
+					{
+						title: 'Avoiding Stockout',
+						featuresIncluded: [
+							'Basic access to AiStock'							
+						]
+					},
+					{
+						title: 'Optimize wholesale leads',
+						featuresIncluded: [
+							'Full access to Profit Finder',
+							'Variation and Multipack analysis'							
 						]
 					}
 				]
@@ -59,19 +73,27 @@ export const plansAndProductsDetails = [
 				monthlyPrice: 97,
 				annualPrice: 924,
 				featureSubName: 'Full Single-user Access, Plus',
-				desc: `For experienced sellers looking to grow \n their businesses and maximize their earnings.`,
+				desc: `For most sellers looking to grow rapidly.`,
 				isNew: true,
 				featuresLists: [
 					{
-						title: 'Optimize Wholesale leads',
+						title: 'Automate supply chain',
 						featuresIncluded: [
-							'Full access to Profit Finder',
-							'Variation and Multipack analysis',
-							'Leads Tracker'
+							'Full access to sales & seasonality forecasting',
+							'Smart Order optimization',
+							'Full access to Cash Flow Planner'
 						]
 					},
 					{
-						title: 'Seller Research',
+						title: 'Keyword research',
+						featuresIncluded: [
+							'Reveal competitor keywords with Keyword Finder',
+							'Keyword tracking with Product Rank Tracker',
+							'Rank drop/ raise index'
+						]
+					},
+					{
+						title: 'Seller research',
 						featuresIncluded: [
 							'Locate Amazon sellers with Seller Database/ Map',
 							'Check sellers inventory',
@@ -79,11 +101,11 @@ export const plansAndProductsDetails = [
 						]
 					},
 					{
-						title: 'Keyword Research',
+						title: 'Product Research',
 						featuresIncluded: [
-							'Reveal competitor keywords with Keyword Finder',
-							'Keyword tracking with Product Rank Tracker',
-							'Rank drop/ raise index'
+							'Full access to Chrome Extension Sales Estimation',
+							'Full access to Product Research',
+							'Historical Data up to 1-year'
 						]
 					}
 				]
@@ -96,22 +118,14 @@ export const plansAndProductsDetails = [
 				monthlyPrice: 177,
 				annualPrice: 1764,
 				featureSubName: 'Everything in Professional Plan, Plus',
-				desc: `For top sellers who need the best tools. 
-				Track more products, obtain more data \nand optimize your entire Amazon business.`,
+				desc: `For top sellers who need the best tools.`,
 				featuresLists: [
 					{
-						title: 'Product Research',
+						title: 'Automate supply chain',
 						featuresIncluded: [
-							'Full access to Chrome Extension Sales Estimation',
-							'Full access to Product Research (incoming soon)',
-							'Historical Data up to 1-year'
-						]
-					},
-					{
-						title: 'Seller Research',
-						featuresIncluded: [
-							'Full use of Seller Database/ Map',
-							'Seller Map Top View 20,000 Sellers*'
+							'Multi Amazon stores',
+							'Multi Shopify stores',
+							'Integration fo fulfillment APIs'							
 						]
 					},
 					{
@@ -122,6 +136,13 @@ export const plansAndProductsDetails = [
 							'PPC Recampaign with Zapier integration*'
 						]
 					},
+					{
+						title: 'Seller Research',
+						featuresIncluded: [
+							'Full use of Seller Database/ Map',
+							'Seller Map Top View 20,000 Sellers*'
+						]
+					},										
 					{
 						title: 'Advanced access',
 						featuresIncluded: ['Multi-user login', 'Priority onboarding']

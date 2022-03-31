@@ -44,18 +44,11 @@ const ContactUsPage: React.FC<Props> = () => {
 
 					<div className={styles.queryCard}>
 						<h3>Partnership</h3>
-						<p>Please contact:</p>
-
-						<div className={styles.queryCard__links}>
-							<a href="mailto:partnership@sellgo.com" className="anchor">
-								partnership@sellgo.com
-							</a>
-							<p>
-								or visit{' '}
-								<Link href="/partnerships">
-									<a className="anchor">Partnership Program</a>
-								</Link>
-							</p>
+						<p>Please visit:</p>
+						<div className={styles.queryCard__links}>							
+								<Link href="/partnership-program">
+									<b className="anchor">Partnership Program</b>
+								</Link>							
 						</div>
 					</div>
 
@@ -66,12 +59,6 @@ const ContactUsPage: React.FC<Props> = () => {
 							<a href="mailto:support@sellgo.com" className="anchor">
 								support@sellgo.com
 							</a>
-							<p>
-								or visit{' '}
-								<Link href="/contact">
-									<a className="anchor">Contact us</a>
-								</Link>
-							</p>
 						</div>
 					</div>
 				</section>

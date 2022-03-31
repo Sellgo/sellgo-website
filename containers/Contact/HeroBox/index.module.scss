@@ -10,9 +10,9 @@
 }
 
 .heroBox {
-	min-height: 54rem;
+	min-height: 44rem;
 	color: $prim_white;
-	padding-top: 13rem;
+	padding-top: 10rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -38,10 +38,10 @@
 
 		p {
 			color: inherit;
-			max-width: 39.6rem;
-			font-size: $fontsize_content_14;
+			max-width: 49.6rem;
+			font-size: $fontsize_content_12;
 			margin-top: 1rem;
-			line-height: 30px;
+			line-height: 18px;
 		}
 	}
 }
@@ -82,7 +82,7 @@
 
 .contactCard {
 	background: $grey_0;
-	border-radius: 7px;
+	border-radius: 20px;
 	width: 43rem;
 	min-height: 24.2rem;
 	display: flex;
@@ -98,14 +98,14 @@
 
 	h2 {
 		color: $prim_dark_2;
-		font-size: $fontsize_content_18;
+		font-size: $fontsize_content_14;
 		font-weight: $fontweight_medium;
 	}
 
 	a {
-		font-size: $fontsize_content_18;
+		font-size: $fontsize_content_14;
 		color: $blue_link_bg_light;
-		font-weight: $fontweight_extrabold;
+		font-weight: $fontweight_regular;
 	}
 }
 
@@ -124,11 +124,27 @@
 	}
 
 	p {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_content_12;
 		color: $prim_dark_1;
 		a {
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_content_12;
 			cursor: pointer;
 		}
+	}
+}
+
+.demoButton {
+	background: none;
+	border: none;
+	cursor: pointer;
+	margin-left: 0px;
+	color: $sellgo_neon_blue;
+	font-size: $fontsize_content_14;
+	font-weight: $fontweight_medium;
+	margin-top: -5px;
+
+	@media only screen and(max-width: 1080px) {
+		margin-top: 3rem;
+		margin-left: 0;
 	}
 }
