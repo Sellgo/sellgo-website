@@ -20,7 +20,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 				<img src="andrewErickson.png" alt="author" />
 				<div className={styles.authorDetails}>
 					<span className={styles.name}>Andrew Erickson</span>
-					<span className={styles.title}>CEO of XXX Brand, Titan leader</span>
+					<span className={styles.title}>CEO of Private Label Brand, Titan leader</span>
 					<a
 						className={styles.email}
 						href="andrewknowsamazon.com"
