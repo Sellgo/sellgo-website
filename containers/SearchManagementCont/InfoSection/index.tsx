@@ -12,7 +12,7 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>Wholesale Sourcing Made Easy</h2>
+					<h2>Wholesale sourcing made easy</h2>
 					<p>
 						Prioritize the suppliers you&apos;re wanting to reach out to, by
 						quickly viewing the profit rate and product availability on Amazon..

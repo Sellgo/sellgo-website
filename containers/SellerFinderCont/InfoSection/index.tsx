@@ -12,7 +12,7 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>The Ultimate Amazon Espionage Tool</h2>
+					<h2>The ultimate Amazon espionage tool</h2>
 					<p>
 						As Amazon selling becomes more and more popular, there has been an
 						emergence of sellers joining Amazon FBA bringing along a bounty of

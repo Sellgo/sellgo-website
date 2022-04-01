@@ -19,8 +19,8 @@ const CommonFeaturesSection: React.FC<Props> = () => {
 				Sellgo is the tool you&apos;ll need for selling on Amazon.
 			</h2>
 			<h3>
-				Whether you are searching for Wholesale sellers, Brands sellers, or
-				Private Label sellers,
+				Whether you are searching for wholesale sellers, brands sellers, or
+				private label sellers,
 				<br />
 				we help you build and grow your Amazon business.
 			</h3>

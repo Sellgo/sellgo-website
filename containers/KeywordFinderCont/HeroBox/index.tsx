@@ -36,7 +36,7 @@ const HeroBox: React.FC<Props> = () => {
 					/>
 					<h2 className={styles.subHeading}>Keyword Finder</h2>
 				</div>
-				<h1 className={styles.heading}>Reveal the Best Keywords</h1>
+				<h1 className={styles.heading}>Reveal the best keywords</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"

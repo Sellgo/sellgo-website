@@ -38,7 +38,7 @@ const options = [
 		title: 'Pricing',
 		content: [
 			{ id: uuid(), name: 'Monthly and annual plans', to: '/pricing' },
-			{ id: uuid(), name: 'Pay $1.99 for a day', to: '/pricing?type=wholesale' }
+			{ id: uuid(), name: 'Daily plan', to: '/pricing?type=wholesale' }
 		]
 	},
 	{

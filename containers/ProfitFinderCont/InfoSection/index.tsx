@@ -12,7 +12,7 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>Find a Supplier First, Then Go After the Products</h2>
+					<h2>Find a supplier first, then go after the products</h2>
 					<p>
 						The Profit Finder calculates your profits for each product on the
 						fly. It compares all the products in Amazon&apos;s catalog including

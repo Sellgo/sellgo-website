@@ -18,7 +18,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-					From Product Research to Product Launch, <br />
+					From product research to product launch, <br />
 					increase your Amazon business from Browser Extension.
 				</h2>
 
@@ -45,7 +45,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Get started Today
+					Get started today
 				</CTAButton>
 			</div>
 		</section>

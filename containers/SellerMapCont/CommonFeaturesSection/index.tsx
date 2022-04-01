@@ -16,7 +16,7 @@ const CommonFeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
 			<h2 className="secondary-heading">
-				We&apos;re Here for You - Whatever You Need
+				We&apos;re here for you - whatever you need
 			</h2>
 			<h3>
 				With Sellgo, you&apos;re never alone. <br />

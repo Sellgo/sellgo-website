@@ -18,8 +18,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-					Monitor Where Your Product Is Ranking With Those Keywords, And Then
-					Optimize Your Strategy!
+					Monitor where your product is ranking with those keywords, and then
+					optimize your strategy!
 				</h2>
 
 				<div className={styles.benefitsCardsWrapper}>
@@ -35,8 +35,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading-small">
-					The Powerful Yet Simple Interface Allows You To See Exactly Where Your
-					Product Ranks For Any Given Keyword Phrase.
+					The powerful yet simple interface allows you to see exactly where your
+					product ranks for any given keyword phrase.
 				</h2>
 				<CTAButton
 					type="secondary"
@@ -45,7 +45,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Get started Today
+					Get started today
 				</CTAButton>
 			</div>
 		</section>

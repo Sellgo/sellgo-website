@@ -36,7 +36,7 @@ const HeroBox: React.FC<Props> = () => {
 					<h2 className={styles.subHeading}>Seller Finder</h2>
 				</div>
 				<h1 className={styles.heading}>
-					Track Top FBA Competitors and Best Sellers
+					Track top FBA competitors and best sellers
 				</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"

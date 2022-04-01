@@ -12,7 +12,7 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>The Perfect Seller Locator</h2>
+					<h2>The perfect seller locator</h2>
 					<p>
 						Whether you&apos;re looking for new products to sell or you&apos;re
 						an agency that provides services to Amazon sellers, locate thousands

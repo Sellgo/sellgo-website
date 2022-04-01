@@ -3,28 +3,30 @@
 .recomCard {
 	max-width: 34rem;
 	min-width: 34rem;
-	min-height: 27rem;
+	min-height: 20rem;
 	background: $prim_white;
 	color: $prim_dark_2;
 	border-radius: 3px;
 	padding: 2rem 1rem;
 
 	h3 {
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_subtitle_20;
 		font-weight: $fontweight_semibold;
 	}
 
 	p {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_content_12;
 		max-width: 29rem;
 		margin: 0 auto;
 		margin: 2rem auto;
-		font-weight: $fontweight_medium;
-		min-height: 9.5rem;
+		font-weight: $fontweight_regular;
+		min-height: 5.5rem;
 	}
 
 	a {
-		text-decoration: underline;
+		text-decoration: none;
+		font-size: $fontsize_content_12;
+		font-weight: $fontweight_regular;
 	}
 
 	@media only screen and(max-width: 1080px) {

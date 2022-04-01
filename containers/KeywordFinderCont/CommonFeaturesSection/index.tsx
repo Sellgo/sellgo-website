@@ -16,7 +16,7 @@ const CommonFeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
 			<h2 className="secondary-heading">
-				Sellgo&apos;s Keyword Finder Comes in Handy
+				Sellgo&apos;s keyword finder comes in handy
 			</h2>
 			<h3>
 				With just a of couple clicks, it will bring up the same keywords that
