@@ -9,18 +9,21 @@
 	margin: 3rem auto;
 
 	h3 {
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_content_14;
 		font-weight: $fontweight_semibold;
 		color: $prim_dark_2;
+		margin-left: 2rem;
 	}
 
 	div {
-		font-size: $fontsize_content_14;
-		color: $prim_dark_1;
+		font-size: $fontsize_content_10;
+		font-weight: $fontweight_regular;
+		color: $grey_8;
+		margin-left: 2rem;
 
 		a {
 			color: inherit;
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_content_10;
 			margin-left: 10px;
 			display: inline-block;
 

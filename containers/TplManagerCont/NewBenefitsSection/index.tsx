@@ -42,7 +42,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Get started Today
+					Get started today
 				</CTAButton>
 			</div>
 		</section>

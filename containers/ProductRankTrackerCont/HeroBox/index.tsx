@@ -36,7 +36,7 @@ const HeroBox: React.FC<Props> = () => {
 					/>
 					<h2 className={styles.subHeading}>Product Rank Tracker</h2>
 				</div>
-				<h1 className={styles.heading}>Get to #1 Spot of Search Results</h1>
+				<h1 className={styles.heading}>Get to #1 spot of search results</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"

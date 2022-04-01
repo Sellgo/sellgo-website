@@ -18,17 +18,11 @@ const ContactInfo: React.FC<Props> = (props) => {
 	return (
 		<div className={`${styles.contactInfo} ${className}`}>
 			<h2>*Need an enterprise account? We&apos;d be happy to talk!</h2>
-
-			<div className={styles.capsule}>
-				<p>{message}</p>
-				<button
-					onClick={() => setIsDemoFormOpen(true)}
-					className={styles.contactSalesButton}
-				>
+			<button
+				className={styles.demoButton}
+				onClick={() => setIsDemoFormOpen(true)}			>
 					Talk to an expert
 				</button>
-			</div>
-
 			<Modal
 				isOpen={isDemoFormOpen}
 				onRequestClose={() => setIsDemoFormOpen(false)}

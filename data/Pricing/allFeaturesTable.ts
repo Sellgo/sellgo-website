@@ -37,9 +37,9 @@ export const payMonthlyAndAnnualPlan = [
 			['Cash Flow Projection', '-', '✓', '✓'],
 			['Connect to multiple Amazon stores', '-', 'coming soon', 'coming soon'],
 			['Support more than 1,000 SKUs per account', '-', '-', '✓'],
-			['Connect to Shopify store', '-', 'coming soon', 'coming soon'],
-			['Connect to Walmart store', '-', 'coming soon', 'coming soon'],
-			['Connect to Ebay store', '-', 'coming soon', 'coming soon'],
+			['Connect to Shopify stores', '-', 'coming soon', 'coming soon'],
+			['Connect to Walmart stores', '-', 'coming soon', 'coming soon'],
+			['Connect to Ebay stores', '-', 'coming soon', 'coming soon'],
 			['User management access', '-', '✓', '✓'],
 			['Restful API', '-', 'coming soon', 'coming soon'],
 		]
@@ -55,18 +55,18 @@ export const payMonthlyAndAnnualPlan = [
 				'4,000 keywords',
 				'7,000 keywords*'
 			],
-			['Boost Trackier', '-', '✓', '✓'],
-			['True Rank Performance', '-', '✓', '✓'],
-			['Zapier Integration', '-', '-', '✓'],
-			['Drop/ Raise Trigger', '-', '-', '✓']
+			['Boost tracker', '-', '✓', '✓'],
+			['True rank performance', '-', '✓', '✓'],
+			['Zapier integration', '-', '-', '✓'],
+			['Drop/ raise trigger', '-', '-', '✓']
 		]
 	},	
 	{
 		header: ['Product Research', 'Starter', 'Professional', 'Team'],
 		body: [
 			['Chrome Extension', '✓', '✓', '✓'],
-			['Amazon Best Sales Estimator', '1,000 estimates/ month', '✓', '✓'],
-			['Inventory Insight', '-', '✓', '✓'],
+			['Amazon best sales estimator', '1,000 estimates/ month', '✓', '✓'],
+			['Inventory insight', '-', '✓', '✓'],
 			['Market share insight', '-', '✓', '✓'],
 			['Product Database', '✓', '✓', '✓'],
 			['Brand Database', 'coming soon', 'coming soon', 'coming soon'],
@@ -116,8 +116,8 @@ export const payMonthlyAndAnnualPlan = [
 	{
 		header: ['Data Analytics', 'Starter', 'Professional', 'Team'],
 		body: [
-			['True Sales Estimates', '✓', '✓', '✓'],
-			['Historical Product Tracking Data', '1 month', '1 year', '1 year']
+			['True sales estimates', '✓', '✓', '✓'],
+			['Historical product tracking data', '1 month', '1 year', '1 year']
 		]
 	}
 ];

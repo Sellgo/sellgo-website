@@ -36,7 +36,7 @@ const HeroBox: React.FC<Props> = () => {
 					<h2 className={styles.subHeading}>Seller Database</h2>
 				</div>
 				<h1 className={styles.heading}>
-					The Treasure Database of Amazon Sellers
+					The treasure database of Amazon sellers
 				</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"

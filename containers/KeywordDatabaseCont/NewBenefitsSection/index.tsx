@@ -18,8 +18,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-					Quick Access To The Most Important Metrics To Make Calculated Business
-					Decisions
+					Quick access to the most important metrics to make calculated business
+					decisions
 				</h2>
 
 				<div className={styles.benefitsCardsWrapper}>
@@ -35,8 +35,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading-small">
-					With Relevant Keywords, Find New Customers, Increase Consumer Traffic
-					Your Listing, And Boost Your Sales
+					With relevant keywords, find new customers, increase consumer traffic
+					your listing, and boost your sales
 				</h2>
 				<CTAButton
 					type="secondary"
@@ -45,7 +45,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Get started Today
+					Get started today
 				</CTAButton>
 			</div>
 		</section>

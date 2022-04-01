@@ -18,7 +18,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={`page-container ${styles.benefitsWrapper}`}>
 				<h2 className="secondary-heading">
-					Where All Your Suppliers and Products Meet
+					Where all your suppliers and products meet
 				</h2>
 
 				<div className={styles.benefitsCardsWrapper}>
@@ -44,7 +44,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Start Sourcing with Sellgo Today
+					Start sourcing with Sellgo today
 				</CTAButton>
 			</div>
 		</section>
