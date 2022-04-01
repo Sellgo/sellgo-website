@@ -5,7 +5,7 @@ export const featuresData = [
 			'Amazon Sales Estimator',
 			'Leaf Sourcing',
 			'Bulk Export',
-			'Connect to Product Tracker'
+			'Keyword Reveal'
 		],
 		popularFeaturesList: [
 			'Amazon Sales Estimator 3 estimates daily',
