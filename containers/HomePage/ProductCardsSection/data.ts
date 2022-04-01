@@ -2,7 +2,7 @@ export const newBenefitsData = [
 	{
 		title: 'ONE-CLICK SUPPLY CHAIN',
 		subTitle:
-			'Discover how inventory planning is your secret weapon when it comes to scaling',
+			'Discover how inventory management is your secret weapon when it comes to scaling',
 		description: `Evaluate dozens of products and gain in-depth insight 
 		into any product including sales estimations, seller rankings, profit 
 		margins using data directly from Amazon.`,
