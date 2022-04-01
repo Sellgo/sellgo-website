@@ -36,7 +36,7 @@ const HeroBox: React.FC<Props> = () => {
 					/>
 					<h2 className={styles.subHeading}>Keyword Database</h2>
 				</div>
-				<h1 className={styles.heading}>Expand Seed Keywords</h1>
+				<h1 className={styles.heading}>Expand seed keywords</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"

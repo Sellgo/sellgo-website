@@ -15,7 +15,7 @@ interface Props {}
 const CommonFeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
-			<h2 className="secondary-heading">Track Your Keywords with Confidence</h2>
+			<h2 className="secondary-heading">Track your keywords with confidence</h2>
 			<h3>
 				Ensure your high-volume search keywords are boosting your product
 				ranking. Don&apos;t miss out!

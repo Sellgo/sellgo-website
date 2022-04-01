@@ -12,7 +12,7 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>Search Smarter, Faster, and Easier</h2>
+					<h2>Search smarter, faster, and easier</h2>
 					<p>
 						Keyword Database gives you access to millions of eligible, relevant
 						keywords to help you target the right customers. When you use the

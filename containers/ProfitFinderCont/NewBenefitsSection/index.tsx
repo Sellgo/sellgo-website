@@ -36,8 +36,8 @@ const NewBenefitsSection: React.FC<Props> = () => {
 				</div>
 
 				<h2 className="secondary-heading-small">
-					Bolden Your Amazon Business And Optimize Your Efficiency With Our
-					Powerful Chrome Extension.
+					Bolden your Amazon business and optimize your efficiency with our
+					powerful Chrome Extension.
 				</h2>
 				<CTAButton
 					type="secondary"
@@ -46,7 +46,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
-					Start Sourcing with Sellgo Today
+					Start sourcing with Sellgo today
 				</CTAButton>
 			</div>
 		</section>

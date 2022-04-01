@@ -1,18 +1,47 @@
 export const featuresData = [
 	{
+		title: 'AiStock',
+		featuresList: [
+			'Sales Forecasting',
+			'Order Planning',
+			'3PL Manager'
+		],
+		popularFeaturesList: [
+			'Days until stockout',
+			'Seasonality adjustor',
+			'Order planning',
+			'and many more ...'
+		]
+	},
+	{
+		title: 'Keyword Research',
+		featuresList: [
+			'Keyword Finder',
+			'Keyword Database',
+			'Product Rank Tracker',
+			'Zapier PPC Recampaign'
+		],
+		popularFeaturesList: [
+			'Keyword Finder 3 search/ day',
+			'Keyword Database 3 search/ day',
+			'3 keywords tracking/ day',
+			'and many more ...'
+		]
+	},
+	{
 		title: 'Browser Extension',
 		featuresList: [
 			'Amazon Sales Estimator',
 			'Leaf Sourcing',
 			'Bulk Export',
-			'Connect to Product Tracker'
+			'Keyword Reveal'
 		],
 		popularFeaturesList: [
-			'Amazon Sales Estimator 10 estimates daily',
+			'10 sales estimates daily',
 			'True Sales Estimates',
 			'Leaf Sourcing',
 			'Bulk Export to .CSV or .XLSX',
-			'Streamline Product Ideas to Daily Tracking'
+			'and many more ...'
 		]
 	},
 	{
@@ -24,10 +53,11 @@ export const featuresData = [
 			'Multipack Analysis'
 		],
 		popularFeaturesList: [
-			'Search Management with bulk export',
-			'Profit Finder with 10 products bulk processing daily',
+			'Bulk export',
+			'10 products bulk processing daily',
 			'Data Input as UPC, EAN, ASIN, ISBN',
-			'Upload Error Analysis'
+			'Upload Error Analysis',
+			'and many more ...'
 		]
 	},
 	{
@@ -43,21 +73,7 @@ export const featuresData = [
 			'10 sellers/ day',
 			'Seller Map Top View 3 sellers',
 			'Show 10 products by sellers/ day',
-			'Show 3 other sellers by seller`s product/ day'
-		]
-	},
-	{
-		title: 'Keyword Research',
-		featuresList: [
-			'Keyword Finder',
-			'Keyword Database',
-			'Product Rank Tracker',
-			'Zapier Integration for PPC Recampaign'
-		],
-		popularFeaturesList: [
-			'Keyword Finder 3 search per day',
-			'Keyword Database 3 search per day',
-			'Product Rank Tracker 3 keywords tracking per day'
+			'and many more ...'
 		]
 	}
 ];

@@ -56,7 +56,7 @@ const PrivateLabelOneDollar: React.FC<Props> = () => {
 
 			<section className={`big-page-container ${styles.otherInfoSection}`}>
 				<h2 className="secondary-heading">
-					Maximize Your Profits with Sellgo&apos;s Amazon Tools!
+					Start your daily plan with Sellgo&apos;s Amazon Tools!
 				</h2>
 
 				<div className={styles.otherInfoCTAWrapper}>

@@ -12,7 +12,7 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>Access Your Competitor Keywords in Seconds</h2>
+					<h2>Access your competitor keywords in seconds</h2>
 					<p>
 						Why invent new and risky keywords when you can start from something
 						you know will work? Most of the new successful Amazon sellers were
@@ -22,7 +22,7 @@ const InfoSection: React.FC<Props> = () => {
 						<br />
 						Sellgo Keyword Finder helps you to discover the keywords with the
 						most sales volume by using your competitors as a reference point.
-						You can now reverse engineer your competitors’ ranking strategy so
+						You can now reverse engineer your competitors&apos; ranking strategy so
 						you will know how you can use the same wordings and keywords for
 						your own products.
 					</p>
