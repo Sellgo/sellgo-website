@@ -11,7 +11,13 @@ const analytics = Analytics({
 	app: 'Sellgo Website',
 	plugins: [
 		googleAnalytics({
-			trackingId: String(process.env.NEXT_PUBLIC_GA_ID)
+			trackingId: String(process.env.NEXT_PUBLIC_GA_ID),
+			linker: {
+				domains: [
+					'app.sellgo.com', 
+					'app.sellgo-dev.com'
+				],
+			},
 		}),
 		fullStoryPlugin({
 			org: String(process.env.NEXT_PUBLIC_FULL_STORY_ID)
