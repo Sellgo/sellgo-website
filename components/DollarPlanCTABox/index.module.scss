@@ -1,7 +1,7 @@
 @import '../../styles/guidelines';
 
 .dollarPlanCTABox {
-	min-height: 21rem;
+	min-height: 11rem;
 	border: 1px solid $second_silver;
 	border-radius: 7px;
 	margin: 5rem auto;
@@ -21,7 +21,7 @@
 	justify-content: space-between;
 	align-self: center;
 	width: 100%;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 
 	@media only screen and(max-width: 950px) {
 		flex-direction: column;
@@ -37,13 +37,14 @@
 
 		h2 {
 			color: $prim_dark_2;
-			font-size: $fontsize_subtitle_20;
+			font-size: $fontsize_content_16;
 			font-weight: $fontweight_semibold;
 		}
 
 		p {
 			color: $second_grey;
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_content_12;
+			font-weight: $fontweight_regular;
 			margin: 1rem 0;
 		}
 	}
@@ -70,7 +71,8 @@
 	p {
 		color: $second_grey;
 		font-weight: $fontweight_regular;
-		font-size: 11px;
+		font-size: $fontsize_content_10;
+		font-weight: $fontweight_regular;
 		margin-top: 4px;
 		text-align: center;
 	}
@@ -109,7 +111,7 @@
 }
 
 .detailsList {
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_content_12;
 	font-weight: $fontweight_regular;
 	color: inherit;
 	margin-right: 4rem;
@@ -135,7 +137,8 @@
 	color: $blue_link_bg_light;
 	background: none;
 	border: none;
-	font-weight: $fontweight_medium;
+	font-size: $fontsize_content_12;
+	font-weight: $fontweight_regular;
 	margin-top: 2rem;
 	display: flex;
 	align-items: center;

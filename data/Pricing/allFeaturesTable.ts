@@ -12,76 +12,36 @@ export const payMonthlyAndAnnualPlan = [
 	{
 		header: ['Seller Type', 'Starter', 'Professional', 'Team'],
 		body: [
-			['Private Label', 'Basic', 'Intermediate', 'Expert'],
-			['Wholesale/ Arbitrage', 'Basic', 'Intermediate', 'Expert'],
-			['Arbitrage', 'Basic', 'Intermediate', 'Expert'],
-			['Brand', '-', '-', '✓'],
-			['Service Provider', '-', '-', '✓']
+			['Private label', '*', '****', '*****'],
+			['Wholesale', '*', '****', '*****'],
+			['Arbitrage', '*', '****', '*****'],
+			['Brand seller', '-', '✓', '✓'],
+			['Service provider', '-', '-', '✓']
 		]
 	},
 	{
-		header: ['Product Research', 'Starter', 'Professional', 'Team'],
+		header: ['AiStock', 'Starter', 'Professional', 'Team'],
 		body: [
-			['Chrome Extension', '✓', '✓', '✓'],
-			['Amazon Best Sales Estimator', '1,000 estimates/ month', '✓', '✓'],
-			['Inventory Insight', '-', '✓', '✓'],
-			['Market share insight', '-', '✓', '✓'],
-			['Product Database', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
-			['Brand Database', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
-			['Category Database', 'Incoming soon', 'Incoming soon', 'Incoming soon']
-		]
-	},
-	{
-		header: ['Bulk Profit Research', 'Starter', 'Professional', 'Team'],
-		body: [
-			['Profit Finder', '25,000 products/ day', '✓', '✓'],
-			['Additional bulk processing', '-', '✓', '✓'],
-			['Data input (UPC, EAN, ASIN, ISBN)', '✓', '✓', '✓'],
-			['Data Buster', '-', '✓', '✓'],
-			['Smart Filter', '-', '✓', '✓'],
-			['Bulk + Filtered Data Export', '-', '✓', '✓'],
-			['Variation Analysis', '-', '✓', '✓'],
-			['Multipack Analysis', '-', '✓', '✓'],
-			[
-				'Leads Tracker',
-				'20 products/ day',
-				'200 products/ day',
-				'2,000 products/ day'
-			]
-		]
-	},
-	{
-		header: ['Seller Research', 'Starter', 'Professional', 'Team'],
-		body: [
-			[
-				'Seller Database/ Map',
-				'100 sellers/ mo',
-				'1,500 sellers/ mo',
-				'10,000 sellers/ mo*'
-			],
-			[
-				'Seller Map Top View',
-				'10 sellers',
-				'10,000 sellers',
-				'20,000 sellers*'
-			],
-			[`Extract Seller's Product`, '20 products/ day', '✓', '✓'],
-			[
-				`Extract other sellers by seller's products`,
-				'20 sellers/ day',
-				'✓',
-				'✓'
-			],
-			['Export Seller Database', '-', 'Only Annual plan', 'Only Annual plan'],
-			['Show seller by brand', '-', '✓', '✓'],
-			['Show seller by category', '-', '✓', '✓']
-		]
-	},
-	{
-		header: ['Data Analytics', 'Starter', 'Professional', 'Team'],
-		body: [
-			['True Sales Estimates', '✓', '✓', '✓'],
-			['Historical Product Tracking Data', '1 month', '1 year', '1 year']
+			['Days Until Stockout', '✓', '✓', '✓'],
+			['Sales Forecasting', '✓', '✓', '✓'],
+			['Seasonality Adjustor', '✓', '✓', '✓'],
+			['Order Planning', '✓', '✓', '✓'],
+			['Stockout/ overstock protection', '✓', '✓', '✓'],
+			['Predictive inventory level', '✓', '✓', '✓'],			
+			['Generate long-term Smart Order', '-', '24 months', '24 months'],
+			['Smart Order Optimization', '-', 'MOQ, inventory, time -bound', 'MOQ, inventory, time, volume -bound'],
+			['Total import cost calculator', '-', '✓', '✓'],			
+			['Multi lead time', '-', '✓', '✓'],			
+			['3PL Manager', '✓', '✓', '✓'],
+			['3PL Scheduler', '✓', '✓', '✓'],
+			['Cash Flow Projection', '-', '✓', '✓'],
+			['Connect to multiple Amazon stores', '-', 'coming soon', 'coming soon'],
+			['Support more than 1,000 SKUs per account', '-', '-', '✓'],
+			['Connect to Shopify stores', '-', 'coming soon', 'coming soon'],
+			['Connect to Walmart stores', '-', 'coming soon', 'coming soon'],
+			['Connect to Ebay stores', '-', 'coming soon', 'coming soon'],
+			['User management access', '-', '✓', '✓'],
+			['Restful API', '-', 'coming soon', 'coming soon'],
 		]
 	},
 	{
@@ -95,25 +55,69 @@ export const payMonthlyAndAnnualPlan = [
 				'4,000 keywords',
 				'7,000 keywords*'
 			],
-			['Boost Trackier', '-', '✓', '✓'],
-			['True Rank Performance', '-', '✓', '✓'],
-			['Zapier Integration', '-', '-', '✓'],
-			['Drop/ Raise Trigger', '-', '-', '✓']
+			['Boost tracker', '-', '✓', '✓'],
+			['True rank performance', '-', '✓', '✓'],
+			['Zapier integration', '-', '-', '✓'],
+			['Drop/ raise trigger', '-', '-', '✓']
+		]
+	},	
+	{
+		header: ['Product Research', 'Starter', 'Professional', 'Team'],
+		body: [
+			['Chrome Extension', '✓', '✓', '✓'],
+			['Amazon best sales estimator', '1,000 estimates/ month', '✓', '✓'],
+			['Inventory insight', '-', '✓', '✓'],
+			['Market share insight', '-', '✓', '✓'],
+			['Product Database', '✓', '✓', '✓'],
+			['Brand Database', 'coming soon', 'coming soon', 'coming soon'],
+			['Category Database', 'coming soon', 'coming soon', 'coming soon']
 		]
 	},
 	{
-		header: ['Perfect Stock', 'Starter', 'Professional', 'Team'],
+		header: ['Bulk Profit Research', 'Starter', 'Professional', 'Team'],
 		body: [
-			['Dashboard', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
-			['Sales Projection', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
+			['Profit Finder', '25,000 products/ day', '✓', '✓'],
+			['Additional bulk processing', '-', '✓', '✓'],
+			['Data input (UPC, EAN, ASIN, ISBN)', '✓', '✓', '✓'],
+			['Data buster', '-', '✓', '✓'],
+			['Smart filter', '-', '✓', '✓'],
+			['Bulk + filtered data export', '-', '✓', '✓'],
+			['Variation analysis', '-', '✓', '✓'],
+			['Multipack analysis', '-', '✓', '✓'],
+		]
+	},
+	{
+		header: ['Seller Research', 'Starter', 'Professional', 'Team'],
+		body: [
 			[
-				'Seasonality Adjustor',
-				'Incoming soon',
-				'Incoming soon',
-				'Incoming soon'
+				'Seller Database/ map',
+				'100 sellers/ mo',
+				'1,500 sellers/ mo',
+				'10,000 sellers/ mo*'
 			],
-			['Catalog Planning', 'Incoming soon', 'Incoming soon', 'Incoming soon'],
-			['Order Planning', 'Incoming soon', 'Incoming soon', 'Incoming soon']
+			[
+				'Seller Map top view',
+				'10 sellers',
+				'10,000 sellers',
+				'20,000 sellers*'
+			],
+			[`Extract Seller's product`, '20 products/ day', '✓', '✓'],
+			[
+				`Extract other sellers by seller's products`,
+				'20 sellers/ day',
+				'✓',
+				'✓'
+			],
+			['Export Seller Database', '-', 'Only annual plan', 'Only annual plan'],
+			['Show seller by brand', '-', '✓', '✓'],
+			['Show seller by category', '-', '✓', '✓']
+		]
+	},
+	{
+		header: ['Data Analytics', 'Starter', 'Professional', 'Team'],
+		body: [
+			['True sales estimates', '✓', '✓', '✓'],
+			['Historical product tracking data', '1 month', '1 year', '1 year']
 		]
 	}
 ];

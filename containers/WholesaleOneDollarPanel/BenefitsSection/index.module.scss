@@ -31,7 +31,7 @@
 
 .benefitsSection {
 	text-align: center;
-	margin: 3rem auto;
+	margin: 5rem auto;
 }
 
 .benefitsCardWrapper {
@@ -50,24 +50,24 @@
 	flex-direction: column;
 	align-items: center;
 	color: $prim_dark_2;
-	max-width: 25rem;
+	max-width: 35rem;
 
 	@media only screen and(max-width: 500px) {
 		margin-bottom: 4rem;
 	}
 
 	h3 {
-		margin: 2rem auto;
-		font-size: $fontsize_content_16;
-		font-weight: $fontweight_semibold;
+		margin: 1rem auto;
+		font-size: $fontsize_content_18;
+		font-weight: $fontweight_bold;
 		color: $prim_dark_2;
 	}
 
 	p {
-		font-size: $fontsize_content_14;
-		font-weight: $fontweight_medium;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
 		color: $prim_dark_1;
-		min-height: 5rem;
+		min-height: 1rem;
 	}
 }
 

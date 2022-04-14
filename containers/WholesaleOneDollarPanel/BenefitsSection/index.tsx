@@ -15,29 +15,29 @@ const BenefitsSection: React.FC<Props> = () => {
 			<div className={styles.bgCircle}></div>
 
 			<div className={`big-page-container ${styles.benefitsSection}`}>
-				<h2 className="secondary-heading">You may also like ...</h2>
+				<h2 className="secondary-heading">3 top Amazon seller questions</h2>
 
 				<div className={styles.benefitsCardWrapper}>
 					<div className={styles.benefitsCard}>
 						<Image
-							src="/pricing-benefits-delegation.svg"
+							src="/dusIcon.svg"
 							width={50}
 							height={35}
 						/>
-						<h3>Full Team Delegation</h3>
-						<p>Delegate tasks and collaborate with team members.</p>
+						<h3>Out of stock?</h3>
+						<p>Am I currently at risk of stockout?</p>
 						<p></p>
 					</div>
 					<div className={styles.benefitsCard}>
-						<Image src="/pricing-benefits-scale.svg" width={50} height={45} />
-						<h3>Scale at Your Pace</h3>
-						<p>Start small with low commitment and scale up later.</p>
+						<Image src="/gantttrackIcon.svg" width={50} height={35} />
+						<h3>Next order?</h3>
+						<p>When can I place my next inventory order?</p>
 						<p></p>
 					</div>
 					<div className={styles.benefitsCard}>
-						<Image src="/pricing-benefits-data.svg" width={50} height={35} />
-						<h3>Billions of Data Points</h3>
-						<p>Access tons of data at your fingertips.</p>
+						<Image src="/analyzeIcon.svg" width={50} height={35} />
+						<h3>Sales?</h3>
+						<p>How is my sales projection like?</p>
 						<p></p>
 					</div>
 				</div>
@@ -50,7 +50,7 @@ const BenefitsSection: React.FC<Props> = () => {
 						navigateTo={'/pricing?type=monthly-and-annual-plans'}
 						className={styles.benefitsCTA}
 					>
-						Check Our Premium Plans
+						Check our premium solution
 					</CTAButton>
 				</div>
 			</div>

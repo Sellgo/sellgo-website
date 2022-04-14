@@ -433,32 +433,17 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 					</form>
 					<div className={styles.existingBrands}>
 						<div className={styles.socialProofIcons}>
-							<Image
-								src={'/TenFactorLogo.png'}
-								alt="TenFactorLogo"
-								width={100}
-								height={100}
-							/>
-							<Image
-								src={'/MetkixLogo.png'}
-								alt="TenFactorLogo"
-								width={70}
-								height={30}
-							/>
-							<Image
-								src={'/LuxeLogo.png'}
-								alt="LuxeLogo"
-								width={100}
-								height={52}
-							/>
-							<Image
-								src={'/SkopeLogo.png'}
-								alt="SkopeLogo"
-								width={100}
-								height={100}
-							/>
+						<Image src={'/Poshmark.png'} alt="PoshmarkLogo" width={100} height={46} />
+							<Image src={'/Corpay.png'} alt="CorpayLogo" width={100} height={28} />
+							<Image src={'/Joom.png'} alt="JoomLogo" width={100} height={24} />
+							<Image src={'/Clearbank.png'} alt="ClearbankLogo" width={100} height={18} />
+							<Image src={'/Nest.png'} alt="NestLogo" width={100} height={38} />
+							<Image src={'/Blackstone.png'} alt="BlackstoneLogo" width={100} height={24} />
+							<Image src={'/Fitchbrew.png'} alt="FitchbrewLogo" width={100} height={34} />							<Image src={'/MetkixLogo.png'} alt="MetkixLogo" width={70} height={30} />
+							<Image src={'/LuxeLogo.png'} alt="LuxeLogo" width={100} height={52}/>
+							<Image src={'/Skopenow.png'} alt="SkopeLogo" width={100} height={19} />
 							<Image src={'/BBLogo.png'} alt="BBLogo" width={100} height={17} />
-							<Image src={'/BFLogo.png'} alt="BFLogo" width={100} height={50} />
+							<Image src={'/Aspire.png'} alt="AspireLogo" width={100} height={29} />
 						</div>
 						<p>
 							Many brands choose Sellgo to deliver their remarkable growth for

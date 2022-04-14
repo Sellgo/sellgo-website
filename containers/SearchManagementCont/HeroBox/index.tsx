@@ -33,7 +33,7 @@ const HeroBox: React.FC<Props> = () => {
 					<h2 className={styles.subHeading}>Search Management</h2>
 				</div>
 				<h1 className={styles.heading}>
-					Organize Potential Suppliers in Your Pipeline
+					Organize potential suppliers in your pipeline
 				</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"

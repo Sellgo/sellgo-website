@@ -16,7 +16,7 @@ const CommonFeaturesSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.commonFeaturesSection}`}>
 			<h2 className="secondary-heading">
-				The Magic Keyword Research Tool for the Smart Amazon Seller
+				The magic keyword research tool for the smart Amazon seller
 			</h2>
 			<h3>
 				Well, what are you waiting for? Begin the search with Sellgo today!

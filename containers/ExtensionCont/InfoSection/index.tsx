@@ -12,7 +12,7 @@ const InfoSection: React.FC<Props> = () => {
 		<section className={styles.infoSectionWrapper}>
 			<div className={`page-container ${styles.infoSection}`}>
 				<div className={styles.infoSection__Text}>
-					<h2>The First Step to Selling on Amazon</h2>
+					<h2>The first step to selling on Amazon</h2>
 					<p>
 						Sellgo&apos;s Chrome Extension is definitely the first important
 						step in your Amazon selling workflow. Get a bird&apos;s-eye view of

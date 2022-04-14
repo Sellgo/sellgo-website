@@ -36,7 +36,7 @@ const HeroBox: React.FC<Props> = () => {
 					/>
 					<h2 className={styles.subHeading}>Chrome Extension</h2>
 				</div>
-				<h1 className={styles.heading}>Quick Product Validation on Browser</h1>
+				<h1 className={styles.heading}>Quick product validation on browser</h1>
 				<CTAButton
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					type="primary"

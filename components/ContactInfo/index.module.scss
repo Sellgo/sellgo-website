@@ -4,6 +4,7 @@
 	text-align: center;
 
 	h2 {
+		margin-top: 18rem;
 		font-size: $fontsize_subtitle_20;
 		font-weight: $fontweight_semibold;
 	}
@@ -45,5 +46,20 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+}
+
+.demoButton {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: $sellgo_purple;
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_semibold;
+	margin-top: 3rem;
+	margin-bottom: 4rem;
+	@media only screen and(max-width: 1080px) {
+		margin-top: 18px;
+		width: 100%;
 	}
 }

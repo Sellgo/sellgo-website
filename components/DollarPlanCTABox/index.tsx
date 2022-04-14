@@ -27,7 +27,7 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
-					<h2>Pay $1.99 for a day</h2>
+					<h2>Daily plan</h2>
 					<p>
 						Access Sellgo&apos;s $1.99 Amazon tools and integrate them into your
 						Amazon business.
@@ -44,13 +44,53 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 						newTarget
 						className={styles.dollarPlanCTA}
 					>
-						Try now for $1.99
+						Buy now
 					</CTAButton>
 					<p>Pay less on software, invest more in your business.</p>
 				</div>
 			</div>
 
 			<div className={styles.detailsListWrapper}>
+				<a
+					href="/order-planning"
+					className={styles.detailsList}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span>
+						<Check fill="#3b4557" width={10} height={8} />
+					</span>
+					AiStock Order Planning
+				</a>
+				
+				{showAllFeatures && (
+					<a
+						href="/sales-forecasting"
+						className={styles.detailsList}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>
+							<Check fill="#3b4557" width={10} height={8} />
+						</span>
+						AiStock Sales Forecasting
+					</a>
+				)}
+
+				{showAllFeatures && (
+					<a
+						href="/tpl-manager"
+						className={styles.detailsList}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>
+							<Check fill="#3b4557" width={10} height={8} />
+						</span>
+						AiStock 3PL Manager
+					</a>
+				)}
+
 				<a
 					href="/extension"
 					className={styles.detailsList}
@@ -91,7 +131,35 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 
 				{showAllFeatures && (
 					<a
-						href="/leads-tracker"
+					href="/search-management"
+					className={styles.detailsList}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span>
+						<Check fill="#3b4557" width={10} height={8} />
+					</span>
+					Search Management
+				</a>
+				)}
+
+				
+
+				<a
+					href="/seller-database"
+					className={styles.detailsList}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<span>
+						<Check fill="#3b4557" width={10} height={8} />
+					</span>
+					Seller Database
+				</a>
+
+				{showAllFeatures && (
+					<a
+						href="/seller-map"
 						className={styles.detailsList}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -99,7 +167,7 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 						<span>
 							<Check fill="#3b4557" width={10} height={8} />
 						</span>
-						Leads Tracker
+						Seller Map
 					</a>
 				)}
 
@@ -118,7 +186,7 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 				)}
 
 				<a
-					href="/seller-database"
+					href="/keyword-database"
 					className={styles.detailsList}
 					target="_blank"
 					rel="noopener noreferrer"
@@ -126,19 +194,7 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
-					Seller Database
-				</a>
-
-				<a
-					href="/seller-map"
-					className={styles.detailsList}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Seller Map
+					Keyword Database
 				</a>
 
 				{showAllFeatures && (
@@ -156,7 +212,7 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 				)}
 
 				<a
-					href="/keyword-database"
+					href="/product-rank-tracker"
 					className={styles.detailsList}
 					target="_blank"
 					rel="noopener noreferrer"
@@ -164,22 +220,8 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 					<span>
 						<Check fill="#3b4557" width={10} height={8} />
 					</span>
-					Keyword Database
+					Product Rank Tracker
 				</a>
-
-				{showAllFeatures && (
-					<a
-						href="/product-rank-tracker"
-						className={styles.detailsList}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<span>
-							<Check fill="#3b4557" width={10} height={8} />
-						</span>
-						Product Rank Tracker
-					</a>
-				)}
 
 				<button
 					className={styles.viewAllFeatures}
