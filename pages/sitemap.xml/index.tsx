@@ -32,7 +32,6 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 		'pages/Partnerships-signup/index.tsx',
 		'pages/blogs/index.tsx',
 		'pages/contact/index.tsx',
-		'pages/contact-sales/index.tsx',
 		'pages/demo/index.tsx',
 		'pages/extension/index.tsx',
 		'pages/leads-tracker/index.tsx',
