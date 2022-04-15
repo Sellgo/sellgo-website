@@ -46,6 +46,11 @@
   dependencies:
     universal-analytics "^0.4.20"
 
+"@analytics/google-tag-manager@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@analytics/google-tag-manager/-/google-tag-manager-0.5.2.tgz#cb40dde59de99bc04ef6016af4e45f00cee063cb"
+  integrity sha512-oegIJlRkL/CYbj5eju4TW9wgt2qGQv0JlFk4+GQMnr7Y2iLDZROh3bwMh0MrxOamqPWcWlbhXwfhfbhQGqN0rA==
+
 "@analytics/localstorage-utils@^0.1.7":
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/@analytics/localstorage-utils/-/localstorage-utils-0.1.8.tgz#eab6a9690ccd3c05d131e3a9788b4443affdb800"
@@ -712,10 +717,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
-  version "18.0.5"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.5.tgz#1a4d4b705ae6af5aed369dec22800b20f89f5301"
-  integrity sha512-UPxNGInDCIKlfqBrm8LDXYWNfLHwIdisWcsH5GpMyGjhEDLFgTtlRBaoWuCua9HcyuE0rMkmAeZ3FXV1pYLIYQ==
+"@types/react@*", "@types/react@17.0.3":
+  version "17.0.3"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.3.tgz#ba6e215368501ac3826951eef2904574c262cc79"
+  integrity sha512-wYOUxIgs2HZZ0ACNiIayItyluADNbONl7kt8lkLjVK8IitMH5QMyAh75Fwhmo37r1m7L2JaFj03sIfxBVDvRAg==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
