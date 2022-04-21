@@ -19,7 +19,6 @@ import { generatePageURL } from '../../utils/SEO';
 
 /* Analytics */
 import analytics from '../../analytics';
-import googleAnalytics from '../../googleAnalytics';
 
 interface Props {
 	children: React.ReactNode;
@@ -39,7 +38,6 @@ const Layout: React.FC<Props> = ({ children }) => {
 				path: asPath
 			});
 		}
-		googleAnalytics.send({ hitType: 'pageview', page: generatePageURL(asPath) });
 	}, [asPath]);
 
 	const trackScrolling = () => {
