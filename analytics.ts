@@ -1,21 +1,21 @@
 import Analytics from 'analytics';
 
 // @ts-ignore
-import googleAnalytics from '@analytics/google-analytics';
+import fullStoryPlugin from '@analytics/fullstory';
 
 // @ts-ignore
-import fullStoryPlugin from '@analytics/fullstory';
+import googleTagManager from '@analytics/google-tag-manager';
 
 const analytics = Analytics({
 	debug: process.env.NODE_ENV === 'development',
 	app: 'Sellgo Website',
 	plugins: [
-		googleAnalytics({
-			trackingId: String(process.env.NEXT_PUBLIC_GA_ID)
-		}),
 		fullStoryPlugin({
 			org: String(process.env.NEXT_PUBLIC_FULL_STORY_ID)
-		})
+		}),
+		googleTagManager({
+			containerId: String(process.env.NEXT_PUBLIC_GTM_ID)
+		}),
 	]
 });
 
