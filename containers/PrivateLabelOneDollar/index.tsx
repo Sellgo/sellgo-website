@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* Components */
-import DollarPlanCTABox from '../../components/FreePlanCtaBox';
+import FreePlanCtaBox from '../../components/FreePlanCtaBox';
 import PricingInfoAlert from '../../components/PricingInfoAlert';
 import ContactInfo from '../../components/ContactInfo';
 import CTAButton from '../../components/CTAButton';
@@ -29,7 +29,7 @@ const PrivateLabelOneDollar: React.FC<Props> = () => {
 					Access Sellgo&apos;s $1 Amazon tools for a day and integrate them into
 					your Amazon business.
 				</p>
-				<DollarPlanCTABox
+				<FreePlanCtaBox
 					className={styles.freeTrialCTABox}
 					isPrimary
 					planName="privatelabel$1"
