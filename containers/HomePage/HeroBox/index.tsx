@@ -10,7 +10,6 @@ import styles from './index.module.scss';
 import RainbowText from '../../../components/RainbowText';
 import DemoForm from '../../Demo/DemoForm';
 import FormInput from '../../../components/FormInput';
-import CTAButton from '../../../components/CTAButton';
 
 /* Utils */
 import AppConfig from '../../../config';

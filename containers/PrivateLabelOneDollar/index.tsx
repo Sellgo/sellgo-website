@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* Components */
-import DollarPlanCTABox from '../../components/DollarPlanCTABox';
+import DollarPlanCTABox from '../../components/FreePlanCtaBox';
 import PricingInfoAlert from '../../components/PricingInfoAlert';
 import ContactInfo from '../../components/ContactInfo';
 import CTAButton from '../../components/CTAButton';
@@ -51,7 +51,7 @@ const PrivateLabelOneDollar: React.FC<Props> = () => {
 			<BenefitsSection />
 
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
-				<ContactInfo message="" />
+				<ContactInfo/>
 			</section>
 
 			<section className={`big-page-container ${styles.otherInfoSection}`}>

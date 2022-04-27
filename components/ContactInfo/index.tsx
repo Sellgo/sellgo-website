@@ -8,11 +8,10 @@ import DemoForm from '../../containers/Demo/DemoForm';
 
 interface Props {
 	className?: string;
-	message: string;
 }
 
 const ContactInfo: React.FC<Props> = (props) => {
-	const { className, message } = props;
+	const { className } = props;
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 
 	return (

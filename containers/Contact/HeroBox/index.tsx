@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Modal from 'react-modal';
 
 /* Styling */
@@ -7,8 +6,6 @@ import styles from './index.module.scss';
 
 /* Components */
 import PaperAirplane from '../../../components/Icons/PaperAirplane';
-import Comment from '../../../components/Icons/Comment';
-import CTAButton from '../../../components/CTAButton';
 
 import DemoForm from '../../Demo/DemoForm';
 
@@ -37,7 +34,7 @@ const HeroBox: React.FC<Props> = () => {
 							<br/><br/>Request a demo							
 						</button>
 
-						{/*<div className={styles.requestDemoCard}>
+						{/* <div className={styles.requestDemoCard}>
 							<Comment width={50} height={39} fill="#636D76" />
 							<CTAButton
 								navigateTo="/demo"
@@ -54,7 +51,7 @@ const HeroBox: React.FC<Props> = () => {
 						>
 							Request a demo
 						</button>
-						</div>*/}
+						</div> */}
 					</div>
 
 					<div className={styles.contactCard}>

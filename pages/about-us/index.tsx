@@ -8,7 +8,6 @@ import SEOHead from '../../components/SEOHead';
 
 /* Data */
 import { seoData } from '../../data/SEO/aboutPage';
-import LinkedIn from '../../components/Icons/SocialIcons/LinkedIn';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';

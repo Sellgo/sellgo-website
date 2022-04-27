@@ -91,7 +91,8 @@ CTAButton.defaultProps = {
 	className: '',
 	asExternal: false,
 	variant: 'orange',
-	newTarget: false
+	newTarget: false,
+	disabled: false,
 };
 
 export default CTAButton;

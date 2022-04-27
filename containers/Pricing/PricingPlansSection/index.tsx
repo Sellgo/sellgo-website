@@ -135,7 +135,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 
 			{!showOnlyGeneralPlanDetails && (
 				<section className={`big-page-container ${styles.contactInfoSection}`}>
-					<ContactInfo message="" />
+					<ContactInfo/>
 				</section>
 			)}
 			{!showOnlyGeneralPlanDetails && 
