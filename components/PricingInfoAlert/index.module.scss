@@ -1,12 +1,18 @@
 @import '../../styles/guidelines';
 
 .pricingInfoAlert {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	background: $grey_1;
 	border: none;
 	color: $prim_dark_2;
 	padding: 1rem 2rem;
 	border-radius: 7px;
-	margin: 3rem auto;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	margin-bottom: 3rem;
+	min-height: 10rem;
 
 	h3 {
 		font-size: $fontsize_content_14;
@@ -24,7 +30,6 @@
 		a {
 			color: inherit;
 			font-size: $fontsize_content_10;
-			margin-left: 10px;
 			display: inline-block;
 
 			&:hover {

@@ -121,6 +121,14 @@ export const GET_BLOG_BY_SLUG = gql`
 			seoMetaTags {
 				keywords
 			}
+			categories {
+				edges {
+					isPrimary
+				}
+				nodes {
+					name
+				}
+			}
 			relatedPosts {
 				nodes {
 					title

@@ -22,14 +22,16 @@ export const appendReferralCode = (currentBuyLink: string) => {
 };
 
 /* Create checkout link for webapp */
-export const createCheckoutLink = (paymentMode: string, name: string) => {
-	const webCheckOutLink = `${
+export const createCheckoutLink = (paymentMode: string, name: string, email?: string) => {
+	let webCheckOutLink = `${
 		AppConfig.APP_URL
 	}/subscription?mode=${paymentMode}&type=${name
 		.split(' ')
 		.join('')
 		.toLowerCase()}`;
-
+	if (name === 'free') {
+		webCheckOutLink = `${AppConfig.APP_URL}/signup${email ? `?email=${email}` : ''}`;
+	}
 	return appendReferralCode(webCheckOutLink);
 };
 

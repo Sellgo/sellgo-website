@@ -32,6 +32,8 @@ const PricingInfoAlert: React.FC<Props> = (props) => {
 			<h3>{head}</h3>
 			<div>
 				{desc}
+				<br/>
+				<br/>
 				<a href={navigateTo} target="_blank" rel="noopener noreferrer">
 					{navigateLabel} {''}
 					<NewLink width={12} height={11} fill="#636d76" />

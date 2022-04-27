@@ -5,28 +5,7 @@
 	z-index: 1;
 	padding: 3rem 0;
 	margin: 15rem auto;
-}
-
-.bgCircle {
-	width: 120rem;
 	background: $grey_1;
-	border-radius: 50%;
-	height: 100%;
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	right: 0;
-	bottom: 0;
-
-	@media only screen and(max-width: 1200px) {
-		width: 90%;
-	}
-
-	@media only screen and(max-width: 850px) {
-		display: none;
-	}
 }
 
 .benefitsSection {

@@ -3,8 +3,8 @@ import { PlanTypes } from '../../../interfaces/Pricing';
 
 export const planTypes: PlanTypes[] = [
 	{
-		name: 'Daily plan',
-		isNew: true
+		name: 'Free Tools',
+		isNew: false
 	},
 	{
 		name: 'Monthly and annual plans',

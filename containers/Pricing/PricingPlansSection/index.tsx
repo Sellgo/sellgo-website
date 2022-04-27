@@ -15,6 +15,7 @@ import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPl
 
 /* Constants */
 import { getAllFeaturesForPlans } from '../../../data/Pricing';
+import FreePlanCtaBox from '../../../components/FreePlanCtaBox';
 
 interface Props {
 	planName: string;
@@ -63,9 +64,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							<p className={styles.paymentToggleText}>Up to 5 months free.</p>
 						</div>
 					</div>
-					{/*<div className={styles.banner}>
-						Enjoy flat price forever for the first 1,000 AiStock beta users.
-	</div>*/}
 				</div>
 			</section>
 
@@ -140,6 +138,13 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					<ContactInfo message="" />
 				</section>
 			)}
+			{!showOnlyGeneralPlanDetails && 
+				<FreePlanCtaBox
+					className={styles.dollarPlanCTABox}
+					isPrimary
+					planName="free"
+				/>
+			}
 		</>
 	);
 };

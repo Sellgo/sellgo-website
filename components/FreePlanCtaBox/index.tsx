@@ -16,9 +16,9 @@ interface Props {
 	planName: string;
 }
 
-const DollarPlanCTABox: React.FC<Props> = (props) => {
+const FreePlanCtaBox: React.FC<Props> = (props) => {
 	const { className, isPrimary, planName } = props;
-	const dollarPlanLink = createCheckoutLink('daily', planName);
+	const signupLink = createCheckoutLink('daily', planName);
 	const [showAllFeatures, setShowAllFeatures] = React.useState<boolean>(false);
 
 	return (
@@ -27,10 +27,11 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
-					<h2>Daily plan</h2>
+					<h2>Research market and competitor&apos;s product in seconds.</h2>
 					<p>
-						Access Sellgo&apos;s $1.99 Amazon tools and integrate them into your
-						Amazon business.
+						Sellgo will help you find the right markets and the right 
+						products to sell, with access to daily sales data you need 
+						to make informed decisions.
 					</p>
 				</div>
 
@@ -39,14 +40,14 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 						type={isPrimary ? 'primary' : 'secondary'}
 						size="medium"
 						variant="purplePinkRainbow"
-						navigateTo={dollarPlanLink}
+						navigateTo={signupLink}
 						asExternal
 						newTarget
 						className={styles.dollarPlanCTA}
 					>
-						Buy now
+						Get Started Free
 					</CTAButton>
-					<p>Pay less on software, invest more in your business.</p>
+					<p>No credit card required</p>
 				</div>
 			</div>
 
@@ -234,9 +235,9 @@ const DollarPlanCTABox: React.FC<Props> = (props) => {
 	);
 };
 
-DollarPlanCTABox.defaultProps = {
+FreePlanCtaBox.defaultProps = {
 	className: '',
 	isPrimary: false
 };
 
-export default DollarPlanCTABox;
+export default FreePlanCtaBox;

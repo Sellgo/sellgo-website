@@ -73,7 +73,9 @@ const NavbarBottom: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="/pricing"
+				navigateTo={`${AppConfig.APP_URL}/signup`}
+				newTarget
+				asExternal
 				variant="white"
 				className={styles.navbarCTA}
 			>

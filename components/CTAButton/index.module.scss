@@ -127,3 +127,8 @@
 		font-weight: $fontweight_semibold;
 	}
 }
+
+.disabled {
+	pointer-events: none;
+	opacity: 0.7;		
+}

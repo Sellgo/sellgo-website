@@ -51,3 +51,7 @@ export const prettyPrintNumber = (num: number) => {
 
 	return formattedNumber;
 };
+
+/* Encode and decode to string (base64) */
+export const encodeBase64 = (payload: string) => window.btoa(payload);
+export const decodeBase64 = (payload: string) => window.atob(payload);

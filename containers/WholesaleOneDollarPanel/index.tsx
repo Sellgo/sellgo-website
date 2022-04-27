@@ -1,76 +1,59 @@
 import React from 'react';
+import Image from 'next/image';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
-import DollarPlanCTABox from '../../components/DollarPlanCTABox';
+import FreePlanCtaBox from '../../components/FreePlanCtaBox';
 import PricingInfoAlert from '../../components/PricingInfoAlert';
-import ContactInfo from '../../components/ContactInfo';
-import CTAButton from '../../components/CTAButton';
 
 /* Containers */
 import FeaturesSection from './FeaturesSection';
 import BenefitsSection from './BenefitsSection';
 
-/* Utils */
-import { createCheckoutLink } from '../../utils/Referral';
-
 interface Props {}
 
 const WholesaleOneDollar: React.FC<Props> = () => {
-	const dollarPlanLink = createCheckoutLink('daily', 'wholesalearbitrage$2');
 	return (
 		<>
 			<section className={`big-page-container ${styles.dollarPlanSection}`}>
 				<h2 className={styles.title}>
-					Unsure for monthly commitment? How about $1.99/ day
+					Unlock your 
+					&nbsp;
+					<Image 
+						src="/growth.png"
+						width={95}
+						height={47}
+						alt="growth"
+					/> 
+					&nbsp;
+					today with Sellgo&apos;s free tools.
 				</h2>
 				<p className={styles.info}>
-					Access Sellgo&apos;s $1.99 Amazon tools for a day and integrate them
-					into your Amazon business.
+					Get access to all of Sellgo&apos;s free AiStock, 
+					Keyword Research, Product Research and Bulk Analysis tools.
 				</p>
-				<DollarPlanCTABox
+				<FreePlanCtaBox
 					className={styles.dollarPlanCTABox}
 					isPrimary
-					planName="wholesalearbitrage$2"
+					planName="free"
 				/>
 
 				<PricingInfoAlert
 					className={styles.infoAlert}
 					navigateTo="/pricing?type=monthly-and-annual-plans"
-					navigateLabel="Premium Tools"
+					navigateLabel="Learn More"
 					head={`Start selling on Amazon today with Sellgo's premium tools`}
-					desc={`	Want to try our advanced Amazon tools? Our premium tools empower you to extract huge profits, unlock growth and healthy cash flow.`}
+					desc={`Want To Try Our Advanced Amazon Tools? Review Our FBA Tools 
+					And Pricing Packages. Our Premium Tools Empower You To Track And 
+					Research More Products To Optimize Your Amazon Business.`}
 					background="#EBEEF0"
 				/>
 			</section>
 
 			<FeaturesSection />
 			<BenefitsSection />
-
-			<section className={`big-page-container ${styles.contactInfoSection}`}>
-				<ContactInfo message="" />
-			</section>
-
-			<section className={`big-page-container ${styles.otherInfoSection}`}>
-				<h2>Start your daily plan today, upgrade as you grow</h2>
-
-				<div className={styles.otherInfoCTAWrapper}>
-					<CTAButton
-						type="primary"
-						size="medium"
-						variant="purplePinkRainbow"
-						navigateTo={dollarPlanLink}
-						className={styles.otherInfoCTA}
-						asExternal
-						newTarget
-					>
-						Buy now
-					</CTAButton>
-					<p>Pay less on software, invest more in your business.</p>
-				</div>
-			</section>
 		</>
 	);
 };

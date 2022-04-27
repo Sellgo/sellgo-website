@@ -17,6 +17,7 @@ interface Props {
 	className?: string;
 	asExternal?: boolean;
 	newTarget?: boolean;
+	disabled?: boolean;
 }
 
 const CTAButton: React.FC<Props> = (props) => {
@@ -28,12 +29,14 @@ const CTAButton: React.FC<Props> = (props) => {
 		className = '',
 		asExternal = false,
 		variant = 'orange',
-		newTarget = false
+		newTarget = false,
+		disabled = false,
 	} = props;
 
 	const baseClassName = styles.ctabutton;
 	const sizeClassName = styles[`ctabutton__${size}`];
 	const variantAndTypeClassName = styles[`ctabutton__${type}__${variant}`];
+	const disabledClassName = disabled ? styles.disabled : '';
 	const isRainbowBordered =
 		(variant === 'rainbow' || variant === 'purplePinkRainbow') &&
 		type === 'secondary';
@@ -46,6 +49,7 @@ const CTAButton: React.FC<Props> = (props) => {
 					${baseClassName} 
 					${sizeClassName} 
 					${variantAndTypeClassName} 
+					${disabledClassName}
 					${className}`}
 				href={navigateTo}
 				target={newTarget ? '_blank' : ''}
@@ -60,12 +64,16 @@ const CTAButton: React.FC<Props> = (props) => {
 		);
 	} else {
 		return (
-			<Link href={navigateTo} passHref>
+			<Link 
+				href={navigateTo} 
+				passHref 
+			>
 				<a
 					className={`
 						${baseClassName} 
 						${sizeClassName} 
 						${variantAndTypeClassName} 
+						${disabledClassName}
 						${className}`}
 				>
 					{isRainbowBordered ? (

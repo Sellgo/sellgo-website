@@ -51,6 +51,7 @@ const BlogsPage: React.FC<Props> = (props) => {
 		latestBlogs,
 		totalPages
 	} = props;
+
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const router = useRouter();

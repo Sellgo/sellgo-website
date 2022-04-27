@@ -129,6 +129,7 @@ const ProductsPanel: React.FC<Props> = (props) => {
 				})}
 			</Tabs>
 			<div className="page-container">
+				
 				<ProductCard
 					title={'CUSTOMER SUCCESS'}
 					subTitle={'Sellgo is more than just software.'}

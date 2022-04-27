@@ -9,6 +9,9 @@
 	font-size: $fontsize_subtitle_32;
 	color: $prim_dark_2;
 	font-weight: $fontweight_bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .info {
@@ -25,7 +28,6 @@
 }
 
 .infoAlert {
-	background: $grey_1;
 	text-align: left;
 	margin: 0 auto;
 	border: 1px solid $second_silver;

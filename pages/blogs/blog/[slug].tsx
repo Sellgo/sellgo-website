@@ -43,6 +43,7 @@ interface Props {
 	shortSummary: string;
 	keywords: string;
 	relatedBlogs: ShowcaseBlogDetails[];
+	response: any;
 }
 
 const BlogPage: React.FC<Props> = (props) => {
@@ -56,8 +57,10 @@ const BlogPage: React.FC<Props> = (props) => {
 		author,
 		shortSummary,
 		keywords,
-		relatedBlogs
+		relatedBlogs,
+		response
 	} = props;
+	console.log(response);
 
 	return (
 		<>
@@ -120,7 +123,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			slug: params?.slug
 		}
 	});
-
 	if (!response.data.postBy) {
 		return {
 			notFound: true
@@ -151,7 +153,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			featuredImage,
 			shortSummary: excerpt,
 			keywords: seoMetaTags.keywords,
-			relatedBlogs: relatedPosts.nodes
+			relatedBlogs: relatedPosts.nodes,
+			response
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};
