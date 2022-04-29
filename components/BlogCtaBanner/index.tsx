@@ -10,7 +10,7 @@ import CTAButton from '../CTAButton';
 import { CTA_1A, CTA_1B } from './data';
 
 interface Props {
-	type?: 'freeAccount1';
+	type?: string;
 }
 
 const BlogCtaBanner = (props: Props) => {

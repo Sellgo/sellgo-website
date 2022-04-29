@@ -65,12 +65,15 @@ const BlogPage: React.FC<Props> = (props) => {
 		categories
 	} = props;
 
-	const primaryCategoryIndex = categories.edges?.findIndex(
-		(edge: any) => edge.isPrimary
-	);
-	const primaryCategory = categories.nodes[primaryCategoryIndex];
-	const blogCtaType =
-		BLOG_CATEGORY_MAPPINGS[primaryCategory.name] || 'Amazon FBA Tools';
+	let blogCtaType = 'freeAccount1';
+	if (categories.edges && categories.nodes) {
+		const primaryCategoryIndex = categories.edges?.findIndex(
+			(edge: any) => edge.isPrimary
+		);
+		const primaryCategory = categories.nodes[primaryCategoryIndex];
+		blogCtaType =
+			BLOG_CATEGORY_MAPPINGS[primaryCategory?.name] || 'Amazon FBA Tools';
+	}
 
 	return (
 		<>
