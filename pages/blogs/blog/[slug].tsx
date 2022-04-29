@@ -66,7 +66,7 @@ const BlogPage: React.FC<Props> = (props) => {
 	} = props;
 
 	const primaryCategoryIndex = categories.edges?.findIndex(
-		(edge) => edge.isPrimary
+		(edge: any) => edge.isPrimary
 	);
 	const primaryCategory = categories.nodes[primaryCategoryIndex];
 	const blogCtaType =

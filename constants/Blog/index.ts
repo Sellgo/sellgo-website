@@ -1,4 +1,4 @@
-export const BLOG_CATEGORY_MAPPINGS = {
+export const BLOG_CATEGORY_MAPPINGS: any = {
 	'Amazon Private Label': 'freeAccount1',
 	'Amazon Sellers': 'freeAccount2',
 	'Amazon FBA Tools': 'freeAccount1',
