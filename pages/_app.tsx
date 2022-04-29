@@ -19,7 +19,7 @@ function App({ Component, pageProps }: AppProps) {
 	const [
 		isBlogSubscriptionModalOpen,
 		setIsBlogSubscriptionModalOpen
-	] = React.useState(true);
+	] = React.useState(false);
 	/* Show subscription popup on the third link change */
 	React.useEffect(() => {
 		const showPopupIfThirdPageChange = () => {
