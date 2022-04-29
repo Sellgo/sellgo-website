@@ -52,15 +52,13 @@ export const plansAndProductsDetails = [
 					},
 					{
 						title: 'Avoiding Stockout',
-						featuresIncluded: [
-							'Basic access to AiStock'							
-						]
+						featuresIncluded: ['Basic access to AiStock']
 					},
 					{
 						title: 'Optimize wholesale leads',
 						featuresIncluded: [
 							'Full access to Profit Finder',
-							'Variation and multipack analysis'							
+							'Variation and multipack analysis'
 						]
 					}
 				]
@@ -125,7 +123,7 @@ export const plansAndProductsDetails = [
 						featuresIncluded: [
 							'Multi Amazon stores',
 							'Multi Shopify stores',
-							'Integration fo fulfillment APIs'							
+							'Integration fo fulfillment APIs'
 						]
 					},
 					{
@@ -142,7 +140,7 @@ export const plansAndProductsDetails = [
 							'Full use of Seller Database/ Map',
 							'Seller Map top view 20,000 sellers*'
 						]
-					},										
+					},
 					{
 						title: 'Advanced access',
 						featuresIncluded: ['Multi-user login', 'Priority onboarding']

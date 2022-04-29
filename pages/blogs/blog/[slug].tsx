@@ -8,6 +8,7 @@ import styles from './index.module.scss';
 import HeroBox from '../../../containers/Blogs/HeroBox';
 import ShareBlogSection from '../../../containers/Blogs/ShareBlogSection';
 import RelatedBlogsSection from '../../../containers/Blogs/RelatedBlogsSection';
+import BlogCtaBanner from '../../../components/BlogCtaBanner';
 
 /* Components */
 import SEOHead from '../../../components/SEOHead';
@@ -32,6 +33,9 @@ import {
 	ShowcaseBlogDetails
 } from '../../../interfaces/Blogs';
 
+/* Constants */
+import { BLOG_CATEGORY_MAPPINGS } from '../../../constants/Blog';
+
 interface Props {
 	date: Date;
 	author: Author;
@@ -43,7 +47,7 @@ interface Props {
 	shortSummary: string;
 	keywords: string;
 	relatedBlogs: ShowcaseBlogDetails[];
-	response: any;
+	categories: any;
 }
 
 const BlogPage: React.FC<Props> = (props) => {
@@ -58,9 +62,15 @@ const BlogPage: React.FC<Props> = (props) => {
 		shortSummary,
 		keywords,
 		relatedBlogs,
-		response
+		categories
 	} = props;
-	console.log(response);
+
+	const primaryCategoryIndex = categories.edges?.findIndex(
+		(edge) => edge.isPrimary
+	);
+	const primaryCategory = categories.nodes[primaryCategoryIndex];
+	const blogCtaType =
+		BLOG_CATEGORY_MAPPINGS[primaryCategory.name] || 'Amazon FBA Tools';
 
 	return (
 		<>
@@ -89,6 +99,7 @@ const BlogPage: React.FC<Props> = (props) => {
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
 				title={title}
 			/>
+			<BlogCtaBanner type={blogCtaType} />
 			<RelatedBlogsSection relatedBlogs={relatedBlogs} />
 		</>
 	);
@@ -139,7 +150,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		featuredImage,
 		excerpt,
 		seoMetaTags,
-		relatedPosts
+		relatedPosts,
+		categories
 	} = response.data.postBy;
 
 	return {
@@ -154,7 +166,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			shortSummary: excerpt,
 			keywords: seoMetaTags.keywords,
 			relatedBlogs: relatedPosts.nodes,
-			response
+			categories
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};

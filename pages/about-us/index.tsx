@@ -55,11 +55,7 @@ const AboutUsPage: React.FC<Props> = () => {
 							.
 						</p>
 
-						<p>
-							Richard Prasojo - CEO/ Founder
-						</p>
-						
-
+						<p>Richard Prasojo - CEO/ Founder</p>
 					</div>
 
 					<div className={styles.welcomeSection__image}>
@@ -193,10 +189,10 @@ const AboutUsPage: React.FC<Props> = () => {
 					<div className={styles.queryCard}>
 						<h3>Partnership</h3>
 						<p>Please visit:</p>
-						<div className={styles.queryCard__links}>							
-								<Link href="/partnership-program" passHref>
-									<b className="anchor">Partnership Program</b>
-								</Link>
+						<div className={styles.queryCard__links}>
+							<Link href="/partnership-program" passHref>
+								<b className="anchor">Partnership Program</b>
+							</Link>
 						</div>
 					</div>
 
@@ -204,9 +200,9 @@ const AboutUsPage: React.FC<Props> = () => {
 						<h3>Questions</h3>
 						<p>Please visit:</p>
 						<div className={styles.queryCard__links}>
-								<Link href="/contact" passHref>
-									<b className="anchor">Contact us</b>
-								</Link>
+							<Link href="/contact" passHref>
+								<b className="anchor">Contact us</b>
+							</Link>
 						</div>
 					</div>
 				</section>

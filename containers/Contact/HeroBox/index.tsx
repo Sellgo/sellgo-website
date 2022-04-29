@@ -20,18 +20,23 @@ const HeroBox: React.FC<Props> = () => {
 					<div className={styles.heroBox__text}>
 						<h1>Contact us</h1>
 						<p>
-							AiStock/ Sellgo was made for Amazon sellers, by Amazon Sellers to provide
-							the tools and resources to build a successful Amazon business.
-							<br/><br/> Headquarter address:
-							<br/>Sellgo, Inc. <br/>
+							AiStock/ Sellgo was made for Amazon sellers, by Amazon Sellers to
+							provide the tools and resources to build a successful Amazon
+							business.
+							<br />
+							<br /> Headquarter address:
+							<br />
+							Sellgo, Inc. <br />
 							2828 S Corbet ave., Portland, OR 97201 USA
 						</p>
-						
+
 						<button
 							className={styles.demoButton}
 							onClick={() => setIsDemoFormOpen(true)}
 						>
-							<br/><br/>Request a demo							
+							<br />
+							<br />
+							Request a demo
 						</button>
 
 						{/* <div className={styles.requestDemoCard}>
@@ -72,13 +77,13 @@ const HeroBox: React.FC<Props> = () => {
 					</div>
 				</div>
 				<Modal
-				isOpen={isDemoFormOpen}
-				onRequestClose={() => setIsDemoFormOpen(false)}
-				className="modal"
-				overlayClassName="modalOverlay"
-			>
-				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
-			</Modal>
+					isOpen={isDemoFormOpen}
+					onRequestClose={() => setIsDemoFormOpen(false)}
+					className="modal"
+					overlayClassName="modalOverlay"
+				>
+					<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+				</Modal>
 			</section>
 		</>
 	);

@@ -54,7 +54,7 @@ const options = [
 		title: 'Support',
 		content: [
 			{ id: uuid(), name: 'Contact Us', to: '/contact' },
-			{ id: uuid(), name: 'Request Free Demo'},
+			{ id: uuid(), name: 'Request Free Demo' },
 			{ id: uuid(), name: 'About Us', to: '/about-us' }
 		]
 	}
@@ -70,7 +70,7 @@ const Sidebar: React.FC<Props> = (props) => {
 			setIsDemoFormOpen(true);
 		}
 		handleClose();
-	}
+	};
 	return (
 		<div className={className}>
 			{/* Implementing custom overlay to close sidebar on screen click

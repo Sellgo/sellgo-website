@@ -135,16 +135,16 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 
 			{!showOnlyGeneralPlanDetails && (
 				<section className={`big-page-container ${styles.contactInfoSection}`}>
-					<ContactInfo/>
+					<ContactInfo />
 				</section>
 			)}
-			{!showOnlyGeneralPlanDetails && 
+			{!showOnlyGeneralPlanDetails && (
 				<FreePlanCtaBox
 					className={styles.dollarPlanCTABox}
 					isPrimary
 					planName="free"
 				/>
-			}
+			)}
 		</>
 	);
 };

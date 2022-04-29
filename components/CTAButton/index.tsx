@@ -30,7 +30,7 @@ const CTAButton: React.FC<Props> = (props) => {
 		asExternal = false,
 		variant = 'orange',
 		newTarget = false,
-		disabled = false,
+		disabled = false
 	} = props;
 
 	const baseClassName = styles.ctabutton;
@@ -64,10 +64,7 @@ const CTAButton: React.FC<Props> = (props) => {
 		);
 	} else {
 		return (
-			<Link 
-				href={navigateTo} 
-				passHref 
-			>
+			<Link href={navigateTo} passHref>
 				<a
 					className={`
 						${baseClassName} 
@@ -92,7 +89,7 @@ CTAButton.defaultProps = {
 	asExternal: false,
 	variant: 'orange',
 	newTarget: false,
-	disabled: false,
+	disabled: false
 };
 
 export default CTAButton;

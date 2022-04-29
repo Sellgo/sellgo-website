@@ -22,7 +22,7 @@ const ProductsSection: React.FC<Props> = () => {
 		<section className={styles.productSectionWrapper}>
 			<div className={`page-container ${styles.productsSection}`}>
 				<h2 className={styles.productsSectionTitle}>
-				You’ll Be Up And Running In Minutes With AiStock
+					You’ll Be Up And Running In Minutes With AiStock
 				</h2>
 
 				<div className={styles.productsWrapper}>

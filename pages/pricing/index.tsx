@@ -55,7 +55,7 @@ const PricingPage: React.FC<Props> = (props) => {
 			) : (
 				<BundlesPanel />
 			)}
-			<NewClosingCTASection/>
+			<NewClosingCTASection />
 		</main>
 	);
 };

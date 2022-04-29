@@ -131,7 +131,7 @@ const HeroBox = () => {
 								hasError={emailErr}
 								errorMessage={emailErrMsg}
 							/>
-							<button 
+							<button
 								className={styles.submitButton}
 								disabled={emailErr}
 								onClick={onSignupClick}
@@ -141,8 +141,8 @@ const HeroBox = () => {
 							<span>No credit card required</span>
 						</div>
 						<button
-						className={styles.demoButton}
-						onClick={() => setIsDemoFormOpen(true)}
+							className={styles.demoButton}
+							onClick={() => setIsDemoFormOpen(true)}
 						>
 							Talk to an expert
 						</button>

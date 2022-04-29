@@ -14,10 +14,10 @@ const InfoSection: React.FC<Props> = () => {
 				<div className={styles.infoSection__Text}>
 					<h2>The best tracking tool with Zapier integration.</h2>
 					<p>
-						Not ranking as high as you&apos;d wish on Amazon and Walmart can break a
-						brand. Keyword Rank Tracker helps you to find out exactly what you
-						need to do to boost your products&apos; ranking and gain visibility
-						for your brand.
+						Not ranking as high as you&apos;d wish on Amazon and Walmart can
+						break a brand. Keyword Rank Tracker helps you to find out exactly
+						what you need to do to boost your products&apos; ranking and gain
+						visibility for your brand.
 					</p>
 					<p></p>
 				</div>

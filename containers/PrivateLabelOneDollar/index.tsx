@@ -51,7 +51,7 @@ const PrivateLabelOneDollar: React.FC<Props> = () => {
 			<BenefitsSection />
 
 			<section className={`big-page-container ${styles.contactInfoSection}`}>
-				<ContactInfo/>
+				<ContactInfo />
 			</section>
 
 			<section className={`big-page-container ${styles.otherInfoSection}`}>

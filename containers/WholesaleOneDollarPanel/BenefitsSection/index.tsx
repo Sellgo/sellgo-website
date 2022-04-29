@@ -17,11 +17,7 @@ const BenefitsSection: React.FC<Props> = () => {
 
 				<div className={styles.benefitsCardWrapper}>
 					<div className={styles.benefitsCard}>
-						<Image
-							src="/dusIcon.svg"
-							width={50}
-							height={35}
-						/>
+						<Image src="/dusIcon.svg" width={50} height={35} />
 						<h3>Out of stock?</h3>
 						<p>Am I currently at risk of stockout?</p>
 						<p></p>

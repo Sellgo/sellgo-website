@@ -19,20 +19,13 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 		<>
 			<section className={`big-page-container ${styles.dollarPlanSection}`}>
 				<h2 className={styles.title}>
-					Unlock your 
-					&nbsp;
-					<Image 
-						src="/growth.png"
-						width={95}
-						height={47}
-						alt="growth"
-					/> 
-					&nbsp;
-					today with Sellgo&apos;s free tools.
+					Unlock your &nbsp;
+					<Image src="/growth.png" width={95} height={47} alt="growth" />
+					&nbsp; today with Sellgo&apos;s free tools.
 				</h2>
 				<p className={styles.info}>
-					Get access to all of Sellgo&apos;s free AiStock, 
-					Keyword Research, Product Research and Bulk Analysis tools.
+					Get access to all of Sellgo&apos;s free AiStock, Keyword Research,
+					Product Research and Bulk Analysis tools.
 				</p>
 				<FreePlanCtaBox
 					className={styles.dollarPlanCTABox}

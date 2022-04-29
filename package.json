@@ -16,7 +16,7 @@
 		"@analytics/fullstory": "^0.2.4",
 		"@analytics/google-analytics": "^0.5.2",
 		"@analytics/google-tag-manager": "^0.5.2",
-		"@apollo/client": "3.3.15",
+		"@apollo/client": "3.5.5",
 		"@types/numeral": "^2.0.2",
 		"analytics": "^0.7.5",
 		"axios": "^0.21.1",

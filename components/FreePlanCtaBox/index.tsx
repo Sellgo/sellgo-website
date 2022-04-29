@@ -29,9 +29,9 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 				<div className={styles.infoWrapper__Desc}>
 					<h2>Research market and competitor&apos;s product in seconds.</h2>
 					<p>
-						Sellgo will help you find the right markets and the right 
-						products to sell, with access to daily sales data you need 
-						to make informed decisions.
+						Sellgo will help you find the right markets and the right products
+						to sell, with access to daily sales data you need to make informed
+						decisions.
 					</p>
 				</div>
 
@@ -63,7 +63,7 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 					</span>
 					AiStock Order Planning
 				</a>
-				
+
 				{showAllFeatures && (
 					<a
 						href="/sales-forecasting"
@@ -132,19 +132,17 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 
 				{showAllFeatures && (
 					<a
-					href="/search-management"
-					className={styles.detailsList}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Search Management
-				</a>
+						href="/search-management"
+						className={styles.detailsList}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<span>
+							<Check fill="#3b4557" width={10} height={8} />
+						</span>
+						Search Management
+					</a>
 				)}
-
-				
 
 				<a
 					href="/seller-database"

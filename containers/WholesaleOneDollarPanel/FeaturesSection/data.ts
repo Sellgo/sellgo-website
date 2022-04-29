@@ -1,11 +1,7 @@
 export const featuresData = [
 	{
 		title: 'AiStock',
-		featuresList: [
-			'Sales Forecasting',
-			'Order Planning',
-			'3PL Manager'
-		],
+		featuresList: ['Sales Forecasting', 'Order Planning', '3PL Manager'],
 		popularFeaturesList: [
 			'Days until stockout',
 			'Seasonality adjustor',

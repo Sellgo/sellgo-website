@@ -27,11 +27,16 @@ export const payMonthlyAndAnnualPlan = [
 			['Seasonality Adjustor', '✓', '✓', '✓'],
 			['Order Planning', '✓', '✓', '✓'],
 			['Stockout/ overstock protection', '✓', '✓', '✓'],
-			['Predictive inventory level', '✓', '✓', '✓'],			
+			['Predictive inventory level', '✓', '✓', '✓'],
 			['Generate long-term Smart Order', '-', '24 months', '24 months'],
-			['Smart Order Optimization', '-', 'MOQ, inventory, time -bound', 'MOQ, inventory, time, volume -bound'],
-			['Total import cost calculator', '-', '✓', '✓'],			
-			['Multi lead time', '-', '✓', '✓'],			
+			[
+				'Smart Order Optimization',
+				'-',
+				'MOQ, inventory, time -bound',
+				'MOQ, inventory, time, volume -bound'
+			],
+			['Total import cost calculator', '-', '✓', '✓'],
+			['Multi lead time', '-', '✓', '✓'],
 			['3PL Manager', '✓', '✓', '✓'],
 			['3PL Scheduler', '✓', '✓', '✓'],
 			['Cash Flow Projection', '-', '✓', '✓'],
@@ -41,7 +46,7 @@ export const payMonthlyAndAnnualPlan = [
 			['Connect to Walmart stores', '-', 'coming soon', 'coming soon'],
 			['Connect to Ebay stores', '-', 'coming soon', 'coming soon'],
 			['User management access', '-', '✓', '✓'],
-			['Restful API', '-', 'coming soon', 'coming soon'],
+			['Restful API', '-', 'coming soon', 'coming soon']
 		]
 	},
 	{
@@ -60,7 +65,7 @@ export const payMonthlyAndAnnualPlan = [
 			['Zapier integration', '-', '-', '✓'],
 			['Drop/ raise trigger', '-', '-', '✓']
 		]
-	},	
+	},
 	{
 		header: ['Product Research', 'Starter', 'Professional', 'Team'],
 		body: [
@@ -83,7 +88,7 @@ export const payMonthlyAndAnnualPlan = [
 			['Smart filter', '-', '✓', '✓'],
 			['Bulk + filtered data export', '-', '✓', '✓'],
 			['Variation analysis', '-', '✓', '✓'],
-			['Multipack analysis', '-', '✓', '✓'],
+			['Multipack analysis', '-', '✓', '✓']
 		]
 	},
 	{
