@@ -17,13 +17,12 @@ import { encodeBase64 } from '../../../utils/Format';
 
 const HeroBox = () => {
 	const textList = [
-		'No more stockouts.',
-		'More sales.',
-		'Higher cash flow.',
-		'Faster growth.',
-		'Better business.',
-		'Accurate planning.',
-		'Easier delegations.'
+		'dominate #1 search result.',
+		'find profitable products.',
+		'automate PPC with Zapier.',
+		'find Amazon sellers.',
+		'calculate perfect stock.'
+
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
@@ -105,16 +104,16 @@ const HeroBox = () => {
 		<section className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
 				<div className={styles.textColumn}>
-					<h1 className={`${styles.heading}`}>Always in-stock</h1>
+					<h1 className={`${styles.heading}`}>The next generation Amazon tools to</h1>
 					<h2 className={styles.animatedText}>
 						<RainbowText type="purple_blue_gradient">
 							{animatedText}
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						We keep your best-seller Amazon inventory always in-stock while
-						adding more sales, automatically - it&apos;s like a self-driving
-						business.
+						All-in-one platform for selling on Amazon using Extension, bulk calculation
+						<br />
+						keyword research, 1M database of Amazon sellers, and more!
 					</p>
 					<div className={styles.ctaBox}>
 						<div className={styles.emailSignupBox}>
@@ -123,7 +122,7 @@ const HeroBox = () => {
 								type={'text'}
 								name={'Email'}
 								value={email}
-								placeholder="Email Address"
+								placeholder="Enter your email address"
 								className={styles.formInput}
 								onChange={(e) => setEmail(e.target.value)}
 								autoComplete="off"
@@ -136,7 +135,7 @@ const HeroBox = () => {
 								disabled={emailErr}
 								onClick={onSignupClick}
 							>
-								Sign Up For Free
+								Try for FREE
 							</button>
 							<span>No credit card required</span>
 						</div>

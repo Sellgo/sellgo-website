@@ -11,9 +11,9 @@ const TestimonialsSection: React.FC<Props> = () => {
 	const testimonials = [
 		<div className={styles.testimonialTextWrapper}>
 			<p>
-				AiStock really helped me to avoid stockout, when to plan my next order
-				and forecast my sales with seasonality - simply been impossible with any
-				other software or Spreadsheets.
+				Sellgo has probably the most extensive seller leads,
+				as well as other very useful feature for product launch,
+				like keyword research.
 			</p>
 
 			<div className={styles.testimonialAuthor}>
@@ -57,9 +57,9 @@ const TestimonialsSection: React.FC<Props> = () => {
 			<div className={`page-container ${styles.testimonialsSectionWrapper}`}>
 				<div className={styles.leadingBrands}>
 					<h2>
-						Take control your supply chain
+						Trusted by many companies
 						<br />
-						Like these leading brands
+						selling at Amazon including
 					</h2>
 					<div className={styles.socialProofIcons}>
 						<Image

@@ -18,10 +18,10 @@ const StepperInfoSection: React.FC<Props> = () => {
 			id="showCtaNavBar"
 		>
 			<h2 className={styles.stepperTitle}>
-				Build your healthy cash flow, instantly.
+				How Sellgo works
 			</h2>
 			<p className={styles.stepperSubtitle}>
-				All-in-one platform for selling on Amazon
+				Simply generating more revenue.
 			</p>
 			<Stepper steps={wholesaleFeatures} />
 		</section>

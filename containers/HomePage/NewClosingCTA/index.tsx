@@ -17,10 +17,10 @@ const NewClosingCTASection = () => {
 			<div className={`page-container ${styles.closingCTA}`}>
 				<div className={styles.closingCTABox}>
 					<div className={styles.closingCTABox__left}>
-						<h2>Ready to switch on Sellgo?</h2>
+						<h2>Grow your Amazon business</h2>
 						<p>
-							Avoid stockouts and overstock, so you can focus on increasing
-							sales
+							With realiable tools and data that help you at every stage from product sourcing
+							to product selling, building a successful Amazon business has never been easier.
 						</p>
 
 						<div className={styles.ctaRow}>
@@ -31,7 +31,7 @@ const NewClosingCTASection = () => {
 								navigateTo="/pricing"
 								className={styles.closingCTA}
 							>
-								Get started now
+								Try for FREE
 							</CTAButton>
 							<button
 								className={styles.demoButton}

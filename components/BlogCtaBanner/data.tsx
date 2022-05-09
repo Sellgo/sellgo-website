@@ -16,7 +16,7 @@ export const CTA_1A = {
 			is on us ...{' '}
 		</p>
 	),
-	linkLabel: 'Sign up for free',
+	linkLabel: 'Try for FREE',
 	link: `${AppConfig.APP_URL}/signup`
 };
 

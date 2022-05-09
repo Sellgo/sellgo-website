@@ -1,7 +1,7 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Sign up`,
+	title: `Try for FREE`,
 	description: ``,
 	imageUrl: ``,
 	keywords: ['sellgo'],
