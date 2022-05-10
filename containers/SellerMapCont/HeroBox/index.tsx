@@ -43,8 +43,10 @@ const HeroBox: React.FC<Props> = () => {
 					variant="rainbow"
 					className={styles.heroBoxCTA}
 				>
-					Get started
+					GET MAP ACCESS
 				</CTAButton>
+				<p>Sellgo is the seller database platform of choice for thousands of top Amazon seller
+					agencies worldwide. Try it free. No credit card required. Contact us if you need help.</p>
 
 				<ProductAccordion data={accordionData} />
 			</div>

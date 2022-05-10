@@ -47,7 +47,7 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 					>
 						Try for FREE
 					</CTAButton>
-					<p>No credit card required</p>
+					<p>Try it free. No credit card required. Instant set-up.</p>
 				</div>
 			</div>
 

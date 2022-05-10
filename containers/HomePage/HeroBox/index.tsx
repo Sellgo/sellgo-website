@@ -122,7 +122,7 @@ const HeroBox = () => {
 								type={'text'}
 								name={'Email'}
 								value={email}
-								placeholder="Enter your email address"
+								placeholder="Your email address"
 								className={styles.formInput}
 								onChange={(e) => setEmail(e.target.value)}
 								autoComplete="off"
@@ -135,9 +135,9 @@ const HeroBox = () => {
 								disabled={emailErr}
 								onClick={onSignupClick}
 							>
-								Try for FREE
+								CREATE FREE ACCOUNT
 							</button>
-							<span>No credit card required</span>
+							<span>Try it free. No credit card required. Instant set-up.</span>
 						</div>
 						<button
 							className={styles.demoButton}

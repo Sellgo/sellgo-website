@@ -17,10 +17,9 @@ const NewClosingCTASection = () => {
 			<div className={`page-container ${styles.closingCTA}`}>
 				<div className={styles.closingCTABox}>
 					<div className={styles.closingCTABox__left}>
-						<h2>Grow your Amazon business with us</h2>
+						<h2>Get seller leads today</h2>
 						<p>
-							With realiable tools and data that help you at every stage from product sourcing
-							to product selling, building a successful Amazon business has never been easier.
+							1M+ seller database access at your fingertips, and counting.
 						</p>
 
 						<div className={styles.ctaRow}>
@@ -31,7 +30,7 @@ const NewClosingCTASection = () => {
 								navigateTo="/pricing"
 								className={styles.closingCTA}
 							>
-								Try now for FREE
+								CREATE FREE ACCOUNT
 							</CTAButton>
 							<button
 								className={styles.demoButton}
@@ -40,8 +39,8 @@ const NewClosingCTASection = () => {
 								Need customized seller lists?
 							</button>
 						</div>
-					</div>
-
+						<span>Try it free. No credit card required. Instant set-up.</span>	
+					</div>					
 					<Image src="/closingCtaLaptop.png" width={400} height={250} />
 				</div>
 			</div>

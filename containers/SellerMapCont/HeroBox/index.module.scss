@@ -24,6 +24,13 @@
 			width: 100%;
 		}
 	}
+	p {
+		font-size: 12px;
+		color: $grey_8;
+		width: 100%;
+		display: flex;
+		margin-top: 5px;
+	}
 }
 
 .subHeadingWrapper {
@@ -56,4 +63,5 @@
 	padding: 0 5rem;
 	font-size: 16px;
 	font-weight: $fontweight_semibold;
+	width: 100%;
 }

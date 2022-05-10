@@ -162,7 +162,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				asExternal
 				newTarget
 			>
-				Buy now
+				Get started
 			</CTAButton>
 		</div>
 	);
