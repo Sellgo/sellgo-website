@@ -45,7 +45,7 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 						newTarget
 						className={styles.dollarPlanCTA}
 					>
-						Get Started Free
+						Try for FREE
 					</CTAButton>
 					<p>No credit card required</p>
 				</div>

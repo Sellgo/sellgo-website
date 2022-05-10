@@ -15,7 +15,7 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and annual pricing plans',
-		summary: `Supply chain? Product research? Keyword research? Seller data? We've got your back.`,
+		summary: `Seller Leads? Product research? Keyword research? Seller data? We've got your back.`,
 
 		infoAlertMessage: {
 			monthly: {
@@ -49,10 +49,6 @@ export const plansAndProductsDetails = [
 							'Basic access to Seller Database and Map',
 							'Limited access to the rest of Sellgo all-in-one tool'
 						]
-					},
-					{
-						title: 'Avoiding Stockout',
-						featuresIncluded: ['Basic access to AiStock']
 					},
 					{
 						title: 'Optimize wholesale leads',

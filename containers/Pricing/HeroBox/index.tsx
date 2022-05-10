@@ -17,7 +17,7 @@ const HeroBox: React.FC<Props> = () => {
 			</div>
 			<section className={styles.heroboxSection}>
 				{/* }
-				<h1>Supply chain? Product research? Keyword research? Seller data?</h1>
+				<h1>Product research? Keyword research? Seller data?</h1>
 				<p>We've got your back. Pay less on our all-in-one Amazon solution, invest more in your business.</p>
 	*/}
 				<div className={styles.tabsWrapper}>
