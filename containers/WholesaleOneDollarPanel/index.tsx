@@ -24,7 +24,7 @@ const WholesaleOneDollar: React.FC<Props> = () => {
 					&nbsp; today with Sellgo&apos;s free tools.
 				</h2>
 				<p className={styles.info}>
-					Get access to all of Sellgo&apos;s free AiStock, Keyword Research,
+					Get access to all of Sellgo&apos;s free Seller Database, Keyword Research,
 					Product Research and Bulk Analysis tools.
 				</p>
 				<FreePlanCtaBox

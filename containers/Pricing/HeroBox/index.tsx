@@ -13,8 +13,7 @@ const HeroBox: React.FC<Props> = () => {
 	return (
 		<>
 			<div className={styles.banner}>
-				Enjoy flat price forever for the first 1,000 AiStock beta users. Monthly
-				or annual commitment.
+				AiStock users please check our new website here.
 			</div>
 			<section className={styles.heroboxSection}>
 				{/* }

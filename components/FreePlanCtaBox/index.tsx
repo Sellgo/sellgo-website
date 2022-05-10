@@ -53,46 +53,6 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 
 			<div className={styles.detailsListWrapper}>
 				<a
-					href="/order-planning"
-					className={styles.detailsList}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					AiStock Order Planning
-				</a>
-
-				{showAllFeatures && (
-					<a
-						href="/sales-forecasting"
-						className={styles.detailsList}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<span>
-							<Check fill="#3b4557" width={10} height={8} />
-						</span>
-						AiStock Sales Forecasting
-					</a>
-				)}
-
-				{showAllFeatures && (
-					<a
-						href="/tpl-manager"
-						className={styles.detailsList}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<span>
-							<Check fill="#3b4557" width={10} height={8} />
-						</span>
-						AiStock 3PL Manager
-					</a>
-				)}
-
-				<a
 					href="/extension"
 					className={styles.detailsList}
 					target="_blank"

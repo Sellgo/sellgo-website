@@ -46,7 +46,7 @@ export const plansAndProductsDetails = [
 						title: 'Discover Best Selling',
 						featuresIncluded: [
 							'Full access to the Chrome Extension',
-							'Basic access to AiStock',
+							'Basic access to Seller Database and Map',
 							'Limited access to the rest of Sellgo all-in-one tool'
 						]
 					},

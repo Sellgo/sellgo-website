@@ -2,52 +2,6 @@ import { StepDetail } from '../../../interfaces/Stepper';
 
 export const wholesaleFeatures: StepDetail[] = [
 	{
-		title: 'Sales Forecasting',
-		icon: 'salesProjection',
-		subTitle: 'Quick sales projection and Validation',
-		description: `The AiStock projects your future sales for each SKU in your Amazon 
-		account based on historical sales data, historical fulfillable inventory data, and 
-		adjust for stockouts. It gives you real-time data to optimize your inventory planning 
-		and profitability.`,
-		linkLabel: 'More about Sales Forecasting ',
-		navigateTo: '/sales-forecasting',
-		imageUrl: '/extension_1.png'
-	},
-	{
-		title: 'Order Planning',
-		icon: 'orderPlanning',
-		subTitle: 'Easily create smart order',
-		description: `Our AiStock algorithm can make ideal order plan suggestions for the next 24 months. 
-		So sellers can always manage accurate planning and ordering for the best-selling products with 
-		the perfect quantity and at the perfect time, never go out of stock again.`,
-		linkLabel: 'More about Order Planning ',
-		navigateTo: '/order-planning',
-		imageUrl: '/extension_1.png'
-	},
-	{
-		title: '3PL Manager',
-		icon: 'Tpl',
-		subTitle: '3PL storage management solved',
-		description: `AiStock streamlines the order from production, shipping, to the 3PL and recurring 
-		inbound to the Amazon fulfillment center to be very simple and stress-free, so you can focus on 
-		scalable growth.`,
-		linkLabel: 'More about 3PL Manager ',
-		navigateTo: '/tpl-manager',
-		imageUrl: '/extension_1.png'
-	},
-	{
-		title: 'Cash Flow',
-		icon: 'dashboard',
-		subTitle: 'Instant cash flow projection',
-		description: `Project Your Actual Business Cash Flow - Monthly and Yearly! Instantly projecting 
-		out EVERY bit of income and expense you expect to have in the coming years: inventory payments, 
-		Amazon fees, PPC, freight, 3PL, launch, salaries, etc. Spend less time with spreadsheets and more 
-		time running your business, using all profits to grow.`,
-		linkLabel: 'More about Cash Flow ',
-		navigateTo: '/cash-flow',
-		imageUrl: '/extension_1.png'
-	},
-	{
 		title: 'Browser Extension',
 		icon: 'extension',
 		subTitle: 'Quick product validation in your browser',
