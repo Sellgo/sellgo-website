@@ -75,14 +75,6 @@ export const plansAndProductsDetails = [
 				isNew: true,
 				featuresLists: [
 					{
-						title: 'Automate supply chain',
-						featuresIncluded: [
-							'Full access to sales & seasonality forecasting',
-							'Smart Order optimization',
-							'Full access to Cash Flow planner'
-						]
-					},
-					{
 						title: 'Keyword research',
 						featuresIncluded: [
 							'Reveal competitor keywords with Keyword Finder',
@@ -118,14 +110,6 @@ export const plansAndProductsDetails = [
 				featureSubName: 'Everything in Professional Plan, Plus',
 				desc: `For top sellers who need the best tools.`,
 				featuresLists: [
-					{
-						title: 'Automate supply chain',
-						featuresIncluded: [
-							'Multi Amazon stores',
-							'Multi Shopify stores',
-							'Integration fo fulfillment APIs'
-						]
-					},
 					{
 						title: 'Keyword Research',
 						featuresIncluded: [

@@ -20,36 +20,6 @@ export const payMonthlyAndAnnualPlan = [
 		]
 	},
 	{
-		header: ['AiStock', 'Starter', 'Professional', 'Team'],
-		body: [
-			['Days Until Stockout', '✓', '✓', '✓'],
-			['Sales Forecasting', '✓', '✓', '✓'],
-			['Seasonality Adjustor', '✓', '✓', '✓'],
-			['Order Planning', '✓', '✓', '✓'],
-			['Stockout/ overstock protection', '✓', '✓', '✓'],
-			['Predictive inventory level', '✓', '✓', '✓'],
-			['Generate long-term Smart Order', '-', '24 months', '24 months'],
-			[
-				'Smart Order Optimization',
-				'-',
-				'MOQ, inventory, time -bound',
-				'MOQ, inventory, time, volume -bound'
-			],
-			['Total import cost calculator', '-', '✓', '✓'],
-			['Multi lead time', '-', '✓', '✓'],
-			['3PL Manager', '✓', '✓', '✓'],
-			['3PL Scheduler', '✓', '✓', '✓'],
-			['Cash Flow Projection', '-', '✓', '✓'],
-			['Connect to multiple Amazon stores', '-', 'coming soon', 'coming soon'],
-			['Support more than 1,000 SKUs per account', '-', '-', '✓'],
-			['Connect to Shopify stores', '-', 'coming soon', 'coming soon'],
-			['Connect to Walmart stores', '-', 'coming soon', 'coming soon'],
-			['Connect to Ebay stores', '-', 'coming soon', 'coming soon'],
-			['User management access', '-', '✓', '✓'],
-			['Restful API', '-', 'coming soon', 'coming soon']
-		]
-	},
-	{
 		header: ['Keyword Research', 'Starter', 'Professional', 'Team'],
 		body: [
 			['Keyword Finder', '3 keywords/ day', '✓', '✓'],
