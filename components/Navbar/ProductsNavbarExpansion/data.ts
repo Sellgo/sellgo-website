@@ -17,7 +17,7 @@ export const productsNavigationList: ProductsNavigationList[] = [
 	},
 
 	{
-		head: 'Service Provider',
+		head: 'Seller Leads',
 		desc: 'Enabler, 3PL, Mastermind',
 		hoverId: 'serviceProvider'
 	}

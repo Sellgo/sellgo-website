@@ -15,7 +15,7 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and annual pricing plans',
-		summary: `Seller Leads? Product research? Keyword research? Seller data? We've got your back.`,
+		summary: `Seller Leads? Product research? Keyword research? We've got your back.`,
 
 		infoAlertMessage: {
 			monthly: {

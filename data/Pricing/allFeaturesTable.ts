@@ -2,7 +2,7 @@ export const payMonthlyAndAnnualPlan = [
 	{
 		header: ['Basic', 'Starter', 'Professional', 'Team'],
 		body: [
-			['7-day money-back guarantee help', '✓', '✓', '✓'],
+			['Try for free, no credit card required', '✓', '✓', '✓'],
 			['Cancel any time help', '✓', '✓', '✓']
 			// ['Included users', '1', '1', '3'],
 			// ['Eligible for additional users', '-', '✓', '✓'],

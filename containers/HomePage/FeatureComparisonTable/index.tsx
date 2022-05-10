@@ -148,7 +148,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 					navigateTo="/pricing"
 					className={styles.pricingButton}
 				>
-					Check Our Pricing
+					Try for FREE
 				</CTAButton>
 			</div>
 		</section>

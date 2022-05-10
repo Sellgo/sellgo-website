@@ -2,6 +2,11 @@
 
 .blogCtaBannerWrapper {
 	background: $grey_1;
+margin: 0 auto;
+	min-width: 100rem;
+	max-width: 100rem;
+	width: 100%;
+	border-radius: 7px;
 }
 
 .blogCtaBanner {
@@ -10,6 +15,8 @@
 	align-items: center;
 	height: 100%;
 	min-height: 12rem;
+
+	
 }
 .blogCtaText {
 	h3 {
@@ -23,4 +30,14 @@
 		font-size: $fontsize_content_12;
 		color: $second_grey;
 	}
+
+	span {
+		color: $second_grey;
+		font-weight: $fontweight_regular;
+		font-size: $fontsize_content_10;
+		font-weight: $fontweight_regular;
+		margin-top: 4px;
+		text-align: center;
+	}
+	
 }

@@ -22,10 +22,11 @@ const BlogCtaBanner = (props: Props) => {
 				<div className={styles.blogCtaText}>
 					{displayData.title}
 					{displayData.subtitle}
+					
 				</div>
 				<CTAButton
 					type={'primary'}
-					size={'small'}
+					size={'medium'}
 					variant={'rainbow'}
 					navigateTo={displayData.link}
 					newTarget
@@ -33,6 +34,7 @@ const BlogCtaBanner = (props: Props) => {
 				>
 					{displayData.linkLabel}
 				</CTAButton>
+				<span> no</span>
 			</div>
 		</div>
 	);

@@ -17,7 +17,7 @@ const NewClosingCTASection = () => {
 			<div className={`page-container ${styles.closingCTA}`}>
 				<div className={styles.closingCTABox}>
 					<div className={styles.closingCTABox__left}>
-						<h2>Grow your Amazon business</h2>
+						<h2>Grow your Amazon business with us</h2>
 						<p>
 							With realiable tools and data that help you at every stage from product sourcing
 							to product selling, building a successful Amazon business has never been easier.
@@ -31,13 +31,13 @@ const NewClosingCTASection = () => {
 								navigateTo="/pricing"
 								className={styles.closingCTA}
 							>
-								Try for FREE
+								Try now for FREE
 							</CTAButton>
 							<button
 								className={styles.demoButton}
 								onClick={() => setIsDemoFormOpen(true)}
 							>
-								Talk to an expert
+								Need customized seller lists?
 							</button>
 						</div>
 					</div>

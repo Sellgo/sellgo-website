@@ -136,7 +136,7 @@ const TopFooter: React.FC<Props> = () => {
 						onClick={() => setIsDemoFormOpen(true)}
 						className={styles.footerNavigation}
 					>
-						<a>Talk to an expert</a>
+						<a>Talk to sales</a>
 					</button>
 				</li>
 			</ul>

@@ -38,7 +38,7 @@ const CtaNavBar = (props: Props) => {
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.ctaButton}
 				>
-					Try for FREE
+					Try now for FREE
 				</CTAButton>
 			</div>
 		</div>

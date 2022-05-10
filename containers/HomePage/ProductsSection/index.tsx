@@ -50,7 +50,7 @@ const ProductsSection: React.FC<Props> = () => {
 					className={styles.textButton}
 					onClick={() => setIsDemoFormOpen(true)}
 				>
-					<RainbowText type="orange_purple_gradient">Request Demo</RainbowText>
+					<RainbowText type="orange_purple_gradient">Need customized seller lists?</RainbowText>
 				</button>
 				<h2 className={styles.agencyTitle}>Affiliate Partnership?</h2>
 				<p className={styles.agencyDetails}>

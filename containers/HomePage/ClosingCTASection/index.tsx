@@ -32,7 +32,7 @@ const ClosingCTASection = () => {
 							navigateTo="/pricing"
 							className={styles.closingCTA}
 						>
-							Try for FREE
+							Try now for FREE
 						</CTAButton>
 						{/* <div className={styles.signUpDetails}>
 							<Image src="/smileyFace.svg" width={25} height={25} />

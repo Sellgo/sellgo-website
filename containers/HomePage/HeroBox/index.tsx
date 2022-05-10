@@ -104,7 +104,7 @@ const HeroBox = () => {
 		<section className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
 				<div className={styles.textColumn}>
-					<h1 className={`${styles.heading}`}>The next generation Amazon tools to</h1>
+					<h1 className={`${styles.heading}`}>All-in-one Amazon tools to</h1>
 					<h2 className={styles.animatedText}>
 						<RainbowText type="purple_blue_gradient">
 							{animatedText}
@@ -143,7 +143,7 @@ const HeroBox = () => {
 							className={styles.demoButton}
 							onClick={() => setIsDemoFormOpen(true)}
 						>
-							Talk to an expert
+							Need seller lists?
 						</button>
 					</div>
 				</div>
