@@ -47,8 +47,11 @@ const HeroBox: React.FC<Props> = () => {
 				>
 					FIND SELLER INVENTORIES
 				</CTAButton>
-				<p>Sellgo is the seller database platform of choice for thousands of top Amazon seller
-					agencies worldwide. Try it free. No credit card required. Contact us if you need help.</p>
+				<p>
+					Sellgo is the seller database platform of choice for thousands of top
+					Amazon seller agencies worldwide. Try it free. No credit card
+					required. Contact us if you need help.
+				</p>
 
 				<ProductAccordion data={accordionData} />
 			</div>

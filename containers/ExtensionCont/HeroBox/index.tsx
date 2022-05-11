@@ -46,10 +46,11 @@ const HeroBox: React.FC<Props> = () => {
 				>
 					SIGN UP FREE
 				</CTAButton>
-				<p>Try it free. No credit card required. 
+				<p>
+					Try it free. No credit card required.
 					<br />
-					Instant set-up.</p>
-				
+					Instant set-up.
+				</p>
 
 				<ProductAccordion data={accordionData} />
 			</div>

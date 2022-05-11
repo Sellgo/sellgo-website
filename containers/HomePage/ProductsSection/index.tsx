@@ -37,11 +37,11 @@ const ProductsSection: React.FC<Props> = () => {
 							<p className={styles.title}>{product.title}</p>
 							<p className={styles.action}>{product.action}</p>
 							<p className={styles.popularFeatures}> Popular Features </p>
-								{product.features.map((feature, index) => (
-							<p className={styles.productFeature} key={index}>
-								{feature.name}
-							</p>
-						))}
+							{product.features.map((feature, index) => (
+								<p className={styles.productFeature} key={index}>
+									{feature.name}
+								</p>
+							))}
 							<p className={styles.desc}>{product.desc}</p>
 						</div>
 					))}
@@ -50,7 +50,9 @@ const ProductsSection: React.FC<Props> = () => {
 					className={styles.textButton}
 					onClick={() => setIsDemoFormOpen(true)}
 				>
-					<RainbowText type="orange_purple_gradient">Need customized seller lists?</RainbowText>
+					<RainbowText type="orange_purple_gradient">
+						Need customized seller lists?
+					</RainbowText>
 				</button>
 				<h2 className={styles.agencyTitle}>Affiliate Partnership?</h2>
 				<p className={styles.agencyDetails}>
