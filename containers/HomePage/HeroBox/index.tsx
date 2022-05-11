@@ -22,7 +22,6 @@ const HeroBox = () => {
 		'automate PPC with Zapier.',
 		'find Amazon sellers.',
 		'calculate perfect stock.'
-
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
@@ -111,7 +110,8 @@ const HeroBox = () => {
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						All-in-one platform for selling on Amazon using Extension, bulk calculation
+						All-in-one platform for selling on Amazon using Extension, bulk
+						calculation
 						<br />
 						keyword research, 1M database of Amazon sellers, and more!
 					</p>

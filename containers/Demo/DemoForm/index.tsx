@@ -251,9 +251,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 			'is_existing_customer',
 			isExistingCustomer ? 'true' : 'false'
 		);
-		formData.append(
-			'is_demo_requested', 'true'
-		);
+		formData.append('is_demo_requested', 'true');
 		formData.append('total_orders_per_month', totalOrders);
 
 		try {

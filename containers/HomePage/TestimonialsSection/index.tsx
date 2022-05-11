@@ -11,9 +11,8 @@ const TestimonialsSection: React.FC<Props> = () => {
 	const testimonials = [
 		<div className={styles.testimonialTextWrapper}>
 			<p>
-				Sellgo has probably the most extensive seller leads,
-				as well as other very useful feature for product launch,
-				like keyword research.
+				Sellgo has probably the most extensive seller leads, as well as other
+				very useful feature for product launch, like keyword research.
 			</p>
 
 			<div className={styles.testimonialAuthor}>

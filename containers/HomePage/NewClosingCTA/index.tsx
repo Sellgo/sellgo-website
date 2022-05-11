@@ -18,9 +18,7 @@ const NewClosingCTASection = () => {
 				<div className={styles.closingCTABox}>
 					<div className={styles.closingCTABox__left}>
 						<h2>Get seller leads today</h2>
-						<p>
-							1M+ seller database access at your fingertips, and counting.
-						</p>
+						<p>1M+ seller database access at your fingertips, and counting.</p>
 
 						<div className={styles.ctaRow}>
 							<CTAButton
@@ -39,8 +37,8 @@ const NewClosingCTASection = () => {
 								Need customized seller lists?
 							</button>
 						</div>
-						<span>Try it free. No credit card required. Instant set-up.</span>	
-					</div>					
+						<span>Try it free. No credit card required. Instant set-up.</span>
+					</div>
 					<Image src="/closingCtaLaptop.png" width={400} height={250} />
 				</div>
 			</div>
