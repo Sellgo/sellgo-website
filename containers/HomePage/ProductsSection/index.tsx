@@ -42,7 +42,6 @@ const ProductsSection: React.FC<Props> = () => {
 									{feature.name}
 								</p>
 							))}
-							<p className={styles.desc}>{product.desc}</p>
 						</div>
 					))}
 				</div>
