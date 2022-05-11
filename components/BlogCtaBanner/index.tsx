@@ -33,7 +33,6 @@ const BlogCtaBanner = (props: Props) => {
 				>
 					{displayData.linkLabel}
 				</CTAButton>
-				<span> no</span>
 			</div>
 		</div>
 	);
