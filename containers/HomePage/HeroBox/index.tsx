@@ -135,7 +135,7 @@ const HeroBox = () => {
 								disabled={emailErr}
 								onClick={onSignupClick}
 							>
-								CREATE FREE ACCOUNT
+								Create FREE account
 							</button>
 							<span>Try it free. No credit card required. Instant set-up.</span>
 						</div>

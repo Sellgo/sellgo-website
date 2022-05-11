@@ -24,8 +24,8 @@ const MobileNavBar: React.FC<Props> = () => {
 					<a>
 						<Image
 							src="/sellgoLogo.png"
-							width={73}
-							height={29}
+							width={100}
+							height={28}
 							priority
 							alt="Sellgo Inc. Company Logo"
 						/>
