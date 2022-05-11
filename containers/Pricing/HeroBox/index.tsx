@@ -12,11 +12,12 @@ interface Props {
 const HeroBox: React.FC<Props> = () => {
 	return (
 		<>
-		<div className={styles.banner}>
-						Enjoy flat price forever for the first 1,000 AiStock beta users. Monthly or annual commitment.
-					</div>
+			<div className={styles.banner}>
+				Enjoy flat price forever for the first 1,000 AiStock beta users. Monthly
+				or annual commitment.
+			</div>
 			<section className={styles.heroboxSection}>
-			{/*}
+				{/* }
 				<h1>Supply chain? Product research? Keyword research? Seller data?</h1>
 				<p>We've got your back. Pay less on our all-in-one Amazon solution, invest more in your business.</p>
 	*/}
@@ -39,7 +40,6 @@ const HeroBox: React.FC<Props> = () => {
 					</button> */}
 				</div>
 			</section>
-			
 		</>
 	);
 };

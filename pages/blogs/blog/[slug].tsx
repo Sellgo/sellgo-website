@@ -8,6 +8,7 @@ import styles from './index.module.scss';
 import HeroBox from '../../../containers/Blogs/HeroBox';
 import ShareBlogSection from '../../../containers/Blogs/ShareBlogSection';
 import RelatedBlogsSection from '../../../containers/Blogs/RelatedBlogsSection';
+import BlogCtaBanner from '../../../components/BlogCtaBanner';
 
 /* Components */
 import SEOHead from '../../../components/SEOHead';
@@ -32,6 +33,9 @@ import {
 	ShowcaseBlogDetails
 } from '../../../interfaces/Blogs';
 
+/* Constants */
+import { BLOG_CATEGORY_MAPPINGS } from '../../../constants/Blog';
+
 interface Props {
 	date: Date;
 	author: Author;
@@ -43,6 +47,7 @@ interface Props {
 	shortSummary: string;
 	keywords: string;
 	relatedBlogs: ShowcaseBlogDetails[];
+	categories: any;
 }
 
 const BlogPage: React.FC<Props> = (props) => {
@@ -56,8 +61,19 @@ const BlogPage: React.FC<Props> = (props) => {
 		author,
 		shortSummary,
 		keywords,
-		relatedBlogs
+		relatedBlogs,
+		categories
 	} = props;
+
+	let blogCtaType = 'freeAccount1';
+	if (categories.edges && categories.nodes) {
+		const primaryCategoryIndex = categories.edges?.findIndex(
+			(edge: any) => edge.isPrimary
+		);
+		const primaryCategory = categories.nodes[primaryCategoryIndex];
+		blogCtaType =
+			BLOG_CATEGORY_MAPPINGS[primaryCategory?.name] || 'Amazon FBA Tools';
+	}
 
 	return (
 		<>
@@ -86,6 +102,7 @@ const BlogPage: React.FC<Props> = (props) => {
 				pageUrl={`${AppConfig.WEB_URL}/blogs/blog/${slug}`}
 				title={title}
 			/>
+			<BlogCtaBanner type={blogCtaType} />
 			<RelatedBlogsSection relatedBlogs={relatedBlogs} />
 		</>
 	);
@@ -120,7 +137,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			slug: params?.slug
 		}
 	});
-
 	if (!response.data.postBy) {
 		return {
 			notFound: true
@@ -137,7 +153,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		featuredImage,
 		excerpt,
 		seoMetaTags,
-		relatedPosts
+		relatedPosts,
+		categories
 	} = response.data.postBy;
 
 	return {
@@ -151,7 +168,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 			featuredImage,
 			shortSummary: excerpt,
 			keywords: seoMetaTags.keywords,
-			relatedBlogs: relatedPosts.nodes
+			relatedBlogs: relatedPosts.nodes,
+			categories
 		},
 		revalidate: 60 * 10 // 10 minutes
 	};

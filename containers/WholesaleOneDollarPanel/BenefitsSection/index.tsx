@@ -12,18 +12,12 @@ interface Props {}
 const BenefitsSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.benefitsSectionWrapper}>
-			<div className={styles.bgCircle}></div>
-
 			<div className={`big-page-container ${styles.benefitsSection}`}>
-				<h2 className="secondary-heading">3 top Amazon seller questions</h2>
+				<h2 className="secondary-heading">You May Also Like ...</h2>
 
 				<div className={styles.benefitsCardWrapper}>
 					<div className={styles.benefitsCard}>
-						<Image
-							src="/dusIcon.svg"
-							width={50}
-							height={35}
-						/>
+						<Image src="/dusIcon.svg" width={50} height={35} />
 						<h3>Out of stock?</h3>
 						<p>Am I currently at risk of stockout?</p>
 						<p></p>

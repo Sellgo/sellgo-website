@@ -1,0 +1,26 @@
+@import '../../styles/guidelines';
+
+.blogCtaBannerWrapper {
+	background: $grey_1;
+}
+
+.blogCtaBanner {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
+	min-height: 12rem;
+}
+.blogCtaText {
+	h3 {
+		display: flex;
+		align-items: center;
+		color: $black_1;
+		font-size: $fontsize_subtitle_20;
+	}
+
+	p {
+		font-size: $fontsize_content_12;
+		color: $second_grey;
+	}
+}

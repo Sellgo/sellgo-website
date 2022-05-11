@@ -8,11 +8,10 @@ import DemoForm from '../../containers/Demo/DemoForm';
 
 interface Props {
 	className?: string;
-	message: string;
 }
 
 const ContactInfo: React.FC<Props> = (props) => {
-	const { className, message } = props;
+	const { className } = props;
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 
 	return (
@@ -20,9 +19,10 @@ const ContactInfo: React.FC<Props> = (props) => {
 			<h2>*Need an enterprise account? We&apos;d be happy to talk!</h2>
 			<button
 				className={styles.demoButton}
-				onClick={() => setIsDemoFormOpen(true)}			>
-					Talk to an expert
-				</button>
+				onClick={() => setIsDemoFormOpen(true)}
+			>
+				Talk to an expert
+			</button>
 			<Modal
 				isOpen={isDemoFormOpen}
 				onRequestClose={() => setIsDemoFormOpen(false)}

@@ -17,10 +17,10 @@ const ProductCardsSection: React.FC<Props> = () => {
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
 			<div className={styles.blueCardWrapper}>
 				<div className={`page-container ${styles.benefitsWrapper}`}>
-					<ProductCard 
-						key={uuid()} 
-						{...newBenefitsData[0]} 
-						reversed={false} 
+					<ProductCard
+						key={uuid()}
+						{...newBenefitsData[0]}
+						reversed={false}
 						imageWidth={720}
 					/>
 				</div>

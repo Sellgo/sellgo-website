@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
+import validator from 'validator';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -8,6 +9,11 @@ import styles from './index.module.scss';
 /* Components */
 import RainbowText from '../../../components/RainbowText';
 import DemoForm from '../../Demo/DemoForm';
+import FormInput from '../../../components/FormInput';
+
+/* Utils */
+import AppConfig from '../../../config';
+import { encodeBase64 } from '../../../utils/Format';
 
 const HeroBox = () => {
 	const textList = [
@@ -24,6 +30,32 @@ const HeroBox = () => {
 	const [isAnimationIncreasing, setAnimationIncreasing] = React.useState(true);
 	const [animationIndex, setAnimationIndex] = React.useState(0);
 	const [animatedText, setAnimatedText] = React.useState<string>('');
+	const [email, setEmail] = React.useState<string>('');
+	const [emailErr, setEmailErr] = React.useState(false);
+	const [emailErrMsg, setEmailErrMsg] = React.useState('');
+
+	const onSignupClick = () => {
+		if (email.trim().length > 0 && validator.isEmail(email.trim())) {
+			const url = `${AppConfig.APP_URL}/signup?email=${encodeBase64(email)}`;
+			window.open(url, '_blank');
+		} else {
+			setEmailErr(true);
+			setEmailErrMsg('Please enter a valid email address.');
+		}
+	};
+
+	/* Check when user stops typing email, if email is valid */
+	React.useEffect(() => {
+		if (email.trim().length > 0 && emailErr) {
+			if (validator.isEmail(email.trim())) {
+				setEmailErr(false);
+				setEmailErrMsg('');
+			} else {
+				setEmailErr(true);
+				setEmailErrMsg('Please enter a valid email address');
+			}
+		}
+	}, [email, emailErr]);
 
 	// Increment to next word
 	const incrementToNextWord = () => {
@@ -85,14 +117,28 @@ const HeroBox = () => {
 						business.
 					</p>
 					<div className={styles.ctaBox}>
-						<div className={styles.ctaButtonWrapper}>
-							<a className={styles.submitButton} href="/pricing">
-								Get started now
-							</a>
-							<span className={styles.ctaDesc}>
-								Start an Amazon business with $1.99, upgrade your tools as you
-								grow.
-							</span>
+						<div className={styles.emailSignupBox}>
+							<FormInput
+								id={'Email'}
+								type={'text'}
+								name={'Email'}
+								value={email}
+								placeholder="Email Address"
+								className={styles.formInput}
+								onChange={(e) => setEmail(e.target.value)}
+								autoComplete="off"
+								required
+								hasError={emailErr}
+								errorMessage={emailErrMsg}
+							/>
+							<button
+								className={styles.submitButton}
+								disabled={emailErr}
+								onClick={onSignupClick}
+							>
+								Sign Up For Free
+							</button>
+							<span>No credit card required</span>
 						</div>
 						<button
 							className={styles.demoButton}
@@ -103,15 +149,13 @@ const HeroBox = () => {
 					</div>
 				</div>
 				<div className={styles.imageColumn}>
-					<div className={styles.heroImagewWrapper}>
-						<Image
-							src="/heroImage.png"
-							width={500}
-							height={700}
-							alt="alt"
-							className={styles.heroImage}
-						/>
-					</div>
+					<Image
+						src="/heroImage.png"
+						width={500}
+						height={400}
+						alt="alt"
+						className={styles.heroImage}
+					/>
 				</div>
 			</div>
 
