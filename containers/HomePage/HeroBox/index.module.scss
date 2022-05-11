@@ -6,7 +6,8 @@
 }
 
 .herobox {
-	height: 80vh;
+	overflow: hidden;
+	min-height: 80vh;
 	padding-top: 2rem;
 	padding-bottom: 3rem;
 	display: flex;
@@ -26,17 +27,10 @@
 	width: 50%;
 	position: relative;
 
-	.heroImagewWrapper {
-		margin: 0 auto;
-	}
-
 	.heroImage {
 		object-fit: contain;
-		object-position: 0%;
-
 		@media only screen and(max-width: 1080px) {
-			margin: 100px 0 !important;
-			object-fit: contain;
+			width: 100%;
 		}
 	}
 
