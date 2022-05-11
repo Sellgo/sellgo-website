@@ -17,11 +17,11 @@ import { encodeBase64 } from '../../../utils/Format';
 
 const HeroBox = () => {
 	const textList = [
-		'dominate #1 search result.',
-		'find profitable products.',
-		'automate PPC with Zapier.',
-		'find Amazon sellers.',
-		'calculate perfect stock.'
+		'understand their business.',
+		'analyze products.',
+		'scout revenue.',
+		'analyze growth.',
+		'analyze competitors.'
 
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
@@ -104,16 +104,16 @@ const HeroBox = () => {
 		<section className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
 				<div className={styles.textColumn}>
-					<h1 className={`${styles.heading}`}>All-in-one Amazon tools to</h1>
+					<h1 className={`${styles.heading}`}>Find Amazon sellers to</h1>
 					<h2 className={styles.animatedText}>
 						<RainbowText type="purple_blue_gradient">
 							{animatedText}
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						All-in-one platform for selling on Amazon using Extension, bulk calculation
+						The 1st platform to find and analyze Amazon sellers for
 						<br />
-						keyword research, 1M database of Amazon sellers, and more!
+						agencies, aggregators, influencers and brand ambassadors, and more!
 					</p>
 					<div className={styles.ctaBox}>
 						<div className={styles.emailSignupBox}>
