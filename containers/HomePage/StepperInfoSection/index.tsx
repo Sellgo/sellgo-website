@@ -18,11 +18,9 @@ const StepperInfoSection: React.FC<Props> = () => {
 			id="showCtaNavBar"
 		>
 			<h2 className={styles.stepperTitle}>
-				Build your healthy cash flow, instantly.
+				Access Amazon seller leads at scale
 			</h2>
-			<p className={styles.stepperSubtitle}>
-				All-in-one platform for selling on Amazon
-			</p>
+			<p className={styles.stepperSubtitle}>Simply generating more revenue.</p>
 			<Stepper steps={wholesaleFeatures} />
 		</section>
 	);

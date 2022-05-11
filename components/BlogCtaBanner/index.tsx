@@ -25,7 +25,7 @@ const BlogCtaBanner = (props: Props) => {
 				</div>
 				<CTAButton
 					type={'primary'}
-					size={'small'}
+					size={'medium'}
 					variant={'rainbow'}
 					navigateTo={displayData.link}
 					newTarget

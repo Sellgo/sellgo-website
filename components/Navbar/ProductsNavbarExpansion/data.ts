@@ -17,7 +17,7 @@ export const productsNavigationList: ProductsNavigationList[] = [
 	},
 
 	{
-		head: 'Service Provider',
+		head: 'Seller Leads',
 		desc: 'Enabler, 3PL, Mastermind',
 		hoverId: 'serviceProvider'
 	}
@@ -57,34 +57,6 @@ export const productsRightPanelData: ProductsPanelData[] = [
 		hoverId: 'privateLabel',
 		header: 'Features',
 		groupedNavLinksData: [
-			{
-				head: 'Sales Forecasting',
-				desc: 'Accurately project high seasonal sales',
-				navigateTo: '/sales-forecasting',
-				iconName: 'salesProjection',
-				isComingSoon: true
-			},
-			{
-				head: 'Order Planning',
-				desc: 'Easily create smart orders',
-				navigateTo: '/order-planning',
-				iconName: 'orderPlanning',
-				isComingSoon: true
-			},
-			{
-				head: '3PL Manager',
-				desc: 'Pre-fulfillment solved',
-				navigateTo: '/tpl-manager',
-				iconName: 'Tpl',
-				isComingSoon: true
-			},
-			{
-				head: 'Cash Flow',
-				desc: 'Instant cash flow projection',
-				navigateTo: '/cash-flow',
-				iconName: 'dashboard',
-				isComingSoon: true
-			},
 			{
 				head: 'Extension',
 				desc: 'Product Validation on Amazon Page',

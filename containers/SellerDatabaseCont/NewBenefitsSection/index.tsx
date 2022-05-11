@@ -39,14 +39,15 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					with Sellgo&apos;s Seller Database.
 				</h2>
 				<CTAButton
-					type="secondary"
-					size="small"
+					type="primary"
+					size="medium"
 					variant="rainbow"
 					navigateTo="/pricing?type=monthly-and-annual-plans"
 					className={styles.newBenefitsCTA}
 				>
 					Find sellers with Sellgo today
 				</CTAButton>
+				<p>Try it free. No credit card required. Instant set-up.</p>
 			</div>
 		</section>
 	);
