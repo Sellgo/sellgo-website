@@ -9,10 +9,14 @@ import { features, plans, competitors } from './data';
 
 import CTAButton from '../../../components/CTAButton';
 
+/* Utils */
+import { createCheckoutLink } from '../../../utils/Referral';
+
 interface Props {}
 
 const FeatureComparisonTable: React.FC<Props> = () => {
 	const [showAllFeatures, setShowAllFeatures] = React.useState<boolean>(false);
+	const checkoutLink = createCheckoutLink('daily', 'free');
 	return (
 		<section className={styles.featureComparisonWrapper}>
 			<div className={`page-container ${styles.featureComparisonSection}`}>
@@ -145,7 +149,9 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 					type="primary"
 					variant="white"
 					size="medium"
-					navigateTo="/pricing"
+					navigateTo={checkoutLink}
+					asExternal
+					newTarget
 					className={styles.pricingButton}
 				>
 					Try for FREE
