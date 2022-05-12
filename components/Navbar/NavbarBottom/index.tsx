@@ -23,7 +23,7 @@ const NavbarBottom: React.FC<Props> = () => {
 						<Image
 							src="/sellgoLogo.png"
 							width={100}
-							height={32}
+							height={28}
 							priority
 							alt="Sellgo Inc. Company Logo"
 						/>
