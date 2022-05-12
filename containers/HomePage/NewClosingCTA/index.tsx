@@ -28,13 +28,13 @@ const NewClosingCTASection = () => {
 								navigateTo="/pricing"
 								className={styles.closingCTA}
 							>
-								Create FREE account
+								Create free account
 							</CTAButton>
 							<button
 								className={styles.demoButton}
 								onClick={() => setIsDemoFormOpen(true)}
 							>
-								Need customized seller lists?
+								Need seller lists?
 							</button>
 						</div>
 						<span>Try it free. No credit card required. Instant set-up.</span>

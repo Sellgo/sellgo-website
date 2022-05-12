@@ -18,6 +18,12 @@
 	color: $prim_dark_2;
 }
 
+.productsSectionSubTitle {
+	font-size: 14px;
+	font-weight: $fontweight_medium;
+	color: $grey_8;
+}
+
 .productsWrapper {
 	margin-top: 3rem;
 	display: flex;
@@ -44,8 +50,8 @@
 
 	.action {
 		color: $black_1;
-		font-size: $fontsize_subtitle_20;
-		font-weight: $fontweight_semibold;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_medium;
 		margin-bottom: 18px;
 	}
 

@@ -18,9 +18,9 @@ const StepperInfoSection: React.FC<Props> = () => {
 			id="showCtaNavBar"
 		>
 			<h2 className={styles.stepperTitle}>
-				Access Amazon seller leads at scale
+				Access Amazon seller database at scale
 			</h2>
-			<p className={styles.stepperSubtitle}>Simply generating more revenue.</p>
+			<p className={styles.stepperSubtitle}>Million of leads in a few seconds.</p>
 			<Stepper steps={wholesaleFeatures} />
 		</section>
 	);
