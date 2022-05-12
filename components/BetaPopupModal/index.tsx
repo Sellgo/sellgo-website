@@ -110,7 +110,7 @@ const BetaPopupModal: React.FC<Props> = (props: Props) => {
 			</button>
 
 			<p className={styles.moneybackTerms}>
-				7-day money back guarantee too, no questions asked.
+				Try for FREE, no credit card required.
 			</p>
 
 			<p className={styles.betaTerms}>

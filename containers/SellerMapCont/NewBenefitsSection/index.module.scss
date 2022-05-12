@@ -7,6 +7,13 @@
 
 .benefitsWrapper {
 	padding: 10rem 0;
+
+	p {
+		text-align: center;
+		font-size: 14px;
+		color: $second_grey;
+		margin-top: 1rem;
+	}
 }
 
 .benefitsCardsWrapper {

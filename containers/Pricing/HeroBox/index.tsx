@@ -13,12 +13,11 @@ const HeroBox: React.FC<Props> = () => {
 	return (
 		<>
 			<div className={styles.banner}>
-				Enjoy flat price forever for the first 1,000 AiStock beta users. Monthly
-				or annual commitment.
+				AiStock users please check our new website here.
 			</div>
 			<section className={styles.heroboxSection}>
 				{/* }
-				<h1>Supply chain? Product research? Keyword research? Seller data?</h1>
+				<h1>Product research? Keyword research? Seller data?</h1>
 				<p>We've got your back. Pay less on our all-in-one Amazon solution, invest more in your business.</p>
 	*/}
 				<div className={styles.tabsWrapper}>

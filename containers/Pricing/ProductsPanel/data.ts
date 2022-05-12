@@ -15,7 +15,7 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and annual pricing plans',
-		summary: `Supply chain? Product research? Keyword research? Seller data? We've got your back.`,
+		summary: `Seller Leads? Product research? Keyword research? We've got your back.`,
 
 		infoAlertMessage: {
 			monthly: {
@@ -46,13 +46,9 @@ export const plansAndProductsDetails = [
 						title: 'Discover Best Selling',
 						featuresIncluded: [
 							'Full access to the Chrome Extension',
-							'Basic access to AiStock',
+							'Basic access to Seller Database and Map',
 							'Limited access to the rest of Sellgo all-in-one tool'
 						]
-					},
-					{
-						title: 'Avoiding Stockout',
-						featuresIncluded: ['Basic access to AiStock']
 					},
 					{
 						title: 'Optimize wholesale leads',
@@ -74,14 +70,6 @@ export const plansAndProductsDetails = [
 				desc: `For most sellers looking to grow rapidly.`,
 				isNew: true,
 				featuresLists: [
-					{
-						title: 'Automate supply chain',
-						featuresIncluded: [
-							'Full access to sales & seasonality forecasting',
-							'Smart Order optimization',
-							'Full access to Cash Flow planner'
-						]
-					},
 					{
 						title: 'Keyword research',
 						featuresIncluded: [
@@ -118,14 +106,6 @@ export const plansAndProductsDetails = [
 				featureSubName: 'Everything in Professional Plan, Plus',
 				desc: `For top sellers who need the best tools.`,
 				featuresLists: [
-					{
-						title: 'Automate supply chain',
-						featuresIncluded: [
-							'Multi Amazon stores',
-							'Multi Shopify stores',
-							'Integration fo fulfillment APIs'
-						]
-					},
 					{
 						title: 'Keyword Research',
 						featuresIncluded: [

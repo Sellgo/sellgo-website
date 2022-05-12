@@ -22,7 +22,7 @@ const TopFooter: React.FC<Props> = () => {
 							src="/sellgoLogo.png"
 							alt="Sellgo Coompany Logo"
 							width={100}
-							height={32}
+							height={28}
 						/>
 					</a>
 				</Link>
@@ -38,26 +38,6 @@ const TopFooter: React.FC<Props> = () => {
 
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Software</li>
-				<li className="footerNavigationLinks">
-					<Link href="/sales-forecasting" passHref>
-						<a>Sales Forecasting</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/order-planning" passHref>
-						<a>Order Planning</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/tpl-manager" passHref>
-						<a>3PL Manager</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/cash-flow" passHref>
-						<a>Cash Flow</a>
-					</Link>
-				</li>
 				<li className="footerNavigationLinks">
 					<Link href="/keyword-finder" passHref>
 						<a>Keyword Finder</a>
@@ -109,7 +89,7 @@ const TopFooter: React.FC<Props> = () => {
 				<li className="footerNavigationLinks">Pricing</li>
 				<li className="footerNavigationLinks">
 					<Link href="/pricing?type=wholesale" passHref>
-						<a>Daily plan </a>
+						<a>Free tools </a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
@@ -156,7 +136,7 @@ const TopFooter: React.FC<Props> = () => {
 						onClick={() => setIsDemoFormOpen(true)}
 						className={styles.footerNavigation}
 					>
-						<a>Talk to an expert</a>
+						<a>Talk to sales</a>
 					</button>
 				</li>
 			</ul>

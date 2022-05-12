@@ -26,7 +26,7 @@ const NavbarTop: React.FC<Props> = () => {
 						onClick={() => setIsDemoFormOpen(true)}
 						className={styles.demoButton}
 					>
-						Talk to an expert
+						Need customized seller lists?
 					</button>
 				</li>
 			</ul>

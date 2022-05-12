@@ -44,7 +44,7 @@ const BuyPlanPriceCard: React.FC<Props> = (props) => {
 				navigateTo="/"
 				className={styles.priceCardCTA}
 			>
-				Buy now
+				Get started
 			</CTAButton>
 
 			<a href="#!" className="anchor">

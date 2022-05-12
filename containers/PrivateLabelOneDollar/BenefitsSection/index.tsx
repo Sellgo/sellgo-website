@@ -54,7 +54,7 @@ const BenefitsSection: React.FC<Props> = () => {
 					>
 						Get started
 					</CTAButton>
-					<p>We offer a 7-day free trial with no credit card required.</p>
+					<p>Try for FREE, no credit card required.</p>
 				</div>
 			</div>
 		</section>

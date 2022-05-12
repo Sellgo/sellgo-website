@@ -51,7 +51,7 @@
 }
 
 .heading {
-	font-size: $fontsize_title_54;
+	font-size: $fontsize_title_40;
 	font-weight: $fontweight_extrabold;
 	line-height: $fontlineheight_heading_70;
 
@@ -62,7 +62,7 @@
 }
 
 .animatedText {
-	font-size: $fontsize_title_54;
+	font-size: $fontsize_title_40;
 	height: $fontlineheight_heading_70;
 	@media only screen and(max-width: 650px) {
 		font-size: $fontsize_subtitle_38;
@@ -100,7 +100,7 @@
 	}
 
 	.demoButton {
-		width: 180px;
+		width: 240px;
 		margin-left: 20px;
 		background: none;
 		border: none;
@@ -117,7 +117,7 @@
 	}
 
 	span {
-		font-size: 10px;
+		font-size: 9px;
 		color: $prim_dark_2;
 		text-align: center;
 		width: 100%;

@@ -61,7 +61,7 @@ const PayAsYouGoCardHead: React.FC<Props> = (props) => {
 				navigateTo={ctaLink}
 				className={styles.buyNameCTA}
 			>
-				Buy now
+				Get started
 			</CTAButton>
 		</div>
 	);

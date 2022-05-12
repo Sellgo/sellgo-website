@@ -9,32 +9,36 @@ import { features, plans, competitors } from './data';
 
 import CTAButton from '../../../components/CTAButton';
 
+/* Utils */
+import { createCheckoutLink } from '../../../utils/Referral';
+
 interface Props {}
 
 const FeatureComparisonTable: React.FC<Props> = () => {
 	const [showAllFeatures, setShowAllFeatures] = React.useState<boolean>(false);
+	const checkoutLink = createCheckoutLink('daily', 'free');
 	return (
 		<section className={styles.featureComparisonWrapper}>
 			<div className={`page-container ${styles.featureComparisonSection}`}>
-				<h2 className={styles.title}>Why AiStock is Better</h2>
+				<h2 className={styles.title}>Why Sellgo is Better</h2>
 
 				<div className={styles.featureRow}>
 					<p className={`${styles.headerText} ${styles.headerText__plan}`}>
 						{' '}
-						Launching{' '}
+						Wholesale/ Arbitrage{' '}
 					</p>
 					<p className={`${styles.headerText} ${styles.headerText__plan}`}>
 						{' '}
-						Supply Chain{' '}
+						Private Label{' '}
 					</p>
 					<p className={styles.headerText}> </p>
 					<p className={`${styles.headerText} ${styles.headerText__sellgo}`}>
 						{' '}
-						AiStock
+						Sellgo
 					</p>
-					<p className={styles.headerText}> Spreadsheet</p>
-					<p className={styles.headerText}> Amazon Seller Central</p>
-					<p className={styles.headerText}> Other Software</p>
+					<p className={styles.headerText}> Jungle Scout</p>
+					<p className={styles.headerText}> Helium 10</p>
+					<p className={styles.headerText}> Keepa</p>
 				</div>
 				<div className={styles.featureComparisonGrid}>
 					{features.map((feature: any, index: number) => {
@@ -49,7 +53,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 									className={`${styles.checkboxCell} ${styles.checkboxCell__plan}`}
 								>
 									{feature.featureAvailableInPlans.includes(
-										plans.LAUNCHING
+										plans.WHOLESALE
 									) && (
 										<Image
 											src="/checkSquare.svg"
@@ -63,7 +67,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 									className={`${styles.checkboxCell} ${styles.checkboxCell__plan}`}
 								>
 									{feature.featureAvailableInPlans.includes(
-										plans.SUPPLY_CHAIN
+										plans.PRIVATE_LABEL
 									) && (
 										<Image
 											src="/checkSquare.svg"
@@ -83,7 +87,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 								</div>
 								<div className={styles.checkboxCell}>
 									{feature.featureAvailableInCompetitors.includes(
-										competitors.AISTOCK
+										competitors.SELLGO
 									) && (
 										<Image
 											src="/checkSquareBlue.svg"
@@ -95,7 +99,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 								</div>
 								<div className={styles.checkboxCell}>
 									{feature.featureAvailableInCompetitors.includes(
-										competitors.SPREADSHEET
+										competitors.JUNGLE_SCOUT
 									) && (
 										<Image
 											src="/checkSquare.svg"
@@ -107,7 +111,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 								</div>
 								<div className={styles.checkboxCell}>
 									{feature.featureAvailableInCompetitors.includes(
-										competitors.AMAZON_SELLER_CENTRAL
+										competitors.HELIUM_10
 									) && (
 										<Image
 											src="/checkSquare.svg"
@@ -121,7 +125,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 									className={`${styles.checkboxCell} ${styles.checkboxCell__last}`}
 								>
 									{feature.featureAvailableInCompetitors.includes(
-										competitors.OTHER_SOFTWARE
+										competitors.KEEPA
 									) && (
 										<Image
 											src="/checkSquare.svg"
@@ -145,10 +149,12 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 					type="primary"
 					variant="white"
 					size="medium"
-					navigateTo="/pricing"
+					navigateTo={checkoutLink}
+					asExternal
+					newTarget
 					className={styles.pricingButton}
 				>
-					Check our pricing
+					Try for FREE
 				</CTAButton>
 			</div>
 		</section>

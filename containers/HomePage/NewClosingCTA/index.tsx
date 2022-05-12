@@ -9,39 +9,42 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import DemoForm from '../../Demo/DemoForm';
 
+/* Utils */
+import { createCheckoutLink } from '../../../utils/Referral';
+
 const NewClosingCTASection = () => {
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
+	const checkoutLink = createCheckoutLink('daily', 'free');
 
 	return (
 		<section className={styles.closingCTASection}>
 			<div className={`page-container ${styles.closingCTA}`}>
 				<div className={styles.closingCTABox}>
 					<div className={styles.closingCTABox__left}>
-						<h2>Ready to switch on Sellgo?</h2>
-						<p>
-							Avoid stockouts and overstock, so you can focus on increasing
-							sales
-						</p>
+						<h2>Get seller leads today</h2>
+						<p>1M+ seller database access at your fingertips, and counting.</p>
 
 						<div className={styles.ctaRow}>
 							<CTAButton
 								type="primary"
 								size="medium"
 								variant="rainbow"
-								navigateTo="/pricing"
+								navigateTo={checkoutLink}
+								asExternal
+								newTarget
 								className={styles.closingCTA}
 							>
-								Get started now
+								Create FREE account
 							</CTAButton>
 							<button
 								className={styles.demoButton}
 								onClick={() => setIsDemoFormOpen(true)}
 							>
-								Talk to an expert
+								Need customized seller lists?
 							</button>
 						</div>
+						<span>Try it free. No credit card required. Instant set-up.</span>
 					</div>
-
 					<Image src="/closingCtaLaptop.png" width={400} height={250} />
 				</div>
 			</div>

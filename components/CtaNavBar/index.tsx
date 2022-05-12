@@ -4,13 +4,16 @@ import Image from 'next/image';
 import styles from './index.module.scss';
 import CTAButton from '../CTAButton';
 
+/* Utils */
+import { createCheckoutLink } from '../../utils/Referral';
+
 interface Props {
 	showCtaNavBar: boolean;
 	showMobile: boolean;
 }
 const CtaNavBar = (props: Props) => {
 	const { showCtaNavBar, showMobile } = props;
-
+	const checkoutLink = createCheckoutLink('daily', 'free');
 	return (
 		<div
 			className={`${styles.ctaNavBarWrapper} 
@@ -26,7 +29,7 @@ const CtaNavBar = (props: Props) => {
 					<Image
 						src="/sellgoLogo.png"
 						width={100}
-						height={32}
+						height={28}
 						priority
 						alt="Sellgo Inc. Company Logo"
 					/>
@@ -35,10 +38,12 @@ const CtaNavBar = (props: Props) => {
 					type="secondary"
 					size="small"
 					variant="rainbow"
-					navigateTo="/pricing?type=monthly-and-annual-plans"
+					navigateTo={checkoutLink}
+					asExternal
+					newTarget
 					className={styles.ctaButton}
 				>
-					Sign up now
+					Try it FREE
 				</CTAButton>
 			</div>
 		</div>
