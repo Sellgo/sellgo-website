@@ -6,44 +6,42 @@ export const features: {
 }[] = [
 	{
 		icon: '/features-extension.svg',
-		title: 'Chrome Extension',
-		subTitle: 'Scope out high demand products while browsing',
-		description: `Validate any product before sourcing and make confident business decisions, 
-            done quickly while browsing on Amazon.`
+		title: 'Business model',
+		subTitle: 'Filter sellers by their selling approach',
+		description: `Validate sellers: either wholesaling to Amazon retail/ 1P, or authorized 3PL,
+		or unauthorized reseller or exclusive third-party seller/ Private label, and many more.`
 	},
 	{
 		icon: '/features-keyword-research.svg',
-		title: 'KEYWORD RESEARCH',
-		subTitle: 'Boost more sales with better keywords',
-		description: `What if we have a tool that showed you the exact search terms that 
-			would drive traffic to your Amazon listing?`
+		title: 'Marketplace',
+		subTitle: 'Almost all Amazon marketplaces',
+		description: `Supported marketplaces are US/ United States, CA/ Canada, MX/ Mexico, UK/ United Kingdom, 
+		IT/ Italy, DE/ Germany, ES/ Spain, FR/ France, ID/ India, and many more.`
 	},
 	{
 		icon: '/features-product-research.svg',
-		title: 'PRODUCT RESEARCH',
-		subTitle: 'Analyze products easy and quick from',
-		description: `Easily explore the richest in the nichest. 
-            Quickly focus on The Nichest in the Richest. Analyze your dream products in seconds.`
+		title: 'Country of origin',
+		subTitle: 'Find your neighborhood Amazon sellers, in a Google Map style',
+		description: `Locate and scout sellers worldwide. Break- down millions of 
+		sellers by country, city, zip, and more ...`
 	},
 	{
 		icon: '/features-seller-research.svg',
-		title: 'SELLER RESEARCH',
-		subTitle: 'Find your neighborhood Amazon sellers, in a Google Map style',
-		description: `Locate and scout sellers worldwide. Break- down millions of 
-            sellers by location, brands, products, and more ...`
+		title: 'Dominant product category',
+		subTitle: 'Easily browse from the product selection',
+		description: `Easily explore the richest in the nichest. 
+		Quickly focus on the nichest in the richest. Analyze your dream products in seconds.`
 	},
 	{
 		icon: '/features-wholesale.svg',
-		title: 'WHOLESALE BULK CALCULATION',
-		subTitle: 'Calculate your profit for each product on the fly',
-		description: `Accurately calculate and compare all the products in Amazon catalog 
-            including product variations and multipacks.`
+		title: 'Annual revenue',
+		subTitle: 'Scope out high revenue sellers',
+		description: `Qualify and segment seller leads from their latest business growth, revenue, trends, and many more.`
 	},
 	{
 		icon: '/features-perfect-stock.svg',
-		title: 'PERFECT STOCK',
-		subTitle: 'Never stockout, rarely overstock.',
-		description: `Accurately calculates when sellers should order to prevent a stockout, 
-            and how many units to restock.`
+		title: 'How to connect',
+		subTitle: 'Phone, email, address.',
+		description: `Automate sales communication and task, and track your customer's every move to engage at precisely the right moment.`
 	}
 ];

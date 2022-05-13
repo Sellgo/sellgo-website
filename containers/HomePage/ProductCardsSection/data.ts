@@ -1,11 +1,10 @@
 export const newBenefitsData = [
 	{
-		title: 'Seller Statistics',
-		subTitle:
-			'Top 10,000 sellers report',
-		description: `By evaluating 10,000 sellers and gaining in-depth insight 
-		into their business including sales estimations, revenue, product categories,
-		contacts, and many more.`,
+		title: 'Sellgo Analyzes',
+		subTitle:'Unlock insightful data to reveal actions that are important to your business',
+		description: `Comprehensive seller data should make decisions simpler, not more complicated. Empower your whole team 
+		to make data-driven decisions with insightful visual analytics and reports, while custom dashboards keep your 
+		team on target.`,
 		linkLabel: [
 			/* 'Product Use Cases',
 			'Sales and Seasonality',
@@ -15,9 +14,10 @@ export const newBenefitsData = [
 		imageUrl: '/heroUsecase_1.png'
 	},
 	{
-		title: 'Data First',
+		title: 'Sellgo Targets',
 		subTitle: 'Understand the dream sellers you want to work with',
-		description: ``,
+		description: `Powerful segmentation allows you to target sellers based on any combination of demographic,
+		revenue, product categories, phone, email, address, and many more.`,
 		linkLabel: [
 			/* 'Keyword Finder',
 			'Rank Tracker Optimization',
@@ -27,9 +27,11 @@ export const newBenefitsData = [
 		imageUrl: '/heroUsecase_2.png'
 	},
 	{
-		title: 'Connect',
+		title: 'Sellgo Connects',
 		subTitle: 'Engage with your targeted seller leads',
-		description: ``,
+		description: `Send the right message, to the right person, at the right time. Connect with your targeted sellers 
+		across the entire customer journey with hyper-personalized omnichannel experiences. It's intelligent automation that 
+		feels human.`,
 		linkLabel: [
 			/* 'Report & Analytics', */
 		],

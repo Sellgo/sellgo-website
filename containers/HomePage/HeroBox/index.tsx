@@ -22,7 +22,8 @@ const HeroBox = () => {
 		'aggregators.',
 		'influencers.',
 		'reviewers.',
-		'competitors.'
+		'competitors.',
+		'marketplaces.'
 
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
@@ -105,7 +106,7 @@ const HeroBox = () => {
 		<section className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
 				<div className={styles.textColumn}>
-					<h1 className={`${styles.heading}`}>Find Amazon sellers for</h1>
+					<h1 className={`${styles.heading}`}>Amazon seller database for</h1>
 					<h2 className={styles.animatedText}>
 						<RainbowText type="purple_blue_gradient">
 							{animatedText}
@@ -123,7 +124,7 @@ const HeroBox = () => {
 								type={'text'}
 								name={'Email'}
 								value={email}
-								placeholder="Your email address"
+								placeholder="Business email"
 								className={styles.formInput}
 								onChange={(e) => setEmail(e.target.value)}
 								autoComplete="off"

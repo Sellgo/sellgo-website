@@ -1,7 +1,7 @@
 import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
-	title: `Sellgo - Amazon Seller Database for Agency, B2B and Influencer.`,
+	title: `Sellgo: Amazon Seller Database | Business Contact & Intelligence.`,
 	keywords: [
 		'sellgo',
 		'seller database',
