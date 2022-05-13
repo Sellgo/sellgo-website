@@ -14,11 +14,6 @@ import SellerMap from './Products/SellerMap';
 import ProductsDatabase from './Products/ProductDatabase';
 import KeywordDatabase from './Products/KeywordDatabase';
 import ProductRankTracker from './Products/ProductRankTracker';
-import Dashboard from './Products/Dashboard';
-import OrderPlanning from './Products/OrderPlanning';
-import SalesProjection from './Products/SalesProjection';
-import SeasonalAdjustor from './Products/SeasonalAdjustor';
-import CatalogPlanning from './Products/CatalogPlanning';
 
 /* Resources Icons */
 import Blogs from './Resources/Blogs';
@@ -27,7 +22,6 @@ import PartnershipProgram from './Resources/PartnershipProgram';
 /* Types */
 import { Products, Resources } from '../../interfaces/Navbar';
 import SalesEstimator from './Resources/SalesEstimator';
-import Tpl from './Products/Tpl';
 
 interface Props {
 	name: Products | Resources;
@@ -99,36 +93,6 @@ const ProductsIconMapper: React.FC<Props> = (props) => {
 			productIcon = (
 				<ProductRankTracker {...otherProps} isRainbow={isRainbow} />
 			);
-			break;
-		}
-
-		case 'dashboard': {
-			productIcon = <Dashboard {...otherProps} isRainbow={isRainbow} />;
-			break;
-		}
-
-		case 'orderPlanning': {
-			productIcon = <OrderPlanning {...otherProps} isRainbow={isRainbow} />;
-			break;
-		}
-
-		case 'salesProjection': {
-			productIcon = <SalesProjection {...otherProps} isRainbow={isRainbow} />;
-			break;
-		}
-
-		case 'seasonalityAdjustor': {
-			productIcon = <SeasonalAdjustor {...otherProps} isRainbow={isRainbow} />;
-			break;
-		}
-
-		case 'catalogPlanning': {
-			productIcon = <CatalogPlanning {...otherProps} isRainbow={isRainbow} />;
-			break;
-		}
-
-		case 'Tpl': {
-			productIcon = <Tpl {...otherProps} isRainbow={isRainbow} />;
 			break;
 		}
 

@@ -22,11 +22,12 @@ const ProductsSection: React.FC<Props> = () => {
 		<section className={styles.productSectionWrapper}>
 			<div className={`page-container ${styles.productsSection}`}>
 				<h2 className={styles.productsSectionTitle}>
-					We've designed proven seller research apps to help you grow
+					We&apos;ve designed proven seller research apps to help you grow
 				</h2>
 
 				<h2 className={styles.productsSectionSubTitle}>
-					Generate and analyze sellers across essential communication channels, including your sales calls, email and phone outreach, and business website.
+					Generate and analyze sellers across essential communication channels, 
+					including your sales calls, email and phone outreach, and business website.
 				</h2>
 
 				<div className={styles.productsWrapper}>
@@ -46,7 +47,6 @@ const ProductsSection: React.FC<Props> = () => {
 									{feature.name}
 								</p>
 							))}
-							<p className={styles.desc}>{product.desc}</p>
 						</div>
 					))}
 				</div>
