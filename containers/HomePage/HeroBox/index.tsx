@@ -124,7 +124,7 @@ const HeroBox = () => {
 								type={'text'}
 								name={'Email'}
 								value={email}
-								placeholder="Business email"
+								placeholder="Email address"
 								className={styles.formInput}
 								onChange={(e) => setEmail(e.target.value)}
 								autoComplete="off"

@@ -40,7 +40,7 @@ const CalculateYourPriceSection = () => {
 
 			<div className={styles.calculatePriceWrapper}>
 				<div className={styles.priceCalculator}>
-					<p className={styles.planSelectionTitle}>Select an AiStock plan</p>
+					<p className={styles.planSelectionTitle}>Select Sellgo plan</p>
 					<div className={styles.planTypesWrapper}>
 						<button
 							className={`${styles.planName} ${
