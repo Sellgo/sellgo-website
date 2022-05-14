@@ -1,11 +1,10 @@
 export const newBenefitsData = [
 	{
-		title: 'ONE-CLICK SUPPLY CHAIN',
-		subTitle:
-			'Discover how inventory planning is your secret weapon when it comes to scaling',
-		description: `Evaluate dozens of products and gain in-depth insight 
-		into any product including sales estimations, seller rankings, profit 
-		margins using data directly from Amazon.`,
+		title: 'Sellgo Analyzes',
+		subTitle:'Unlock insightful data to reveal actions that are important to your business',
+		description: `Comprehensive seller data should make decisions simpler, not more complicated. Empower your whole team 
+		to make data-driven decisions with insightful visual analytics and reports, while custom dashboards keep your 
+		team on target.`,
 		linkLabel: [
 			/* 'Product Use Cases',
 			'Sales and Seasonality',
@@ -15,12 +14,10 @@ export const newBenefitsData = [
 		imageUrl: '/heroUsecase_1.png'
 	},
 	{
-		title: 'KEYWORD OPTIMIZATION',
-		subTitle: 'Boost sales with the right keywords and PPC automation',
-		description: `Validate any product before sourcing and make confident 
-		business decisions using real-time, accurate data. View a product's 
-		sales history and price tracking history to ensure a product's long-term 
-		sustainability and profitability.`,
+		title: 'Sellgo Targets',
+		subTitle: 'Understand the dream sellers you want to work with',
+		description: `Powerful segmentation allows you to target sellers based on any combination of demographic,
+		revenue, product categories, phone, email, address, and many more.`,
 		linkLabel: [
 			/* 'Keyword Finder',
 			'Rank Tracker Optimization',
@@ -30,12 +27,11 @@ export const newBenefitsData = [
 		imageUrl: '/heroUsecase_2.png'
 	},
 	{
-		title: 'Competitive Snapshot',
-		subTitle: 'Wideview Scope of the Competition',
-		description: `Compare multiple products and categories to determine 
-		the best products that fit your business model and needs. Uncover 
-		the products with the best sales records and profitability to add 
-		to your Amazon catalogs.`,
+		title: 'Sellgo Connects',
+		subTitle: 'Engage with your targeted seller leads',
+		description: `Send the right message, to the right person, at the right time. Connect with your targeted sellers 
+		across the entire customer journey with hyper-personalized omnichannel experiences. It's intelligent automation that 
+		feels human.`,
 		linkLabel: [
 			/* 'Report & Analytics', */
 		],

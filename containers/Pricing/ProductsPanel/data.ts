@@ -15,7 +15,7 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and annual pricing plans',
-		summary: `Seller Leads? Product research? Keyword research? We've got your back.`,
+		summary: `Seller directories app. Chrome extension. We've got your back.`,
 
 		infoAlertMessage: {
 			monthly: {
@@ -39,22 +39,15 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 1000,
 				monthlyPrice: 37,
 				annualPrice: 324,
-				desc: `Get access to our tools and Chrome Extension!`,
+				desc: `Accelerate your seller research process.`,
 				featureSubName: 'Start with',
 				featuresLists: [
 					{
-						title: 'Discover Best Selling',
+						title: 'Own your market',
 						featuresIncluded: [
-							'Full access to the Chrome Extension',
-							'Basic access to Seller Database and Map',
-							'Limited access to the rest of Sellgo all-in-one tool'
-						]
-					},
-					{
-						title: 'Optimize wholesale leads',
-						featuresIncluded: [
-							'Full access to Profit Finder',
-							'Variation and multipack analysis'
+							'Accurate contacts and locations',
+							'Basic seller revenue insights',
+							'Basic seller map access'
 						]
 					}
 				]
@@ -66,32 +59,16 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 2000,
 				monthlyPrice: 97,
 				annualPrice: 924,
-				featureSubName: 'Full Single-user Access, Plus',
-				desc: `For most sellers looking to grow rapidly.`,
+				featureSubName: 'For single-user access, plus',
+				desc: `Find the best seller, faster.`,
 				isNew: true,
 				featuresLists: [
 					{
-						title: 'Keyword research',
+						title: 'Turn leads into pipeline',
 						featuresIncluded: [
-							'Reveal competitor keywords with Keyword Finder',
-							'Keyword tracking with Product Rank Tracker',
-							'Rank drop/ raise index'
-						]
-					},
-					{
-						title: 'Seller research',
-						featuresIncluded: [
-							'Locate Amazon sellers with Seller Database/ Map',
-							'Check sellers inventory',
-							'Brand level category filter'
-						]
-					},
-					{
-						title: 'Product Research',
-						featuresIncluded: [
-							'Full access to Chrome Extension Sales Estimation',
-							'Full access to Product Research',
-							'Historical data up to 1-year'
+							'Essential contact data and advanced company insights',
+							'Export data for annual plan',
+							'Advanced quota'
 						]
 					}
 				]
@@ -103,27 +80,16 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 3000,
 				monthlyPrice: 177,
 				annualPrice: 1764,
-				featureSubName: 'Everything in Professional Plan, Plus',
-				desc: `For top sellers who need the best tools.`,
+				featureSubName: 'Everything in professional plan, plus',
+				desc: `Achieve more ROI.`,
 				featuresLists: [
 					{
-						title: 'Keyword Research',
+						title: 'Hit revenue goals',
 						featuresIncluded: [
-							'Full Access to Keyword Finder/ Database',
-							'True Rank Performance index',
-							'PPC recampaign with Zapier integration*'
-						]
-					},
-					{
-						title: 'Seller Research',
-						featuresIncluded: [
+							'Advanced seller search with accurate contact data',
 							'Full use of Seller Database/ Map',
-							'Seller Map top view 20,000 sellers*'
+							'Seller Map top view 20,000 sellers*',
 						]
-					},
-					{
-						title: 'Advanced access',
-						featuresIncluded: ['Multi-user login', 'Priority onboarding']
 					}
 				]
 			}

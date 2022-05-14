@@ -38,7 +38,7 @@ const ClosingCTASection = () => {
 							newTarget
 							className={styles.closingCTA}
 						>
-							Try it FREE
+							Sign up free
 						</CTAButton>
 						{/* <div className={styles.signUpDetails}>
 							<Image src="/smileyFace.svg" width={25} height={25} />

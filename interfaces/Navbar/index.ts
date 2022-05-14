@@ -11,13 +11,7 @@ export type Products =
 	| 'sellerMap'
 	| 'keywordFinder'
 	| 'keywordDatabase'
-	| 'productRankTracker'
-	| 'dashboard'
-	| 'orderPlanning'
-	| 'salesProjection'
-	| 'seasonalityAdjustor'
-	| 'catalogPlanning'
-	| 'Tpl';
+	| 'productRankTracker';
 
 export type Resources = 'blogs' | 'PartnershipProgram' | 'salesEstimator';
 

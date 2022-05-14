@@ -6,56 +6,21 @@ import {
 
 export const productsNavigationList: ProductsNavigationList[] = [
 	{
-		head: 'Private Label',
-		desc: 'Brand, White Label',
-		hoverId: 'privateLabel'
-	},
-	{
-		head: 'Wholesale',
-		desc: 'Reseller, Online Arbitrage',
-		hoverId: 'wholesale'
-	},
-
-	{
-		head: 'Seller Leads',
-		desc: 'Enabler, 3PL, Mastermind',
+		head: 'Seller research',
+		desc: 'Discover ideal sellers',
 		hoverId: 'serviceProvider'
+	},
+	{
+		head: 'Product research',
+		desc: 'Reverse seller search',
+		hoverId: 'privateLabel'
 	}
-	// {
-	// 	head: 'Perfect Stock',
-	// 	desc: 'Private Label, Wholesale',
-	// 	hoverId: 'perfectStock'
-	// }
 ];
 
 export const productsRightPanelData: ProductsPanelData[] = [
 	{
-		hoverId: 'wholesale',
-		header: 'Features',
-		groupedNavLinksData: [
-			{
-				head: 'Extension',
-				desc: 'Product validation on Amazon page',
-				navigateTo: '/extension',
-				iconName: 'extension'
-			},
-			{
-				head: 'Search Management',
-				desc: 'Streamline wholesale inventories',
-				navigateTo: '/search-management',
-				iconName: 'searchManagement'
-			},
-			{
-				head: 'Profit Finder',
-				desc: 'Wholesale bulk calculator',
-				navigateTo: '/profit-finder',
-				iconName: 'profitFinder'
-			}
-		]
-	},
-	{
 		hoverId: 'privateLabel',
-		header: 'Features',
+		header: '',
 		groupedNavLinksData: [
 			{
 				head: 'Extension',
@@ -94,7 +59,7 @@ export const productsRightPanelData: ProductsPanelData[] = [
 	},
 	{
 		hoverId: 'serviceProvider',
-		header: 'Features',
+		header: '',
 		groupedNavLinksData: [
 			{
 				head: 'Seller Database',
@@ -113,44 +78,6 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				desc: 'Take advantage of competition',
 				navigateTo: '/seller-finder',
 				iconName: 'sellerFinder'
-			}
-		]
-	},
-	{
-		hoverId: 'perfectStock',
-		header: 'Features',
-		groupedNavLinksData: [
-			{
-				head: 'Dashboard',
-				desc: 'Inventory Management',
-				navigateTo: '/dashboard',
-				iconName: 'dashboard'
-			},
-			{
-				head: 'Sales Projection',
-				desc: 'Demand Forecasting',
-				navigateTo: '/sales-projection',
-				iconName: 'salesProjection'
-			},
-			{
-				head: 'Seasonality Adjustor',
-				desc: 'Seasonality Forecasting',
-				navigateTo: '/seasonality-adjustor',
-				iconName: 'seasonalityAdjustor'
-			},
-			{
-				head: 'Catalog Planning',
-				desc: 'Catalog Planning and Inventory',
-				navigateTo: '/catalog-planning',
-				iconName: 'catalogPlanning',
-				isNew: true
-			},
-			{
-				head: 'Order Planning',
-				desc: 'Get Perfect Order',
-				navigateTo: '/order-planning',
-				iconName: 'orderPlanning',
-				isNew: true
 			}
 		]
 	}

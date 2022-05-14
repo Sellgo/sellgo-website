@@ -10,55 +10,15 @@ export const payMonthlyAndAnnualPlan = [
 		]
 	},
 	{
-		header: ['Seller Type', 'Starter', 'Professional', 'Team'],
+		header: ['your business', 'Starter', 'Professional', 'Team'],
 		body: [
-			['Private label', '*', '****', '*****'],
-			['Wholesale', '*', '****', '*****'],
-			['Arbitrage', '*', '****', '*****'],
-			['Brand seller', '-', '✓', '✓'],
-			['Service provider', '-', '-', '✓']
-		]
-	},
-	{
-		header: ['Keyword Research', 'Starter', 'Professional', 'Team'],
-		body: [
-			['Keyword Finder', '3 keywords/ day', '✓', '✓'],
-			['Keyword Database', '3 keywords/ day', '✓', '✓'],
-			[
-				'Product Rank Tracker',
-				'3 keywords/ day',
-				'4,000 keywords',
-				'7,000 keywords*'
-			],
-			['Boost tracker', '-', '✓', '✓'],
-			['True rank performance', '-', '✓', '✓'],
-			['Zapier integration', '-', '-', '✓'],
-			['Drop/ raise trigger', '-', '-', '✓']
-		]
-	},
-	{
-		header: ['Product Research', 'Starter', 'Professional', 'Team'],
-		body: [
-			['Chrome Extension', '✓', '✓', '✓'],
-			['Amazon best sales estimator', '1,000 estimates/ month', '✓', '✓'],
-			['Inventory insight', '-', '✓', '✓'],
-			['Market share insight', '-', '✓', '✓'],
-			['Product Database', '✓', '✓', '✓'],
-			['Brand Database', 'coming soon', 'coming soon', 'coming soon'],
-			['Category Database', 'coming soon', 'coming soon', 'coming soon']
-		]
-	},
-	{
-		header: ['Bulk Profit Research', 'Starter', 'Professional', 'Team'],
-		body: [
-			['Profit Finder', '25,000 products/ day', '✓', '✓'],
-			['Additional bulk processing', '-', '✓', '✓'],
-			['Data input (UPC, EAN, ASIN, ISBN)', '✓', '✓', '✓'],
-			['Data buster', '-', '✓', '✓'],
-			['Smart filter', '-', '✓', '✓'],
-			['Bulk + filtered data export', '-', '✓', '✓'],
-			['Variation analysis', '-', '✓', '✓'],
-			['Multipack analysis', '-', '✓', '✓']
+			['Competitor', '✓', '', ''],
+			['Reviewer', '✓', '', ''],
+			['Influencer', '✓', '✓', ''],			
+			['Agency', '✓', '✓', '✓'],
+			['Enabler', '✓', '✓', '✓'],
+			['Aggregator', '✓', '✓', '✓'],
+			['Marketplace', '✓', '✓', '✓']
 		]
 	},
 	{
@@ -89,10 +49,32 @@ export const payMonthlyAndAnnualPlan = [
 		]
 	},
 	{
-		header: ['Data Analytics', 'Starter', 'Professional', 'Team'],
+		header: ['Product Research', 'Starter', 'Professional', 'Team'],
 		body: [
-			['True sales estimates', '✓', '✓', '✓'],
-			['Historical product tracking data', '1 month', '1 year', '1 year']
+			['Chrome Extension', '✓', '✓', '✓'],
+			['Amazon best sales estimator', '1,000 estimates/ month', '✓', '✓'],
+			['Inventory insight', '-', '✓', '✓'],
+			['Market share insight', '-', '✓', '✓'],
+			['Product Database', '✓', '✓', '✓'],
+			['Brand Database', 'coming soon', 'coming soon', 'coming soon'],
+			['Category Database', 'coming soon', 'coming soon', 'coming soon']
+		]
+	},
+	{
+		header: ['Keyword Research', 'Starter', 'Professional', 'Team'],
+		body: [
+			['Keyword Finder', '3 keywords/ day', '✓', '✓'],
+			['Keyword Database', '3 keywords/ day', '✓', '✓'],
+			[
+				'Product Rank Tracker',
+				'3 keywords/ day',
+				'4,000 keywords',
+				'7,000 keywords*'
+			],
+			['Boost tracker', '-', '✓', '✓'],
+			['True rank performance', '-', '✓', '✓'],
+			['Zapier integration', '-', '-', '✓'],
+			['Drop/ raise trigger', '-', '-', '✓']
 		]
 	}
 ];

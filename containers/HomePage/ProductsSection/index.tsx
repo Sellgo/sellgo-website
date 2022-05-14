@@ -22,7 +22,12 @@ const ProductsSection: React.FC<Props> = () => {
 		<section className={styles.productSectionWrapper}>
 			<div className={`page-container ${styles.productsSection}`}>
 				<h2 className={styles.productsSectionTitle}>
-					The Amazon selling solution your business will love
+					We&apos;ve designed proven seller research apps to help you grow
+				</h2>
+
+				<h2 className={styles.productsSectionSubTitle}>
+					Generate and analyze sellers across essential communication channels, 
+					including your sales calls, email and phone outreach, and business website.
 				</h2>
 
 				<div className={styles.productsWrapper}>
@@ -36,7 +41,7 @@ const ProductsSection: React.FC<Props> = () => {
 							/>
 							<p className={styles.title}>{product.title}</p>
 							<p className={styles.action}>{product.action}</p>
-							<p className={styles.popularFeatures}> Popular Features </p>
+							<p className={styles.popularFeatures}>   </p>
 							{product.features.map((feature, index) => (
 								<p className={styles.productFeature} key={index}>
 									{feature.name}
