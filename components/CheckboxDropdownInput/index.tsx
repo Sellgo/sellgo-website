@@ -8,6 +8,7 @@ import FormInput from '../FormInput';
 
 interface Props {
   label: string;
+  name: string;
   placeholder?: string;
   className?: string;
   filterOptions: {value: any, key: any, text: any}[];
@@ -20,6 +21,7 @@ const CheckboxDropdown: React.FC<Props> = props => {
     label,
     placeholder,
     handleChange,
+    name,
     className,
     filterOptions,
     selectedValues,
@@ -42,8 +44,6 @@ const CheckboxDropdown: React.FC<Props> = props => {
 
 
   const handleCheckboxTick = (e: any, data: any) => {
-    console.log(e);
-    console.log(data);
     let newSelectedValues = [...selectedValues];
 
     // if checked state
@@ -65,7 +65,7 @@ const CheckboxDropdown: React.FC<Props> = props => {
       newSelectedValues = newSelectedValues.filter(f => f !== data.value);
     }
 
-    handleChange(newSelectedValues);
+    handleChange({target: {value: newSelectedValues, name}});
   };
 
   return (

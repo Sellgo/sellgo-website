@@ -23,13 +23,6 @@ import {
 	SELLER_ANNUAL_REVENUE_OPTIONS
 } from './data';
 
-/* Constants */
-import {
-	employSizeList,
-	defaultPhoneCode,
-	countryPhoneCodeList
-} from '../../../constants';
-
 /* App Config */
 import AppConfig from '../../../config';
 
@@ -44,6 +37,12 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		lastName: '',
 		email: '',
 		message: '',
+		sellerBusinessModel: [],
+		sellerCountryOfOrigin: [],
+		sellerAmazonMarketplace: [],
+		sellerDominantProduct: [],
+		sellerDatapoint: [],
+		sellerRevenue: [],
 	});
 
 	const [formDataError, setFormDataError] = useState({
@@ -55,12 +54,6 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 
 	const [openSubmitConfirm, setOpenSubmitConfirm] = useState(false);
 	const [showDemoForm, setShowDemoForm] = useState(true);
-	const [sellerBusinessModel, setSellerBusinessModel] = useState<string[]>([]);
-	const [sellerCountryOfOrigin, setSellerCountryOfOrigin] = useState<string[]>([]);
-	const [sellerAmazonMarketplace, setSellerAmazonMarketplace] = useState<string[]>([]);
-	const [sellerDominantProduct, setSellerDominantProduct] = useState<string[]>([]);
-	const [sellerDatapoint, setSellerDatapoint] = useState<string[]>([]);
-	const [sellerRevenue, setSellerRevenue] = useState<string[]>([]);
 
 	const handleChange = (e: any) => {
 		const { value, name, checked } = e.target;
@@ -87,6 +80,12 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		lastName,
 		email,
 		message,
+		sellerBusinessModel,
+		sellerCountryOfOrigin,
+		sellerAmazonMarketplace,
+		sellerDominantProduct,
+		sellerDatapoint,
+		sellerRevenue
 	} = formData;
 
 	const {
@@ -165,19 +164,30 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 			lastName: '',
 			email: '',
 			message: '',
+			sellerBusinessModel: [],
+			sellerCountryOfOrigin: [],
+			sellerAmazonMarketplace: [],
+			sellerDominantProduct: [],
+			sellerDatapoint: [],
+			sellerRevenue: [],
 		});
 	};
 
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
-
 		const formData = new FormData();
 		formData.append('email', email);
 		formData.append('firstname', firstName);
 		formData.append('lastname', lastName);
-		formData.append('message', message);
-		formData.append('is_demo_requested', 'true');
-
+		formData.append('seller_list_business_model', sellerBusinessModel.join(','));
+		formData.append('seller_list_country_of_origin', sellerCountryOfOrigin.join(','));
+		formData.append('seller_list_marketplace', sellerAmazonMarketplace.join(','));
+		formData.append('seller_list_dominant_product_category', sellerDominantProduct.join(','));
+		formData.append('seller_list_datapoint', sellerDatapoint.join(','));
+		formData.append('seller_list_annual_revenue', sellerRevenue.join(','));
+		formData.append('seller_list_message', message);
+		formData.append('is_sellgo_seller_list_requested', 'true');
+		
 		try {
 			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
 			const response = await axios.post(URL, formData);
@@ -257,7 +267,8 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								placeholder="Business Model"
 								filterOptions={SELLER_BUSINESS_MODEL_OPTIONS} 
 								selectedValues={sellerBusinessModel} 
-								handleChange={setSellerBusinessModel}
+								name="sellerBusinessModel"
+								handleChange={handleChange}
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
@@ -265,7 +276,8 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								placeholder="Country of Origin"
 								filterOptions={SELLER_COUNTRY_OPTIONS} 
 								selectedValues={sellerCountryOfOrigin} 
-								handleChange={setSellerCountryOfOrigin}			
+								name="sellerCountryOfOrigin"
+								handleChange={handleChange}			
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
@@ -273,7 +285,8 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								placeholder="Marketplace"
 								filterOptions={SELLER_MARKETPLACE_OPTIONS} 
 								selectedValues={sellerAmazonMarketplace} 
-								handleChange={setSellerAmazonMarketplace}			
+								name="sellerAmazonMarketplace"
+								handleChange={handleChange}			
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
@@ -281,7 +294,8 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								placeholder="Dominant Product Category"
 								filterOptions={SELLER_DOMINANT_PRODUCT_CATEGORY_OPTIONS} 
 								selectedValues={sellerDominantProduct} 
-								handleChange={setSellerDominantProduct}
+								name="sellerDominantProduct"
+								handleChange={handleChange}
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
@@ -289,7 +303,8 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								placeholder="Datapoint"
 								filterOptions={SELLER_DATAPOINT_OPTIONS} 
 								selectedValues={sellerDatapoint} 
-								handleChange={setSellerDatapoint}	
+								name="sellerDatapoint"
+								handleChange={handleChange}	
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
@@ -297,7 +312,8 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								placeholder="Annual Revenue"
 								filterOptions={SELLER_ANNUAL_REVENUE_OPTIONS} 
 								selectedValues={sellerRevenue} 
-								handleChange={setSellerRevenue}		
+								name="sellerRevenue"
+								handleChange={handleChange}		
 							/>
 							<FormInput
 								className={`
@@ -308,12 +324,13 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								placeholder="Message*"
 								id="Message"
 								type="text"
-								name="Message"
+								name="message"
 								onChange={handleChange}
 								value={message}
 								autoComplete="off"
 								hasError={messageErr}
 								errorMessage=""
+								required
 							/>
 						</div>
 						<button
@@ -419,7 +436,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 			>
 				<FormSubmitConfirm
 					heading="You're all set"
-					body="Your demo request has been confirmed!."
+					body="Your seller list request has been confirmed!."
 					ending="Our sales team will be in touch with you soon."
 				/>
 			</Modal>

@@ -7,7 +7,7 @@ import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../../components/CTAButton';
-import DemoForm from '../../Demo/DemoForm';
+import SellerListForm from '../../Demo/SellerListForm';
 
 /* Utils */
 import { createCheckoutLink } from '../../../utils/Referral';
@@ -56,7 +56,7 @@ const NewClosingCTASection = () => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
 			</Modal>
 		</section>
 	);

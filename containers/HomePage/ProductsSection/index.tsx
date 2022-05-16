@@ -11,7 +11,7 @@ import { productsDetails } from './data';
 
 /* Components */
 import RainbowText from '../../../components/RainbowText';
-import DemoForm from '../../Demo/DemoForm';
+import SellerListForm from '../../Demo/SellerListForm';
 
 interface Props {}
 
@@ -75,7 +75,7 @@ const ProductsSection: React.FC<Props> = () => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
 			</Modal>
 		</section>
 	);
