@@ -4,13 +4,16 @@ import Image from 'next/image';
 import styles from './index.module.scss';
 import CTAButton from '../CTAButton';
 
+/* Utils */
+import { createCheckoutLink } from '../../utils/Referral';
+
 interface Props {
 	showCtaNavBar: boolean;
 	showMobile: boolean;
 }
 const CtaNavBar = (props: Props) => {
 	const { showCtaNavBar, showMobile } = props;
-
+	const checkoutLink = createCheckoutLink('daily', 'free');
 	return (
 		<div
 			className={`${styles.ctaNavBarWrapper} 
@@ -35,7 +38,9 @@ const CtaNavBar = (props: Props) => {
 					type="secondary"
 					size="small"
 					variant="rainbow"
-					navigateTo="/pricing?type=monthly-and-annual-plans"
+					navigateTo={checkoutLink}
+					asExternal
+					newTarget
 					className={styles.ctaButton}
 				>
 					Sign up free

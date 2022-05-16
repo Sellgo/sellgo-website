@@ -7,10 +7,14 @@ import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../../components/CTAButton';
-import DemoForm from '../../Demo/DemoForm';
+import SellerListForm from '../../Demo/SellerListForm';
+
+/* Utils */
+import { createCheckoutLink } from '../../../utils/Referral';
 
 const NewClosingCTASection = () => {
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
+	const checkoutLink = createCheckoutLink('daily', 'free');
 
 	return (
 		<section className={styles.closingCTASection}>
@@ -27,7 +31,9 @@ const NewClosingCTASection = () => {
 								type="primary"
 								size="medium"
 								variant="rainbow"
-								navigateTo="/pricing"
+								navigateTo={checkoutLink}
+								asExternal
+								newTarget
 								className={styles.closingCTA}
 							>
 								Create free account
@@ -50,7 +56,7 @@ const NewClosingCTASection = () => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
 			</Modal>
 		</section>
 	);

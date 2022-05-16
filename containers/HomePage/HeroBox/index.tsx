@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 
 /* Components */
 import RainbowText from '../../../components/RainbowText';
-import DemoForm from '../../Demo/DemoForm';
+import SellerListForm from '../../Demo/SellerListForm';
 import FormInput from '../../../components/FormInput';
 
 /* Utils */
@@ -166,7 +166,7 @@ const HeroBox = () => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
 			</Modal>
 		</section>
 	);

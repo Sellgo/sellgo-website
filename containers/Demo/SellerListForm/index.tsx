@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import validator from 'validator';
 import Image from 'next/image';
 import axios from 'axios';
-import Select from 'react-select';
 import Modal from 'react-modal';
 import Link from 'next/link';
 
@@ -12,13 +11,17 @@ import styles from './index.module.scss';
 /* Components */
 import FormInput from '../../../components/FormInput';
 import FormSubmitConfirm from '../../../components/FormSubmitConfirm';
+import CheckboxDropdownInput from '../../../components/CheckboxDropdownInput';
 
-/* Constants */
+/* Data */
 import {
-	employSizeList,
-	defaultPhoneCode,
-	countryPhoneCodeList
-} from '../../../constants';
+	SELLER_BUSINESS_MODEL_OPTIONS,
+	SELLER_COUNTRY_OPTIONS,
+	SELLER_MARKETPLACE_OPTIONS,
+	SELLER_DOMINANT_PRODUCT_CATEGORY_OPTIONS,
+	SELLER_DATAPOINT_OPTIONS,
+	SELLER_ANNUAL_REVENUE_OPTIONS
+} from './data';
 
 /* App Config */
 import AppConfig from '../../../config';
@@ -32,22 +35,21 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 	const [formData, setFormData] = useState({
 		firstName: '',
 		lastName: '',
-		countryCode: defaultPhoneCode,
-		phoneNumber: '',
 		email: '',
-		company: '',
-		companySize: employSizeList[0].value,
-		isExistingCustomer: false,
-		totalOrders: ''
+		message: '',
+		sellerBusinessModel: [],
+		sellerCountryOfOrigin: [],
+		sellerAmazonMarketplace: [],
+		sellerDominantProduct: [],
+		sellerDatapoint: [],
+		sellerRevenue: [],
 	});
 
 	const [formDataError, setFormDataError] = useState({
 		firstNameErr: false,
 		lastNameErr: false,
 		emailErr: false,
-		phoneNumberErr: false,
-		companyErr: false,
-		totalOrdersErr: false
+		messageErr: false,
 	});
 
 	const [openSubmitConfirm, setOpenSubmitConfirm] = useState(false);
@@ -73,34 +75,24 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		}
 	};
 
-	const handleCountryCodeChange = (selectedOption: any) => {
-		setFormData((prevState) => {
-			return {
-				...prevState,
-				countryCode: selectedOption
-			};
-		});
-	};
-
 	const {
 		firstName,
 		lastName,
 		email,
-		phoneNumber,
-		company,
-		totalOrders,
-		companySize,
-		isExistingCustomer,
-		countryCode
+		message,
+		sellerBusinessModel,
+		sellerCountryOfOrigin,
+		sellerAmazonMarketplace,
+		sellerDominantProduct,
+		sellerDatapoint,
+		sellerRevenue
 	} = formData;
 
 	const {
 		emailErr,
 		firstNameErr,
 		lastNameErr,
-		phoneNumberErr,
-		companyErr,
-		totalOrdersErr
+		messageErr,
 	} = formDataError;
 
 	/* Mount the react modal */
@@ -165,95 +157,37 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		}
 	}, [lastName]);
 
-	/* Effect for Phone Number Validation */
-	useEffect(() => {
-		if (phoneNumber.trim().length > 0) {
-			setFormDataError((prevErr) => {
-				return {
-					...prevErr,
-					phoneNumberErr: !validator.isMobilePhone(phoneNumber)
-				};
-			});
-		} else {
-			setFormDataError((prevErr) => {
-				return {
-					...prevErr,
-					phoneNumberErr: false
-				};
-			});
-		}
-	}, [phoneNumber]);
-
-	/* Effect for Company Name Validation */
-	useEffect(() => {
-		if (company.length > 0) {
-			setFormDataError((prevState) => {
-				return {
-					...prevState,
-					companyErr: company.trim().length === 0
-				};
-			});
-		} else {
-			setFormDataError((prevState) => {
-				return {
-					...prevState,
-					companyErr: false
-				};
-			});
-		}
-	}, [company]);
-
-	/* Effect forTotal Orders Validation */
-	useEffect(() => {
-		if (totalOrders.length > 0) {
-			setFormDataError((prevState) => {
-				return {
-					...prevState,
-					websiteErr: !validator.isURL(totalOrders)
-				};
-			});
-		} else {
-			setFormDataError((prevState) => {
-				return {
-					...prevState,
-					websiteErr: false
-				};
-			});
-		}
-	}, [totalOrders]);
-
 	/* Clear the form data */
 	const clearForm = () => {
 		setFormData({
 			firstName: '',
 			lastName: '',
-			countryCode: defaultPhoneCode,
-			phoneNumber: '',
-			totalOrders: '',
 			email: '',
-			company: '',
-			companySize: employSizeList[0].value,
-			isExistingCustomer: false
+			message: '',
+			sellerBusinessModel: [],
+			sellerCountryOfOrigin: [],
+			sellerAmazonMarketplace: [],
+			sellerDominantProduct: [],
+			sellerDatapoint: [],
+			sellerRevenue: [],
 		});
 	};
 
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
-
 		const formData = new FormData();
 		formData.append('email', email);
 		formData.append('firstname', firstName);
 		formData.append('lastname', lastName);
-		formData.append('phone', `${countryCode.value}-${phoneNumber}`);
-		formData.append('company', company);
-		formData.append('numemployees', companySize);
-		formData.append(
-			'is_existing_customer',
-			isExistingCustomer ? 'true' : 'false'
-		);
-		formData.append('is_sellgo_demo_requested', 'true');
-		formData.append('total_orders_per_month', totalOrders);
-
+		formData.append('seller_list_business_model', sellerBusinessModel.join(','));
+		formData.append('seller_list_country_of_origin', sellerCountryOfOrigin.join(','));
+		formData.append('seller_list_marketplace', sellerAmazonMarketplace.join(','));
+		formData.append('seller_list_dominant_product_category', sellerDominantProduct.join(','));
+		formData.append('seller_list_datapoint', sellerDatapoint.join(','));
+		formData.append('seller_list_annual_revenue', sellerRevenue.join(','));
+		formData.append('seller_list_message', message);
+		formData.append('is_sellgo_seller_list_requested', 'true');
+		
 		try {
 			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
 			const response = await axios.post(URL, formData);
@@ -327,101 +261,91 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								hasError={emailErr}
 								errorMessage="Invalid Email"
 							/>
-							<div className={styles.dropdownWrapper}>
-								<Select
-									defaultValue={defaultPhoneCode}
-									options={countryPhoneCodeList}
-									className={styles.countrySelect}
-									classNamePrefix="dropdown"
-									id="dropdown"
-									onChange={handleCountryCodeChange}
-									value={countryCode}
-								/>
-							</div>
-
-							<FormInput
-								className={styles.formInput}
-								label=""
-								id="phoneNumber"
-								type="text"
-								name="phoneNumber"
-								placeholder="Phone Number*"
-								onChange={handleChange}
-								value={phoneNumber}
-								autoComplete="off"
-								required
-								hasError={phoneNumberErr}
-								errorMessage="Invalid Phone Number"
+							<CheckboxDropdownInput
+								className={styles.checkboxDropdown}
+								label="Seller Business Model"
+								placeholder="Business Model"
+								filterOptions={SELLER_BUSINESS_MODEL_OPTIONS} 
+								selectedValues={sellerBusinessModel} 
+								name="sellerBusinessModel"
+								handleChange={handleChange}
 							/>
-
+							<CheckboxDropdownInput
+								className={styles.checkboxDropdown}
+								label="Seller Country Of Origin"
+								placeholder="Country of Origin"
+								filterOptions={SELLER_COUNTRY_OPTIONS} 
+								selectedValues={sellerCountryOfOrigin} 
+								name="sellerCountryOfOrigin"
+								handleChange={handleChange}			
+							/>
+							<CheckboxDropdownInput
+								className={styles.checkboxDropdown}
+								label="Amazon Marketplace"
+								placeholder="Marketplace"
+								filterOptions={SELLER_MARKETPLACE_OPTIONS} 
+								selectedValues={sellerAmazonMarketplace} 
+								name="sellerAmazonMarketplace"
+								handleChange={handleChange}			
+							/>
+							<CheckboxDropdownInput
+								className={styles.checkboxDropdown}
+								label="Dominant Product Category"
+								placeholder="Dominant Product Category"
+								filterOptions={SELLER_DOMINANT_PRODUCT_CATEGORY_OPTIONS} 
+								selectedValues={sellerDominantProduct} 
+								name="sellerDominantProduct"
+								handleChange={handleChange}
+							/>
+							<CheckboxDropdownInput
+								className={styles.checkboxDropdown}
+								label="Seller Datapoint"
+								placeholder="Datapoint"
+								filterOptions={SELLER_DATAPOINT_OPTIONS} 
+								selectedValues={sellerDatapoint} 
+								name="sellerDatapoint"
+								handleChange={handleChange}	
+							/>
+							<CheckboxDropdownInput
+								className={styles.checkboxDropdown}
+								label="Seller Annual Revenue"
+								placeholder="Annual Revenue"
+								filterOptions={SELLER_ANNUAL_REVENUE_OPTIONS} 
+								selectedValues={sellerRevenue} 
+								name="sellerRevenue"
+								handleChange={handleChange}		
+							/>
 							<FormInput
 								className={`
 								${styles.formInput}
 								${styles.formInput__long}
 							`}
 								label=""
-								placeholder="Company*"
-								id="company"
+								placeholder="Message*"
+								id="Message"
 								type="text"
-								name="company"
+								name="message"
 								onChange={handleChange}
-								value={company}
+								value={message}
 								autoComplete="off"
+								hasError={messageErr}
+								errorMessage=""
 								required
-								hasError={companyErr}
-								errorMessage="Please enter company name"
-							/>
-
-							<FormInput
-								className={`
-								${styles.formInput}
-								${styles.formInput__long}
-							`}
-								label=""
-								placeholder="Total Orders Per Month*"
-								id="totalOrders"
-								type="number"
-								name="totalOrders"
-								onChange={handleChange}
-								value={totalOrders}
-								autoComplete="off"
-								required
-								hasError={totalOrdersErr}
-								errorMessage="Please enter valid URL"
 							/>
 						</div>
-						<FormInput
-							className={styles.selectCheckbox}
-							type="checkbox"
-							name="isExistingCustomer"
-							id="isExistingCustomer"
-							checked={isExistingCustomer}
-							onChange={handleChange}
-							label="Please tick here if you are an existing customer."
-							value={isExistingCustomer ? 'on' : 'off'}
-							labelLast
-						/>
 						<button
 							className={`ctabutton ctabutton--primary ctabutton--medium ${styles.submitButton}`}
 							type="submit"
 							disabled={
 								firstNameErr ||
 								lastNameErr ||
-								emailErr ||
-								phoneNumberErr ||
-								companyErr ||
-								totalOrdersErr
+								emailErr
 							}
 						>
 							Submit
 						</button>
 						<p className={styles.terms}>
-							By subscribing, you agree to receive recurring automated marketing
-							text messages (e.g. cart reminders, promotional offers) from
-							Sellgo at the phone number provided on the subscription form.
-							Consent is not a condition to purchase. Msg & data rates may
-							apply. Msg frequency varies. Reply HELP for help and STOP to
-							cancel. View our
+							By subscribing, you agree to our
 							<Link href="/privacy-policy" passHref>
 								<a> Privacy Policy </a>
 							</Link>
@@ -512,7 +436,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 			>
 				<FormSubmitConfirm
 					heading="You're all set"
-					body="Your demo request has been confirmed!."
+					body="Your seller list request has been confirmed!."
 					ending="Our sales team will be in touch with you soon."
 				/>
 			</Modal>
