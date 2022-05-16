@@ -11,7 +11,7 @@ export const newBenefitsData = [
 			'Product Research' */
 		],
 		navigateTo: ['/', '/', '/'],
-		imageUrl: '/heroUsecase_1.png'
+		imageUrl: '/homeUsecase_1.png'
 	},
 	{
 		title: 'Sellgo Targets',
@@ -24,7 +24,7 @@ export const newBenefitsData = [
 			'Re-PPC Automation' */
 		],
 		navigateTo: ['/', '/', '/'],
-		imageUrl: '/heroUsecase_2.png'
+		imageUrl: '/homeUsecase_2.png'
 	},
 	{
 		title: 'Sellgo Connects',
@@ -36,6 +36,6 @@ export const newBenefitsData = [
 			/* 'Report & Analytics', */
 		],
 		navigateTo: '/',
-		imageUrl: '/heroUsecase_3.png'
+		imageUrl: '/homeUsecase_3.png'
 	}
 ];
