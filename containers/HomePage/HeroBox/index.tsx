@@ -17,11 +17,14 @@ import { encodeBase64 } from '../../../utils/Format';
 
 const HeroBox = () => {
 	const textList = [
-		'dominate #1 search result.',
-		'find profitable products.',
-		'automate PPC with Zapier.',
-		'find Amazon sellers.',
-		'calculate perfect stock.'
+		'agencies.',
+		'B2B.',
+		'aggregators.',
+		'influencers.',
+		'reviewers.',
+		'competitors.',
+		'marketplaces.'
+
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
@@ -103,17 +106,16 @@ const HeroBox = () => {
 		<section className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
 				<div className={styles.textColumn}>
-					<h1 className={`${styles.heading}`}>All-in-one Amazon tools to</h1>
+					<h1 className={`${styles.heading}`}>Amazon seller database for</h1>
 					<h2 className={styles.animatedText}>
 						<RainbowText type="purple_blue_gradient">
 							{animatedText}
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						All-in-one platform for selling on Amazon using Extension, bulk
-						calculation
+						Get the Amazon sellers data and software you need to connect with
 						<br />
-						keyword research, 1M database of Amazon sellers, and more!
+						and close your most valuable customers - all-in-one seller research.
 					</p>
 					<div className={styles.ctaBox}>
 						<div className={styles.emailSignupBox}>
@@ -122,7 +124,7 @@ const HeroBox = () => {
 								type={'text'}
 								name={'Email'}
 								value={email}
-								placeholder="Your email address"
+								placeholder="Email address"
 								className={styles.formInput}
 								onChange={(e) => setEmail(e.target.value)}
 								autoComplete="off"
@@ -135,7 +137,7 @@ const HeroBox = () => {
 								disabled={emailErr}
 								onClick={onSignupClick}
 							>
-								CREATE FREE ACCOUNT
+								Create free account
 							</button>
 							<span>Try it free. No credit card required. Instant set-up.</span>
 						</div>

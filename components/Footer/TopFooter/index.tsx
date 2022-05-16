@@ -22,7 +22,7 @@ const TopFooter: React.FC<Props> = () => {
 							src="/sellgoLogo.png"
 							alt="Sellgo Coompany Logo"
 							width={100}
-							height={32}
+							height={28}
 						/>
 					</a>
 				</Link>

@@ -2,50 +2,6 @@ import { StepDetail } from '../../../interfaces/Stepper';
 
 export const wholesaleFeatures: StepDetail[] = [
 	{
-		title: 'Browser Extension',
-		icon: 'extension',
-		subTitle: 'Quick product validation in your browser',
-		description: `Get Amazon Product Research capabilities inside the Sellgo Chrome
-		Extension, helps give Amazon sellers a quick validation of a market while they browse 
-		through Amazon.`,
-		linkLabel: 'More about Browser Extension',
-		navigateTo: '/extension',
-		imageUrl: '/extension_1.png'
-	},
-	{
-		title: 'Keyword Finder',
-		icon: 'keywordFinder',
-		subTitle: 'Reveal the best keywords of your competitors',
-		description: `Find out the exact keywords your competition is ranking on Amazon and 
-		make them your own. Use those keywords to plan your launch strategy and fine-tune 
-		your product description copy.`,
-		linkLabel: 'More about Keyword Finder',
-		navigateTo: '/keyword-finder',
-		imageUrl: '/keyword_finder_1.png'
-	},
-	{
-		title: 'Keyword Database',
-		icon: 'keywordDatabase',
-		subTitle: 'Extract relevant keywords',
-		description: `Find high-volume search keywords in order to get you more visibility. 
-		Your products will come up more often on Amazon with those keywords. Get your listing 
-		on page 1 and you’ll start to see more traffic from curious consumers looking to buy from you!`,
-		linkLabel: 'More about Keyword Database',
-		navigateTo: '/keyword-dabatase',
-		imageUrl: '/keyword_database_1.png'
-	},
-	{
-		title: 'Product Rank Tracker',
-		icon: 'productRankTracker',
-		subTitle: 'Get to #1 spot of search results',
-		description: `Find out exactly how each keyword performs to boost your products' rank and gain 
-		visibility for your brand. Dominate Your Keywords and Get to #1 Spot of Search Results.
-		Automate drop/ raise with PPC campaign plan through Zapier integration.`,
-		linkLabel: 'More about Product Rank Tracker',
-		navigateTo: '/product-rank-tracker',
-		imageUrl: '/product_rank_tracker_1.png'
-	},
-	{
 		title: 'Seller Database',
 		icon: 'sellerDatabase',
 		subTitle: 'Connect with the Amazon network',
@@ -79,28 +35,15 @@ export const wholesaleFeatures: StepDetail[] = [
 		imageUrl: '/seller_finder_1.png'
 	},
 	{
-		title: 'Search Management',
-		icon: 'searchManagement',
-		subTitle: 'Streamline your Amazon wholesale business',
-		description: `Obtain all the tools you need to scout, source, and sell profitable, 
-		high-demand products for your Amazon inventory. 
-		Use Sellgo's reliable data and sales analytics to build a 
-		thriving Amazon wholesale business.`,
-		linkLabel: 'More about Search Management',
-		navigateTo: '/search-management',
-		imageUrl: '/search_management_1.png'
-	},
-	{
-		title: 'Profit Finder',
-		icon: 'profitFinder',
-		subTitle: 'Calculate bulk profit on the fly',
-		description: `The Profit Finder calculates your profit for each product based on 
-		supplier price. It compares all of the products in Amazon's database to identify brands
-		and the fast turnover, high profit items to sell on Amazon. We love it, you'll love it,
-		and your supplier will love it too!`,
-		linkLabel: 'More about Profit Finder',
-		navigateTo: '/profit-finder',
-		imageUrl: '/profit_finder_1.png'
+		title: 'Browser Extension',
+		icon: 'extension',
+		subTitle: 'Quick product validation in your browser',
+		description: `Get Amazon Product Research capabilities inside the Sellgo Chrome
+		Extension, helps give Amazon sellers a quick validation of a market while they browse 
+		through Amazon.`,
+		linkLabel: 'More about Browser Extension',
+		navigateTo: '/extension',
+		imageUrl: '/extension_1.png'
 	}
 ];
 

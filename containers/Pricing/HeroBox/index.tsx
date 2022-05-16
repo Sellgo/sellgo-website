@@ -12,9 +12,6 @@ interface Props {
 const HeroBox: React.FC<Props> = () => {
 	return (
 		<>
-			<div className={styles.banner}>
-				AiStock users please check our new website here.
-			</div>
 			<section className={styles.heroboxSection}>
 				{/* }
 				<h1>Product research? Keyword research? Seller data?</h1>

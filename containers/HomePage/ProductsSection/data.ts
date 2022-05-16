@@ -5,58 +5,46 @@ export const productsDetails: {
 	features: { name: string; link: string }[];
 }[] = [
 	{
-		title: 'FIND QUALITY PRODUCTS',
-		action: 'when researching',
+		title: 'Chorus',
+		action: '',
 		icon: '/products-products.svg',
 		features: [
 			{
-				name: 'Sales Estimation & Search Volume',
+				name: 'Make every data insight count with statistical intelligence.',
 				link: '/'
 			},
 			{
-				name: 'Product/ Brand Database',
-				link: '/'
-			},
-			{
-				name: 'Seller Database/ Map/ Finder',
+				name: 'Learn more about Chorus',
 				link: '/'
 			}
 		]
 	},
 	{
-		title: 'DOMINATE COMPETITIONS',
-		action: 'when launching',
+		title: 'Analyze',
+		action: '',
 		icon: '/products-competition.svg',
 		features: [
 			{
-				name: 'Keyword Finder',
+				name: 'Increase conversion with data-powered seller insight.',
 				link: '/'
 			},
 			{
-				name: 'Keyword Database',
-				link: '/'
-			},
-			{
-				name: 'Product Rank Tracker',
+				name: 'Learn more about Analyze',
 				link: '/'
 			}
 		]
 	},
 	{
-		title: 'AUTOMATE PROCESSES',
-		action: 'when selling',
+		title: 'Engage',
+		action: '',
 		icon: '/products-automate.svg',
 		features: [
 			{
-				name: 'Product Rank Tracker',
+				name: 'Reach more sellers with insight-driven phone, email and address automation.',
 				link: '/'
 			},
 			{
-				name: 'Zapier Integration For PPC Re-Campaign',
-				link: '/'
-			},
-			{
-				name: 'Perfect Stock',
+				name: 'Learn more about Engage',
 				link: '/'
 			}
 		]

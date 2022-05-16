@@ -23,7 +23,7 @@ const NavbarBottom: React.FC<Props> = () => {
 						<Image
 							src="/sellgoLogo.png"
 							width={100}
-							height={32}
+							height={28}
 							priority
 							alt="Sellgo Inc. Company Logo"
 						/>
@@ -79,7 +79,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				variant="white"
 				className={styles.navbarCTA}
 			>
-				Sign up
+				Sign up free
 				<div className={styles.navbarCTA__arrow}>
 					<Image
 						src="/longArrowRightIcon.svg"

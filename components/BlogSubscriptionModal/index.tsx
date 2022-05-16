@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import validator from 'validator';
-import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
 
 /* Styling */
@@ -27,14 +26,6 @@ const BlogSubscriptionModal: React.FC<Props> = (props) => {
 		setEmail(value);
 	};
 
-	const handleCaptchaChange = (token: any) => {
-		if (token.trim().length > 0) {
-			setToken(token);
-		} else {
-			setToken('');
-		}
-	};
-
 	const clearForm = () => {
 		setEmail('');
 		setEmailErr(false);
@@ -53,7 +44,6 @@ const BlogSubscriptionModal: React.FC<Props> = (props) => {
 			const formData = new FormData();
 			formData.append('email', email);
 			formData.append('subscribeblog', 'true');
-			formData.append('g-recaptcha-response', token);
 			const response = await axios.post(
 				`${AppConfig.API_URL}/sellers/create-hubspot`,
 				formData
@@ -111,15 +101,6 @@ const BlogSubscriptionModal: React.FC<Props> = (props) => {
 						name="email"
 						required
 					/>
-
-					<div className={styles.formInput}>
-						<ReCAPTCHA
-							sitekey={String(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY)}
-							theme="light"
-							size="normal"
-							onChange={handleCaptchaChange}
-						/>
-					</div>
 
 					<button
 						className={`ctabutton ctabutton--primary ctabutton--medium ${styles.subscribeCTA}`}

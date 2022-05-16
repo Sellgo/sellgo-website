@@ -7,7 +7,11 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
 
+/* Utils */
+import { createCheckoutLink } from '../../../utils/Referral';
+
 const ClosingCTASection = () => {
+	const checkoutLink = createCheckoutLink('daily', 'free');
 	return (
 		<section className={styles.closingCTASection}>
 			<div className={`page-container`}>
@@ -29,10 +33,12 @@ const ClosingCTASection = () => {
 							type="primary"
 							size="medium"
 							variant="white"
-							navigateTo="/pricing"
+							navigateTo={checkoutLink}
+							asExternal
+							newTarget
 							className={styles.closingCTA}
 						>
-							Try it FREE
+							Sign up free
 						</CTAButton>
 						{/* <div className={styles.signUpDetails}>
 							<Image src="/smileyFace.svg" width={25} height={25} />

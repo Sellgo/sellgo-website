@@ -40,7 +40,6 @@
 	h2 {
 		font-size: $fontsize_subtitle_32;
 		font-weight: $fontweight_bold;
-
 		@media only screen and(max-width: 1080px) {
 			font-size: $fontsize_subtitle_24;
 		}
