@@ -32,6 +32,7 @@ const CheckboxDropdown: React.FC<Props> = props => {
   /* Close dropdown menu on document click */
   React.useEffect(() => {
     const handleClick = (e: any) => {
+      // @ts-ignore
       if (ref.current && !ref.current.contains(e.target)) {
         setIsDropdownMenuOpen(false);
       }
