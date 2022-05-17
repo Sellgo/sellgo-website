@@ -16,6 +16,7 @@ interface Props {
 	labelLast?: boolean;
 	checked?: boolean;
 	disabled?: boolean;
+	onClick?: () => void;
 }
 
 const FormInput: React.FC<Props> = (props) => {
@@ -26,11 +27,16 @@ const FormInput: React.FC<Props> = (props) => {
 		errorMessage,
 		id,
 		labelLast,
+		onClick,
 		...otherProps
 	} = props;
 
 	return (
-		<div className={className}>
+		<div 
+			className={className} 
+			onClick={onClick}
+			onKeyDown={onClick}
+		>
 			{labelLast ? (
 				<>
 					<input id={id} {...otherProps} />
@@ -58,7 +64,8 @@ FormInput.defaultProps = {
 	required: false,
 	labelLast: false,
 	checked: false,
-	disabled: false
+	disabled: false,
+	onClick: () => {},
 };
 
 export default memo(FormInput);
