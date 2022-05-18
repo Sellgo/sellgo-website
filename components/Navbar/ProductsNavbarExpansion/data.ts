@@ -9,16 +9,18 @@ export const productsNavigationList: ProductsNavigationList[] = [
 		head: 'Seller research',
 		desc: 'Discover ideal sellers',
 		hoverId: 'serviceProvider'
-	},
+	}
+	/*
+	,
 	{
 		head: 'Product research',
 		desc: 'Reverse seller search',
 		hoverId: 'privateLabel'
-	}
+	}*/
 ];
 
 export const productsRightPanelData: ProductsPanelData[] = [
-	{
+	/*{
 		hoverId: 'privateLabel',
 		header: '',
 		groupedNavLinksData: [
@@ -56,7 +58,7 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				iconName: 'productDatabase'
 			}
 		]
-	},
+	},*/
 	{
 		hoverId: 'serviceProvider',
 		header: '',

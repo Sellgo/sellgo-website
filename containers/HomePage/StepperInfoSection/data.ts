@@ -33,17 +33,6 @@ export const wholesaleFeatures: StepDetail[] = [
 		linkLabel: 'More about Seller Finder',
 		navigateTo: '/seller-finder',
 		imageUrl: '/seller_finder_1.png'
-	},
-	{
-		title: 'Browser Extension',
-		icon: 'extension',
-		subTitle: 'Quick product validation in your browser',
-		description: `Get Amazon Product Research capabilities inside the Sellgo Chrome
-		Extension, helps give Amazon sellers a quick validation of a market while they browse 
-		through Amazon.`,
-		linkLabel: 'More about Browser Extension',
-		navigateTo: '/extension',
-		imageUrl: '/extension_1.png'
 	}
 ];
 
