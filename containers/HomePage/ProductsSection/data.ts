@@ -7,14 +7,10 @@ export const productsDetails: {
 	{
 		title: 'Chorus',
 		action: '',
-		icon: '/products-products.svg',
+		icon: '/products-chorus.svg',
 		features: [
 			{
 				name: 'Make every data insight count with statistical intelligence.',
-				link: '/'
-			},
-			{
-				name: 'Learn more about Chorus',
 				link: '/'
 			}
 		]
@@ -22,14 +18,10 @@ export const productsDetails: {
 	{
 		title: 'Analyze',
 		action: '',
-		icon: '/products-competition.svg',
+		icon: '/products-analyze.svg',
 		features: [
 			{
 				name: 'Increase conversion with data-powered seller insight.',
-				link: '/'
-			},
-			{
-				name: 'Learn more about Analyze',
 				link: '/'
 			}
 		]
@@ -37,14 +29,10 @@ export const productsDetails: {
 	{
 		title: 'Engage',
 		action: '',
-		icon: '/products-automate.svg',
+		icon: '/products-engage.svg',
 		features: [
 			{
 				name: 'Reach more sellers with insight-driven phone, email and address automation.',
-				link: '/'
-			},
-			{
-				name: 'Learn more about Engage',
 				link: '/'
 			}
 		]

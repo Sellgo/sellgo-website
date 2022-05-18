@@ -11,7 +11,7 @@ const TrustedBySection: React.FC<Props> = () => {
 	return (
 		<section className={styles.trustedBySectionWrapper}>
 			<div className={`page-container ${styles.trustedBySection}`}>
-				<h2>Trusted by Many Entrepreneurs at Amazon including</h2>
+				<h2>Trusted by many agencies including</h2>
 				<div className={styles.socialProofIcons}>
 					<div>
 						<Image

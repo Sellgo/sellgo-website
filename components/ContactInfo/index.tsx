@@ -5,6 +5,7 @@ import Modal from 'react-modal';
 import styles from './index.module.scss';
 
 import DemoForm from '../../containers/Demo/DemoForm';
+import SellerListForm from '../../containers/Demo/SellerListForm';
 
 interface Props {
 	className?: string;

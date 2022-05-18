@@ -27,11 +27,10 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
-					<h2>Research market and competitor&apos;s product in seconds.</h2>
+					<h2>Take control of your leads and own your goals.</h2>
 					<p>
-						Sellgo will help you find the right markets and the right products
-						to sell, with access to daily sales data you need to make informed
-						decisions.
+						Access and analyze Amazon sellers growth across essential performing metrics,
+						engage with sales calls, email and phone outreach, and business website.
 					</p>
 				</div>
 
