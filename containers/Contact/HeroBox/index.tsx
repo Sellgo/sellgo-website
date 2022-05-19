@@ -49,6 +49,7 @@ const HeroBox: React.FC<Props> = () => {
 							>
 								Request a demo
 						</CTAButton>*
+						
 						<button
 							className={styles.demoButton}
 							onClick={() => setIsDemoFormOpen(true)}
