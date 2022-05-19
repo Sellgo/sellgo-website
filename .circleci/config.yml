@@ -7,8 +7,7 @@ workflows:
   build-and-deploy-dev:
     jobs:
       - aws-ecr/build-and-push-image:
-          machine:
-            image: ubuntu-2004:202201-02
+          executor: machine
           context: development
           filters:
             branches:
@@ -20,8 +19,6 @@ workflows:
           tag: "${CIRCLE_SHA1}"
           extra-build-args: '--build-arg MODE=local'
       - aws-ecs/deploy-service-update:
-          machine:
-            image: ubuntu-2004:202201-02
           context: development
           filters:
             branches:
@@ -35,8 +32,7 @@ workflows:
   build-and-deploy-prod:
     jobs:
       - aws-ecr/build-and-push-image:
-          machine:
-            image: ubuntu-2004:202201-02
+          executor: machine
           context: production
           filters:
             branches:
@@ -48,8 +44,6 @@ workflows:
           tag: "${CIRCLE_SHA1}"
           extra-build-args: '--build-arg MODE=production'
       - aws-ecs/deploy-service-update:
-          machine:
-            image: ubuntu-2004:202201-02
           context: production
           filters:
             branches:
@@ -60,3 +54,8 @@ workflows:
           cluster-name: "sellgo-ecs"
           family: "sellgo-website"
           container-image-name-updates: "container=sellgo-website,tag=${CIRCLE_SHA1},container=sellgo-website-nginx,image=caprover/nginx-reverse-proxy"
+executors:
+  machine:
+    machine:
+      docker_layer_caching: false
+      image: ubuntu-2004:202201-02
