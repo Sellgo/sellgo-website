@@ -26,13 +26,13 @@ export const payMonthlyAndAnnualPlan = [
 		body: [
 			[
 				'Seller Database/ map',
-				'100 sellers/ mo',
-				'1,500 sellers/ mo',
+				'300 sellers/ mo',
+				'2,000 sellers/ mo',
 				'10,000 sellers/ mo*'
 			],
 			[
 				'Seller Map top view',
-				'10 sellers',
+				'100 sellers',
 				'10,000 sellers',
 				'20,000 sellers*'
 			],
@@ -47,7 +47,7 @@ export const payMonthlyAndAnnualPlan = [
 			['Show seller by brand', '-', '✓', '✓'],
 			['Show seller by category', '-', '✓', '✓']
 		]
-	},
+	}/*,
 	{
 		header: ['Product Research', 'Starter', 'Professional', 'Team'],
 		body: [
@@ -76,7 +76,7 @@ export const payMonthlyAndAnnualPlan = [
 			['Zapier integration', '-', '-', '✓'],
 			['Drop/ raise trigger', '-', '-', '✓']
 		]
-	}
+	}*/
 ];
 
 export const pay1DollarPlan = [

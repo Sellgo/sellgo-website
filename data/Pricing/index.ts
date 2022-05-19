@@ -4,7 +4,7 @@ import { KeyValuePair } from '../../interfaces';
 import { pay1DollarPlan, payMonthlyAndAnnualPlan } from './allFeaturesTable';
 
 export const allPlansFeatureMapper: KeyValuePair = {
-	'Monthly and annual pricing plans': payMonthlyAndAnnualPlan,
+	'Pricing & Plans': payMonthlyAndAnnualPlan,
 	'Pay $1 for a day': pay1DollarPlan
 };
 

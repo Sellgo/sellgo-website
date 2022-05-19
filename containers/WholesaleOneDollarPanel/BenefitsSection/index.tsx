@@ -13,25 +13,25 @@ const BenefitsSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.benefitsSectionWrapper}>
 			<div className={`big-page-container ${styles.benefitsSection}`}>
-				<h2 className="secondary-heading">You May Also Like ...</h2>
+				<h2 className="secondary-heading">Get premium apps for more profitable conversations</h2>
 
 				<div className={styles.benefitsCardWrapper}>
 					<div className={styles.benefitsCard}>
-						<Image src="/dusIcon.svg" width={50} height={35} />
-						<h3>Out of stock?</h3>
-						<p>Am I currently at risk of stockout?</p>
+						<Image src="/products-chorus.svg" width={50} height={35} />
+						<h3>Chorus</h3>
+						<p>Make every data insight count with statistical intelligence.</p>
 						<p></p>
 					</div>
 					<div className={styles.benefitsCard}>
-						<Image src="/gantttrackIcon.svg" width={50} height={35} />
-						<h3>Next order?</h3>
-						<p>When can I place my next inventory order?</p>
+						<Image src="/products-analyze.svg" width={50} height={35} />
+						<h3>Analyze</h3>
+						<p>Increase conversion with data-powered seller insight.</p>
 						<p></p>
 					</div>
 					<div className={styles.benefitsCard}>
-						<Image src="/analyzeIcon.svg" width={50} height={35} />
-						<h3>Sales?</h3>
-						<p>How is my sales projection like?</p>
+						<Image src="/products-engage.svg" width={50} height={35} />
+						<h3>Engage</h3>
+						<p>Reach more sellers with insight-driven phone, email and address automation.</p>
 						<p></p>
 					</div>
 				</div>

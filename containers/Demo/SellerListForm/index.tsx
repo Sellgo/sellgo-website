@@ -208,10 +208,11 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 			{showDemoForm && (
 				<div className={styles.demoPage}>
 					<form className={styles.demoPageForm} onSubmit={handleSubmit}>
-						<h2>See how Sellgo can work for you</h2>
+						<h2>Looking for an instant seller list?</h2>
 						<p>
-							Leave a few details below and we&apos;ll connect you with a Sellgo
-							expert who can show you how Sellgo can help your business.
+							We&apos;re the only source for direct seller contact information and
+							advanced list filtering, so you can reach to your leads quickly and
+							accurately.
 						</p>
 						<div className={styles.inputControlWrapper}>
 							<FormInput
@@ -357,6 +358,10 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 						</p>
 					</form>
 					<div className={styles.existingBrands}>
+					<p>
+							Many brands choose Sellgo to achieve their outreach campaign, 
+							leads engagement and closing the deals.
+						</p>
 						<div className={styles.socialProofIcons}>
 							<Image
 								src={'/Poshmark.png'}
@@ -417,8 +422,8 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 							/>
 						</div>
 						<p>
-							Many brands choose Sellgo to deliver their remarkable growth for
-							their online retail businesses.
+							Many brands choose Sellgo to achieve their outreach campaign, 
+							leads engagement and closing the deals.
 						</p>
 					</div>
 				</div>
