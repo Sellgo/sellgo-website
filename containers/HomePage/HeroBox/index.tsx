@@ -41,7 +41,7 @@ const HeroBox = () => {
 			window.open(url, '_blank');
 		} else {
 			setEmailErr(true);
-			setEmailErrMsg('Please enter a valid email address.');
+			setEmailErrMsg('Please enter a valid business email address.');
 		}
 	};
 
@@ -124,7 +124,7 @@ const HeroBox = () => {
 								type={'text'}
 								name={'Email'}
 								value={email}
-								placeholder="Email address"
+								placeholder="Business email"
 								className={styles.formInput}
 								onChange={(e) => setEmail(e.target.value)}
 								autoComplete="off"

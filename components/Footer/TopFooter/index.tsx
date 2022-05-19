@@ -39,6 +39,21 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Software</li>
 				<li className="footerNavigationLinks">
+					<Link href="/seller-database" passHref>
+						<a>Seller Database</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/seller-finder" passHref>
+						<a>Seller Finder</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/seller-map" passHref>
+						<a>Seller Map</a>
+					</Link>
+				</li>
+				{/*<li className="footerNavigationLinks">
 					<Link href="/keyword-finder" passHref>
 						<a>Keyword Finder</a>
 					</Link>
@@ -57,41 +72,11 @@ const TopFooter: React.FC<Props> = () => {
 					<Link href="/extension" passHref>
 						<a>Extension</a>
 					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/seller-database" passHref>
-						<a>Seller Database</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/seller-finder" passHref>
-						<a>Seller Finder</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/seller-map" passHref>
-						<a>Seller Map</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/search-management" passHref>
-						<a>Search Management</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/profit-finder" passHref>
-						<a>Profit Finder</a>
-					</Link>
-				</li>
+	</li>*/}
 			</ul>
 
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Pricing</li>
-				<li className="footerNavigationLinks">
-					<Link href="/pricing?type=wholesale" passHref>
-						<a>Free tools </a>
-					</Link>
-				</li>
 				<li className="footerNavigationLinks">
 					<Link href="/pricing" passHref>
 						<a>Monthly and annual plans</a>

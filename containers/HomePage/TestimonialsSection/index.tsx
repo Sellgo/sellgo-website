@@ -11,24 +11,27 @@ const TestimonialsSection: React.FC<Props> = () => {
 	const testimonials = [
 		<div className={styles.testimonialTextWrapper}>
 			<p>
-				Sellgo is probably the most extensive seller leads provider.
+				We used Sellgo database to contact the top 5% of Amazon sellers. We sent 
+				personalized outreach letters and kept selling until we got a response. A lot of
+				sellers were happy to see us, and we also acquired several long-term partners from 
+				the list for our business.
 			</p>
 
 			<div className={styles.testimonialAuthor}>
-				<img src="andrewErickson.png" alt="author" />
+				{/*<img src="andrewErickson.png" alt="author" />*/}
 				<div className={styles.authorDetails}>
-					<span className={styles.name}>Andrew Erickson</span>
+					<span className={styles.name}>Dustin J.</span>
 					<span className={styles.title}>
-						CEO of Private Label Brand, Titan leader
+						Amazon brand agency
 					</span>
-					<a
+					{/*<a
 						className={styles.email}
 						href="https://zonconpodcast.com/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						zonconpodcast.com
-					</a>
+					</a>*/}
 				</div>
 			</div>
 		</div>
@@ -52,12 +55,13 @@ const TestimonialsSection: React.FC<Props> = () => {
 	// ];
 	return (
 		<section className={styles.testimonialsSection}>
+					<h1>
+						Your success fuels ours
+					</h1>
 			<div className={`page-container ${styles.testimonialsSectionWrapper}`}>
 				<div className={styles.leadingBrands}>
 					<h2>
-						Trusted by many companies
-						<br />
-						selling at Amazon including
+					Trusted by many agencies including
 					</h2>
 					<div className={styles.socialProofIcons}>
 						<Image

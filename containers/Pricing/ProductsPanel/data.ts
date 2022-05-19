@@ -2,20 +2,20 @@
 import { PlanTypes } from '../../../interfaces/Pricing';
 
 export const planTypes: PlanTypes[] = [
-	{
+	/*{
 		name: 'Free Tools',
 		isNew: false
 	},
 	{
 		name: 'Monthly and annual plans',
 		isNew: false
-	}
+	}*/
 ];
 
 export const plansAndProductsDetails = [
 	{
-		planName: 'Monthly and annual pricing plans',
-		summary: `Seller directories app. Chrome extension. We've got your back.`,
+		planName: 'Pricing & Plans',
+		summary: `Sellgo offers flexible packages across our portfolio of data-driven solutions and premium applications.`,
 
 		infoAlertMessage: {
 			monthly: {

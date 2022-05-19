@@ -27,11 +27,10 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 		>
 			<div className={styles.infoWrapper}>
 				<div className={styles.infoWrapper__Desc}>
-					<h2>Research market and competitor&apos;s product in seconds.</h2>
+					<h2>Take control of your leads and own your goals.</h2>
 					<p>
-						Sellgo will help you find the right markets and the right products
-						to sell, with access to daily sales data you need to make informed
-						decisions.
+						Access and analyze Amazon sellers growth across essential performing metrics,
+						engage with sales calls, email and phone outreach, and business website.
 					</p>
 				</div>
 
@@ -52,58 +51,6 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 			</div>
 
 			<div className={styles.detailsListWrapper}>
-				<a
-					href="/extension"
-					className={styles.detailsList}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Browser Extension
-				</a>
-
-				{showAllFeatures && (
-					<a
-						href="/search-management"
-						className={styles.detailsList}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<span>
-							<Check fill="#3b4557" width={10} height={8} />
-						</span>
-						Search Management
-					</a>
-				)}
-
-				<a
-					href="/profit-finder"
-					className={styles.detailsList}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Profit Finder
-				</a>
-
-				{showAllFeatures && (
-					<a
-						href="/search-management"
-						className={styles.detailsList}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<span>
-							<Check fill="#3b4557" width={10} height={8} />
-						</span>
-						Search Management
-					</a>
-				)}
-
 				<a
 					href="/seller-database"
 					className={styles.detailsList}
@@ -143,44 +90,6 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 						Seller Finder
 					</a>
 				)}
-
-				<a
-					href="/keyword-database"
-					className={styles.detailsList}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Keyword Database
-				</a>
-
-				{showAllFeatures && (
-					<a
-						href="/keyword-finder"
-						className={styles.detailsList}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<span>
-							<Check fill="#3b4557" width={10} height={8} />
-						</span>
-						Keyword Finder
-					</a>
-				)}
-
-				<a
-					href="/product-rank-tracker"
-					className={styles.detailsList}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<span>
-						<Check fill="#3b4557" width={10} height={8} />
-					</span>
-					Product Rank Tracker
-				</a>
 
 				<button
 					className={styles.viewAllFeatures}

@@ -4,6 +4,15 @@
 	padding: 10rem 0;
 	background: $prim_white;
 	width: 100%;
+
+	h1 {
+		width: 100%;
+		color: $black_1;
+		text-align: center;
+		font-size: $fontsize_title_46;
+		font-weight: $fontweight_bold;
+		margin-bottom: 7rem;
+	}
 }
 
 .testimonialsSectionWrapper {
@@ -16,6 +25,15 @@
 
 	.leadingBrands {
 		width: 35%;
+
+		h2 {
+			width: 100%;
+			color: $black_1;
+			text-align: center;
+			font-size: $fontsize_content_16;
+			font-weight: $fontweight_medium;
+			margin-bottom: 3rem;
+		}
 	}
 
 	.carousel {
@@ -62,8 +80,8 @@
 	justify-content: center;
 
 	p {
-		font-size: 20px;
-		font-weight: $fontweight_semibold;
+		font-size: 14px;
+		font-weight: $fontweight_medium;
 		color: $black_1;
 		text-align: left;
 	}
