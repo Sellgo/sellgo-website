@@ -25,7 +25,7 @@ export const payMonthlyAndAnnualPlan = [
 		header: ['Seller Research', 'Starter', 'Professional', 'Team'],
 		body: [
 			[
-				'Seller Database/ map',
+				'Seller Database or Seller Map',
 				'1,000 sellers/ mo',
 				'5,000 sellers/ mo',
 				'20,000 sellers/ mo*'
