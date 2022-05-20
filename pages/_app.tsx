@@ -58,6 +58,12 @@ function App({ Component, pageProps }: AppProps) {
 			router.events.off('routeChangeComplete', handleRouteChange);
 		};
 	}, []);
+	
+	/* Verification for google ads */
+	const path = router.pathname;
+	if (path.includes("vf264iiluv3an5ba50x5oh1zvhu9sy")) {
+		return <Component/>;
+	}
 
 	return (
 		<ApolloProvider client={client}>
