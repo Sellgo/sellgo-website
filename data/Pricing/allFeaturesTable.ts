@@ -26,9 +26,9 @@ export const payMonthlyAndAnnualPlan = [
 		body: [
 			[
 				'Seller Database/ map',
-				'300 sellers/ mo',
-				'2,000 sellers/ mo',
-				'10,000 sellers/ mo*'
+				'1,000 sellers/ mo',
+				'5,000 sellers/ mo',
+				'20,000 sellers/ mo*'
 			],
 			[
 				'Seller Map top view',
@@ -36,14 +36,14 @@ export const payMonthlyAndAnnualPlan = [
 				'10,000 sellers',
 				'20,000 sellers*'
 			],
-			[`Extract Seller's product`, '20 products/ day', '✓', '✓'],
+			[`Extract Seller's product`, '100 products/ day', '5,000 products/ mo', '20,000 products/ mo'],
 			[
 				`Extract other sellers by seller's products`,
-				'20 sellers/ day',
-				'✓',
-				'✓'
+				'1,000 sellers/ mo',
+				'5,000 sellers/ mo',
+				'20,000 sellers/ mo'
 			],
-			['Export Seller Database', '-', 'Only annual plan', 'Only annual plan'],
+			['Export Seller Database', '-', '✓', '✓'],
 			['Show seller by brand', '-', '✓', '✓'],
 			['Show seller by category', '-', '✓', '✓']
 		]
