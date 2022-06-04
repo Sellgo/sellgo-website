@@ -251,7 +251,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								${styles.formInput__long}
 							`}
 								label=""
-								placeholder="Email*"
+								placeholder="Business email*"
 								id="email"
 								type="email"
 								name="email"

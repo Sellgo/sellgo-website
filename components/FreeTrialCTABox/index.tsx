@@ -37,7 +37,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 					<CTAButton
 						type={isPrimary ? 'primary' : 'secondary'}
 						size="medium"
-						navigateTo={freeTrialLink}
+						navigateTo={createFreeTrialLink()}
 						asExternal
 						newTarget
 						className={styles.freeTrialCTA}

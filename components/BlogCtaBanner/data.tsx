@@ -17,7 +17,7 @@ export const CTA_1A = {
 		</p>
 	),
 	linkLabel: 'Try for FREE',
-	link: `${AppConfig.APP_URL}/signup`
+	link: `/`
 };
 
 export const CTA_1B = {
@@ -36,5 +36,5 @@ export const CTA_1B = {
 		</p>
 	),
 	linkLabel: 'Try for FREE',
-	link: `${AppConfig.APP_URL}/signup`
+	link: `/`
 };

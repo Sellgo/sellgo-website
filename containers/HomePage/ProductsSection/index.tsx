@@ -16,6 +16,7 @@ import SellerListForm from '../../Demo/SellerListForm';
 
 /* Utils */
 import { createCheckoutLink } from '../../../utils/Referral';
+import { createFreeTrialLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -58,14 +59,14 @@ const ProductsSection: React.FC<Props> = () => {
 					type="primary"
 					variant="rainbow"
 					size="medium"
-					navigateTo={checkoutLink}
+					navigateTo={createFreeTrialLink()}
 					asExternal
 					newTarget
 					className={styles.pricingButton}
 				>
 					Get started free today
 				</CTAButton>
-				<p>Try it free. No credit card required. Instant set-up.</p>
+				<p>Free forever. No credit card required. Instant access.</p>
 				<button
 					className={styles.textButton}
 					onClick={() => setIsDemoFormOpen(true)}
