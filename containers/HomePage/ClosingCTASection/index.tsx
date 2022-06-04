@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
+import { createFreeTrialLink } from '../../../utils/Referral';
 
 /* Utils */
 import { createCheckoutLink } from '../../../utils/Referral';
@@ -33,7 +34,7 @@ const ClosingCTASection = () => {
 							type="primary"
 							size="medium"
 							variant="white"
-							navigateTo={checkoutLink}
+							navigateTo={createFreeTrialLink()}
 							asExternal
 							newTarget
 							className={styles.closingCTA}

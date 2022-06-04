@@ -7,6 +7,7 @@ import styles from './index.module.scss';
 /* Components */
 import ProductCard from '../../../components/ProductCard';
 import CTAButton from '../../../components/CTAButton';
+import { createFreeTrialLink } from '../../../utils/Referral';
 
 /* Data */
 import { newBenefitsData } from './data';
@@ -42,12 +43,14 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					type="primary"
 					size="medium"
 					variant="rainbow"
-					navigateTo="/pricing?type=monthly-and-annual-plans"
+					navigateTo={createFreeTrialLink()}
+					asExternal
+					newTarget
 					className={styles.newBenefitsCTA}
 				>
-					Find sellers with Sellgo today
+					Analyze sellers with free account
 				</CTAButton>
-				<p>Try it free. No credit card required. Instant set-up.</p>
+				<p>Free forever. No credit card required. Instant access.</p>
 			</div>
 		</section>
 	);

@@ -1,0 +1,206 @@
+@import '../../../styles/guidelines';
+
+.closingCTASection {
+	height: 30rem;
+	margin-top: 40rem;
+	background: $black_1;
+	position: relative;
+
+	@media only screen and(max-width: 1080px) {
+		height: 50rem;
+		padding: 5rem 0;
+	}
+}
+
+.closingCTA {
+	z-index: 1;
+	position: relative;
+}
+
+.closingCTABox {
+	position: absolute;
+	top: -200px;
+	padding: 5rem;
+	border: 1px solid $grey_6;
+	border-radius: 50px;
+	width: 100%;
+	background: $prim_white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	h2 {
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_bold;
+
+		@media only screen and(max-width: 1080px) {
+			font-size: $fontsize_subtitle_24;
+		}
+	}
+
+	p {
+		text-align: left;
+		font-size: $fontsize_content_14;
+		margin-top: 2rem;
+		margin-bottom: 6rem;
+		font-weight: $fontweight_regular;
+		color: $grey_8;
+	}
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+		padding: 5rem;
+	}
+
+	span {
+		text-align: center;
+		font-size: 10px;
+		color: $second_grey;
+		margin-top: 1rem;
+	}
+}
+
+.ctaRow {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 100%;
+
+	.closingCTA {
+		width: 25rem;
+
+		@media only screen and(max-width: 1080px) {
+			width: 100%;
+		}
+	}
+
+	.demoButton {
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: $sellgo_purple;
+		font-size: $fontsize_content_14;
+		margin-left: 3rem;
+		font-weight: $fontweight_medium;
+		@media only screen and(max-width: 1080px) {
+			margin-top: 18px;
+			width: 100%;
+		}
+	}
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+	}
+}
+
+.ctaBox {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	width: 400px;
+	margin-top: 0px;
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.emailSignupBox {
+		width: 100%;
+	}
+
+	.demoButton {
+		width: 180px;
+		margin-left: 20px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: $sellgo_purple;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_medium;
+		margin-bottom: 40px;
+
+		@media only screen and(max-width: 1080px) {
+			margin-top: 3rem;
+			margin-left: 0;
+		}
+	}
+
+	span {
+		font-size: 10px;
+		color: $prim_dark_2;
+		text-align: center;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+	}
+}
+
+.formInput {
+	width: 100%;
+	margin-bottom: 18px;
+
+	@media only screen and(max-width: 750px) {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	input {
+		width: 100%;
+		height: 4rem;
+		background: $prim_white;
+		border: 1px solid $second_silver;
+		border-radius: 3px;
+		color: $prim_dark_2;
+		font-size: $fontsize_content_14;
+		font-family: inherit;
+		padding: 0 1rem;
+		&:focus {
+			outline: 0;
+		}
+
+		&__error {
+			border: 1px solid $system_red;
+		}
+	}
+
+	small {
+		font-size: $fontsize_content_12;
+		color: $system_red;
+	}
+}
+
+.submitButton {
+	cursor: pointer;
+	width: 100%;
+	height: 4.5rem;
+	display: flex;
+	justify-content: center;
+	background: $orange_purple_gradient;
+	align-items: center;
+	border-radius: 7px;
+	color: $prim_white;
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_semibold;
+	border: none;
+	margin: 0 !important;
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: default;
+		pointer-events: none;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}

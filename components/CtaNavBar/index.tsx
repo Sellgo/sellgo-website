@@ -6,6 +6,7 @@ import CTAButton from '../CTAButton';
 
 /* Utils */
 import { createCheckoutLink } from '../../utils/Referral';
+import { createFreeTrialLink } from '../../utils/Referral';
 
 interface Props {
 	showCtaNavBar: boolean;
@@ -38,7 +39,7 @@ const CtaNavBar = (props: Props) => {
 					type="secondary"
 					size="small"
 					variant="rainbow"
-					navigateTo={checkoutLink}
+					navigateTo={createFreeTrialLink()}
 					asExternal
 					newTarget
 					className={styles.ctaButton}
