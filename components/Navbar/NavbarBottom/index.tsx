@@ -11,6 +11,7 @@ import ProductsNavbarExpansion from '../ProductsNavbarExpansion';
 import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
 import AppConfig from '../../../config';
+import { createFreeTrialLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -73,7 +74,7 @@ const NavbarBottom: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo={`${AppConfig.APP_URL}/signup`}
+				navigateTo={createFreeTrialLink()}
 				newTarget
 				asExternal
 				variant="white"

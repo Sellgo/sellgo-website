@@ -9,6 +9,7 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import ProductAccordion from '../../../components/ProductAccordion';
 import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
+import { createFreeTrialLink } from '../../../utils/Referral';
 
 /* Data */
 import { accordionData } from './data';
@@ -38,7 +39,7 @@ const HeroBox: React.FC<Props> = () => {
 				</div>
 				<h1 className={styles.heading}>Quick product validation on browser</h1>
 				<CTAButton
-					navigateTo="/pricing?type=monthly-and-annual-plans"
+					navigateTo={createFreeTrialLink()}
 					type="primary"
 					size="productPageBig"
 					variant="rainbow"

@@ -9,6 +9,7 @@ import NewBenefitsSection from '../../containers/SellerFinderCont/NewBenefitsSec
 import CommonFeaturesSection from '../../containers/SellerFinderCont/CommonFeaturesSection';
 import RecommendationSection from '../../containers/SellerFinderCont/RecommendationSection';
 import FAQSection from '../../containers/SellerFinderCont/FAQSection';
+import NewClosingCTASection from '../../containers/SellerFinderCont/NewClosingCTA';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -46,7 +47,8 @@ const SellerFinderContPage: React.FC<Props> = (props) => {
 			<NewBenefitsSection />
 			<CommonFeaturesSection />
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
-			<RecommendationSection />
+			{/*<RecommendationSection />*/}
+			<NewClosingCTASection />
 		</>
 	);
 };

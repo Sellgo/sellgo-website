@@ -8,6 +8,7 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../../components/CTAButton';
 import SellerListForm from '../../Demo/SellerListForm';
+import { createFreeTrialLink } from '../../../utils/Referral';
 
 /* Utils */
 import { createCheckoutLink } from '../../../utils/Referral';
@@ -31,7 +32,7 @@ const NewClosingCTASection = () => {
 								type="primary"
 								size="medium"
 								variant="rainbow"
-								navigateTo={checkoutLink}
+								navigateTo={createFreeTrialLink()}
 								asExternal
 								newTarget
 								className={styles.closingCTA}
@@ -45,7 +46,7 @@ const NewClosingCTASection = () => {
 								Need seller lists?
 							</button>
 						</div>
-						<span>Try it free. No credit card required. Instant set-up.</span>
+						<span>Free forever. No credit card required. Instant access.</span>
 					</div>
 					<Image src="/closingCtaLaptop.png" width={400} height={250} />
 				</div>

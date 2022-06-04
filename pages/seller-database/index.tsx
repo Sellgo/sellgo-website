@@ -9,6 +9,7 @@ import NewBenefitsSection from '../../containers/SellerDatabaseCont/NewBenefitsS
 import CommonFeaturesSection from '../../containers/SellerDatabaseCont/CommonFeaturesSection';
 import RecommendationSection from '../../containers/SellerDatabaseCont/RecommendationSection';
 import FAQSection from '../../containers/SellerDatabaseCont/FAQSection';
+import NewClosingCTASection from '../../containers/SellerDatabaseCont/NewClosingCTA';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -44,7 +45,8 @@ const SellerDatabaseContPage: React.FC<Props> = (props: Props) => {
 			<NewBenefitsSection />
 			<CommonFeaturesSection />
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
-			<RecommendationSection />
+			{/*<RecommendationSection />*/}
+			<NewClosingCTASection />
 		</>
 	);
 };

@@ -11,6 +11,7 @@ import CTAButton from '../../../components/CTAButton';
 
 /* Utils */
 import { createCheckoutLink } from '../../../utils/Referral';
+import { createFreeTrialLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -149,7 +150,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 					type="primary"
 					variant="white"
 					size="medium"
-					navigateTo={checkoutLink}
+					navigateTo={createFreeTrialLink()}
 					asExternal
 					newTarget
 					className={styles.pricingButton}
