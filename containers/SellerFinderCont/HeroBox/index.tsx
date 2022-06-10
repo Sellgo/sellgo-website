@@ -40,7 +40,7 @@ const HeroBox: React.FC<Props> = () => {
 					Track top FBA competitors and best sellers
 				</h1>
 				<CTAButton
-					navigateTo={createFreeTrialLink()}
+					navigateTo="/"
 					type="primary"
 					size="productPageBig"
 					variant="rainbow"

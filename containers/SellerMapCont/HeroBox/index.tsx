@@ -38,7 +38,7 @@ const HeroBox: React.FC<Props> = () => {
 				</div>
 				<h1 className={styles.heading}>Interactive Amazon Seller Map</h1>
 				<CTAButton
-					navigateTo={createFreeTrialLink()}
+					navigateTo="/"
 					type="primary"
 					size="productPageBig"
 					variant="rainbow"
