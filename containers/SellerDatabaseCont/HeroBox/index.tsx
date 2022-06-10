@@ -40,7 +40,7 @@ const HeroBox: React.FC<Props> = () => {
 					The treasure database of Amazon sellers
 				</h1>
 				<CTAButton
-					navigateTo={createFreeTrialLink()}
+					navigateTo="/"
 					type="primary"
 					size="productPageBig"
 					variant="rainbow"
@@ -48,7 +48,7 @@ const HeroBox: React.FC<Props> = () => {
 					newTarget
 					className={styles.heroBoxCTA}
 				>
-					Create free accountll
+					Create free account
 				</CTAButton>
 				<p>
 					Sellgo is the seller database platform of choice for thousands of top
