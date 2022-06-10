@@ -39,7 +39,7 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 						type={isPrimary ? 'primary' : 'secondary'}
 						size="medium"
 						variant="purplePinkRainbow"
-						navigateTo={signupLink}
+						navigateTo="/"
 						asExternal
 						newTarget
 						className={styles.dollarPlanCTA}

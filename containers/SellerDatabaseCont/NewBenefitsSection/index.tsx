@@ -43,7 +43,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					type="primary"
 					size="medium"
 					variant="rainbow"
-					navigateTo={createFreeTrialLink()}
+					navigateTo="/"
 					asExternal
 					newTarget
 					className={styles.newBenefitsCTA}
