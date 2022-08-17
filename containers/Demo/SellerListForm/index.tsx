@@ -42,14 +42,14 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		sellerAmazonMarketplace: [],
 		sellerDominantProduct: [],
 		sellerDatapoint: [],
-		sellerRevenue: [],
+		sellerRevenue: []
 	});
 
 	const [formDataError, setFormDataError] = useState({
 		firstNameErr: false,
 		lastNameErr: false,
 		emailErr: false,
-		messageErr: false,
+		messageErr: false
 	});
 
 	const [openSubmitConfirm, setOpenSubmitConfirm] = useState(false);
@@ -88,12 +88,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		sellerRevenue
 	} = formData;
 
-	const {
-		emailErr,
-		firstNameErr,
-		lastNameErr,
-		messageErr,
-	} = formDataError;
+	const { emailErr, firstNameErr, lastNameErr, messageErr } = formDataError;
 
 	/* Mount the react modal */
 	useEffect(() => {
@@ -169,7 +164,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 			sellerAmazonMarketplace: [],
 			sellerDominantProduct: [],
 			sellerDatapoint: [],
-			sellerRevenue: [],
+			sellerRevenue: []
 		});
 	};
 
@@ -179,10 +174,22 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		formData.append('email', email);
 		formData.append('firstname', firstName);
 		formData.append('lastname', lastName);
-		formData.append('seller_list_business_model', sellerBusinessModel.join(','));
-		formData.append('seller_list_country_of_origin', sellerCountryOfOrigin.join(','));
-		formData.append('seller_list_marketplace', sellerAmazonMarketplace.join(','));
-		formData.append('seller_list_dominant_product_category', sellerDominantProduct.join(','));
+		formData.append(
+			'seller_list_business_model',
+			sellerBusinessModel.join(',')
+		);
+		formData.append(
+			'seller_list_country_of_origin',
+			sellerCountryOfOrigin.join(',')
+		);
+		formData.append(
+			'seller_list_marketplace',
+			sellerAmazonMarketplace.join(',')
+		);
+		formData.append(
+			'seller_list_dominant_product_category',
+			sellerDominantProduct.join(',')
+		);
 		formData.append('seller_list_datapoint', sellerDatapoint.join(','));
 		formData.append('seller_list_annual_revenue', sellerRevenue.join(','));
 		formData.append('seller_list_message', message);
@@ -210,9 +217,9 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 					<form className={styles.demoPageForm} onSubmit={handleSubmit}>
 						<h2>Looking for an instant seller list?</h2>
 						<p>
-							We&apos;re the only source for direct seller contact information and
-							advanced list filtering, so you can reach to your leads quickly and
-							accurately.
+							We&apos;re the only source for direct seller contact information
+							and advanced list filtering, so you can reach to your leads
+							quickly and accurately.
 						</p>
 						<div className={styles.inputControlWrapper}>
 							<FormInput
@@ -337,11 +344,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 						<button
 							className={`ctabutton ctabutton--primary ctabutton--medium ${styles.submitButton}`}
 							type="submit"
-							disabled={
-								firstNameErr ||
-								lastNameErr ||
-								emailErr
-							}
+							disabled={firstNameErr || lastNameErr || emailErr}
 						>
 							Submit
 						</button>
@@ -358,7 +361,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 						</p>
 					</form>
 					<div className={styles.existingBrands}>
-					<p>
+						<p>
 							Many brands choose Sellgo to achieve their outreach campaign,
 							leads engagement and closing the deals.
 						</p>

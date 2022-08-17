@@ -14,7 +14,7 @@ export const payMonthlyAndAnnualPlan = [
 		body: [
 			['Competitor', '✓', '', ''],
 			['Reviewer', '✓', '', ''],
-			['Influencer', '✓', '✓', ''],			
+			['Influencer', '✓', '✓', ''],
 			['Agency', '✓', '✓', '✓'],
 			['Enabler', '✓', '✓', '✓'],
 			['Aggregator', '✓', '✓', '✓'],
@@ -36,7 +36,12 @@ export const payMonthlyAndAnnualPlan = [
 				'10,000 sellers',
 				'20,000 sellers*'
 			],
-			[`Extract Seller's product`, '100 products/ mo', '5,000 products/ mo', '20,000 products/ mo'],
+			[
+				`Extract Seller's product`,
+				'100 products/ mo',
+				'5,000 products/ mo',
+				'20,000 products/ mo'
+			],
 			[
 				`Extract other sellers by seller's products`,
 				'1,000 sellers/ mo',
@@ -47,7 +52,7 @@ export const payMonthlyAndAnnualPlan = [
 			['Show seller by brand', '-', '✓', '✓'],
 			['Show seller by category', '-', '✓', '✓']
 		]
-	}/* ,
+	} /* ,
 	{
 		header: ['Product Research', 'Starter', 'Professional', 'Team'],
 		body: [

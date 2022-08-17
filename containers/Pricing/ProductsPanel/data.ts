@@ -88,7 +88,7 @@ export const plansAndProductsDetails = [
 						featuresIncluded: [
 							'Advanced seller search with accurate contact data',
 							'Full use of Seller Database/ Map',
-							'Seller Map top view 20,000 sellers*',
+							'Seller Map top view 20,000 sellers*'
 						]
 					}
 				]
