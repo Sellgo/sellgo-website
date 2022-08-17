@@ -187,7 +187,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		formData.append('seller_list_annual_revenue', sellerRevenue.join(','));
 		formData.append('seller_list_message', message);
 		formData.append('is_sellgo_seller_list_requested', 'true');
-		
+
 		try {
 			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
 			const response = await axios.post(URL, formData);
@@ -266,8 +266,8 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								className={styles.checkboxDropdown}
 								label="Seller Business Model"
 								placeholder="Business Model"
-								filterOptions={SELLER_BUSINESS_MODEL_OPTIONS} 
-								selectedValues={sellerBusinessModel} 
+								filterOptions={SELLER_BUSINESS_MODEL_OPTIONS}
+								selectedValues={sellerBusinessModel}
 								name="sellerBusinessModel"
 								handleChange={handleChange}
 							/>
@@ -275,26 +275,26 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								className={styles.checkboxDropdown}
 								label="Seller Country Of Origin"
 								placeholder="Country of Origin"
-								filterOptions={SELLER_COUNTRY_OPTIONS} 
-								selectedValues={sellerCountryOfOrigin} 
+								filterOptions={SELLER_COUNTRY_OPTIONS}
+								selectedValues={sellerCountryOfOrigin}
 								name="sellerCountryOfOrigin"
-								handleChange={handleChange}			
+								handleChange={handleChange}
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
 								label="Amazon Marketplace"
 								placeholder="Marketplace"
-								filterOptions={SELLER_MARKETPLACE_OPTIONS} 
-								selectedValues={sellerAmazonMarketplace} 
+								filterOptions={SELLER_MARKETPLACE_OPTIONS}
+								selectedValues={sellerAmazonMarketplace}
 								name="sellerAmazonMarketplace"
-								handleChange={handleChange}			
+								handleChange={handleChange}
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
 								label="Dominant Product Category"
 								placeholder="Dominant Product Category"
-								filterOptions={SELLER_DOMINANT_PRODUCT_CATEGORY_OPTIONS} 
-								selectedValues={sellerDominantProduct} 
+								filterOptions={SELLER_DOMINANT_PRODUCT_CATEGORY_OPTIONS}
+								selectedValues={sellerDominantProduct}
 								name="sellerDominantProduct"
 								handleChange={handleChange}
 							/>
@@ -302,19 +302,19 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								className={styles.checkboxDropdown}
 								label="Seller Datapoint"
 								placeholder="Datapoint"
-								filterOptions={SELLER_DATAPOINT_OPTIONS} 
-								selectedValues={sellerDatapoint} 
+								filterOptions={SELLER_DATAPOINT_OPTIONS}
+								selectedValues={sellerDatapoint}
 								name="sellerDatapoint"
-								handleChange={handleChange}	
+								handleChange={handleChange}
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
 								label="Seller Annual Revenue"
 								placeholder="Annual Revenue"
-								filterOptions={SELLER_ANNUAL_REVENUE_OPTIONS} 
-								selectedValues={sellerRevenue} 
+								filterOptions={SELLER_ANNUAL_REVENUE_OPTIONS}
+								selectedValues={sellerRevenue}
 								name="sellerRevenue"
-								handleChange={handleChange}		
+								handleChange={handleChange}
 							/>
 							<FormInput
 								className={`
@@ -359,7 +359,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 					</form>
 					<div className={styles.existingBrands}>
 					<p>
-							Many brands choose Sellgo to achieve their outreach campaign, 
+							Many brands choose Sellgo to achieve their outreach campaign,
 							leads engagement and closing the deals.
 						</p>
 						<div className={styles.socialProofIcons}>
@@ -422,7 +422,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 							/>
 						</div>
 						<p>
-							Many brands choose Sellgo to achieve their outreach campaign, 
+							Many brands choose Sellgo to achieve their outreach campaign,
 							leads engagement and closing the deals.
 						</p>
 					</div>

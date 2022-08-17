@@ -18,20 +18,20 @@ const TestimonialsSection: React.FC<Props> = () => {
 			</p>
 
 			<div className={styles.testimonialAuthor}>
-				{/*<img src="andrewErickson.png" alt="author" />*/}
+				{/* <img src="andrewErickson.png" alt="author" /> */}
 				<div className={styles.authorDetails}>
 					<span className={styles.name}>Dustin J.</span>
 					<span className={styles.title}>
 						Amazon brand agency
 					</span>
-					{/*<a
+					{/* <a
 						className={styles.email}
 						href="https://zonconpodcast.com/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						zonconpodcast.com
-					</a>*/}
+					</a> */}
 				</div>
 			</div>
 		</div>

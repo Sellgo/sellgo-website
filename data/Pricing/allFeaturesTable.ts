@@ -47,7 +47,7 @@ export const payMonthlyAndAnnualPlan = [
 			['Show seller by brand', '-', '✓', '✓'],
 			['Show seller by category', '-', '✓', '✓']
 		]
-	}/*,
+	}/* ,
 	{
 		header: ['Product Research', 'Starter', 'Professional', 'Team'],
 		body: [
@@ -76,7 +76,7 @@ export const payMonthlyAndAnnualPlan = [
 			['Zapier integration', '-', '-', '✓'],
 			['Drop/ raise trigger', '-', '-', '✓']
 		]
-	}*/
+	} */
 ];
 
 export const pay1DollarPlan = [

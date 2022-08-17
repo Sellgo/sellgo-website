@@ -47,7 +47,7 @@ const SellerFinderContPage: React.FC<Props> = (props) => {
 			<NewBenefitsSection />
 			<CommonFeaturesSection />
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
-			{/*<RecommendationSection />*/}
+			{/* <RecommendationSection /> */}
 			<NewClosingCTASection />
 		</>
 	);

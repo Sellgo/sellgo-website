@@ -122,6 +122,10 @@
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_content_16;
 	margin: 3rem auto;
+
+  @media screen and (max-width: 480px) {
+    width: 16em;
+  }
 }
 
 .tableCardCTA {
