@@ -42,14 +42,14 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		sellerAmazonMarketplace: [],
 		sellerDominantProduct: [],
 		sellerDatapoint: [],
-		sellerRevenue: [],
+		sellerRevenue: []
 	});
 
 	const [formDataError, setFormDataError] = useState({
 		firstNameErr: false,
 		lastNameErr: false,
 		emailErr: false,
-		messageErr: false,
+		messageErr: false
 	});
 
 	const [openSubmitConfirm, setOpenSubmitConfirm] = useState(false);
@@ -88,12 +88,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		sellerRevenue
 	} = formData;
 
-	const {
-		emailErr,
-		firstNameErr,
-		lastNameErr,
-		messageErr,
-	} = formDataError;
+	const { emailErr, firstNameErr, lastNameErr, messageErr } = formDataError;
 
 	/* Mount the react modal */
 	useEffect(() => {
@@ -169,7 +164,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 			sellerAmazonMarketplace: [],
 			sellerDominantProduct: [],
 			sellerDatapoint: [],
-			sellerRevenue: [],
+			sellerRevenue: []
 		});
 	};
 
@@ -179,15 +174,27 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		formData.append('email', email);
 		formData.append('firstname', firstName);
 		formData.append('lastname', lastName);
-		formData.append('seller_list_business_model', sellerBusinessModel.join(','));
-		formData.append('seller_list_country_of_origin', sellerCountryOfOrigin.join(','));
-		formData.append('seller_list_marketplace', sellerAmazonMarketplace.join(','));
-		formData.append('seller_list_dominant_product_category', sellerDominantProduct.join(','));
+		formData.append(
+			'seller_list_business_model',
+			sellerBusinessModel.join(',')
+		);
+		formData.append(
+			'seller_list_country_of_origin',
+			sellerCountryOfOrigin.join(',')
+		);
+		formData.append(
+			'seller_list_marketplace',
+			sellerAmazonMarketplace.join(',')
+		);
+		formData.append(
+			'seller_list_dominant_product_category',
+			sellerDominantProduct.join(',')
+		);
 		formData.append('seller_list_datapoint', sellerDatapoint.join(','));
 		formData.append('seller_list_annual_revenue', sellerRevenue.join(','));
 		formData.append('seller_list_message', message);
 		formData.append('is_sellgo_seller_list_requested', 'true');
-		
+
 		try {
 			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
 			const response = await axios.post(URL, formData);
@@ -210,9 +217,9 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 					<form className={styles.demoPageForm} onSubmit={handleSubmit}>
 						<h2>Looking for an instant seller list?</h2>
 						<p>
-							We&apos;re the only source for direct seller contact information and
-							advanced list filtering, so you can reach to your leads quickly and
-							accurately.
+							We&apos;re the only source for direct seller contact information
+							and advanced list filtering, so you can reach to your leads
+							quickly and accurately.
 						</p>
 						<div className={styles.inputControlWrapper}>
 							<FormInput
@@ -266,8 +273,8 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								className={styles.checkboxDropdown}
 								label="Seller Business Model"
 								placeholder="Business Model"
-								filterOptions={SELLER_BUSINESS_MODEL_OPTIONS} 
-								selectedValues={sellerBusinessModel} 
+								filterOptions={SELLER_BUSINESS_MODEL_OPTIONS}
+								selectedValues={sellerBusinessModel}
 								name="sellerBusinessModel"
 								handleChange={handleChange}
 							/>
@@ -275,26 +282,26 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								className={styles.checkboxDropdown}
 								label="Seller Country Of Origin"
 								placeholder="Country of Origin"
-								filterOptions={SELLER_COUNTRY_OPTIONS} 
-								selectedValues={sellerCountryOfOrigin} 
+								filterOptions={SELLER_COUNTRY_OPTIONS}
+								selectedValues={sellerCountryOfOrigin}
 								name="sellerCountryOfOrigin"
-								handleChange={handleChange}			
+								handleChange={handleChange}
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
 								label="Amazon Marketplace"
 								placeholder="Marketplace"
-								filterOptions={SELLER_MARKETPLACE_OPTIONS} 
-								selectedValues={sellerAmazonMarketplace} 
+								filterOptions={SELLER_MARKETPLACE_OPTIONS}
+								selectedValues={sellerAmazonMarketplace}
 								name="sellerAmazonMarketplace"
-								handleChange={handleChange}			
+								handleChange={handleChange}
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
 								label="Dominant Product Category"
 								placeholder="Dominant Product Category"
-								filterOptions={SELLER_DOMINANT_PRODUCT_CATEGORY_OPTIONS} 
-								selectedValues={sellerDominantProduct} 
+								filterOptions={SELLER_DOMINANT_PRODUCT_CATEGORY_OPTIONS}
+								selectedValues={sellerDominantProduct}
 								name="sellerDominantProduct"
 								handleChange={handleChange}
 							/>
@@ -302,19 +309,19 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								className={styles.checkboxDropdown}
 								label="Seller Datapoint"
 								placeholder="Datapoint"
-								filterOptions={SELLER_DATAPOINT_OPTIONS} 
-								selectedValues={sellerDatapoint} 
+								filterOptions={SELLER_DATAPOINT_OPTIONS}
+								selectedValues={sellerDatapoint}
 								name="sellerDatapoint"
-								handleChange={handleChange}	
+								handleChange={handleChange}
 							/>
 							<CheckboxDropdownInput
 								className={styles.checkboxDropdown}
 								label="Seller Annual Revenue"
 								placeholder="Annual Revenue"
-								filterOptions={SELLER_ANNUAL_REVENUE_OPTIONS} 
-								selectedValues={sellerRevenue} 
+								filterOptions={SELLER_ANNUAL_REVENUE_OPTIONS}
+								selectedValues={sellerRevenue}
 								name="sellerRevenue"
-								handleChange={handleChange}		
+								handleChange={handleChange}
 							/>
 							<FormInput
 								className={`
@@ -337,11 +344,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 						<button
 							className={`ctabutton ctabutton--primary ctabutton--medium ${styles.submitButton}`}
 							type="submit"
-							disabled={
-								firstNameErr ||
-								lastNameErr ||
-								emailErr
-							}
+							disabled={firstNameErr || lastNameErr || emailErr}
 						>
 							Submit
 						</button>
@@ -358,8 +361,8 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 						</p>
 					</form>
 					<div className={styles.existingBrands}>
-					<p>
-							Many brands choose Sellgo to achieve their outreach campaign, 
+						<p>
+							Many brands choose Sellgo to achieve their outreach campaign,
 							leads engagement and closing the deals.
 						</p>
 						<div className={styles.socialProofIcons}>
@@ -422,7 +425,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 							/>
 						</div>
 						<p>
-							Many brands choose Sellgo to achieve their outreach campaign, 
+							Many brands choose Sellgo to achieve their outreach campaign,
 							leads engagement and closing the deals.
 						</p>
 					</div>

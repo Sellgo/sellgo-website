@@ -13,6 +13,7 @@ COPY . .
 COPY --from=deps /app/node_modules ./node_modules
 ARG MODE
 COPY configs/.env.$MODE .env.$MODE
+RUN yarn add --dev typescript
 RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
 
 # Production image, copy all the files and run next
