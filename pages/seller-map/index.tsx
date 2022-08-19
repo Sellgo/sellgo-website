@@ -41,7 +41,7 @@ const SellerMapContPage: React.FC<Props> = (props: Props) => {
 			<NewBenefitsSection />
 			<CommonFeaturesSection />
 			{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
-			{/*<RecommendationSection />*/}
+			{/* <RecommendationSection /> */}
 			<NewClosingCTASection />
 		</>
 	);

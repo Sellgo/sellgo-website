@@ -36,10 +36,7 @@ const options = [
 
 	{
 		title: 'Pricing',
-		content: [
-			{ id: uuid(), name: 'Monthly and annual plans', to: '/pricing' },
-			{ id: uuid(), name: 'Daily plan', to: '/pricing?type=wholesale' }
-		]
+		content: [{ id: uuid(), name: 'Monthly and annual plans', to: '/pricing' }]
 	},
 	{
 		title: 'Resources',
