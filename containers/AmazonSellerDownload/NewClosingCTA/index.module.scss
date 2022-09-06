@@ -1,0 +1,100 @@
+@import '../../../styles/guidelines';
+
+.closingCTASection {
+	height: 20rem;
+	margin-top: 30rem;
+	background: $black_1;
+	position: relative;
+
+	@media only screen and(max-width: 1080px) {
+		height: 50rem;
+		padding: 5rem 0;
+	}
+}
+
+.closingCTA {
+	z-index: 1;
+	position: relative;
+}
+
+.closingCTABox {
+	position: absolute;
+	top: -200px;
+	padding: 5rem;
+	border: 1px solid $grey_6;
+	border-radius: 50px;
+	width: 100%;
+	background: $prim_white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	h2 {
+		font-size: $fontsize_subtitle_32;
+		font-weight: $fontweight_bold;
+		@media only screen and(max-width: 1080px) {
+			font-size: $fontsize_subtitle_24;
+		}
+	}
+
+	p {
+		font-size: $fontsize_content_14;
+		margin-top: 1rem;
+		margin-bottom: 6rem;
+		font-weight: $fontweight_medium;
+		color: $black_1;
+	}
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+		padding: 5rem;
+	}
+
+	span {
+		text-align: center;
+		font-size: 10px;
+		color: $second_grey;
+		margin-top: 1rem;
+	}
+}
+
+.ctaRow {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 100%;
+
+	.closingCTA {
+		width: 25rem;
+
+		@media only screen and(max-width: 1080px) {
+			width: 100%;
+		}
+	}
+
+	.demoButton {
+		background: none;
+		border: none;
+		cursor: pointer;
+		color: $sellgo_purple;
+		font-size: $fontsize_content_14;
+		margin-left: 3rem;
+		font-weight: $fontweight_medium;
+		@media only screen and(max-width: 1080px) {
+			margin-top: 18px;
+			width: 100%;
+		}
+	}
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+	}
+}

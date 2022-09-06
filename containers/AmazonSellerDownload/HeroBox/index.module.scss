@@ -1,0 +1,123 @@
+@import '../../../styles/guidelines';
+
+.heroboxWrapper {
+	background: $prim_white;
+	position: relative;
+}
+
+.herobox {
+	overflow: hidden;
+	padding-top: 2rem;
+	padding-bottom: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $black_1;
+	position: relative;
+	text-align: left;
+	margin-top: 5rem;
+
+	@media only screen and(max-width: 1080px) {
+		margin-top: 10rem;
+		flex-direction: column-reverse;
+	}
+}
+
+.textColumn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.starContainer {
+		display: flex;
+		gap: 0.5em;
+	}
+
+	@media only screen and(max-width: 1080px) {
+		width: 100%;
+	}
+}
+
+.heading {
+	font-size: $fontsize_title_40;
+	font-weight: $fontweight_extrabold;
+	line-height: $fontlineheight_heading_70;
+	margin-top: 0.5em;
+
+	@media only screen and(max-width: 650px) {
+		font-size: $fontsize_subtitle_38;
+		line-height: 1.2;
+	}
+}
+
+.subHeading {
+	font-size: $fontsize_title_28;
+	font-weight: $fontweight_extrabold;
+	line-height: $fontlineheight_heading_70;
+	margin-top: 2em;
+
+	@media only screen and(max-width: 650px) {
+		line-height: 1.2;
+	}
+}
+
+.tagline {
+	margin-top: 20px;
+	font-size: $fontsize_subtitle_20;
+	line-height: $fontlineheight_content_30;
+	font-weight: $fontweight_medium;
+	color: $black_0;
+
+	@media only screen and(max-width: 1080px) {
+		width: 100%;
+	}
+}
+
+.ctaBox {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	margin-top: 50px;
+	gap: 1em;
+
+	button {
+		cursor: pointer;
+		width: 200px;
+		height: 4.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 7px;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
+		border: none;
+		margin: 0 !important;
+
+		&:disabled {
+			opacity: 0.5;
+			cursor: default;
+			pointer-events: none;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+}
+
+.availableSellerButton {
+	background: $orange_purple_gradient;
+	color: $prim_white;
+}
+
+.requestDataButton {
+	border: solid 2px $sellgo_purple !important;
+	background: #fff;
+}

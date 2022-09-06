@@ -1,0 +1,64 @@
+@import '../../../styles/guidelines';
+
+.stepperInfoSectionWrapper {
+	padding-top: 0;
+}
+
+.stepperTitle {
+	font-weight: $fontweight_bold;
+	font-size: $fontsize_title_46;
+	text-align: center;
+	color: $prim_dark_2;
+
+	/* Max width 600px */
+	@media (max-width: 600px) {
+		font-size: 36px;
+	}
+}
+
+.stepperSubtitle {
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_medium;
+	color: $grey_8;
+	text-align: center;
+	margin: 3rem 0;
+}
+
+.tabListWrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 4rem;
+	margin-bottom: 7.5rem;
+}
+
+.stepperTab {
+	color: $grey_8;
+	font-size: $fontsize_subtitle_24;
+	margin: 0 2.5rem;
+	text-align: center;
+	font-weight: $fontweight_medium;
+
+	&__selected {
+		background: $orange_purple_gradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: $fontweight_bold;
+
+		.underline {
+			width: 100%;
+			margin: auto;
+			margin-top: 4px;
+			height: 3px;
+			background: $orange_purple_gradient;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	@media only screen and(max-width: 900px) {
+		font-size: $fontsize_content_18;
+	}
+}
