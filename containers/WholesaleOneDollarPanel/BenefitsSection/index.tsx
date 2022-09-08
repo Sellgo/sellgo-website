@@ -31,7 +31,7 @@ const BenefitsSection: React.FC<Props> = () => {
 					<div className={styles.benefitsCard}>
 						<Image src="/products-engage.svg" width={50} height={35} />
 						<h3>Engage</h3>
-						<p>Reach more sellers with insight-driven phone, email and address automation.</p>
+						<p>Reach more sellers with insight-driven phone and address automation.</p>
 						<p></p>
 					</div>
 				</div>

@@ -32,7 +32,7 @@ const ProductsSection: React.FC<Props> = () => {
 
 				<h2 className={styles.productsSectionSubTitle}>
 					Generate and analyze sellers across essential communication channels, 
-					including your sales calls, email and phone outreach, and business website.
+					including your sales calls and phone outreach, and business website.
 				</h2>
 
 				<div className={styles.productsWrapper}>
