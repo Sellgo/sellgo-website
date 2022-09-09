@@ -17,7 +17,7 @@ export const newBenefitsData = [
 		title: 'Sellgo Targets',
 		subTitle: 'Understand the dream sellers you want to work with',
 		description: `Powerful segmentation allows you to target sellers based on any combination of demographic,
-		revenue, product categories, phone, email, address, and many more.`,
+		revenue, product categories, phone, address, and many more.`,
 		linkLabel: [
 			/* 'Keyword Finder',
 			'Rank Tracker Optimization',
