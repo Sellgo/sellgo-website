@@ -6,7 +6,7 @@
 		"prettier": "prettier --write --config ./.prettierrc.json \"**/*.{js,jsx,ts,tsx,scss,json}\"",
 		"eslint": "eslint --config ./.eslintrc.json \"**/*.{js,jsx,ts,tsx}\" --fix",
 		"stylelint": "stylelint \"**/*.{css,scss}\" --fix",
-		"lint": "npm-run-all eslint prettier stylelint",
+		"lint": "npm-run-all prettier stylelint",
 		"dev": "yarn run lint && next dev",
 		"build": "next build",
 		"start": "next start",
@@ -68,6 +68,7 @@
 		"husky": "^6.0.0",
 		"lint-staged": "^10.5.4",
 		"npm-run-all": "^4.1.5",
+		"pre-commit": "^1.2.2",
 		"prettier": "2.2.1",
 		"sass": "^1.32.11",
 		"stylelint": "^13.12.0",
@@ -77,5 +78,15 @@
 	},
 	"resolutions": {
 		"@types/react": "17.0.3"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{css,scss}": "stylelint --fix",
+		"*.{js,ts,tsx}": "eslint --fix",
+		"*.{js,ts,tsx,json,css,scss}": "prettier --write"
 	}
 }

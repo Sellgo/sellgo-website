@@ -22,10 +22,15 @@ const NewClosingCTASection = () => {
 			<div className={`page-container ${styles.closingCTA}`}>
 				<div className={styles.closingCTABox}>
 					<div className={styles.closingCTABox__left}>
-					<h2>Ready to &nbsp;
+						<h2>
+							Ready to &nbsp;
 							<Image src="/own.png" width={62} height={47} alt="own" />
-						&nbsp; your market?</h2>
-						<p>Get seller data that revenue teams rely on to deliver business growth.</p>
+							&nbsp; your market?
+						</h2>
+						<p>
+							Get seller data that revenue teams rely on to deliver business
+							growth.
+						</p>
 
 						<div className={styles.ctaRow}>
 							<CTAButton

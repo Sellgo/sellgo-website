@@ -53,9 +53,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 								<div
 									className={`${styles.checkboxCell} ${styles.checkboxCell__plan}`}
 								>
-									{feature.featureAvailableInPlans.includes(
-										plans.AGENCY
-									) && (
+									{feature.featureAvailableInPlans.includes(plans.AGENCY) && (
 										<Image
 											src="/checkSquare.svg"
 											width={15}

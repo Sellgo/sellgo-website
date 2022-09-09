@@ -31,7 +31,7 @@ const ProductsSection: React.FC<Props> = () => {
 				</h2>
 
 				<h2 className={styles.productsSectionSubTitle}>
-					Generate and analyze sellers across essential communication channels, 
+					Generate and analyze sellers across essential communication channels,
 					including your sales calls and phone outreach, and business website.
 				</h2>
 
@@ -46,7 +46,7 @@ const ProductsSection: React.FC<Props> = () => {
 							/>
 							<p className={styles.title}>{product.title}</p>
 							<p className={styles.action}>{product.action}</p>
-							<p className={styles.popularFeatures}>   </p>
+							<p className={styles.popularFeatures}> </p>
 							{product.features.map((feature, index) => (
 								<p className={styles.productFeature} key={index}>
 									{feature.name}

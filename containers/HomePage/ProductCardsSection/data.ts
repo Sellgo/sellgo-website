@@ -1,7 +1,8 @@
 export const newBenefitsData = [
 	{
 		title: 'Sellgo Analyzes',
-		subTitle:'Unlock insightful data to reveal actions that are important to your business',
+		subTitle:
+			'Unlock insightful data to reveal actions that are important to your business',
 		description: `Comprehensive seller data should make decisions simpler, not more complicated. Empower your whole team 
 		to make data-driven decisions with insightful visual analytics and reports, while custom dashboards keep your 
 		team on target.`,
