@@ -8,17 +8,13 @@ import CTAButton from '../CTAButton';
 import Check from '../Icons/Check';
 
 /* Utils */
-import { createCheckoutLink } from '../../utils/Referral';
-
 interface Props {
 	className?: string;
 	isPrimary?: boolean;
-	planName: string;
 }
 
 const FreePlanCtaBox: React.FC<Props> = (props) => {
-	const { className, isPrimary, planName } = props;
-	const signupLink = createCheckoutLink('daily', planName);
+	const { className, isPrimary } = props;
 	const [showAllFeatures, setShowAllFeatures] = React.useState<boolean>(false);
 
 	return (

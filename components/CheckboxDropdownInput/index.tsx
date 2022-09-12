@@ -9,8 +9,8 @@ import FormInput from '../FormInput';
 interface Props {
 	label: string;
 	name: string;
-	placeholder?: string;
-	className?: string;
+	placeholder: string;
+	className: string;
 	filterOptions: { value: any; key: any; text: any }[];
 	selectedValues: string[];
 	handleChange: (value: any) => void;

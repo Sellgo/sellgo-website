@@ -8,11 +8,7 @@ import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
 import { createFreeTrialLink } from '../../../utils/Referral';
 
-/* Utils */
-import { createCheckoutLink } from '../../../utils/Referral';
-
 const ClosingCTASection = () => {
-	const checkoutLink = createCheckoutLink('daily', 'free');
 	return (
 		<section className={styles.closingCTASection}>
 			<div className={`page-container`}>

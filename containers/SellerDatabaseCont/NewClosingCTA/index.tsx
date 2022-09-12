@@ -7,7 +7,6 @@ import validator from 'validator';
 import styles from './index.module.scss';
 
 /* Components */
-import CTAButton from '../../../components/CTAButton';
 import SellerListForm from '../../Demo/SellerListForm';
 import AppConfig from '../../../config';
 import FormInput from '../../../components/FormInput';

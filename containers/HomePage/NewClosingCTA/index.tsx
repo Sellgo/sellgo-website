@@ -10,12 +10,8 @@ import CTAButton from '../../../components/CTAButton';
 import SellerListForm from '../../Demo/SellerListForm';
 import { createFreeTrialLink } from '../../../utils/Referral';
 
-/* Utils */
-import { createCheckoutLink } from '../../../utils/Referral';
-
 const NewClosingCTASection = () => {
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
-	const checkoutLink = createCheckoutLink('daily', 'free');
 
 	return (
 		<section className={styles.closingCTASection}>
