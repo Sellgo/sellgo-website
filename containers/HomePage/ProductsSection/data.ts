@@ -32,7 +32,8 @@ export const productsDetails: {
 		icon: '/products-engage.svg',
 		features: [
 			{
-				name: 'Reach more sellers with insight-driven phone and address automation.',
+				name:
+					'Reach more sellers with insight-driven phone and address automation.',
 				link: '/'
 			}
 		]

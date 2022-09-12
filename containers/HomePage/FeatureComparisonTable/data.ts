@@ -55,33 +55,24 @@ export const features = [
 	{
 		name: 'Chrome Extension',
 		featureAvailableInPlans: [plans.AGENCY, plans.INFLUENCER],
-		featureAvailableInCompetitors: [
-			competitors.SELLGO
-		],
+		featureAvailableInCompetitors: [competitors.SELLGO],
 		showOnDefault: true
 	},
 	{
 		name: 'Sales Estimation',
 		featureAvailableInPlans: [plans.AGENCY, plans.INFLUENCER],
-		featureAvailableInCompetitors: [
-			competitors.SELLGO
-		],
+		featureAvailableInCompetitors: [competitors.SELLGO],
 		showOnDefault: true
 	},
 	{
 		name: 'Revenue Estimation',
 		featureAvailableInPlans: [plans.AGENCY, plans.INFLUENCER],
-		featureAvailableInCompetitors: [
-			competitors.SELLGO
-		],
+		featureAvailableInCompetitors: [competitors.SELLGO],
 		showOnDefault: true
 	},
 	{
 		name: 'Product Analysis',
 		featureAvailableInPlans: [plans.AGENCY, plans.INFLUENCER],
-		featureAvailableInCompetitors: [
-			competitors.SELLGO,
-			competitors.MANUAL
-		]
+		featureAvailableInCompetitors: [competitors.SELLGO, competitors.MANUAL]
 	}
 ];
