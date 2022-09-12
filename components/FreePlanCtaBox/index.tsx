@@ -11,6 +11,7 @@ import Check from '../Icons/Check';
 interface Props {
 	className?: string;
 	isPrimary?: boolean;
+	planName?: string; // eslint-disable-line
 }
 
 const FreePlanCtaBox: React.FC<Props> = (props) => {
@@ -101,7 +102,8 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 
 FreePlanCtaBox.defaultProps = {
 	className: '',
-	isPrimary: false
+	isPrimary: false,
+	planName: ''
 };
 
 export default FreePlanCtaBox;
