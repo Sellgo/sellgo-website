@@ -5,7 +5,6 @@ import styles from './index.module.scss';
 import CTAButton from '../CTAButton';
 
 /* Utils */
-import { createCheckoutLink } from '../../utils/Referral';
 import { createFreeTrialLink } from '../../utils/Referral';
 
 interface Props {
@@ -14,10 +13,9 @@ interface Props {
 }
 const CtaNavBar = (props: Props) => {
 	const { showCtaNavBar, showMobile } = props;
-	const checkoutLink = createCheckoutLink('daily', 'free');
 	return (
 		<div
-			className={`${styles.ctaNavBarWrapper} 
+			className={`${styles.ctaNavBarWrapper}
 			${!showCtaNavBar ? styles.ctaNavBarWrapper__hidden : ''}
 			${!showMobile && styles.ctaNavBarWrapper__hideOnMobile}`}
 		>

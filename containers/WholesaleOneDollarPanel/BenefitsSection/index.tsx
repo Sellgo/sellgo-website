@@ -13,7 +13,9 @@ const BenefitsSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.benefitsSectionWrapper}>
 			<div className={`big-page-container ${styles.benefitsSection}`}>
-				<h2 className="secondary-heading">Get premium apps for more profitable conversations</h2>
+				<h2 className="secondary-heading">
+					Get premium apps for more profitable conversations
+				</h2>
 
 				<div className={styles.benefitsCardWrapper}>
 					<div className={styles.benefitsCard}>
@@ -31,7 +33,10 @@ const BenefitsSection: React.FC<Props> = () => {
 					<div className={styles.benefitsCard}>
 						<Image src="/products-engage.svg" width={50} height={35} />
 						<h3>Engage</h3>
-						<p>Reach more sellers with insight-driven phone, email and address automation.</p>
+						<p>
+							Reach more sellers with insight-driven phone and address
+							automation.
+						</p>
 						<p></p>
 					</div>
 				</div>

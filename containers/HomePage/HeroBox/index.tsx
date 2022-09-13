@@ -24,7 +24,6 @@ const HeroBox = () => {
 		'reviewers.',
 		'competitors.',
 		'marketplaces.'
-
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
@@ -139,7 +138,9 @@ const HeroBox = () => {
 							>
 								Create free account
 							</button>
-							<span>Free forever. No credit card required. Instant access.</span>
+							<span>
+								Free forever. No credit card required. Instant access.
+							</span>
 						</div>
 						<button
 							className={styles.demoButton}

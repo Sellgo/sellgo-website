@@ -15,14 +15,13 @@ import RainbowText from '../../../components/RainbowText';
 import SellerListForm from '../../Demo/SellerListForm';
 
 /* Utils */
-import { createCheckoutLink } from '../../../utils/Referral';
 import { createFreeTrialLink } from '../../../utils/Referral';
 
 interface Props {}
 
 const ProductsSection: React.FC<Props> = () => {
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
-	const checkoutLink = createCheckoutLink('daily', 'free');
+
 	return (
 		<section className={styles.productSectionWrapper}>
 			<div className={`page-container ${styles.productsSection}`}>
@@ -31,8 +30,8 @@ const ProductsSection: React.FC<Props> = () => {
 				</h2>
 
 				<h2 className={styles.productsSectionSubTitle}>
-					Generate and analyze sellers across essential communication channels, 
-					including your sales calls, email and phone outreach, and business website.
+					Generate and analyze sellers across essential communication channels,
+					including your sales calls and phone outreach, and business website.
 				</h2>
 
 				<div className={styles.productsWrapper}>
@@ -46,7 +45,7 @@ const ProductsSection: React.FC<Props> = () => {
 							/>
 							<p className={styles.title}>{product.title}</p>
 							<p className={styles.action}>{product.action}</p>
-							<p className={styles.popularFeatures}>   </p>
+							<p className={styles.popularFeatures}> </p>
 							{product.features.map((feature, index) => (
 								<p className={styles.productFeature} key={index}>
 									{feature.name}

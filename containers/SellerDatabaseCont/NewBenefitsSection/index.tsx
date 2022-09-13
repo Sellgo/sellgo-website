@@ -7,7 +7,6 @@ import styles from './index.module.scss';
 /* Components */
 import ProductCard from '../../../components/ProductCard';
 import CTAButton from '../../../components/CTAButton';
-import { createFreeTrialLink } from '../../../utils/Referral';
 
 /* Data */
 import { newBenefitsData } from './data';

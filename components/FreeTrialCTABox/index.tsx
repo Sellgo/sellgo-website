@@ -15,8 +15,6 @@ interface Props {
 	isPrimary?: boolean;
 }
 
-const freeTrialLink = createFreeTrialLink();
-
 const FreeTrialCTABox: React.FC<Props> = (props) => {
 	const { className, isPrimary } = props;
 
