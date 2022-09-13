@@ -1,10 +1,11 @@
 import React from 'react';
+import { v4 as uuid } from 'uuid';
 
 /* Data */
 import { wholesaleFeatures } from './data';
 
 /* Components */
-import Stepper from '../../../components/Stepper';
+import ProductCard from '../../../components/ProductCard';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -24,7 +25,29 @@ const StepperInfoSection: React.FC<Props> = () => {
 				It's our business to grow yours by providing access to million of
 				sellers.
 			</p>
-			<Stepper steps={wholesaleFeatures} />
+
+			<ProductCard
+				key={uuid()}
+				{...wholesaleFeatures[0]}
+				reversed={false}
+				imageWidth={720}
+			/>
+
+			<ProductCard
+				key={uuid()}
+				{...wholesaleFeatures[1]}
+				reversed
+				imageWidth={720}
+				imageHeight={500}
+			/>
+
+			<ProductCard
+				key={uuid()}
+				{...wholesaleFeatures[2]}
+				reversed={false}
+				imageWidth={720}
+				imageHeight={500}
+			/>
 		</section>
 	);
 };

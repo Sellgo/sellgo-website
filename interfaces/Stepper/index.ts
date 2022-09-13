@@ -5,7 +5,7 @@ export interface StepDetail {
 	icon: Products | Resources;
 	subTitle: string;
 	description: string;
-	linkLabel: string;
-	navigateTo: string;
+	linkLabel: string | string[];
+	navigateTo: string | string[];
 	imageUrl: string;
 }

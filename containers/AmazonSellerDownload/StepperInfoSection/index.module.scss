@@ -1,7 +1,7 @@
 @import '../../../styles/guidelines';
 
 .stepperInfoSectionWrapper {
-	padding-top: 0;
+	padding-top: 8em;
 }
 
 .stepperTitle {
@@ -42,6 +42,7 @@
 	&__selected {
 		background: $orange_purple_gradient;
 		-webkit-background-clip: text;
+		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		font-weight: $fontweight_bold;
 

@@ -1,0 +1,152 @@
+@import '../../../../styles/guidelines';
+
+.productCard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+	margin: 2rem 0;
+
+	@media only screen and(max-width: 750px) {
+		flex-direction: column;
+		margin: 5rem auto;
+	}
+
+
+		h2,
+		p {
+			margin-bottom: 1em;
+		}
+
+		p,
+		div {
+			font-size: $fontsize_content_14;
+		}
+
+	.value {
+		font-weight: $fontweight_extrabold;
+	}
+
+	.buttonContainer {
+		display: flex;
+		gap: 2em;
+		margin-top: 1em;
+	}
+
+	button {
+		cursor: pointer;
+		height: 4.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 7px;
+		font-size: $fontsize_content_16;
+		border: none;
+		margin: 0 !important;
+
+		&:disabled {
+			opacity: 0.5;
+			cursor: default;
+			pointer-events: none;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.primaryButton {
+		background: $orange_purple_gradient;
+		color: $prim_white;
+		font-weight: $fontweight_semibold;
+		width: 220px;
+	}
+
+	.secondaryButton {
+		color: $sellgo_purple !important;
+		background: #fff;
+	}
+
+	&__Text {
+		flex: 0 0 40%;
+
+		@media only screen and(max-width: 750px) {
+			order: 2;
+			text-align: center;
+			margin-top: 4rem;
+		}
+
+		small {
+			text-transform: uppercase;
+			color: $grey_8;
+			font-size: $fontsize_content_14;
+			font-weight: $fontweight_bold;
+			letter-spacing: 1.5px;
+		}
+	}
+
+	.linkWrapper {
+		display: flex;
+		flex-direction: column;
+		margin: 2rem 0;
+
+		.multipleLink {
+			color: $sellgo_purple;
+			margin-bottom: 10px;
+			display: inline-block;
+			font-size: $fontsize_content_14;
+			font-weight: $fontweight_medium;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__Link {
+		color: $sellgo_purple;
+		display: inline-block;
+		margin: 2rem 0;
+		font-size: $fontsize_content_14;
+		font-weight: $fontweight_medium;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__Image {
+		flex: 0 0 45%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+.reversedText {
+	order: 2;
+}
+
+.stepperText {
+	flex: 0 0 55%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 50px;
+	border-radius: 20px;
+}
+
+.reversedImage {
+	order: 1;
+}
+
+.extensionCTA {
+	width: 20rem;
+	border: 1px solid $grey_3;
+	color: $prim_dark_2;
+	font-size: $fontsize_content_16;
+	font-weight: $fontweight_bold;
+}

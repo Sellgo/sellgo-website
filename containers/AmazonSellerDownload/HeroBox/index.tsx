@@ -39,6 +39,8 @@ const HeroBox = () => {
 					<h2 className={styles.subHeading}>
 						These leading brands are growing their business with Sellgo
 					</h2>
+					<img src="/brands.png" width="100%" />
+					<img src="/brands_2.png" width="100%" />
 				</div>
 			</div>
 		</section>
