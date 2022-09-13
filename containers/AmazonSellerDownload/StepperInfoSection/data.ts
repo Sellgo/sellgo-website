@@ -6,8 +6,8 @@ export const wholesaleFeatures: StepDetail[] = [
 		subTitle:
 			'Discover how inventory planning is your secret weapon when it comes to scaling',
 		icon: 'sellerDatabase',
-		description:
-			'Evaluate dozens of products and gain in-depth insight into any product including sales estimations, seller rankings, profit margins using data directly from Amazon.',
+		description: `Evaluate dozens of products and gain in-depth insight into any product
+    including sales estimations, seller rankings, profit margins using data directly from Amazon.`,
 		linkLabel: [
 			'Product Use Cases',
 			'Sales and Seasonality',
@@ -26,7 +26,9 @@ export const wholesaleFeatures: StepDetail[] = [
 		title: 'SELLGO TARGETS',
 		subTitle: 'Boost sales with the right keywords and PPC automation',
 		icon: 'sellerDatabase',
-		description: `Validate any product before sourcing and make confident business decisions using real-time, accurate data. View a product's sales history and price tracking history to ensure a product's long-term sustainability and profitability.`,
+		description: `Validate any product before sourcing and make confident business decisions using real-time,
+    accurate data. View a product's sales history and price tracking history to ensure a product's long-term
+    sustainability and profitability.`,
 		linkLabel: [
 			'Keyword Finder',
 			'Rank Tracker Optimization',
@@ -39,8 +41,9 @@ export const wholesaleFeatures: StepDetail[] = [
 		title: 'SELLGO CONNECTS',
 		subTitle: 'Bring your cash flow into focus',
 		icon: 'sellerDatabase',
-		description:
-			'Compare multiple products and categories to determine the best products that fit your business model and needs. Uncover the products with the best sales records and profitability to add to your Amazon catalogs.',
+		description: `Compare multiple products and categories to determine the best products that fit
+    your business model and needs. Uncover the products with the best sales records
+    and profitability to add to your Amazon catalogs.`,
 		linkLabel: ['Report & Analytics'],
 		navigateTo: ['/seller-database'],
 		imageUrl: '/seller_download_3.png'

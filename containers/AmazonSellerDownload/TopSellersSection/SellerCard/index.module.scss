@@ -12,16 +12,15 @@
 		margin: 5rem auto;
 	}
 
+	h2,
+	p {
+		margin-bottom: 1em;
+	}
 
-		h2,
-		p {
-			margin-bottom: 1em;
-		}
-
-		p,
-		div {
-			font-size: $fontsize_content_14;
-		}
+	p,
+	div {
+		font-size: $fontsize_content_14;
+	}
 
 	.value {
 		font-weight: $fontweight_extrabold;
