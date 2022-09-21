@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import AppConfig from '../../config';
 
 export const CTA_1A = {
 	title: (

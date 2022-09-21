@@ -5,7 +5,7 @@ import axios from 'axios';
 /* Containers */
 import HeroBox from '../../containers/AmazonSellerDownload/HeroBox';
 import TopSellersSection from '../../containers/AmazonSellerDownload/TopSellersSection';
-import NewClosingCTASection from '../../containers/AmazonSellerDownload/NewClosingCTA/';
+import NewClosingCTASection from '../../containers/AmazonSellerDownload/NewClosingCTA';
 import FAQSection from '../../containers/AmazonSellerDownload/FAQSection';
 import StepperInfoSection from '../../containers/AmazonSellerDownload/StepperInfoSection';
 import StatisticsSection from '../../containers/AmazonSellerDownload/StatisticsSection';
@@ -43,8 +43,8 @@ const AmazonSellerDownloadPage: React.FC<Props> = (props) => {
 			<main>
 				<HeroBox />
 				<TopSellersSection />
-				<StepperInfoSection />
 				<StatisticsSection />
+				<StepperInfoSection />
 				<TestimonialsSection />
 				{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 				<NewClosingCTASection />

@@ -22,6 +22,8 @@
 
 	.tagline {
 		font-size: $fontsize_content_14;
+		text-align: center;
+		max-width: 800px;
 	}
 }
 
@@ -44,71 +46,5 @@
 
 	@media only screen and(max-width: 650px) {
 		line-height: 1.2;
-	}
-}
-
-.topSellersContainer {
-	display: flex;
-	align-items: center;
-	gap: 3em;
-	justify-content: space-between;
-	margin-top: 4em;
-
-	.left {
-		max-width: 500px;
-
-		h2,
-		p {
-			margin-bottom: 1em;
-		}
-
-		p,
-		div {
-			font-size: $fontsize_content_14;
-		}
-	}
-
-	.value {
-		font-weight: $fontweight_extrabold;
-	}
-
-	.buttonContainer {
-		display: flex;
-		gap: 2em;
-		margin-top: 1em;
-	}
-
-	button {
-		cursor: pointer;
-		height: 4.5rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 7px;
-		font-size: $fontsize_content_16;
-		border: none;
-		margin: 0 !important;
-
-		&:disabled {
-			opacity: 0.5;
-			cursor: default;
-			pointer-events: none;
-		}
-
-		&:hover {
-			opacity: 0.8;
-		}
-	}
-
-	.primaryButton {
-		background: $orange_purple_gradient;
-		color: $prim_white;
-		font-weight: $fontweight_semibold;
-		width: 220px;
-	}
-
-	.secondaryButton {
-		color: $sellgo_purple !important;
-		background: #fff;
 	}
 }

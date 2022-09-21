@@ -8,17 +8,14 @@ import CTAButton from '../CTAButton';
 import Check from '../Icons/Check';
 
 /* Utils */
-import { createCheckoutLink } from '../../utils/Referral';
-
 interface Props {
 	className?: string;
 	isPrimary?: boolean;
-	planName: string;
+	planName?: string; // eslint-disable-line
 }
 
 const FreePlanCtaBox: React.FC<Props> = (props) => {
-	const { className, isPrimary, planName } = props;
-	const signupLink = createCheckoutLink('daily', planName);
+	const { className, isPrimary } = props;
 	const [showAllFeatures, setShowAllFeatures] = React.useState<boolean>(false);
 
 	return (
@@ -29,8 +26,9 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 				<div className={styles.infoWrapper__Desc}>
 					<h2>Take control of your leads and own your goals.</h2>
 					<p>
-						Access and analyze Amazon sellers growth across essential performing metrics,
-						engage with sales calls, email and phone outreach, and business website.
+						Access and analyze Amazon sellers growth across essential performing
+						metrics, engage with sales calls, email and phone outreach, and
+						business website.
 					</p>
 				</div>
 
@@ -104,7 +102,8 @@ const FreePlanCtaBox: React.FC<Props> = (props) => {
 
 FreePlanCtaBox.defaultProps = {
 	className: '',
-	isPrimary: false
+	isPrimary: false,
+	planName: ''
 };
 
 export default FreePlanCtaBox;

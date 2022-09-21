@@ -9,7 +9,6 @@ import styles from './index.module.scss';
 import CTAButton from '../../../components/CTAButton';
 import ProductAccordion from '../../../components/ProductAccordion';
 import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
-import { createFreeTrialLink } from '../../../utils/Referral';
 
 /* Data */
 import { accordionData } from './data';

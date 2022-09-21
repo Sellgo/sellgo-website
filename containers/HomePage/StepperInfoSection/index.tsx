@@ -20,7 +20,10 @@ const StepperInfoSection: React.FC<Props> = () => {
 			<h2 className={styles.stepperTitle}>
 				Access Amazon seller database at scale
 			</h2>
-			<p className={styles.stepperSubtitle}>It's our business to grow yours by providing access to million of sellers.</p>
+			<p className={styles.stepperSubtitle}>
+				It's our business to grow yours by providing access to million of
+				sellers.
+			</p>
 			<Stepper steps={wholesaleFeatures} />
 		</section>
 	);
