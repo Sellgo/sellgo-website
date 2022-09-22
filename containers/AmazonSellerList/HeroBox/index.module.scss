@@ -3,6 +3,7 @@
 .heroboxWrapper {
 	background: $prim_white;
 	position: relative;
+	margin-bottom: 15em;
 }
 
 .herobox {
@@ -56,6 +57,7 @@
 	font-weight: $fontweight_extrabold;
 	line-height: $fontlineheight_heading_70;
 	margin-top: 2em;
+	margin-bottom: 1em;
 
 	@media only screen and(max-width: 650px) {
 		line-height: 1.2;

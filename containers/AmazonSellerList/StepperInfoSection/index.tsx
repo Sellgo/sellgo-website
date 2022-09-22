@@ -18,12 +18,10 @@ const StepperInfoSection: React.FC<Props> = () => {
 			className={`page-container ${styles.stepperInfoSectionWrapper}`}
 			id="showCtaNavBar"
 		>
-			<h2 className={styles.stepperTitle}>
-				Access Amazon seller database at scale
-			</h2>
+			<h2 className={styles.stepperTitle}>What You Will Get</h2>
 			<p className={styles.stepperSubtitle}>
-				It's our business to grow yours by providing access to million of
-				sellers.
+				Exclusive Seller leads extraction. Quick delivery, the data is yours
+				forever and the ROI is there!
 			</p>
 
 			<ProductCard

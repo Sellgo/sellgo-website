@@ -2,18 +2,12 @@ import { StepDetail } from '../../../interfaces/Stepper';
 
 export const wholesaleFeatures: StepDetail[] = [
 	{
-		title: '',
-		subTitle:
-			'Discover how inventory planning is your secret weapon when it comes to scaling',
+		title: 'Benefits',
+		subTitle: 'All-in-one Seller Database',
 		icon: 'sellerDatabase',
-		description: `Evaluate dozens of products and gain in-depth insight into any product
-    including sales estimations, seller rankings, profit margins using data directly from Amazon.`,
-		linkLabel: [
-			'Product Use Cases',
-			'Sales and Seasonality',
-			'Generate Future Orders',
-			'Automation & Integration'
-		],
+		description: `Seller name, seller address, email, phone, store link,
+		revenue estimate, inventory, brands, seller reviews, ratings, etc.`,
+		linkLabel: ['Open sample in Google Sheets'],
 		navigateTo: [
 			'/seller-database',
 			'/seller-database',
@@ -23,17 +17,12 @@ export const wholesaleFeatures: StepDetail[] = [
 		imageUrl: '/seller_download_1.png'
 	},
 	{
-		title: 'SELLGO TARGETS',
+		title: 'Benefits',
 		subTitle: 'Boost sales with the right keywords and PPC automation',
 		icon: 'sellerDatabase',
-		description: `Validate any product before sourcing and make confident business decisions using real-time,
-    accurate data. View a product's sales history and price tracking history to ensure a product's long-term
-    sustainability and profitability.`,
-		linkLabel: [
-			'Keyword Finder',
-			'Rank Tracker Optimization',
-			'Re-PPC Automation'
-		],
+		description: `Save money on software and developers. Customized exactly to your needs. 
+		No long-term contracts. Instant results.`,
+		linkLabel: ['Open sample in Google Sheets'],
 		navigateTo: ['/seller-database', '/seller-database', '/seller-database'],
 		imageUrl: '/seller_download_2.png'
 	},

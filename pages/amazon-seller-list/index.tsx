@@ -3,19 +3,19 @@ import { GetStaticProps } from 'next';
 import axios from 'axios';
 
 /* Containers */
-import HeroBox from '../../containers/AmazonSellerDownload/HeroBox';
-import TopSellersSection from '../../containers/AmazonSellerDownload/TopSellersSection';
-import NewClosingCTASection from '../../containers/AmazonSellerDownload/NewClosingCTA';
-import FAQSection from '../../containers/AmazonSellerDownload/FAQSection';
-import StepperInfoSection from '../../containers/AmazonSellerDownload/StepperInfoSection';
-import StatisticsSection from '../../containers/AmazonSellerDownload/StatisticsSection';
-import TestimonialsSection from '../../containers/AmazonSellerDownload/TestimonialsSection';
+import HeroBox from '../../containers/AmazonSellerList/HeroBox';
+import TopSellersSection from '../../containers/AmazonSellerList/TopSellersSection';
+import NewClosingCTASection from '../../containers/AmazonSellerList/NewClosingCTA';
+import FAQSection from '../../containers/AmazonSellerList/FAQSection';
+import StepperInfoSection from '../../containers/AmazonSellerList/StepperInfoSection';
+import StatisticsSection from '../../containers/AmazonSellerList/StatisticsSection';
+import TestimonialsSection from '../../containers/AmazonSellerList/TestimonialsSection';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
 
 /* Data */
-import { seoData } from '../../data/SEO/amazonSellerDownload';
+import { seoData } from '../../data/SEO/amazonSellerList';
 
 /* Utils */
 import { generatePageURL } from '../../utils/SEO';
@@ -42,8 +42,9 @@ const AmazonSellerDownloadPage: React.FC<Props> = (props) => {
 			/>
 			<main>
 				<HeroBox />
-				<TopSellersSection />
 				<StatisticsSection />
+				<TopSellersSection />
+
 				<StepperInfoSection />
 				<TestimonialsSection />
 				{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
