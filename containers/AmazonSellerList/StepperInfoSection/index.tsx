@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid';
 import { wholesaleFeatures } from './data';
 
 /* Components */
-import ProductCard from '../../../components/ProductCard';
+import ProductCard from './ProductCard';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -20,8 +20,9 @@ const StepperInfoSection: React.FC<Props> = () => {
 		>
 			<h2 className={styles.stepperTitle}>What You Will Get</h2>
 			<p className={styles.stepperSubtitle}>
-				Exclusive Seller leads extraction. Quick delivery, the data is yours
-				forever and the ROI is there!
+				Get exclusive access to our Seller Database with one purchase without
+				any monthly subscription. All these data will be available in one excel
+				file
 			</p>
 
 			<ProductCard

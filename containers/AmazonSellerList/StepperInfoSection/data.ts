@@ -1,40 +1,30 @@
-import { StepDetail } from '../../../interfaces/Stepper';
-
-export const wholesaleFeatures: StepDetail[] = [
+export const wholesaleFeatures: any[] = [
 	{
-		title: 'Benefits',
-		subTitle: 'All-in-one Seller Database',
+		title: '',
+		subTitle: 'Seller & Store Info',
 		icon: 'sellerDatabase',
-		description: `Seller name, seller address, email, phone, store link,
-		revenue estimate, inventory, brands, seller reviews, ratings, etc.`,
-		linkLabel: ['Open sample in Google Sheets'],
-		navigateTo: [
-			'/seller-database',
-			'/seller-database',
-			'/seller-database',
-			'/seller-database'
-		],
+		description: `Seller ID, Store url, AMZ Category, Level 2 verification, Amazon page type,
+    Just launched, Seller Reviews count 30 days, Seller Reviews count 90 days,
+    Seller Reviews count 365 days , Seller Reviews count lifetime, Seller Ratings lifetime, Rank,`,
+		benefits: ['benefit 1', 'benefit 2', 'benefit 3'],
 		imageUrl: '/seller_download_1.png'
 	},
 	{
-		title: 'Benefits',
-		subTitle: 'Boost sales with the right keywords and PPC automation',
+		title: '',
+		subTitle: 'Contact Info',
 		icon: 'sellerDatabase',
-		description: `Save money on software and developers. Customized exactly to your needs. 
-		No long-term contracts. Instant results.`,
-		linkLabel: ['Open sample in Google Sheets'],
-		navigateTo: ['/seller-database', '/seller-database', '/seller-database'],
+		description: `Website, Company name, Contact First name, Last name, Job title,
+    Email, Phone, Fax, Address, City , State, Zip code, Country ,`,
+		benefits: ['benefit 1', 'benefit 2', 'benefit 3'],
 		imageUrl: '/seller_download_2.png'
 	},
 	{
-		title: 'SELLGO CONNECTS',
-		subTitle: 'Bring your cash flow into focus',
+		title: '',
+		subTitle: 'Seller Product Info',
 		icon: 'sellerDatabase',
-		description: `Compare multiple products and categories to determine the best products that fit
-    your business model and needs. Uncover the products with the best sales records
-    and profitability to add to your Amazon catalogs.`,
-		linkLabel: ['Report & Analytics'],
-		navigateTo: ['/seller-database'],
+		description: `Product Reviews count 30 days, Product Reviews count
+    lifetime Uses FBA, Verified Listings, Rating %, Selling primarily`,
+		benefits: ['benefit 1', 'benefit 2', 'benefit 3'],
 		imageUrl: '/seller_download_3.png'
 	}
 ];

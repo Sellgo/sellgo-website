@@ -28,9 +28,10 @@ const SellerCard: React.FC<Props> = (props) => {
 	}`;
 
 	return (
-		<article className={styles.productCard}>
+		<article className={styles.productCard} id={sellerData.id}>
 			<div className={`${textClass}`}>
 				<div className={styles.left}>
+					<Image src={sellerData.icon} width="40px" height="40px" />
 					<p>{sellerData.country}</p>
 					<h2>Amazon.com Top Sellers</h2>
 
@@ -39,21 +40,26 @@ const SellerCard: React.FC<Props> = (props) => {
 					</p>
 
 					<div>
-						Number of sellers: <span className={styles.value}>205,428</span>{' '}
-						(includes 136,762 FBA sellers)
+						Number of sellers:{' '}
+						<span className={styles.value}>{sellerData.noOfSellers}</span>{' '}
+						(includes {sellerData.noOfFbaSellers} FBA sellers)
 					</div>
 
 					<div>
 						Number of physical addresses:
-						<span className={styles.value}>202,380</span>
+						<span className={styles.value}>
+							{sellerData.noOfPhysicalAddresses}
+						</span>
 					</div>
 
 					<div>
-						Number of emails: <span className={styles.value}>25,450</span>
+						Number of emails:{' '}
+						<span className={styles.value}>{sellerData.noOfEmails}</span>
 					</div>
 
 					<div>
-						Number of websites: <span className={styles.value}>57,716</span>
+						Number of websites:{' '}
+						<span className={styles.value}>{sellerData.noOfWebsites}</span>
 					</div>
 
 					<div>

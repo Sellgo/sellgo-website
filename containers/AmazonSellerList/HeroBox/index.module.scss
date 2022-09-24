@@ -83,6 +83,13 @@
 	margin-top: 50px;
 	gap: 1em;
 
+	a {
+		color: inherit;
+		font-weight: interit;
+		font-size: inherit;
+		font-style: inherit;
+	}
+
 	button {
 		cursor: pointer;
 		width: 200px;

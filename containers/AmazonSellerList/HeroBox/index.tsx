@@ -1,10 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
+import Modal from 'react-modal';
+
+/* Components */
+import SellerListForm from '../../Demo/SellerListForm';
 
 /* Styling */
 import styles from './index.module.scss';
 
 const HeroBox = () => {
+	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
+
 	return (
 		<section className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
@@ -28,10 +34,15 @@ const HeroBox = () => {
 					</p>
 
 					<div className={styles.ctaBox}>
-						<button className={styles.availableSellerButton}>
-							View available sellers
-						</button>
-						<button className={styles.requestDataButton}>
+						<a href="#instant-download">
+							<button className={styles.availableSellerButton}>
+								View available sellers
+							</button>
+						</a>
+						<button
+							className={styles.requestDataButton}
+							onClick={() => setIsDemoFormOpen(true)}
+						>
 							Request specific data
 						</button>
 					</div>
@@ -42,6 +53,15 @@ const HeroBox = () => {
 					<img src="/brands.png" width="100%" alt="brands" />
 				</div>
 			</div>
+
+			<Modal
+				isOpen={isDemoFormOpen}
+				onRequestClose={() => setIsDemoFormOpen(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
+			</Modal>
 		</section>
 	);
 };
