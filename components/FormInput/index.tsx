@@ -32,11 +32,7 @@ const FormInput: React.FC<Props> = (props) => {
 	} = props;
 
 	return (
-		<div 
-			className={className} 
-			onClick={onClick}
-			onKeyDown={onClick}
-		>
+		<div className={className} onClick={onClick} onKeyDown={onClick}>
 			{labelLast ? (
 				<>
 					<input id={id} {...otherProps} />
@@ -65,7 +61,7 @@ FormInput.defaultProps = {
 	labelLast: false,
 	checked: false,
 	disabled: false,
-	onClick: () => {},
+	onClick: () => {}
 };
 
 export default memo(FormInput);

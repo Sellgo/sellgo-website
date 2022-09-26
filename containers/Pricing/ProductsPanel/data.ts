@@ -15,7 +15,8 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Pricing & Plans',
-		summary: `Sellgo offers flexible packages across our portfolio of data-driven solutions and premium applications.`,
+		summary: `Sellgo offers flexible packages across our portfolio of data-driven
+    solutions and premium applications.`,
 
 		infoAlertMessage: {
 			monthly: {

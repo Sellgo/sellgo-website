@@ -84,7 +84,7 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 				</div>
 
 				<div className={`${styles.productsNavbar__right}`}>
-				<h3>FEATURES</h3>
+					<h3>FEATURES</h3>
 					{productsRightPanelData.map((panelData: any) => {
 						return (
 							<div id={panelData.hoverId} className="tabContent" key={uuid()}>

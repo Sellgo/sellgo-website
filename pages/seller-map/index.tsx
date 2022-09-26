@@ -7,7 +7,6 @@ import HeroBox from '../../containers/SellerMapCont/HeroBox';
 import InfoSection from '../../containers/SellerMapCont/InfoSection';
 import NewBenefitsSection from '../../containers/SellerMapCont/NewBenefitsSection';
 import CommonFeaturesSection from '../../containers/SellerMapCont/CommonFeaturesSection';
-import RecommendationSection from '../../containers/SellerMapCont/RecommendationSection';
 import FAQSection from '../../containers/SellerMapCont/FAQSection';
 import NewClosingCTASection from '../../containers/SellerMapCont/NewClosingCTA';
 
