@@ -7,6 +7,7 @@ import SellerListForm from '../../../Demo/SellerListForm';
 
 /* Styling */
 import styles from './index.module.scss';
+import AppConfig from '../../../../config';
 
 interface Props {
 	sellerData: any;
@@ -26,6 +27,10 @@ const SellerCard: React.FC<Props> = (props) => {
 	const imageClass = `${styles.productCard__Image} ${
 		reversed ? styles.reversedImage : ''
 	}`;
+
+	const handleDownload = (id: any) => {
+		window.open(AppConfig[id], '_blank');
+	};
 
 	return (
 		<article className={styles.productCard} id={sellerData.id}>
@@ -82,7 +87,10 @@ const SellerCard: React.FC<Props> = (props) => {
 					</button>
 
 					<div className={styles.buttonContainer}>
-						<button className={styles.primaryButton}>
+						<button
+							onClick={() => handleDownload(sellerData.id)}
+							className={styles.primaryButton}
+						>
 							Download database $895
 						</button>
 
