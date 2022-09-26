@@ -18,39 +18,14 @@ const TestimonialsSection: React.FC<Props> = () => {
 			</p>
 
 			<div className={styles.testimonialAuthor}>
-				{/* <img src="andrewErickson.png" alt="author" /> */}
 				<div className={styles.authorDetails}>
 					<span className={styles.name}>Dustin J.</span>
 					<span className={styles.title}>Amazon brand agency</span>
-					{/* <a
-						className={styles.email}
-						href="https://zonconpodcast.com/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						zonconpodcast.com
-					</a> */}
 				</div>
 			</div>
 		</div>
 	];
-	// const videos = [
-	// 	<div className={styles.testimonialVideo}>
-	// 		<div className={styles.videoWrapper}>
-	// 			<video controls>
-	// 				<track kind="captions" />
-	// 				<source src="Testimonial_David_W.mp4" type="video/mp4" />
-	// 				<source src="movie.ogg" type="video/ogg" />
-	// 				Your browser does not support the video tag.
-	// 			</video>
-	// 		</div>
-	// 		<small>
-	// 			{`"I like that their profit margin and ROI are more accurate than any
-	// 				other tools I've used before."`}
-	// 		</small>
-	// 		<p>David W.</p>
-	// 	</div>
-	// ];
+
 	return (
 		<section className={styles.testimonialsSection}>
 			<h1>Your success fuels ours</h1>
