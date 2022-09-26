@@ -6,7 +6,7 @@ import Stepper from './Stepper';
 
 const sellerData = [
 	{
-		id: 'united-states',
+		id: 'us',
 		title: 'United States',
 		icon: '/united-states.png',
 		country: 'UNITED STATES',
@@ -42,7 +42,7 @@ const sellerData = [
 		url: 'Amazon.co.mx'
 	},
 	{
-		id: 'united-kingdom',
+		id: 'uk',
 		title: 'United Kingdom',
 		icon: '/united-kingdom.png',
 		country: 'UNITED KINGDOM',
