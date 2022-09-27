@@ -32,6 +32,10 @@ const SellerCard: React.FC<Props> = (props) => {
 		window.open(AppConfig[id], '_blank');
 	};
 
+	const handleSample = (sample: any) => {
+		window.open(sample, '_blank');
+	};
+
 	return (
 		<article className={styles.productCard} id={sellerData.id}>
 			<div className={`${textClass}`}>
@@ -81,26 +85,29 @@ const SellerCard: React.FC<Props> = (props) => {
 
 					<div>Instant download</div>
 
-					<button className={styles.secondaryButton}>
-						<Image src="/blueLongArrowRight.svg" width={20} height={8} />
+					<button
+						onClick={() => handleSample(sellerData.sample)}
+						className={styles.secondaryButton}
+					>
+						<Image src="/blueLongArrowRight.svg" width={30} height={8} />
 						&nbsp; Open sample in Google Sheets
 					</button>
+				</div>
 
-					<div className={styles.buttonContainer}>
-						<button
-							onClick={() => handleDownload(sellerData.id)}
-							className={styles.primaryButton}
-						>
-							Download database $895
-						</button>
+				<div className={styles.buttonContainer}>
+					<button
+						onClick={() => handleDownload(sellerData.id)}
+						className={styles.primaryButton}
+					>
+						{sellerData.price}
+					</button>
 
-						<button
-							onClick={() => setIsDemoFormOpen(true)}
-							className={styles.secondaryButton}
-						>
-							Need a custom seller list?
-						</button>
-					</div>
+					<button
+						onClick={() => setIsDemoFormOpen(true)}
+						className={styles.secondaryButton}
+					>
+						Need a custom seller list?
+					</button>
 				</div>
 			</div>
 

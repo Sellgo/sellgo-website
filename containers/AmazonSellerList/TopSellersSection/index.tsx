@@ -15,7 +15,11 @@ const sellerData = [
 		noOfEmails: '25,450',
 		noOfWebsites: '57,716',
 		noOfPhysicalAddresses: '202,380',
-		url: 'Amazon.com'
+		url: 'Amazon.com',
+		sample:
+			'https://docs.google.com/spreadsheets/d/1XVZpBWzs8qNpl6yUhvc-XZKQq1XJy_xcwJqEFMFJpHo',
+		price: 'Download database $877',
+		status: 'active'
 	},
 	{
 		id: 'canada',
@@ -27,7 +31,11 @@ const sellerData = [
 		noOfEmails: '25,450',
 		noOfWebsites: '57,716',
 		noOfPhysicalAddresses: '202,380',
-		url: 'Amazon.ca'
+		url: 'Amazon.ca',
+		sample:
+			'https://docs.google.com/spreadsheets/d/1v2Pb2lV7qXEDHWUcwVmP7KFmzDDrgKTL_fsbaAcZMFY',
+		price: 'Download database $677',
+		status: 'active'
 	},
 	{
 		id: 'mexico',
@@ -39,7 +47,10 @@ const sellerData = [
 		noOfEmails: '25,450',
 		noOfWebsites: '57,716',
 		noOfPhysicalAddresses: '202,380',
-		url: 'Amazon.co.mx'
+		url: 'Amazon.co.mx',
+		sample: 'https://docs.google.com/spreadsheets/d/',
+		price: 'Incoming',
+		status: 'inactive'
 	},
 	{
 		id: 'uk',
@@ -51,7 +62,11 @@ const sellerData = [
 		noOfEmails: '25,450',
 		noOfWebsites: '57,716',
 		noOfPhysicalAddresses: '202,380',
-		url: 'Amazon.co.uk'
+		url: 'Amazon.co.uk',
+		sample:
+			'https://docs.google.com/spreadsheets/d/1u25kl6UrUC_jyyMcLO0yIS8uDz4SGhL-sscIZM9nacI',
+		price: 'Download database $477',
+		status: 'active'
 	},
 	{
 		id: 'italy',
@@ -63,7 +78,11 @@ const sellerData = [
 		noOfEmails: '25,450',
 		noOfWebsites: '57,716',
 		noOfPhysicalAddresses: '202,380',
-		url: 'Amazon.it'
+		url: 'Amazon.it',
+		sample:
+			'https://docs.google.com/spreadsheets/d/1avB1xqUYcbNgRsO8SzxM98K9pdBvSFqKNZCc64fqKlE',
+		price: 'Download database $377',
+		status: 'active'
 	},
 	{
 		id: 'germany',
@@ -75,7 +94,11 @@ const sellerData = [
 		noOfEmails: '25,450',
 		noOfWebsites: '57,716',
 		noOfPhysicalAddresses: '202,380',
-		url: 'Amazon.de'
+		url: 'Amazon.de',
+		sample:
+			'https://docs.google.com/spreadsheets/d/1cCcADvHY7obNXPbPbXWydWkT1Qwg7KflDg5IbnmHpQc',
+		price: 'Download database $877',
+		status: 'active'
 	},
 	{
 		id: 'spain',
@@ -87,7 +110,11 @@ const sellerData = [
 		noOfEmails: '25,450',
 		noOfWebsites: '57,716',
 		noOfPhysicalAddresses: '202,380',
-		url: 'Amazon.es'
+		url: 'Amazon.es',
+		sample:
+			'https://docs.google.com/spreadsheets/d/1e0RScT01jmVaV3r1FrPTZDUEVmhHM3a156DnGA-SCfs',
+		price: 'Download database $377',
+		status: 'active'
 	},
 	{
 		id: 'france',
@@ -99,7 +126,11 @@ const sellerData = [
 		noOfEmails: '25,450',
 		noOfWebsites: '57,716',
 		noOfPhysicalAddresses: '202,380',
-		url: 'Amazon.fr'
+		url: 'Amazon.fr',
+		sample:
+			'https://docs.google.com/spreadsheets/d/1COYB1MdgmBJ_Z-XSXp8G9VBkOJh8aBrZeJI_lx0tDDU',
+		price: 'Download database $377',
+		status: 'active'
 	},
 	{
 		id: 'india',
@@ -111,7 +142,10 @@ const sellerData = [
 		noOfEmails: '25,450',
 		noOfWebsites: '57,716',
 		noOfPhysicalAddresses: '202,380',
-		url: 'Amazon.in'
+		url: 'Amazon.in',
+		sample: 'https://docs.google.com/spreadsheets/d/',
+		price: 'Incoming',
+		status: 'inactive'
 	},
 	{
 		id: 'china',
@@ -123,7 +157,11 @@ const sellerData = [
 		noOfEmails: '25,450',
 		noOfWebsites: '57,716',
 		noOfPhysicalAddresses: '202,380',
-		url: 'Amazon.com'
+		url: 'Amazon.com',
+		sample:
+			'https://docs.google.com/spreadsheets/d/15WKWg3c2e6EcM4iB5nqOkL4lGSjbXThRsVmRxHgO_WM',
+		price: 'Download database $377',
+		status: 'active'
 	}
 ];
 
