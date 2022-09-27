@@ -27,16 +27,18 @@ const HeroBox = () => {
 						"Excellent customer service and EXCELLENT results!"
 					</p>
 
-					<h1 className={`${styles.heading}`}>Amazon Seller Download</h1>
+					<h1 className={`${styles.heading}`}>Top Amazon 1M+ Seller Lists</h1>
 
 					<p className={`${styles.tagline}`}>
-						Get instant access to Amazon seller database. Updated regularly.
+						Get the B2B data and software you need to connect with and close
+						<br />
+						your most valuable buyers - updated regularly.
 					</p>
 
 					<div className={styles.ctaBox}>
 						<a href="#instant-download">
 							<button className={styles.availableSellerButton}>
-								View available sellers
+								View seller lists
 							</button>
 						</a>
 						<button
@@ -47,10 +49,8 @@ const HeroBox = () => {
 						</button>
 					</div>
 
-					<h2 className={styles.subHeading}>
-						These leading brands are growing their business with Sellgo
-					</h2>
-					<img src="/brands.png" width="100%" alt="brands" />
+					<h2 className={styles.subHeading}>TRUSTED BY 6,000+ BUSINESSES.</h2>
+					<img src="/brands1.png" width="100%" alt="brands" />
 				</div>
 			</div>
 

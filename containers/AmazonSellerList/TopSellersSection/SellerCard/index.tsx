@@ -33,7 +33,7 @@ const SellerCard: React.FC<Props> = (props) => {
 				<div className={styles.left}>
 					<Image src={sellerData.icon} width="40px" height="40px" />
 					<p>{sellerData.country}</p>
-					<h2>Amazon.com Top Sellers</h2>
+					<h2>{sellerData.title}</h2>
 
 					<p>
 						A dataset of the top active sellers from the Amazon US marketplace.

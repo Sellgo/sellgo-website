@@ -7,7 +7,7 @@ import Stepper from './Stepper';
 const sellerData = [
 	{
 		id: 'united-states',
-		title: 'United States',
+		title: 'Top Sellers Amazon.com',
 		icon: '/united-states.png',
 		country: 'UNITED STATES',
 		noOfSeller: '205,428',
@@ -19,7 +19,7 @@ const sellerData = [
 	},
 	{
 		id: 'canada',
-		title: 'Canada',
+		title: 'Top Sellers Amazon.ca',
 		icon: '/canada.png',
 		country: 'CANADA',
 		noOfSeller: '205,428',
@@ -31,7 +31,7 @@ const sellerData = [
 	},
 	{
 		id: 'mexico',
-		title: 'Mexico',
+		title: 'Top Sellers Amazon.co.mx',
 		icon: '/mexico.png',
 		country: 'MEXICO',
 		noOfSeller: '205,428',
@@ -43,7 +43,7 @@ const sellerData = [
 	},
 	{
 		id: 'united-kingdom',
-		title: 'United Kingdom',
+		title: 'Top Sellers Amazon.co.uk',
 		icon: '/united-kingdom.png',
 		country: 'UNITED KINGDOM',
 		noOfSeller: '205,428',
@@ -55,7 +55,7 @@ const sellerData = [
 	},
 	{
 		id: 'italy',
-		title: 'Italy',
+		title: 'Top Sellers Amazon.it',
 		icon: '/italy.png',
 		country: 'ITALY',
 		noOfSeller: '205,428',
@@ -67,7 +67,7 @@ const sellerData = [
 	},
 	{
 		id: 'germany',
-		title: 'Germany',
+		title: 'Top Sellers Amazon.de',
 		icon: '/germany.png',
 		country: 'GERMANY',
 		noOfSeller: '205,428',
@@ -79,7 +79,7 @@ const sellerData = [
 	},
 	{
 		id: 'spain',
-		title: 'Spain',
+		title: 'Top Sellers Amazon.es',
 		icon: '/spain.png',
 		country: 'SPAIN',
 		noOfSeller: '205,428',
@@ -91,7 +91,7 @@ const sellerData = [
 	},
 	{
 		id: 'france',
-		title: 'France',
+		title: 'Top Sellers Amazon.fr',
 		icon: '/france.png',
 		country: 'FRANCE',
 		noOfSeller: '205,428',
@@ -103,7 +103,7 @@ const sellerData = [
 	},
 	{
 		id: 'india',
-		title: 'India',
+		title: 'Top Sellers Amazon.in',
 		icon: '/india.png',
 		country: 'INDIA',
 		noOfSeller: '205,428',
@@ -115,7 +115,7 @@ const sellerData = [
 	},
 	{
 		id: 'china',
-		title: 'Chinese Sellers',
+		title: 'Top Chinese Sellers Amazon.com',
 		icon: '/china.png',
 		country: 'CHINA',
 		noOfSeller: '205,428',

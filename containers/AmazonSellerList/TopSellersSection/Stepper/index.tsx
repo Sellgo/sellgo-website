@@ -21,7 +21,7 @@ const Stepper: React.FC<Props> = (props) => {
 					return (
 						<a key={index} href={`#${product.id}`} className={styles.step}>
 							<Image src={product.icon} width="40px" height="40px" />
-							<h3 className={styles.stepTitle}>{product.title}</h3>
+							<h3 className={styles.stepTitle}>{product.country}</h3>
 							<h3 className={styles.stepUrl}>{product.url}</h3>
 						</a>
 					);

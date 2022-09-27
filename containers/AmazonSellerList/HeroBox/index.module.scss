@@ -53,11 +53,12 @@
 }
 
 .subHeading {
-	font-size: $fontsize_title_28;
-	font-weight: $fontweight_extrabold;
+	font-size: $fontsize_subtitle_20;
+	font-weight: $fontweight_medium;
 	line-height: $fontlineheight_heading_70;
-	margin-top: 2em;
-	margin-bottom: 1em;
+	color: $grey_8;
+	margin-top: 5em;
+	margin-bottom: 0.5em;
 
 	@media only screen and(max-width: 650px) {
 		line-height: 1.2;
@@ -69,7 +70,8 @@
 	font-size: $fontsize_subtitle_20;
 	line-height: $fontlineheight_content_30;
 	font-weight: $fontweight_medium;
-	color: $black_0;
+	color: $grey_8;
+	text-align: center;
 
 	@media only screen and(max-width: 1080px) {
 		width: 100%;

@@ -21,7 +21,7 @@
 	}
 
 	.tagline {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_content_16;
 		text-align: center;
 		max-width: 800px;
 	}
@@ -39,10 +39,11 @@
 }
 
 .heading {
-	font-size: $fontsize_title_28;
+	font-size: $fontsize_title_46;
 	font-weight: $fontweight_extrabold;
 	line-height: $fontlineheight_heading_70;
 	margin-top: 2em;
+	margin-bottom: 0.5em;
 
 	@media only screen and(max-width: 650px) {
 		line-height: 1.2;
