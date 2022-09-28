@@ -112,14 +112,6 @@ const SellerCard: React.FC<Props> = (props) => {
 						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
 						Instant download
 					</div>
-
-					<button
-						onClick={() => handleSample(sellerData.sample)}
-						className={styles.secondaryButton}
-					>
-						<Image src="/blueLongArrowRight.svg" width={30} height={8} />
-						&nbsp; Open sample in Google Sheets
-					</button>
 				</div>
 
 				<div className={styles.buttonContainer}>
@@ -139,9 +131,12 @@ const SellerCard: React.FC<Props> = (props) => {
 				</div>
 			</div>
 
-			<div className={`${styles.right} ${imageClass}`}>
-				<Image src="/top-sellers.png" width={700} height={419} />
-			</div>
+			<button
+				className={`${styles.right} ${imageClass}`}
+				onClick={() => handleSample(sellerData.sample)}
+			>
+				<Image src={sellerData.imageSeller} width={700} height={419} />
+			</button>
 
 			<Modal
 				isOpen={isDemoFormOpen}

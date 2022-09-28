@@ -21,9 +21,10 @@ const sellerData = [
 		url: 'Amazon.com',
 		sample:
 			'https://docs.google.com/spreadsheets/d/1XVZpBWzs8qNpl6yUhvc-XZKQq1XJy_xcwJqEFMFJpHo',
-		price: 'Download database $877',
+		price: 'Instant download $877',
 		status: 'active',
-		lastUpdate: 'May 2022'
+		lastUpdate: 'May 2022',
+		imageSeller: '/top-sellers-us.png'
 	},
 	{
 		id: 'canada',
@@ -41,9 +42,10 @@ const sellerData = [
 		url: 'Amazon.ca',
 		sample:
 			'https://docs.google.com/spreadsheets/d/1v2Pb2lV7qXEDHWUcwVmP7KFmzDDrgKTL_fsbaAcZMFY',
-		price: 'Download database $677',
+		price: 'Instant download $677',
 		status: 'active',
-		lastUpdate: 'May 2022'
+		lastUpdate: 'May 2022',
+		imageSeller: '/top-sellers-ca.png'
 	},
 	{
 		id: 'mexico',
@@ -62,7 +64,8 @@ const sellerData = [
 		sample: '',
 		price: 'Join waitlist',
 		status: 'inactive',
-		lastUpdate: ''
+		lastUpdate: '',
+		imageSeller: '/top-sellers-mx.png'
 	},
 	{
 		id: 'uk',
@@ -79,9 +82,10 @@ const sellerData = [
 		url: 'Amazon.co.uk',
 		sample:
 			'https://docs.google.com/spreadsheets/d/1u25kl6UrUC_jyyMcLO0yIS8uDz4SGhL-sscIZM9nacI',
-		price: 'Download database $477',
+		price: 'Instant download $477',
 		status: 'active',
-		lastUpdate: 'May 2022'
+		lastUpdate: 'May 2022',
+		imageSeller: '/top-sellers-uk.png'
 	},
 	{
 		id: 'italy',
@@ -99,9 +103,10 @@ const sellerData = [
 		url: 'Amazon.it',
 		sample:
 			'https://docs.google.com/spreadsheets/d/1avB1xqUYcbNgRsO8SzxM98K9pdBvSFqKNZCc64fqKlE',
-		price: 'Download database $377',
+		price: 'Instant download $377',
 		status: 'active',
-		lastUpdate: 'May 2022'
+		lastUpdate: 'May 2022',
+		imageSeller: '/top-sellers-it.png'
 	},
 	{
 		id: 'germany',
@@ -119,9 +124,10 @@ const sellerData = [
 		url: 'Amazon.de',
 		sample:
 			'https://docs.google.com/spreadsheets/d/1cCcADvHY7obNXPbPbXWydWkT1Qwg7KflDg5IbnmHpQc',
-		price: 'Download database $877',
+		price: 'Instant download $877',
 		status: 'active',
-		lastUpdate: 'May 2022'
+		lastUpdate: 'May 2022',
+		imageSeller: '/top-sellers-de.png'
 	},
 	{
 		id: 'spain',
@@ -139,9 +145,10 @@ const sellerData = [
 		url: 'Amazon.es',
 		sample:
 			'https://docs.google.com/spreadsheets/d/1e0RScT01jmVaV3r1FrPTZDUEVmhHM3a156DnGA-SCfs',
-		price: 'Download database $377',
+		price: 'Instant download $377',
 		status: 'active',
-		lastUpdate: 'May 2022'
+		lastUpdate: 'May 2022',
+		imageSeller: '/top-sellers-es.png'
 	},
 	{
 		id: 'france',
@@ -159,8 +166,10 @@ const sellerData = [
 		url: 'Amazon.fr',
 		sample:
 			'https://docs.google.com/spreadsheets/d/1COYB1MdgmBJ_Z-XSXp8G9VBkOJh8aBrZeJI_lx0tDDU',
-		price: 'Download database $377',
-		status: 'active'
+		price: 'Instant download $377',
+		status: 'active',
+		lastUpdate: '',
+		imageSeller: '/top-sellers-fr.png'
 	},
 	{
 		id: 'india',
@@ -179,7 +188,8 @@ const sellerData = [
 		sample: '',
 		price: 'Join waitlist',
 		status: 'inactive',
-		lastUpdate: ''
+		lastUpdate: '',
+		imageSeller: '/top-sellers-in.png'
 	},
 	{
 		id: 'china',
@@ -197,9 +207,10 @@ const sellerData = [
 		url: 'Amazon.com',
 		sample:
 			'https://docs.google.com/spreadsheets/d/15WKWg3c2e6EcM4iB5nqOkL4lGSjbXThRsVmRxHgO_WM',
-		price: 'Download database $377',
+		price: 'Instant download $377',
 		status: 'active',
-		lastUpdate: 'May 2022'
+		lastUpdate: 'May 2022',
+		imageSeller: '/top-chinese-sellers-us.png'
 	}
 ];
 
