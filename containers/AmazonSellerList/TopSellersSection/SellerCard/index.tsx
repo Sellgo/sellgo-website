@@ -45,45 +45,73 @@ const SellerCard: React.FC<Props> = (props) => {
 					<h2>{sellerData.title}</h2>
 
 					<p>
-						A dataset of the top active sellers from the Amazon US marketplace.
+						A dataset of the top active&nbsp;
+						<span className={styles.value}>
+							{sellerData.sellerCountryOrigin}
+						</span>
+						&nbsp; from the Amazon&nbsp;
+						<span className={styles.value}>{sellerData.country}</span>&nbsp;
+						marketplace.
 					</p>
 
 					<div>
-						Number of sellers:{' '}
-						<span className={styles.value}>{sellerData.noOfSellers}</span>{' '}
+						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+						Number of sellers:&nbsp;
+						<span className={styles.value}>{sellerData.noOfSellers}</span>&nbsp;
 						(includes {sellerData.noOfFbaSellers} FBA sellers)
 					</div>
 
 					<div>
-						Number of physical addresses:
+						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+						Number of physical addresses:&nbsp;
 						<span className={styles.value}>
 							{sellerData.noOfPhysicalAddresses}
 						</span>
 					</div>
 
 					<div>
-						Number of emails:{' '}
+						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+						Number of emails:&nbsp;
 						<span className={styles.value}>{sellerData.noOfEmails}</span>
 					</div>
 
 					<div>
-						Number of websites:{' '}
+						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+						Number of websites:&nbsp;
 						<span className={styles.value}>{sellerData.noOfWebsites}</span>
 					</div>
 
 					<div>
-						Number of phone numbers: 47,961 Last update: May 2022 Data points:
-						Amazon URL, seller ID, FBA seller or no, business name, business
-						address, seller country, state/region, zip code, email, website,
-						phone number, store name, main category, store rating, last 30 days
-						seller ratings, last 90 days seller ratings, last 12 months seller
-						ratings, lifetime seller ratings, number of products, brands sold,
-						number of brands sold
+						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+						Number of phone numbers:&nbsp;
+						<span className={styles.value}>{sellerData.noOfPhone}</span>
 					</div>
 
-					<div>File format: Excel, CSV, JSON</div>
+					<div>
+						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+						Last update:&nbsp;
+						<span className={styles.value}>{sellerData.lastUpdate}</span>
+					</div>
 
-					<div>Instant download</div>
+					<div>
+						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+						Data points: Amazon URL, seller ID, FBA seller or no, business name,
+						business address, seller country, state/region, zip code, email,
+						website, phone number, store name, main category, store rating, last
+						30 days seller ratings, last 90 days seller ratings, last 12 months
+						seller ratings, lifetime seller ratings, number of products, brands
+						sold, number of brands sold
+					</div>
+
+					<div>
+						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+						File format: Excel
+					</div>
+
+					<div>
+						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+						Instant download
+					</div>
 
 					<button
 						onClick={() => handleSample(sellerData.sample)}
