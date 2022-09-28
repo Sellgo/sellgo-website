@@ -429,7 +429,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 				<FormInput
 					className={styles.formInput}
-					label={`Please list the URLs of all the websites you intend 
+					label={`Please list the URLs of all the websites you intend
 						to use to promote Sellgo (website, Facebook group, YouTube channel, etc.) *`}
 					id="urlsToPromoteSellgo"
 					type="text"
@@ -443,7 +443,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 
 				<FormInput
 					className={styles.formInput}
-					label={`If you have an existing audience, how large is it? 
+					label={`If you have an existing audience, how large is it?
 						(Email list, subscribers, students, site traffic, etc.) *`}
 					id="existingAudience"
 					type="text"
@@ -456,8 +456,8 @@ const ScheduleMeeting: React.FC<Props> = () => {
 				/>
 
 				<MultiSelectCheckBoxInput
-					label={`Please acknowledge our PPC TOS does not allow 
-						bidding on our branded search terms. Doing so will result in 
+					label={`Please acknowledge our PPC TOS does not allow
+						bidding on our branded search terms. Doing so will result in
 						a ban and your commissions forfeited. *`}
 					options={['Yes, I understand.']}
 					onChange={handleChange}
@@ -470,7 +470,7 @@ const ScheduleMeeting: React.FC<Props> = () => {
 				/>
 
 				<MultiSelectCheckBoxInput
-					label={`Please acknowledge our program does not allow any 
+					label={`Please acknowledge our program does not allow any
 						Coupon Site partnership marketing. *`}
 					options={['Yes, I understand.']}
 					onChange={handleChange}
