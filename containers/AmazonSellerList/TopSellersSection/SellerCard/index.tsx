@@ -101,7 +101,12 @@ const SellerCard: React.FC<Props> = (props) => {
 				<div className={styles.left}>
 					<Image src={sellerData.icon} width="40px" height="40px" />
 					<p>{sellerData.country}</p>
-					<h2>{sellerData.title}</h2>
+					<h2>
+						{sellerData.title}{' '}
+						{sellerData.status === 'inactive' ? (
+							<span className={styles.titleNew}>New</span>
+						) : null}
+					</h2>
 
 					<p>
 						A dataset of the top active&nbsp;
@@ -261,7 +266,6 @@ const SellerCard: React.FC<Props> = (props) => {
 				<FormSubmitConfirm
 					heading="You are now in the waiting list"
 					body="We will send you an email when the list is ready."
-					ending=" "
 				/>
 			</Modal>
 		</article>
