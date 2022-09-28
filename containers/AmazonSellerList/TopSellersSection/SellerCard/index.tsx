@@ -1,9 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
+import validator from 'validator';
 
 /* Components */
+import axios from 'axios';
 import SellerListForm from '../../../Demo/SellerListForm';
+import FormInput from '../../../../components/FormInput';
+import FormSubmitConfirm from '../FormSubmitConfirm';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -17,6 +21,9 @@ interface Props {
 
 const SellerCard: React.FC<Props> = (props) => {
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
+	const [openSubmitConfirm, setOpenSubmitConfirm] = React.useState(false);
+	const [email, setEmail] = React.useState('');
+	const [emailError, setEmailError] = React.useState(false);
 
 	const { reversed, isStepper, sellerData } = props;
 
@@ -36,6 +43,58 @@ const SellerCard: React.FC<Props> = (props) => {
 		window.open(sample, '_blank');
 	};
 
+	const handleChange = (event: any) => {
+		setEmail(event.target.value);
+	};
+
+	const handleJoinWaitlist = async (event: any) => {
+		event.preventDefault();
+
+		let waitlistCountry = '';
+
+		switch (sellerData.id) {
+			case 'mexico': {
+				waitlistCountry = 'seller_waitlist_mx';
+				break;
+			}
+
+			case 'india': {
+				waitlistCountry = 'seller_waitlist_in';
+				break;
+			}
+
+			default: {
+				waitlistCountry = '';
+			}
+		}
+
+		const formData = new FormData();
+		formData.append('email', email);
+		formData.append(waitlistCountry, 'true');
+
+		try {
+			const URL = `${AppConfig.API_URL}/sellers/create-hubspot`;
+			const response = await axios.post(URL, formData);
+			console.log(response);
+			if (response.status === 201) {
+				setEmail('');
+				setOpenSubmitConfirm(true);
+			}
+		} catch (err) {
+			console.error('error');
+			setEmail('');
+		}
+	};
+
+	/* Effects for Email validation */
+	React.useEffect(() => {
+		if (email.length > 0) {
+			setEmailError(!validator.isEmail(email.trim()));
+		} else {
+			setEmailError(false);
+		}
+	}, [email]);
+
 	return (
 		<article className={styles.productCard} id={sellerData.id}>
 			<div className={`${textClass}`}>
@@ -54,44 +113,56 @@ const SellerCard: React.FC<Props> = (props) => {
 						marketplace.
 					</p>
 
-					<div>
-						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
-						Number of sellers:&nbsp;
-						<span className={styles.value}>{sellerData.noOfSellers}</span>&nbsp;
-						(includes {sellerData.noOfFbaSellers} FBA sellers)
-					</div>
+					{sellerData.noOfSellers ? (
+						<div>
+							<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+							Number of sellers:&nbsp;
+							<span className={styles.value}>{sellerData.noOfSellers}</span>
+							&nbsp; (includes {sellerData.noOfFbaSellers} FBA sellers)
+						</div>
+					) : null}
 
-					<div>
-						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
-						Number of physical addresses:&nbsp;
-						<span className={styles.value}>
-							{sellerData.noOfPhysicalAddresses}
-						</span>
-					</div>
+					{sellerData.noOfPhysicalAddresses ? (
+						<div>
+							<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+							Number of physical addresses:&nbsp;
+							<span className={styles.value}>
+								{sellerData.noOfPhysicalAddresses}
+							</span>
+						</div>
+					) : null}
 
-					<div>
-						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
-						Number of emails:&nbsp;
-						<span className={styles.value}>{sellerData.noOfEmails}</span>
-					</div>
+					{sellerData.noOfEmails ? (
+						<div>
+							<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+							Number of emails:&nbsp;
+							<span className={styles.value}>{sellerData.noOfEmails}</span>
+						</div>
+					) : null}
 
-					<div>
-						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
-						Number of websites:&nbsp;
-						<span className={styles.value}>{sellerData.noOfWebsites}</span>
-					</div>
+					{sellerData.noOfWebsites ? (
+						<div>
+							<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+							Number of websites:&nbsp;
+							<span className={styles.value}>{sellerData.noOfWebsites}</span>
+						</div>
+					) : null}
 
-					<div>
-						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
-						Number of phone numbers:&nbsp;
-						<span className={styles.value}>{sellerData.noOfPhone}</span>
-					</div>
+					{sellerData.noOfPhone ? (
+						<div>
+							<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+							Number of phone numbers:&nbsp;
+							<span className={styles.value}>{sellerData.noOfPhone}</span>
+						</div>
+					) : null}
 
-					<div>
-						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
-						Last update:&nbsp;
-						<span className={styles.value}>{sellerData.lastUpdate}</span>
-					</div>
+					{sellerData.lastUpdate ? (
+						<div>
+							<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
+							Last update:&nbsp;
+							<span className={styles.value}>{sellerData.lastUpdate}</span>
+						</div>
+					) : null}
 
 					<div>
 						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
@@ -113,30 +184,59 @@ const SellerCard: React.FC<Props> = (props) => {
 						Instant download
 					</div>
 
-					<button
-						onClick={() => handleSample(sellerData.sample)}
-						className={styles.secondaryButton}
-					>
-						<Image src="/blueLongArrowRight.svg" width={30} height={8} />
-						&nbsp; Open sample in Google Sheets
-					</button>
+					{sellerData.status === 'active' ? (
+						<button
+							onClick={() => handleSample(sellerData.sample)}
+							className={styles.secondaryButton}
+						>
+							<Image src="/blueLongArrowRight.svg" width={30} height={8} />
+							&nbsp; Open sample in Google Sheets
+						</button>
+					) : null}
 				</div>
 
-				<div className={styles.buttonContainer}>
-					<button
-						onClick={() => handleDownload(sellerData.id)}
-						className={styles.primaryButton}
-					>
-						{sellerData.price}
-					</button>
+				{sellerData.status === 'active' ? (
+					<div className={styles.buttonContainer}>
+						<button
+							onClick={() => handleDownload(sellerData.id)}
+							className={styles.primaryButton}
+						>
+							{sellerData.price}
+						</button>
 
-					<button
-						onClick={() => setIsDemoFormOpen(true)}
-						className={styles.secondaryButton}
-					>
-						Need a custom seller list?
-					</button>
-				</div>
+						<button
+							onClick={() => setIsDemoFormOpen(true)}
+							className={styles.secondaryButton}
+						>
+							Need a custom seller list?
+						</button>
+					</div>
+				) : null}
+
+				{sellerData.status === 'inactive' ? (
+					<form onSubmit={handleJoinWaitlist}>
+						<div className={styles.formContainer}>
+							<FormInput
+								className={`
+								${styles.formInput}
+								${styles.formInput__long}
+							`}
+								placeholder="Email address"
+								id="email"
+								type="email"
+								name="email"
+								onChange={handleChange}
+								value={email}
+								required
+								autoComplete="off"
+								hasError={emailError}
+								errorMessage="Invalid Email"
+							/>
+
+							<button>Join the waitlist</button>
+						</div>
+					</form>
+				) : null}
 			</div>
 
 			<div className={`${styles.right} ${imageClass}`}>
@@ -150,6 +250,19 @@ const SellerCard: React.FC<Props> = (props) => {
 				overlayClassName="modalOverlay"
 			>
 				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
+			</Modal>
+
+			<Modal
+				isOpen={openSubmitConfirm}
+				onRequestClose={() => setOpenSubmitConfirm(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
+			>
+				<FormSubmitConfirm
+					heading="You are now in the waiting list"
+					body="We will send you an email when the list is ready."
+					ending=" "
+				/>
 			</Modal>
 		</article>
 	);
