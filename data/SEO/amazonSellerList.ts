@@ -2,16 +2,16 @@ import { SEODetails } from '../../interfaces/SEO';
 
 export const seoData: SEODetails = {
 	title: `Sellgo - Amazon seller list | Amazon seller database`,
-	description: `Sellgo is headquartered in Portland, Oregon. Sellgo is an Amazon FBA product
-	research tool to empower sellers to grow their Amazon businesses. Expand your business with
-	our FBA tools and resources.`,
+	description: `Download a database full of Amazon sellers and businesses selling profitable, high-demand products. 
+	Compare ASINs, brands, seller reviews ratings, and more.`,
 	imageUrl: ``,
 	keywords: [
-		'sellgo',
-		'what is sellgo',
-		'sellgo company',
-		'sellgo headquarters',
-		'sellgo portland'
+		'amazon seller list',
+		'amazon seller database',
+		'amazon seller data',
+		'amazon seller email',
+		'amazon seller phone',
+		'amazon seller contact'
 	],
-	slug: '/amazon-seller-download'
+	slug: '/amazon-seller-list'
 };
