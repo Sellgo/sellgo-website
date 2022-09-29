@@ -54,7 +54,7 @@ const AmazonSellerDownloadPage: React.FC<Props> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/aistock.json`);
+	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/sellerList.json`);
 	const { data } = response;
 
 	return {

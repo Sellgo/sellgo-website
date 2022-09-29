@@ -9,7 +9,7 @@ export const wholesaleFeatures: any[] = [
 			'Engage to more buyer faster',
 			'Increase conversion with insight-powered data'
 		],
-		imageUrl: '/seller_download_1.png'
+		imageUrl: '/seller_list_1.png'
 	},
 	{
 		title: '',
@@ -21,7 +21,7 @@ export const wholesaleFeatures: any[] = [
 			'No contracts',
 			'Better opportunity cost'
 		],
-		imageUrl: '/seller_download_2.png'
+		imageUrl: '/seller_list_2.png'
 	},
 	{
 		title: '',
@@ -29,6 +29,6 @@ export const wholesaleFeatures: any[] = [
 		icon: 'sellerDatabase',
 		description: `Get any kind of Amazon seller data`,
 		benefits: ['Real and updated data', 'On-demand analytics', 'Any format'],
-		imageUrl: '/seller_download_3.png'
+		imageUrl: '/seller_list_3.png'
 	}
 ];

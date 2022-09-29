@@ -28,23 +28,24 @@ const StepperInfoSection: React.FC<Props> = () => {
 				key={uuid()}
 				{...wholesaleFeatures[0]}
 				reversed={false}
-				imageWidth={720}
+				imageWidth={500}
+				imageHeight={333}
 			/>
 
 			<ProductCard
 				key={uuid()}
 				{...wholesaleFeatures[1]}
 				reversed
-				imageWidth={720}
-				imageHeight={500}
+				imageWidth={500}
+				imageHeight={333}
 			/>
 
 			<ProductCard
 				key={uuid()}
 				{...wholesaleFeatures[2]}
 				reversed={false}
-				imageWidth={720}
-				imageHeight={500}
+				imageWidth={500}
+				imageHeight={333}
 			/>
 		</section>
 	);
