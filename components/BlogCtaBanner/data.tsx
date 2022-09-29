@@ -35,6 +35,7 @@ export const CTA_1B = {
 			regularly.{' '}
 		</p>
 	),
+	asterisk: '',
 	linkLabel: 'View seller lists',
 	link: `/amazon-seller-list`
 };
