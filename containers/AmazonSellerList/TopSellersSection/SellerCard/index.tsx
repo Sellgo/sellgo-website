@@ -118,11 +118,11 @@ const SellerCard: React.FC<Props> = (props) => {
 						marketplace.
 					</p>
 
-					{sellerData.noOfSellers ? (
+					{sellerData.noOfSeller ? (
 						<div>
 							<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
 							Number of sellers:&nbsp;
-							<span className={styles.value}>{sellerData.noOfSellers}</span>
+							<span className={styles.value}>{sellerData.noOfSeller}</span>
 							&nbsp; (includes {sellerData.noOfFbaSellers} FBA sellers)
 						</div>
 					) : null}
