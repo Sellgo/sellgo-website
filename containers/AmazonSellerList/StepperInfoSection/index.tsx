@@ -18,11 +18,10 @@ const StepperInfoSection: React.FC<Props> = () => {
 			className={`page-container ${styles.stepperInfoSectionWrapper}`}
 			id="showCtaNavBar"
 		>
-			<h2 className={styles.stepperTitle}>What You Will Get</h2>
+			<h2 className={styles.stepperTitle}>It's our business to grow yours</h2>
 			<p className={styles.stepperSubtitle}>
-				Get exclusive access to our Seller Database with one purchase without
-				any monthly subscription. All these data will be available in one excel
-				file
+				You know the business. We understand the data. Now you can convert the
+				Seller list data into actionable insights for your business.
 			</p>
 
 			<ProductCard
