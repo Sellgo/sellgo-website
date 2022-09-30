@@ -22,6 +22,7 @@ const BlogCtaBanner = (props: Props) => {
 				<div className={styles.blogCtaText}>
 					{displayData.title}
 					{displayData.subtitle}
+					{displayData.asterisk}
 				</div>
 				<CTAButton
 					type={'primary'}

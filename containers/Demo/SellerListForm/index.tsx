@@ -215,7 +215,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 			{showDemoForm && (
 				<div className={styles.demoPage}>
 					<form className={styles.demoPageForm} onSubmit={handleSubmit}>
-						<h2>Looking for an instant seller list?</h2>
+						<h2>Looking for a customized seller list?</h2>
 						<p>
 							We&apos;re the only source for direct seller contact information
 							and advanced list filtering, so you can reach to your leads
@@ -329,7 +329,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								${styles.formInput__long}
 							`}
 								label=""
-								placeholder="Message*"
+								placeholder="Anything you want to add?*"
 								id="Message"
 								type="text"
 								name="message"
