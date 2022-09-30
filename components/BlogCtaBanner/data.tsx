@@ -3,37 +3,39 @@ import Image from 'next/image';
 export const CTA_1A = {
 	title: (
 		<h3>
-			Wanna &nbsp;
-			<Image src="/access.png" width={53} height={30} alt="access" />
-			&nbsp; 1M+ sellers today in seconds?
+			Want &nbsp;
+			<Image src="/instantdownload.png" width={148} height={30} alt="access" />
+			&nbsp; of the top 1M+ sellers on Amazon?
 		</h3>
 	),
 	subtitle: (
 		<p>
 			{' '}
-			Find million of Amazon sellers today for free in our database, first 1,000
-			is on us ...{' '}
+			Get the B2B data* of the top Amazon sellers on 8 marketplaces - updated
+			regularly.{' '}
 		</p>
 	),
-	linkLabel: 'Try for FREE',
-	link: `/`
+	asterisk: <span> *email, phone, website, LinkedIn, etc. </span>,
+	linkLabel: 'View seller lists',
+	link: `/amazon-seller-list`
 };
 
 export const CTA_1B = {
 	title: (
 		<h3>
-			Wanna &nbsp;
-			<Image src="/access.png" width={53} height={30} alt="access" />
-			&nbsp; 1M+ sellers today in seconds?
+			Want &nbsp;
+			<Image src="/download.png" width={53} height={30} alt="access" />
+			&nbsp; of the top 1M+ sellers on Amazon?
 		</h3>
 	),
 	subtitle: (
 		<p>
 			{' '}
-			Find million of Amazon sellers today for free in our database, first 1,000
-			is on us ...{' '}
+			Get the B2B data of the top 1M+ Amazon sellers on 8 marketplaces - updated
+			regularly.{' '}
 		</p>
 	),
-	linkLabel: 'Try for FREE',
-	link: `/`
+	asterisk: '',
+	linkLabel: 'View seller lists',
+	link: `/amazon-seller-list`
 };

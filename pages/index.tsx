@@ -91,7 +91,9 @@ export const getStaticProps: GetStaticProps = async () => {
 		customerCount = 23; // Random number for now
 	}
 
-	const response = await axios.get(`${AppConfig.FAQ_BUCKET}/aistock.json`);
+	const response = await axios.get(
+		`${AppConfig.FAQ_BUCKET}/webappPricing.json`
+	);
 	const { data } = response;
 
 	return {

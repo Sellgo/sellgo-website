@@ -1,0 +1,51 @@
+@import '../../../styles/guidelines';
+
+.heroboxWrapper {
+	background: $prim_white;
+	position: relative;
+}
+
+.herobox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: $black_1;
+	position: relative;
+	text-align: left;
+	margin-bottom: 5em;
+
+	@media only screen and(max-width: 1080px) {
+		margin-top: 10rem;
+		flex-direction: column-reverse;
+	}
+
+	.tagline {
+		font-size: $fontsize_content_16;
+		text-align: center;
+		max-width: 800px;
+	}
+}
+
+.textColumn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@media only screen and(max-width: 1080px) {
+		width: 100%;
+	}
+}
+
+.heading {
+	font-size: $fontsize_title_46;
+	font-weight: $fontweight_extrabold;
+	line-height: $fontlineheight_heading_70;
+	margin-top: 2em;
+	margin-bottom: 0.5em;
+
+	@media only screen and(max-width: 650px) {
+		line-height: 1.2;
+	}
+}
