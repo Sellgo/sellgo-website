@@ -171,12 +171,11 @@ const SellerCard: React.FC<Props> = (props) => {
 
 					<div>
 						<Image src="/check-solid.svg" width="14px" height="10px" /> &nbsp;
-						Data points: Amazon URL, seller ID, FBA verification, business name,
-						business address, seller country, state/region, zip code, email,
-						website, phone number, store name, main category, store rating, last
-						30 days seller ratings, last 90 days seller ratings, last 12 months
-						seller ratings, lifetime seller ratings, number of products, brands
-						sold, number of brands sold
+						Data points: seller ID, Uue FBA, seller link, business/ seller name,
+						address, city, state, zip code, country, phone, # of product
+						listings, first page ASINs, storefront link, brands, feedback,
+						rating, negative/ neutral/ positive reviews, reviews count, email,
+						primary category, website
 					</div>
 
 					<div>

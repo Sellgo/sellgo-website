@@ -12,7 +12,7 @@ const sellerData = [
 		country: 'UNITED STATES',
 		sellerCountryOrigin: 'Sellers',
 		noOfSeller: '231,335',
-		noOfFbaSellers: '136,380',
+		noOfFbaSellers: '137,193',
 		noOfEmails: '54,329',
 		noOfWebsites: '85,127',
 		noOfPhysicalAddresses: '223,762',
