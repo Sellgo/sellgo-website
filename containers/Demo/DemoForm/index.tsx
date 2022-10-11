@@ -22,6 +22,7 @@ import {
 
 /* App Config */
 import AppConfig from '../../../config';
+import Close from '../../../components/Icons/Close';
 
 interface Props {
 	onRequestClose: () => void;
@@ -273,6 +274,15 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 		<>
 			{showDemoForm && (
 				<div className={styles.demoPage}>
+					<button
+						onClick={() => {
+							setOpenSubmitConfirm(false);
+							onRequestClose();
+						}}
+						className={styles.closeButton}
+					>
+						<Close width={10} height={10} fill="#636d76" />
+					</button>
 					<form className={styles.demoPageForm} onSubmit={handleSubmit}>
 						<h2>See how Sellgo can work for you</h2>
 						<p>

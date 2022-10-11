@@ -10,6 +10,7 @@ import styles from './index.module.scss';
 /* Components */
 import FormInput from '../FormInput';
 import AppConfig from '../../config';
+import Close from '../Icons/Close';
 
 interface Props {
 	closeModal: () => void;
@@ -86,6 +87,15 @@ const ReCaptchaNewsLetter: React.FC<Props> = (props) => {
 
 	return (
 		<div className={styles.newsLetter}>
+			<button
+				onClick={() => {
+					clearForm();
+					closeModal();
+				}}
+				className={styles.closeButton}
+			>
+				<Close width={10} height={10} fill="#636d76" />
+			</button>
 			<h1>Subscribe to our newsletter</h1>
 			<p>
 				Join our subscriber&apos;s list to get the latest update and articles
