@@ -9,6 +9,7 @@ import styles from './index.module.scss';
 /* Components */
 import FormInput from '../FormInput';
 import AppConfig from '../../config';
+import Close from '../Icons/Close';
 
 interface Props {
 	closeModal: () => void;
@@ -69,6 +70,15 @@ const BlogSubscriptionModal: React.FC<Props> = (props) => {
 
 	return (
 		<div className={styles.newsLetter}>
+			<button
+				onClick={() => {
+					clearForm();
+					closeModal();
+				}}
+				className={styles.closeButton}
+			>
+				<Close width={10} height={10} fill="#636d76" />
+			</button>
 			<Image
 				src="/successImage.png"
 				width={330}
