@@ -34,6 +34,12 @@
 		img {
 			max-width: 100%;
 		}
+
+		@media screen and (max-width: 780px) {
+			img {
+				height: auto;
+			}
+		}
 	}
 
 	a {
