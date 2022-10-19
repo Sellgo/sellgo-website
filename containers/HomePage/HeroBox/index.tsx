@@ -153,8 +153,8 @@ const HeroBox = () => {
 				<div className={styles.imageColumn}>
 					<Image
 						src="/heroImage.png"
-						width={500}
-						height={400}
+						width={750}
+						height={500}
 						alt="alt"
 						className={styles.heroImage}
 					/>
