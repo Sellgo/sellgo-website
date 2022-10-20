@@ -1,0 +1,30 @@
+.sellerMapsContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	// min-height: 100vh;
+	margin-top: 3rem;
+	padding-bottom: 4rem !important;
+	position: relative;
+	overflow-y: none !important;
+}
+
+/* Main map container */
+.mapContainer {
+	border: 1px solid #ced4d9;
+	border-radius: 7px;
+	flex: 1;
+	min-width: 45vw;
+	position: relative;
+	z-index: 90 !important;
+	margin: 0 20px;
+	min-height: calc(100vh - 15rem);
+	overflow-x: hidden;
+}
+
+.map {
+	/* The width is set to be bigger, so that upon resizing, the map will still show */
+	width: calc(45vw + 400px);
+	z-index: 90 !important;
+	min-height: calc(100vh - 15rem);
+}
