@@ -1,5 +1,49 @@
 @import '../../../styles/guidelines';
 
+.tabsContainer {
+	background: url('/intersection.png') no-repeat center center fixed;
+	background-size: cover;
+	height: 344px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	position: relative;
+
+	.tabsHeading {
+		position: absolute;
+		top: 1.6em;
+		font-weight: $fontweight_bold !important;
+		font-size: $fontsize_title_30;
+		padding: 0.2em 0.7em;
+		border-radius: 7px;
+		color: $prim_dark_2;
+		background-color: #fff;
+	}
+
+	ul {
+		display: flex;
+		background: none;
+		color: none;
+		box-shadow: none;
+		gap: 5em;
+	}
+
+	li {
+		background-color: #fff;
+		color: black;
+		height: 180px;
+		border-radius: 20px 20px 0 0;
+		border: 5px solid #fff;
+		filter: brightness(94%);
+		border-bottom: 0;
+	}
+
+	h2 {
+		font-weight: $fontweight_bold !important;
+	}
+}
+
 .pricingPanelTabsWrapper {
 	width: 100%;
 	background: $tab_active;
@@ -8,10 +52,9 @@
 
 .pricingPanelTabList {
 	list-style: none;
-	text-align: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	color: $prim_dark_2;
 	max-width: 100%;
 	margin: 0 auto;
@@ -27,13 +70,15 @@
 
 .pricingPanelTab {
 	font-size: $fontsize_content_16;
-	font-weight: $fontweight_medium;
-	color: $grey_8;
+	color: $prim_dark_2;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	padding: 2rem;
+	align-items: flex-start;
+	padding: 3rem;
+	gap: 0.5em;
+	width: 370px;
 	cursor: pointer;
-	min-width: 19.3rem;
 	position: relative;
 
 	@media only screen and(max-width: 980px) {
@@ -43,15 +88,11 @@
 	&__Selected {
 		color: $prim_white;
 		background: #a4a3a4;
-		font-weight: $fontweight_semibold;
-
-		.rainbowLine {
-			position: absolute;
-			bottom: 0;
-			background: $purple_pink_gradient;
-			width: 100%;
-			height: 5px;
-		}
+		border: 5px solid $sellgo_purple !important;
+		filter: brightness(100%) !important;
+		border-bottom: 0 !important;
+		opacity: 1 !important;
+		height: 196px !important;
 	}
 }
 

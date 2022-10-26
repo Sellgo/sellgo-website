@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 import { Element } from 'react-scroll';
+import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
+import DemoForm from '../../Demo/DemoForm';
 import PricingPlansCard from '../../../components/PricingPlansCard';
 import AllfeaturesTable from '../../../components/AllFeaturesTable';
 import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
-import ContactInfo from '../../../components/ContactInfo';
+// import ContactInfo from '../../../components/ContactInfo';
 import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
 
 /* Constants */
 import { getAllFeaturesForPlans } from '../../../data/Pricing';
-import FreePlanCtaBox from '../../../components/FreePlanCtaBox';
+// import FreePlanCtaBox from '../../../components/FreePlanCtaBox';
 
 interface Props {
 	planName: string;
@@ -33,6 +35,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 	} = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
+	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 
 	/* Get all features based on plan names */
 	const allPlanFeatures = getAllFeaturesForPlans(planName);
@@ -130,20 +133,27 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							);
 						})}
 					</div>
-				</section>
-			)}
 
-			{!showOnlyGeneralPlanDetails && (
-				<section className={`big-page-container ${styles.contactInfoSection}`}>
-					<ContactInfo />
+					<div className={styles.talkToExpertContainer}>
+						<p>*Need more data?</p>
+						<p>
+							Do you have existing seller data that you want to enrich with our
+							updated data?
+						</p>
+
+						<button onClick={() => setIsDemoFormOpen(true)}>
+							Talk to an expert
+						</button>
+					</div>
+					<Modal
+						isOpen={isDemoFormOpen}
+						onRequestClose={() => setIsDemoFormOpen(false)}
+						className="modal"
+						overlayClassName="modalOverlay"
+					>
+						<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+					</Modal>
 				</section>
-			)}
-			{!showOnlyGeneralPlanDetails && (
-				<FreePlanCtaBox
-					className={styles.dollarPlanCTABox}
-					isPrimary
-					planName="free"
-				/>
 			)}
 		</>
 	);

@@ -84,7 +84,10 @@
 
 .ctaBox {
 	display: flex;
-	align-items: flex-end;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1em;
 	position: relative;
 	width: 400px;
 	margin-top: 50px;
@@ -95,8 +98,8 @@
 		width: 100%;
 	}
 
-	.emailSignupBox {
-		width: 100%;
+	.closingCTA {
+		width: 250px;
 	}
 
 	.demoButton {
@@ -116,14 +119,10 @@
 		}
 	}
 
-	span {
+	div {
 		font-size: 9px;
-		color: $prim_dark_2;
-		text-align: center;
+		color: $prim_dark_1;
 		width: 100%;
-		display: flex;
-		justify-content: center;
-		margin-top: 10px;
 	}
 }
 
