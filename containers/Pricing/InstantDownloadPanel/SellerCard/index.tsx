@@ -203,7 +203,8 @@ const SellerCard: React.FC<Props> = (props) => {
 						className={`${styles.secondaryButton} ${styles.sampleButton}`}
 						onClick={() => handleOpenInNew(sellerData.sample)}
 					>
-						Open Sample in Google Sheets
+						<Image src="/longArrowRightPurple.svg" width="14px" height="10px" />{' '}
+						&nbsp; Open Sample in Google Sheets
 					</button>
 				) : (
 					''

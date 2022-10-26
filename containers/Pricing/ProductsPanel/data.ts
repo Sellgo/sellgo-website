@@ -9,20 +9,22 @@ export const planTypes: PlanTypes[] = [
 	{
 		name: 'Instant Download',
 		content: 'Pay less on software, invest more in your business.',
+		img: 'instant-download.svg',
 		isNew: false
 	},
 	{
 		name: 'Web App',
 		content: 'Pay less on software, invest more in your business.',
+		img: 'chartnetworkIcon.svg',
 		isNew: false
 	}
 ];
 
 export const plansAndProductsDetails = [
 	{
-		planName: 'Pricing & Plans',
-		summary: `Sellgo offers flexible packages across our portfolio of data-driven
-    solutions and premium applications.`,
+		planName: 'Monthly and Annual Web App Plans',
+		summary: `Invest On A Research Tool That's Dependable, Powerful And
+    Can Scale Up Your Business With 7-Day Money Back Guarantee.`,
 
 		infoAlertMessage: {
 			monthly: {

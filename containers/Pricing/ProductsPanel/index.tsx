@@ -4,12 +4,14 @@ import { v4 as uuid } from 'uuid';
 import { useRouter } from 'next/router';
 
 /* Styling */
+import Image from 'next/image';
 import styles from './index.module.scss';
 
 /* Conatiners */
 import PricingPlansSection from '../PricingPlansSection';
 import FAQSection from '../FAQSection';
 import InstantDownloadPanel from '../InstantDownloadPanel';
+import TestimonialsSection from '../TestimonialSection';
 
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
@@ -23,7 +25,6 @@ import {
 
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
-// import ProductCard from '../../../components/ProductCard';
 
 interface Props {
 	productsPanelFaqList: FAQDetails[];
@@ -92,12 +93,19 @@ const ProductsPanel: React.FC<Props> = (props) => {
 							if (planType.name !== 'Private Label $1') {
 								return (
 									<Tab key={uuid()} className={styles.pricingPanelTab}>
-										<h2>
-											{planType.name}
-											{planType.isNew && (
-												<span className={styles.newBadge}>New</span>
-											)}
-										</h2>
+										<div className={styles.headingContainer}>
+											<Image
+												src={`/${planType.img}`}
+												width="25px"
+												height="auto"
+											/>
+											<h2>
+												{planType.name}
+												{planType.isNew && (
+													<span className={styles.newBadge}>New</span>
+												)}
+											</h2>
+										</div>
 										<p>{planType.content}</p>
 									</Tab>
 								);
@@ -130,6 +138,15 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					);
 				})}
 			</Tabs>
+
+			<TestimonialsSection />
+
+			<div className={styles.brandsContainer}>
+				<h2>These leading brands are growing their business with Sellgo</h2>
+				<img src="/brands.png" alt="brands" />
+				<img src="/brands1.png" alt="brands" />
+			</div>
+
 			{/* FAQ Section */}
 			<FAQSection faqData={productsPanelFaqList[selectedPlanType].data} />
 		</>
