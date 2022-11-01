@@ -123,6 +123,10 @@
 		font-size: 9px;
 		color: $prim_dark_1;
 		width: 100%;
+
+		@media screen and (max-width: 1080px) {
+			text-align: center;
+		}
 	}
 }
 

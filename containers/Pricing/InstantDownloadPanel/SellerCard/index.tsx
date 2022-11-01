@@ -110,12 +110,7 @@ const SellerCard: React.FC<Props> = (props) => {
 				<div className={styles.left}>
 					<Image src={sellerData.icon} width="40px" height="40px" />
 					<p>{sellerData.country}</p>
-					<h2>
-						{sellerData.title}{' '}
-						{sellerData.status === 'inactive' ? (
-							<span className={styles.titleNew}>New</span>
-						) : null}
-					</h2>
+					<h2>{sellerData.title} </h2>
 
 					<p>
 						A dataset of the top active&nbsp;
@@ -262,7 +257,9 @@ const SellerCard: React.FC<Props> = (props) => {
 					<Image src={sellerData.imageSeller} width={700} height={419} />
 				</button>
 			) : (
-				<Image src={sellerData.imageSeller} width={700} height={419} />
+				<button className={`${styles.right} ${imageClass}`}>
+					<Image src={sellerData.imageSeller} width={700} height={419} />
+				</button>
 			)}
 
 			<Modal

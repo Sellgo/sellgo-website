@@ -10,6 +10,11 @@
 	justify-content: flex-end;
 	position: relative;
 
+	@media screen and (max-width: 480px) {
+		margin: 0 auto;
+		height: 200px;
+	}
+
 	.tabsHeading {
 		position: absolute;
 		top: 1.6em;
@@ -19,6 +24,10 @@
 		border-radius: 7px;
 		color: $prim_dark_2;
 		background-color: #fff;
+
+		@media screen and (max-width: 480px) {
+			top: 1.6em;
+		}
 	}
 
 	ul {
@@ -27,6 +36,11 @@
 		color: none;
 		box-shadow: none;
 		gap: 5em;
+
+		@media screen and (max-width: 480px) {
+			flex-direction: row;
+			gap: 0.5em;
+		}
 	}
 
 	li {
@@ -37,10 +51,23 @@
 		border: 5px solid #fff;
 		filter: brightness(94%);
 		border-bottom: 0;
+
+		@media screen and (max-width: 480px) {
+			height: 80px;
+			flex-basis: 45%;
+
+			p {
+				display: none;
+			}
+		}
 	}
 
 	h2 {
 		font-weight: $fontweight_bold !important;
+
+		@media screen and (max-width: 480px) {
+			font-size: $fontsize_content_16;
+		}
 	}
 }
 
@@ -102,6 +129,11 @@
 		border-bottom: 0 !important;
 		opacity: 1 !important;
 		height: 196px !important;
+
+		@media screen and (max-width: 480px) {
+			height: 80px !important;
+			width: 40% !important;
+		}
 
 		.headingContainer {
 			filter: grayscale(0%);

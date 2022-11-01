@@ -13,7 +13,7 @@
 	}
 	@media only screen and(max-width: 750px) {
 		flex-direction: column;
-		margin: 5rem auto;
+		margin: 0 auto;
 	}
 
 	h2,
@@ -40,6 +40,7 @@
 		padding: 0.1em 0.8em;
 		border-radius: 1em;
 		margin-left: 1em;
+		overflow: hidden;
 	}
 
 	p,
@@ -55,6 +56,7 @@
 		display: flex;
 		gap: 2em;
 		margin-top: 1em;
+		align-items: center;
 	}
 
 	button {
@@ -84,6 +86,10 @@
 		color: $prim_white;
 		font-weight: $fontweight_semibold;
 		width: 220px;
+
+		@media screen and (max-width: 480px) {
+			padding: 2em;
+		}
 	}
 
 	.secondaryButton {
@@ -97,7 +103,8 @@
 		@media only screen and(max-width: 750px) {
 			order: 2;
 			text-align: center;
-			margin-top: 4rem;
+			margin-top: 0;
+			max-width: 90%;
 		}
 
 		small {
@@ -144,6 +151,15 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
+		order: 2;
+
+		@media screen and (max-width: 480px) {
+			padding: 1em;
+			overflow: hidden;
+			background: none;
+			width: 100%;
+		}
+
 		img {
 			max-width: 100%;
 		}
@@ -161,6 +177,7 @@
 	justify-content: center;
 	padding: 50px;
 	border-radius: 20px;
+	order: 1;
 }
 
 .reversedImage {
@@ -190,6 +207,10 @@
 		font-weight: 600;
 		font-size: 1.25rem;
 		width: 22rem;
+
+		@media screen and (max-width: 480px) {
+			padding: 0 1em;
+		}
 	}
 }
 

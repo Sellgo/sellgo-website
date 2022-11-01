@@ -8,6 +8,12 @@
 		color: $prim_dark_2;
 		text-align: center;
 		font-size: $fontsize_subtitle_32;
+
+		@media screen and (max-width: 480px) {
+			font-size: $fontsize_subtitle_28;
+			width: 95%;
+			margin: 0 auto;
+		}
 	}
 
 	.testimonialsWrapper {
