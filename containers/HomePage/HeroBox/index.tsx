@@ -112,9 +112,9 @@ const HeroBox = () => {
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						Get the Amazon sellers data and software you need to connect with
+						Search, connect and convert over millions of verified contacts at
 						<br />
-						and close your most valuable customers - all-in-one seller research.
+						1M+ Amazon seller companies with Sellgo leads intelligence platform.
 					</p>
 					<div className={styles.ctaBox}>
 						<div className={styles.emailSignupBox}>
