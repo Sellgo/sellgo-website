@@ -5,7 +5,8 @@ import { pay1DollarPlan, payMonthlyAndAnnualPlan } from './allFeaturesTable';
 
 export const allPlansFeatureMapper: KeyValuePair = {
 	'Pricing & Plans': payMonthlyAndAnnualPlan,
-	'Pay $1 for a day': pay1DollarPlan
+	'Pay $1 for a day': pay1DollarPlan,
+	'Monthly and Annual Web App Plans': payMonthlyAndAnnualPlan
 };
 
 export const getAllFeaturesForPlans = (planName: string) => {
