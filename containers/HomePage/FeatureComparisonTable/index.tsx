@@ -8,6 +8,7 @@ import styles from './index.module.scss';
 import { features, plans, competitors } from './data';
 
 import CTAButton from '../../../components/CTAButton';
+import Tooltip from '../../../components/Tooltip';
 
 /* Utils */
 import { createFreeTrialLink } from '../../../utils/Referral';
@@ -143,17 +144,24 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 				>
 					{showAllFeatures ? 'View less >' : 'View all comparisons >'}
 				</button>
-				<CTAButton
-					type="primary"
-					variant="white"
-					size="medium"
-					navigateTo={createFreeTrialLink()}
-					asExternal
-					newTarget
-					className={styles.pricingButton}
-				>
-					Try for FREE
-				</CTAButton>
+				<Tooltip
+					className={styles.spacing}
+					text="We are experiencing outage currently"
+					trigger={
+						<CTAButton
+							type="primary"
+							variant="white"
+							size="medium"
+							disabled
+							navigateTo={createFreeTrialLink()}
+							asExternal
+							newTarget
+							className={styles.pricingButton}
+						>
+							Try for FREE
+						</CTAButton>
+					}
+				/>
 			</div>
 		</section>
 	);

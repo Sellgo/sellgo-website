@@ -7,6 +7,7 @@ import styles from './index.module.scss';
 
 /* COmponents */
 import CTAButton from '../../CTAButton';
+import Tooltip from '../../Tooltip';
 import ProductsNavbarExpansion from '../ProductsNavbarExpansion';
 import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
@@ -71,25 +72,31 @@ const NavbarBottom: React.FC<Props> = () => {
 			>
 				Sign in
 			</a>
-			<CTAButton
-				type="primary"
-				size="small"
-				navigateTo={createFreeTrialLink()}
-				newTarget
-				asExternal
-				variant="white"
-				className={styles.navbarCTA}
-			>
-				Sign up free
-				<div className={styles.navbarCTA__arrow}>
-					<Image
-						src="/longArrowRightIcon.svg"
-						width={20}
-						height={10}
-						alt="right-arrow"
-					/>
-				</div>
-			</CTAButton>
+			<Tooltip
+				text="We are experiencing outage currently"
+				trigger={
+					<CTAButton
+						type="primary"
+						size="small"
+						disabled
+						navigateTo={createFreeTrialLink()}
+						newTarget
+						asExternal
+						variant="white"
+						className={styles.navbarCTA}
+					>
+						Sign up free
+						<div className={styles.navbarCTA__arrow}>
+							<Image
+								src="/longArrowRightIcon.svg"
+								width={20}
+								height={10}
+								alt="right-arrow"
+							/>
+						</div>
+					</CTAButton>
+				}
+			/>
 		</div>
 	);
 };

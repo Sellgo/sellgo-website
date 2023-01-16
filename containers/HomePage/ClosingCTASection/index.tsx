@@ -5,6 +5,7 @@ import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../../components/CTAButton';
+import Tooltip from '../../../components/Tooltip';
 import RainbowText from '../../../components/RainbowText';
 import { createFreeTrialLink } from '../../../utils/Referral';
 
@@ -26,17 +27,24 @@ const ClosingCTASection = () => {
 					</p>
 
 					<div className={styles.ctaRow}>
-						<CTAButton
-							type="primary"
-							size="medium"
-							variant="white"
-							navigateTo={createFreeTrialLink()}
-							asExternal
-							newTarget
-							className={styles.closingCTA}
-						>
-							Sign up free
-						</CTAButton>
+						<Tooltip
+							text="We are experiencing outage currently"
+							trigger={
+								<CTAButton
+									type="primary"
+									size="medium"
+									variant="white"
+									disabled
+									navigateTo={createFreeTrialLink()}
+									asExternal
+									newTarget
+									className={styles.closingCTA}
+								>
+									Sign up free
+								</CTAButton>
+							}
+						/>
+
 						{/* <div className={styles.signUpDetails}>
 							<Image src="/smileyFace.svg" width={25} height={25} />
 							<p> {customerCount} people have signed up.</p>

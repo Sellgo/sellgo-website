@@ -10,6 +10,7 @@ import styles from './index.module.scss';
 import RainbowText from '../../../components/RainbowText';
 import SellerListForm from '../../Demo/SellerListForm';
 import FormInput from '../../../components/FormInput';
+import Tooltip from '../../../components/Tooltip';
 
 /* Utils */
 import AppConfig from '../../../config';
@@ -131,13 +132,19 @@ const HeroBox = () => {
 								hasError={emailErr}
 								errorMessage={emailErrMsg}
 							/>
-							<button
-								className={styles.submitButton}
-								disabled={emailErr}
-								onClick={onSignupClick}
-							>
-								Create free account
-							</button>
+							<Tooltip
+								text="We are experiencing outage currently"
+								trigger={
+									<button
+										disabled
+										className={styles.submitButton}
+										// disabled={emailErr}
+										onClick={onSignupClick}
+									>
+										Create free account
+									</button>
+								}
+							/>
 							<span>
 								Free forever. No credit card required. Instant access.
 							</span>

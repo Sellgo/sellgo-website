@@ -7,6 +7,7 @@ import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../../components/CTAButton';
+import Tooltip from '../../../components/Tooltip';
 import ProductAccordion from '../../../components/ProductAccordion';
 import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
 import { createFreeTrialLink } from '../../../utils/Referral';
@@ -38,15 +39,22 @@ const HeroBox: React.FC<Props> = () => {
 					<h2 className={styles.subHeading}>Chrome Extension</h2>
 				</div>
 				<h1 className={styles.heading}>Quick product validation on browser</h1>
-				<CTAButton
-					navigateTo={createFreeTrialLink()}
-					type="primary"
-					size="productPageBig"
-					variant="rainbow"
-					className={styles.heroBoxCTA}
-				>
-					Sign up free
-				</CTAButton>
+				<Tooltip
+					text="We are experiencing outage currently"
+					trigger={
+						<CTAButton
+							navigateTo={createFreeTrialLink()}
+							disabled
+							type="primary"
+							size="productPageBig"
+							variant="rainbow"
+							className={styles.heroBoxCTA}
+						>
+							Sign up free
+						</CTAButton>
+					}
+				/>
+
 				<p>
 					Try it free. No credit card required.
 					<br />

@@ -7,6 +7,7 @@ import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../../components/CTAButton';
+import Tooltip from '../../../components/Tooltip';
 import SellerListForm from '../../Demo/SellerListForm';
 import { createFreeTrialLink } from '../../../utils/Referral';
 
@@ -29,17 +30,23 @@ const NewClosingCTASection = () => {
 						</p>
 
 						<div className={styles.ctaRow}>
-							<CTAButton
-								type="primary"
-								size="medium"
-								variant="rainbow"
-								navigateTo={createFreeTrialLink()}
-								asExternal
-								newTarget
-								className={styles.closingCTA}
-							>
-								Create free account
-							</CTAButton>
+							<Tooltip
+								text="We are experiencing outage currently"
+								trigger={
+									<CTAButton
+										type="primary"
+										size="medium"
+										variant="rainbow"
+										disabled
+										navigateTo={createFreeTrialLink()}
+										asExternal
+										newTarget
+										className={styles.closingCTA}
+									>
+										Create free account
+									</CTAButton>
+								}
+							/>
 							<button
 								className={styles.demoButton}
 								onClick={() => setIsDemoFormOpen(true)}
