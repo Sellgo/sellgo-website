@@ -1,0 +1,27 @@
+@import '../../styles/guidelines';
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	font-size: $fontsize_content_12;
+	font-weight: $fontweight_medium;
+
+	.tooltiptext {
+		visibility: hidden;
+		margin-top: 5px;
+		width: 150px;
+		background-color: #fff;
+		color: $prim_dark_2;
+		text-align: center;
+		border-radius: 6px;
+		box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.3);
+		padding: 10px 0;
+		position: absolute;
+		right: 20px;
+		z-index: 1;
+	}
+
+	&:hover .tooltiptext {
+		visibility: visible;
+	}
+}

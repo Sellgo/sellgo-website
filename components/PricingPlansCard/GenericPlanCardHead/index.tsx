@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../CTAButton';
+import Tooltip from '../../Tooltip';
 import PricePlanToggleButton from '../../PricePlanToggleButton';
 
 /* Utils */
@@ -154,17 +155,24 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</div>
 			)}
 
-			<CTAButton
-				type="primary"
-				size="medium"
-				variant={isNew ? 'purplePinkRainbow' : 'green'}
-				navigateTo={`${AppConfig.APP_URL}/signup`}
-				className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
-				asExternal
-				newTarget
-			>
-				Get started
-			</CTAButton>
+			<Tooltip
+				text="We are experiencing outage currently"
+				className={styles.spacing}
+				trigger={
+					<CTAButton
+						disabled
+						type="primary"
+						size="medium"
+						variant={isNew ? 'purplePinkRainbow' : 'green'}
+						navigateTo={`${AppConfig.APP_URL}/signup`}
+						className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
+						asExternal
+						newTarget
+					>
+						Get started
+					</CTAButton>
+				}
+			/>
 		</div>
 	);
 };

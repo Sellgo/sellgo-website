@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import styles from './index.module.scss';
 import CTAButton from '../CTAButton';
+import Tooltip from '../Tooltip';
 
 /* Utils */
 import { createFreeTrialLink } from '../../utils/Referral';
@@ -33,17 +34,24 @@ const CtaNavBar = (props: Props) => {
 						alt="Sellgo Inc. Company Logo"
 					/>
 				</a>
-				<CTAButton
-					type="secondary"
-					size="small"
-					variant="rainbow"
-					navigateTo={createFreeTrialLink()}
-					asExternal
-					newTarget
-					className={styles.ctaButton}
-				>
-					Sign up free
-				</CTAButton>
+
+				<Tooltip
+					text="We are experiencing outage currently"
+					trigger={
+						<CTAButton
+							disabled
+							type="secondary"
+							size="small"
+							variant="rainbow"
+							navigateTo={createFreeTrialLink()}
+							asExternal
+							newTarget
+							className={styles.ctaButton}
+						>
+							Sign up free
+						</CTAButton>
+					}
+				/>
 			</div>
 		</div>
 	);

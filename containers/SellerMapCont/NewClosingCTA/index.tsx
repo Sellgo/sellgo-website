@@ -10,6 +10,7 @@ import styles from './index.module.scss';
 import SellerListForm from '../../Demo/SellerListForm';
 import AppConfig from '../../../config';
 import FormInput from '../../../components/FormInput';
+import Tooltip from '../../../components/Tooltip';
 import { encodeBase64 } from '../../../utils/Format';
 
 const NewClosingCTASection = () => {
@@ -71,13 +72,19 @@ const NewClosingCTASection = () => {
 									hasError={emailErr}
 									errorMessage={emailErrMsg}
 								/>
-								<button
-									className={styles.submitButton}
-									disabled={emailErr}
-									onClick={onSignupClick}
-								>
-									Start your FREE account
-								</button>
+								<Tooltip
+									text="We are experiencing outage currently"
+									trigger={
+										<button
+											className={styles.submitButton}
+											// disabled={emailErr}
+											disabled
+											onClick={onSignupClick}
+										>
+											Start your FREE account
+										</button>
+									}
+								/>
 								<span>
 									Free forever. No credit card required. Instant access.
 								</span>

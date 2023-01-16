@@ -121,7 +121,7 @@
 	height: 5rem;
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_content_16;
-	margin: 3rem auto;
+	margin: 0 auto;
 
 	@media screen and (max-width: 480px) {
 		width: 16em;
@@ -134,7 +134,7 @@
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_content_16;
 	margin: 0;
-	margin-bottom: 30px;
+	margin-bottom: 0;
 }
 
 .newFeatureBanner {
@@ -174,4 +174,8 @@
 		/* Override absolute position for the smaller pricing header card */
 		left: 10px;
 	}
+}
+
+.spacing {
+	margin: 30px;
 }

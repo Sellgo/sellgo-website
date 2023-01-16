@@ -5,6 +5,7 @@ import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../CTAButton';
+import Tooltip from '../Tooltip';
 import Check from '../Icons/Check';
 
 /* Utils */
@@ -32,16 +33,22 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 				</div>
 
 				<div className={styles.freeTrailCTAWrapper}>
-					<CTAButton
-						type={isPrimary ? 'primary' : 'secondary'}
-						size="medium"
-						navigateTo={createFreeTrialLink()}
-						asExternal
-						newTarget
-						className={styles.freeTrialCTA}
-					>
-						Sign up free
-					</CTAButton>
+					<Tooltip
+						text="We are experiencing outage currently"
+						trigger={
+							<CTAButton
+								type={isPrimary ? 'primary' : 'secondary'}
+								size="medium"
+								disabled
+								navigateTo={createFreeTrialLink()}
+								asExternal
+								newTarget
+								className={styles.freeTrialCTA}
+							>
+								Sign up free
+							</CTAButton>
+						}
+					/>
 					<p>Try for free, no credit card required.</p>
 				</div>
 			</div>
