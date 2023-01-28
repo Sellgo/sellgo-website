@@ -6,16 +6,16 @@ export const DEFAULT_TAB_VALUE = 1;
 
 /* Map plan names with tabs */
 export const plansTabMapper: KeyValuePair = {
-	wholesale: 0,
+	'instant-download': 0,
 	/* HIDING-PRIVATE-LABEL */
 	// 'private-label': 1,
-	'monthly-and-annual-plans': 1,
-	'seller-scout-pro': 2
+	'monthly-and-annual-plans': 1
+	// 'seller-scout-pro': 2
 };
 
 /* Map tab number with plans */
 const reversePlansTabMapper: KeyValuePair = {
-	0: 'wholesale',
+	0: 'instant-download',
 	/* HIDING-PRIVATE-LABEL */
 	// 1: 'private-label',
 	1: 'monthly-and-annual-plans',

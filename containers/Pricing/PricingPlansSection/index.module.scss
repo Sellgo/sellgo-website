@@ -4,6 +4,29 @@
 	min-height: 80vh;
 }
 
+.talkToExpertContainer {
+	margin-top: 15em;
+	text-align: center;
+
+	p {
+		color: #2e3b4a;
+		font-size: $fontsize_subtitle_20;
+		font-weight: $fontweight_semibold;
+	}
+
+	button {
+		background-color: #3cf7af;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
+		color: $prim_dark_2;
+		border: none;
+		margin-top: 2em;
+		padding: 1em 4em;
+		border-radius: 7px;
+		cursor: pointer;
+	}
+}
+
 .pricingPlansSection {
 	padding-top: 6rem;
 	display: flex;

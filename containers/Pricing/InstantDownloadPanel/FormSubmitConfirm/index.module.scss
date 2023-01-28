@@ -1,0 +1,36 @@
+@import '../../../../styles/guidelines';
+
+.partnershipFormSubmitConfirm {
+	width: 50rem;
+	height: 24rem;
+	background: $grey_0;
+	border-radius: 7px;
+	color: $prim_dark_2;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+	padding-left: 4rem;
+	padding-top: 6rem;
+	padding-bottom: 8rem;
+
+	@media only screen and(max-width: 750px) {
+		width: 90vw;
+	}
+
+	@media only screen and(max-width: 500px) {
+		padding: 2rem;
+	}
+
+	h1 {
+		color: inherit;
+		font-size: $fontsize_subtitle_24;
+	}
+
+	p {
+		max-width: 40rem;
+		color: $prim_dark_2;
+		font-size: $fontsize_content_12;
+		font-weight: $fontweight_regular;
+	}
+}

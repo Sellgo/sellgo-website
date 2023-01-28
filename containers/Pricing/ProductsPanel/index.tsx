@@ -4,12 +4,14 @@ import { v4 as uuid } from 'uuid';
 import { useRouter } from 'next/router';
 
 /* Styling */
+import Image from 'next/image';
 import styles from './index.module.scss';
 
 /* Conatiners */
 import PricingPlansSection from '../PricingPlansSection';
 import FAQSection from '../FAQSection';
-import WholesaleOneDollarPanel from '../../WholesaleOneDollarPanel';
+import InstantDownloadPanel from '../InstantDownloadPanel';
+import TestimonialsSection from '../TestimonialSection';
 
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
@@ -23,7 +25,6 @@ import {
 
 /* Types */
 import { FAQDetails } from '../../../interfaces/FAQ';
-import ProductCard from '../../../components/ProductCard';
 
 interface Props {
 	productsPanelFaqList: FAQDetails[];
@@ -81,33 +82,42 @@ const ProductsPanel: React.FC<Props> = (props) => {
 				onSelect={handlePlanSelectChange}
 				selectedIndex={selectedPlanType}
 			>
-				<TabList className={styles.pricingPanelTabList}>
-					{planTypes.map((planType: any) => {
-						/* 
-							Hiding private label tab 
+				<div className={styles.tabsContainer}>
+					<div className={styles.tabsHeading}>Pricing and Plans</div>
+					<TabList className={styles.pricingPanelTabList}>
+						{planTypes.map((planType: any) => {
+							/*
+							Hiding private label tab
 							Search "HIDING-PRIVATE-LABEL" to see where other changes were made
 						*/
-						if (planType.name !== 'Private Label $1') {
-							return (
-								<Tab key={uuid()} className={styles.pricingPanelTab}>
-									<span>
-										{planType.name}
-										{planType.isNew && (
-											<span className={styles.newBadge}>New</span>
-										)}
-									</span>
-									<div className={styles.rainbowLine} />
-								</Tab>
-							);
-						} else {
-							return <span key={uuid()} />;
-						}
-					})}
-				</TabList>
+							if (planType.name !== 'Private Label $1') {
+								return (
+									<Tab key={uuid()} className={styles.pricingPanelTab}>
+										<div className={styles.headingContainer}>
+											<Image
+												src={`/${planType.img}`}
+												width="25px"
+												height="auto"
+											/>
+											<h2>
+												{planType.name}
+												{planType.isNew && (
+													<span className={styles.newBadge}>New</span>
+												)}
+											</h2>
+										</div>
+										<p>{planType.content}</p>
+									</Tab>
+								);
+							} else {
+								return <span key={uuid()} />;
+							}
+						})}
+					</TabList>
+				</div>
 
-				{/* Seperation of concern for wholesale and private label */}
-				<TabPanel>
-					<WholesaleOneDollarPanel />
+				<TabPanel key={uuid()}>
+					<InstantDownloadPanel />
 				</TabPanel>
 
 				{/* HIDING-PRIVATE-LABEL */}
@@ -128,24 +138,18 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					);
 				})}
 			</Tabs>
-			<div className="page-container">
-				<ProductCard
-					title={'CUSTOMER SUCCESS'}
-					subTitle={'Sellgo is more than just software.'}
-					description={`You don't have to do it alone. Sellgo customer 
-				success and training teams are here to answer your questions, 
-				help you master the inbound methodology, and make sure you're getting
-				the most out of your tools. All that — plus our detailed help documentation,
-				educational resources, and training programs — means you'll never feel 
-				left out in the cold.`}
-					linkLabel={''}
-					navigateTo={''}
-					imageUrl={'/successImage.png'}
-					imageWidth={1080}
-					imageHeight={810}
-					reversed
-				/>
+
+			<TestimonialsSection />
+
+			<div className={styles.brandsContainer}>
+				<h2>
+					Join the 10,000 leading brands are growing their businesses with
+					Sellgo
+				</h2>
+				{/* <img src="/brands.png" alt="brands" /> */}
+				<img src="/brands1.png" alt="brands" />
 			</div>
+
 			{/* FAQ Section */}
 			<FAQSection faqData={productsPanelFaqList[selectedPlanType].data} />
 		</>

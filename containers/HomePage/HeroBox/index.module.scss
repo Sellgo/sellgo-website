@@ -7,8 +7,8 @@
 
 .herobox {
 	overflow: hidden;
-	min-height: 80vh;
-	padding-top: 2rem;
+	min-height: 70vh;
+	padding-top: 3rem;
 	padding-bottom: 3rem;
 	display: flex;
 	justify-content: space-between;
@@ -84,7 +84,10 @@
 
 .ctaBox {
 	display: flex;
-	align-items: flex-end;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1em;
 	position: relative;
 	width: 400px;
 	margin-top: 50px;
@@ -95,8 +98,8 @@
 		width: 100%;
 	}
 
-	.emailSignupBox {
-		width: 100%;
+	.closingCTA {
+		width: 250px;
 	}
 
 	.demoButton {
@@ -116,14 +119,14 @@
 		}
 	}
 
-	span {
+	div {
 		font-size: 9px;
-		color: $prim_dark_2;
-		text-align: center;
+		color: $prim_dark_1;
 		width: 100%;
-		display: flex;
-		justify-content: center;
-		margin-top: 10px;
+
+		@media screen and (max-width: 1080px) {
+			text-align: center;
+		}
 	}
 }
 
@@ -184,5 +187,23 @@
 
 	&:hover {
 		opacity: 0.8;
+	}
+}
+
+.brandsContainer {
+	margin-top: 5em;
+	margin-bottom: 15em;
+	text-align: center;
+
+	h2 {
+		color: $prim_dark_2;
+		text-align: center;
+		font-size: $fontsize_subtitle_32;
+		margin-bottom: 1em;
+	}
+
+	img {
+		padding: 0 5em;
+		max-width: 100%;
 	}
 }
