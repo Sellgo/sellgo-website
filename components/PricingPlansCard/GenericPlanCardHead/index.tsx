@@ -49,8 +49,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 	return (
 		<div
 			className={`
-			${className} 
-			${styles.pricingHeadWrapper} 
+			${className}
+			${styles.pricingHeadWrapper}
 			${isNew && isSmall ? styles.pricingHeadWrapper__new : ''}
 			${!isNew && isSmall ? styles.pricingHeadWrapper__notNew : ''}
 			${isSmall && styles.pricingHeadWrapper__bordered}`}
