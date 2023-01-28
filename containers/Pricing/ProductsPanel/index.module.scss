@@ -1,5 +1,76 @@
 @import '../../../styles/guidelines';
 
+.tabsContainer {
+	background: url('/intersection.png') no-repeat center center fixed;
+	background-size: cover;
+	height: 344px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	position: relative;
+
+	@media screen and (max-width: 480px) {
+		margin: 0 auto;
+		height: 200px;
+	}
+
+	.tabsHeading {
+		position: absolute;
+		top: 1.6em;
+		font-weight: $fontweight_bold !important;
+		font-size: $fontsize_title_30;
+		padding: 0.2em 0.7em;
+		border-radius: 7px;
+		color: $prim_dark_2;
+		background-color: #fff;
+
+		@media screen and (max-width: 480px) {
+			top: 1.6em;
+		}
+	}
+
+	ul {
+		display: flex;
+		background: none;
+		color: none;
+		box-shadow: none;
+		gap: 5em;
+
+		@media screen and (max-width: 480px) {
+			flex-direction: row;
+			gap: 0.5em;
+		}
+	}
+
+	li {
+		background-color: #fff;
+		color: black;
+		height: 180px;
+		border-radius: 20px 20px 0 0;
+		border: 5px solid #fff;
+		filter: brightness(94%);
+		border-bottom: 0;
+
+		@media screen and (max-width: 480px) {
+			height: 80px;
+			flex-basis: 45%;
+
+			p {
+				display: none;
+			}
+		}
+	}
+
+	h2 {
+		font-weight: $fontweight_bold !important;
+
+		@media screen and (max-width: 480px) {
+			font-size: $fontsize_content_16;
+		}
+	}
+}
+
 .pricingPanelTabsWrapper {
 	width: 100%;
 	background: $tab_active;
@@ -8,10 +79,9 @@
 
 .pricingPanelTabList {
 	list-style: none;
-	text-align: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	color: $prim_dark_2;
 	max-width: 100%;
 	margin: 0 auto;
@@ -27,14 +97,25 @@
 
 .pricingPanelTab {
 	font-size: $fontsize_content_16;
-	font-weight: $fontweight_medium;
-	color: $grey_8;
+	color: $prim_dark_2;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	padding: 2rem;
+	align-items: flex-start;
+	padding: 3rem;
+	gap: 0.5em;
+	width: 370px;
 	cursor: pointer;
-	min-width: 19.3rem;
 	position: relative;
+
+	.headingContainer {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		height: 3em;
+		filter: grayscale(100%);
+		gap: 1em;
+	}
 
 	@media only screen and(max-width: 980px) {
 		padding: 2rem;
@@ -43,14 +124,19 @@
 	&__Selected {
 		color: $prim_white;
 		background: #a4a3a4;
-		font-weight: $fontweight_semibold;
+		border: 5px solid $sellgo_purple !important;
+		filter: brightness(100%) !important;
+		border-bottom: 0 !important;
+		opacity: 1 !important;
+		height: 196px !important;
 
-		.rainbowLine {
-			position: absolute;
-			bottom: 0;
-			background: $purple_pink_gradient;
-			width: 100%;
-			height: 5px;
+		@media screen and (max-width: 480px) {
+			height: 80px !important;
+			width: 40% !important;
+		}
+
+		.headingContainer {
+			filter: grayscale(0%);
 		}
 	}
 }
@@ -68,4 +154,21 @@
 	justify-content: center;
 	align-items: center;
 	font-size: $fontsize_content_12;
+}
+
+.brandsContainer {
+	margin-top: 10em;
+	text-align: center;
+
+	h2 {
+		color: $prim_dark_2;
+		text-align: center;
+		font-size: $fontsize_subtitle_32;
+		margin-bottom: 2em;
+	}
+
+	img {
+		padding: 0 5em;
+		max-width: 100%;
+	}
 }

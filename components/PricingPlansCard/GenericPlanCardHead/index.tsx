@@ -9,8 +9,9 @@ import CTAButton from '../../CTAButton';
 import PricePlanToggleButton from '../../PricePlanToggleButton';
 
 /* Utils */
-import { createCheckoutLink } from '../../../utils/Referral';
+
 import { prettyPrintNumber } from '../../../utils/Format';
+import { createFreeTrialLink } from '../../../utils/Referral';
 
 interface Props {
 	name: string;
@@ -45,16 +46,11 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		handleChange
 	} = props;
 
-	const checkoutLink = createCheckoutLink(
-		isMonthly ? 'monthly' : 'yearly',
-		name
-	);
-
 	return (
 		<div
 			className={`
-			${className} 
-			${styles.pricingHeadWrapper} 
+			${className}
+			${styles.pricingHeadWrapper}
 			${isNew && isSmall ? styles.pricingHeadWrapper__new : ''}
 			${!isNew && isSmall ? styles.pricingHeadWrapper__notNew : ''}
 			${isSmall && styles.pricingHeadWrapper__bordered}`}
@@ -157,7 +153,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				type="primary"
 				size="medium"
 				variant={isNew ? 'purplePinkRainbow' : 'green'}
-				navigateTo={checkoutLink}
+				navigateTo={createFreeTrialLink()}
 				className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 				asExternal
 				newTarget

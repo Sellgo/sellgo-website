@@ -388,7 +388,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								${styles.formInput__long}
 							`}
 								label=""
-								placeholder="Total Orders Per Month*"
+								placeholder="Total Employee*"
 								id="totalOrders"
 								type="number"
 								name="totalOrders"

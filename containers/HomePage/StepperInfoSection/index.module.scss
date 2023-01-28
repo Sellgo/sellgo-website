@@ -1,7 +1,13 @@
 @import '../../../styles/guidelines';
 
 .stepperInfoSectionWrapper {
-	padding-top: 0;
+	padding-top: 1em;
+	overflow: hidden;
+}
+
+.brandImage {
+	margin-bottom: 4em;
+	transform: scale(1.5);
 }
 
 .stepperTitle {
@@ -42,6 +48,7 @@
 	&__selected {
 		background: $orange_purple_gradient;
 		-webkit-background-clip: text;
+		background-clip: text;
 		-webkit-text-fill-color: transparent;
 		font-weight: $fontweight_bold;
 
