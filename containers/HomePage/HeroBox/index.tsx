@@ -122,12 +122,12 @@ const HeroBox = () => {
 							type="secondary"
 							size="small"
 							variant="rainbow"
-							navigateTo={createFreeTrialLink()}
+							navigateTo={'/pricing?type=instant-download'}
 							asExternal
 							newTarget
 							className={styles.closingCTA}
 						>
-							Instant Download
+							One-off Instant Download
 						</CTAButton>
 
 						<CTAButton
@@ -139,7 +139,7 @@ const HeroBox = () => {
 							newTarget
 							className={styles.closingCTA}
 						>
-							Create free account
+							Create web app free account
 						</CTAButton>
 						<div>Free forever. No credit card required. Instant access.</div>
 					</div>
@@ -153,6 +153,15 @@ const HeroBox = () => {
 						className={styles.heroImage}
 					/>
 				</div>
+			</div>
+
+			<div className={styles.brandsContainer}>
+				<h2>
+					Join the 10,000 leading brands are growing their businesses with
+					Sellgo
+				</h2>
+				{/* <img src="/brands.png" alt="brands" /> */}
+				<img src="/brands1.png" alt="brands" />
 			</div>
 
 			<Modal

@@ -8,58 +8,12 @@ interface Props {}
 const TestimonialsSection: React.FC<Props> = () => {
 	const testimonials = [
 		{
-			review: `AiStock really helped me to avoid stockout,
-      when to plan my next order and forecast my sales with seasonality -
-      simply been impossible with any other software or Spreadsheets.`,
-			author: 'Andrew Erickson',
+			review: `We have very aggressive revenue growth targets. We knew that we needed Sellgo seller database that 
+			would enable us to scale, and help us to deliver on our goals.`,
+			author: 'Justin Willhite',
 			position: 'CEO',
-			company: 'Some Brand',
-			image: 'andrewErickson.png'
-		},
-		{
-			review: `AiStock really helped me to avoid stockout,
-      when to plan my next order and forecast my sales with seasonality -
-      simply been impossible with any other software or Spreadsheets.`,
-			author: 'Andrew Erickson',
-			position: 'CEO',
-			company: 'Some Brand',
-			image: 'andrewErickson.png'
-		},
-		{
-			review: `AiStock really helped me to avoid stockout,
-      when to plan my next order and forecast my sales with seasonality -
-      simply been impossible with any other software or Spreadsheets.`,
-			author: 'Andrew Erickson',
-			position: 'CEO',
-			company: 'Some Brand',
-			image: 'andrewErickson.png'
-		},
-		{
-			review: `AiStock really helped me to avoid stockout,
-      when to plan my next order and forecast my sales with seasonality -
-      simply been impossible with any other software or Spreadsheets.`,
-			author: 'Andrew Erickson',
-			position: 'CEO',
-			company: 'Some Brand',
-			image: 'andrewErickson.png'
-		},
-		{
-			review: `AiStock really helped me to avoid stockout,
-      when to plan my next order and forecast my sales with seasonality -
-      simply been impossible with any other software or Spreadsheets.`,
-			author: 'Andrew Erickson',
-			position: 'CEO',
-			company: 'Some Brand',
-			image: 'andrewErickson.png'
-		},
-		{
-			review: `AiStock really helped me to avoid stockout,
-      when to plan my next order and forecast my sales with seasonality -
-      simply been impossible with any other software or Spreadsheets.`,
-			author: 'Andrew Erickson',
-			position: 'CEO',
-			company: 'Some Brand',
-			image: 'andrewErickson.png'
+			company: 'Amazon Product Content Creator',
+			image: 'justin.png'
 		}
 	];
 

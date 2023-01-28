@@ -261,7 +261,7 @@ const InstantDownloadPanel = () => {
 			</div>
 
 			<div className={styles.talkToExpertContainer}>
-				<p>*Need more data?</p>
+				<p>Need everything unlimited with an account-based Enterprise plan?</p>
 				<p>
 					Do you have existing seller data that you want to enrich with our
 					updated data?

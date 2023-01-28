@@ -142,8 +142,11 @@ const ProductsPanel: React.FC<Props> = (props) => {
 			<TestimonialsSection />
 
 			<div className={styles.brandsContainer}>
-				<h2>These leading brands are growing their business with Sellgo</h2>
-				<img src="/brands.png" alt="brands" />
+				<h2>
+					Join the 10,000 leading brands are growing their businesses with
+					Sellgo
+				</h2>
+				{/* <img src="/brands.png" alt="brands" /> */}
 				<img src="/brands1.png" alt="brands" />
 			</div>
 

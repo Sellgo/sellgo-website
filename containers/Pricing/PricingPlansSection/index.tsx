@@ -64,7 +64,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 								src="/handPointIcon.svg"
 								alt="handpointicon"
 							/>
-							<p className={styles.paymentToggleText}>Up to 5 months free.</p>
+							<p className={styles.paymentToggleText}>Up to 6 months free.</p>
 						</div>
 					</div>
 				</div>
@@ -135,11 +135,10 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					</div>
 
 					<div className={styles.talkToExpertContainer}>
-						<p>*Need more data?</p>
 						<p>
-							Do you have existing seller data that you want to enrich with our
-							updated data?
+							Need everything unlimited with an account-based Enterprise plan?
 						</p>
+						<p></p>
 
 						<button onClick={() => setIsDemoFormOpen(true)}>
 							Talk to an expert

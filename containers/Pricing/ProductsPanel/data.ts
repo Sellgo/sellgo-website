@@ -23,7 +23,7 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and Annual Web App Plans',
-		summary: `Invest On A Research Tool That's Dependable, Powerful And
+		summary: `Invest On A Lead Tool That's Dependable, Powerful And
     Can Scale Up Your Business With 7-Day Money Back Guarantee.`,
 
 		infoAlertMessage: {
@@ -46,17 +46,17 @@ export const plansAndProductsDetails = [
 				name: 'Starter',
 				productsDatabase: 0,
 				salesEstimateCount: 1000,
-				monthlyPrice: 37,
-				annualPrice: 324,
+				monthlyPrice: 77,
+				annualPrice: 467,
 				desc: `Accelerate your seller research process.`,
 				featureSubName: 'Start with',
 				featuresLists: [
 					{
 						title: 'Own your market',
 						featuresIncluded: [
-							'Accurate contacts and locations',
-							'Basic seller revenue insights',
-							'Basic seller map access'
+							'Verified professional email(s)',
+							'Basic seller insights',
+							'Seller map access'
 						]
 					}
 				]
@@ -66,38 +66,38 @@ export const plansAndProductsDetails = [
 				name: 'Professional',
 				productsDatabase: 0,
 				salesEstimateCount: 2000,
-				monthlyPrice: 97,
-				annualPrice: 924,
-				featureSubName: 'For single-user access, plus',
+				monthlyPrice: 147,
+				annualPrice: 1187,
+				featureSubName: 'Everything in starter plan, plus',
 				desc: `Find the best seller, faster.`,
 				isNew: true,
 				featuresLists: [
 					{
 						title: 'Turn leads into pipeline',
 						featuresIncluded: [
-							'Essential contact data and advanced company insights',
-							'Export data for annual plan',
-							'Advanced quota'
+							'Verified personal and other email(s),',
+							'Mobile and direct phone number(s),',
+							'Send physical mail integration, and more,'
 						]
 					}
 				]
 			},
 			{
 				id: 2,
-				name: 'Team',
+				name: 'Elite',
 				productsDatabase: 0,
 				salesEstimateCount: 3000,
-				monthlyPrice: 177,
-				annualPrice: 1764,
+				monthlyPrice: 297,
+				annualPrice: 2987,
 				featureSubName: 'Everything in professional plan, plus',
 				desc: `Achieve more ROI.`,
 				featuresLists: [
 					{
-						title: 'Hit revenue goals',
+						title: 'Hit your ambitious revenue goals',
 						featuresIncluded: [
-							'Advanced seller search with accurate contact data',
-							'Full use of Seller Database/ Map',
-							'Seller Map top view 20,000 sellers*'
+							'Social Media link/ username(s)*',
+							'Zapier, Hubspot and Salesforce integrations',
+							'Data/ CRM enrichments'
 						]
 					}
 				]
