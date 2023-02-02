@@ -1,0 +1,82 @@
+@import '../../../styles/guidelines';
+
+.heroboxWrapper {
+	background: $prim_white;
+	position: relative;
+}
+
+.herobox {
+	overflow: hidden;
+	padding-top: 10em;
+	padding-bottom: 10em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $black_1;
+	position: relative;
+	text-align: left;
+}
+
+.textColumn {
+	display: flex;
+	flex-direction: column;
+}
+
+.heading {
+	font-size: $fontsize_title_40;
+	font-weight: $fontweight_extrabold;
+
+	.smallHeading {
+		font-size: $fontsize_title_24;
+	}
+
+	.marginLeft {
+		margin-left: 3em;
+	}
+
+	@media only screen and(max-width: 650px) {
+		font-size: $fontsize_subtitle_38;
+		line-height: 1.2;
+	}
+}
+
+.tagline {
+	margin-top: 20px;
+	width: 580px;
+	font-size: $fontsize_subtitle_20;
+	line-height: $fontlineheight_content_30;
+	color: $black_0;
+
+	@media only screen and(max-width: 1080px) {
+		width: 100%;
+	}
+}
+
+.ctaBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	margin-top: 50px;
+
+	@media only screen and(max-width: 1080px) {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.closingCTA {
+		width: 180px;
+	}
+
+	div {
+		font-size: 9px;
+		color: $prim_dark_1;
+		width: 100%;
+
+		@media screen and (max-width: 1080px) {
+			text-align: center;
+		}
+	}
+}

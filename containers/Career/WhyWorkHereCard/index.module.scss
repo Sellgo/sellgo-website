@@ -1,0 +1,25 @@
+@import '../../../styles/guidelines';
+
+.commonFeatureCard {
+	text-align: center;
+	width: 25rem;
+	margin: 3rem auto;
+
+	h2 {
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
+		margin-top: 1rem;
+		min-height: 4rem;
+		color: #256fb0;
+		text-shadow: 0 3px 6px #00000029;
+	}
+
+	p {
+		font-size: $fontsize_content_12;
+		text-align: center;
+		width: 95%;
+		margin: 0 auto;
+		line-height: 1.8;
+		text-shadow: 0 3px 6px #00000029;
+	}
+}

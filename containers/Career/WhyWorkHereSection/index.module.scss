@@ -1,0 +1,17 @@
+@import '../../../styles/guidelines.scss';
+
+.commonFeaturesSection {
+	color: $prim_dark_2;
+	background-color: #eef7f9;
+	border-radius: 50px;
+	padding: 5em;
+	margin-bottom: 5em;
+}
+
+.featuresCardWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 3rem;
+	flex-wrap: wrap;
+}
