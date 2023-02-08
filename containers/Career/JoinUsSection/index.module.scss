@@ -3,7 +3,9 @@
 .joinUsSection {
 	color: $prim_dark_2;
 	margin: 10em auto;
-	max-width: 700px;
+	max-width: 940px;
+	margin-top: 10em;
+	margin-bottom: 20em;
 
 	h2 {
 		margin-bottom: 0.6em;
@@ -16,7 +18,8 @@
 	}
 
 	.filter {
-		margin-top: 5em;
+		margin-top: 7em;
+		margin-bottom: 7em;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -108,7 +111,7 @@
 			color: $grey_8;
 			font-weight: $fontweight_bold;
 			font-size: $fontsize_subtitle_20;
-			margin-bottom: 1em;
+			margin-bottom: 2em;
 		}
 	}
 
@@ -116,7 +119,7 @@
 		display: flex;
 		gap: 2em;
 		align-items: center;
-		margin-bottom: 1em;
+		margin-bottom: 3em;
 
 		p {
 			color: $grey_8;

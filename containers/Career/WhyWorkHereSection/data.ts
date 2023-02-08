@@ -1,44 +1,27 @@
 export const commonFeaturesList = [
 	{
-		title: 'Brand Inspector',
-		detail: `Find Wholesaler-friendly brands or get a glimpse into your competitor's 
-		brands they are currently selling and use it to expand your catalogs.`,
-		iconImageLink: '/chartpieIcon.svg',
+		title: 'The mission',
+		detail: `Our mission is to increase ecommerce in the world. We believe 
+		that leads are the foundation of conversion, and nothing does more for 
+		our happiness than seeing businesses grow.`,
+		iconImageLink: '/job-mission.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'ASIN Explorer',
-		detail: `Reveal all the ASINs your competitors are selling and reverse source to 
-		find new suppliers and profitable products.`,
-		iconImageLink: '/printsearchIcon.svg',
+		title: 'The people',
+		detail: `You’ll be surrounded each day with scrappy, brilliant and 
+		ambitious teammates who are excited to roll up their sleeves and 
+		learn from each other. Best teammates ever!`,
+		iconImageLink: '/job-people.svg',
 		alt: `Describe the icon here`
 	},
 	{
-		title: 'SKU Shadowing',
-		detail: `Spy on your competitor's stock levels and integrate the intel 
-		into your Buy Box strategy.`,
-		iconImageLink: '/sunglassesIcon.svg',
-		alt: `Describe the icon here`
-	},
-	{
-		title: 'Seller Comparison',
-		detail: `Measure your stats against your competitors like seller ratings, seller scores, 
-		and product reviews. `,
-		iconImageLink: '/rulercombinedIcon.svg',
-		alt: `Describe the icon here`
-	},
-	{
-		title: 'Cherry Pick Strategy',
-		detail: `Choose and take the most profitable items from other catalogs
-		 and make them your own.`,
-		iconImageLink: '/trophyIcon.svg',
-		alt: `Describe the icon here`
-	},
-	{
-		title: 'Sync with Our FBA Tools',
-		detail: `Take your findings from the Seller Finder and use the Product Tracker and discover 
-		more Buy Box opportunities.`,
-		iconImageLink: '/linkIcon.svg',
+		title: 'The culture',
+		detail: `As a team we move quickly, we ship fast and get a lot done. 
+		We do this not by taking on everything, but by hiring an incredible 
+		team, relentlessly focused on building, and ignoring things that 
+		don’t matter.`,
+		iconImageLink: '/job-culture.svg',
 		alt: `Describe the icon here`
 	}
 ];

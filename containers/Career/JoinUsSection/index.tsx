@@ -86,8 +86,8 @@ const JoinUsSection: React.FC<Props> = () => {
 							/>
 							<p>{job.jobName}</p>
 							<CTAButton
-								type="primary"
-								size="small"
+								type="secondary"
+								size="productPageSmall"
 								variant="rainbow"
 								navigateTo={`/career/${job.id}`}
 								className={styles.closingCTA}

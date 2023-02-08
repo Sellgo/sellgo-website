@@ -74,13 +74,14 @@ export const productsRightPanelData: ProductsPanelData[] = [
 				desc: 'Locate dozens of sellers instantly',
 				navigateTo: '/seller-map',
 				iconName: 'sellerMap'
-			},
-			{
-				head: 'Seller Finder',
-				desc: 'Take advantage of competition',
-				navigateTo: '/seller-finder',
-				iconName: 'sellerFinder'
 			}
+			// ,
+			// {
+			// 	head: 'Seller Finder',
+			// 	desc: 'Take advantage of competition',
+			// 	navigateTo: '/seller-finder',
+			// 	iconName: 'sellerFinder'
+			// }
 		]
 	}
 ];

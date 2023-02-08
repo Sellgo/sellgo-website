@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34.68" height="40" viewBox="0 0 34.68 40">
+  <defs>
+    <linearGradient id="linear-gradient" y1="1" x2="1.249" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#3cf7af"/>
+    </linearGradient>
+  </defs>
+  <path id="uikit" d="M34.68,10V30L17.031,40,0,30V13.258l6.844,3.523v9.141l10.43,5.9,10.609-5.9v-11.8l-7.9-4.5,6.844-4.148ZM24.109,3.836,17.484,0,10.563,4.281l6.719,3.7Z" fill="url(#linear-gradient)"/>
+</svg>

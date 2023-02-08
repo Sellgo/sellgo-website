@@ -18,15 +18,21 @@ const HeroBox: React.FC<Props> = () => {
 					</h1>
 
 					<h1 className={styles.heading}>
-						<span className={`${styles.smallHeading} ${styles.marginLeft}`}>
-							and
-						</span>{' '}
-						Amazing Team.
+						<span
+							className={`${styles.smallHeading} ${styles.marginLeft}`}
+						></span>{' '}
+						and <span className={styles.smallHeading2}>Enterprenurial</span>{' '}
+						Team.
 					</h1>
 
 					<p className={styles.tagline}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore
+						Sellgo is an e-commerce leads marketing platform to make it easier
+						to reach your business dream number of growth.
+						<br />
+						<br />
+						Built by a small team of experienced enterpreneurs with a strong
+						background in e-commerce and Saas with a relentless focus on our
+						product and customers.
 					</p>
 
 					<div className={styles.ctaBox}>

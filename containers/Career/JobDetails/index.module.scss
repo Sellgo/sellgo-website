@@ -4,13 +4,14 @@
 	margin: 0 auto;
 
 	.header {
-		max-width: 1080px;
+		max-width: 900px;
 		width: 90%;
 		margin: 0 auto;
-		padding: 12em 0 6em 0;
+		padding: 12em 0 3em 0;
 
 		p {
-			font-size: $fontsize_content_18;
+			font-size: $fontsize_subtitle_20;
+			font-weight: $fontweight_medium;
 			color: #2e3b4a;
 		}
 
@@ -38,6 +39,8 @@
 	.closingCTA {
 		background-color: #3b4557;
 		width: 10em;
+		font-size: $fontsize_content_16;
+		font-weight: $fontweight_semibold;
 	}
 
 	.jobInfoContainer {
@@ -47,15 +50,17 @@
 
 		p {
 			color: #2e3b4a;
+			font-size: $fontsize_content_16;
+			text-align: justify;
 		}
 
 		.jobInfo {
-			max-width: 1080px;
+			max-width: 900px;
 			width: 90%;
 			margin: 0 auto;
 
 			h3 {
-				font-size: $fontsize_title_32;
+				font-size: $fontsize_title_24;
 				font-weight: $fontweight_medium;
 				margin: 1em 0;
 				color: #2e3b4a;
@@ -65,6 +70,8 @@
 		.closingCTA {
 			margin: auto;
 			margin-top: 5em;
+			font-size: $fontsize_content_16;
+			font-weight: $fontweight_semibold;
 		}
 	}
 
@@ -76,7 +83,8 @@
 		a {
 			color: $accent_blue;
 			text-decoration: underline;
-			font-size: $fontsize_subtitle_20;
+			font-size: $fontsize_content_14;
+			font-weight: $fontweight_light;
 			display: flex;
 			justify-content: center;
 		}

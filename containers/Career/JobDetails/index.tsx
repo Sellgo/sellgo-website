@@ -46,6 +46,8 @@ const JobDetails: React.FC<Props> = () => {
 						variant="black"
 						navigateTo={job.applyUrl}
 						className={styles.closingCTA}
+						asExternal
+						newTarget
 					>
 						Apply for this job
 					</CTAButton>
@@ -60,9 +62,11 @@ const JobDetails: React.FC<Props> = () => {
 			<div className={styles.jobInfoContainer}>
 				{renderJobInfo()}
 				<CTAButton
-					type="primary"
+					type="secondary"
 					size="small"
 					variant="black"
+					asExternal
+					newTarget
 					navigateTo={job.applyUrl}
 					className={styles.closingCTA}
 				>

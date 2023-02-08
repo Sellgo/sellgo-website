@@ -3,6 +3,7 @@
 .heroboxWrapper {
 	background: $prim_white;
 	position: relative;
+	background-color: $black_1;
 }
 
 .herobox {
@@ -12,7 +13,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: $black_1;
+	color: $prim_white;
 	position: relative;
 	text-align: left;
 }
@@ -28,6 +29,13 @@
 
 	.smallHeading {
 		font-size: $fontsize_title_24;
+		color: #ffcc2f;
+	}
+
+	.smallHeading2 {
+		font-size: $fontsize_title_40;
+		font-weight: $fontweight_extrabold;
+		color: #00f0ff;
 	}
 
 	.marginLeft {
@@ -43,9 +51,10 @@
 .tagline {
 	margin-top: 20px;
 	width: 580px;
-	font-size: $fontsize_subtitle_20;
-	line-height: $fontlineheight_content_30;
-	color: $black_0;
+	font-size: $fontsize_content_14;
+	//line-height: $fontlineheight_content_30;
+	font-weight: $fontweight_medium;
+	color: $grey_3;
 
 	@media only screen and(max-width: 1080px) {
 		width: 100%;
