@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="40" viewBox="0 0 35 40">
+  <defs>
+    <linearGradient id="linear-gradient" y1="1" x2="1.249" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b318f1"/>
+      <stop offset="1" stop-color="#fc7900"/>
+    </linearGradient>
+  </defs>
+  <path id="database-solid_1_" data-name="database-solid (1)" d="M35,6.25V10c0,3.453-7.836,6.25-17.5,6.25S0,13.453,0,10V6.25C0,2.8,7.836,0,17.5,0S35,2.8,35,6.25ZM30.719,16.773A15.283,15.283,0,0,0,35,14.539V22.5c0,3.453-7.836,6.25-17.5,6.25S0,25.953,0,22.5V14.539a15.082,15.082,0,0,0,4.281,2.234A40.761,40.761,0,0,0,17.5,18.75,40.761,40.761,0,0,0,30.719,16.773ZM0,27.039a15.082,15.082,0,0,0,4.281,2.234A40.761,40.761,0,0,0,17.5,31.25a40.761,40.761,0,0,0,13.219-1.977A15.283,15.283,0,0,0,35,27.039V33.75C35,37.2,27.164,40,17.5,40S0,37.2,0,33.75Z" fill="url(#linear-gradient)"/>
+</svg>

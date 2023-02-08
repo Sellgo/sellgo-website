@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="23.998" viewBox="0 0 40 23.998">
+  <defs>
+    <linearGradient id="linear-gradient" y1="1" x2="1.249" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b318f1"/>
+      <stop offset="1" stop-color="#ff61df"/>
+    </linearGradient>
+  </defs>
+  <path id="handshake-simple-solid" d="M20.212,65.325l-6.05,4.9a2.429,2.429,0,0,0,3.019,3.806l6.206-4.825a1,1,0,1,1,1.231,1.581L23.313,71.8,34.388,82H37a3,3,0,0,0,3-3V71a3,3,0,0,0-3-3H31.956l-.244-.156-4.538-2.906a5.971,5.971,0,0,0-6.962.387ZM21.637,73.1l-3.231,2.513A4.429,4.429,0,0,1,12.9,68.675l5.2-4.206A5.966,5.966,0,0,0,12.5,65L8,68H3a3,3,0,0,0-3,3v8a3,3,0,0,0,3,3H9.762l5.713,5.213a3,3,0,0,0,4.238-.194,3.057,3.057,0,0,0,.694-1.288l1.063.975a3,3,0,0,0,4.856-1.213,3,3,0,0,0,3.7-4.706L21.638,73.1Z" transform="translate(0 -64)" fill="url(#linear-gradient)"/>
+</svg>
