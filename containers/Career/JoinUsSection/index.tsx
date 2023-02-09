@@ -31,7 +31,7 @@ const JoinUsSection: React.FC<Props> = () => {
 		team: ''
 	});
 
-	const onTeamChange = (selectedTeam) => {
+	const onTeamChange = (selectedTeam: any) => {
 		if (selectedTeam.value === 'All') {
 			setListOfTeams(teams);
 			setLocationOptions(['All', ...locations]);
@@ -47,7 +47,7 @@ const JoinUsSection: React.FC<Props> = () => {
 		setSelected({ ...selected, team: selectedTeam });
 	};
 
-	const onLocationChange = (selectedLocation) => {
+	const onLocationChange = (selectedLocation: any) => {
 		if (selectedLocation.value === 'All') {
 			setListOfLocations(locations);
 			setTeamOptions(['All', ...teams]);
@@ -63,7 +63,7 @@ const JoinUsSection: React.FC<Props> = () => {
 		setSelected({ ...selected, location: selectedLocation });
 	};
 
-	const hasLocation = (team) => {
+	const hasLocation = (team: string) => {
 		console.log(listOfLocations);
 		return careerData.some(
 			(data) => data.team === team && listOfLocations.includes(data.location)
