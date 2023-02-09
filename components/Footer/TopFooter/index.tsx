@@ -44,11 +44,6 @@ const TopFooter: React.FC<Props> = () => {
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/seller-finder" passHref>
-						<a>Seller Finder</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
 					<Link href="/seller-map" passHref>
 						<a>Seller Map</a>
 					</Link>
@@ -78,8 +73,13 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Pricing</li>
 				<li className="footerNavigationLinks">
-					<Link href="/pricing" passHref>
+					<Link href="/pricing?type=monthly-and-annual-plans" passHref>
 						<a>Monthly and annual plans</a>
+					</Link>
+				</li>
+				<li className="footerNavigationLinks">
+					<Link href="/pricing?type=instant-download" passHref>
+						<a>Instant download data plan</a>
 					</Link>
 				</li>
 			</ul>
@@ -101,10 +101,18 @@ const TopFooter: React.FC<Props> = () => {
 						<a>Partnership program</a>
 					</Link>
 				</li>
+				<li className={styles.footerNavigation}>
+					<button
+						onClick={() => setIsDemoFormOpen(true)}
+						className={styles.footerNavigation}
+					>
+						<a>Talk to sales</a>
+					</button>
+				</li>
 			</ul>
 
 			<ul className={styles.footerNavigation}>
-				<li className="footerNavigationLinks">Support</li>
+				<li className="footerNavigationLinks">Our Company</li>
 				<li className="footerNavigationLinks">
 					<Link href="/contact" passHref>
 						<a>Contact us</a>
@@ -115,14 +123,10 @@ const TopFooter: React.FC<Props> = () => {
 						<a>About us</a>
 					</Link>
 				</li>
-
-				<li className={styles.footerNavigation}>
-					<button
-						onClick={() => setIsDemoFormOpen(true)}
-						className={styles.footerNavigation}
-					>
-						<a>Talk to sales</a>
-					</button>
+				<li className="footerNavigationLinks">
+					<Link href="/career" passHref>
+						<a>Career</a>
+					</Link>
 				</li>
 			</ul>
 

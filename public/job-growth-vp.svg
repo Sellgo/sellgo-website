@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="35" viewBox="0 0 40 35">
+  <defs>
+    <linearGradient id="linear-gradient" y1="1" x2="1.249" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b318f1"/>
+      <stop offset="1" stop-color="#ff61df"/>
+    </linearGradient>
+  </defs>
+  <path id="chart-line-up-solid_1_" data-name="chart-line-up-solid (1)" d="M5,34.5a2.5,2.5,0,0,0-5,0V60.75A6.248,6.248,0,0,0,6.25,67H37.5a2.5,2.5,0,0,0,0-5H6.25A1.254,1.254,0,0,1,5,60.75ZM34.3,51.3a1.877,1.877,0,0,0,3.2-1.328V41.375A1.871,1.871,0,0,0,35.625,39.5h-8.6A1.877,1.877,0,0,0,25.7,42.7l2.531,2.531L23.75,49.711l-5.734-5.734a2.5,2.5,0,0,0-3.539,0l-6.25,6.25a2.5,2.5,0,0,0,3.539,3.539l4.484-4.477,5.734,5.734a2.5,2.5,0,0,0,3.539,0l6.25-6.25Z" transform="translate(0 -32)" fill="url(#linear-gradient)"/>
+</svg>
