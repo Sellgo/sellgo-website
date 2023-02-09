@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="32" viewBox="0 0 40 32">
+  <defs>
+    <linearGradient id="linear-gradient" y1="1" x2="1.249" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b318f1"/>
+      <stop offset="1" stop-color="#fc7900"/>
+    </linearGradient>
+  </defs>
+  <path id="laptop-mobile-solid_2_" data-name="laptop-mobile-solid (2)" d="M8,0A4,4,0,0,0,4,4V18H1.2A1.2,1.2,0,0,0,0,19.2,4.8,4.8,0,0,0,4.8,24H22V18H8V4H28V6h4V4a4,4,0,0,0-4-4ZM28,28V12h8V28ZM24,11V29a3,3,0,0,0,3,3H37a3,3,0,0,0,3-3V11a3,3,0,0,0-3-3H27A3,3,0,0,0,24,11Z" fill="url(#linear-gradient)"/>
+</svg>
