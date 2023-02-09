@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -11,17 +10,13 @@ import NavbarBottom from './NavbarBottom';
 interface Props {}
 
 const Navbar: React.FC<Props> = () => {
-	const router = useRouter();
-
 	return (
-		router.pathname !== '/career/[id]' && (
-			<header className={`${styles.header}`}>
-				<nav className={`navigation-container ${styles.navbar}`}>
-					<NavbarTop />
-					<NavbarBottom />
-				</nav>
-			</header>
-		)
+		<header className={`${styles.header}`}>
+			<nav className={`navigation-container ${styles.navbar}`}>
+				<NavbarTop />
+				<NavbarBottom />
+			</nav>
+		</header>
 	);
 };
 
