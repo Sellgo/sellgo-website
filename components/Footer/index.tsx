@@ -14,15 +14,15 @@ interface Props {}
 const Footer: React.FC<Props> = () => {
 	const router = useRouter();
 
-	return (
-		router.pathname !== '/career/[id]' && (
-			<footer className={styles.footer}>
-				<div className="page-container">
-					<TopFooter />
-					<BottomFooter />
-				</div>
-			</footer>
-		)
+	return router.pathname !== '/career/[id]' ? (
+		<footer className={styles.footer}>
+			<div className="page-container">
+				<TopFooter />
+				<BottomFooter />
+			</div>
+		</footer>
+	) : (
+		<></>
 	);
 };
 
