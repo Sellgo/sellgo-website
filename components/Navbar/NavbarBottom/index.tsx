@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -17,8 +16,6 @@ import { createFreeTrialLink } from '../../../utils/Referral';
 interface Props {}
 
 const NavbarBottom: React.FC<Props> = () => {
-	const router = useRouter();
-
 	return (
 		<div className={styles.navbarBottom}>
 			<div className={styles.navbarBottom__left}>
@@ -67,37 +64,33 @@ const NavbarBottom: React.FC<Props> = () => {
 				</ul>
 			</div>
 
-			{router.pathname !== '/career' && (
-				<>
-					<a
-						href={AppConfig.APP_URL}
-						className={styles.login}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Sign in
-					</a>
-					<CTAButton
-						type="primary"
-						size="small"
-						navigateTo={createFreeTrialLink()}
-						newTarget
-						asExternal
-						variant="white"
-						className={styles.navbarCTA}
-					>
-						Sign up free
-						<div className={styles.navbarCTA__arrow}>
-							<Image
-								src="/longArrowRightIcon.svg"
-								width={20}
-								height={10}
-								alt="right-arrow"
-							/>
-						</div>
-					</CTAButton>
-				</>
-			)}
+			<a
+				href={AppConfig.APP_URL}
+				className={styles.login}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Sign in
+			</a>
+			<CTAButton
+				type="primary"
+				size="small"
+				navigateTo={createFreeTrialLink()}
+				newTarget
+				asExternal
+				variant="white"
+				className={styles.navbarCTA}
+			>
+				Sign up free
+				<div className={styles.navbarCTA__arrow}>
+					<Image
+						src="/longArrowRightIcon.svg"
+						width={20}
+						height={10}
+						alt="right-arrow"
+					/>
+				</div>
+			</CTAButton>
 		</div>
 	);
 };
