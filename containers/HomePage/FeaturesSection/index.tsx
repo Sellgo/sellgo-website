@@ -14,7 +14,7 @@ const FeaturesSection: React.FC<Props> = () => {
 			<div className={`page-container ${styles.featuresSection}`}>
 				<h2 className={styles.featuresSectionTitle}>
 					<RainbowText type="pink_purple_blue_gradient">
-						Choose your Amazon sellers by
+						Search your verified Amazon sellers by
 					</RainbowText>
 				</h2>
 				<div className={styles.featuresWrapper}>
