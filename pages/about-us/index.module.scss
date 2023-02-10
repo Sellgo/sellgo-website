@@ -21,7 +21,7 @@
 	&__text {
 		flex: 0 0 45%;
 		h1 {
-			font-size: $fontsize_subtitle_32;
+			font-size: $fontsize_32;
 			font-weight: $fontweight_extrabold;
 			margin-bottom: 2rem;
 			span {
@@ -30,7 +30,7 @@
 		}
 
 		p {
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_14;
 			color: inherit;
 			margin-bottom: 2rem;
 		}
@@ -68,13 +68,13 @@
 		flex: 0 0 45%;
 
 		h2 {
-			font-size: $fontsize_subtitle_28;
+			font-size: $fontsize_28;
 			margin-bottom: 2rem;
 		}
 
 		p {
 			color: $prim_dark_1;
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_14;
 			margin-bottom: 2rem;
 		}
 
@@ -118,12 +118,12 @@
 	}
 
 	h3 {
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_24;
 		font-weight: $fontweight_semibold;
 	}
 
 	p {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 	}
 
 	&__links {
@@ -132,19 +132,19 @@
 
 		p {
 			margin: 1rem 0;
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_12;
 		}
 
 		a {
 			text-decoration: none;
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_12;
 			font-weight: $fontweight_regular;
 			color: $system_blue;
 		}
 
 		b {
 			text-decoration: none;
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_12;
 			font-weight: $fontweight_regular;
 			color: $sellgo_purple;
 		}

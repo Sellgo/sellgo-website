@@ -23,21 +23,21 @@
 
 	h1 {
 		color: inherit;
-		font-size: $fontsize_subtitle_20;
+		font-size: $fontsize_20;
 		font-weight: $fontweight_bold;
 	}
 
 	p {
 		max-width: 43rem;
 		color: $prim_dark_1;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_semibold;
 		margin: 0 auto;
 		white-space: pre-line;
 	}
 
 	small {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		color: $prim_dark_1;
 		font-weight: $fontweight_semibold;
 		line-height: 30px;

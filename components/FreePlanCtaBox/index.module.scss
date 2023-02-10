@@ -37,13 +37,13 @@
 
 		h2 {
 			color: $prim_dark_2;
-			font-size: $fontsize_content_16;
+			font-size: $fontsize_16;
 			font-weight: $fontweight_semibold;
 		}
 
 		p {
 			color: $second_grey;
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_12;
 			font-weight: $fontweight_regular;
 			margin: 1rem 0;
 		}
@@ -70,7 +70,7 @@
 
 	p {
 		color: $second_grey;
-		font-size: $fontsize_content_10;
+		font-size: $fontsize_10;
 		font-weight: $fontweight_regular;
 		margin-top: 4px;
 		text-align: center;
@@ -81,7 +81,7 @@
 	width: 31rem !important;
 	height: 5rem !important;
 	margin: 0 auto;
-	font-size: $fontsize_content_16 !important;
+	font-size: $fontsize_16 !important;
 	font-weight: $fontweight_semibold !important;
 	@media only screen and(max-width: 750px) {
 		align-self: center;
@@ -110,7 +110,7 @@
 }
 
 .detailsList {
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_12;
 	font-weight: $fontweight_regular;
 	color: inherit;
 	margin-right: 4rem;
@@ -136,7 +136,7 @@
 	color: $blue_link_bg_light;
 	background: none;
 	border: none;
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_12;
 	font-weight: $fontweight_regular;
 	margin-top: 2rem;
 	display: flex;

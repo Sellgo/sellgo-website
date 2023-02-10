@@ -11,7 +11,7 @@
 	text-align: center;
 
 	h1 {
-		font-size: $fontsize_title_46;
+		font-size: $fontsize_46;
 
 		@media only screen and(max-width: 500px) {
 			font-size: 4rem;
@@ -19,7 +19,7 @@
 	}
 
 	p {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		color: inherit;
 		margin: 4rem auto;
 		max-width: 87rem;

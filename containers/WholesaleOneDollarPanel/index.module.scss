@@ -6,7 +6,7 @@
 }
 
 .title {
-	font-size: $fontsize_subtitle_32;
+	font-size: $fontsize_32;
 	color: $prim_dark_2;
 	font-weight: $fontweight_bold;
 	display: flex;
@@ -15,7 +15,7 @@
 }
 
 .info {
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_14;
 	color: $prim_dark_1;
 	margin-top: 1rem;
 }
@@ -51,7 +51,7 @@
 	h2 {
 		text-align: center;
 		color: $prim_dark_2;
-		font-size: $fontsize_subtitle_32;
+		font-size: $fontsize_32;
 		font-weight: $fontweight_bold;
 	}
 }
@@ -69,7 +69,7 @@
 	}
 
 	p {
-		font-size: $fontsize_content_10;
+		font-size: $fontsize_10;
 		font-weight: $fontweight_regular;
 		color: $second_grey;
 		margin-top: 4px;
@@ -80,6 +80,6 @@
 .otherInfoCTA {
 	width: 31rem !important;
 	height: 5rem !important;
-	font-size: $fontsize_content_16 !important;
+	font-size: $fontsize_16 !important;
 	font-weight: $fontweight_semibold !important;
 }

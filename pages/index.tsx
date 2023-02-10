@@ -55,8 +55,8 @@ const HomePage: React.FC<Props> = (props) => {
 			/>
 			<HeroBox />
 			<main>
-				<StepperInfoSection />
 				<StatisticsSection />
+				<StepperInfoSection />
 				<ProductCardsSection />
 				<FeaturesSection />
 				<FeatureComparisonTable />

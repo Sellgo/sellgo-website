@@ -22,7 +22,7 @@
 	top: 10px;
 	z-index: 10;
 	right: 0;
-	font-size: $fontsize_content_10;
+	font-size: $fontsize_10;
 	font-weight: $fontweight_semibold;
 	width: 8rem;
 	height: 2.5rem;
@@ -33,18 +33,18 @@
 
 .infoCardTitle {
 	color: $prim_dark_2;
-	font-size: $fontsize_subtitle_20;
+	font-size: $fontsize_20;
 	text-align: center;
 }
 
 .infoCardDesc {
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_12;
 	margin-top: 2rem;
 	margin-bottom: 4rem;
 }
 
 .featureTitle {
-	font-size: $fontsize_content_16;
+	font-size: $fontsize_16;
 	font-weight: $fontweight_medium;
 	margin-bottom: 2rem;
 }
@@ -56,7 +56,7 @@
 .feature {
 	list-style: none;
 	color: $prim_dark_2;
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_12;
 	margin: 1rem 0;
 }
 

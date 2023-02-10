@@ -16,7 +16,7 @@
 	max-width: 24rem;
 
 	h3 {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		color: $prim_white;
 		text-align: left;
 		margin-top: 1rem;
@@ -33,7 +33,7 @@
 	max-height: 44.4rem;
 
 	h3 {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		color: $prim_dark_2;
 		text-align: left;
 		margin-top: 1rem;
@@ -67,14 +67,14 @@
 
 	h2 {
 		color: $prim_white;
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_semibold;
 		margin-top: 5px;
 	}
 
 	.linkDesc {
 		color: $grey_7;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		margin-right: 5px;
 		font-weight: $fontweight_medium;
 	}
@@ -85,7 +85,7 @@
 
 		h2 {
 			color: $black_1;
-			font-size: $fontsize_content_16;
+			font-size: $fontsize_16;
 			font-weight: $fontweight_bold;
 		}
 	}

@@ -24,16 +24,16 @@
 }
 
 .heading {
-	font-size: $fontsize_title_40;
+	font-size: $fontsize_40;
 	font-weight: $fontweight_extrabold;
 
 	.smallHeading {
-		font-size: $fontsize_title_24;
+		font-size: $fontsize_24;
 		color: #ffcc2f;
 	}
 
 	.smallHeading2 {
-		font-size: $fontsize_title_40;
+		font-size: $fontsize_40;
 		font-weight: $fontweight_extrabold;
 		color: #00f0ff;
 	}
@@ -43,7 +43,7 @@
 	}
 
 	@media only screen and(max-width: 650px) {
-		font-size: $fontsize_subtitle_38;
+		font-size: $fontsize_38;
 		line-height: 1.2;
 	}
 }
@@ -51,7 +51,7 @@
 .tagline {
 	margin-top: 20px;
 	width: 580px;
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_14;
 	//line-height: $fontlineheight_content_30;
 	font-weight: $fontweight_medium;
 	color: $grey_3;

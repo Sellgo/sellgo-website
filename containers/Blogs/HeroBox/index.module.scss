@@ -82,15 +82,15 @@
 	}
 
 	h1 {
-		font-size: $fontsize_title_46;
+		font-size: $fontsize_46;
 
 		@media only screen and(max-width: 700px) {
-			font-size: $fontsize_subtitle_32;
+			font-size: $fontsize_32;
 		}
 	}
 
 	p {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		color: inherit;
 		margin: 2rem 0;
 		width: 70%;

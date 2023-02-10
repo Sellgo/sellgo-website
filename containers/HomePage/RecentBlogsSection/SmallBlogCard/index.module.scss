@@ -43,18 +43,18 @@
 	}
 
 	h4 {
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		margin-bottom: 2rem;
 		font-weight: $fontweight_semibold;
 
 		@media only screen and(max-width: 1080px) {
-			font-size: $fontsize_subtitle_24;
+			font-size: $fontsize_24;
 		}
 	}
 
 	.blogDetails {
 		text-transform: uppercase;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		font-weight: $fontweight_medium;
 		color: $second_grey;
 		position: absolute;

@@ -51,28 +51,28 @@
 }
 
 .heading {
-	font-size: $fontsize_title_44;
+	font-size: $fontsize_46;
 	font-weight: $fontweight_extrabold;
 	line-height: $fontlineheight_heading_50;
 
 	@media only screen and(max-width: 650px) {
-		font-size: $fontsize_subtitle_38;
+		font-size: $fontsize_38;
 		line-height: 1.2;
 	}
 }
 
 .animatedText {
-	font-size: $fontsize_title_48;
+	font-size: $fontsize_50;
 	height: $fontlineheight_heading_100;
 	@media only screen and(max-width: 650px) {
-		font-size: $fontsize_subtitle_38;
+		font-size: $fontsize_38;
 	}
 }
 
 .tagline {
 	margin-top: 20px;
 	width: 400px;
-	font-size: $fontsize_subtitle_20;
+	font-size: $fontsize_20;
 	line-height: $fontlineheight_content_30;
 	font-weight: $fontweight_medium;
 	color: $black_0;
@@ -103,13 +103,14 @@
 	}
 
 	.demoButton {
-		width: 400px;
+		width: 240px;
 		background: none;
 		border: none;
 		cursor: pointer;
 		color: $sellgo_purple;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_medium;
+		margin-top: 1em;
 		margin-bottom: 40px;
 		text-align: center;
 
@@ -120,7 +121,7 @@
 	}
 
 	div {
-		font-size: $fontsize_content_9;
+		font-size: $fontsize_9;
 		text-align: center;
 		color: $prim_dark_1;
 		width: 250px;
@@ -147,7 +148,7 @@
 		border: 1px solid $second_silver;
 		border-radius: 3px;
 		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-family: inherit;
 		padding: 0 1rem;
 		&:focus {
@@ -160,7 +161,7 @@
 	}
 
 	small {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		color: $system_red;
 	}
 }
@@ -175,7 +176,7 @@
 	align-items: center;
 	border-radius: 7px;
 	color: $prim_white;
-	font-size: $fontsize_content_16;
+	font-size: $fontsize_16;
 	font-weight: $fontweight_semibold;
 	border: none;
 	margin: 0 !important;
@@ -199,7 +200,8 @@
 	h2 {
 		color: $prim_dark_2;
 		text-align: center;
-		font-size: $fontsize_subtitle_40;
+		font-size: $fontsize_20;
+		font-weight: $fontweight_medium;
 		margin-bottom: 1em;
 	}
 

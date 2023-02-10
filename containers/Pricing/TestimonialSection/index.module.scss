@@ -1,16 +1,16 @@
 @import '../../../styles/guidelines';
 
 .testimonialsSection {
-	margin-top: 8em;
+	margin-top: 20em;
 
 	h2 {
 		width: 100%;
 		color: $prim_dark_2;
 		text-align: center;
-		font-size: $fontsize_subtitle_32;
+		font-size: $fontsize_40;
 
 		@media screen and (max-width: 480px) {
-			font-size: $fontsize_subtitle_28;
+			font-size: $fontsize_28;
 			width: 95%;
 			margin: 0 auto;
 		}
@@ -35,7 +35,7 @@
 
 		p {
 			color: $prim_dark_2;
-			font-size: $fontsize_content_18;
+			font-size: $fontsize_18;
 			font-weight: $fontweight_semibold;
 		}
 
@@ -55,12 +55,12 @@
 
 			.author {
 				color: $prim_dark_2;
-				font-size: $fontsize_content_18;
+				font-size: $fontsize_18;
 				font-weight: $fontweight_semibold;
 			}
 
 			.info {
-				font-size: $fontsize_content_14;
+				font-size: $fontsize_14;
 			}
 		}
 	}

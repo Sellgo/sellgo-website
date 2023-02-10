@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
 import validator from 'validator';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -10,22 +11,19 @@ import styles from './index.module.scss';
 import RainbowText from '../../../components/RainbowText';
 import SellerListForm from '../../Demo/SellerListForm';
 import FormInput from '../../../components/FormInput';
-import CTAButton from '../../../components/CTAButton';
 
 /* Utils */
-import { createFreeTrialLink } from '../../../utils/Referral';
-// import AppConfig from '../../../config';
-// import { encodeBase64 } from '../../../utils/Format';
+// import { createFreeTrialLink } from '../../../utils/Referral';
+import AppConfig from '../../../config';
+import { encodeBase64 } from '../../../utils/Format';
 
 const HeroBox = () => {
 	const textList = [
-		'agencies.',
-		'B2B.',
-		'aggregators.',
-		'influencers.',
-		'reviewers.',
-		'competitors.',
-		'marketplaces.'
+		'e-comm agencies.',
+		'e-comm aggregators.',
+		'product influencers.',
+		'logistic businesses.',
+		'software companies.'
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
@@ -36,15 +34,15 @@ const HeroBox = () => {
 	const [emailErr, setEmailErr] = React.useState(false);
 	const [emailErrMsg, setEmailErrMsg] = React.useState('');
 
-	// const onSignupClick = () => {
-	// 	if (email.trim().length > 0 && validator.isEmail(email.trim())) {
-	// 		const url = `${AppConfig.APP_URL}/signup?email=${encodeBase64(email)}`;
-	// 		window.open(url, '_blank');
-	// 	} else {
-	// 		setEmailErr(true);
-	// 		setEmailErrMsg('Please enter a valid business email address.');
-	// 	}
-	// };
+	const onSignupClick = () => {
+		if (email.trim().length > 0 && validator.isEmail(email.trim())) {
+			const url = `${AppConfig.APP_URL}/signup?email=${encodeBase64(email)}`;
+			window.open(url, '_blank');
+		} else {
+			setEmailErr(true);
+			setEmailErrMsg('Please enter a valid business email.');
+		}
+	};
 
 	/* Check when user stops typing email, if email is valid */
 	React.useEffect(() => {
@@ -54,7 +52,7 @@ const HeroBox = () => {
 				setEmailErrMsg('');
 			} else {
 				setEmailErr(true);
-				setEmailErrMsg('Please enter a valid email address');
+				setEmailErrMsg('Please enter a valid business email.');
 			}
 		}
 	}, [email, emailErr]);
@@ -114,7 +112,8 @@ const HeroBox = () => {
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						Get the Amazon sellers data and software you need to connect with
+						Get the Amazon sellers B2B data and software you need to connect
+						with
 						<br />
 						and close your most valuable customers - all-in-one seller research.
 					</p>
@@ -125,7 +124,7 @@ const HeroBox = () => {
 								type={'text'}
 								name={'Email'}
 								value={email}
-								placeholder="Business email"
+								placeholder="Business email*"
 								className={styles.formInput}
 								onChange={(e) => setEmail(e.target.value)}
 								autoComplete="off"
@@ -133,33 +132,21 @@ const HeroBox = () => {
 								hasError={emailErr}
 								errorMessage={emailErrMsg}
 							/>
-							{/* <button
+							<button
 								className={styles.submitButton}
 								disabled={emailErr}
 								onClick={onSignupClick}
 							>
 								Free trial
 							</button>
-							<span>Free forever. No credit card required. Instant access.</span> */}
-
-							<CTAButton
-								type="primary"
-								size="small"
-								variant="rainbow"
-								navigateTo={createFreeTrialLink()}
-								asExternal
-								newTarget
-								className={styles.closingCTA}
-							>
-								Free Trial
-							</CTAButton>
-							<div>Free forever. No credit card required. Instant access.</div>
+							<span>
+								Free forever. No credit card required. Instant access.
+							</span>
 						</div>
-						<button
-							className={styles.demoButton}
-							onClick={() => setIsDemoFormOpen(true)}
-						>
-							Need seller lists?
+						<button className={styles.demoButton}>
+							<Link href="pricing?type=instant-download">
+								Instant download?
+							</Link>
 						</button>
 					</div>
 				</div>
@@ -175,7 +162,7 @@ const HeroBox = () => {
 			</div>
 
 			<div className={styles.brandsContainer}>
-				<h2>Trusted by 10,000+ businesses.</h2>
+				<h2>Trusted by 7,000+ businesses.</h2>
 				{/* <img src="/brands.png" alt="brands" /> */}
 				<img src="/brands1.png" alt="brands" />
 			</div>

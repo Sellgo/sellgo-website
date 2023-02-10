@@ -37,13 +37,13 @@
 
 	h3 {
 		margin: 1rem auto;
-		font-size: $fontsize_content_18;
+		font-size: $fontsize_18;
 		font-weight: $fontweight_bold;
 		color: $prim_dark_2;
 	}
 
 	p {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_regular;
 		color: $prim_dark_1;
 		min-height: 1rem;
@@ -63,6 +63,6 @@
 .benefitsCTA {
 	width: 30rem !important;
 	height: 4.5rem !important;
-	font-size: $fontsize_content_16 !important;
+	font-size: $fontsize_16 !important;
 	font-weight: $fontweight_semibold !important;
 }

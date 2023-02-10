@@ -32,22 +32,22 @@
 		display: flex;
 		align-items: center;
 		color: $black_1;
-		font-size: $fontsize_subtitle_20;
+		font-size: $fontsize_20;
 	}
 
 	p {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		color: $second_grey;
 	}
 
 	h4 {
-		font-size: $fontsize_content_10;
+		font-size: $fontsize_10;
 		color: $second_grey;
 	}
 
 	span {
 		color: $second_grey;
-		font-size: $fontsize_content_10;
+		font-size: $fontsize_10;
 		font-weight: $fontweight_regular;
 		margin-top: 4px;
 		text-align: center;

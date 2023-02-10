@@ -36,13 +36,13 @@
 
 		h2 {
 			color: $prim_dark_2;
-			font-size: $fontsize_subtitle_20;
+			font-size: $fontsize_20;
 			font-weight: $fontweight_medium;
 		}
 
 		p {
 			color: $second_grey;
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_14;
 			margin: 1rem 0;
 		}
 	}
@@ -104,7 +104,7 @@
 }
 
 .detailsList {
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_14;
 	font-weight: $fontweight_regular;
 	color: inherit;
 	margin-right: 4rem;

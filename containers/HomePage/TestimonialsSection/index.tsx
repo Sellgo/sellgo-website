@@ -56,7 +56,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 			<h1>Your success fuels ours</h1>
 			<div className={`page-container ${styles.testimonialsSectionWrapper}`}>
 				<div className={styles.leadingBrands}>
-					<h2>Trusted by many agencies including</h2>
+					<h2>Trusted by 7,000+ businesses including</h2>
 					<div className={styles.socialProofIcons}>
 						<Image
 							src={'/Poshmark.png'}
@@ -102,7 +102,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 							width={100}
 							height={52}
 						/>
-						<Image
+						{/* <Image
 							src={'/Skopenow.png'}
 							alt="SkopeLogo"
 							width={100}
@@ -114,7 +114,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 							alt="AspireLogo"
 							width={100}
 							height={29}
-						/>
+						/> */}
 					</div>
 				</div>
 

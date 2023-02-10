@@ -15,7 +15,7 @@ interface Props {}
 const ProductCardsSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
-			<div className={styles.blueCardWrapper}>
+			<div className={styles.greyCardWrapper}>
 				<div className={`page-container ${styles.benefitsWrapper}`}>
 					<ProductCard
 						key={uuid()}
@@ -30,7 +30,7 @@ const ProductCardsSection: React.FC<Props> = () => {
 					<ProductCard key={uuid()} {...newBenefitsData[1]} reversed />
 				</div>
 			</div>
-			<div className={styles.purpleCardWrapper}>
+			<div className={styles.greyCardWrapper}>
 				<div className={`page-container ${styles.benefitsWrapper}`}>
 					<ProductCard key={uuid()} {...newBenefitsData[2]} reversed={false} />
 				</div>

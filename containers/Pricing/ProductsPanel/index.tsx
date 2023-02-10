@@ -83,7 +83,7 @@ const ProductsPanel: React.FC<Props> = (props) => {
 				selectedIndex={selectedPlanType}
 			>
 				<div className={styles.tabsContainer}>
-					<div className={styles.tabsHeading}>Pricing and Plans</div>
+					{/* <div className={styles.tabsHeading}>Pricing and Plans</div> */}
 					<TabList className={styles.pricingPanelTabList}>
 						{planTypes.map((planType: any) => {
 							/*
@@ -142,10 +142,7 @@ const ProductsPanel: React.FC<Props> = (props) => {
 			<TestimonialsSection />
 
 			<div className={styles.brandsContainer}>
-				<h2>
-					Join the 10,000 leading brands are growing their businesses with
-					Sellgo
-				</h2>
+				<h2>Trusted by 7,000+ businesses.</h2>
 				{/* <img src="/brands.png" alt="brands" /> */}
 				<img src="/brands1.png" alt="brands" />
 			</div>

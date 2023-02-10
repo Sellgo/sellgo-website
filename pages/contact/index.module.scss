@@ -29,12 +29,12 @@
 	}
 
 	h3 {
-		font-size: $fontsize_subtitle_20;
+		font-size: $fontsize_20;
 		font-weight: $fontweight_bold;
 	}
 
 	p {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 	}
 
 	&__links {
@@ -43,19 +43,19 @@
 
 		p {
 			margin: 1rem 0;
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_12;
 		}
 
 		a {
 			text-decoration: none;
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_12;
 			font-weight: $fontweight_regular;
 			color: $system_blue;
 		}
 
 		b {
 			text-decoration: none;
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_12;
 			font-weight: $fontweight_regular;
 			color: $sellgo_purple;
 		}

@@ -13,7 +13,7 @@
 	}
 
 	p {
-		font-size: $fontsize_content_18;
+		font-size: $fontsize_18;
 		text-align: center;
 	}
 
@@ -27,7 +27,7 @@
 		gap: 1em;
 
 		.filterByText {
-			font-size: $fontsize_subtitle_20;
+			font-size: $fontsize_20;
 			font-weight: $fontweight_bold;
 			color: $grey_8;
 		}
@@ -50,7 +50,7 @@
 				width: 19.3em;
 				background: $prim_white;
 				border: 1px solid $grey_2;
-				font-size: $fontsize_content_14;
+				font-size: $fontsize_14;
 				padding: 1rem;
 				border-radius: 7px;
 				cursor: pointer;
@@ -71,7 +71,7 @@
 				border-top: 0;
 				border-top-left-radius: 0;
 				border-top-right-radius: 0;
-				font-size: $fontsize_content_14;
+				font-size: $fontsize_14;
 				padding: 1rem;
 				cursor: pointer;
 				max-height: 30rem;
@@ -110,7 +110,7 @@
 			text-transform: uppercase;
 			color: $grey_8;
 			font-weight: $fontweight_bold;
-			font-size: $fontsize_subtitle_20;
+			font-size: $fontsize_20;
 			margin-bottom: 2em;
 		}
 	}
