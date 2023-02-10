@@ -13,7 +13,7 @@
 .benefitsSection {
 	h2 {
 		color: $prim_dark_2;
-		font-size: $fontsize_title_46;
+		font-size: $fontsize_46;
 		text-align: center;
 
 		@media only screen and(max-width: 750px) {
@@ -42,7 +42,7 @@
 }
 
 .benefitsTab {
-	font-size: $fontsize_subtitle_24;
+	font-size: $fontsize_24;
 	color: inherit;
 	font-weight: $fontweight_regular;
 	padding: 5px 0;

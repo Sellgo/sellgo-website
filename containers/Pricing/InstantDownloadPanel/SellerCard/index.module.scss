@@ -45,7 +45,7 @@
 
 	p,
 	div {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 	}
 
 	.value {
@@ -66,7 +66,7 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 7px;
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		border: none;
 		margin: 0 !important;
 
@@ -110,7 +110,7 @@
 		small {
 			text-transform: uppercase;
 			color: $grey_8;
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_14;
 			font-weight: $fontweight_bold;
 			letter-spacing: 1.5px;
 		}
@@ -125,7 +125,7 @@
 			color: $sellgo_purple;
 			margin-bottom: 10px;
 			display: inline-block;
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_14;
 			font-weight: $fontweight_medium;
 
 			&:hover {
@@ -138,7 +138,7 @@
 		color: $sellgo_purple;
 		display: inline-block;
 		margin: 2rem 0;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_medium;
 
 		&:hover {
@@ -188,7 +188,7 @@
 	width: 20rem;
 	border: 1px solid $grey_3;
 	color: $prim_dark_2;
-	font-size: $fontsize_content_16;
+	font-size: $fontsize_16;
 	font-weight: $fontweight_bold;
 }
 
@@ -223,7 +223,7 @@
 
 	label {
 		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_medium;
 		width: 100%;
 		display: none;
@@ -236,7 +236,7 @@
 		border: 1px solid $second_silver;
 		border-radius: 3px;
 		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-family: inherit;
 		padding: 0 1rem;
 		&:focus {
@@ -249,7 +249,7 @@
 	}
 
 	small {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		color: $system_red;
 		text-transform: capitalize;
 		letter-spacing: inherit;

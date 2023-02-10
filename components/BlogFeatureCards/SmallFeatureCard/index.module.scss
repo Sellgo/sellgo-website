@@ -75,14 +75,14 @@
 	}
 
 	h2 {
-		font-size: $fontsize_subtitle_20;
+		font-size: $fontsize_20;
 		font-weight: $fontweight_semibold;
 		margin-bottom: 4rem;
 	}
 
 	p {
 		text-transform: uppercase;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		font-weight: $fontweight_medium;
 		color: $second_grey;
 		position: absolute;
@@ -90,7 +90,7 @@
 		left: 2rem;
 
 		@media only screen and(max-width: 500px) {
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_12;
 		}
 	}
 }

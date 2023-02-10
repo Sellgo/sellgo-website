@@ -42,7 +42,7 @@ export const features: {
 	{
 		icon: '/features-connect.svg',
 		title: 'How to connect',
-		subTitle: 'Reveal phone, address.',
+		subTitle: 'Reveal emails, phones, addresses.',
 		description: `Automate sales communication and task, and track your customer's every move to
     engage at precisely the right moment.`
 	}

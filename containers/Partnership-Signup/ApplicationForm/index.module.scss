@@ -38,7 +38,7 @@
 	min-height: 9rem;
 
 	small {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		color: $system_red;
 	}
 
@@ -48,7 +48,7 @@
 
 	> label {
 		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_semibold;
 		width: 100%;
 		margin-bottom: 1rem;
@@ -61,7 +61,7 @@
 		border: 1px solid $second_silver;
 		border-radius: 3px;
 		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		padding: 0 1rem;
 		&:focus {
 			outline: 0;
@@ -81,7 +81,7 @@
 
 	label {
 		color: $prim_dark_2;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		font-weight: $fontweight_medium;
 		width: 100%;
 	}
@@ -118,7 +118,7 @@
 		width: 45rem;
 		background: $prim_white;
 		border: 1px solid $second_silver;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		padding: 1rem;
 		border-radius: 3px;
 		cursor: pointer;
@@ -139,7 +139,7 @@
 		border-top: 0;
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		padding: 1rem;
 		cursor: pointer;
 		max-height: 30rem;
@@ -174,7 +174,7 @@
 .formSubmitInfo {
 	width: 90%;
 	margin-top: 1.5rem;
-	font-size: $fontsize_content_10;
+	font-size: $fontsize_10;
 	color: $prim_dark_2;
 	line-height: $fontlineheight_content_30;
 }

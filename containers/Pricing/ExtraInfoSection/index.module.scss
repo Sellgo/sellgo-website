@@ -31,18 +31,18 @@
 
 .title {
 	text-transform: uppercase;
-	font-size: $fontsize_content_16;
+	font-size: $fontsize_16;
 	font-weight: $fontweight_medium;
 }
 
 .subTitle {
-	font-size: $fontsize_subtitle_32;
+	font-size: $fontsize_32;
 	font-weight: $fontweight_extrabold;
 	color: inherit;
 }
 
 .description {
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_12;
 	font-weight: $fontweight_regular;
 	color: inherit;
 	line-height: $fontlineheight_content_30;
@@ -59,7 +59,7 @@
 .extraInfo {
 	color: inherit;
 	h4 {
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_semibold;
 		margin-bottom: 5px;
 	}

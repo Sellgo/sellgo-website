@@ -18,7 +18,7 @@
 	background: $black_1;
 	border-radius: 3px;
 	color: $prim_white;
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_14;
 	font-weight: $fontweight_bold;
 	width: 21rem;
 	height: 2.8rem;
@@ -47,13 +47,13 @@
 
 	p {
 		color: $prim_dark_1;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_medium;
 	}
 
 	small {
 		text-transform: uppercase;
-		font-size: $fontsize_content_10;
+		font-size: $fontsize_10;
 		font-weight: $fontweight_medium;
 		color: $second_grey;
 	}

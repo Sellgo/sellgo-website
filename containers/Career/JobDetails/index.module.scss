@@ -10,7 +10,7 @@
 		padding: 12em 0 3em 0;
 
 		p {
-			font-size: $fontsize_subtitle_20;
+			font-size: $fontsize_20;
 			font-weight: $fontweight_medium;
 			color: #2e3b4a;
 		}
@@ -25,7 +25,7 @@
 			}
 
 			h3 {
-				font-size: $fontsize_title_32;
+				font-size: $fontsize_32;
 				font-weight: $fontweight_semibold;
 				color: #2e3b4a;
 			}
@@ -39,7 +39,7 @@
 	.closingCTA {
 		background-color: #3b4557;
 		width: 10em;
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_semibold;
 	}
 
@@ -50,7 +50,7 @@
 
 		p {
 			color: #2e3b4a;
-			font-size: $fontsize_content_16;
+			font-size: $fontsize_16;
 			text-align: justify;
 		}
 
@@ -60,7 +60,7 @@
 			margin: 0 auto;
 
 			h3 {
-				font-size: $fontsize_title_24;
+				font-size: $fontsize_24;
 				font-weight: $fontweight_medium;
 				margin: 1em 0;
 				color: #2e3b4a;
@@ -70,7 +70,7 @@
 		.closingCTA {
 			margin: auto;
 			margin-top: 5em;
-			font-size: $fontsize_content_16;
+			font-size: $fontsize_16;
 			font-weight: $fontweight_semibold;
 		}
 	}
@@ -83,7 +83,7 @@
 		a {
 			color: $accent_blue;
 			text-decoration: underline;
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_14;
 			font-weight: $fontweight_light;
 			display: flex;
 			justify-content: center;

@@ -32,14 +32,14 @@
 		}
 
 		h1 {
-			font-size: $fontsize_subtitle_40;
+			font-size: $fontsize_40;
 			color: inherit;
 		}
 
 		p {
 			color: inherit;
 			max-width: 49.6rem;
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_12;
 			margin-top: 1rem;
 			line-height: 18px;
 		}
@@ -98,12 +98,12 @@
 
 	h2 {
 		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_medium;
 	}
 
 	a {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		color: $blue_link_bg_light;
 		font-weight: $fontweight_regular;
 	}
@@ -124,10 +124,10 @@
 	}
 
 	p {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		color: $prim_dark_1;
 		a {
-			font-size: $fontsize_content_12;
+			font-size: $fontsize_12;
 			cursor: pointer;
 		}
 	}
@@ -139,7 +139,7 @@
 	cursor: pointer;
 	margin-left: 0;
 	color: $sellgo_neon_blue;
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_14;
 	font-weight: $fontweight_medium;
 	margin-top: -5px;
 

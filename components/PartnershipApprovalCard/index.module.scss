@@ -22,7 +22,7 @@
 		height: 4rem;
 		background-color: $prim_dark_2;
 		border-radius: 0.3rem;
-		font-size: $fontsize_subtitle_20;
+		font-size: $fontsize_20;
 		font-weight: $fontweight_bold;
 		color: $prim_white;
 		display: flex;
@@ -33,7 +33,7 @@
 	.stepTitle {
 		color: $prim_dark_2;
 		font-weight: $fontweight_bold;
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		line-height: $fontlineheight_content_20;
 		margin-top: 1.4rem;
 		margin-bottom: 1.5rem;
@@ -41,7 +41,7 @@
 
 	.stepDescription {
 		color: $prim_dark_1;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		font-weight: $fontweight_regular;
 		line-height: $fontlineheight_content_20;
 		max-width: 23rem;

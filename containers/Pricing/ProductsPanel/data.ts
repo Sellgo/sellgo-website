@@ -7,13 +7,13 @@ export const planTypes: PlanTypes[] = [
 	// 	isNew: false
 	// },
 	{
-		name: 'Instant Download',
-		content: 'Pay less on software, invest more in your business.',
+		name: 'Instant Download Pricing',
+		content: 'Get your most wanted data in seconds, no hassle.',
 		img: 'instant-download.svg',
 		isNew: false
 	},
 	{
-		name: 'Web App',
+		name: 'Web App Subscription',
 		content: 'Pay less on software, invest more in your business.',
 		img: 'chartnetworkIcon.svg',
 		isNew: false

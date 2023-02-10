@@ -8,15 +8,21 @@
 	margin-top: 15em;
 	text-align: center;
 
+	h1 {
+		color: #2e3b4a;
+		font-size: $fontsize_32;
+		font-weight: $fontweight_bold;
+	}
+
 	p {
 		color: #2e3b4a;
-		font-size: $fontsize_subtitle_20;
+		font-size: $fontsize_20;
 		font-weight: $fontweight_semibold;
 	}
 
 	button {
 		background-color: #3cf7af;
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_semibold;
 		color: $prim_dark_2;
 		border: none;
@@ -44,7 +50,7 @@
 	}
 
 	h2 {
-		font-size: $fontsize_subtitle_32;
+		font-size: $fontsize_32;
 		@media only screen and(max-width: 1200px) {
 			margin-top: 2rem;
 			text-align: center;
@@ -54,7 +60,7 @@
 
 .planShortSummary {
 	color: $prim_dark_2;
-	font-size: $fontsize_content-14;
+	font-size: $fontsize_14;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -92,7 +98,7 @@
 	}
 
 	.paymentToggleText {
-		font-size: $fontsize_subtitle_20;
+		font-size: $fontsize_20;
 		color: $sellgo_purple;
 		font-weight: $fontweight_semibold;
 		margin-left: 10px;
@@ -181,7 +187,7 @@
 	align-items: center;
 	justify-content: center;
 	font-weight: $fontweight_semibold;
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_14;
 	color: $black_1;
 	margin-bottom: 18px;
 	border-radius: 7px;

@@ -22,12 +22,12 @@
 
 	h1 {
 		margin-top: 2rem;
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_24;
 	}
 
 	p {
 		max-width: 39rem;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		margin: 2rem auto;
 	}
 }
@@ -48,7 +48,7 @@
 		border: 1px solid $grey_4;
 		height: 4rem;
 		padding: 0 1rem;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		border-radius: 3px;
 		color: $prim_dark_2;
 		&:focus {
@@ -58,7 +58,7 @@
 
 	small {
 		color: $system_red;
-		font-size: $fontsize_content_10;
+		font-size: $fontsize_10;
 		text-align: left;
 	}
 
@@ -93,7 +93,7 @@
 
 .importantNotes {
 	color: $prim_dark_2;
-	font-size: $fontsize_content_10;
+	font-size: $fontsize_10;
 	font-weight: $fontweight_regular;
 	margin-top: 1rem;
 	p {

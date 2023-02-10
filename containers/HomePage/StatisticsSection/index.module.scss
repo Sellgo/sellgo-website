@@ -14,6 +14,7 @@
 	background-size: 90% 70%;
 	background-repeat: no-repeat;
 	background-position: center;
+	width: 100%;
 
 	h2 {
 		color: inherit;
@@ -22,7 +23,7 @@
 
 	p {
 		color: inherit;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_regular;
 		width: 85%;
 		margin: 0 auto;
@@ -37,7 +38,7 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
-	width: 100%;
+	width: 80%;
 	margin: 8rem auto;
 	flex-wrap: wrap;
 

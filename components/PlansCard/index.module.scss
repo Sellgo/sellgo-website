@@ -30,7 +30,7 @@
 		justify-content: center;
 		align-items: center;
 		height: 5rem;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		cursor: pointer;
 		span {
 			margin-left: 2rem;
@@ -45,7 +45,7 @@
 	color: inherit;
 	h3 {
 		color: $prim_dark_2;
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_24;
 		font-weight: $fontweight_medium;
 		margin-top: 3rem;
 		margin-bottom: 1rem;
@@ -54,12 +54,12 @@
 	small,
 	p {
 		color: inherit;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 	}
 }
 
 .popularFeaturesList {
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_14;
 	border-bottom: 1px solid $grey_2;
 	width: 100%;
 	text-align: left;

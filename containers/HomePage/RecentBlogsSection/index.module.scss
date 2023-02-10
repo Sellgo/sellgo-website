@@ -50,7 +50,7 @@
 
 .recentArticlesWrapper {
 	h3 {
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_semibold;
 		color: $prim-dark_2;
 	}
@@ -60,7 +60,7 @@
 	background: $prim_dark_1;
 	border-radius: 3px;
 	color: $prim_white !important;
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_14;
 	font-weight: $fontweight_semibold;
 	width: 16rem;
 	height: 2.8rem;
@@ -87,14 +87,14 @@
 
 	p {
 		color: $prim_dark_1;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_medium;
 		margin-bottom: 0;
 	}
 
 	small {
 		text-transform: uppercase;
-		font-size: $fontsize_content_10;
+		font-size: $fontsize_10;
 		font-weight: $fontweight_medium;
 		color: $second_grey;
 	}

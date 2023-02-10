@@ -31,7 +31,7 @@
 	width: 65%;
 
 	h1 {
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_24;
 		color: $prim_dark_1;
 		line-height: $fontlineheight_content_30;
 		margin-bottom: 1rem;
@@ -39,7 +39,7 @@
 	}
 
 	p {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		color: $prim_dark_2;
 		line-height: $fontlineheight_content_30;
 	}
@@ -50,7 +50,7 @@
 
 		h1 {
 			width: 100%;
-			font-size: $fontsize_subtitle_20;
+			font-size: $fontsize_20;
 		}
 	}
 }

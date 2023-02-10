@@ -55,7 +55,7 @@
 	justify-content: center;
 	text-align: center;
 	margin-top: 1.4rem;
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_12;
 	color: $grey_8;
 	font-weight: $fontweight_medium;
 	height: 30px;
@@ -69,7 +69,7 @@
 	}
 
 	&__selected {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		font-weight: $fontweight_semibold;
 		color: $prim_dark_2;
 	}
