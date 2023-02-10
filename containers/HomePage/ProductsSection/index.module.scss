@@ -13,15 +13,18 @@
 }
 
 .productsSectionTitle {
-	font-size: 32px;
+	font-size: $fontsize_32;
 	font-weight: $fontweight_bold;
 	color: $prim_dark_2;
+	text-align: center;
+	margin-bottom: 0.5em;
 }
 
 .productsSectionSubTitle {
-	font-size: 14px;
+	font-size: $fontsize_14;
 	font-weight: $fontweight_medium;
 	color: $grey_8;
+	text-align: center;
 }
 
 .productsWrapper {
@@ -44,20 +47,20 @@
 	.title {
 		margin-top: 18px;
 		color: $black_1;
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_24;
 		font-weight: $fontweight_semibold;
 	}
 
 	.action {
 		color: $black_1;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_medium;
 		margin-bottom: 18px;
 	}
 
 	.desc {
 		max-width: 300px;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		color: $black_0;
 		font-weight: $fontweight_medium;
 	}
@@ -67,7 +70,7 @@
 	cursor: pointer;
 	background: none;
 	border: none;
-	font-size: $fontsize_content_16;
+	font-size: $fontsize_16;
 	font-weight: $fontweight_medium;
 	margin-top: 5rem;
 	margin-bottom: 10rem;
@@ -80,7 +83,7 @@
 }
 
 .agencyDetails {
-	font-size: $fontsize_subtitle_20;
+	font-size: $fontsize_20;
 	font-weight: $fontweight_medium;
 	color: $black_0;
 	text-align: center;

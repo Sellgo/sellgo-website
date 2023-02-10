@@ -11,7 +11,7 @@
 	margin: 0 auto;
 
 	h3 {
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		margin: 1rem auto;
 		font-weight: $fontweight_semibold;
 	}
@@ -27,7 +27,7 @@
 
 .price {
 	text-align: center;
-	font-size: $fontsize_subtitle_38;
+	font-size: $fontsize_38;
 	color: $blue_7;
 	font-weight: $fontweight_bold;
 	display: flex;
@@ -36,14 +36,14 @@
 	margin: 2rem auto;
 
 	span {
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_24;
 		font-weight: $fontweight_semibold;
 	}
 }
 
 .billedAt {
 	color: $prim_dark_2;
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_12;
 
 	&__price {
 		font-weight: $fontweight_bold;
@@ -58,7 +58,7 @@
 
 .totalPrice {
 	color: $second_grey;
-	font-size: $fontsize_subtitle_20;
+	font-size: $fontsize_20;
 	font-weight: $fontweight_regular;
 }
 

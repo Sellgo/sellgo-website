@@ -19,7 +19,7 @@ const TestimonialsSection: React.FC<Props> = () => {
 
 	return (
 		<section className={styles.testimonialsSection}>
-			<h2>You’ll Be Up And Running In Minutes With AiStock</h2>
+			<h2>What our customers say</h2>
 			<div className={`page container ${styles.testimonialsWrapper}`}>
 				{testimonials.map((testimonial) => (
 					<div className={styles.testimonialContainer}>

@@ -12,13 +12,13 @@
 
 .orangeHeading {
 	color: $accent_orange;
-	font-size: $fontsize_subtitle_32;
+	font-size: $fontsize_32;
 	font-weight: $fontweight_semibold;
 }
 
 .infoSectionDescription {
 	text-align: center;
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_14;
 	font-weight: $fontweight_medium;
 	width: 100%;
 	@media only screen and(max-width: 650px) {
@@ -32,5 +32,5 @@
 
 .animatedText {
 	font-weight: $fontweight_extrabold;
-	font-size: $fontsize_subtitle_40;
+	font-size: $fontsize_40;
 }

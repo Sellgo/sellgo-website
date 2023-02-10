@@ -41,19 +41,19 @@
 }
 
 .heading {
-	font-size: $fontsize_title_40;
+	font-size: $fontsize_40;
 	font-weight: $fontweight_extrabold;
 	line-height: $fontlineheight_heading_70;
 	margin-top: 0.5em;
 
 	@media only screen and(max-width: 650px) {
-		font-size: $fontsize_subtitle_38;
+		font-size: $fontsize_38;
 		line-height: 1.2;
 	}
 }
 
 .subHeading {
-	font-size: $fontsize_subtitle_20;
+	font-size: $fontsize_20;
 	font-weight: $fontweight_medium;
 	line-height: $fontlineheight_heading_70;
 	color: $grey_8;
@@ -67,7 +67,7 @@
 
 .tagline {
 	margin-top: 20px;
-	font-size: $fontsize_subtitle_20;
+	font-size: $fontsize_20;
 	line-height: $fontlineheight_content_30;
 	font-weight: $fontweight_medium;
 	color: $grey_8;
@@ -100,7 +100,7 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 7px;
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_semibold;
 		border: none;
 		margin: 0 !important;

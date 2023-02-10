@@ -135,9 +135,9 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					</div>
 
 					<div className={styles.talkToExpertContainer}>
-						<p>
-							Need everything unlimited with an account-based Enterprise plan?
-						</p>
+						<h1>
+							Need everything unlimited with an enterprise account-based plan?
+						</h1>
 						<p></p>
 
 						<button onClick={() => setIsDemoFormOpen(true)}>

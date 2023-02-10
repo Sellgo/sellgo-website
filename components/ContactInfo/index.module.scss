@@ -5,7 +5,7 @@
 
 	h2 {
 		margin-top: 18rem;
-		font-size: $fontsize_subtitle_20;
+		font-size: $fontsize_20;
 		font-weight: $fontweight_semibold;
 	}
 }
@@ -16,7 +16,7 @@
 	border-radius: 10rem;
 	margin: 0 auto;
 	margin-top: 2rem;
-	font-size: $fontsize_content_16;
+	font-size: $fontsize_16;
 	font-weight: $fontweight_semibold;
 	color: $prim_dark_2;
 	display: flex;
@@ -41,7 +41,7 @@
 		height: 4rem;
 		cursor: pointer;
 		text-decoration: none;
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_semibold;
 		display: flex;
 		align-items: center;
@@ -54,7 +54,7 @@
 	border: none;
 	cursor: pointer;
 	color: $sellgo_purple;
-	font-size: $fontsize_content_16;
+	font-size: $fontsize_16;
 	font-weight: $fontweight_semibold;
 	margin-top: 3rem;
 	margin-bottom: 4rem;

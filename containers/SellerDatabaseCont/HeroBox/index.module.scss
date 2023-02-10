@@ -45,7 +45,7 @@
 }
 
 .subHeading {
-	font-size: $fontsize_subtitle_20;
+	font-size: $fontsize_20;
 	font-weight: $fontweight_medium;
 	line-height: 1;
 	color: inherit;
@@ -54,7 +54,7 @@
 .heading {
 	margin: 2rem 0;
 	color: inherit;
-	font-size: $fontsize_title_46;
+	font-size: $fontsize_46;
 	@media only screen and(max-width: 650px) {
 		font-size: 35px;
 	}

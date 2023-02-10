@@ -6,7 +6,7 @@
 
 .stepperTitle {
 	font-weight: $fontweight_bold;
-	font-size: $fontsize_title_46;
+	font-size: $fontsize_46;
 	text-align: center;
 	color: $prim_dark_2;
 
@@ -17,7 +17,7 @@
 }
 
 .stepperSubtitle {
-	font-size: $fontsize_subtitle_20;
+	font-size: $fontsize_20;
 	font-weight: $fontweight_medium;
 	color: $grey_8;
 	text-align: center;
@@ -34,7 +34,7 @@
 
 .stepperTab {
 	color: $grey_8;
-	font-size: $fontsize_subtitle_24;
+	font-size: $fontsize_24;
 	margin: 0 2.5rem;
 	text-align: center;
 	font-weight: $fontweight_medium;
@@ -60,6 +60,6 @@
 	}
 
 	@media only screen and(max-width: 900px) {
-		font-size: $fontsize_content_18;
+		font-size: $fontsize_18;
 	}
 }

@@ -22,18 +22,18 @@ export const wholesaleFeatures: StepDetail[] = [
 		linkLabel: 'More about Seller Map',
 		navigateTo: '/seller-map',
 		imageUrl: '/seller_map_1.png'
-	},
-	{
-		title: 'Seller Finder',
-		icon: 'sellerFinder',
-		subTitle: 'Track top FBA competitors and best sellers',
-		description: `Sellgo Seller Finder targets millions of Amazon sellers globally and 
-			shows you all the items they're selling, and check the other sellers selling similar 
-			inventory. Right at your finger tips.`,
-		linkLabel: 'More about Seller Finder',
-		navigateTo: '/seller-finder',
-		imageUrl: '/seller_finder_1.png'
 	}
+	// {
+	// 	title: 'Seller Finder',
+	// 	icon: 'sellerFinder',
+	// 	subTitle: 'Track top FBA competitors and best sellers',
+	// 	description: `Sellgo Seller Finder targets millions of Amazon sellers globally and
+	// 		shows you all the items they're selling, and check the other sellers selling similar
+	// 		inventory. Right at your finger tips.`,
+	// 	linkLabel: 'More about Seller Finder',
+	// 	navigateTo: '/seller-finder',
+	// 	imageUrl: '/seller_finder_1.png'
+	// }
 ];
 
 export const privateLabelFeatures: StepDetail[] = [

@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
 import validator from 'validator';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -24,7 +25,7 @@ const NewClosingCTASection = () => {
 			window.open(url, '_blank');
 		} else {
 			setEmailErr(true);
-			setEmailErrMsg('Please enter a valid email address.');
+			setEmailErrMsg('Please enter a valid business email.');
 		}
 	};
 
@@ -36,7 +37,7 @@ const NewClosingCTASection = () => {
 				setEmailErrMsg('');
 			} else {
 				setEmailErr(true);
-				setEmailErrMsg('Please enter a valid email address');
+				setEmailErrMsg('Please enter a valid business email');
 			}
 		}
 	}, [email, emailErr]);
@@ -84,9 +85,11 @@ const NewClosingCTASection = () => {
 							</div>
 							<button
 								className={styles.demoButton}
-								onClick={() => setIsDemoFormOpen(true)}
+								// onClick={() => setIsDemoFormOpen(true)}
 							>
-								Need seller list?
+								<Link href="pricing?type=instant-download">
+									Instant download?
+								</Link>
 							</button>
 						</div>
 					</div>

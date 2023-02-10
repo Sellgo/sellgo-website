@@ -251,25 +251,15 @@ const InstantDownloadPanel = () => {
 	return (
 		<section id="instant-download" className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
-				<h2 className={styles.heading}>Instant Data Download?</h2>
+				<h2 className={styles.heading}>
+					One-off Pricing for Instant Data Download
+				</h2>
 
 				<p className={styles.tagline}>
 					Our data is everything you need, nothing you don’t. You pick.
 				</p>
 
 				<Stepper steps={sellerData} />
-			</div>
-
-			<div className={styles.talkToExpertContainer}>
-				<p>Need everything unlimited with an account-based Enterprise plan?</p>
-				<p>
-					Do you have existing seller data that you want to enrich with our
-					updated data?
-				</p>
-
-				<button onClick={() => setIsDemoFormOpen(true)}>
-					Talk to an expert
-				</button>
 			</div>
 
 			<div className={styles.freeSampleContainer}>

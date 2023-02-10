@@ -20,25 +20,24 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 	return (
 		<section className={styles.featureComparisonWrapper}>
 			<div className={`page-container ${styles.featureComparisonSection}`}>
-				<h2 className={styles.title}>How Sellgo can grow your business</h2>
+				<h2 className={styles.title}>Why Sellgo?</h2>
 
 				<div className={styles.featureRow}>
 					<p className={`${styles.headerText} ${styles.headerText__plan}`}>
 						{' '}
-						Agency{' '}
+						Self-serve/ usage-based{' '}
 					</p>
 					<p className={`${styles.headerText} ${styles.headerText__plan}`}>
 						{' '}
-						Influencer{' '}
+						Enterprise/ account-based{' '}
 					</p>
 					<p className={styles.headerText}> </p>
 					<p className={`${styles.headerText} ${styles.headerText__sellgo}`}>
 						{' '}
-						Sellgo app
+						Sellgo webapp
 					</p>
-					<p className={styles.headerText}> Manual</p>
-					<p className={styles.headerText}> Amazon</p>
-					<p className={styles.headerText}> Google</p>
+					<p className={styles.headerText}> Other list download</p>
+					<p className={styles.headerText}> Other ABM software</p>
 				</div>
 				<div className={styles.featureComparisonGrid}>
 					{features.map((feature: any, index: number) => {
@@ -52,7 +51,9 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 								<div
 									className={`${styles.checkboxCell} ${styles.checkboxCell__plan}`}
 								>
-									{feature.featureAvailableInPlans.includes(plans.AGENCY) && (
+									{feature.featureAvailableInPlans.includes(
+										plans.SELFSERVE
+									) && (
 										<Image
 											src="/checkSquare.svg"
 											width={15}
@@ -65,7 +66,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 									className={`${styles.checkboxCell} ${styles.checkboxCell__plan}`}
 								>
 									{feature.featureAvailableInPlans.includes(
-										plans.INFLUENCER
+										plans.ENTERPRISE
 									) && (
 										<Image
 											src="/checkSquare.svg"
@@ -97,7 +98,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 								</div>
 								<div className={styles.checkboxCell}>
 									{feature.featureAvailableInCompetitors.includes(
-										competitors.MANUAL
+										competitors.LIST
 									) && (
 										<Image
 											src="/checkSquare.svg"
@@ -109,21 +110,7 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 								</div>
 								<div className={styles.checkboxCell}>
 									{feature.featureAvailableInCompetitors.includes(
-										competitors.AMAZON
-									) && (
-										<Image
-											src="/checkSquare.svg"
-											width={15}
-											height={15}
-											alt="check-square"
-										/>
-									)}
-								</div>
-								<div
-									className={`${styles.checkboxCell} ${styles.checkboxCell__last}`}
-								>
-									{feature.featureAvailableInCompetitors.includes(
-										competitors.GOOGLE
+										competitors.OTHER
 									) && (
 										<Image
 											src="/checkSquare.svg"

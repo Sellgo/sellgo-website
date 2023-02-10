@@ -9,9 +9,9 @@
 		width: 100%;
 		color: $black_1;
 		text-align: center;
-		font-size: $fontsize_title_46;
+		font-size: $fontsize_40;
 		font-weight: $fontweight_bold;
-		margin-bottom: 7rem;
+		margin-bottom: 5rem;
 	}
 }
 
@@ -30,9 +30,9 @@
 			width: 100%;
 			color: $black_1;
 			text-align: center;
-			font-size: $fontsize_content_16;
+			font-size: $fontsize_14;
 			font-weight: $fontweight_medium;
-			margin-bottom: 3rem;
+			margin-bottom: 4rem;
 		}
 	}
 
@@ -48,7 +48,7 @@
 	h2 {
 		width: 100%;
 		color: $black_1;
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_24;
 		font-weight: $fontweight_bold;
 		margin-bottom: 4rem;
 	}
@@ -128,7 +128,8 @@
 .socialProofIcons {
 	display: grid;
 	grid-template-columns: 25% 25% 25%;
-	column-gap: 12.5%;
+	column-gap: 15%;
+	row-gap: 40%;
 	align-items: center;
 	justify-content: center;
 }
@@ -165,7 +166,7 @@
 // 	}
 
 // 	small {
-// 		font-size: $fontsize_subtitle_24;
+// 		font-size: $fontsize_24;
 // 		font-weight: $fontweight_semibold;
 // 		text-align: center;
 // 		line-height: 30px;
@@ -178,7 +179,7 @@
 // 		margin: 3rem 0;
 // 		text-align: center;
 // 		color: $black_0;
-// 		font-size: $fontsize_content_14;
+// 		font-size: $fontsize_14;
 // 		font-weight: $fontweight_medium;
 // 	}
 // }

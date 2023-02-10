@@ -15,21 +15,21 @@
 	min-height: 10rem;
 
 	h3 {
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_semibold;
 		color: $prim_dark_2;
 		margin-left: 2rem;
 	}
 
 	div {
-		font-size: $fontsize_content_10;
+		font-size: $fontsize_10;
 		font-weight: $fontweight_regular;
 		color: $grey_8;
 		margin-left: 2rem;
 
 		a {
 			color: inherit;
-			font-size: $fontsize_content_10;
+			font-size: $fontsize_10;
 			display: inline-block;
 
 			&:hover {

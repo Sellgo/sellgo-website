@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -42,9 +43,11 @@ const NewClosingCTASection = () => {
 							</CTAButton>
 							<button
 								className={styles.demoButton}
-								onClick={() => setIsDemoFormOpen(true)}
+								// onClick={() => setIsDemoFormOpen(true)}
 							>
-								Need seller lists?
+								<Link href="pricing?type=instant-download">
+									Instant download?
+								</Link>
 							</button>
 						</div>
 						<span>Free forever. No credit card required. Instant access.</span>

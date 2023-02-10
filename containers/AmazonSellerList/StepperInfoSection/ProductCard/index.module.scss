@@ -24,14 +24,14 @@
 		small {
 			text-transform: uppercase;
 			color: $grey_8;
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_14;
 			font-weight: $fontweight_bold;
 			letter-spacing: 1.5px;
 		}
 
 		h3 {
 			margin-top: 8px;
-			font-size: $fontsize_subtitle_28;
+			font-size: $fontsize_28;
 			font-weight: $fontweight_bold;
 			color: $black_1;
 			line-height: 1;
@@ -40,7 +40,7 @@
 
 		p {
 			width: 100%;
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_14;
 			font-weight: $fontweight_medium;
 			color: $prim_dark_1;
 			@media only screen and(max-width: 1280px) {
@@ -61,7 +61,7 @@
 			color: $sellgo_purple;
 			margin-bottom: 10px;
 			display: inline-block;
-			font-size: $fontsize_content_14;
+			font-size: $fontsize_14;
 			font-weight: $fontweight_medium;
 
 			&:hover {
@@ -74,7 +74,7 @@
 		color: $sellgo_purple;
 		display: inline-block;
 		margin: 2rem 0;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_medium;
 
 		&:hover {
@@ -115,7 +115,7 @@
 	width: 20rem;
 	border: 1px solid $grey_3;
 	color: $prim_dark_2;
-	font-size: $fontsize_content_16;
+	font-size: $fontsize_16;
 	font-weight: $fontweight_bold;
 }
 
@@ -126,6 +126,6 @@
 
 	span {
 		color: $prim_dark_2;
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 	}
 }

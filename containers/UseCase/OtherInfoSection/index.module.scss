@@ -6,7 +6,7 @@
 }
 
 .sectionHeading {
-	font-size: $fontsize_subtitle_38;
+	font-size: $fontsize_38;
 	text-align: center;
 	color: inherit;
 	font-weight: $fontweight_bold;
@@ -14,7 +14,7 @@
 }
 
 .sectionDesc {
-	font-size: $fontsize_content_16;
+	font-size: $fontsize_16;
 	color: inherit;
 	font-weight: $fontweight_regular;
 	text-align: center;
@@ -46,7 +46,7 @@
 
 	&__Text {
 		text-align: center;
-		font-size: $fontsize_subtitle_24;
+		font-size: $fontsize_24;
 		font-weight: $fontweight_medium;
 		margin-top: 1rem;
 	}
@@ -62,7 +62,7 @@
 }
 
 .partnershipDesc {
-	font-size: $fontsize_subtitle_20;
+	font-size: $fontsize_20;
 	font-weight: $fontweight_medium;
 	color: $black_0;
 	text-align: center;
@@ -71,7 +71,7 @@
 }
 .otherInfoSectionCTA {
 	width: 100%;
-	font-size: $fontsize_subtitle_20;
+	font-size: $fontsize_20;
 	font-weight: $fontweight_medium;
 	border: none;
 	text-align: center;

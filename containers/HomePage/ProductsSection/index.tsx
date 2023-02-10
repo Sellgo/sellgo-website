@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -26,12 +25,13 @@ const ProductsSection: React.FC<Props> = () => {
 		<section className={styles.productSectionWrapper}>
 			<div className={`page-container ${styles.productsSection}`}>
 				<h2 className={styles.productsSectionTitle}>
-					We&apos;ve designed proven seller research apps to help you grow
+					We&apos;ve designed a proven seller research app to help you grow
 				</h2>
 
 				<h2 className={styles.productsSectionSubTitle}>
-					Generate and analyze sellers across essential communication channels,
-					including your sales calls and phone outreach, and business website.
+					Generate and analyze sellers across essential multi communication
+					channels, including your sales email automation, mail/ phone outreach,
+					targeted social media and more.
 				</h2>
 
 				<div className={styles.productsWrapper}>
@@ -74,7 +74,7 @@ const ProductsSection: React.FC<Props> = () => {
 						Need customized seller lists?
 					</RainbowText>
 				</button>
-				<h2 className={styles.agencyTitle}>Affiliate Partnership?</h2>
+				{/* <h2 className={styles.agencyTitle}>Affiliate Partnership?</h2>
 				<p className={styles.agencyDetails}>
 					Help your audiences reach their potential by becoming our partner.
 				</p>
@@ -82,7 +82,7 @@ const ProductsSection: React.FC<Props> = () => {
 					<RainbowText type="orange_purple_gradient">
 						<Link href="partnership-program">Learn More</Link>
 					</RainbowText>
-				</button>
+				</button> */}
 			</div>
 
 			<Modal

@@ -16,12 +16,12 @@
 	text-align: center;
 
 	h2 {
-		font-size: $fontsize_subtitle_32;
+		font-size: $fontsize_32;
 		font-weight: $fontweight_bold;
 		margin-bottom: 4rem;
 
 		@media screen and (max-width: 800px) {
-			font-size: $fontsize_subtitle_28;
+			font-size: $fontsize_28;
 		}
 	}
 
@@ -32,7 +32,7 @@
 }
 
 .betaDescription {
-	font-size: $fontsize_subtitle_24;
+	font-size: $fontsize_24;
 	font-weight: $fontweight_semibold;
 
 	.seatsLeft {
@@ -45,18 +45,18 @@
 		width: 200px;
 		left: -20px;
 		color: $sellgo_purple;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_semibold;
 		top: -20px;
 	}
 
 	@media screen and (max-width: 800px) {
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 	}
 }
 
 .betaTerms {
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_12;
 	font-weight: $fontweight_light;
 	color: $black_1;
 	margin-bottom: 5px;
@@ -71,7 +71,7 @@
 	margin-top: 2rem;
 	margin-bottom: 3rem;
 	color: $black_1;
-	font-size: $fontsize_content_12;
+	font-size: $fontsize_12;
 	font-weight: $fontweight_regular;
 }
 
@@ -92,7 +92,7 @@
 		border: 1px solid $second_silver;
 		border-radius: 3px;
 		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-family: inherit;
 		padding: 0 1rem;
 		&:focus {
@@ -105,7 +105,7 @@
 	}
 
 	small {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		color: $system_red;
 	}
 }
@@ -132,7 +132,7 @@
 		background: $prim_white;
 		border-radius: 6px;
 		color: $prim_dark_2;
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_bold;
 
 		&:hover {

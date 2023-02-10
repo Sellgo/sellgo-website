@@ -56,7 +56,7 @@
 }
 
 .planSelectionTitle {
-	font-size: $fontsize_content_14;
+	font-size: $fontsize_14;
 	color: $prim_dark_2;
 	font-weight: $fontweight_semibold;
 }
@@ -74,7 +74,7 @@
 	}
 
 	.planName {
-		font-size: $fontsize_content_16;
+		font-size: $fontsize_16;
 		color: inherit;
 		border: 1px solid $grey_3;
 		border-radius: 7px;
@@ -117,7 +117,7 @@
 
 	.description {
 		text-align: center;
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		color: $prim_dark_2;
 		margin-top: 2rem;
 		width: 100%;
@@ -144,7 +144,7 @@
 
 	label {
 		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-weight: $fontweight_medium;
 		width: 100%;
 		margin-bottom: 5px;
@@ -158,7 +158,7 @@
 		border: 1px solid $second_silver;
 		border-radius: 3px;
 		color: $prim_dark_2;
-		font-size: $fontsize_content_14;
+		font-size: $fontsize_14;
 		font-family: inherit;
 		padding: 0 1rem;
 		&:focus {
@@ -171,7 +171,7 @@
 	}
 
 	small {
-		font-size: $fontsize_content_12;
+		font-size: $fontsize_12;
 		color: $system_red;
 	}
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
-// import validator from 'validator';
+import validator from 'validator';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -9,54 +10,52 @@ import styles from './index.module.scss';
 /* Components */
 import RainbowText from '../../../components/RainbowText';
 import SellerListForm from '../../Demo/SellerListForm';
-import CTAButton from '../../../components/CTAButton';
+import FormInput from '../../../components/FormInput';
 
 /* Utils */
-import { createFreeTrialLink } from '../../../utils/Referral';
-// import AppConfig from '../../../config';
-// import { encodeBase64 } from '../../../utils/Format';
+// import { createFreeTrialLink } from '../../../utils/Referral';
+import AppConfig from '../../../config';
+import { encodeBase64 } from '../../../utils/Format';
 
 const HeroBox = () => {
 	const textList = [
-		'agencies.',
-		'B2B.',
-		'aggregators.',
-		'influencers.',
-		'reviewers.',
-		'competitors.',
-		'marketplaces.'
+		'e-comm agencies.',
+		'e-comm aggregators.',
+		'product influencers.',
+		'logistic businesses.',
+		'software companies.'
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
 	const [isAnimationIncreasing, setAnimationIncreasing] = React.useState(true);
 	const [animationIndex, setAnimationIndex] = React.useState(0);
 	const [animatedText, setAnimatedText] = React.useState<string>('');
-	// const [email, setEmail] = React.useState<string>('');
-	// const [emailErr, setEmailErr] = React.useState(false);
-	// const [emailErrMsg, setEmailErrMsg] = React.useState('');
+	const [email, setEmail] = React.useState<string>('');
+	const [emailErr, setEmailErr] = React.useState(false);
+	const [emailErrMsg, setEmailErrMsg] = React.useState('');
 
-	// const onSignupClick = () => {
-	// 	if (email.trim().length > 0 && validator.isEmail(email.trim())) {
-	// 		const url = `${AppConfig.APP_URL}/signup?email=${encodeBase64(email)}`;
-	// 		window.open(url, '_blank');
-	// 	} else {
-	// 		setEmailErr(true);
-	// 		setEmailErrMsg('Please enter a valid business email address.');
-	// 	}
-	// };
+	const onSignupClick = () => {
+		if (email.trim().length > 0 && validator.isEmail(email.trim())) {
+			const url = `${AppConfig.APP_URL}/signup?email=${encodeBase64(email)}`;
+			window.open(url, '_blank');
+		} else {
+			setEmailErr(true);
+			setEmailErrMsg('Please enter a valid business email.');
+		}
+	};
 
 	/* Check when user stops typing email, if email is valid */
-	// React.useEffect(() => {
-	// 	if (email.trim().length > 0 && emailErr) {
-	// 		if (validator.isEmail(email.trim())) {
-	// 			setEmailErr(false);
-	// 			setEmailErrMsg('');
-	// 		} else {
-	// 			setEmailErr(true);
-	// 			setEmailErrMsg('Please enter a valid email address');
-	// 		}
-	// 	}
-	// }, [email, emailErr]);
+	React.useEffect(() => {
+		if (email.trim().length > 0 && emailErr) {
+			if (validator.isEmail(email.trim())) {
+				setEmailErr(false);
+				setEmailErrMsg('');
+			} else {
+				setEmailErr(true);
+				setEmailErrMsg('Please enter a valid business email.');
+			}
+		}
+	}, [email, emailErr]);
 
 	// Increment to next word
 	const incrementToNextWord = () => {
@@ -113,35 +112,42 @@ const HeroBox = () => {
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						Search, connect and convert over millions of verified contacts at
+						Get the Amazon sellers B2B data and software you need to connect
+						with
 						<br />
-						1M+ Amazon seller companies with Sellgo leads intelligence platform.
+						and close your most valuable customers - all-in-one seller research.
 					</p>
 					<div className={styles.ctaBox}>
-						<CTAButton
-							type="secondary"
-							size="small"
-							variant="rainbow"
-							navigateTo={'/pricing?type=instant-download'}
-							asExternal
-							newTarget
-							className={styles.closingCTA}
-						>
-							One-off Instant Download
-						</CTAButton>
-
-						<CTAButton
-							type="primary"
-							size="small"
-							variant="rainbow"
-							navigateTo={createFreeTrialLink()}
-							asExternal
-							newTarget
-							className={styles.closingCTA}
-						>
-							Create web app free account
-						</CTAButton>
-						<div>Free forever. No credit card required. Instant access.</div>
+						<div className={styles.emailSignupBox}>
+							<FormInput
+								id={'Email'}
+								type={'text'}
+								name={'Email'}
+								value={email}
+								placeholder="Business email*"
+								className={styles.formInput}
+								onChange={(e) => setEmail(e.target.value)}
+								autoComplete="off"
+								required
+								hasError={emailErr}
+								errorMessage={emailErrMsg}
+							/>
+							<button
+								className={styles.submitButton}
+								disabled={emailErr}
+								onClick={onSignupClick}
+							>
+								Free trial
+							</button>
+							<span>
+								Free forever. No credit card required. Instant access.
+							</span>
+						</div>
+						<button className={styles.demoButton}>
+							<Link href="pricing?type=instant-download">
+								Instant download?
+							</Link>
+						</button>
 					</div>
 				</div>
 				<div className={styles.imageColumn}>
@@ -156,10 +162,7 @@ const HeroBox = () => {
 			</div>
 
 			<div className={styles.brandsContainer}>
-				<h2>
-					Join the 10,000 leading brands are growing their businesses with
-					Sellgo
-				</h2>
+				<h2>Trusted by 7,000+ businesses.</h2>
 				{/* <img src="/brands.png" alt="brands" /> */}
 				<img src="/brands1.png" alt="brands" />
 			</div>
