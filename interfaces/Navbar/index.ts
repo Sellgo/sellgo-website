@@ -1,17 +1,9 @@
 /* Camel case names for products */
 export type Products =
 	| 'extension'
-	| 'searchManagement'
-	| 'profitFinder'
-	| 'productTracker'
-	| 'leadsTracker'
-	| 'productDatabase'
 	| 'sellerFinder'
 	| 'sellerDatabase'
-	| 'sellerMap'
-	| 'keywordFinder'
-	| 'keywordDatabase'
-	| 'productRankTracker';
+	| 'sellerMap';
 
 export type Resources = 'blogs' | 'PartnershipProgram' | 'salesEstimator';
 
