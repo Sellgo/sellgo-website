@@ -6,20 +6,14 @@ export const DEFAULT_TAB_VALUE = 1;
 
 /* Map plan names with tabs */
 export const plansTabMapper: KeyValuePair = {
-	'instant-download': 0,
-	/* HIDING-PRIVATE-LABEL */
-	// 'private-label': 1,
-	'monthly-and-annual-plans': 1
-	// 'seller-scout-pro': 2
+	'usage-based-plans': 0,
+	'account-based-plans': 1
 };
 
 /* Map tab number with plans */
 const reversePlansTabMapper: KeyValuePair = {
-	0: 'instant-download',
-	/* HIDING-PRIVATE-LABEL */
-	// 1: 'private-label',
-	1: 'monthly-and-annual-plans',
-	2: 'seller-scout-pro'
+	0: 'usage-based-plans',
+	1: 'account-based-plans'
 };
 
 /* Utils to generate tab number from query */

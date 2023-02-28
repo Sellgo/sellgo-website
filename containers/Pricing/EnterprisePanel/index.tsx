@@ -11,7 +11,7 @@ const InstantDownloadPanel = () => {
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 
 	return (
-		<section id="instant-download" className={`${styles.heroboxWrapper}`}>
+		<section id="account-based-plans" className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
 				<h2 className={styles.heading}>Get your unlimited leads</h2>
 

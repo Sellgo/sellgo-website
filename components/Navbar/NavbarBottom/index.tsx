@@ -48,7 +48,7 @@ const NavbarBottom: React.FC<Props> = () => {
 						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
 					>
 						<Link
-							href="/pricing?type=monthly-and-annual-plans"
+							href="/pricing?type=usage-based-plans"
 							passHref
 							prefetch={false}
 						>

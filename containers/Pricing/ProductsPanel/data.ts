@@ -13,14 +13,14 @@ export const planTypes: PlanTypes[] = [
 	// 	isNew: false
 	// },
 	{
-		name: 'Account-based Solution',
-		content: 'Get your most wanted data in seconds, no hassle.',
+		name: 'Usage-based Subscription',
+		content: 'Pay less on software, invest more in your business.',
 		img: 'instant-download.svg',
 		isNew: false
 	},
 	{
-		name: 'Usage-based Subscription',
-		content: 'Pay less on software, invest more in your business.',
+		name: 'Account-based Solution',
+		content: 'Get your most wanted data in seconds, no hassle.',
 		img: 'chartnetworkIcon.svg',
 		isNew: false
 	}
