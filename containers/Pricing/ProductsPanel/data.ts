@@ -53,7 +53,7 @@ export const plansAndProductsDetails = [
 				productsDatabase: 0,
 				salesEstimateCount: 1000,
 				monthlyPrice: 77,
-				annualPrice: 467,
+				annualPrice: 687,
 				desc: `Accelerate your seller research process.`,
 				featureSubName: 'Start with',
 				featuresLists: [
@@ -73,7 +73,7 @@ export const plansAndProductsDetails = [
 				productsDatabase: 0,
 				salesEstimateCount: 2000,
 				monthlyPrice: 147,
-				annualPrice: 1187,
+				annualPrice: 1287,
 				featureSubName: 'Everything in starter plan, plus',
 				desc: `Find the best seller, faster.`,
 				featuresLists: [
@@ -82,7 +82,7 @@ export const plansAndProductsDetails = [
 						featuresIncluded: [
 							'Verified personal and other email(s),',
 							'Mobile and direct phone number(s),',
-							'Social Media link/ username(s)*'
+							'Social media link/ username(s)*'
 						]
 					}
 				]
@@ -92,8 +92,8 @@ export const plansAndProductsDetails = [
 				name: 'Elite',
 				productsDatabase: 0,
 				salesEstimateCount: 3000,
-				monthlyPrice: 297,
-				annualPrice: 2987,
+				monthlyPrice: 347,
+				annualPrice: 2967,
 				featureSubName: 'Everything in professional plan, plus',
 				desc: `Achieve more ROI.`,
 				isNew: true,
@@ -102,7 +102,7 @@ export const plansAndProductsDetails = [
 						title: 'Hit your ambitious revenue goals',
 						featuresIncluded: [
 							'Send physical mail integration, and more,',
-							'Zapier, Hubspot and Salesforce integrations',
+							'Zapier and Hubspot integrations',
 							'Data/ CRM enrichments'
 						]
 					}

@@ -7,10 +7,10 @@ export const payMonthlyAndAnnualPlan = [
 			['Included users', '1', '1', '1'],
 			['Eligible for additional users', '-', '✓', '✓'],
 			[
-				'Included lookups/ user (monthly vs annual plan)',
-				'100 vs 1,400',
-				'240 vs 3,600',
-				'800 vs 12,000'
+				'Included lookups/ user (monthly or annual plan)',
+				'100 monthly or 1,200 yearly',
+				'250 monthly or 3,000 yearly',
+				'700 monthly or 8,400 yearly'
 			],
 			['Annual plan gets all the lookups unfront', '✓', '✓', '✓'],
 			['Easy billing', '✓', '✓', '✓'],
