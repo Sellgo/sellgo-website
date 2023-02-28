@@ -69,4 +69,33 @@ export const defaultPhoneCode = {
 	type: 'countryCode'
 };
 
+/* Employess size list on contact forms */
+export const monthlyCacList = [
+	{
+		label: 'Not currently spending',
+		value: '0'
+	},
+	{
+		label: 'Less than $50k',
+		value: '50-'
+	},
+	{
+		label: '$50k to $100k',
+		value: '50-100'
+	},
+	{
+		label: '$100k to $200k',
+		value: '100-200'
+	},
+	{
+		label: 'More than $200k',
+		value: '200+'
+	}
+];
+
+export const defaultMonthlyCac = {
+	label: '',
+	value: ''
+};
+
 export const limitDateForCustomerCount = '2021-11-10';

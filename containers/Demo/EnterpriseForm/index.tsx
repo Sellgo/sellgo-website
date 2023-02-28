@@ -283,10 +283,10 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 						<Close width={10} height={10} fill="#636d76" />
 					</button>
 					<form className={styles.demoPageForm} onSubmit={handleSubmit}>
-						<h2>Ready to own your market?</h2>
+						<h2>Scale leads in your outreach with Sellgo Enterprise</h2>
 						<p>
-							Sellgo is the most powerful e-comm leads intelligence solution on
-							earth to help you find, engage and close B2B deals with ease.
+							Leave a few details below and we&apos;ll connect you with a Sellgo
+							expert who can show you how Sellgo can help your business.
 						</p>
 						<div className={styles.inputControlWrapper}>
 							<FormInput
@@ -387,7 +387,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								${styles.formInput__long}
 							`}
 								label=""
-								placeholder="Monthly customer acquisition spend? in USD$*"
+								placeholder="Total customer acquisition cost/ mo (USD$)*"
 								id="totalOrders"
 								type="number"
 								name="totalOrders"

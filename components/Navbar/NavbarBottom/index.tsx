@@ -37,7 +37,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				<ul className={styles.navbarBottomLinksList}>
 					<li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
-							Products <Bottom width={10} height={8} fill="#fff" />
+							Solutions <Bottom width={10} height={8} fill="#fff" />
 						</a>
 						<ProductsNavbarExpansion
 							className={styles.expandedProductsNavbar}

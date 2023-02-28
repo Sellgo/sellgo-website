@@ -158,21 +158,3 @@
 	align-items: center;
 	font-size: $fontsize_12;
 }
-
-.brandsContainer {
-	margin-top: 15em;
-	text-align: center;
-
-	h2 {
-		color: $prim_dark_2;
-		text-align: center;
-		font-size: $fontsize_20;
-		font-weight: $fontweight_medium;
-		margin-bottom: 2em;
-	}
-
-	img {
-		padding: 0 5em;
-		max-width: 100%;
-	}
-}

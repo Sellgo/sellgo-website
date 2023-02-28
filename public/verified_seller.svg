@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="40.512" viewBox="0 0 50 40.512">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#00f0ff"/>
+    </linearGradient>
+  </defs>
+  <path id="user-check-solid_1_" data-name="user-check-solid (1)" d="M7.6,10.128A10.128,10.128,0,1,1,17.724,20.256,10.128,10.128,0,0,1,7.6,10.128ZM0,38.162A14.105,14.105,0,0,1,14.108,24.054H21.34A14.105,14.105,0,0,1,35.448,38.162a2.35,2.35,0,0,1-2.35,2.35H2.35A2.35,2.35,0,0,1,0,38.162ZM49.453,14.005,39.325,24.133a1.891,1.891,0,0,1-2.682,0l-5.064-5.064a1.9,1.9,0,0,1,2.682-2.682l3.719,3.719,8.783-8.791A1.9,1.9,0,0,1,49.445,14Z" fill="url(#linear-gradient)"/>
+</svg>

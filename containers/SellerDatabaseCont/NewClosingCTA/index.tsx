@@ -2,13 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
 import validator from 'validator';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
-import SellerListForm from '../../Demo/SellerListForm';
+import DemoForm from '../../Demo/DemoForm';
 import AppConfig from '../../../config';
 import FormInput from '../../../components/FormInput';
 import { encodeBase64 } from '../../../utils/Format';
@@ -85,11 +84,9 @@ const NewClosingCTASection = () => {
 							</div>
 							<button
 								className={styles.demoButton}
-								// onClick={() => setIsDemoFormOpen(true)}
+								onClick={() => setIsDemoFormOpen(true)}
 							>
-								<Link href="pricing?type=instant-download">
-									Instant download?
-								</Link>
+								Book a demo
 							</button>
 						</div>
 					</div>
@@ -102,7 +99,7 @@ const NewClosingCTASection = () => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
 			</Modal>
 		</section>
 	);

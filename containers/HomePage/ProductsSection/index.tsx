@@ -11,7 +11,7 @@ import { productsDetails } from './data';
 /* Components */
 import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
-import SellerListForm from '../../Demo/SellerListForm';
+import DemoForm from '../../Demo/DemoForm';
 
 /* Utils */
 import { createFreeTrialLink } from '../../../utils/Referral';
@@ -70,9 +70,7 @@ const ProductsSection: React.FC<Props> = () => {
 					className={styles.textButton}
 					onClick={() => setIsDemoFormOpen(true)}
 				>
-					<RainbowText type="orange_purple_gradient">
-						Need customized seller lists?
-					</RainbowText>
+					<RainbowText type="orange_purple_gradient">Book a demo</RainbowText>
 				</button>
 				{/* <h2 className={styles.agencyTitle}>Affiliate Partnership?</h2>
 				<p className={styles.agencyDetails}>
@@ -91,7 +89,7 @@ const ProductsSection: React.FC<Props> = () => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
 			</Modal>
 		</section>
 	);

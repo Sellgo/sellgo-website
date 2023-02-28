@@ -6,14 +6,20 @@ export const planTypes: PlanTypes[] = [
 	// 	name: 'Free Tools',
 	// 	isNew: false
 	// },
+	// {
+	// 	name: 'Instant Download Pricing',
+	// 	content: 'Get your most wanted data in seconds, no hassle.',
+	// 	img: 'instant-download.svg',
+	// 	isNew: false
+	// },
 	{
-		name: 'Instant Download Pricing',
+		name: 'Account-based Solution',
 		content: 'Get your most wanted data in seconds, no hassle.',
 		img: 'instant-download.svg',
 		isNew: false
 	},
 	{
-		name: 'Web App Subscription',
+		name: 'Usage-based Subscription',
 		content: 'Pay less on software, invest more in your business.',
 		img: 'chartnetworkIcon.svg',
 		isNew: false
@@ -23,8 +29,8 @@ export const planTypes: PlanTypes[] = [
 export const plansAndProductsDetails = [
 	{
 		planName: 'Monthly and Annual Web App Plans',
-		summary: `Invest On A Lead Tool That's Dependable, Powerful And
-    Can Scale Up Your Business With 7-Day Money Back Guarantee.`,
+		summary: `Invest on a lead tool that's dependable, powerful and
+    can scale up your business with a 7-day money back guarantee.`,
 
 		infoAlertMessage: {
 			monthly: {
@@ -70,14 +76,13 @@ export const plansAndProductsDetails = [
 				annualPrice: 1187,
 				featureSubName: 'Everything in starter plan, plus',
 				desc: `Find the best seller, faster.`,
-				isNew: true,
 				featuresLists: [
 					{
 						title: 'Turn leads into pipeline',
 						featuresIncluded: [
 							'Verified personal and other email(s),',
 							'Mobile and direct phone number(s),',
-							'Send physical mail integration, and more,'
+							'Social Media link/ username(s)*'
 						]
 					}
 				]
@@ -91,11 +96,12 @@ export const plansAndProductsDetails = [
 				annualPrice: 2987,
 				featureSubName: 'Everything in professional plan, plus',
 				desc: `Achieve more ROI.`,
+				isNew: true,
 				featuresLists: [
 					{
 						title: 'Hit your ambitious revenue goals',
 						featuresIncluded: [
-							'Social Media link/ username(s)*',
+							'Send physical mail integration, and more,',
 							'Zapier, Hubspot and Salesforce integrations',
 							'Data/ CRM enrichments'
 						]

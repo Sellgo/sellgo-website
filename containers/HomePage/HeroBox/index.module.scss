@@ -70,12 +70,25 @@
 }
 
 .tagline {
-	margin-top: 20px;
-	width: 400px;
+	margin-top: 0;
+	width: 600px;
 	font-size: $fontsize_20;
 	line-height: $fontlineheight_content_30;
-	font-weight: $fontweight_medium;
+	font-weight: $fontweight_semibold;
 	color: $black_0;
+
+	@media only screen and(max-width: 1080px) {
+		width: 100%;
+	}
+}
+
+.tagbenefit {
+	margin-top: 0;
+	width: 400px;
+	font-size: $fontsize_16;
+	line-height: $fontlineheight_content_20;
+	font-weight: $fontweight_medium;
+	color: $grey_8;
 
 	@media only screen and(max-width: 1080px) {
 		width: 100%;

@@ -5,11 +5,11 @@ import Link from 'next/link';
 import styles from './index.module.scss';
 
 /* Components */
-import Twitter from '../../Icons/SocialIcons/Twitter';
+// import Twitter from '../../Icons/SocialIcons/Twitter';
 import LinkedIn from '../../Icons/SocialIcons/LinkedIn';
 import Facebook from '../../Icons/SocialIcons/Facebook';
 import Instagram from '../../Icons/SocialIcons/Instagram';
-import Youtube from '../../Icons/SocialIcons/Youtube';
+// import Youtube from '../../Icons/SocialIcons/Youtube';
 
 interface Props {}
 
@@ -17,7 +17,7 @@ const BottomFooter: React.FC<Props> = () => {
 	return (
 		<div className={styles.bottomFooter}>
 			<ul className={styles.socialLinks}>
-				<li>
+				{/* <li>
 					<a
 						href="https://twitter.com/Sellgo3"
 						target="_blank"
@@ -25,7 +25,7 @@ const BottomFooter: React.FC<Props> = () => {
 					>
 						<Twitter width={15} height={20} fill="#fff" />
 					</a>
-				</li>
+				</li> */}
 
 				<li>
 					<a
@@ -57,7 +57,7 @@ const BottomFooter: React.FC<Props> = () => {
 					</a>
 				</li>
 
-				<li>
+				{/* <li>
 					<a
 						href="https://www.youtube.com/channel/UCPIKsoPjh4uyuU1LYi4WNNA"
 						target="_blank"
@@ -65,7 +65,7 @@ const BottomFooter: React.FC<Props> = () => {
 					>
 						<Youtube width={15} height={20} fill="#fff" />
 					</a>
-				</li>
+				</li> */}
 			</ul>
 
 			<ul className={styles.publicLinks}>

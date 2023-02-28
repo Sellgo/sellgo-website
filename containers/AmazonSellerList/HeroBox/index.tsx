@@ -49,7 +49,7 @@ const HeroBox = () => {
 						</button>
 					</div>
 
-					<h2 className={styles.subHeading}>TRUSTED BY 6,000+ BUSINESSES.</h2>
+					<h2 className={styles.subHeading}>TRUSTED BY 7,000+ BUSINESSES.</h2>
 					<img src="/brands1.png" width="100%" alt="brands" />
 				</div>
 			</div>

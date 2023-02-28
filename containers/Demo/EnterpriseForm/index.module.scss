@@ -6,7 +6,7 @@
 	z-index: 99999 !important;
 	background: $grey_0;
 	width: 100rem;
-	height: 77rem;
+	height: 80rem;
 	border-radius: 20px;
 	display: flex;
 	position: relative;
@@ -20,14 +20,17 @@
 		overflow-y: auto;
 	}
 
-	@media screen and (max-width: 480px) {
-		width: 35em;
+	@media only screen and(max-width: 480px) {
 		margin-left: 0;
+		height: 60rem;
+		width: 35rem;
+		border-radius: 7px;
+		overflow-y: auto;
 	}
 }
 
 .demoPageForm {
-	width: 100rem;
+	width: 43.5rem;
 	height: max-content;
 
 	h2 {
@@ -63,23 +66,12 @@
 	flex-wrap: wrap;
 }
 
-.checkboxDropdown {
-	width: 25rem;
-	margin-right: 18px;
-	margin-top: 10px;
-
-	@media only screen and(max-width: 1100px) {
-		width: 100%;
-		margin-bottom: 2rem;
-	}
-}
-
 .formInput {
-	width: 25rem;
+	width: 18rem;
 	margin-right: 18px;
 
 	&__long {
-		width: calc(50rem + 18px);
+		width: calc(36rem + 18px);
 	}
 
 	@media only screen and(max-width: 1100px) {
@@ -238,10 +230,8 @@
 }
 
 .submitButton {
-	cursor: pointer;
-	margin-top: 18px;
 	height: 4rem;
-	width: calc(50rem + 18px);
+	width: calc(36rem + 18px);
 	background: $orange_purple_gradient;
 	border: none;
 
@@ -263,7 +253,6 @@
 		color: $black_1;
 		font-weight: $fontweight_medium;
 		text-align: center;
-		padding-bottom: 2em;
 	}
 
 	/* Mobile view */

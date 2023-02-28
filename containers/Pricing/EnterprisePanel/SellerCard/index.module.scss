@@ -1,0 +1,257 @@
+@import '../../../../styles/guidelines';
+
+.productCard {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+	margin: 2rem 0;
+
+	.sampleButton {
+		justify-content: flex-start !important;
+		margin-top: 1em !important;
+	}
+	@media only screen and(max-width: 750px) {
+		flex-direction: column;
+		margin: 0 auto;
+	}
+
+	h2,
+	p {
+		margin-bottom: 1em;
+	}
+
+	p {
+		margin-top: 1em;
+	}
+
+	.left {
+		position: relative;
+	}
+
+	.titleNew {
+		position: absolute;
+		top: 7em;
+		background-color: #ffcc2f;
+		color: #323232;
+		font-size: 1.25rem;
+		font-weight: 500;
+		display: inline-block;
+		padding: 0.1em 0.8em;
+		border-radius: 1em;
+		margin-left: 1em;
+		overflow: hidden;
+	}
+
+	p,
+	div {
+		font-size: $fontsize_14;
+	}
+
+	.value {
+		font-weight: $fontweight_extrabold;
+	}
+
+	.buttonContainer {
+		display: flex;
+		gap: 2em;
+		margin-top: 1em;
+		align-items: center;
+	}
+
+	button {
+		cursor: pointer;
+		height: 4.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 7px;
+		font-size: $fontsize_16;
+		border: none;
+		margin: 0 !important;
+
+		&:disabled {
+			opacity: 0.5;
+			cursor: default;
+			pointer-events: none;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.primaryButton {
+		background: $orange_purple_gradient;
+		color: $prim_white;
+		font-weight: $fontweight_semibold;
+		width: 220px;
+
+		@media screen and (max-width: 480px) {
+			padding: 2em;
+		}
+	}
+
+	.secondaryButton {
+		color: $sellgo_purple !important;
+		background: #fff;
+	}
+
+	&__Text {
+		flex: 0 0 40%;
+
+		@media only screen and(max-width: 750px) {
+			order: 2;
+			text-align: center;
+			margin-top: 0;
+			max-width: 90%;
+		}
+
+		small {
+			text-transform: uppercase;
+			color: $grey_8;
+			font-size: $fontsize_14;
+			font-weight: $fontweight_bold;
+			letter-spacing: 1.5px;
+		}
+	}
+
+	.linkWrapper {
+		display: flex;
+		flex-direction: column;
+		margin: 2rem 0;
+
+		.multipleLink {
+			color: $sellgo_purple;
+			margin-bottom: 10px;
+			display: inline-block;
+			font-size: $fontsize_14;
+			font-weight: $fontweight_medium;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__Link {
+		color: $sellgo_purple;
+		display: inline-block;
+		margin: 2rem 0;
+		font-size: $fontsize_14;
+		font-weight: $fontweight_medium;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__Image {
+		flex: 0 0 45%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		order: 2;
+
+		@media screen and (max-width: 480px) {
+			padding: 1em;
+			overflow: hidden;
+			background: none;
+			width: 100%;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+.reversedText {
+	order: 2;
+}
+
+.stepperText {
+	flex: 0 0 55%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 50px;
+	border-radius: 20px;
+	order: 1;
+}
+
+.reversedImage {
+	order: 1;
+}
+
+.extensionCTA {
+	width: 20rem;
+	border: 1px solid $grey_3;
+	color: $prim_dark_2;
+	font-size: $fontsize_16;
+	font-weight: $fontweight_bold;
+}
+
+.formContainer {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-top: 2em;
+	gap: 1em;
+	height: 4em;
+
+	button {
+		height: 4rem;
+		background-color: #ffcc2f;
+		color: #1e1e1e;
+		font-weight: 600;
+		font-size: 1.25rem;
+		width: 22rem;
+
+		@media screen and (max-width: 480px) {
+			padding: 0 1em;
+		}
+	}
+}
+
+.formInput {
+	width: 22rem;
+
+	@media only screen and(max-width: 1100px) {
+		width: 100%;
+	}
+
+	label {
+		color: $prim_dark_2;
+		font-size: $fontsize_14;
+		font-weight: $fontweight_medium;
+		width: 100%;
+		display: none;
+	}
+
+	input {
+		width: 100%;
+		height: 4rem;
+		background: $prim_white;
+		border: 1px solid $second_silver;
+		border-radius: 3px;
+		color: $prim_dark_2;
+		font-size: $fontsize_14;
+		font-family: inherit;
+		padding: 0 1rem;
+		&:focus {
+			outline: 0;
+		}
+
+		&__error {
+			border: 1px solid $system_red;
+		}
+	}
+
+	small {
+		font-size: $fontsize_12;
+		color: $system_red;
+		text-transform: capitalize;
+		letter-spacing: inherit;
+	}
+}
