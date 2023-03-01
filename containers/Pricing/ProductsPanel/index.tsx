@@ -10,8 +10,7 @@ import styles from './index.module.scss';
 /* Conatiners */
 import PricingPlansSection from '../PricingPlansSection';
 import FAQSection from '../FAQSection';
-import InstantDownloadPanel from '../InstantDownloadPanel';
-import TestimonialsSection from '../TestimonialSection';
+import EnterprisePanel from '../EnterprisePanel';
 
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
@@ -116,10 +115,6 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					</TabList>
 				</div>
 
-				<TabPanel key={uuid()}>
-					<InstantDownloadPanel />
-				</TabPanel>
-
 				{/* HIDING-PRIVATE-LABEL */}
 				{/* <TabPanel>
 					<PrivateLabelOneDollar />
@@ -137,15 +132,11 @@ const ProductsPanel: React.FC<Props> = (props) => {
 						</TabPanel>
 					);
 				})}
+
+				<TabPanel key={uuid()}>
+					<EnterprisePanel />
+				</TabPanel>
 			</Tabs>
-
-			<TestimonialsSection />
-
-			<div className={styles.brandsContainer}>
-				<h2>Trusted by 7,000+ businesses.</h2>
-				{/* <img src="/brands.png" alt="brands" /> */}
-				<img src="/brands1.png" alt="brands" />
-			</div>
 
 			{/* FAQ Section */}
 			<FAQSection faqData={productsPanelFaqList[selectedPlanType].data} />

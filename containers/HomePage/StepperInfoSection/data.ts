@@ -49,41 +49,6 @@ export const privateLabelFeatures: StepDetail[] = [
 		imageUrl: '/extensionSection.png'
 	},
 	{
-		title: 'Search Management',
-		icon: 'searchManagement',
-		subTitle: 'Streamline Your Amazon Wholesale Business',
-		description: `Obtain all the tools you need to scout, source, and sell profitable, 
-		high-demand products for your Amazon inventory. 
-		Use Sellgo's reliable data and sales analytics to build a 
-		thriving Amazon wholesale business.`,
-		linkLabel: 'Learn more ',
-		navigateTo: '/search-management',
-		imageUrl: '/extensionSection.png'
-	},
-	{
-		title: 'Profit Finder',
-		icon: 'profitFinder',
-		subTitle: 'Calculate Bulk Profit On The Fly',
-		description: `The Profit Finder calculates your profit for each product based on 
-		supplier price. It compares all of the products in Amazon's database to identify brands
-		and the fast turnover, high profit items to sell on Amazon. We love it, you'll love it,
-		and your supplier will love it too!`,
-		linkLabel: 'Learn more ',
-		navigateTo: '/profit-finder',
-		imageUrl: '/extensionSection.png'
-	},
-	{
-		title: 'Leads Tracker',
-		icon: 'leadsTracker',
-		subTitle: 'Better than Daily Profit Calculators',
-		description: `Avoid too many Spreadsheets while monitoring wholesale products.
-		Run the Leads Tracker to daily monitoring your wholesale bulk products in the background,
-		and get alert when something becomes profitable.`,
-		linkLabel: 'Learn more ',
-		navigateTo: '/leads-tracker',
-		imageUrl: '/extensionSection.png'
-	},
-	{
 		title: 'Seller Finder',
 		icon: 'sellerFinder',
 		subTitle: 'Track Top FBA Competitors and Best Sellers',

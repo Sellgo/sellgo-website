@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93" height="70" viewBox="0 0 93 70">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#00f0ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_6876" data-name="Group 6876" transform="translate(21623 -15338)">
+    <path id="phone-solid_1_" data-name="phone-solid (1)" d="M17.713,2.622A4.283,4.283,0,0,0,12.622.13L3.169,2.708A4.309,4.309,0,0,0,0,6.855,48.126,48.126,0,0,0,48.123,54.977a4.309,4.309,0,0,0,4.146-3.169l2.578-9.453a4.283,4.283,0,0,0-2.492-5.092l-10.312-4.3a4.283,4.283,0,0,0-4.973,1.246l-4.34,5.3A36.3,36.3,0,0,1,15.468,22.247l5.3-4.329a4.287,4.287,0,0,0,1.246-4.973l-4.3-10.312Z" transform="translate(-21623 15338.022)" fill="url(#linear-gradient)"/>
+    <path id="badge-check-solid_1_" data-name="badge-check-solid (1)" d="M15,0a5.625,5.625,0,0,1,4.975,2.994,5.627,5.627,0,0,1,7.031,7.031,5.63,5.63,0,0,1,0,9.949,5.627,5.627,0,0,1-7.031,7.031,5.63,5.63,0,0,1-9.949,0,5.627,5.627,0,0,1-7.031-7.031,5.63,5.63,0,0,1,0-9.949,5.627,5.627,0,0,1,7.031-7.031A5.625,5.625,0,0,1,15,0Zm6.621,12.246a1.4,1.4,0,0,0-1.986-1.986l-6.5,6.5L10.377,14.01A1.4,1.4,0,1,0,8.391,16l3.75,3.75a1.4,1.4,0,0,0,1.986,0Z" transform="translate(-21560 15378)" fill="#3cf7af"/>
+  </g>
+</svg>

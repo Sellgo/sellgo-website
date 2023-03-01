@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="39" viewBox="0 0 42 39">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#00f0ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_6864" data-name="Group 6864" transform="translate(21715 -15280)">
+    <path id="briefcase-solid_1_" data-name="briefcase-solid (1)" d="M13.417,3.5h10.5a.585.585,0,0,1,.583.583V7H12.833V4.083A.585.585,0,0,1,13.417,3.5Zm-4.083.583V7H4.667A4.671,4.671,0,0,0,0,11.667v7H37.333v-7A4.671,4.671,0,0,0,32.667,7H28V4.083A4.086,4.086,0,0,0,23.917,0h-10.5A4.086,4.086,0,0,0,9.333,4.083ZM37.333,21h-14v2.333A2.331,2.331,0,0,1,21,25.667H16.333A2.331,2.331,0,0,1,14,23.333V21H0v9.333A4.671,4.671,0,0,0,4.667,35h28a4.671,4.671,0,0,0,4.667-4.667Z" transform="translate(-21715 15280)" fill="url(#linear-gradient)"/>
+    <path id="badge-check-solid_1_" data-name="badge-check-solid (1)" d="M7.5,0A2.813,2.813,0,0,1,9.987,1.5,2.814,2.814,0,0,1,13.5,5.013a2.815,2.815,0,0,1,0,4.975A2.814,2.814,0,0,1,9.987,13.5a2.815,2.815,0,0,1-4.975,0A2.814,2.814,0,0,1,1.5,9.987a2.815,2.815,0,0,1,0-4.975A2.814,2.814,0,0,1,5.013,1.5,2.813,2.813,0,0,1,7.5,0Zm3.311,6.123a.7.7,0,0,0-.993-.993L6.565,8.382,5.188,7A.7.7,0,0,0,4.2,8L6.07,9.873a.7.7,0,0,0,.993,0Z" transform="translate(-21688 15304)" fill="#f9f9fa"/>
+  </g>
+</svg>

@@ -18,7 +18,7 @@ const HeroBox: React.FC<Props> = () => {
 			</p>
 			<div className={styles.buttonsRow}>
 				<CTAButton
-					navigateTo="/pricing?type=monthly-and-annual-plans"
+					navigateTo="/pricing?type=usage-based-plans"
 					type="primary"
 					size="medium"
 					variant="rainbow"
@@ -27,7 +27,7 @@ const HeroBox: React.FC<Props> = () => {
 					Get started
 				</CTAButton>
 				<CTAButton
-					navigateTo="/pricing?type=monthly-and-annual-plans"
+					navigateTo="/pricing?type=usage-based-plans"
 					type="secondary"
 					size="medium"
 					variant="rainbow"

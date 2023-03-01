@@ -6,7 +6,6 @@ import axios from 'axios';
 import HeroBox from '../../containers/Pricing/HeroBox';
 import ProductsPanel from '../../containers/Pricing/ProductsPanel';
 import BundlesPanel from '../../containers/Pricing/BundlesPanel';
-import NewClosingCTASection from '../../containers/HomePage/NewClosingCTA';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';
@@ -55,7 +54,6 @@ const PricingPage: React.FC<Props> = (props) => {
 			) : (
 				<BundlesPanel />
 			)}
-			<NewClosingCTASection />
 		</main>
 	);
 };

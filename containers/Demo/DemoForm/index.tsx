@@ -4,7 +4,6 @@ import Image from 'next/image';
 import axios from 'axios';
 import Select from 'react-select';
 import Modal from 'react-modal';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -284,10 +283,10 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 						<Close width={10} height={10} fill="#636d76" />
 					</button>
 					<form className={styles.demoPageForm} onSubmit={handleSubmit}>
-						<h2>See how Sellgo can work for you</h2>
+						<h2>Ready to own your market?</h2>
 						<p>
-							Leave a few details below and we&apos;ll connect you with a Sellgo
-							expert who can show you how Sellgo can help your business.
+							Sellgo is the most powerful e-comm leads intelligence solution on
+							earth to help you find, engage and close B2B deals with ease.
 						</p>
 						<div className={styles.inputControlWrapper}>
 							<FormInput
@@ -388,7 +387,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								${styles.formInput__long}
 							`}
 								label=""
-								placeholder="Total Employee*"
+								placeholder="Monthly customer acquisition spend? in USD$*"
 								id="totalOrders"
 								type="number"
 								name="totalOrders"
@@ -397,7 +396,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								autoComplete="off"
 								required
 								hasError={totalOrdersErr}
-								errorMessage="Please enter valid URL"
+								errorMessage="Please enter in USD numbers"
 							/>
 						</div>
 						<FormInput
@@ -425,7 +424,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 						>
 							Submit
 						</button>
-						<p className={styles.terms}>
+						{/* <p className={styles.terms}>
 							By subscribing, you agree to receive recurring automated marketing
 							text messages (e.g. cart reminders, promotional offers) from
 							Sellgo at the phone number provided on the subscription form.
@@ -440,7 +439,7 @@ const DemoForm: React.FC<Props> = (props: Props) => {
 								<a> Terms of Use. </a>
 							</Link>
 							By clicking submit, you agree to our Terms of Service.
-						</p>
+						</p> */}
 					</form>
 					<div className={styles.existingBrands}>
 						<div className={styles.socialProofIcons}>

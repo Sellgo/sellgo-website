@@ -14,6 +14,7 @@ import AllfeaturesTable from '../../../components/AllFeaturesTable';
 import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
 // import ContactInfo from '../../../components/ContactInfo';
 import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
+import TestimonialsSection from '../TestimonialSection';
 
 /* Constants */
 import { getAllFeaturesForPlans } from '../../../data/Pricing';
@@ -154,6 +155,13 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					</Modal>
 				</section>
 			)}
+			<TestimonialsSection />
+
+			<div className={styles.brandsContainer}>
+				<h2>Trusted by 7,000+ businesses.</h2>
+				{/* <img src="/brands.png" alt="brands" /> */}
+				<img src="/brands1.png" alt="brands" />
+			</div>
 		</>
 	);
 };

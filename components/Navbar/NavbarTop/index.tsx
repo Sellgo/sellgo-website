@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import styles from './index.module.scss';
 
 /* Components */
-import SellerListForm from '../../../containers/Demo/SellerListForm';
+import DemoForm from '../../../containers/Demo/DemoForm';
 
 interface Props {}
 
@@ -31,7 +31,7 @@ const NavbarTop: React.FC<Props> = () => {
 								onClick={() => setIsDemoFormOpen(true)}
 								className={styles.demoButton}
 							>
-								Need customized seller lists?
+								Book a demo
 							</button>
 						</li>
 					</ul>
@@ -44,7 +44,7 @@ const NavbarTop: React.FC<Props> = () => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
 			</Modal>
 		</div>
 	);

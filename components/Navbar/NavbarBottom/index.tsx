@@ -37,7 +37,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				<ul className={styles.navbarBottomLinksList}>
 					<li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
-							Products <Bottom width={10} height={8} fill="#fff" />
+							Solutions <Bottom width={10} height={8} fill="#fff" />
 						</a>
 						<ProductsNavbarExpansion
 							className={styles.expandedProductsNavbar}
@@ -48,7 +48,7 @@ const NavbarBottom: React.FC<Props> = () => {
 						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
 					>
 						<Link
-							href="/pricing?type=monthly-and-annual-plans"
+							href="/pricing?type=usage-based-plans"
 							passHref
 							prefetch={false}
 						>
