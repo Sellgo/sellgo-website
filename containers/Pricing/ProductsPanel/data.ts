@@ -101,8 +101,8 @@ export const plansAndProductsDetails = [
 					{
 						title: 'Hit your ambitious revenue goals',
 						featuresIncluded: [
-							'Send physical mail integration, and more,',
-							'Zapier and Hubspot integrations',
+							'Advanced buying intents,',
+							'Zapier and Hubspot integrations,',
 							'Data/ CRM enrichments'
 						]
 					}
