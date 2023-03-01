@@ -50,7 +50,13 @@ const options = [
 
 	{
 		title: 'Demo',
-		content: [{ id: uuid(), name: 'Book a demo' }]
+		content: [
+			{
+				id: uuid(),
+				name: 'Book a demo',
+				to: '/pricing?type=account-based-plans'
+			}
+		]
 	}
 ];
 
