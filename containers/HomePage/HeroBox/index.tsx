@@ -113,15 +113,14 @@ const HeroBox = () => {
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						Within seconds, Sellgo can provide access to the email addresses of
-						Amazon sellers.
+						Within seconds, Sellgo can reveal access to Amazon seller:
 					</p>
 					<p className={`${styles.tagbenefit}`}>
 						<br />
-						- Unique buying intent
+						- verified email addresses
 						<br />
-						- Higher closing rate
-						<br />- Lower customer acquisition cost
+						- verified direct phone numbers
+						<br />- verified social media links
 					</p>
 
 					<div className={styles.ctaBox}>
