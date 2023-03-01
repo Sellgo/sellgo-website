@@ -13,7 +13,7 @@ const InstantDownloadPanel = () => {
 	return (
 		<section id="account-based-plans" className={`${styles.heroboxWrapper}`}>
 			<div className={`page-container ${styles.herobox}`}>
-				<h2 className={styles.heading}>Get your unlimited leads</h2>
+				<h2 className={styles.heading}>Need unlimited enterprise plan?</h2>
 
 				<p className={styles.tagline}>
 					By utilizing data-driven solutions that connect your business to
