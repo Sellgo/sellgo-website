@@ -53,7 +53,7 @@ export const plansAndProductsDetails = [
 				productsDatabase: 0,
 				salesEstimateCount: 1000,
 				monthlyPrice: 77,
-				annualPrice: 687,
+				annualPrice: 467,
 				desc: `Accelerate your seller research process.`,
 				featureSubName: 'Start with',
 				featuresLists: [
@@ -73,7 +73,7 @@ export const plansAndProductsDetails = [
 				productsDatabase: 0,
 				salesEstimateCount: 2000,
 				monthlyPrice: 147,
-				annualPrice: 1287,
+				annualPrice: 1187,
 				featureSubName: 'Everything in starter plan, plus',
 				desc: `Find the best seller, faster.`,
 				featuresLists: [
@@ -93,7 +93,7 @@ export const plansAndProductsDetails = [
 				productsDatabase: 0,
 				salesEstimateCount: 3000,
 				monthlyPrice: 347,
-				annualPrice: 2967,
+				annualPrice: 2987,
 				featureSubName: 'Everything in professional plan, plus',
 				desc: `Achieve more ROI.`,
 				isNew: true,
