@@ -2,14 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
 import validator from 'validator';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import RainbowText from '../../../components/RainbowText';
-import SellerListForm from '../../Demo/SellerListForm';
+import DemoForm from '../../Demo/DemoForm';
 import FormInput from '../../../components/FormInput';
 
 /* Utils */
@@ -19,11 +18,13 @@ import { encodeBase64 } from '../../../utils/Format';
 
 const HeroBox = () => {
 	const textList = [
-		'e-comm agencies.',
-		'e-comm aggregators.',
-		'product influencers.',
-		'logistic businesses.',
-		'software companies.'
+		'B2B agencies.',
+		'Saas companies.',
+		'aggregators.',
+		'marketing services.',
+		'outreach services.',
+		'ads services.',
+		'content creators.'
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
@@ -112,11 +113,17 @@ const HeroBox = () => {
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						Get the Amazon sellers B2B data and software you need to connect
-						with
-						<br />
-						and close your most valuable customers - all-in-one seller research.
+						Within seconds, Sellgo can provide access to the email addresses of
+						Amazon sellers.
 					</p>
+					<p className={`${styles.tagbenefit}`}>
+						<br />
+						- Unique buying intent
+						<br />
+						- Higher closing rate
+						<br />- Lower customer acquisition cost
+					</p>
+
 					<div className={styles.ctaBox}>
 						<div className={styles.emailSignupBox}>
 							<FormInput
@@ -143,10 +150,11 @@ const HeroBox = () => {
 								Free forever. No credit card required. Instant access.
 							</span>
 						</div>
-						<button className={styles.demoButton}>
-							<Link href="pricing?type=instant-download">
-								Instant download?
-							</Link>
+						<button
+							className={styles.demoButton}
+							onClick={() => setIsDemoFormOpen(true)}
+						>
+							Book a demo
 						</button>
 					</div>
 				</div>
@@ -173,7 +181,7 @@ const HeroBox = () => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
 			</Modal>
 		</section>
 	);

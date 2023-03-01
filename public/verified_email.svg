@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="103" height="67.75" viewBox="0 0 103 67.75">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff61df"/>
+      <stop offset="1" stop-color="#00f0ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_6875" data-name="Group 6875" transform="translate(21818 -15333.25)">
+    <path id="envelope-solid_1_" data-name="envelope-solid (1)" d="M6.563,64A6.562,6.562,0,0,0,2.625,75.812l29.75,22.313a4.389,4.389,0,0,0,5.25,0l29.75-22.312A6.563,6.563,0,0,0,63.438,64ZM0,79.312V107.75a8.758,8.758,0,0,0,8.75,8.75h52.5A8.758,8.758,0,0,0,70,107.75V79.312L40.25,101.625a8.736,8.736,0,0,1-10.5,0Z" transform="translate(-21818 15269.25)" fill="url(#linear-gradient)"/>
+    <path id="badge-check-solid_1_" data-name="badge-check-solid (1)" d="M15,0a5.625,5.625,0,0,1,4.975,2.994,5.627,5.627,0,0,1,7.031,7.031,5.63,5.63,0,0,1,0,9.949,5.627,5.627,0,0,1-7.031,7.031,5.63,5.63,0,0,1-9.949,0,5.627,5.627,0,0,1-7.031-7.031,5.63,5.63,0,0,1,0-9.949,5.627,5.627,0,0,1,7.031-7.031A5.625,5.625,0,0,1,15,0Zm6.621,12.246a1.4,1.4,0,0,0-1.986-1.986l-6.5,6.5L10.377,14.01A1.4,1.4,0,1,0,8.391,16l3.75,3.75a1.4,1.4,0,0,0,1.986,0Z" transform="translate(-21745 15371)" fill="#3cf7af"/>
+  </g>
+</svg>

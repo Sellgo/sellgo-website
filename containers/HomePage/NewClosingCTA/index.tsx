@@ -1,14 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
 import CTAButton from '../../../components/CTAButton';
-import SellerListForm from '../../Demo/SellerListForm';
+import DemoForm from '../../Demo/DemoForm';
 import { createFreeTrialLink } from '../../../utils/Referral';
 
 const NewClosingCTASection = () => {
@@ -20,13 +19,14 @@ const NewClosingCTASection = () => {
 				<div className={styles.closingCTABox}>
 					<div className={styles.closingCTABox__left}>
 						<h2>
-							Ready to &nbsp;
-							<Image src="/own.png" width={62} height={47} alt="own" />
-							&nbsp; your market?
+							Reach &nbsp;
+							<Image src="/every.png" width={62} height={47} alt="every" />
+							&nbsp; buyer on the planet
 						</h2>
 						<p>
-							Get seller data that revenue teams rely on to deliver business
-							growth.
+							Search, engage, and close deals with leads intelligence of
+							<br />
+							Sellgo 30+ million verified Amazon seller decision makers.
 						</p>
 
 						<div className={styles.ctaRow}>
@@ -43,11 +43,9 @@ const NewClosingCTASection = () => {
 							</CTAButton>
 							<button
 								className={styles.demoButton}
-								// onClick={() => setIsDemoFormOpen(true)}
+								onClick={() => setIsDemoFormOpen(true)}
 							>
-								<Link href="pricing?type=instant-download">
-									Instant download?
-								</Link>
+								Book a demo
 							</button>
 						</div>
 						<span>Free forever. No credit card required. Instant access.</span>
@@ -61,7 +59,7 @@ const NewClosingCTASection = () => {
 				className="modal"
 				overlayClassName="modalOverlay"
 			>
-				<SellerListForm onRequestClose={() => setIsDemoFormOpen(false)} />
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
 			</Modal>
 		</section>
 	);

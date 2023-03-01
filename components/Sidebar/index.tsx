@@ -22,38 +22,35 @@ const options = [
 		title: 'Products',
 		content: [
 			{ id: uuid(), name: 'Extension', to: '/extension' },
-			{ id: uuid(), name: 'Search Management', to: '/search-management' },
-			{ id: uuid(), name: 'Profit Finder', to: '/profit-finder' },
-			{ id: uuid(), name: 'Leads Tracker', to: '/leads-tracker' },
 			{ id: uuid(), name: 'Seller Database', to: '/seller-database' },
 			{ id: uuid(), name: 'Seller Finder', to: '/seller-finder' },
-			{ id: uuid(), name: 'Seller Map', to: '/seller-map' },
-			{ id: uuid(), name: 'Keyword Finder', to: '/keyword-finder' },
-			{ id: uuid(), name: 'Keyword Database', to: '/keyword-database' },
-			{ id: uuid(), name: 'Product Rank Tracker', to: '/product-rank-tracker' }
+			{ id: uuid(), name: 'Seller Map', to: '/seller-map' }
 		]
 	},
 
 	{
 		title: 'Pricing',
-		content: [{ id: uuid(), name: 'Monthly and annual plans', to: '/pricing' }]
+		content: [
+			{
+				id: uuid(),
+				name: 'Usage-based plans',
+				to: '/pricing?type=usage-based-plans'
+			},
+			{
+				id: uuid(),
+				name: 'Account-based plans',
+				to: '/pricing?type=account-based-plans'
+			}
+		]
 	},
 	{
 		title: 'Resources',
-		content: [
-			{ id: uuid(), name: 'Blogs', to: '/blogs' },
-			{ id: uuid(), name: 'Sales Estimator', to: '/sales-estimator' },
-			{ id: uuid(), name: 'Partnership Program', to: '/partnership-program' }
-		]
+		content: [{ id: uuid(), name: 'Blogs', to: '/blogs' }]
 	},
 
 	{
-		title: 'Support',
-		content: [
-			{ id: uuid(), name: 'Contact Us', to: '/contact' },
-			{ id: uuid(), name: 'Request Free Demo' },
-			{ id: uuid(), name: 'About Us', to: '/about-us' }
-		]
+		title: 'Demo',
+		content: [{ id: uuid(), name: 'Book a demo' }]
 	}
 ];
 

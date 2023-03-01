@@ -73,13 +73,13 @@ const TopFooter: React.FC<Props> = () => {
 			<ul className={styles.footerNavigation}>
 				<li className="footerNavigationLinks">Pricing</li>
 				<li className="footerNavigationLinks">
-					<Link href="/pricing?type=monthly-and-annual-plans" passHref>
+					<Link href="/pricing?type=usage-based-plans" passHref>
 						<a>Monthly and annual plans</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
-					<Link href="/pricing?type=instant-download" passHref>
-						<a>Instant download data plan</a>
+					<Link href="/pricing?type=account-based-plans" passHref>
+						<a>Enterprise plan</a>
 					</Link>
 				</li>
 			</ul>

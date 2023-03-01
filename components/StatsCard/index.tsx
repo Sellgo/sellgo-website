@@ -22,8 +22,8 @@ const StatsCard: React.FC<Props> = (props) => {
 			<Image
 				src={iconImageLink}
 				alt={`${statsCount}+ ${statsLabel}`}
-				width={35}
-				height={35}
+				width={50}
+				height={50}
 			/>
 			<h3 className={styles.statsCount}>
 				{statsCount} <span>+</span>

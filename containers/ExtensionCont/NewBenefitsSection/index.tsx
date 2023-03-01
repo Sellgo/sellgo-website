@@ -42,7 +42,7 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					type="secondary"
 					size="productPageSmall"
 					variant="rainbow"
-					navigateTo="/pricing?type=monthly-and-annual-plans"
+					navigateTo="/pricing?type=usage-based-plans"
 					className={styles.newBenefitsCTA}
 				>
 					Get started today
