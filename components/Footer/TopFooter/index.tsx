@@ -74,12 +74,12 @@ const TopFooter: React.FC<Props> = () => {
 				<li className="footerNavigationLinks">Pricing</li>
 				<li className="footerNavigationLinks">
 					<Link href="/pricing?type=usage-based-plans" passHref>
-						<a>Monthly and annual plans</a>
+						<a>Usage-based subscription</a>
 					</Link>
 				</li>
 				<li className="footerNavigationLinks">
 					<Link href="/pricing?type=account-based-plans" passHref>
-						<a>Enterprise plan</a>
+						<a>Account-based solution</a>
 					</Link>
 				</li>
 			</ul>
