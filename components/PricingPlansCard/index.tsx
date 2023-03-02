@@ -19,6 +19,9 @@ interface Props {
 	featureSubName: string;
 	featuresLists: any;
 	isNew?: boolean;
+	isFree?: boolean;
+	isEnterprise?: boolean;
+	isUsage?: boolean;
 
 	// plan details
 	isMonthly: boolean;
@@ -34,7 +37,10 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 		desc,
 		featureSubName,
 		featuresLists,
-		isMonthly
+		isMonthly,
+		isFree,
+		isEnterprise,
+		isUsage
 	} = props;
 
 	return (
@@ -59,6 +65,9 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 					// plan details
 					isMonthly={isMonthly}
 					setIsMonthly={setIsMonthly}
+					isFree={isFree}
+					isEnterprise={isEnterprise}
+					isUsage={isUsage}
 				/>
 
 				<p className={styles.planType}>{featureSubName}</p>
@@ -76,7 +85,10 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 };
 
 PricingPlansCard.defaultProps = {
-	isNew: false
+	isNew: false,
+	isFree: false,
+	isEnterprise: false,
+	isUsage: false
 };
 
 export default PricingPlansCard;

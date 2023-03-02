@@ -175,3 +175,32 @@
 		left: 10px;
 	}
 }
+
+.talkToExpertContainer {
+	text-align: center;
+
+	h1 {
+		color: #2e3b4a;
+		font-size: $fontsize_16;
+		font-weight: $fontweight_medium;
+	}
+
+	p {
+		color: $grey_8;
+		font-size: $fontsize_16;
+		font-weight: $fontweight_semibold;
+	}
+
+	button {
+		background-color: #000;
+		font-size: $fontsize_16;
+		font-weight: $fontweight_semibold;
+		color: #fff;
+		border: none;
+		margin-top: 1.5em;
+		width: 16em;
+		height: 2.5em;
+		border-radius: 7px;
+		cursor: pointer;
+	}
+}

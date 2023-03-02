@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 import { Element } from 'react-scroll';
-import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
 
 /* Components */
-import DemoForm from '../../Demo/DemoForm';
 import PricingPlansCard from '../../../components/PricingPlansCard';
 import AllfeaturesTable from '../../../components/AllFeaturesTable';
 import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
@@ -36,7 +34,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 	} = props;
 
 	const [isMonthly, setIsMonthly] = useState(false);
-	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 
 	/* Get all features based on plan names */
 	const allPlanFeatures = getAllFeaturesForPlans(planName);
@@ -81,6 +78,9 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							key={uuid()}
 							name={product.name}
 							isNew={product.isNew}
+							isUsage={product.isUsage}
+							isFree={product.isFree}
+							isEnterprise={product.isEnterprise}
 							monthlyPrice={product.monthlyPrice}
 							annualPrice={product.annualPrice}
 							desc={product.desc}
@@ -122,6 +122,9 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 										annualPrice={product.annualPrice}
 										desc={product.desc}
 										isNew={product.isNew}
+										isUsage={product.isUsage}
+										isFree={product.isFree}
+										isEnterprise={product.isEnterprise}
 										// plan details
 										isMonthly={isMonthly}
 										// optional props for comparision table cards
@@ -134,25 +137,6 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							);
 						})}
 					</div>
-
-					<div className={styles.talkToExpertContainer}>
-						<h1>
-							Need everything unlimited with an enterprise account-based plan?
-						</h1>
-						<p></p>
-
-						<button onClick={() => setIsDemoFormOpen(true)}>
-							Talk to an expert
-						</button>
-					</div>
-					<Modal
-						isOpen={isDemoFormOpen}
-						onRequestClose={() => setIsDemoFormOpen(false)}
-						className="modal"
-						overlayClassName="modalOverlay"
-					>
-						<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
-					</Modal>
 				</section>
 			)}
 			<TestimonialsSection />

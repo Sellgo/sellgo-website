@@ -55,6 +55,9 @@ export const plansAndProductsDetails = [
 				annualPrice: 0,
 				desc: `Test drive it`,
 				featureSubName: 'Free includes:',
+				isFree: true,
+				isEnterprise: false,
+				isUsage: false,
 				featuresLists: [
 					{
 						title: '',
@@ -75,6 +78,9 @@ export const plansAndProductsDetails = [
 				annualPrice: 467,
 				desc: `Essential for finding your prospects`,
 				featureSubName: 'Everything in Free, plus',
+				isFree: false,
+				isEnterprise: false,
+				isUsage: true,
 				featuresLists: [
 					{
 						title: '',
@@ -97,6 +103,9 @@ export const plansAndProductsDetails = [
 				desc: `Perfect for small teams with simple workflows`,
 				featureSubName: 'Everything in Pro, plus:',
 				isNew: true,
+				isFree: false,
+				isEnterprise: false,
+				isUsage: true,
 				featuresLists: [
 					{
 						title: '',
@@ -119,6 +128,9 @@ export const plansAndProductsDetails = [
 				annualPrice: 0,
 				desc: `Ideal for prospecting at large scales`,
 				featureSubName: 'Everything in Premium, plus:',
+				isFree: false,
+				isEnterprise: true,
+				isUsage: false,
 				featuresLists: [
 					{
 						title: '',
