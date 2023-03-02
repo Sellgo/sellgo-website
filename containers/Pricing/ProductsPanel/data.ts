@@ -28,9 +28,8 @@ export const planTypes: PlanTypes[] = [
 
 export const plansAndProductsDetails = [
 	{
-		planName: 'Monthly and Annual Web App Plans',
-		summary: `Invest on a lead tool that's dependable, powerful and
-    can scale up your business with a 7-day money back guarantee.`,
+		planName: '"Sellgo pays for itself 10x over"',
+		summary: `Reach millions of Amazon seller decision makers and their teams`,
 
 		infoAlertMessage: {
 			monthly: {
@@ -48,20 +47,41 @@ export const plansAndProductsDetails = [
 		},
 		productsIncluded: [
 			{
+				id: 5, // subscriptionID if needed
+				name: 'Free',
+				productsDatabase: 0,
+				salesEstimateCount: 1000,
+				monthlyPrice: 0,
+				annualPrice: 0,
+				desc: `Test drive it`,
+				featureSubName: 'Free includes:',
+				featuresLists: [
+					{
+						title: '',
+						featuresIncluded: [
+							'Verified emails',
+							'Verified mobile and direct phones',
+							'Verified social media links'
+						]
+					}
+				]
+			},
+			{
 				id: 6, // subscriptionID if needed
-				name: 'Starter',
+				name: 'Pro',
 				productsDatabase: 0,
 				salesEstimateCount: 1000,
 				monthlyPrice: 77,
 				annualPrice: 467,
-				desc: `Accelerate your seller research process.`,
-				featureSubName: 'Start with',
+				desc: `Essential for finding your prospects`,
+				featureSubName: 'Everything in Free, plus',
 				featuresLists: [
 					{
-						title: 'Own your market',
+						title: '',
 						featuresIncluded: [
-							'Verified professional email(s)',
-							'Basic seller insights',
+							'Contact management',
+							'Bulk export',
+							'Basic CRM integration',
 							'Seller map access'
 						]
 					}
@@ -69,41 +89,50 @@ export const plansAndProductsDetails = [
 			},
 			{
 				id: 1,
-				name: 'Professional',
+				name: 'Premium',
 				productsDatabase: 0,
 				salesEstimateCount: 2000,
-				monthlyPrice: 147,
-				annualPrice: 1187,
-				featureSubName: 'Everything in starter plan, plus',
-				desc: `Find the best seller, faster.`,
+				monthlyPrice: 347,
+				annualPrice: 2987,
+				desc: `Perfect for small teams with simple workflows`,
+				featureSubName: 'Everything in Pro, plus:',
+				isNew: true,
 				featuresLists: [
 					{
-						title: 'Turn leads into pipeline',
+						title: '',
 						featuresIncluded: [
-							'Verified personal and other email(s),',
-							'Mobile and direct phone number(s),',
-							'Social media link/ username(s)*'
+							'Advanced prospecting filter,',
+							'Bulk prospecting,',
+							'Advanced decision maker data,',
+							'Advanced company data',
+							'Bulk prospecting (25 contacts)'
 						]
 					}
 				]
 			},
 			{
-				id: 2,
-				name: 'Elite',
+				id: 3,
+				name: 'Scale',
 				productsDatabase: 0,
 				salesEstimateCount: 3000,
-				monthlyPrice: 347,
-				annualPrice: 2987,
-				featureSubName: 'Everything in professional plan, plus',
-				desc: `Achieve more ROI.`,
-				isNew: true,
+				monthlyPrice: 0,
+				annualPrice: 0,
+				desc: `Ideal for prospecting at large scales`,
+				featureSubName: 'Everything in Premium, plus:',
 				featuresLists: [
 					{
-						title: 'Hit your ambitious revenue goals',
+						title: '',
 						featuresIncluded: [
-							'Advanced buying intents,',
-							'Zapier and Hubspot integrations,',
-							'Data/ CRM enrichments'
+							'CSV enrichment',
+							'Bulk prospecting (1,000 contacts)',
+							'Advanced CRM integration',
+							'Buying intent signals',
+							'Buying intent alerts',
+							'Salesforce data enrichment',
+							'Sellgo API',
+							'SSO',
+							'Advanced team management',
+							'Dedicated account manager'
 						]
 					}
 				]

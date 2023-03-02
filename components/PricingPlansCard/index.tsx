@@ -46,7 +46,7 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 			{isNew && (
 				<div className={styles.newFeatureBanner}>
 					<Image src="/star.svg" width={25} height={25} />
-					Most cost effective
+					Most popular
 				</div>
 			)}
 			<div className={`${styles.pricingPlansCard}`}>

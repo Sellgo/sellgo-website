@@ -91,7 +91,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 								withToggle && styles.toggledPrice
 							}`}
 						>
-							${Math.round(monthlyPrice)}/ Mo
+							${Math.round(monthlyPrice)}/ mo
 						</h3>
 					</span>
 				) : (
@@ -101,7 +101,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 								withToggle && styles.toggledPrice
 							}`}
 						>
-							${Math.round(annualPrice / 12)}/ Mo
+							${Math.round(annualPrice / 12)}/ mo
 						</h3>
 					</span>
 				)}
@@ -123,7 +123,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 								withToggle ? styles.newPrice__small : ''
 							}`}
 						>
-							Now ${prettyPrintNumber(Math.round(annualPrice))}
+							Billed ${prettyPrintNumber(Math.round(annualPrice))}
 							/yr
 						</span>
 						<span

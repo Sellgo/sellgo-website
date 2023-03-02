@@ -42,7 +42,7 @@
 		p {
 			font-size: $fontsize_10;
 			font-weight: $fontweight_regular;
-			color: $grey_8;
+			color: $prim_dark_2;
 			max-width: 33rem;
 			text-align: center;
 			white-space: pre-line;
@@ -117,11 +117,11 @@
 }
 
 .buyNowCTA {
-	width: 31rem;
-	height: 5rem;
+	width: 24rem;
+	height: 4rem;
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_16;
-	margin: 3rem auto;
+	margin: 5rem auto;
 
 	@media screen and (max-width: 480px) {
 		width: 16em;
