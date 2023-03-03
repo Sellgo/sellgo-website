@@ -73,6 +73,7 @@ PricingPlansCardHead.defaultProps = {
 	isFree: false,
 	isEnterprise: false,
 	isSmall: false,
+	isUsage: false,
 	handleChange: () => null
 };
 

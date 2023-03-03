@@ -37,6 +37,8 @@ interface Props {
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
+	console.log(props);
+
 	const {
 		name,
 		isMonthly,
@@ -68,7 +70,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			{isNew && isSmall && (
 				<div className={styles.newFeatureBanner}>
 					<Image src="/star.svg" width={25} height={25} />
-					Most popularr
+					Most popular
 				</div>
 			)}
 			<div
@@ -206,7 +208,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</div>
 			)}
 
-			{withToggle && handleChange && (
+			{withToggle && handleChange && !isFree && !isEnterprise && (
 				<div className={styles.toggleWrapper}>
 					<PricePlanToggleButton
 						isMonthly={isMonthly}
@@ -248,7 +250,12 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					<h1>Unlimited contacts</h1>
 					<p></p>
 
-					<button onClick={() => setIsDemoFormOpen(true)}>Contact sales</button>
+					<button
+						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
+						onClick={() => setIsDemoFormOpen(true)}
+					>
+						Contact sales
+					</button>
 				</div>
 			)}
 
