@@ -1,6 +1,6 @@
 export const payMonthlyAndAnnualPlan = [
 	{
-		header: ['Plan details', 'Free', 'Pro', 'Premium', 'Scale'],
+		header: ['Plan details', 'Free', 'Personal', 'Business', 'Enterprise'],
 		body: [
 			// ['Try for free, no credit card required', '✓', '✓', '✓'],
 			// ['Cancel any time help', '✓', '✓', '✓'],
@@ -11,13 +11,19 @@ export const payMonthlyAndAnnualPlan = [
 				'500 monthly or 6,000 yearly, per user',
 				'Custom plan'
 			],
-			['Included users', '1', '1-5 users', '1-5 users', 'Custom plan'],
+			['User(s)', '1', '1', '1-5 users', 'Custom plan'],
 			['Get annual lookups unfront', '-', '✓', '✓', '✓'],
 			['Seller Map', '-', '✓', '✓', '✓']
 		]
 	},
 	{
-		header: ['Amazon marketplace', 'Free', 'Pro', 'Premium', 'Scale'],
+		header: [
+			'Amazon marketplace',
+			'Free',
+			'Personal',
+			'Business',
+			'Enterprise'
+		],
 		body: [
 			['North America: United States, Canada, Mexico', '✓', '✓', '✓', '✓'],
 			[
@@ -31,7 +37,7 @@ export const payMonthlyAndAnnualPlan = [
 		]
 	},
 	{
-		header: ['Business Data', 'Free', 'Pro', 'Premium', 'Scale'],
+		header: ['Business Data', 'Free', 'Personal', 'Business', 'Enterprise'],
 		body: [
 			['Company search & filter', '✓', '✓', '✓', '✓'],
 			['Decision maker search & filter', '✓', '✓', '✓', '✓'],
@@ -44,7 +50,13 @@ export const payMonthlyAndAnnualPlan = [
 		]
 	},
 	{
-		header: ['Prospecting Platform', 'Free', 'Pro', 'Premium', 'Scale'],
+		header: [
+			'Prospecting Platform',
+			'Free',
+			'Personal',
+			'Business',
+			'Enterprise'
+		],
 		body: [
 			['Standard prospecting filters', '✓', '✓', '✓', '✓'],
 
@@ -57,14 +69,20 @@ export const payMonthlyAndAnnualPlan = [
 		]
 	},
 	{
-		header: ['Contacts management', 'Free', 'Pro', 'Premium', 'Scale'],
+		header: [
+			'Contacts management',
+			'Free',
+			'Personal',
+			'Business',
+			'Enterprise'
+		],
 		body: [
 			['Lists management', '-', '✓', '✓', '✓'],
 			['Bulk CSV export', '-', '✓', '✓', '✓']
 		]
 	},
 	{
-		header: ['CRM integrations', 'Free', 'Pro', 'Premium', 'Scale'],
+		header: ['CRM integrations', 'Free', 'Personal', 'Business', 'Enterprise'],
 		body: [
 			['Zapier', '-', '✓', '✓', '✓'],
 			['Hubspot', '-', '✓', '✓', '✓'],
@@ -78,7 +96,13 @@ export const payMonthlyAndAnnualPlan = [
 		]
 	},
 	{
-		header: ['Team and analytics', 'Free', 'Pro', 'Premium', 'Scale'],
+		header: [
+			'Team and analytics',
+			'Free',
+			'Personal',
+			'Business',
+			'Enterprise'
+		],
 		body: [
 			['Create groups', '-', '-', '-', '✓'],
 			['Manager seat', '-', '-', '-', '✓'],
@@ -88,7 +112,7 @@ export const payMonthlyAndAnnualPlan = [
 		]
 	},
 	{
-		header: ['Data enrichment', 'Free', 'Pro', 'Premium', 'Scale'],
+		header: ['Data enrichment', 'Free', 'Personal', 'Business', 'Enterprise'],
 		body: [
 			['CSV enrichment', '-', '-', '-', '✓'],
 			['API', '-', '-', '-', '✓'],
@@ -98,7 +122,7 @@ export const payMonthlyAndAnnualPlan = [
 	// ,
 	// {
 	// 	header: [
-	// 		'Compliance', 'Free', 'Pro', 'Premium', 'Scale'
+	// 		'Compliance', 'Free', 'Personal', 'Business', 'Enterprise'
 	// 	],
 	// 	body: [
 	// 		['GDPR compliant', '✓', '✓', '✓', '✓'],
@@ -109,7 +133,7 @@ export const payMonthlyAndAnnualPlan = [
 	// 	]
 	// }
 	{
-		header: ['SSO', 'Free', 'Pro', 'Premium', 'Scale'],
+		header: ['SSO', 'Free', 'Personal', 'Business', 'Enterprise'],
 		body: [
 			['Google', '✓', '✓', '✓', '✓'],
 			// ['Office 365', '✓', '✓', '✓', '✓'],
@@ -117,7 +141,7 @@ export const payMonthlyAndAnnualPlan = [
 		]
 	},
 	{
-		header: ['Support', 'Free', 'Pro', 'Premium', 'Scale'],
+		header: ['Support', 'Free', 'Personal', 'Business', 'Enterprise'],
 		body: [
 			['Custom onboarding', '-', '-', '-', '✓'],
 			['Dedicated account manager', '-', '-', '-', '✓']
