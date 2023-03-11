@@ -6,7 +6,7 @@ import { pay1DollarPlan, payMonthlyAndAnnualPlan } from './allFeaturesTable';
 export const allPlansFeatureMapper: KeyValuePair = {
 	'Pricing & Plans': payMonthlyAndAnnualPlan,
 	'Pay $1 for a day': pay1DollarPlan,
-	'Monthly and Annual Web App Plans': payMonthlyAndAnnualPlan
+	'"Sellgo pays for itself 10x over"': payMonthlyAndAnnualPlan
 };
 
 export const getAllFeaturesForPlans = (planName: string) => {

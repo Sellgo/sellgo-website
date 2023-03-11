@@ -5,10 +5,12 @@
 	position: relative;
 	border-radius: 7px;
 	background: $prim_white;
+	height: 360px;
 
 	&__new {
 		padding-top: 6rem;
 		border-top: none !important;
+		height: 415px;
 	}
 
 	&__notNew {
@@ -42,7 +44,7 @@
 		p {
 			font-size: $fontsize_10;
 			font-weight: $fontweight_regular;
-			color: $grey_8;
+			color: $prim_dark_2;
 			max-width: 33rem;
 			text-align: center;
 			white-space: pre-line;
@@ -117,11 +119,13 @@
 }
 
 .buyNowCTA {
-	width: 31rem;
-	height: 5rem;
+	width: 24rem;
+	height: 4rem;
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_16;
-	margin: 3rem auto;
+	margin: 5rem auto;
+	position: absolute;
+	bottom: 0;
 
 	@media screen and (max-width: 480px) {
 		width: 16em;
@@ -173,5 +177,47 @@
 	.toggledPrice {
 		/* Override absolute position for the smaller pricing header card */
 		left: 10px;
+	}
+}
+
+.talkToExpertContainer {
+	text-align: center;
+
+	h1 {
+		color: #2e3b4a;
+		font-size: $fontsize_16;
+		font-weight: $fontweight_medium;
+	}
+
+	p {
+		color: $grey_8;
+		font-size: $fontsize_16;
+		font-weight: $fontweight_semibold;
+	}
+
+	button {
+		background-color: #000;
+		font-size: $fontsize_16;
+		font-weight: $fontweight_semibold;
+		color: #fff;
+		border: none;
+		margin-top: 1.5em;
+		border-radius: 7px;
+		cursor: pointer;
+		margin-bottom: 2em;
+		left: 1em;
+	}
+
+	.buyNowBtn {
+		width: 24rem;
+		height: 4rem;
+		position: absolute;
+		bottom: 0;
+		margin: 5rem auto;
+	}
+
+	.tableCardBtn {
+		width: 26rem;
+		height: 5rem;
 	}
 }

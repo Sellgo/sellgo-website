@@ -34,10 +34,10 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 					<p className={styles.headerText}> </p>
 					<p className={`${styles.headerText} ${styles.headerText__sellgo}`}>
 						{' '}
-						Sellgo webapp
+						Sellgo ABM
 					</p>
-					<p className={styles.headerText}> Other list download</p>
-					<p className={styles.headerText}> Other ABM software</p>
+					<p className={styles.headerText}> List competitors</p>
+					<p className={styles.headerText}> Other ABM competitors</p>
 				</div>
 				<div className={styles.featureComparisonGrid}>
 					{features.map((feature: any, index: number) => {

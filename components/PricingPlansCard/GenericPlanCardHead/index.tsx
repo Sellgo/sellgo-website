@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Modal from 'react-modal';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -7,6 +8,7 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../CTAButton';
 import PricePlanToggleButton from '../../PricePlanToggleButton';
+import DemoForm from '../../../containers/Demo/DemoForm';
 
 /* Utils */
 
@@ -19,6 +21,9 @@ interface Props {
 	monthlyPrice: number;
 	annualPrice: number;
 	isNew?: boolean;
+	isFree?: boolean;
+	isEnterprise?: boolean;
+	isUsage?: boolean;
 	isSmall?: boolean;
 
 	// plan details
@@ -32,6 +37,8 @@ interface Props {
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
+	console.log(props);
+
 	const {
 		name,
 		isMonthly,
@@ -40,11 +47,16 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		annualPrice,
 		desc,
 		isNew,
+		isFree,
+		isUsage,
+		isEnterprise,
 		isSmall,
 		withToggle,
 		className,
 		handleChange
 	} = props;
+
+	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 
 	return (
 		<div
@@ -76,71 +88,127 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				handleChange={() => setIsMonthly(!isMonthly)}
 				className={styles.paymentModeToggle}
 			/>
-			<div className={styles.startingAt}>
-				<p>
-					Starts At{' '}
-					{!isMonthly && (
-						<span className="strike-text">${Math.round(monthlyPrice)}</span>
+
+			{isUsage ? (
+				<div className={styles.startingAt}>
+					<p>
+						Starts At{' '}
+						{!isMonthly && (
+							<span className="strike-text">${Math.round(monthlyPrice)}</span>
+						)}
+					</p>
+
+					{isMonthly ? (
+						<span className={styles.betaPriceContainer}>
+							<h3
+								className={`${styles.actualPrice} ${
+									withToggle && styles.toggledPrice
+								}`}
+							>
+								${Math.round(monthlyPrice)}/ mo
+							</h3>
+						</span>
+					) : (
+						<span className={styles.betaPriceContainer}>
+							<h3
+								className={`${styles.actualPrice} ${
+									withToggle && styles.toggledPrice
+								}`}
+							>
+								${Math.round(annualPrice / 12)}/ mo
+							</h3>
+						</span>
 					)}
-				</p>
 
-				{isMonthly ? (
-					<span className={styles.betaPriceContainer}>
-						<h3
-							className={`${styles.actualPrice} ${
-								withToggle && styles.toggledPrice
-							}`}
-						>
-							${Math.round(monthlyPrice)}/ Mo
-						</h3>
-					</span>
-				) : (
-					<span className={styles.betaPriceContainer}>
-						<h3
-							className={`${styles.actualPrice} ${
-								withToggle && styles.toggledPrice
-							}`}
-						>
-							${Math.round(annualPrice / 12)}/ Mo
-						</h3>
-					</span>
-				)}
-
-				{!isMonthly ? (
-					<p className={styles.billedAtPrice}>
-						<span
-							className={`${styles.originalPrice} ${
-								withToggle ? styles.originalPrice__small : ''
-							}`}
-						>
-							Originally{' '}
-							<span className="strike-text">
-								${prettyPrintNumber(monthlyPrice * 12)}
+					{!isMonthly ? (
+						<p className={styles.billedAtPrice}>
+							<span
+								className={`${styles.originalPrice} ${
+									withToggle ? styles.originalPrice__small : ''
+								}`}
+							>
+								Originally{' '}
+								<span className="strike-text">
+									${prettyPrintNumber(monthlyPrice * 12)}
+								</span>
 							</span>
-						</span>
-						<span
-							className={`${styles.newPrice} ${
-								withToggle ? styles.newPrice__small : ''
-							}`}
-						>
-							Now ${prettyPrintNumber(Math.round(annualPrice))}
-							/yr
-						</span>
-						<span
-							className={`${styles.savings} ${
-								withToggle ? styles.savings__small : ''
-							}`}
-						>
-							Save $
-							{prettyPrintNumber(Math.round(monthlyPrice * 12 - annualPrice))}
+							<span
+								className={`${styles.newPrice} ${
+									withToggle ? styles.newPrice__small : ''
+								}`}
+							>
+								Billed ${prettyPrintNumber(Math.round(annualPrice))}
+								/yr
+							</span>
+							<span
+								className={`${styles.savings} ${
+									withToggle ? styles.savings__small : ''
+								}`}
+							>
+								Save $
+								{prettyPrintNumber(Math.round(monthlyPrice * 12 - annualPrice))}
+							</span>
+						</p>
+					) : (
+						<p>Billed Monthly</p>
+					)}
+				</div>
+			) : (
+				<div className={styles.startingAt}>
+					<p>
+						<span>
+							<br />
 						</span>
 					</p>
-				) : (
-					<p>Billed Monthly</p>
-				)}
-			</div>
 
-			{withToggle && handleChange && (
+					{isFree && !isUsage ? (
+						<span className={styles.betaPriceContainer}>
+							<h3
+								className={`${styles.actualPrice} ${
+									withToggle && styles.toggledPrice
+								}`}
+							>
+								${Math.round(monthlyPrice)}/ mo
+							</h3>
+						</span>
+					) : (
+						<span className={styles.betaPriceContainer}>
+							<h3
+								className={`${styles.actualPrice} ${
+									withToggle && styles.toggledPrice
+								}`}
+							>
+								{''}
+							</h3>
+						</span>
+					)}
+
+					{isEnterprise && !isUsage ? (
+						<span className={styles.betaPriceContainer}>
+							<h3
+								className={`${styles.actualPrice} ${
+									withToggle && styles.toggledPrice
+								}`}
+							>
+								Let's talk
+							</h3>
+						</span>
+					) : (
+						<span className={styles.betaPriceContainer}>
+							<h3
+								className={`${styles.actualPrice} ${
+									withToggle && styles.toggledPrice
+								}`}
+							>
+								{''}
+								<br />
+							</h3>
+						</span>
+					)}
+				</div>
+			)}
+
+			{withToggle && handleChange && !isFree && !isEnterprise && (
 				<div className={styles.toggleWrapper}>
 					<PricePlanToggleButton
 						isMonthly={isMonthly}
@@ -149,23 +217,65 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</div>
 			)}
 
-			<CTAButton
-				type="primary"
-				size="medium"
-				variant={isNew ? 'purplePinkRainbow' : 'green'}
-				navigateTo={createFreeTrialLink()}
-				className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
-				asExternal
-				newTarget
+			{isUsage && (
+				<CTAButton
+					type="primary"
+					size="medium"
+					variant={isNew ? 'purplePinkRainbow' : 'green'}
+					navigateTo={createFreeTrialLink()}
+					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
+					asExternal
+					newTarget
+				>
+					Get started
+				</CTAButton>
+			)}
+
+			{isFree && (
+				<CTAButton
+					type="primary"
+					size="medium"
+					variant={isNew ? 'purplePinkRainbow' : 'green'}
+					navigateTo={createFreeTrialLink()}
+					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
+					asExternal
+					newTarget
+				>
+					Get started free
+				</CTAButton>
+			)}
+
+			{isEnterprise && (
+				<div className={styles.talkToExpertContainer}>
+					<h1>Unlimited contacts</h1>
+					<p></p>
+
+					<button
+						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
+						onClick={() => setIsDemoFormOpen(true)}
+					>
+						Contact sales
+					</button>
+				</div>
+			)}
+
+			<Modal
+				isOpen={isDemoFormOpen}
+				onRequestClose={() => setIsDemoFormOpen(false)}
+				className="modal"
+				overlayClassName="modalOverlay"
 			>
-				Get started
-			</CTAButton>
+				<DemoForm onRequestClose={() => setIsDemoFormOpen(false)} />
+			</Modal>
 		</div>
 	);
 };
 
 GenericPriceCardHead.defaultProps = {
 	isNew: false,
+	isFree: false,
+	isEnterprise: false,
+	isUsage: false,
 	isSmall: false,
 	withToggle: false,
 	className: '',

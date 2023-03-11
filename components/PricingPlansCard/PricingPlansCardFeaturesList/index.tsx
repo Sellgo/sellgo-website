@@ -22,7 +22,7 @@ const PricingPlansCardFeaturesList: React.FC<Props> = (props) => {
 				{featuresIncluded.map((featureName: string) => {
 					return (
 						<li key={uuid()}>
-							<Check width={10} height={7} fill="#2e3b4a" />
+							<Check width={10} height={7} fill="#5DC560" />
 							<span>{featureName}</span>
 						</li>
 					);
