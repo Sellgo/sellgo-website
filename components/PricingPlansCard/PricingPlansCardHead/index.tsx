@@ -18,6 +18,9 @@ interface Props {
 	withToggle?: boolean;
 	className?: string;
 	isNew?: boolean;
+	isFree?: boolean;
+	isEnterprise?: boolean;
+	isUsage?: boolean;
 	isSmall?: boolean;
 	handleChange?: () => any;
 }
@@ -34,7 +37,10 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 		withToggle,
 		handleChange,
 		isSmall,
-		className
+		className,
+		isFree,
+		isEnterprise,
+		isUsage
 	} = props;
 
 	return (
@@ -52,6 +58,9 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 				withToggle={withToggle}
 				className={className}
 				handleChange={handleChange}
+				isFree={isFree}
+				isEnterprise={isEnterprise}
+				isUsage={isUsage}
 			/>
 		</>
 	);
@@ -61,7 +70,10 @@ PricingPlansCardHead.defaultProps = {
 	withToggle: false,
 	className: '',
 	isNew: false,
+	isFree: false,
+	isEnterprise: false,
 	isSmall: false,
+	isUsage: false,
 	handleChange: () => null
 };
 

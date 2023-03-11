@@ -8,7 +8,7 @@
 	background: $prim_white;
 	border-radius: 7px;
 	width: 40rem;
-	min-height: 51rem;
+	min-height: 67rem;
 	border: 1px solid $second_silver;
 	&__new {
 		border-top-left-radius: 0 !important;
@@ -50,12 +50,12 @@
 	font-size: $fontsize_16;
 	font-weight: $fontweight_medium;
 	color: $prim_white;
-	padding: 0 9rem;
+	padding: 0 5rem;
 }
 
 .pricingPlansCard {
 	width: 100%;
-	padding: 0 3rem;
+	padding: 0 1rem;
 	padding-top: 2rem;
 	height: 100%;
 }

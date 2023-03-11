@@ -19,7 +19,8 @@ export const features = [
 		isNew: false
 	},
 	{
-		name: 'Verified decision makers (title, location, keyword, and more)',
+		name:
+			'Verified decision makers and contacts (title, location, keyword, and more)',
 		featureAvailableInPlans: [plans.SELFSERVE, plans.ENTERPRISE],
 		featureAvailableInCompetitors: [competitors.SELLGO, competitors.OTHER],
 		showOnDefault: true,
@@ -96,7 +97,7 @@ export const features = [
 	// isNew: false
 	// },
 	{
-		name: 'Advanced filters',
+		name: 'Unique buying intents',
 		featureAvailableInPlans: [plans.SELFSERVE, plans.ENTERPRISE],
 		featureAvailableInCompetitors: [competitors.SELLGO],
 		showOnDefault: false,
@@ -110,8 +111,7 @@ export const features = [
 		isNew: false
 	},
 	{
-		name:
-			'Integration (postcard marketing mail, CRM, mail automation, and more)',
+		name: 'CRM integrations',
 		featureAvailableInPlans: [plans.SELFSERVE, plans.ENTERPRISE],
 		featureAvailableInCompetitors: [competitors.SELLGO, competitors.OTHER],
 		showOnDefault: false,
@@ -129,7 +129,7 @@ export const features = [
 		featureAvailableInPlans: [plans.ENTERPRISE],
 		featureAvailableInCompetitors: [competitors.SELLGO],
 		showOnDefault: false,
-		isNew: false
+		isNew: true
 	},
 	{
 		name: 'Secured access and multi user permission',
@@ -142,13 +142,6 @@ export const features = [
 		name: 'Custom API access and integration',
 		featureAvailableInPlans: [plans.ENTERPRISE],
 		featureAvailableInCompetitors: [competitors.SELLGO, competitors.OTHER],
-		showOnDefault: false,
-		isNew: false
-	},
-	{
-		name: 'Unlimited access',
-		featureAvailableInPlans: [plans.ENTERPRISE],
-		featureAvailableInCompetitors: [competitors.SELLGO],
 		showOnDefault: false,
 		isNew: false
 	}
