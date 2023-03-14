@@ -1,41 +1,43 @@
 import Image from 'next/image';
 
+import { createFreeTrialLink } from '../../utils/Referral';
+
 export const CTA_1A = {
 	title: (
 		<h3>
-			Want &nbsp;
-			<Image src="/instantdownload.png" width={148} height={30} alt="access" />
-			&nbsp; of the top 1M+ sellers on Amazon?
+			Reach &nbsp;
+			<Image src="/every.png" width={62} height={47} alt="access" />
+			&nbsp; Amazon seller on the planet
 		</h3>
 	),
 	subtitle: (
 		<p>
 			{' '}
-			Get the B2B data* of the top Amazon sellers on 8 marketplaces - updated
-			regularly.{' '}
+			Search, engage, and close deals with Sellgo 30+ million verified Amazon
+			seller* decision makers.{' '}
 		</p>
 	),
-	asterisk: <span> *email, phone, website, LinkedIn, etc. </span>,
-	linkLabel: 'View seller lists',
-	link: `/amazon-seller-list`
+	asterisk: <span> *emails, phones, website, social media links, etc. </span>,
+	linkLabel: 'Create free account',
+	link: createFreeTrialLink()
 };
 
 export const CTA_1B = {
 	title: (
 		<h3>
-			Want &nbsp;
-			<Image src="/download.png" width={53} height={30} alt="access" />
-			&nbsp; of the top 1M+ sellers on Amazon?
+			Reach &nbsp;
+			<Image src="/every.png" width={62} height={47} alt="access" />
+			&nbsp; Amazon seller on the planet
 		</h3>
 	),
 	subtitle: (
 		<p>
 			{' '}
-			Get the B2B data of the top 1M+ Amazon sellers on 8 marketplaces - updated
-			regularly.{' '}
+			Search, engage, and close deals with Sellgo 30+ million verified Amazon
+			seller* decision makers.{' '}
 		</p>
 	),
-	asterisk: '',
-	linkLabel: 'View seller lists',
-	link: `/amazon-seller-list`
+	asterisk: <span> *emails, phones, website, social media links, etc. </span>,
+	linkLabel: 'Learn more',
+	link: createFreeTrialLink()
 };
