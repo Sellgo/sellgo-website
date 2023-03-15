@@ -19,7 +19,7 @@ const StatisticsSection: React.FC<Props> = () => {
 			<div className={`page-container ${styles.featuresSection}`}>
 				<h2 className={styles.featuresSectionTitle}>
 					<RainbowText type="pink_purple_blue_gradient">
-						Transform 3 million Amazon business leads per day into B2B sales
+						Transform 3 million Amazon rank per day into B2B sales intent
 					</RainbowText>
 				</h2>
 				<div className={`page-container ${styles.statisticsWrapper}`}>
