@@ -118,11 +118,11 @@ const TopFooter: React.FC<Props> = () => {
 						<a>Contact us</a>
 					</Link>
 				</li>
-				<li className="footerNavigationLinks">
+				{/* <li className="footerNavigationLinks">
 					<Link href="/about-us" passHref>
 						<a>About us</a>
 					</Link>
-				</li>
+				</li> */}
 				<li className="footerNavigationLinks">
 					<Link href="/career" passHref>
 						<a>Career</a>
