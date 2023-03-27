@@ -15,7 +15,7 @@ interface Props {
 	className: string;
 }
 
-const ProductsNavbarExpansion: React.FC<Props> = (props) => {
+const SolutionsNavbarExpansion: React.FC<Props> = (props) => {
 	const { className } = props;
 
 	const [currentHoverId, setCurrentHoverId] = React.useState<string>(
@@ -111,4 +111,4 @@ const ProductsNavbarExpansion: React.FC<Props> = (props) => {
 	);
 };
 
-export default ProductsNavbarExpansion;
+export default SolutionsNavbarExpansion;

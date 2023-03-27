@@ -8,7 +8,8 @@ import styles from './index.module.scss';
 
 /* COmponents */
 import CTAButton from '../../CTAButton';
-import ProductsNavbarExpansion from '../ProductsNavbarExpansion';
+import SolutionsNavbarExpansion from '../SolutionsNavbarExpansion';
+import PlatformNavbarExpansion from '../PlatformNavbarExpansion';
 import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
 import AppConfig from '../../../config';
@@ -39,7 +40,16 @@ const NavbarBottom: React.FC<Props> = () => {
 						<a href="#" className={styles.navLink}>
 							Solutions <Bottom width={10} height={8} fill="#fff" />
 						</a>
-						<ProductsNavbarExpansion
+						<SolutionsNavbarExpansion
+							className={styles.expandedProductsNavbar}
+						/>
+					</li>
+
+					<li className={styles.navbarBottomLink}>
+						<a href="#" className={styles.navLink}>
+							Platform <Bottom width={10} height={8} fill="#fff" />
+						</a>
+						<PlatformNavbarExpansion
 							className={styles.expandedProductsNavbar}
 						/>
 					</li>

@@ -1,16 +1,16 @@
 @import '../../../styles/guidelines';
 
-.productsNavbar {
+.PlatformNavbar {
 	background: $grey_0;
 	margin-top: 0.3rem;
-	width: 100%;
+	width: 70%;
 	display: flex;
 	box-shadow: 0 5px 10px rgba(#000, 0.5);
 	min-height: 25rem;
 	border-radius: 0 0 7px 7px;
 }
 
-.productsNavbar__left {
+.PlatformNavbar__left {
 	min-width: 24rem;
 	background: $black_1;
 	min-height: 100%;
@@ -28,7 +28,7 @@
 	}
 }
 
-.productsNavbar__right {
+.PlatformNavbar__right {
 	background: $grey_0;
 	min-width: 60rem;
 	min-height: 100%;
