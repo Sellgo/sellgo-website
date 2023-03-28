@@ -112,9 +112,7 @@ const HeroBox = () => {
 							{animatedText}
 						</RainbowText>
 					</h2>
-					<p className={`${styles.tagline}`}>
-						Within seconds, Sellgo can reveal access to Amazon seller:
-					</p>
+					<p className={`${styles.tagline}`}>Beat your sales number with:</p>
 					<p className={`${styles.tagbenefit}`}>
 						<br />
 						- verified email addresses

@@ -7,8 +7,8 @@ export const payMonthlyAndAnnualPlan = [
 			[
 				'Included lookups',
 				'5 monthly per user',
-				'100 monthly or 1,200 yearly, per user',
 				'500 monthly or 6,000 yearly, per user',
+				'1,000 monthly or 12,000 yearly, per user',
 				'Custom plan'
 			],
 			['User(s)', '1', '1', '1-5 users', 'Custom plan'],
@@ -44,7 +44,7 @@ export const payMonthlyAndAnnualPlan = [
 			['Verified professional emails', '✓', '✓', '✓', '✓'],
 			['Verified personal emails', '✓', '✓', '✓', '✓'],
 			['Verified mobile and direct phones', '✓', '✓', '✓', '✓'],
-			['Verified social media handles*', '✓', '✓', '✓', '✓'],
+			['Verified social media handles*', '-', '-', '✓', '✓'],
 			['Advanced decision maker data ', '-', '-', '✓', '✓'],
 			['Advanced company data ', '-', '-', '✓', '✓']
 		]
@@ -59,7 +59,6 @@ export const payMonthlyAndAnnualPlan = [
 		],
 		body: [
 			['Standard prospecting filters', '✓', '✓', '✓', '✓'],
-
 			['Revenues and growth filter ', '✓', '✓', '✓', '✓'],
 			['Category, product, and brand filter', '✓', '✓', '✓', '✓'],
 			['Advanced prospecting filter', '-', '-', '✓', '✓'],
