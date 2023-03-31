@@ -1,0 +1,80 @@
+@import '../../../styles/guidelines';
+
+.newBenefitsSection {
+	min-height: 100vh;
+}
+
+.benefitsWrapper {
+	padding: 20px 0;
+}
+
+.benefitsCardsWrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+.firstCardWrapper {
+	background: $f3f3f3_ffffff_gradient;
+	margin: 0 auto;
+	margin-top: 1rem;
+	border-radius: 100px;
+	padding: 5rem 4rem;
+	max-width: max-content;
+	width: 100%;
+}
+
+.secondCardWrapper {
+	background: $ffffff_f3f3f3_gradient;
+	margin: 0 auto;
+	margin-top: 0;
+	border-radius: 100px;
+	padding: 5rem 4rem;
+	max-width: max-content;
+	width: 100%;
+}
+
+.thirdCardWrapper {
+	background: $f3f3f3_ffffff_gradient;
+	margin: 0 auto;
+	margin-top: 0;
+	border-radius: 100px;
+	padding: 5rem 4rem;
+	max-width: max-content;
+	width: 100%;
+}
+
+.forthCardWrapper {
+	background: $ffffff_f3f3f3_gradient;
+	margin: 0 auto;
+	margin-top: 0;
+	border-radius: 100px;
+	padding: 5rem 4rem;
+	max-width: max-content;
+	width: 100%;
+}
+
+.fifthCardWrapper {
+	background: $f3f3f3_ffffff_gradient;
+	margin: 0 auto;
+	margin-top: 0;
+	border-radius: 100px;
+	padding: 5rem 4rem;
+	max-width: max-content;
+	width: 100%;
+}
+
+.sixthCardWrapper {
+	background: $ffffff_f3f3f3_gradient;
+	margin: 0 auto;
+	margin-top: 0;
+	border-radius: 100px;
+	padding: 5rem 4rem;
+	max-width: max-content;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.newBenefitsCTA {
+	margin: 4rem auto;
+}

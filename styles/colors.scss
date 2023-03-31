@@ -79,6 +79,7 @@ $linecolor_dimgrey: $second_dimgrey;
 $border-color-1: #707070;
 
 /* Gradient colors */
+$yellow_orange_gradient: linear-gradient(90deg, #ffcc2f, #fc7900);
 $orange_dark_gradient: linear-gradient(90deg, #fc7900, #7e3d00);
 $orange_purple_gradient: linear-gradient(90deg, #fb7900, #b318f1);
 $purple_blue_gradient: linear-gradient(90deg, #b318f1, #00f0ff);
@@ -86,6 +87,50 @@ $purple_orange_gradient: linear-gradient(270deg, #fb7900, #5a0c79);
 $purple_pink_gradient: linear-gradient(90deg, #b318f1, #ff61df);
 $pink_blue_gradient: linear-gradient(90deg, #ff61df, #ff61df, #ff61df, #00f0ff);
 $pink_purple_blue_gradient: linear-gradient(90deg, #ff61df, #b318f1, #00f0ff);
+$orange_purple_pink_gradient: linear-gradient(90deg, #fc7900, #b318f1, #ff61df);
+$yellow_purple_blue_gradient: linear-gradient(90deg, #ffcc2f, #b318f1, #00f0ff);
+
+$f3f3f3_ffffff_gradient: linear-gradient(90deg, #f2f2f2, #fff);
+$ffffff_f3f3f3_gradient: linear-gradient(90deg, #fff, #f2f2f2);
+
+$first_triadic_gradient: linear-gradient(90deg, #faaa8d, #fff);
+$second_triadic_gradient: linear-gradient(90deg, #fff, #aa8cfa);
+$third_triadic_gradient: linear-gradient(90deg, #8cfaaa, #fff);
+
+$first_analogous_gradient: linear-gradient(90deg, #fa8ca6, #fff);
+$second_analogous_gradient: linear-gradient(90deg, #fff, #faaa8d);
+$third_analogous_gradient: linear-gradient(90deg, #fae08c, #fff);
+
+$first_splitcomplementary_gradient: linear-gradient(90deg, #faaa8d, #fff);
+$second_splitcomplementary_gradient: linear-gradient(90deg, #fff, #8ca6fa);
+$third_splitcomplementary_gradient: linear-gradient(90deg, #8cfae0, #fff);
+
+$first_tetradic_gradient: linear-gradient(90deg, #faaa8d, #fff);
+$second_tetradic_gradient: linear-gradient(90deg, #fff, #8cfaaa);
+$third_tetradic_gradient: linear-gradient(90deg, #8cdcfa, #fff);
+$forth_tetradic_gradient: linear-gradient(90deg, #fff, #fa8cdc);
+
+$first_square_gradient: linear-gradient(90deg, #faaa8d, #fff);
+$second_square_gradient: linear-gradient(90deg, #fff, #a6fa8c);
+$third_square_gradient: linear-gradient(90deg, #8cdcfa, #fff);
+$forth_square_gradient: linear-gradient(90deg, #fff, #e08cfa);
+
+$first_complementary_gradient: linear-gradient(90deg, #faaa8d, #fff);
+$second_complementary_gradient: linear-gradient(90deg, #fff, #8cdcfa);
+
+$first_neutral_gradient: linear-gradient(90deg, #faaa8d, #fff);
+$second_neutral_gradient: linear-gradient(90deg, #fff, #fac58c);
+$third_neutral_gradient: linear-gradient(90deg, #fae08c, #fff);
+$forth_neutral_gradient: linear-gradient(90deg, #fff, #f8fa8c);
+$fifth_neutral_gradient: linear-gradient(90deg, #dcfa8c, #fff);
+$sixth_neutral_gradient: linear-gradient(90deg, #fff, #c1fa8c);
+
+$first_gradient: linear-gradient(90deg, #9bcbfc, #fff);
+$second_gradient: linear-gradient(90deg, #fff, #c3fdeb);
+$third_gradient: linear-gradient(90deg, #ffd9aa, #fff);
+$forth_gradient: linear-gradient(90deg, #fff, #e0ccff);
+$fifth_gradient: linear-gradient(90deg, #fdfbc1, #fff);
+$sixth_gradient: linear-gradient(90deg, #fff, #fc9da2);
 $tab_active: #f7f7f7;
 $sellgo_purple: #b318f1;
 $sellgo_neon_blue: #00f0ff;
