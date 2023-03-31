@@ -8,8 +8,8 @@ import styles from './index.module.scss';
 
 /* COmponents */
 import CTAButton from '../../CTAButton';
-import SolutionsNavbarExpansion from '../SolutionsNavbarExpansion';
 import PlatformNavbarExpansion from '../PlatformNavbarExpansion';
+import UsecasesNavbarExpansion from '../UsecasesNavbarExpansion';
 import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
 import AppConfig from '../../../config';
@@ -38,19 +38,19 @@ const NavbarBottom: React.FC<Props> = () => {
 				<ul className={styles.navbarBottomLinksList}>
 					<li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
-							Solutions <Bottom width={10} height={8} fill="#fff" />
+							Platform <Bottom width={10} height={8} fill="#fff" />
 						</a>
-						<SolutionsNavbarExpansion
+						<PlatformNavbarExpansion
 							className={styles.expandedProductsNavbar}
 						/>
 					</li>
 
 					<li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
-							Platform <Bottom width={10} height={8} fill="#fff" />
+							Use cases <Bottom width={10} height={8} fill="#fff" />
 						</a>
-						<PlatformNavbarExpansion
-							className={styles.expandedProductsNavbar}
+						<UsecasesNavbarExpansion
+							className={styles.expandedUsecasesNavbar}
 						/>
 					</li>
 
@@ -73,6 +73,14 @@ const NavbarBottom: React.FC<Props> = () => {
 						<ResourcesNavBarExpansion
 							className={styles.expandedResourcesNavbar}
 						/>
+					</li>
+
+					<li
+						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
+					>
+						<Link href="/customers" passHref prefetch={false}>
+							<a className={styles.navLink}>Customers</a>
+						</Link>
 					</li>
 				</ul>
 			</div>

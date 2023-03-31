@@ -48,7 +48,7 @@ const PlatformNavbarExpansion: React.FC<Props> = (props) => {
 		<div className={className}>
 			<div className={styles.PlatformNavbar}>
 				<div className={styles.PlatformNavbar__left}>
-					<h3>PLATFORM</h3>
+					<h3>SOLUTIONS</h3>
 
 					{productsNavigationList.map((productListDetails: any) => {
 						return (

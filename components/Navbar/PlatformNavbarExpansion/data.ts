@@ -6,68 +6,145 @@ import {
 
 export const productsNavigationList: ProductsNavigationList[] = [
 	{
-		head: 'Intelligence',
-		desc: 'xxx',
-		hoverId: 'intelligencePlatform'
+		head: 'Sales GO',
+		desc: 'xxxxxxxx',
+		hoverId: 'salesSolution'
 	},
 	{
-		head: 'Engagement',
-		desc: 'xxx',
-		hoverId: 'engagementPlatform'
+		head: 'Marketing GO',
+		desc: 'xxxxxxxx',
+		hoverId: 'marketingSolution'
 	},
 	{
-		head: 'Orchestration',
-		desc: 'xxx',
-		hoverId: 'orchestrationPlatform'
+		head: 'Data GO',
+		desc: 'xxxxxxxx',
+		hoverId: 'dataSolution'
+	},
+	{
+		head: 'Partership GO',
+		desc: 'xxxxxxxx',
+		hoverId: 'partnershipSolution'
 	}
 ];
 
 export const productsRightPanelData: ProductsPanelData[] = [
 	{
-		hoverId: 'intelligencePlatform',
+		hoverId: 'salesSolution',
 		header: '',
 		groupedNavLinksData: [
 			{
-				head: 'Company and contact search',
-				desc: 'Identify markets and find potential customers',
+				head: 'Intent Search & Qualifying',
+				desc: 'Identify potential buying intents',
 				navigateTo: '/',
 				iconName: 'sellerDatabase'
 			},
 			{
-				head: 'Buyer intent',
-				desc: 'Connect with prospects who are ready to make a purchase',
+				head: 'Search Automation',
+				desc: 'Automate search processes',
+				navigateTo: '/',
+				iconName: 'sellerMap'
+			},
+			{
+				head: 'Conversation Intelligence',
+				desc: 'Analyze customer interactions in the global market',
+				navigateTo: '/',
+				iconName: 'sellerMap'
+			},
+			{
+				head: 'Workflows',
+				desc: 'Streamline go-to-market activities',
+				navigateTo: '/',
+				iconName: 'sellerMap'
+			}
+		]
+	},
+	{
+		hoverId: 'marketingSolution',
+		header: '',
+		groupedNavLinksData: [
+			{
+				head: 'Cross-Channel Advertising',
+				desc: 'Reach customers through multiple channels',
 				navigateTo: '/',
 				iconName: 'sellerDatabase'
 			},
 			{
-				head: 'Website Visitor Tracking',
-				desc: 'Convert website traffic into sales leads',
+				head: 'Buyer Intent Insights',
+				desc: 'Understand potential customer buying behavior',
+				navigateTo: '/',
+				iconName: 'sellerMap'
+			},
+			{
+				head: 'Website Chat',
+				desc: 'Engage and assist website visitors',
+				navigateTo: '/',
+				iconName: 'sellerMap'
+			},
+			{
+				head: 'Web Form Enrichment',
+				desc: 'Enhance web form data',
+				navigateTo: '/',
+				iconName: 'sellerMap'
+			}
+		]
+	},
+	{
+		hoverId: 'dataSolution',
+		header: '',
+		groupedNavLinksData: [
+			{
+				head: 'Data-as-a-Service',
+				desc: 'Provide data as a service',
 				navigateTo: '/',
 				iconName: 'sellerDatabase'
+			},
+			{
+				head: 'Data Management',
+				desc: 'Organize and maintain data',
+				navigateTo: '/',
+				iconName: 'sellerMap'
+			},
+			{
+				head: 'Data Enrichment',
+				desc: 'Enhance data quality',
+				navigateTo: '/',
+				iconName: 'sellerMap'
+			},
+			{
+				head: 'API & Webhooks',
+				desc: 'Connect to other systems and services',
+				navigateTo: '/',
+				iconName: 'sellerMap'
 			}
 		]
 	},
 	{
-		hoverId: 'engagementPlatform',
+		hoverId: 'partnershipSolution',
 		header: '',
 		groupedNavLinksData: [
 			{
-				head: 'Seller Database',
-				desc: 'Scout a network of great Amazon sellers',
-				navigateTo: '/seller-database',
+				head: 'Partnership Search',
+				desc: 'Find potential partners',
+				navigateTo: '/',
 				iconName: 'sellerDatabase'
-			}
-		]
-	},
-	{
-		hoverId: 'orchestrationPlatform',
-		header: '',
-		groupedNavLinksData: [
+			},
 			{
-				head: 'Seller Database',
-				desc: 'Scout a network of great Amazon sellers',
-				navigateTo: '/seller-database',
-				iconName: 'sellerDatabase'
+				head: 'Partner Outreach',
+				desc: 'Reach out to potential partners',
+				navigateTo: '/',
+				iconName: 'sellerMap'
+			},
+			{
+				head: 'Partner Branding',
+				desc: 'Build company brand to attract collabs',
+				navigateTo: '/',
+				iconName: 'sellerMap'
+			},
+			{
+				head: 'ATS Integrations',
+				desc: 'Integrate with Applicant Tracking Systems',
+				navigateTo: '/',
+				iconName: 'sellerMap'
 			}
 		]
 	}

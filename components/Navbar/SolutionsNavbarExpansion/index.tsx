@@ -48,7 +48,7 @@ const SolutionsNavbarExpansion: React.FC<Props> = (props) => {
 		<div className={className}>
 			<div className={styles.productsNavbar}>
 				<div className={styles.productsNavbar__left}>
-					<h3>INTELLIGENCE</h3>
+					<h3>SOLUTIONS</h3>
 
 					{productsNavigationList.map((productListDetails: any) => {
 						return (
