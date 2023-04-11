@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 
 /* Components */
 import HowsBenefits from '../HowsBenefitsCard';
+import BenefitsAnimated from '../BenefitsAnimated';
 
 /* Data */
 import { newBenefitsData } from './data';
@@ -15,6 +16,7 @@ interface Props {}
 const HowsBenefitsSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
+			<BenefitsAnimated />
 			<div className={styles.firstCardWrapper}>
 				<div className={`page-container ${styles.benefitsWrapper}`}>
 					<HowsBenefits

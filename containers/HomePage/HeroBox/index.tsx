@@ -10,6 +10,7 @@ import styles from './index.module.scss';
 import RainbowText from '../../../components/RainbowText';
 import DemoForm from '../../Demo/DemoForm';
 import FormInput from '../../../components/FormInput';
+import BrandsAnimated from '../BrandsAnimated';
 
 /* Utils */
 // import { createFreeTrialLink } from '../../../utils/Referral';
@@ -168,11 +169,7 @@ const HeroBox = () => {
 				</div>
 			</div>
 
-			<div className={styles.brandsContainer}>
-				<h2>Trusted by 7,000+ businesses.</h2>
-				{/* <img src="/brands.png" alt="brands" /> */}
-				<img src="/brands1.png" alt="brands" />
-			</div>
+			<BrandsAnimated />
 
 			<Modal
 				isOpen={isDemoFormOpen}
