@@ -10,6 +10,7 @@ import styles from './index.module.scss';
 import RainbowText from '../../../components/RainbowText';
 import DemoForm from '../../Demo/DemoForm';
 import FormInput from '../../../components/FormInput';
+import BrandsAnimated from '../BrandsAnimated';
 
 /* Utils */
 // import { createFreeTrialLink } from '../../../utils/Referral';
@@ -19,8 +20,8 @@ import Bottom from '../../../components/Icons/Check';
 
 const HeroBox = () => {
 	const textList = [
-		'ads optimization.',
 		'e-comm marketing.',
+		'ads optimization.',
 		'Saas companies.',
 		'aggregators.',
 		'content creators.',
@@ -184,12 +185,7 @@ const HeroBox = () => {
 				</div>
 			</div>
 
-			<div className={styles.brandsContainer}>
-				<h2>These leading companies are growing with Sellgo.</h2>
-				{/* <h2>TRUSTED BY 10,000+ BUSINESSES.</h2> */}
-				{/* <img src="/brands.png" alt="brands" /> */}
-				<img src="/brands1.png" alt="brands" />
-			</div>
+			<BrandsAnimated />
 
 			<Modal
 				isOpen={isDemoFormOpen}

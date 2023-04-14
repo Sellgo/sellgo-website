@@ -3,11 +3,14 @@ import React from 'react';
 /* Styling */
 import styles from './index.module.scss';
 
+/* Components */
+import KPIAnimated from '../KPIAnimated';
+
 interface Props {}
 
 const HeroBox: React.FC<Props> = () => {
 	return (
-		<section className={`page-container ${styles.heroBox}`}>
+		<section className={`${styles.heroBox}`}>
 			<h2 className="secondary-heading">
 				AiStock empowers 1000s of brands like yours.
 			</h2>
@@ -18,6 +21,8 @@ const HeroBox: React.FC<Props> = () => {
 				manages your entire inventory and ship process, giving you accurate and
 				up-to-the minute information on your inventory levels.
 			</p>
+
+			<KPIAnimated />
 		</section>
 	);
 };

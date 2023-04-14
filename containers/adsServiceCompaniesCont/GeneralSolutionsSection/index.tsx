@@ -33,7 +33,7 @@ const GeneralSolutionsSection: React.FC<Props> = () => {
 					</div>
 					<h4 className={styles.cardsWrapper__Text}>
 						Qualify
-						<p>One single dashboard for everywhere you sell</p>
+						<p>Catch the right buying intent, every time</p>
 					</h4>
 					<Link href="/qualify" passHref>
 						<a className={styles.cardsWrapper__Link}>
@@ -56,8 +56,8 @@ const GeneralSolutionsSection: React.FC<Props> = () => {
 						</div>
 					</div>
 					<h4 className={styles.cardsWrapper__Text}>
-						Automate
-						<p>Tools to put your inventory orders in order</p>
+						List
+						<p>Build high quality list of decision maker</p>
 					</h4>
 					<Link href="/list" passHref>
 						<a className={styles.cardsWrapper__Link}>
@@ -80,8 +80,8 @@ const GeneralSolutionsSection: React.FC<Props> = () => {
 						</div>
 					</div>
 					<h4 className={styles.cardsWrapper__Text}>
-						Scale
-						<p>Data to power your growth</p>
+						Engage
+						<p>Approach your clients with powerful wedges</p>
 					</h4>
 					<Link href="/engage" passHref>
 						<a className={styles.cardsWrapper__Link}>

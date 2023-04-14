@@ -17,7 +17,7 @@ const PersonasSection: React.FC<Props> = () => {
 	return (
 		<section className={`page-container ${styles.otherInfoSection}`}>
 			<h2 className={styles.sectionHeading}>
-				We help B2B businesses at all stages of growth
+				We help B2B conversions at all stages of growth
 			</h2>
 			<p className={styles.sectionDesc}>
 				No matter how big you get, AiStock puts smart supply chain automation at
