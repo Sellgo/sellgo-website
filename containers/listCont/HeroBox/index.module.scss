@@ -1,0 +1,57 @@
+@import '../../../styles/guidelines';
+
+.heroBox {
+	padding-top: 12rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 10rem;
+
+	@media screen and (max-width: 480px) {
+		padding-top: 4em;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		font-size: $fontsize_16;
+		font-weight: $fontweight_bold;
+		color: $grey_8;
+		max-width: 60rem;
+		margin-top: 18px;
+		text-align: left;
+	}
+
+	p {
+		font-size: $fontsize_16;
+		font-weight: $fontweight_medium;
+		color: $grey_8;
+		max-width: 90rem;
+		margin-top: 18px;
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+}
+
+.buttonsRow {
+	display: flex;
+
+	.heroBoxCTA {
+		width: 20rem;
+		margin-right: 18px;
+
+		@media screen and (max-width: 480px) {
+			margin-right: 6px;
+			width: 10em;
+		}
+	}
+}
+
+.navbarCTA {
+	width: 15rem !important;
+	justify-self: flex-end;
+
+	&__arrow {
+		margin-left: 11px;
+	}
+}

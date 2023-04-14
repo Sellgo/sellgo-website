@@ -84,22 +84,7 @@ const TopFooter: React.FC<Props> = () => {
 				</li>
 				<li className="footerNavigationLinks">
 					<Link href="/" passHref>
-						<a>For capital provider</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
-						<a>For marketplaces</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
-						<a>For investors</a>
-					</Link>
-				</li>
-				<li className="footerNavigationLinks">
-					<Link href="/" passHref>
-						<a>For brands</a>
+						<a>For ecom vendor</a>
 					</Link>
 				</li>
 			</ul>

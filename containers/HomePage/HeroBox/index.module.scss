@@ -7,9 +7,9 @@
 
 .herobox {
 	overflow: hidden;
-	min-height: 70vh;
+	min-height: 60vh;
 	padding-top: 3rem;
-	padding-bottom: 3rem;
+	padding-bottom: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -86,7 +86,7 @@
 	margin-top: 0;
 	width: 400px;
 	font-size: $fontsize_16;
-	line-height: $fontlineheight_content_20;
+	line-height: $fontlineheight_content_24;
 	font-weight: $fontweight_medium;
 	color: $grey_8;
 
@@ -207,13 +207,17 @@
 
 .brandsContainer {
 	margin-top: 0;
-	margin-bottom: 15em;
+	margin-bottom: 0;
 	text-align: center;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	height: 14rem;
+	background-color: #f7f7f7;
 
 	h2 {
 		color: $prim_dark_2;
 		text-align: center;
-		font-size: $fontsize_20;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_medium;
 		margin-bottom: 1em;
 	}

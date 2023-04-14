@@ -1,0 +1,62 @@
+@import '../../../styles/guidelines';
+
+.benefitsSectionWrapper {
+	margin: 0 auto;
+	margin-top: 5rem;
+	background: $tab_active;
+	//border: solid #faaa8d 15px;
+	border-radius: 100px;
+	padding: 5rem 3rem;
+	max-width: max-content;
+	width: 100%;
+}
+
+.benefitsSection {
+	h2 {
+		color: $prim_dark_2;
+		font-size: $fontsize_36;
+		text-align: center;
+
+		@media only screen and(max-width: 750px) {
+			font-size: 3.4rem;
+		}
+	}
+}
+
+.benefitsTabsWrapper {
+	width: 100%;
+	margin-top: 3rem;
+}
+
+.benefitsTabList {
+	display: flex;
+	list-style: none;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	color: $prim_dark_2;
+	border-bottom: 1px solid $grey_2;
+
+	@media only screen and(max-width: 600px) {
+		flex-direction: column;
+	}
+}
+
+.benefitsTab {
+	font-size: $fontsize_16;
+	color: $grey_6;
+	font-weight: $fontweight_medium;
+	padding: 5px 0;
+	cursor: pointer;
+
+	&__Selected {
+		border-bottom: 2px solid $prim_dark_2;
+		color: $prim_dark_2;
+		font-size: $fontsize_18;
+		font-weight: $fontweight_semibold;
+	}
+
+	@media only screen and(max-width: 600px) {
+		font-size: 1.6rem;
+	}
+}
