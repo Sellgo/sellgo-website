@@ -52,7 +52,7 @@ export const productsRightPanelData: ProductsPanelData[] = [
 			},
 			{
 				head: 'Workflows',
-				desc: 'Streamline go-to-market activities',
+				desc: 'Qualify go-to-market activities',
 				navigateTo: '/',
 				iconName: 'sellerMap'
 			}

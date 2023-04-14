@@ -5,7 +5,7 @@ import styles from './index.module.scss';
 interface Props {
 	type: 'primary' | 'secondary';
 	size: 'small' | 'medium' | 'large' | 'productPageBig' | 'productPageSmall';
-	navigateTo: string;
+	navigateTo?: string;
 	children: React.ReactNode;
 	variant?:
 		| 'white'
@@ -18,11 +18,12 @@ interface Props {
 	asExternal?: boolean;
 	newTarget?: boolean;
 	disabled?: boolean;
+	onClick?: () => void;
 }
 
 const CTAButton: React.FC<Props> = (props) => {
 	const {
-		navigateTo,
+		navigateTo = '',
 		type,
 		size,
 		children,
@@ -30,7 +31,8 @@ const CTAButton: React.FC<Props> = (props) => {
 		asExternal = false,
 		variant = 'orange',
 		newTarget = false,
-		disabled = false
+		disabled = false,
+		onClick
 	} = props;
 
 	const baseClassName = styles.ctabutton;
@@ -40,6 +42,26 @@ const CTAButton: React.FC<Props> = (props) => {
 	const isRainbowBordered =
 		(variant === 'rainbow' || variant === 'purplePinkRainbow') &&
 		type === 'secondary';
+
+	if (onClick) {
+		return (
+			<button
+				className={`
+					${baseClassName} 
+					${sizeClassName} 
+					${variantAndTypeClassName} 
+					${disabledClassName}
+					${className}`}
+				onClick={onClick}
+			>
+				{isRainbowBordered ? (
+					<span className={styles.ctabutton__rainbowWrapper}>{children}</span>
+				) : (
+					children
+				)}
+			</button>
+		);
+	}
 
 	// render as normal <a> tag
 	if (asExternal) {
@@ -89,7 +111,9 @@ CTAButton.defaultProps = {
 	asExternal: false,
 	variant: 'orange',
 	newTarget: false,
-	disabled: false
+	disabled: false,
+	onClick: undefined,
+	navigateTo: ''
 };
 
 export default CTAButton;

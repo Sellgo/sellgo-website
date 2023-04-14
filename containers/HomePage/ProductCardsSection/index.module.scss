@@ -2,10 +2,18 @@
 
 .newBenefitsSection {
 	min-height: 100vh;
+
+	@media only screen and(max-width: 480px) {
+		min-height: auto;
+	}
 }
 
 .benefitsWrapper {
 	padding: 20px 0;
+
+	@media only screen and(max-width: 480px) {
+		padding: 0;
+	}
 }
 
 .benefitsCardsWrapper {
@@ -14,12 +22,43 @@
 	margin: 0 auto;
 }
 
-.greyCardWrapper {
-	background: rgba(247, 247, 247, 1);
+.firstCardWrapper {
+	background: $f3f3f3_ffffff_gradient;
+	margin: 0 auto;
+	margin-top: 1rem;
+	border-radius: 50px;
+	padding: 5rem 0;
+	max-width: max-content;
+	width: 100%;
+
+	@media only screen and(max-width: 480px) {
+		padding: 0;
+	}
 }
 
-.whiteCardWrapper {
-	background: $prim_white;
+.secondCardWrapper {
+	background: $ffffff_f3f3f3_gradient;
+	margin: 0 auto;
+	margin-top: 0;
+	border-radius: 50px;
+	padding: 5rem 0;
+	max-width: max-content;
+	width: 100%;
+}
+
+.thirdCardWrapper {
+	background: $f3f3f3_ffffff_gradient;
+	margin: 0 auto;
+	margin-top: 0;
+	border-radius: 50px;
+	padding: 5rem 0;
+	max-width: max-content;
+	width: 100%;
+	margin-bottom: 10rem;
+
+	@media only screen and(max-width: 480px) {
+		margin-bottom: 4em;
+	}
 }
 
 .newBenefitsCTA {

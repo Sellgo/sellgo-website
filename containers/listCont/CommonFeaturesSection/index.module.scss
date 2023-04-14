@@ -1,0 +1,41 @@
+@import '../../../styles/guidelines';
+
+.commonFeaturesSectionWrapper {
+	margin: 0 auto;
+	margin-top: 12rem;
+	background: $prim_dark_2;
+	border-radius: 100px;
+	padding: 7rem 4rem;
+	max-width: max-content;
+	width: 100%;
+}
+
+.commonFeaturesSection {
+	color: $prim_white;
+
+	h2 {
+		color: $prim_white;
+		font-size: $fontsize_36;
+		font-weight: $fontweight_bold;
+		margin-top: 1rem;
+		min-height: 4rem;
+		text-align: center;
+	}
+
+	h3 {
+		color: $grey_4;
+		font-size: $fontsize_16;
+		font-weight: $fontweight_semibold;
+		margin-top: 1rem;
+		min-height: 4rem;
+		text-align: center;
+	}
+}
+
+.featuresCardWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 5rem;
+	flex-wrap: wrap;
+}

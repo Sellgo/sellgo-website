@@ -20,13 +20,24 @@ import Bottom from '../../../components/Icons/Check';
 
 const HeroBox = () => {
 	const textList = [
-		'B2B agencies.',
+		'ads optimization.',
+		'e-comm marketing.',
 		'Saas companies.',
 		'aggregators.',
-		'marketing services.',
-		'outreach services.',
-		'ads services.',
-		'content creators.'
+		'content creators.',
+		'legal for e-commerce.',
+		'3PL services.',
+		'product photography.',
+		'feedback software.',
+		'financial services.',
+		'warehousing/ FBA prep.',
+		'listing creation.',
+		'trucking companies.',
+		'e-comm consultants.',
+		'FBA reconcilation.',
+		'banks, capital & transfer.',
+		'shipping companies.',
+		'mastermind group.'
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
@@ -114,14 +125,19 @@ const HeroBox = () => {
 							{animatedText}
 						</RainbowText>
 					</h2>
-					<p className={`${styles.tagline}`}>Beat your sales number with:</p>
+					<p className={`${styles.tagline}`}>
+						Hit your sales number with ease:
+					</p>
 					<p className={`${styles.tagbenefit}`}>
 						<br />
-						<Bottom width={10} height={8} fill="#5DC560" /> reducing 0.5x CAC
+						<Bottom width={10} height={8} fill="#5DC560" /> Accurate buying
+						intents
 						<br />
-						<Bottom width={10} height={8} fill="#5DC560" /> adding 200% revenue
+						<Bottom width={10} height={8} fill="#5DC560" /> Verified contact
+						info
 						<br />
-						<Bottom width={10} height={8} fill="#5DC560" /> total 4x ROI
+						<Bottom width={10} height={8} fill="#5DC560" /> Compelling
+						engagement
 					</p>
 
 					<div className={styles.ctaBox}>

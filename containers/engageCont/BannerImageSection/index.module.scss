@@ -1,0 +1,12 @@
+@import '../../../styles/guidelines';
+
+.benefitsImageWrapper {
+	// width: 100%;
+	background: $pink_purple_blue_gradient;
+	margin-top: 3rem;
+	margin-bottom: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50px;
+}
