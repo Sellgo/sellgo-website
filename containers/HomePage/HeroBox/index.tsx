@@ -15,6 +15,7 @@ import FormInput from '../../../components/FormInput';
 // import { createFreeTrialLink } from '../../../utils/Referral';
 import AppConfig from '../../../config';
 import { encodeBase64 } from '../../../utils/Format';
+import Bottom from '../../../components/Icons/Check';
 
 const HeroBox = () => {
 	const textList = [
@@ -112,15 +113,14 @@ const HeroBox = () => {
 							{animatedText}
 						</RainbowText>
 					</h2>
-					<p className={`${styles.tagline}`}>
-						Within seconds, Sellgo can reveal access to Amazon seller:
-					</p>
+					<p className={`${styles.tagline}`}>Beat your sales number with:</p>
 					<p className={`${styles.tagbenefit}`}>
 						<br />
-						- verified email addresses
+						<Bottom width={10} height={8} fill="#5DC560" /> reducing 0.5x CAC
 						<br />
-						- verified direct phone numbers
-						<br />- verified social media links
+						<Bottom width={10} height={8} fill="#5DC560" /> adding 200% revenue
+						<br />
+						<Bottom width={10} height={8} fill="#5DC560" /> total 4x ROI
 					</p>
 
 					<div className={styles.ctaBox}>
