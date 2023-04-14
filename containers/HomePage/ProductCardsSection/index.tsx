@@ -15,7 +15,7 @@ interface Props {}
 const ProductCardsSection: React.FC<Props> = () => {
 	return (
 		<section className={styles.newBenefitsSection} id="showCtaNavBar">
-			<div className={styles.greyCardWrapper}>
+			<div className={styles.firstCardWrapper}>
 				<div className={`page-container ${styles.benefitsWrapper}`}>
 					<ProductCard
 						key={uuid()}
@@ -25,14 +25,24 @@ const ProductCardsSection: React.FC<Props> = () => {
 					/>
 				</div>
 			</div>
-			<div className={styles.whiteCardWrapper}>
+			<div className={styles.secondCardWrapper}>
 				<div className={`page-container ${styles.benefitsWrapper}`}>
-					<ProductCard key={uuid()} {...newBenefitsData[1]} reversed />
+					<ProductCard
+						key={uuid()}
+						{...newBenefitsData[1]}
+						reversed
+						imageWidth={720}
+					/>
 				</div>
 			</div>
-			<div className={styles.greyCardWrapper}>
+			<div className={styles.thirdCardWrapper}>
 				<div className={`page-container ${styles.benefitsWrapper}`}>
-					<ProductCard key={uuid()} {...newBenefitsData[2]} reversed={false} />
+					<ProductCard
+						key={uuid()}
+						{...newBenefitsData[2]}
+						reversed={false}
+						imageWidth={720}
+					/>
 				</div>
 			</div>
 		</section>

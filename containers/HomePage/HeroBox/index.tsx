@@ -10,21 +10,34 @@ import styles from './index.module.scss';
 import RainbowText from '../../../components/RainbowText';
 import DemoForm from '../../Demo/DemoForm';
 import FormInput from '../../../components/FormInput';
+import BrandsAnimated from '../BrandsAnimated';
 
 /* Utils */
 // import { createFreeTrialLink } from '../../../utils/Referral';
 import AppConfig from '../../../config';
 import { encodeBase64 } from '../../../utils/Format';
+import Bottom from '../../../components/Icons/Check';
 
 const HeroBox = () => {
 	const textList = [
-		'B2B agencies.',
+		'ads optimization.',
+		'e-comm marketing.',
 		'Saas companies.',
 		'aggregators.',
-		'marketing services.',
-		'outreach services.',
-		'ads services.',
-		'content creators.'
+		'content creators.',
+		'legal for e-commerce.',
+		'3PL services.',
+		'product photography.',
+		'feedback software.',
+		'financial services.',
+		'warehousing/ FBA prep.',
+		'listing creation.',
+		'trucking companies.',
+		'e-comm consultants.',
+		'FBA reconcilation.',
+		'banks, capital & transfer.',
+		'shipping companies.',
+		'mastermind group.'
 	];
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	const [currentWordIndex, setCurrentWordIndex] = React.useState(0);
@@ -113,14 +126,18 @@ const HeroBox = () => {
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						Within seconds, Sellgo can reveal access to Amazon seller:
+						Hit your sales number with ease:
 					</p>
 					<p className={`${styles.tagbenefit}`}>
 						<br />
-						- verified email addresses
+						<Bottom width={10} height={8} fill="#5DC560" /> Accurate buying
+						intents
 						<br />
-						- verified direct phone numbers
-						<br />- verified social media links
+						<Bottom width={10} height={8} fill="#5DC560" /> Verified contact
+						info
+						<br />
+						<Bottom width={10} height={8} fill="#5DC560" /> Compelling
+						engagement
 					</p>
 
 					<div className={styles.ctaBox}>
@@ -168,11 +185,7 @@ const HeroBox = () => {
 				</div>
 			</div>
 
-			<div className={styles.brandsContainer}>
-				<h2>Trusted by 7,000+ businesses.</h2>
-				{/* <img src="/brands.png" alt="brands" /> */}
-				<img src="/brands1.png" alt="brands" />
-			</div>
+			<BrandsAnimated />
 
 			<Modal
 				isOpen={isDemoFormOpen}
