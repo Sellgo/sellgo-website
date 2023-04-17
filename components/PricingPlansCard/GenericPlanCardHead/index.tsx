@@ -54,8 +54,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		isEnterprise,
 		isSmall,
 		withToggle,
-		className,
-		handleChange
+		className
+		// handleChange
 	} = props;
 
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
@@ -210,14 +210,14 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</div>
 			)}
 
-			{withToggle && handleChange && !isFree && !isEnterprise && (
+			{/* {withToggle && handleChange && !isFree && !isEnterprise && (
 				<div className={styles.toggleWrapper}>
 					<PricePlanToggleButton
 						isMonthly={isMonthly}
 						handleChange={handleChange}
 					/>
 				</div>
-			)}
+			)} */}
 
 			{isUsage && (
 				<CTAButton
@@ -233,7 +233,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					asExternal
 					newTarget
 				>
-					Get started
+					Free 7-day trial
 				</CTAButton>
 			)}
 
@@ -248,8 +248,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					variant={isNew ? 'purplePinkRainbow' : 'green'}
 					navigateTo={
 						isNew
-							? createSignupLink('business_plan')
-							: createSignupLink('personal_plan')
+							? createSignupLink('BUSINESS_PLAN')
+							: createSignupLink('PROFESSIONAL_PLAN')
 					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
@@ -274,19 +274,19 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 
 			{!withToggle && !isEnterprise && (
 				<p className={styles.skipTrial}>
-					Or{' '}
+					or{' '}
 					<CTAButton
 						size="small"
 						variant={isNew ? 'purplePinkRainbow' : 'green'}
 						navigateTo={
 							isNew
-								? createSignupLink('business_plan', 'buynow')
-								: createSignupLink('personal_plan', 'buynow')
+								? createSignupLink('BUSINESS_PLAN', 'buynow')
+								: createSignupLink('PROFESSIONAL_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
 					>
-						Skip trail, get 20% off
+						Skip trial, get 20% off
 					</CTAButton>
 				</p>
 			)}
