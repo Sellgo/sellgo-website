@@ -10,7 +10,7 @@
 	&__new {
 		padding-top: 6rem;
 		border-top: none !important;
-		height: 415px;
+		height: 456px;
 	}
 
 	&__notNew {
@@ -142,11 +142,11 @@
 	align-items: center;
 	justify-content: center;
 	width: 90%;
-	gap: 0.3em;
 
 	a {
 		color: $system_blue;
 		text-decoration: underline;
+		padding: 0.4em;
 	}
 }
 

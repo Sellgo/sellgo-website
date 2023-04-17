@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
-import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -14,7 +13,7 @@ import DemoForm from '../../../containers/Demo/DemoForm';
 /* Utils */
 
 import { prettyPrintNumber } from '../../../utils/Format';
-import { createFreeTrialLink } from '../../../utils/Referral';
+import { createSignupLink } from '../../../utils/Referral';
 
 interface Props {
 	name: string;
@@ -225,7 +224,11 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					type="primary"
 					size="medium"
 					variant={isNew ? 'purplePinkRainbow' : 'green'}
-					navigateTo={createFreeTrialLink()}
+					navigateTo={
+						isNew
+							? createSignupLink('business_plan')
+							: createSignupLink('personal_plan')
+					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
 					newTarget
@@ -234,14 +237,20 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</CTAButton>
 			)}
 
-			{lookups ? <h2 className={styles.lookups}>{lookups} lookups</h2> : null}
+			{lookups && !isEnterprise ? (
+				<h2 className={styles.lookups}>{lookups} lookups</h2>
+			) : null}
 
 			{isFree && (
 				<CTAButton
 					type="primary"
 					size="medium"
 					variant={isNew ? 'purplePinkRainbow' : 'green'}
-					navigateTo={createFreeTrialLink()}
+					navigateTo={
+						isNew
+							? createSignupLink('business_plan')
+							: createSignupLink('personal_plan')
+					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
 					newTarget
@@ -253,7 +262,6 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			{isEnterprise && (
 				<div className={styles.talkToExpertContainer}>
 					<h1>Unlimited contacts</h1>
-					<p></p>
 
 					<button
 						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
@@ -264,10 +272,23 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</div>
 			)}
 
-			{!withToggle && (
-				<h1 className={styles.skipTrial}>
-					or <Link href={'/test'}>Skip trail, get 20% off</Link>
-				</h1>
+			{!withToggle && !isEnterprise && (
+				<p className={styles.skipTrial}>
+					Or{' '}
+					<CTAButton
+						size="small"
+						variant={isNew ? 'purplePinkRainbow' : 'green'}
+						navigateTo={
+							isNew
+								? createSignupLink('business_plan', 'buynow')
+								: createSignupLink('personal_plan', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Skip trail, get 20% off
+					</CTAButton>
+				</p>
 			)}
 
 			<Modal
