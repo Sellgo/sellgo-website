@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './index.module.scss';
 
 interface Props {
-	type: 'primary' | 'secondary';
+	type: 'primary' | 'secondary' | 'link';
 	size: 'small' | 'medium' | 'large' | 'productPageBig' | 'productPageSmall';
 	navigateTo: string;
 	children: React.ReactNode;
