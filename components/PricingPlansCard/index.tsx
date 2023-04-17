@@ -13,6 +13,7 @@ interface Props {
 	// product details
 	name: string;
 	setIsMonthly: (isMonthly: boolean) => void;
+	lookups: number;
 	monthlyPrice: number;
 	annualPrice: number;
 	desc: string;
@@ -35,6 +36,7 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 		monthlyPrice,
 		annualPrice,
 		desc,
+		lookups,
 		featureSubName,
 		featuresLists,
 		isMonthly,
@@ -68,6 +70,7 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 					isFree={isFree}
 					isEnterprise={isEnterprise}
 					isUsage={isUsage}
+					lookups={lookups}
 				/>
 
 				<p className={styles.planType}>{featureSubName}</p>

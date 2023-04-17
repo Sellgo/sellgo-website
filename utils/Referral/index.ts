@@ -48,3 +48,14 @@ export const createFreeTrialLink = () => {
 	const freeTrialLink = appendReferralCode(webFreeTrialLink);
 	return freeTrialLink;
 };
+
+export const createSignupLink = (plan: string, td?: string) => {
+	let webFreeTrialLink = `${AppConfig.APP_URL}/signup?plan=${plan}`;
+
+	if (td) {
+		webFreeTrialLink += `&td=${td}`;
+	}
+
+	const freeTrialLink = appendReferralCode(webFreeTrialLink);
+	return freeTrialLink;
+};

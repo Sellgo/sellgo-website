@@ -13,13 +13,14 @@ import DemoForm from '../../../containers/Demo/DemoForm';
 /* Utils */
 
 import { prettyPrintNumber } from '../../../utils/Format';
-import { createFreeTrialLink } from '../../../utils/Referral';
+import { createSignupLink } from '../../../utils/Referral';
 
 interface Props {
 	name: string;
 	desc: string;
 	monthlyPrice: number;
 	annualPrice: number;
+	lookups: number;
 	isNew?: boolean;
 	isFree?: boolean;
 	isEnterprise?: boolean;
@@ -33,7 +34,7 @@ interface Props {
 	// used for pricing cards on comparision table
 	withToggle?: boolean;
 	className?: string;
-	handleChange?: () => void;
+	// handleChange?: () => void;
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
@@ -46,14 +47,15 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		setIsMonthly,
 		annualPrice,
 		desc,
+		lookups,
 		isNew,
 		isFree,
 		isUsage,
 		isEnterprise,
 		isSmall,
 		withToggle,
-		className,
-		handleChange
+		className
+		// handleChange
 	} = props;
 
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
@@ -208,35 +210,47 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</div>
 			)}
 
-			{withToggle && handleChange && !isFree && !isEnterprise && (
+			{/* {withToggle && handleChange && !isFree && !isEnterprise && (
 				<div className={styles.toggleWrapper}>
 					<PricePlanToggleButton
 						isMonthly={isMonthly}
 						handleChange={handleChange}
 					/>
 				</div>
-			)}
+			)} */}
 
 			{isUsage && (
 				<CTAButton
 					type="primary"
 					size="medium"
 					variant={isNew ? 'purplePinkRainbow' : 'green'}
-					navigateTo={createFreeTrialLink()}
+					navigateTo={
+						isNew
+							? createSignupLink('business_plan')
+							: createSignupLink('personal_plan')
+					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
 					newTarget
 				>
-					Get started
+					Free 7-day trial
 				</CTAButton>
 			)}
+
+			{lookups && !isEnterprise ? (
+				<h2 className={styles.lookups}>{lookups} lookups</h2>
+			) : null}
 
 			{isFree && (
 				<CTAButton
 					type="primary"
 					size="medium"
 					variant={isNew ? 'purplePinkRainbow' : 'green'}
-					navigateTo={createFreeTrialLink()}
+					navigateTo={
+						isNew
+							? createSignupLink('BUSINESS_PLAN')
+							: createSignupLink('PROFESSIONAL_PLAN')
+					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
 					newTarget
@@ -248,7 +262,6 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			{isEnterprise && (
 				<div className={styles.talkToExpertContainer}>
 					<h1>Unlimited contacts</h1>
-					<p></p>
 
 					<button
 						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
@@ -257,6 +270,42 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						Contact sales
 					</button>
 				</div>
+			)}
+
+			{!withToggle && !isEnterprise && (
+				<p className={styles.skipTrial}>
+					<CTAButton
+						size="small"
+						variant={isNew ? 'purplePinkRainbow' : 'green'}
+						navigateTo={
+							isNew
+								? createSignupLink('BUSINESS_PLAN', 'buynow')
+								: createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						or Skip trial, get 20% off
+					</CTAButton>
+				</p>
+			)}
+
+			{withToggle && !isEnterprise && (
+				<p className={styles.skipTrialBottom}>
+					<CTAButton
+						size="small"
+						variant={isNew ? 'purplePinkRainbow' : 'green'}
+						navigateTo={
+							isNew
+								? createSignupLink('BUSINESS_PLAN', 'buynow')
+								: createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						or Skip trial, get 20% off
+					</CTAButton>
+				</p>
 			)}
 
 			<Modal
@@ -278,8 +327,8 @@ GenericPriceCardHead.defaultProps = {
 	isUsage: false,
 	isSmall: false,
 	withToggle: false,
-	className: '',
-	handleChange: () => null
+	className: ''
+	// handleChange: () => null
 };
 
 export default GenericPriceCardHead;

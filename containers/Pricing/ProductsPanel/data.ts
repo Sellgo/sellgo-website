@@ -46,38 +46,40 @@ export const plansAndProductsDetails = [
 			}
 		},
 		productsIncluded: [
-			{
-				id: 5, // subscriptionID if needed
-				name: 'Free',
-				productsDatabase: 0,
-				salesEstimateCount: 1000,
-				monthlyPrice: 0,
-				annualPrice: 0,
-				desc: `Test drive it`,
-				featureSubName: 'Free includes:',
-				isFree: true,
-				isEnterprise: false,
-				isUsage: false,
-				featuresLists: [
-					{
-						title: '',
-						featuresIncluded: [
-							'Verified emails',
-							'Verified mobile and direct phones',
-							'Verified social media links'
-						]
-					}
-				]
-			},
+			// {
+			// 	id: 5, // subscriptionID if needed
+			// 	name: 'Free',
+			// 	productsDatabase: 0,
+			// 	salesEstimateCount: 1000,
+			// 	monthlyPrice: 0,
+			// 	annualPrice: 0,
+			// 	desc: `Test drive it`,
+			// 	featureSubName: 'Free includes:',
+			// 	isFree: true,
+			// 	isEnterprise: false,
+			// 	isUsage: false,
+			// 	featuresLists: [
+			// 		{
+			// 			title: '',
+			// 			featuresIncluded: [
+			// 				'Verified emails',
+			// 				'Verified mobile and direct phones',
+			// 				'Verified social media links'
+			// 			]
+			// 		}
+			// 	]
+			// },
 			{
 				id: 6, // subscriptionID if needed
 				name: 'Personal',
 				productsDatabase: 0,
 				salesEstimateCount: 1000,
-				monthlyPrice: 77,
-				annualPrice: 467,
+				monthlyPrice: 499,
+				annualPrice: 4790,
+				lookups: 500,
 				desc: `Essential for finding your prospects`,
 				featureSubName: 'Everything in Free, plus',
+				isNew: true,
 				isFree: false,
 				isEnterprise: false,
 				isUsage: true,
@@ -98,11 +100,12 @@ export const plansAndProductsDetails = [
 				name: 'Business',
 				productsDatabase: 0,
 				salesEstimateCount: 2000,
-				monthlyPrice: 347,
-				annualPrice: 2987,
+				monthlyPrice: 999,
+				annualPrice: 9590,
+				lookups: 500,
 				desc: `Perfect for small teams with simple workflows`,
 				featureSubName: 'Everything in Personal, plus:',
-				isNew: true,
+				isNew: false,
 				isFree: false,
 				isEnterprise: false,
 				isUsage: true,
@@ -126,6 +129,7 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 3000,
 				monthlyPrice: 0,
 				annualPrice: 0,
+				lookups: 500,
 				desc: `Ideal for prospecting at large scales`,
 				featureSubName: 'Everything in Business, plus:',
 				isFree: false,

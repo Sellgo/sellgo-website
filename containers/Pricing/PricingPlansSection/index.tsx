@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 import { Element } from 'react-scroll';
 
@@ -9,7 +9,7 @@ import styles from './index.module.scss';
 /* Components */
 import PricingPlansCard from '../../../components/PricingPlansCard';
 import AllfeaturesTable from '../../../components/AllFeaturesTable';
-import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
+// import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
 // import ContactInfo from '../../../components/ContactInfo';
 import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
 import TestimonialsSection from '../TestimonialSection';
@@ -49,7 +49,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					<div className={styles.planShortSummary}>
 						<p>{summary}</p>
 					</div>
-					<div className={styles.paymentModeToggle}>
+					{/* <div className={styles.paymentModeToggle}>
 						<PricePlanToggleButton
 							isMonthly={isMonthly}
 							handleChange={() => setIsMonthly(!isMonthly)}
@@ -62,9 +62,9 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 								src="/handPointIcon.svg"
 								alt="handpointicon"
 							/>
-							<p className={styles.paymentToggleText}>Up to 6 months free.</p>
+							<p className={styles.paymentToggleText}>20% off.</p>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</section>
 
@@ -87,6 +87,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							featureSubName={product.featureSubName}
 							featuresLists={product.featuresLists}
 							setIsMonthly={setIsMonthly}
+							lookups={product.lookups}
 							// Plan details
 							isMonthly={isMonthly}
 						/>
