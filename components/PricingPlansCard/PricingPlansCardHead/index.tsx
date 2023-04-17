@@ -36,7 +36,7 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 		isMonthly,
 		setIsMonthly,
 		withToggle,
-		handleChange,
+		// handleChange,
 		isSmall,
 		lookups,
 		className,
@@ -60,7 +60,7 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 				// Optional props
 				withToggle={withToggle}
 				className={className}
-				handleChange={handleChange}
+				// handleChange={handleChange}
 				isFree={isFree}
 				isEnterprise={isEnterprise}
 				isUsage={isUsage}
