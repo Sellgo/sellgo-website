@@ -5,7 +5,7 @@
 	position: relative;
 	border-radius: 7px;
 	background: $prim_white;
-	height: 360px;
+	height: 400px;
 
 	&__new {
 		padding-top: 6rem;
@@ -119,11 +119,11 @@
 }
 
 .buyNowCTA {
-	width: 24rem;
+	width: 90%;
 	height: 4rem;
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_16;
-	margin: 5rem auto;
+	margin: 8rem auto;
 	position: absolute;
 	bottom: 0;
 
@@ -132,8 +132,26 @@
 	}
 }
 
+.skipTrial {
+	margin: 8rem auto;
+	position: absolute;
+	font-size: $fontsize_16;
+	font-weight: $fontweight_medium;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	gap: 0.3em;
+
+	a {
+		color: $system_blue;
+		text-decoration: underline;
+	}
+}
+
 .tableCardCTA {
-	width: 26rem;
+	width: 90%;
 	height: 5rem;
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_16;
@@ -209,15 +227,23 @@
 	}
 
 	.buyNowBtn {
-		width: 24rem;
+		width: 90%;
 		height: 4rem;
 		position: absolute;
 		bottom: 0;
-		margin: 5rem auto;
+		margin: 8rem auto;
 	}
 
 	.tableCardBtn {
 		width: 26rem;
 		height: 5rem;
 	}
+}
+
+.lookups {
+	font-size: $fontsize_24;
+	font-weight: $fontweight_bold;
+	color: $prim_dark_2;
+	margin: 0.2em auto;
+	text-align: center;
 }

@@ -62,7 +62,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 								src="/handPointIcon.svg"
 								alt="handpointicon"
 							/>
-							<p className={styles.paymentToggleText}>Up to 6 months free.</p>
+							<p className={styles.paymentToggleText}>20% off.</p>
 						</div>
 					</div>
 				</div>
@@ -87,6 +87,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							featureSubName={product.featureSubName}
 							featuresLists={product.featuresLists}
 							setIsMonthly={setIsMonthly}
+							lookups={product.lookups}
 							// Plan details
 							isMonthly={isMonthly}
 						/>

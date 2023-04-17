@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Modal from 'react-modal';
+import Link from 'next/link';
 
 /* Styling */
 import styles from './index.module.scss';
@@ -20,6 +21,7 @@ interface Props {
 	desc: string;
 	monthlyPrice: number;
 	annualPrice: number;
+	lookups: number;
 	isNew?: boolean;
 	isFree?: boolean;
 	isEnterprise?: boolean;
@@ -46,6 +48,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		setIsMonthly,
 		annualPrice,
 		desc,
+		lookups,
 		isNew,
 		isFree,
 		isUsage,
@@ -231,6 +234,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</CTAButton>
 			)}
 
+			{lookups ? <h2 className={styles.lookups}>{lookups} lookups</h2> : null}
+
 			{isFree && (
 				<CTAButton
 					type="primary"
@@ -257,6 +262,12 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						Contact sales
 					</button>
 				</div>
+			)}
+
+			{!withToggle && (
+				<h1 className={styles.skipTrial}>
+					or <Link href={'/test'}>Skip trail, get 20% off</Link>
+				</h1>
 			)}
 
 			<Modal
