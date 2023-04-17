@@ -276,6 +276,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				<p className={styles.skipTrial}>
 					<CTAButton
 						size="small"
+						type="black"
 						variant={isNew ? 'purplePinkRainbow' : 'green'}
 						navigateTo={
 							isNew
@@ -294,6 +295,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				<p className={styles.skipTrialBottom}>
 					<CTAButton
 						size="small"
+						type="black"
 						variant={isNew ? 'purplePinkRainbow' : 'green'}
 						navigateTo={
 							isNew
