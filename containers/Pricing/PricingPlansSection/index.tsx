@@ -125,6 +125,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 										isNew={product.isNew}
 										isUsage={product.isUsage}
 										isFree={product.isFree}
+										lookups={product.lookups}
 										isEnterprise={product.isEnterprise}
 										// plan details
 										isMonthly={isMonthly}
