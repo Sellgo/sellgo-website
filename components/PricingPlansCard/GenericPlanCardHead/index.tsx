@@ -275,8 +275,9 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			{!withToggle && !isEnterprise && (
 				<p className={styles.skipTrial}>
 					<CTAButton
+						type="link"
 						size="small"
-						variant={isNew ? 'purplePinkRainbow' : 'green'}
+						variant={'white'}
 						navigateTo={
 							isNew
 								? createSignupLink('BUSINESS_PLAN', 'buynow')
@@ -293,8 +294,9 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			{withToggle && !isEnterprise && (
 				<p className={styles.skipTrialBottom}>
 					<CTAButton
+						type="link"
 						size="small"
-						variant={isNew ? 'purplePinkRainbow' : 'green'}
+						variant={'white'}
 						navigateTo={
 							isNew
 								? createSignupLink('BUSINESS_PLAN', 'buynow')
