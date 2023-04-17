@@ -226,8 +226,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					variant={isNew ? 'purplePinkRainbow' : 'green'}
 					navigateTo={
 						isNew
-							? createSignupLink('business_plan')
-							: createSignupLink('personal_plan')
+							? createSignupLink('BUSINESS_PLAN')
+							: createSignupLink('PROFESSIONAL_PLAN')
 					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
