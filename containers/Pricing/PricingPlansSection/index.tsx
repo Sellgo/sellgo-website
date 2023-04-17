@@ -132,6 +132,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 										withToggle
 										className={styles.tablePricingSummary}
 										handleChange={() => setIsMonthly(!isMonthly)}
+										lookups={product.lookups}
 										isSmall
 									/>
 								</div>

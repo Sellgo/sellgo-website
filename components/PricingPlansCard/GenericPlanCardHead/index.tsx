@@ -34,7 +34,7 @@ interface Props {
 	// used for pricing cards on comparision table
 	withToggle?: boolean;
 	className?: string;
-	// handleChange?: () => void;
+	handleChange?: () => void;
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
@@ -54,8 +54,9 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		isEnterprise,
 		isSmall,
 		withToggle,
-		className
-		// handleChange
+		className,
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		handleChange
 	} = props;
 
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
@@ -276,7 +277,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				<p className={styles.skipTrial}>
 					<CTAButton
 						size="small"
-						type="black"
+						type="secondary"
 						variant={isNew ? 'purplePinkRainbow' : 'green'}
 						navigateTo={
 							isNew
@@ -295,7 +296,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				<p className={styles.skipTrialBottom}>
 					<CTAButton
 						size="small"
-						type="black"
+						type="secondary"
 						variant={isNew ? 'purplePinkRainbow' : 'green'}
 						navigateTo={
 							isNew
@@ -329,8 +330,8 @@ GenericPriceCardHead.defaultProps = {
 	isUsage: false,
 	isSmall: false,
 	withToggle: false,
-	className: ''
-	// handleChange: () => null
+	className: '',
+	handleChange: () => null
 };
 
 export default GenericPriceCardHead;
