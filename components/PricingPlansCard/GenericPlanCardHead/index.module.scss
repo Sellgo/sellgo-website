@@ -150,13 +150,30 @@
 	}
 }
 
+.skipTrialBottom {
+	font-size: $fontsize_16;
+	font-weight: $fontweight_medium;
+	position: absolute;
+	bottom: 0.3em;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	a {
+		color: $system_blue;
+		text-decoration: underline;
+		padding: 0.4em;
+	}
+}
+
 .tableCardCTA {
 	width: 90%;
 	height: 5rem;
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_16;
 	margin: 0;
-	margin-bottom: 30px;
+	margin-bottom: 48px;
 }
 
 .newFeatureBanner {
@@ -222,7 +239,7 @@
 		margin-top: 1.5em;
 		border-radius: 7px;
 		cursor: pointer;
-		margin-bottom: 2em;
+		margin-bottom: 48px;
 		left: 1em;
 	}
 
