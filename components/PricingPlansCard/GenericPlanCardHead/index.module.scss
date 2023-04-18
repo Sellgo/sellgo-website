@@ -38,14 +38,14 @@
 		h2 {
 			font-size: $fontsize_28;
 			font-weight: $fontweight_bold;
-			color: $prim_dark_2;
+			color: $black_green;
 			margin: 0 auto;
 		}
 
 		p {
 			font-size: $fontsize_12;
 			font-weight: $fontweight_regular;
-			color: $prim_dark_2;
+			color: $black_green;
 			max-width: 33rem;
 			text-align: center;
 			white-space: pre-line;
@@ -60,7 +60,7 @@
 	text-align: center;
 
 	h3 {
-		color: $prim_dark_2;
+		color: $black_green;
 		font-size: $fontsize_32;
 		font-weight: $fontweight_bold;
 	}
@@ -68,7 +68,7 @@
 	p {
 		font-size: $fontsize_12;
 		font-weight: $fontweight_medium;
-		color: $prim_dark_1;
+		color: $black_green;
 	}
 }
 
@@ -138,6 +138,7 @@
 	position: absolute;
 	font-size: $fontsize_14;
 	font-weight: $fontweight_regular;
+	color: $black_green;
 	text-align: center;
 	display: flex;
 	align-items: center;
@@ -145,7 +146,7 @@
 	width: 95%;
 
 	a {
-		color: $black_0;
+		color: $black_green;
 		text-decoration: underline;
 		padding: 0.4em;
 	}
@@ -155,6 +156,7 @@
 	margin: 2rem auto;
 	font-size: $fontsize_14;
 	font-weight: $fontweight_regular;
+	color: $black_green;
 	position: absolute;
 	bottom: 0.3em;
 	text-align: center;
@@ -163,7 +165,7 @@
 	justify-content: center;
 
 	a {
-		color: $black_0;
+		color: $black_green;
 		text-decoration: underline;
 		padding: 0.4em;
 	}
@@ -171,9 +173,7 @@
 
 .icons {
 	display: flex;
-	gap: 1em;
-	margin: 0 0.7em;
-	margin-top: 0.5em;
+	gap: 11px;
 }
 
 .tableCardCTA {
@@ -181,6 +181,7 @@
 	height: 4rem;
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_16;
+	color: $black_green;
 	margin: 0;
 	margin-bottom: 70px;
 }
@@ -189,7 +190,6 @@
 	position: absolute;
 	top: 0;
 	height: 4rem;
-	background: $black_0;
 
 	/* To compensate for the 1px from border */
 	width: calc(100% + 2px);
@@ -226,7 +226,7 @@
 	.periodPrice {
 		font-size: $fontsize_16;
 		font-weight: $fontweight_medium;
-		color: $grey_8;
+		color: $black_green;
 	}
 }
 
@@ -246,8 +246,8 @@
 	}
 
 	button {
-		background-color: #000;
-		font-size: $fontsize_20;
+		background-color: $black_green;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_semibold;
 		color: #fff;
 		border: none;
@@ -260,7 +260,7 @@
 
 	.buyNowBtn {
 		width: 90%;
-		height: 6rem;
+		height: 5rem;
 		position: absolute;
 		bottom: 0;
 		margin: 18rem auto;
@@ -276,7 +276,7 @@
 .lookups {
 	font-size: $fontsize_20;
 	font-weight: $fontweight_semibold;
-	color: $grey_9;
+	color: $black_green;
 	//margin: 4em auto;
 	margin-top: 7em;
 	padding-left: 7px;
@@ -288,7 +288,7 @@
 .lookupsEnterprise {
 	font-size: $fontsize_20;
 	font-weight: $fontweight_semibold;
-	color: $grey_9;
+	color: $black_green;
 	//margin: 4em auto;
 	margin-top: 6em;
 	padding-left: 7px;
@@ -300,7 +300,7 @@
 .lookupsSummary {
 	font-size: $fontsize_16;
 	font-weight: $fontweight_regular;
-	color: $grey_8;
+	color: $black_green;
 	margin: 0.2em auto;
 	text-align: center;
 }

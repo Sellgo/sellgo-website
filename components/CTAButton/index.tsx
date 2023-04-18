@@ -13,6 +13,7 @@ interface Props {
 		| 'orange'
 		| 'purplePinkRainbow'
 		| 'green'
+		| 'black_green'
 		| 'black';
 	className?: string;
 	asExternal?: boolean;

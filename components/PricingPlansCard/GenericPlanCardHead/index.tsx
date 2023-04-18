@@ -30,6 +30,9 @@ interface Props {
 	isEnterprise?: boolean;
 	isUsage?: boolean;
 	isSmall?: boolean;
+	isFirstPlan?: boolean;
+	// isSecondPlan?: boolean;
+	isThirdPlan?: boolean;
 
 	// plan details
 	isMonthly: boolean;
@@ -53,6 +56,9 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		desc,
 		users,
 		lookups,
+		isFirstPlan,
+		// isSecondPlan,
+		isThirdPlan,
 		isNew,
 		isFree,
 		isUsage,
@@ -227,11 +233,11 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</div>
 			)} */}
 
-			{isUsage && (
+			{isUsage && isFirstPlan && (
 				<CTAButton
 					type="primary"
 					size="medium"
-					variant={isNew ? 'rainbow' : 'black'}
+					variant={isNew ? 'rainbow' : 'black_green'}
 					navigateTo={
 						isNew
 							? createSignupLink('BUSINESS_PLAN')
@@ -242,6 +248,24 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					newTarget
 				>
 					Free 7-day trial
+				</CTAButton>
+			)}
+
+			{isUsage && isThirdPlan && (
+				<CTAButton
+					type="primary"
+					size="medium"
+					variant={isNew ? 'rainbow' : 'black_green'}
+					navigateTo={
+						isNew
+							? createSignupLink('BUSINESS_PLAN')
+							: createSignupLink('PROFESSIONAL_PLAN')
+					}
+					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
+					asExternal
+					newTarget
+				>
+					Request a demo
 				</CTAButton>
 			)}
 
@@ -276,7 +300,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</div>
 			)}
 
-			{!withToggle && !isEnterprise && (
+			{!withToggle && !isEnterprise && isFirstPlan && (
 				<p className={styles.skipTrial}>
 					or
 					<CTAButton
@@ -292,6 +316,26 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						newTarget
 					>
 						Skip trial, get 20% off
+					</CTAButton>
+				</p>
+			)}
+
+			{!withToggle && !isEnterprise && isThirdPlan && (
+				<p className={styles.skipTrial}>
+					or
+					<CTAButton
+						type="link"
+						size="small"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('BUSINESS_PLAN', 'buynow')
+								: createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Buy now
 					</CTAButton>
 				</p>
 			)}
@@ -315,51 +359,120 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</p>
 			)}
 
-			{lookups && !isEnterprise ? (
+			{lookups && !isEnterprise && isFirstPlan && (
+				<h2 className={styles.lookups}>
+					{users} User
+					<br />
+					{formatNumber(lookups)} Brand insights
+					<ul className={styles.icons}>
+						<li>
+							<a
+								href="https://www.facebook.com/sellgoinc/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Facebook width={15} height={20} fill="#000" />
+							</a>
+						</li>
+
+						<li>
+							<a
+								href="https://www.instagram.com/sellgoinc_/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Instagram width={15} height={20} fill="#000" />
+							</a>
+						</li>
+
+						<li>
+							<a
+								href="https://www.linkedin.com/company/sellgo/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<LinkedIn width={15} height={20} fill="#000" />
+							</a>
+						</li>
+					</ul>
+				</h2>
+			)}
+
+			{lookups && !isEnterprise && isThirdPlan && (
 				<h2 className={styles.lookups}>
 					{users} Users
 					<br />
 					{formatNumber(lookups)} Brand insights
+					<ul className={styles.icons}>
+						<li>
+							<a
+								href="https://www.facebook.com/sellgoinc/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Facebook width={15} height={20} fill="#000" />
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.instagram.com/sellgoinc_/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Instagram width={15} height={20} fill="#000" />
+							</a>
+						</li>
+
+						<li>
+							<a
+								href="https://www.linkedin.com/company/sellgo/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<LinkedIn width={15} height={20} fill="#000" />
+							</a>
+						</li>
+					</ul>
 				</h2>
-			) : (
+			)}
+
+			{lookups && isEnterprise && (
 				<h2 className={styles.lookupsEnterprise}>
 					Starts at {users} Users
 					<br />
 					Starts at {formatNumber(lookups)} Brand insights
+					<ul className={styles.icons}>
+						<li>
+							<a
+								href="https://www.facebook.com/sellgoinc/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Facebook width={15} height={20} fill="#000" />
+							</a>
+						</li>
+
+						<li>
+							<a
+								href="https://www.instagram.com/sellgoinc_/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Instagram width={15} height={20} fill="#000" />
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/company/sellgo/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<LinkedIn width={15} height={20} fill="#000" />
+							</a>
+						</li>
+					</ul>
 				</h2>
 			)}
-
-			<ul className={styles.icons}>
-				<li>
-					<a
-						href="https://www.facebook.com/sellgoinc/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Facebook width={15} height={20} fill="#000" />
-					</a>
-				</li>
-
-				<li>
-					<a
-						href="https://www.instagram.com/sellgoinc_/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<Instagram width={15} height={20} fill="#000" />
-					</a>
-				</li>
-
-				<li>
-					<a
-						href="https://www.linkedin.com/company/sellgo/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<LinkedIn width={15} height={20} fill="#000" />
-					</a>
-				</li>
-			</ul>
 
 			<Modal
 				isOpen={isDemoFormOpen}

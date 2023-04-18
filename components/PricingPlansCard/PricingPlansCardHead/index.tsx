@@ -24,6 +24,9 @@ interface Props {
 	isEnterprise?: boolean;
 	isUsage?: boolean;
 	isSmall?: boolean;
+	isFirstPlan?: boolean;
+	// isSecondPlan?: boolean;
+	isThirdPlan?: boolean;
 	// handleChange?: () => any;
 }
 
@@ -42,6 +45,9 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 		users,
 		lookups,
 		className,
+		isFirstPlan,
+		// isSecondPlan,
+		isThirdPlan,
 		isFree,
 		isEnterprise,
 		isUsage
@@ -67,6 +73,9 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 				isFree={isFree}
 				isEnterprise={isEnterprise}
 				isUsage={isUsage}
+				isFirstPlan={isFirstPlan}
+				// isSecondPlan={isSecondPlan}
+				isThirdPlan={isThirdPlan}
 			/>
 		</>
 	);
