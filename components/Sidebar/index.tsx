@@ -34,30 +34,31 @@ const options = [
 			{
 				id: uuid(),
 				name: 'Usage-based plans',
-				to: '/pricing?type=usage-based-plans'
-			},
-			{
-				id: uuid(),
-				name: 'Account-based plans',
-				to: '/pricing?type=account-based-plans'
+				to: '/pricing'
 			}
+			// ,
+			// {
+			// 	id: uuid(),
+			// 	name: 'Account-based plans',
+			// 	to: '/pricing?type=account-based-plans'
+			// }
 		]
 	},
 	{
 		title: 'Resources',
 		content: [{ id: uuid(), name: 'Blogs', to: '/blogs' }]
-	},
-
-	{
-		title: 'Demo',
-		content: [
-			{
-				id: uuid(),
-				name: 'Book a demo',
-				to: '/pricing?type=account-based-plans'
-			}
-		]
 	}
+
+	// {
+	// 	title: 'Demo',
+	// 	content: [
+	// 		{
+	// 			id: uuid(),
+	// 			name: 'Book a demo',
+	// 			to: '/pricing?type=account-based-plans'
+	// 		}
+	// 	]
+	// }
 ];
 
 const Sidebar: React.FC<Props> = (props) => {

@@ -223,7 +223,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				<CTAButton
 					type="primary"
 					size="medium"
-					variant={isNew ? 'purplePinkRainbow' : 'green'}
+					variant={isNew ? 'purplePinkRainbow' : 'purplePinkRainbow'}
 					navigateTo={
 						isNew
 							? createSignupLink('BUSINESS_PLAN')
