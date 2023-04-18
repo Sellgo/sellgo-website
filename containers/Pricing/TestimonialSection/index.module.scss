@@ -1,11 +1,11 @@
 @import '../../../styles/guidelines';
 
 .testimonialsSection {
-	margin-top: 20em;
+	margin-top: 5em;
 
 	h2 {
 		width: 100%;
-		color: $prim_dark_2;
+		color: $black_green;
 		text-align: center;
 		font-size: $fontsize_40;
 
@@ -34,7 +34,7 @@
 		}
 
 		p {
-			color: $prim_dark_2;
+			color: $black_green;
 			font-size: $fontsize_18;
 			font-weight: $fontweight_semibold;
 		}
@@ -54,7 +54,7 @@
 			}
 
 			.author {
-				color: $prim_dark_2;
+				color: $black_green;
 				font-size: $fontsize_18;
 				font-weight: $fontweight_semibold;
 			}
