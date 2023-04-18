@@ -9,6 +9,9 @@ import styles from './index.module.scss';
 import CTAButton from '../../CTAButton';
 import PricePlanToggleButton from '../../PricePlanToggleButton';
 import DemoForm from '../../../containers/Demo/DemoForm';
+import LinkedIn from '../../Icons/SocialIcons/LinkedIn';
+import Facebook from '../../Icons/SocialIcons/Facebook';
+import Instagram from '../../Icons/SocialIcons/Instagram';
 
 /* Utils */
 
@@ -325,6 +328,38 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					Starts at {formatNumber(lookups)} Brand insights
 				</h2>
 			)}
+
+			<ul className={styles.icons}>
+				<li>
+					<a
+						href="https://www.facebook.com/sellgoinc/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Facebook width={15} height={20} fill="#000" />
+					</a>
+				</li>
+
+				<li>
+					<a
+						href="https://www.instagram.com/sellgoinc_/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<Instagram width={15} height={20} fill="#000" />
+					</a>
+				</li>
+
+				<li>
+					<a
+						href="https://www.linkedin.com/company/sellgo/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<LinkedIn width={15} height={20} fill="#000" />
+					</a>
+				</li>
+			</ul>
 
 			<Modal
 				isOpen={isDemoFormOpen}
