@@ -11,7 +11,7 @@
 	text-align: center;
 	font-size: $fontsize_12;
 	font-weight: $fontweight_regular;
-	color: $black_green;
+	color: $prim_dark_1;
 }
 
 .pricingNoteSummary {
@@ -23,7 +23,7 @@
 	text-align: center;
 	font-size: $fontsize_12;
 	font-weight: $fontweight_regular;
-	color: $black_green;
+	color: $prim_dark_1;
 }
 
 .talkToExpertContainer {
@@ -66,7 +66,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: $black_green;
+	color: $prim_dark_1;
 
 	@media only screen and(max-width: 1200px) {
 		flex-direction: column;
@@ -74,7 +74,7 @@
 
 	h2 {
 		font-size: $fontsize_40;
-		color: $black_green;
+		color: $prim_dark_1;
 		@media only screen and(max-width: 1200px) {
 			margin-top: 2rem;
 			text-align: center;
@@ -83,7 +83,7 @@
 }
 
 .planShortSummary {
-	color: $black_green;
+	color: $prim_dark_1;
 	font-size: $fontsize_16;
 	display: flex;
 	justify-content: center;
@@ -231,7 +231,7 @@
 	text-align: center;
 
 	h2 {
-		color: $black_green;
+		color: $prim_dark_1;
 		text-align: center;
 		font-size: $fontsize_20;
 		font-weight: $fontweight_medium;

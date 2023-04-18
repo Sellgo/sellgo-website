@@ -305,7 +305,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					or
 					<CTAButton
 						type="link"
-						size="small"
+						size="medium"
 						variant={'white'}
 						navigateTo={
 							isNew
@@ -325,7 +325,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					or
 					<CTAButton
 						type="link"
-						size="small"
+						size="medium"
 						variant={'white'}
 						navigateTo={
 							isNew
@@ -438,9 +438,9 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 
 			{lookups && isEnterprise && (
 				<h2 className={styles.lookupsEnterprise}>
-					Starts at {users} Users
+					Starts at {users}+ Users
 					<br />
-					Starts at {formatNumber(lookups)} Brand insights
+					Starts at {formatNumber(lookups)}+ Brand insights
 					<ul className={styles.icons}>
 						<li>
 							<a

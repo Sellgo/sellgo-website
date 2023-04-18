@@ -23,7 +23,7 @@
 		font-size: $fontsize_30;
 		padding: 0.2em 0.7em;
 		border-radius: 7px;
-		color: $black_green;
+		color: $prim_dark_1;
 		background-color: #fff;
 
 		@media screen and (max-width: 480px) {
@@ -83,7 +83,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	color: $black_green;
+	color: $prim_dark_1;
 	max-width: 100%;
 	margin: 0 auto;
 	border-bottom: 1px solid $second_silver;
@@ -99,7 +99,7 @@
 .pricingPanelTab {
 	font-size: $fontsize_12;
 	font-weight: $fontweight_regular;
-	color: $black_green;
+	color: $prim_dark_1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
