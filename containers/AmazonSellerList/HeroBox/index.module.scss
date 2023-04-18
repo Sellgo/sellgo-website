@@ -43,7 +43,7 @@
 .heading {
 	font-size: $fontsize_40;
 	font-weight: $fontweight_extrabold;
-	line-height: $fontlineheight_heading_70;
+	line-height: $fontlineheight_70;
 	margin-top: 0.5em;
 
 	@media only screen and(max-width: 650px) {
@@ -55,7 +55,7 @@
 .subHeading {
 	font-size: $fontsize_20;
 	font-weight: $fontweight_medium;
-	line-height: $fontlineheight_heading_70;
+	line-height: $fontlineheight_70;
 	color: $grey_8;
 	margin-top: 5em;
 	margin-bottom: 0.5em;
@@ -68,7 +68,7 @@
 .tagline {
 	margin-top: 20px;
 	font-size: $fontsize_20;
-	line-height: $fontlineheight_content_30;
+	line-height: $fontlineheight_30;
 	font-weight: $fontweight_medium;
 	color: $grey_8;
 	text-align: center;

@@ -1,7 +1,29 @@
 @import '../../../styles/guidelines';
 
-.pricngPlansSectionWrapper {
-	min-height: 80vh;
+.pricingPlansSectionWrapper {
+	min-height: 0;
+}
+
+.pricingNote {
+	margin-top: 18px;
+	margin-bottom: 30px;
+	justify-content: center;
+	text-align: center;
+	font-size: $fontsize_12;
+	font-weight: $fontweight_regular;
+	color: $prim_dark_2;
+}
+
+.pricingNoteSummary {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 11px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: $fontsize_12;
+	font-weight: $fontweight_regular;
+	color: $prim_dark_2;
 }
 
 .talkToExpertContainer {
@@ -34,7 +56,7 @@
 }
 
 .pricingPlansSection {
-	padding-top: 6rem;
+	padding-top: 7rem;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -65,6 +87,7 @@
 	justify-content: center;
 	align-items: center;
 	margin: 1rem auto;
+	margin-bottom: 5em;
 	p {
 		margin-right: 10px;
 		color: inherit;
@@ -151,9 +174,9 @@
 
 .priceSummaryWrapper {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: flex-start;
-	margin-top: 2rem;
+	margin-top: 4rem;
 
 	@media only screen and(max-width: 1200px) {
 		justify-content: space-evenly;
@@ -165,7 +188,7 @@
 	min-height: 25rem;
 	max-height: 35rem;
 	border-radius: 3px;
-	margin-left: 10px;
+	margin-left: 18px;
 }
 
 .tablePricingSummary {
@@ -174,7 +197,7 @@
 	justify-content: space-evenly;
 	align-items: center;
 	position: relative;
-	padding-bottom: 8em !important;
+	padding-bottom: 12em !important;
 
 	a,
 	button {

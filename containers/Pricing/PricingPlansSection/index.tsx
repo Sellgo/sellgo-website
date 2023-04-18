@@ -11,7 +11,7 @@ import PricingPlansCard from '../../../components/PricingPlansCard';
 import AllfeaturesTable from '../../../components/AllFeaturesTable';
 // import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
 // import ContactInfo from '../../../components/ContactInfo';
-import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
+// import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
 import TestimonialsSection from '../TestimonialSection';
 
 /* Constants */
@@ -88,11 +88,19 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							featuresLists={product.featuresLists}
 							setIsMonthly={setIsMonthly}
 							lookups={product.lookups}
+							users={product.users}
 							// Plan details
 							isMonthly={isMonthly}
 						/>
 					);
 				})}
+			</section>
+
+			<section className={styles.pricingNote}>
+				<p>
+					* Prices displayed in USD, based on annual billing, but do not include
+					applicable taxes.
+				</p>
 			</section>
 
 			{/*  Main pricing table comparision section section */}
@@ -111,7 +119,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					</Element>
 
 					{/* Summary pricing card head below table  */}
-					<div className={styles.priceSummaryWrapper}>
+					{/* <div className={styles.priceSummaryWrapper}>
 						{productsIncluded.map((product: any) => {
 							return (
 								<div className={styles.priceSummaryCard} key={uuid()}>
@@ -132,19 +140,25 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 										// optional props for comparision table cards
 										withToggle
 										className={styles.tablePricingSummary}
-										handleChange={() => setIsMonthly(!isMonthly)}
+										// handleChange={() => setIsMonthly(!isMonthly)}
 										isSmall
 									/>
 								</div>
 							);
 						})}
-					</div>
+					</div> */}
 				</section>
 			)}
+
+			{/* <section className={styles.pricingNoteSummary}>
+				<p>* Prices displayed in USD, based on annual billing, 
+						but do not include applicable taxes.</p>
+			</section> */}
+
 			<TestimonialsSection />
 
 			<div className={styles.brandsContainer}>
-				<h2>Trusted by 7,000+ businesses.</h2>
+				<h2>Trusted by moving forward businesses.</h2>
 				{/* <img src="/brands.png" alt="brands" /> */}
 				<img src="/brands1.png" alt="brands" />
 			</div>

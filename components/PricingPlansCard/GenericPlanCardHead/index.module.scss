@@ -5,16 +5,17 @@
 	position: relative;
 	border-radius: 7px;
 	background: $prim_white;
-	height: 380px;
+	height: 400px;
 
 	&__new {
-		padding-top: 6rem;
+		padding-top: 5rem;
 		border-top: none !important;
-		height: 430px;
+		height: 520px;
 	}
 
 	&__notNew {
-		margin-top: 5rem;
+		margin-top: 4rem;
+		height: 480px;
 	}
 
 	&__bordered {
@@ -42,7 +43,7 @@
 		}
 
 		p {
-			font-size: $fontsize_10;
+			font-size: $fontsize_12;
 			font-weight: $fontweight_regular;
 			color: $prim_dark_2;
 			max-width: 33rem;
@@ -55,7 +56,7 @@
 
 .startingAt {
 	font-size: $fontsize_10;
-	margin-top: 2rem;
+	margin-top: 0.5rem;
 	text-align: center;
 
 	h3 {
@@ -111,7 +112,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 90%;
 	margin: 2rem auto;
 	div {
 		width: 100%;
@@ -120,10 +121,10 @@
 
 .buyNowCTA {
 	width: 95%;
-	height: 4rem;
+	height: 6rem;
 	font-weight: $fontweight_semibold;
-	font-size: $fontsize_16;
-	margin: 8rem auto;
+	font-size: $fontsize_20;
+	margin: 18rem auto;
 	position: absolute;
 	bottom: 0;
 
@@ -133,10 +134,10 @@
 }
 
 .skipTrial {
-	margin: 7rem auto;
+	margin: 9rem auto;
 	position: absolute;
-	font-size: $fontsize_16;
-	font-weight: $fontweight_medium;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
 	text-align: center;
 	display: flex;
 	align-items: center;
@@ -144,15 +145,16 @@
 	width: 95%;
 
 	a {
-		color: $system_blue;
+		color: $black_0;
 		text-decoration: underline;
 		padding: 0.4em;
 	}
 }
 
 .skipTrialBottom {
-	font-size: $fontsize_16;
-	font-weight: $fontweight_medium;
+	margin: 2rem auto;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
 	position: absolute;
 	bottom: 0.3em;
 	text-align: center;
@@ -161,7 +163,7 @@
 	justify-content: center;
 
 	a {
-		color: $system_blue;
+		color: $black_0;
 		text-decoration: underline;
 		padding: 0.4em;
 	}
@@ -169,18 +171,18 @@
 
 .tableCardCTA {
 	width: 90%;
-	height: 5rem;
+	height: 4rem;
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_16;
 	margin: 0;
-	margin-bottom: 48px;
+	margin-bottom: 70px;
 }
 
 .newFeatureBanner {
 	position: absolute;
 	top: 0;
-	height: 5rem;
-	background: $purple_pink_gradient;
+	height: 4rem;
+	background: $black_0;
 
 	/* To compensate for the 1px from border */
 	width: calc(100% + 2px);
@@ -191,10 +193,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	font-size: $fontsize_20;
-	font-weight: $fontweight_medium;
+	font-size: $fontsize_16;
+	font-weight: $fontweight_regular;
 	color: $prim_white;
-	padding: 0 5rem;
+	padding: 0 6rem;
 }
 
 .paymentModeToggle {
@@ -213,15 +215,21 @@
 		/* Override absolute position for the smaller pricing header card */
 		left: 10px;
 	}
+
+	.periodPrice {
+		font-size: $fontsize_16;
+		font-weight: $fontweight_medium;
+		color: $grey_8;
+	}
 }
 
 .talkToExpertContainer {
 	text-align: center;
 
 	h1 {
-		color: #2e3b4a;
+		color: $grey_8;
 		font-size: $fontsize_16;
-		font-weight: $fontweight_medium;
+		font-weight: $fontweight_regular;
 	}
 
 	p {
@@ -232,7 +240,7 @@
 
 	button {
 		background-color: #000;
-		font-size: $fontsize_16;
+		font-size: $fontsize_20;
 		font-weight: $fontweight_semibold;
 		color: #fff;
 		border: none;
@@ -245,22 +253,47 @@
 
 	.buyNowBtn {
 		width: 90%;
-		height: 4rem;
+		height: 6rem;
 		position: absolute;
 		bottom: 0;
-		margin: 8rem auto;
+		margin: 18rem auto;
 	}
 
 	.tableCardBtn {
 		width: 26rem;
-		height: 5rem;
+		height: 4rem;
+		margin-bottom: 70px;
 	}
 }
 
 .lookups {
-	font-size: $fontsize_24;
-	font-weight: $fontweight_bold;
-	color: $prim_dark_2;
+	font-size: $fontsize_20;
+	font-weight: $fontweight_semibold;
+	color: $grey_9;
+	//margin: 4em auto;
+	margin-top: 7em;
+	padding-left: 7px;
+	line-height: $fontlineheight_40;
+	//padding-top: 1em;
+	//text-align: center;
+}
+
+.lookupsEnterprise {
+	font-size: $fontsize_20;
+	font-weight: $fontweight_semibold;
+	color: $grey_9;
+	//margin: 4em auto;
+	margin-top: 6em;
+	padding-left: 7px;
+	line-height: $fontlineheight_40;
+	//padding-top: 1em;
+	//text-align: center;
+}
+
+.lookupsSummary {
+	font-size: $fontsize_16;
+	font-weight: $fontweight_regular;
+	color: $grey_8;
 	margin: 0.2em auto;
 	text-align: center;
 }

@@ -53,7 +53,7 @@
 .heading {
 	font-size: $fontsize_46;
 	font-weight: $fontweight_extrabold;
-	line-height: $fontlineheight_heading_50;
+	line-height: $fontlineheight_50;
 
 	@media only screen and(max-width: 650px) {
 		font-size: $fontsize_38;
@@ -63,7 +63,7 @@
 
 .animatedText {
 	font-size: $fontsize_50;
-	height: $fontlineheight_heading_100;
+	height: $fontlineheight_100;
 	@media only screen and(max-width: 650px) {
 		font-size: $fontsize_38;
 	}
@@ -73,7 +73,7 @@
 	margin-top: 0;
 	width: 600px;
 	font-size: $fontsize_20;
-	line-height: $fontlineheight_content_30;
+	line-height: $fontlineheight_30;
 	font-weight: $fontweight_semibold;
 	color: $black_0;
 
@@ -86,7 +86,7 @@
 	margin-top: 0;
 	width: 400px;
 	font-size: $fontsize_16;
-	line-height: $fontlineheight_content_20;
+	line-height: $fontlineheight_20;
 	font-weight: $fontweight_medium;
 	color: $grey_8;
 

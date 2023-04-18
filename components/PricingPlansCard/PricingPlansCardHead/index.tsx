@@ -12,6 +12,7 @@ interface Props {
 
 	// plan details
 	isMonthly: boolean;
+	users: number;
 	lookups: number;
 	setIsMonthly: (isMonthly: boolean) => void;
 
@@ -23,7 +24,7 @@ interface Props {
 	isEnterprise?: boolean;
 	isUsage?: boolean;
 	isSmall?: boolean;
-	handleChange?: () => any;
+	// handleChange?: () => any;
 }
 
 const PricingPlansCardHead: React.FC<Props> = (props) => {
@@ -38,6 +39,7 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 		withToggle,
 		// handleChange,
 		isSmall,
+		users,
 		lookups,
 		className,
 		isFree,
@@ -52,6 +54,7 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 				isSmall={isSmall}
 				name={name}
 				desc={desc}
+				users={users}
 				lookups={lookups}
 				monthlyPrice={monthlyPrice}
 				setIsMonthly={setIsMonthly}
@@ -76,8 +79,8 @@ PricingPlansCardHead.defaultProps = {
 	isFree: false,
 	isEnterprise: false,
 	isSmall: false,
-	isUsage: false,
-	handleChange: () => null
+	isUsage: false
+	// handleChange: () => null
 };
 
 export default PricingPlansCardHead;

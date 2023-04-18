@@ -12,7 +12,7 @@ import DemoForm from '../../../containers/Demo/DemoForm';
 
 /* Utils */
 
-import { prettyPrintNumber } from '../../../utils/Format';
+import { formatNumber } from '../../../utils/Format';
 import { createSignupLink } from '../../../utils/Referral';
 
 interface Props {
@@ -20,6 +20,7 @@ interface Props {
 	desc: string;
 	monthlyPrice: number;
 	annualPrice: number;
+	users: number;
 	lookups: number;
 	isNew?: boolean;
 	isFree?: boolean;
@@ -47,6 +48,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		setIsMonthly,
 		annualPrice,
 		desc,
+		users,
 		lookups,
 		isNew,
 		isFree,
@@ -93,12 +95,12 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 
 			{isUsage ? (
 				<div className={styles.startingAt}>
-					<p>
-						Starts At{' '}
+					{/* <p>
+						Starts at{' '}
 						{!isMonthly && (
 							<span className="strike-text">${Math.round(monthlyPrice)}</span>
 						)}
-					</p>
+					</p> */}
 
 					{isMonthly ? (
 						<span className={styles.betaPriceContainer}>
@@ -107,7 +109,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 									withToggle && styles.toggledPrice
 								}`}
 							>
-								${Math.round(monthlyPrice)}/ mo
+								${Math.round(monthlyPrice)}
+								<span className={styles.periodPrice}> /mo</span>
 							</h3>
 						</span>
 					) : (
@@ -117,12 +120,13 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 									withToggle && styles.toggledPrice
 								}`}
 							>
-								${Math.round(annualPrice / 12)}/ mo
+								${Math.round(annualPrice / 12)}
+								<span className={styles.periodPrice}> /mo*</span>
 							</h3>
 						</span>
 					)}
 
-					{!isMonthly ? (
+					{/* {!isMonthly ? (
 						<p className={styles.billedAtPrice}>
 							<span
 								className={`${styles.originalPrice} ${
@@ -153,7 +157,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						</p>
 					) : (
 						<p>Billed Monthly</p>
-					)}
+					)} */}
 				</div>
 			) : (
 				<div className={styles.startingAt}>
@@ -170,7 +174,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 									withToggle && styles.toggledPrice
 								}`}
 							>
-								${Math.round(monthlyPrice)}/ mo
+								${Math.round(monthlyPrice)}
+								<span className={styles.periodPrice}> /mo</span>
 							</h3>
 						</span>
 					) : (
@@ -223,7 +228,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				<CTAButton
 					type="primary"
 					size="medium"
-					variant={isNew ? 'purplePinkRainbow' : 'purplePinkRainbow'}
+					variant={isNew ? 'rainbow' : 'black'}
 					navigateTo={
 						isNew
 							? createSignupLink('BUSINESS_PLAN')
@@ -237,15 +242,11 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</CTAButton>
 			)}
 
-			{lookups && !isEnterprise ? (
-				<h2 className={styles.lookups}>{lookups} lookups</h2>
-			) : null}
-
 			{isFree && (
 				<CTAButton
 					type="primary"
 					size="medium"
-					variant={isNew ? 'purplePinkRainbow' : 'green'}
+					variant={isNew ? 'rainbow' : 'green'}
 					navigateTo={
 						isNew
 							? createSignupLink('BUSINESS_PLAN')
@@ -261,19 +262,20 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 
 			{isEnterprise && (
 				<div className={styles.talkToExpertContainer}>
-					<h1>Unlimited contacts</h1>
+					{/* <h1>Unlimited lookups</h1> */}
 
 					<button
 						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
 						onClick={() => setIsDemoFormOpen(true)}
 					>
-						Contact sales
+						Request a demo
 					</button>
 				</div>
 			)}
 
 			{!withToggle && !isEnterprise && (
 				<p className={styles.skipTrial}>
+					or
 					<CTAButton
 						type="link"
 						size="small"
@@ -286,7 +288,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						asExternal
 						newTarget
 					>
-						or Skip trial, get 20% off
+						Skip trial, get 20% off
 					</CTAButton>
 				</p>
 			)}
@@ -308,6 +310,20 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						or Skip trial, get 20% off
 					</CTAButton>
 				</p>
+			)}
+
+			{lookups && !isEnterprise ? (
+				<h2 className={styles.lookups}>
+					{users} Users
+					<br />
+					{formatNumber(lookups)} Brand insights
+				</h2>
+			) : (
+				<h2 className={styles.lookupsEnterprise}>
+					Starts at {users} Users
+					<br />
+					Starts at {formatNumber(lookups)} Brand insights
+				</h2>
 			)}
 
 			<Modal

@@ -1,11 +1,11 @@
 @import '../../../styles/guidelines';
 
 .featuresList {
-	margin-top: 2rem;
-	margin-bottom: 1rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0;
 
 	p {
-		font-size: $fontsize_14;
+		font-size: $fontsize_20;
 		color: $prim_dark_2;
 		font-weight: $fontweight_semibold;
 		text-transform: uppercase;
@@ -13,15 +13,16 @@
 
 	ul {
 		list-style: none;
-		padding-left: 1em;
+		padding-left: 18px;
 
 		li {
-			font-size: $fontsize_12;
-			font-weight: $fontweight_regular;
+			font-size: $fontsize_16;
+			font-weight: $fontweight_medium;
 			color: $prim_dark_1;
+			padding-top: 11px;
 			margin: 4px 0;
 			span {
-				margin-left: 8px;
+				margin-left: 7px;
 			}
 		}
 	}
