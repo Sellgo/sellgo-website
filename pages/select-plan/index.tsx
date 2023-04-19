@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Containers */
-import HeroBox from '../../containers/SelectPlan/HeroBox';
+import HeroBox from '../../containers/SelectPlan';
 
 /* Components */
 import SEOHead from '../../components/SEOHead';

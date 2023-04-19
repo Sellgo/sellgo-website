@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 import styles from './index.module.scss';
 
 /* Components */
-import CTAButton from '../../../components/CTAButton';
-import LinkedIn from '../../../components/Icons/SocialIcons/LinkedIn';
-import Facebook from '../../../components/Icons/SocialIcons/Facebook';
-import Instagram from '../../../components/Icons/SocialIcons/Instagram';
+import CTAButton from '../../components/CTAButton';
+import LinkedIn from '../../components/Icons/SocialIcons/LinkedIn';
+import Facebook from '../../components/Icons/SocialIcons/Facebook';
+import Instagram from '../../components/Icons/SocialIcons/Instagram';
 
 /* Utils */
-import { createSignupLink } from '../../../utils/Referral';
+import { createSignupLink } from '../../utils/Referral';
 
 interface Props {}
 
@@ -72,14 +72,14 @@ const HeroBox: React.FC<Props> = () => {
 						</ul>
 					</button>
 					<button
-						className={`${selectedPlan === 'team' ? styles.selected : ''} ${
+						className={`${selectedPlan === 'business' ? styles.selected : ''} ${
 							styles.selection
 						}`}
-						onClick={() => setSelectedPlan('team')}
+						onClick={() => setSelectedPlan('business')}
 					>
 						<h2>I have a team</h2>
 						<p>
-							Try our <strong>Team</strong> plan free for 7 days
+							Try our <strong>Business</strong> plan free for 7 days
 						</p>
 						<img src="https://picsum.photos/450/270" alt="team" />
 						<h3>3 Users</h3>
@@ -123,15 +123,16 @@ const HeroBox: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="medium"
-						variant={'purplePinkRainbow'}
+						variant={'rainbow'}
 						disabled={!selectedPlan}
 						navigateTo={
-							selectedPlan === 'team'
-								? createSignupLink('TEAM_PLAN')
+							selectedPlan === 'business'
+								? createSignupLink('BUSINESS_PLAN')
 								: createSignupLink('PROFESSIONAL_PLAN')
 						}
 						asExternal
 						newTarget
+						className={styles.ctaBtn}
 					>
 						Start your free 7-day trial
 					</CTAButton>
@@ -142,8 +143,8 @@ const HeroBox: React.FC<Props> = () => {
 						variant={'white'}
 						disabled={!selectedPlan}
 						navigateTo={
-							selectedPlan === 'team'
-								? createSignupLink('TEAM', 'buynow')
+							selectedPlan === 'business'
+								? createSignupLink('BUSINESS_PLAN', 'buynow')
 								: createSignupLink('PROFESSIONAL_PLAN', 'buynow')
 						}
 						asExternal

@@ -1,4 +1,4 @@
-@import '../../../styles/guidelines';
+@import '../../styles/guidelines';
 
 .heroboxWrapper {
 	background: $prim_white;
@@ -34,7 +34,7 @@
 
 .selections {
 	display: flex;
-	gap: 4em;
+	gap: 30px;
 
 	.selected {
 		border: 5px solid #1e1e1e !important;
@@ -58,7 +58,10 @@
 		width: 450px;
 		height: 530px;
 		border-radius: 20px;
-		border: 5px solid #f7f7f7;
+
+		&:hover {
+			opacity: 0.8;
+		}
 
 		h2,
 		h3,
@@ -97,9 +100,20 @@
 	}
 }
 
+.ctaBtn {
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
 .skipTrialBtn {
 	text-decoration: underline;
-	margin-top: 1em;
+	font-size: $fontsize_16;
+	margin-top: 0.5em;
+
+	&:hover {
+		opacity: 0.8;
+	}
 }
 
 .features {

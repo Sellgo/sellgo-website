@@ -13,7 +13,8 @@ interface Props {}
 const Navbar: React.FC<Props> = () => {
 	const router = useRouter();
 
-	return router.pathname !== '/career/[id]' ? (
+	return router.pathname !== '/career/[id]' &&
+		router.pathname !== '/select-plan' ? (
 		<header className={`${styles.header}`}>
 			<nav className={`navigation-container ${styles.navbar}`}>
 				<NavbarTop />
