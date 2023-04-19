@@ -12,18 +12,18 @@ export const planTypes: PlanTypes[] = [
 	// 	img: 'instant-download.svg',
 	// 	isNew: false
 	// },
-	{
-		name: 'Usage-based Subscription',
-		content: 'Pay less on software, invest more in your business.',
-		img: 'instant-download.svg',
-		isNew: false
-	},
-	{
-		name: 'Account-based Solution',
-		content: 'Get your most wanted data in seconds, no hassle.',
-		img: 'chartnetworkIcon.svg',
-		isNew: false
-	}
+	// {
+	// 	name: 'Usage-based Subscription',
+	// 	content: 'Pay less on software, invest more in your business.',
+	// 	img: 'instant-download.svg',
+	// 	isNew: false
+	// },
+	// {
+	// 	name: 'Account-based Solution',
+	// 	content: 'Get your most wanted data in seconds, no hassle.',
+	// 	img: 'chartnetworkIcon.svg',
+	// 	isNew: false
+	// }
 ];
 
 export const plansAndProductsDetails = [
@@ -46,39 +46,20 @@ export const plansAndProductsDetails = [
 			}
 		},
 		productsIncluded: [
-			// {
-			// 	id: 5, // subscriptionID if needed
-			// 	name: 'Free',
-			// 	productsDatabase: 0,
-			// 	salesEstimateCount: 1000,
-			// 	monthlyPrice: 0,
-			// 	annualPrice: 0,
-			// 	desc: `Test drive it`,
-			// 	featureSubName: 'Free includes:',
-			// 	isFree: true,
-			// 	isEnterprise: false,
-			// 	isUsage: false,
-			// 	featuresLists: [
-			// 		{
-			// 			title: '',
-			// 			featuresIncluded: [
-			// 				'Verified emails',
-			// 				'Verified mobile and direct phones',
-			// 				'Verified social media links'
-			// 			]
-			// 		}
-			// 	]
-			// },
 			{
 				id: 6, // subscriptionID if needed
-				name: 'Personal',
+				name: 'Professional',
 				productsDatabase: 0,
 				salesEstimateCount: 1000,
 				monthlyPrice: 499,
 				annualPrice: 4790,
-				lookups: 500,
+				users: 1,
+				lookups: 12000,
 				desc: `Essential for finding your prospects`,
-				featureSubName: 'Everything in Free, plus',
+				featureSubName: 'Free',
+				isFirstPlan: true,
+				isSecondPlan: false,
+				isThirdPlan: false,
 				isNew: true,
 				isFree: false,
 				isEnterprise: false,
@@ -87,14 +68,38 @@ export const plansAndProductsDetails = [
 					{
 						title: '',
 						featuresIncluded: [
-							'Contact management',
-							'Bulk export',
-							'Basic CRM integration',
-							'Seller map access'
+							'Unlimited search',
+							'Bulk list export',
+							'CRM integration'
 						]
 					}
 				]
 			},
+			// {
+			// 	id: 1,
+			// 	name: 'Team',
+			// 	productsDatabase: 0,
+			// 	salesEstimateCount: 2000,
+			// 	monthlyPrice: 749,
+			// 	annualPrice: 7190,
+			// 	users: 3,
+			// 	lookups: 24000,
+			// 	desc: `Perfect for small teams`,
+			// 	featureSubName: 'Professional',
+			// 	isFirstPlan: false,
+			// 	isSecondPlan: true,
+			// 	isThirdPlan: false,
+			// 	isNew: false,
+			// 	isFree: false,
+			// 	isEnterprise: false,
+			// 	isUsage: true,
+			// 	featuresLists: [
+			// 		{
+			// 			title: '',
+			// 			featuresIncluded: ['Roles & permissions', 'Assign team members']
+			// 		}
+			// 	]
+			// },
 			{
 				id: 1,
 				name: 'Business',
@@ -102,9 +107,13 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 2000,
 				monthlyPrice: 999,
 				annualPrice: 9590,
-				lookups: 500,
-				desc: `Perfect for small teams with simple workflows`,
-				featureSubName: 'Everything in Personal, plus:',
+				users: 5,
+				lookups: 36000,
+				desc: `Perfect for small teams`,
+				featureSubName: 'Professional',
+				isFirstPlan: false,
+				isSecondPlan: false,
+				isThirdPlan: true,
 				isNew: false,
 				isFree: false,
 				isEnterprise: false,
@@ -113,11 +122,10 @@ export const plansAndProductsDetails = [
 					{
 						title: '',
 						featuresIncluded: [
-							'Advanced prospecting filter,',
-							'Bulk prospecting,',
-							'Advanced decision maker data,',
-							'Advanced company data',
-							'Bulk prospecting (25 contacts)'
+							'Buying intent signals',
+							'Decision maker enrichment',
+							'Advanced engagement',
+							'Sellgo customer support'
 						]
 					}
 				]
@@ -129,9 +137,13 @@ export const plansAndProductsDetails = [
 				salesEstimateCount: 3000,
 				monthlyPrice: 0,
 				annualPrice: 0,
-				lookups: 500,
+				users: 5,
+				lookups: 100000,
 				desc: `Ideal for prospecting at large scales`,
-				featureSubName: 'Everything in Business, plus:',
+				featureSubName: 'Business',
+				isFirstPlan: false,
+				isSecondPlan: false,
+				isThirdPlan: false,
 				isFree: false,
 				isEnterprise: true,
 				isUsage: false,
@@ -139,15 +151,9 @@ export const plansAndProductsDetails = [
 					{
 						title: '',
 						featuresIncluded: [
-							'CSV enrichment',
-							'Bulk prospecting (1,000 contacts)',
+							'Social ads analytics',
 							'Advanced CRM integration',
-							'Buying intent signals',
-							'Buying intent alerts',
-							'Salesforce data enrichment',
-							'Sellgo API',
-							'SSO',
-							'Advanced team management',
+							'Buying intent tracker',
 							'Dedicated account manager'
 						]
 					}

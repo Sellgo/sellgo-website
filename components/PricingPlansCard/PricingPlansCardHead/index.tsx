@@ -12,6 +12,7 @@ interface Props {
 
 	// plan details
 	isMonthly: boolean;
+	users: number;
 	lookups: number;
 	setIsMonthly: (isMonthly: boolean) => void;
 
@@ -23,6 +24,9 @@ interface Props {
 	isEnterprise?: boolean;
 	isUsage?: boolean;
 	isSmall?: boolean;
+	isFirstPlan?: boolean;
+	isSecondPlan?: boolean;
+	isThirdPlan?: boolean;
 	handleChange?: () => any;
 }
 
@@ -36,14 +40,20 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 		isMonthly,
 		setIsMonthly,
 		withToggle,
-		// handleChange,
+		handleChange,
 		isSmall,
+		users,
 		lookups,
 		className,
+		isFirstPlan,
+		isSecondPlan,
+		isThirdPlan,
 		isFree,
 		isEnterprise,
 		isUsage
 	} = props;
+
+	console.log(handleChange);
 
 	return (
 		<>
@@ -52,6 +62,7 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 				isSmall={isSmall}
 				name={name}
 				desc={desc}
+				users={users}
 				lookups={lookups}
 				monthlyPrice={monthlyPrice}
 				setIsMonthly={setIsMonthly}
@@ -64,6 +75,9 @@ const PricingPlansCardHead: React.FC<Props> = (props) => {
 				isFree={isFree}
 				isEnterprise={isEnterprise}
 				isUsage={isUsage}
+				isFirstPlan={isFirstPlan}
+				isSecondPlan={isSecondPlan}
+				isThirdPlan={isThirdPlan}
 			/>
 		</>
 	);
@@ -76,8 +90,8 @@ PricingPlansCardHead.defaultProps = {
 	isFree: false,
 	isEnterprise: false,
 	isSmall: false,
-	isUsage: false,
-	handleChange: () => null
+	isUsage: false
+	// handleChange: () => null
 };
 
 export default PricingPlansCardHead;
