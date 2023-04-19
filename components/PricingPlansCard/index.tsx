@@ -84,9 +84,13 @@ const PricingPlansCard: React.FC<Props> = (props) => {
 					isThirdPlan={isThirdPlan}
 				/>
 
-				<p className={styles.planType}>
-					Everything in <strong>{featureSubName}</strong>, plus:
-				</p>
+				{isUsage && isFirstPlan ? (
+					<p className={styles.planType}>Start with:</p>
+				) : (
+					<p className={styles.planType}>
+						Everything in <strong>{featureSubName}</strong>, plus:
+					</p>
+				)}
 
 				<div className={styles.pricingPlansCardBody}>
 					{featuresLists.map((featureList: any) => {

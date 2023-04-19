@@ -45,7 +45,7 @@ const HeroBox: React.FC<Props> = () => {
 					variant="rainbow"
 					className={styles.heroBoxCTA}
 				>
-					Sign up free
+					Sign up
 				</CTAButton>
 				<p>
 					Try it free. No credit card required.

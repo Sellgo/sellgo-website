@@ -40,7 +40,7 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 						newTarget
 						className={styles.freeTrialCTA}
 					>
-						Sign up free
+						Sign up
 					</CTAButton>
 					<p>Try for free, no credit card required.</p>
 				</div>
