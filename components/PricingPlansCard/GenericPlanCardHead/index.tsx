@@ -419,7 +419,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				<h2 className={styles.lookups}>
 					{users} User
 					<br />
-					{formatNumber(lookups)} Brand insights
+					{formatNumber(lookups)} Insights
 					<ul className={styles.icons}>
 						<li>
 							<DecisionMaker width={17} height={20} fill="#012b3b" />
@@ -443,7 +443,6 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 							<Instagram width={15} height={20} fill="#012b3b" />
 						</li>
 					</ul>
-					<p>d</p>
 				</h2>
 			)}
 
@@ -451,7 +450,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				<h2 className={styles.lookups}>
 					{users} Users
 					<br />
-					{formatNumber(lookups)} Brand insights
+					{formatNumber(lookups)} Insights
 					<ul className={styles.icons}>
 						<li>
 							<DecisionMaker width={17} height={20} fill="#012b3b" />
@@ -482,7 +481,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				<h2 className={styles.lookups}>
 					{users} Users
 					<br />
-					{formatNumber(lookups)} Brand insights
+					{formatNumber(lookups)} Insights
 					<ul className={styles.icons}>
 						<li>
 							<DecisionMaker width={17} height={20} fill="#012b3b" />
@@ -513,7 +512,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				<h2 className={styles.lookupsEnterprise}>
 					Starts at {users}+ Users
 					<br />
-					Starts at {formatNumber(lookups)}+ Brand insights
+					Starts at {formatNumber(lookups)}+ Insights
 					<ul className={styles.icons}>
 						<li>
 							<DecisionMaker width={17} height={20} fill="#012b3b" />

@@ -44,7 +44,7 @@ const HeroBox: React.FC<Props> = () => {
 						</p>
 						<img src="first_selectPlan.png" alt="professional" />
 						<h3>1 User</h3>
-						<h3>12,000 brand insights</h3>
+						<h3>12,000 Insights</h3>
 
 						<ul>
 							<li>
@@ -82,7 +82,7 @@ const HeroBox: React.FC<Props> = () => {
 						</p>
 						<img src="third_selectPlan.png" alt="team" />
 						<h3>5 Users</h3>
-						<h3>36,000 brand insights</h3>
+						<h3>36,000 Insights</h3>
 
 						<ul>
 							<li>
