@@ -110,7 +110,7 @@ export const plansAndProductsDetails = [
 				users: 5,
 				lookups: 36000,
 				desc: `Perfect for small teams`,
-				featureSubName: 'Team',
+				featureSubName: 'Professional',
 				isFirstPlan: false,
 				isSecondPlan: false,
 				isThirdPlan: true,
