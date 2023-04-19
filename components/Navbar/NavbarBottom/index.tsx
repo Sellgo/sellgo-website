@@ -12,7 +12,6 @@ import ProductsNavbarExpansion from '../ProductsNavbarExpansion';
 import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
 import AppConfig from '../../../config';
-import { createFreeTrialLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -67,7 +66,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				</ul>
 			</div>
 
-			{router.pathname !== '/career' && (
+			{router.pathname !== '/career' && router.pathname !== '/select-plan' && (
 				<>
 					<a
 						href={AppConfig.APP_URL}
@@ -80,9 +79,7 @@ const NavbarBottom: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="small"
-						navigateTo={createFreeTrialLink()}
-						newTarget
-						asExternal
+						navigateTo={'/select-plan'}
 						variant="white"
 						className={styles.navbarCTA}
 					>

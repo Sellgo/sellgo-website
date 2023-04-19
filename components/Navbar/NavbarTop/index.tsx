@@ -17,7 +17,7 @@ const NavbarTop: React.FC<Props> = () => {
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
 	return (
 		<div className={styles.navbarTop}>
-			{router.pathname !== '/career' && (
+			{router.pathname !== '/career' && router.pathname !== '/select-plan' && (
 				<>
 					<Link href="/sales-estimator" passHref>
 						<a className={styles.salesEstimator}>
