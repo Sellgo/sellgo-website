@@ -27,7 +27,7 @@ interface Props {
 	isFirstPlan?: boolean;
 	isSecondPlan?: boolean;
 	isThirdPlan?: boolean;
-	// handleChange?: () => any;
+	handleChange?: () => any;
 }
 
 const PricingPlansCardHead: React.FC<Props> = (props) => {

@@ -14,8 +14,6 @@ import Facebook from '../../Icons/SocialIcons/Facebook';
 import Instagram from '../../Icons/SocialIcons/Instagram';
 import Twitter from '../../Icons/SocialIcons/Twitter';
 import DecisionMaker from '../../Icons/DecisionMaker';
-// import NewLink from '../../Icons/NewLink';
-// import PaperAirplane from '../../Icons/PaperAirplane';
 import Email from '../../Icons/Email';
 import Phone from '../../Icons/Phone';
 
@@ -248,7 +246,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					navigateTo={
 						isNew
 							? createSignupLink('PROFESSIONAL_PLAN')
-							: createSignupLink('TEAM_PLAN')
+							: createSignupLink('BUSINESS_PLAN')
 					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
@@ -266,7 +264,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					navigateTo={
 						isNew
 							? createSignupLink('PROFESSIONAL_PLAN')
-							: createSignupLink('TEAM_PLAN')
+							: createSignupLink('BUSINESS_PLAN')
 					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
@@ -284,7 +282,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					navigateTo={
 						isNew
 							? createSignupLink('PROFESSIONAL_PLAN')
-							: createSignupLink('TEAM_PLAN')
+							: createSignupLink('BUSINESS_PLAN')
 						}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
@@ -315,7 +313,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					navigateTo={
 						isNew
 							? createSignupLink('PROFESSIONAL_PLAN')
-							: createSignupLink('TEAM_PLAN')
+							: createSignupLink('BUSINESS_PLAN')
 					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
@@ -348,7 +346,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						navigateTo={
 							isNew
 								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
-								: createSignupLink('TEAM_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -368,7 +366,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						navigateTo={
 							isNew
 								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
-								: createSignupLink('TEAM_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -388,7 +386,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						navigateTo={
 							isNew
 								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
-								: createSignupLink('TEAM_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -407,7 +405,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						navigateTo={
 							isNew
 								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
-								: createSignupLink('TEAM_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -551,7 +549,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						navigateTo={
 							isNew
 								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
-								: createSignupLink('TEAM_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -570,7 +568,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						navigateTo={
 							isNew
 								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
-								: createSignupLink('TEAM_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -589,7 +587,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						navigateTo={
 							isNew
 								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
-								: createSignupLink('TEAM_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -608,7 +606,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						navigateTo={
 							isNew
 								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
-								: createSignupLink('TEAM_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget

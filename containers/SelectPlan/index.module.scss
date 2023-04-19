@@ -7,8 +7,8 @@
 
 .herobox {
 	overflow: hidden;
-	padding-top: 10em;
-	padding-bottom: 10em;
+	padding-top: 7em;
+	padding-bottom: 7em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -103,6 +103,7 @@
 .ctaBtn {
 	&:hover {
 		opacity: 0.8;
+		cursor: pointer;
 	}
 }
 
@@ -113,25 +114,36 @@
 
 	&:hover {
 		opacity: 0.8;
+		cursor: pointer;
 	}
 }
 
 .features {
-	padding: 5em;
+	padding-top: 7em;
+	padding-bottom: 7em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10em;
+	gap: 12em;
 
 	.feature {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		gap: 4em;
+		gap: 1em;
 
+		h2 {
+			font-size: $fontsize_24;
+			font-weight: $fontweight_semibold;
+			color: $black_green;
+			text-align: center;
+		}
 		p {
-			font-weight: $fontweight_bold;
+			font-size: $fontsize_14;
+			font-weight: $fontweight_regular;
+			color: $black_green;
+			text-align: center;
 		}
 	}
 }
