@@ -14,8 +14,8 @@ import Facebook from '../../Icons/SocialIcons/Facebook';
 import Instagram from '../../Icons/SocialIcons/Instagram';
 import Twitter from '../../Icons/SocialIcons/Twitter';
 import DecisionMaker from '../../Icons/DecisionMaker';
-import NewLink from '../../Icons/NewLink';
-import PaperAirplane from '../../Icons/PaperAirplane';
+// import NewLink from '../../Icons/NewLink';
+// import PaperAirplane from '../../Icons/PaperAirplane';
 import Email from '../../Icons/Email';
 import Phone from '../../Icons/Phone';
 
@@ -23,7 +23,7 @@ import Phone from '../../Icons/Phone';
 
 import { formatNumber } from '../../../utils/Format';
 import { createSignupLink } from '../../../utils/Referral';
-import ChromeExtension from '../../Icons/Products/ChromeExtension';
+// import ChromeExtension from '../../Icons/Products/ChromeExtension';
 
 interface Props {
 	name: string;
@@ -411,16 +411,25 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					{formatNumber(lookups)} Brand insights
 					<ul className={styles.icons}>
 						<li>
-							<ChromeExtension width={15} height={20} fill="#012b3b" />
-						</li>
-						<li>
 							<DecisionMaker width={17} height={20} fill="#012b3b" />
 						</li>
 						<li>
-							<Email width={27} height={20} fill="#012b3b" />
+							<Email width={20} height={17} fill="#012b3b" />
 						</li>
 						<li>
-							<Phone width={17} height={17} fill="#012b3b" />
+							<Phone width={17} height={18} fill="#012b3b" />
+						</li>
+						<li>
+							<LinkedIn width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Twitter width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Facebook width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Instagram width={15} height={20} fill="#012b3b" />
 						</li>
 					</ul>
 				</h2>
@@ -432,6 +441,15 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					<br />
 					{formatNumber(lookups)} Brand insights
 					<ul className={styles.icons}>
+						<li>
+							<DecisionMaker width={17} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Email width={20} height={17} fill="#012b3b" />
+						</li>
+						<li>
+							<Phone width={17} height={18} fill="#012b3b" />
+						</li>
 						<li>
 							<LinkedIn width={15} height={20} fill="#012b3b" />
 						</li>
@@ -458,17 +476,10 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 							<DecisionMaker width={17} height={20} fill="#012b3b" />
 						</li>
 						<li>
-							<Email width={27} height={20} fill="#012b3b" />
+							<Email width={20} height={17} fill="#012b3b" />
 						</li>
 						<li>
-							<Phone width={17} height={17} fill="#012b3b" />
-						</li>
-
-						<li>
-							<PaperAirplane width={15} height={20} fill="#012b3b" />
-						</li>
-						<li>
-							<NewLink width={15} height={20} fill="#012b3b" />
+							<Phone width={17} height={18} fill="#012b3b" />
 						</li>
 						<li>
 							<LinkedIn width={15} height={20} fill="#012b3b" />
@@ -493,32 +504,25 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					Starts at {formatNumber(lookups)}+ Brand insights
 					<ul className={styles.icons}>
 						<li>
-							<a
-								href="https://www.facebook.com/sellgoinc/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Facebook width={15} height={20} fill="#000" />
-							</a>
-						</li>
-
-						<li>
-							<a
-								href="https://www.instagram.com/sellgoinc_/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Instagram width={15} height={20} fill="#000" />
-							</a>
+							<DecisionMaker width={17} height={20} fill="#012b3b" />
 						</li>
 						<li>
-							<a
-								href="https://www.linkedin.com/company/sellgo/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<LinkedIn width={15} height={20} fill="#000" />
-							</a>
+							<Email width={20} height={17} fill="#012b3b" />
+						</li>
+						<li>
+							<Phone width={17} height={18} fill="#012b3b" />
+						</li>
+						<li>
+							<LinkedIn width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Twitter width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Facebook width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Instagram width={15} height={20} fill="#012b3b" />
 						</li>
 					</ul>
 				</h2>
