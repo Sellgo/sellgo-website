@@ -77,11 +77,11 @@ const TopFooter: React.FC<Props> = () => {
 						<a>Usage-based subscription</a>
 					</Link>
 				</li>
-				<li className="footerNavigationLinks">
+				{/* <li className="footerNavigationLinks">
 					<Link href="/pricing?type=account-based-plans" passHref>
 						<a>Account-based solution</a>
 					</Link>
-				</li>
+				</li> */}
 			</ul>
 
 			<ul className={styles.footerNavigation}>
