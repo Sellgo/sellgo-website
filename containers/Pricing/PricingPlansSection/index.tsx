@@ -90,7 +90,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							lookups={product.lookups}
 							users={product.users}
 							isFirstPlan={product.isFirstPlan}
-							// isSecondPlan={product.isSecondPlan}
+							isSecondPlan={product.isSecondPlan}
 							isThirdPlan={product.isThirdPlan}
 							// Plan details
 							isMonthly={isMonthly}

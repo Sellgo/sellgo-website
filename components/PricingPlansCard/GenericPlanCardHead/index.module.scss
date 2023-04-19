@@ -121,9 +121,9 @@
 
 .buyNowCTA {
 	width: 95%;
-	height: 6rem;
+	height: 5rem;
 	font-weight: $fontweight_semibold;
-	font-size: $fontsize_20;
+	font-size: $fontsize_18;
 	margin: 18rem auto;
 	position: absolute;
 	bottom: 0;
@@ -200,7 +200,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	font-size: $fontsize_16;
+	font-size: $fontsize_14;
 	font-weight: $fontweight_regular;
 	color: $prim_white;
 	padding: 0 6rem;
@@ -247,7 +247,7 @@
 
 	button {
 		background-color: $black_green;
-		font-size: $fontsize_20;
+		font-size: $fontsize_18;
 		font-weight: $fontweight_semibold;
 		color: #fff;
 		border: none;
@@ -260,7 +260,7 @@
 
 	.buyNowBtn {
 		width: 90%;
-		height: 6rem;
+		height: 5rem;
 		position: absolute;
 		bottom: 0;
 		margin: 18rem auto;
@@ -274,11 +274,11 @@
 }
 
 .lookups {
-	font-size: $fontsize_20;
+	font-size: $fontsize_18;
 	font-weight: $fontweight_semibold;
 	color: $black_green;
 	//margin: 4em auto;
-	margin-top: 7em;
+	margin-top: 8em;
 	padding-left: 7px;
 	line-height: $fontlineheight_40;
 	//padding-top: 1em;
@@ -286,11 +286,11 @@
 }
 
 .lookupsEnterprise {
-	font-size: $fontsize_20;
+	font-size: $fontsize_18;
 	font-weight: $fontweight_semibold;
 	color: $black_green;
 	//margin: 4em auto;
-	margin-top: 6em;
+	margin-top: 5em;
 	padding-left: 7px;
 	line-height: $fontlineheight_40;
 	//padding-top: 1em;
@@ -298,7 +298,7 @@
 }
 
 .lookupsSummary {
-	font-size: $fontsize_16;
+	font-size: $fontsize_18;
 	font-weight: $fontweight_regular;
 	color: $black_green;
 	margin: 0.2em auto;

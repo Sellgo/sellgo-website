@@ -50,7 +50,7 @@
 	font-size: $fontsize_16;
 	font-weight: $fontweight_regular;
 	color: $prim_white;
-	padding: 0 10rem;
+	padding: 0 5rem;
 }
 
 .pricingPlansCard {
@@ -62,7 +62,8 @@
 }
 
 .planType {
-	font-size: $fontsize_16;
+	padding-top: 18px;
+	font-size: $fontsize_14;
 	color: $prim_dark_1;
 	font-weight: $fontweight_regular;
 	padding-left: 18px;
