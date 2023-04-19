@@ -254,7 +254,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					asExternal
 					newTarget
 				>
-					Free 14-day trial
+					Free 7-day trial
 				</CTAButton>
 			)}
 
@@ -272,7 +272,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					asExternal
 					newTarget
 				>
-					Free 14-day trial
+					Free 7-day trial
 				</CTAButton>
 			)}
 
