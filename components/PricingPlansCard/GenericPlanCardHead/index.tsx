@@ -247,14 +247,14 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					variant={isNew ? 'rainbow' : 'black_green'}
 					navigateTo={
 						isNew
-							? createSignupLink('BUSINESS_PLAN')
-							: createSignupLink('PROFESSIONAL_PLAN')
+							? createSignupLink('PROFESSIONAL_PLAN')
+							: createSignupLink('TEAM_PLAN')
 					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
 					newTarget
 				>
-					Free 7-day trial
+					Free 14-day trial
 				</CTAButton>
 			)}
 
@@ -265,33 +265,46 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					variant={isNew ? 'rainbow' : 'black_green'}
 					navigateTo={
 						isNew
-							? createSignupLink('BUSINESS_PLAN')
-							: createSignupLink('PROFESSIONAL_PLAN')
+							? createSignupLink('PROFESSIONAL_PLAN')
+							: createSignupLink('TEAM_PLAN')
 					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
 					newTarget
 				>
-					Free 7-day trial
+					Free 14-day trial
 				</CTAButton>
 			)}
 
-			{isUsage && isThirdPlan && (
+			{/* {isUsage && isThirdPlan && (
 				<CTAButton
 					type="primary"
 					size="medium"
 					variant={isNew ? 'rainbow' : 'black_green'}
 					navigateTo={
 						isNew
-							? createSignupLink('BUSINESS_PLAN')
-							: createSignupLink('PROFESSIONAL_PLAN')
-					}
+							? createSignupLink('PROFESSIONAL_PLAN')
+							: createSignupLink('TEAM_PLAN')
+						}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
 					newTarget
 				>
 					Request a demo
 				</CTAButton>
+			)} */}
+
+			{isUsage && isThirdPlan && (
+				<div className={styles.talkToExpertContainer}>
+					{/* <h1>Unlimited lookups</h1> */}
+
+					<button
+						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
+						onClick={() => setIsDemoFormOpen(true)}
+					>
+						Request a demo
+					</button>
+				</div>
 			)}
 
 			{isFree && (
@@ -301,8 +314,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 					variant={isNew ? 'rainbow' : 'green'}
 					navigateTo={
 						isNew
-							? createSignupLink('BUSINESS_PLAN')
-							: createSignupLink('PROFESSIONAL_PLAN')
+							? createSignupLink('PROFESSIONAL_PLAN')
+							: createSignupLink('TEAM_PLAN')
 					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
@@ -334,8 +347,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						variant={'white'}
 						navigateTo={
 							isNew
-								? createSignupLink('BUSINESS_PLAN', 'buynow')
-								: createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('TEAM_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -354,8 +367,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						variant={'white'}
 						navigateTo={
 							isNew
-								? createSignupLink('BUSINESS_PLAN', 'buynow')
-								: createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('TEAM_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -374,8 +387,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						variant={'white'}
 						navigateTo={
 							isNew
-								? createSignupLink('BUSINESS_PLAN', 'buynow')
-								: createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('TEAM_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -393,8 +406,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						variant={'white'}
 						navigateTo={
 							isNew
-								? createSignupLink('BUSINESS_PLAN', 'buynow')
-								: createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('TEAM_PLAN', 'buynow')
 						}
 						asExternal
 						newTarget
@@ -432,6 +445,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 							<Instagram width={15} height={20} fill="#012b3b" />
 						</li>
 					</ul>
+					<p>d</p>
 				</h2>
 			)}
 
@@ -526,6 +540,82 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						</li>
 					</ul>
 				</h2>
+			)}
+
+			{lookups && !isEnterprise && isFirstPlan && (
+				<p className={styles.learnMoreNew}>
+					<CTAButton
+						type="link"
+						size="small"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('TEAM_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Learn more about {name}
+					</CTAButton>
+				</p>
+			)}
+
+			{lookups && !isEnterprise && isSecondPlan && (
+				<p className={styles.learnMore}>
+					<CTAButton
+						type="link"
+						size="small"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('TEAM_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Learn more about {name}
+					</CTAButton>
+				</p>
+			)}
+
+			{lookups && !isEnterprise && isThirdPlan && (
+				<p className={styles.learnMore}>
+					<CTAButton
+						type="link"
+						size="small"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('TEAM_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Learn more about {name}
+					</CTAButton>
+				</p>
+			)}
+
+			{lookups && isEnterprise && (
+				<p className={styles.learnMore}>
+					<CTAButton
+						type="link"
+						size="small"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('TEAM_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Learn more about {name}
+					</CTAButton>
+				</p>
 			)}
 
 			<Modal

@@ -108,7 +108,7 @@ export const plansAndProductsDetails = [
 				monthlyPrice: 999,
 				annualPrice: 9590,
 				users: 5,
-				lookups: 60000,
+				lookups: 36000,
 				desc: `Perfect for small teams`,
 				featureSubName: 'Team',
 				isFirstPlan: false,

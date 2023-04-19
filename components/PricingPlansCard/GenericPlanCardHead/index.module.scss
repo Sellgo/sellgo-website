@@ -120,13 +120,19 @@
 }
 
 .buyNowCTA {
-	width: 95%;
+	width: 93%;
 	height: 5rem;
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_18;
 	margin: 18rem auto;
 	position: absolute;
 	bottom: 0;
+	box-shadow: $box-shadow-1;
+
+	&:hover {
+		opacity: 0.85;
+		cursor: pointer;
+	}
 
 	@media screen and (max-width: 480px) {
 		width: 16em;
@@ -143,7 +149,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 95%;
+	width: 94%;
+
+	&:hover {
+		opacity: 0.85;
+		cursor: pointer;
+	}
 
 	a {
 		color: $prim_dark_1;
@@ -164,6 +175,11 @@
 	align-items: center;
 	justify-content: center;
 
+	&:hover {
+		opacity: 0.85;
+		cursor: pointer;
+	}
+
 	a {
 		color: $prim_dark_1;
 		text-decoration: underline;
@@ -174,6 +190,7 @@
 .icons {
 	display: flex;
 	gap: 11px;
+	padding-top: 7px;
 }
 
 .tableCardCTA {
@@ -264,6 +281,12 @@
 		position: absolute;
 		bottom: 0;
 		margin: 18rem auto;
+		box-shadow: $box-shadow-1;
+
+		&:hover {
+			opacity: 0.85;
+			cursor: pointer;
+		}
 	}
 
 	.tableCardBtn {
@@ -303,4 +326,35 @@
 	color: $black_green;
 	margin: 0.2em auto;
 	text-align: center;
+}
+
+.learnMoreNew {
+	margin-top: 11em;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
+	text-decoration: underline;
+	color: $black_green;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.learnMore {
+	margin-top: 14em;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
+	text-decoration: underline;
+	color: $black_green;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	&:hover {
+		opacity: 0.85;
+		cursor: pointer;
+	}
 }

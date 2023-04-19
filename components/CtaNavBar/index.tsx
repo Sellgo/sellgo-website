@@ -42,7 +42,7 @@ const CtaNavBar = (props: Props) => {
 					newTarget
 					className={styles.ctaButton}
 				>
-					Sign up
+					Start free trial
 				</CTAButton>
 			</div>
 		</div>

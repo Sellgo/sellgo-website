@@ -86,7 +86,7 @@ const NavbarBottom: React.FC<Props> = () => {
 						variant="white"
 						className={styles.navbarCTA}
 					>
-						Sign up
+						Start free trial
 						<div className={styles.navbarCTA__arrow}>
 							<Image
 								src="/longArrowRightIcon.svg"
