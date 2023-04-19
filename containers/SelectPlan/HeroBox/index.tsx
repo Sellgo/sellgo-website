@@ -124,6 +124,7 @@ const HeroBox: React.FC<Props> = () => {
 						type="primary"
 						size="medium"
 						variant={'purplePinkRainbow'}
+						disabled={!selectedPlan}
 						navigateTo={
 							selectedPlan === 'team'
 								? createSignupLink('TEAM_PLAN')
@@ -139,6 +140,7 @@ const HeroBox: React.FC<Props> = () => {
 						type="link"
 						size="small"
 						variant={'white'}
+						disabled={!selectedPlan}
 						navigateTo={
 							selectedPlan === 'team'
 								? createSignupLink('TEAM', 'buynow')
