@@ -35,7 +35,7 @@ const HeroBox: React.FC<Props> = () => {
 						<p>
 							Try our <strong>Professional</strong> plan free for 7 days
 						</p>
-						<img src="https://picsum.photos/450/270" alt="professional" />
+						<img src="first_selectPlan.png" alt="professional" />
 						<h3>1 User</h3>
 						<h3>12,000 brand insights</h3>
 
@@ -81,7 +81,7 @@ const HeroBox: React.FC<Props> = () => {
 						<p>
 							Try our <strong>Business</strong> plan free for 7 days
 						</p>
-						<img src="https://picsum.photos/450/270" alt="team" />
+						<img src="third_selectPlan.png" alt="team" />
 						<h3>3 Users</h3>
 						<h3>24,000 brand insights</h3>
 
