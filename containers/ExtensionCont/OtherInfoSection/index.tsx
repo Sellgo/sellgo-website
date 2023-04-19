@@ -40,7 +40,7 @@ const OtherInfoSection: React.FC<Props> = () => {
 			<CTAButton
 				type="primary"
 				size="small"
-				navigateTo="/pricing?type=usage-based-plans"
+				navigateTo="/pricing"
 				className={styles.otherInfoSectionCTA}
 			>
 				Get started
