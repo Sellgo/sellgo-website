@@ -90,6 +90,10 @@ PricingPlansCardHead.defaultProps = {
 	isFree: false,
 	isEnterprise: false,
 	isSmall: false,
+	isFirstPlan: false,
+	isSecondPlan: false,
+	isThirdPlan: false,
+	handleChange: () => {},
 	isUsage: false
 	// handleChange: () => null
 };

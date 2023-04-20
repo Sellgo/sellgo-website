@@ -1,0 +1,165 @@
+@import '../../styles/guidelines';
+
+.heroboxWrapper {
+	background: $prim_white;
+	position: relative;
+}
+
+.herobox {
+	overflow: hidden;
+	padding-top: 7em;
+	padding-bottom: 7em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	text-align: left;
+	gap: 5em;
+}
+
+.formWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 3em;
+	width: 1080px;
+}
+
+.info {
+	flex-basis: 540px;
+
+	p {
+		font-size: $fontsize_14;
+		margin-top: 3em;
+		color: #3b4557;
+	}
+
+	.featureList {
+		margin-top: 2.5em;
+
+		div {
+			font-size: $fontsize_14;
+			color: #3b4557;
+			margin: 1.2em 0;
+			display: flex;
+			gap: 1em;
+			align-items: flex-start;
+
+			p {
+				margin: 0;
+			}
+
+			img {
+				margin-top: 0.2em;
+			}
+		}
+	}
+
+	h2 {
+		color: #3b4557;
+		margin-top: 1.5em;
+		font-size: $fontsize_30;
+	}
+}
+
+.heading {
+	font-size: $fontsize_46;
+	font-weight: $fontweight_bold;
+	margin-top: 2.5em;
+
+	@media only screen and(max-width: 650px) {
+		font-size: $fontsize_38;
+		line-height: 1.2;
+	}
+}
+
+.claimsContainer {
+	margin-top: 5em;
+	display: flex;
+	gap: 10em;
+	justify-content: center;
+	align-items: center;
+
+	.claim {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		div {
+			display: flex;
+			align-items: center;
+
+			h2 {
+				font-weight: $fontweight_semibold;
+				font-size: $fontsize_56;
+			}
+
+			span {
+				font-size: $fontsize_24;
+				font-weight: $fontweight_semibold;
+			}
+		}
+
+		p {
+			color: #1e1e1e;
+			font-size: $fontsize_20;
+		}
+	}
+}
+
+.featuresContainer {
+	h2 {
+		font-size: $fontsize_40;
+		font-weight: $fontweight_bold;
+		color: #1e1e1e;
+		text-align: center;
+		margin-top: 2em;
+	}
+}
+
+.features {
+	padding-top: 7em;
+	padding-bottom: 7em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+
+	.feature {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 1em;
+		box-shadow: inset 0 3px 6px #00000029, 0 3px 6px #00000029;
+		border: 1px solid #ced4d9;
+		border-radius: 20px;
+		padding: 2em;
+		width: 340px;
+		height: 370px;
+
+		h2 {
+			font-size: $fontsize_24;
+			font-weight: $fontweight_semibold;
+			color: $black_green;
+			text-align: center;
+		}
+
+		h3 {
+			font-size: $fontsize_16;
+			font-weight: $fontweight_semibold;
+			color: $black_green;
+			margin-top: 2em;
+			margin-bottom: 1em;
+		}
+
+		p {
+			font-size: $fontsize_14;
+			font-weight: $fontweight_regular;
+			color: $black_green;
+			text-align: center;
+		}
+	}
+}

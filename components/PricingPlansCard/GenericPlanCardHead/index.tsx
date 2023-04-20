@@ -634,6 +634,9 @@ GenericPriceCardHead.defaultProps = {
 	isUsage: false,
 	isSmall: false,
 	withToggle: false,
+	isFirstPlan: false,
+	isSecondPlan: false,
+	isThirdPlan: false,
 	className: ''
 	// handleChange: () => null
 };

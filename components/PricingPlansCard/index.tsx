@@ -108,6 +108,9 @@ PricingPlansCard.defaultProps = {
 	isNew: false,
 	isFree: false,
 	isEnterprise: false,
+	isFirstPlan: false,
+	isSecondPlan: false,
+	isThirdPlan: false,
 	isUsage: false
 };
 

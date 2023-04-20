@@ -1,0 +1,142 @@
+@import '../../../styles/guidelines';
+
+.formContainer {
+	flex-basis: 500px;
+	background-color: #1e1e1e;
+	border-radius: 20px;
+	padding: 5em 3em;
+
+	* {
+		color: #fff;
+	}
+
+	p {
+		font-size: $fontsize_14;
+	}
+
+	h1 {
+		font-size: $fontsize_46;
+		font-weight: $fontweight_bold;
+		margin: 0.5em 0;
+	}
+
+	.demoPageForm {
+		height: max-content;
+		display: flex;
+		flex-direction: column;
+		margin-top: 3em;
+		gap: 2em;
+
+		.inputControlWrapper {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 2em;
+		}
+
+		.formInput {
+			width: 100%;
+			margin-right: 18px;
+
+			@media only screen and(max-width: 1100px) {
+				width: 100%;
+				margin-bottom: 2rem;
+			}
+
+			label {
+				color: $prim_dark_2;
+				font-size: $fontsize_14;
+				font-weight: $fontweight_medium;
+				width: 100%;
+				margin-bottom: 5px;
+				display: inline-block;
+			}
+
+			input {
+				width: 100%;
+				height: 43px;
+				background: $prim_white;
+				border: 1px solid $second_silver;
+				border-radius: 3px;
+				color: $prim_dark_2;
+				font-size: $fontsize_14;
+				font-family: inherit;
+				padding: 0 1rem;
+				&:focus {
+					outline: 0;
+				}
+
+				&__error {
+					border: 1px solid $system_red;
+					margin-top: 2em;
+				}
+			}
+
+			small {
+				font-size: $fontsize_12;
+				color: $system_red;
+			}
+		}
+
+		.dropdownWrapper {
+			font-size: $fontsize_14;
+			color: $prim_dark_2;
+			height: 43px;
+			margin-top: 17px;
+
+			@media only screen and(max-width: 750px) {
+				width: 100%;
+				margin-bottom: 2rem;
+			}
+		}
+
+		.countrySelect {
+			height: 20px !important;
+			@media only screen and(max-width: 500px) {
+				width: 100% !important;
+			}
+
+			> div {
+				background: $prim_white !important;
+			}
+		}
+
+		.phoneContainer {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			gap: 2em;
+		}
+
+		.countryCodeSelect {
+			width: 200px !important;
+		}
+
+		.phoneInput {
+			margin: 0;
+			width: 200px !important;
+		}
+
+		.submitButton {
+			height: 43px;
+			background: $sellgo_yellow;
+			color: #3b4557;
+			border: none;
+			padding: 0 3em;
+			margin-top: 1em;
+			cursor: pointer;
+
+			@media only screen and(max-width: 1100px) {
+				width: 100%;
+			}
+		}
+
+		.submitButton:disabled,
+		.submitButton[disabled] {
+			background-color: #ccc;
+			color: #666;
+			cursor: initial;
+		}
+	}
+}
