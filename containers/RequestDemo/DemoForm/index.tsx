@@ -15,12 +15,12 @@ import {
 	defaultPhoneCode,
 	countryPhoneCodeList
 } from '../../../constants';
-// import {
-// 	helpUserOptions,
-// 	industryOptions,
-// 	countryOptions,
-// 	noOfEmployeesOptions
-// } from './data';
+import {
+	// helpUserOptions,
+	// industryOptions,
+	// countryOptions,
+	noOfEmployeesOptions
+} from './data';
 
 /* Utils */
 import AppConfig from '../../../config';
@@ -40,7 +40,7 @@ const DemoForm: React.FC<Props> = () => {
 		country: '',
 		industry: '',
 		helpUser: '',
-		companySize: '',
+		companySize: noOfEmployeesOptions[0],
 		isExistingCustomer: false,
 		totalOrders: ''
 	});
@@ -225,7 +225,7 @@ const DemoForm: React.FC<Props> = () => {
 			industry: '',
 			country: '',
 			helpUser: '',
-			companySize: '',
+			companySize: noOfEmployeesOptions[0],
 			isExistingCustomer: false
 		});
 
