@@ -27,6 +27,12 @@
 			border: none;
 		}
 
+		&__black_green {
+			background: $black_green;
+			color: #fff;
+			border: none;
+		}
+
 		&__white {
 			background: $prim_white;
 			color: $black_1;
@@ -65,10 +71,62 @@
 			border: none;
 		}
 
+		&__black_green {
+			background: $black_green;
+			color: #fff;
+			border: none;
+		}
+
 		&__white {
 			background: $prim_white;
 			color: $black_1;
 			border: 1px solid $black_1;
+		}
+
+		&__rainbow {
+			background: $orange_purple_gradient;
+			color: $prim_white;
+			padding: 3px !important;
+			border: none;
+		}
+
+		&__purplePinkRainbow {
+			background: $purple_pink_gradient;
+			color: $prim_white;
+			padding: 3px !important;
+			border: none;
+		}
+	}
+
+	&__link {
+		&__black {
+			background: $prim_dark_2;
+			color: #fff;
+			border: none;
+		}
+
+		&__orange {
+			background: $prim_white;
+			color: $accent_orange;
+			border: none;
+		}
+
+		&__green {
+			background: $prim_white;
+			color: $sellgo_neon_green;
+			border: none;
+		}
+
+		&__black_green {
+			background: $black_green;
+			color: #fff;
+			border: none;
+		}
+
+		&__white {
+			background: $prim_white;
+			color: $black_1;
+			border: none;
 		}
 
 		&__rainbow {

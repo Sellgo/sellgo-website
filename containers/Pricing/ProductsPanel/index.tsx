@@ -10,7 +10,7 @@ import styles from './index.module.scss';
 /* Conatiners */
 import PricingPlansSection from '../PricingPlansSection';
 import FAQSection from '../FAQSection';
-import EnterprisePanel from '../EnterprisePanel';
+// import EnterprisePanel from '../EnterprisePanel';
 
 /* Data */
 import { planTypes, plansAndProductsDetails } from './data';
@@ -133,9 +133,9 @@ const ProductsPanel: React.FC<Props> = (props) => {
 					);
 				})}
 
-				<TabPanel key={uuid()}>
+				{/* <TabPanel key={uuid()}>
 					<EnterprisePanel />
-				</TabPanel>
+				</TabPanel> */}
 			</Tabs>
 
 			{/* FAQ Section */}

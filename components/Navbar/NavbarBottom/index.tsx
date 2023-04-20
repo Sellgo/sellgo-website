@@ -13,7 +13,6 @@ import UsecasesNavbarExpansion from '../UsecasesNavbarExpansion';
 import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
 import AppConfig from '../../../config';
-import { createFreeTrialLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -57,11 +56,7 @@ const NavbarBottom: React.FC<Props> = () => {
 					<li
 						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
 					>
-						<Link
-							href="/pricing?type=usage-based-plans"
-							passHref
-							prefetch={false}
-						>
+						<Link href="/pricing" passHref prefetch={false}>
 							<a className={styles.navLink}>Pricing</a>
 						</Link>
 					</li>
@@ -85,7 +80,7 @@ const NavbarBottom: React.FC<Props> = () => {
 				</ul>
 			</div>
 
-			{router.pathname !== '/career' && (
+			{router.pathname !== '/career' && router.pathname !== '/select-plan' && (
 				<>
 					<a
 						href={AppConfig.APP_URL}
@@ -98,13 +93,11 @@ const NavbarBottom: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="small"
-						navigateTo={createFreeTrialLink()}
-						newTarget
-						asExternal
+						navigateTo={'/select-plan'}
 						variant="white"
 						className={styles.navbarCTA}
 					>
-						Sign up free
+						Start free trial
 						<div className={styles.navbarCTA__arrow}>
 							<Image
 								src="/longArrowRightIcon.svg"
