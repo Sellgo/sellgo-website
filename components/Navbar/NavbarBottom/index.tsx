@@ -7,12 +7,15 @@ import { useRouter } from 'next/router';
 import styles from './index.module.scss';
 
 /* COmponents */
+// import CTAButton from '../../CTAButton';
 import CTAButton from '../../CTAButton';
 import PlatformNavbarExpansion from '../PlatformNavbarExpansion';
-import UsecasesNavbarExpansion from '../UsecasesNavbarExpansion';
-import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
+// import UsecasesNavbarExpansion from '../UsecasesNavbarExpansion';
+// import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
 import AppConfig from '../../../config';
+
+import { createFreeTrialLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -44,14 +47,14 @@ const NavbarBottom: React.FC<Props> = () => {
 						/>
 					</li>
 
-					<li className={styles.navbarBottomLink}>
+					{/* <li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
 							Use cases <Bottom width={10} height={8} fill="#fff" />
 						</a>
 						<UsecasesNavbarExpansion
 							className={styles.expandedUsecasesNavbar}
 						/>
-					</li>
+					</li> */}
 
 					<li
 						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
@@ -61,14 +64,14 @@ const NavbarBottom: React.FC<Props> = () => {
 						</Link>
 					</li>
 
-					<li className={styles.navbarBottomLink}>
+					{/* <li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
 							Resources <Bottom width={10} height={8} fill="#fff" />
 						</a>
 						<ResourcesNavBarExpansion
 							className={styles.expandedResourcesNavbar}
 						/>
-					</li>
+					</li> */}
 
 					<li
 						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
@@ -93,7 +96,7 @@ const NavbarBottom: React.FC<Props> = () => {
 					<CTAButton
 						type="primary"
 						size="small"
-						navigateTo={'/select-plan'}
+						navigateTo={createFreeTrialLink()}
 						variant="white"
 						className={styles.navbarCTA}
 					>

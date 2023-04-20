@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* Components */
+// import CTAButton from '../CTAButton';
 import CTAButton from '../CTAButton';
 import Check from '../Icons/Check';
 

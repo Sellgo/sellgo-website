@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import styles from './index.module.scss';
+// import CTAButton from '../CTAButton';
 import CTAButton from '../CTAButton';
 
 /* Utils */
