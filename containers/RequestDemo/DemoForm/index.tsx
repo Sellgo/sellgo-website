@@ -11,16 +11,16 @@ import FormInput from '../../../components/FormInput';
 
 /* Constants */
 import {
-	employSizeList,
+	// employSizeList,
 	defaultPhoneCode,
 	countryPhoneCodeList
 } from '../../../constants';
-import {
-	helpUserOptions,
-	industryOptions,
-	countryOptions,
-	noOfEmployeesOptions
-} from './data';
+// import {
+// 	helpUserOptions,
+// 	industryOptions,
+// 	countryOptions,
+// 	noOfEmployeesOptions
+// } from './data';
 
 /* Utils */
 import AppConfig from '../../../config';
@@ -40,7 +40,7 @@ const DemoForm: React.FC<Props> = () => {
 		country: '',
 		industry: '',
 		helpUser: '',
-		companySize: employSizeList[0].value,
+		companySize: '',
 		isExistingCustomer: false,
 		totalOrders: ''
 	});
@@ -225,7 +225,7 @@ const DemoForm: React.FC<Props> = () => {
 			industry: '',
 			country: '',
 			helpUser: '',
-			companySize: employSizeList[0].value,
+			companySize: '',
 			isExistingCustomer: false
 		});
 
@@ -241,7 +241,7 @@ const DemoForm: React.FC<Props> = () => {
 		formData.append('lastname', lastName);
 		formData.append('phone', `${countryCode.value}-${phoneNumber}`);
 		formData.append('company', company);
-		formData.append('numemployees', companySize?.value);
+		formData.append('numemployees', companySize.value.toString());
 		formData.append(
 			'is_existing_customer',
 			isExistingCustomer ? 'true' : 'false'
@@ -332,7 +332,7 @@ const DemoForm: React.FC<Props> = () => {
 					<div className={styles.dropdownWrapper}>
 						<Select
 							placeholder="Country*"
-							options={countryOptions}
+							options={countryPhoneCodeList}
 							className={styles.countrySelect}
 							classNamePrefix="dropdown"
 							id="dropdown"
@@ -343,7 +343,7 @@ const DemoForm: React.FC<Props> = () => {
 
 					<div className={styles.dropdownWrapper}>
 						<Select
-							options={helpUserOptions}
+							options={countryPhoneCodeList}
 							placeholder="How can we help you?*"
 							className={styles.countrySelect}
 							classNamePrefix="dropdown"
@@ -395,9 +395,9 @@ const DemoForm: React.FC<Props> = () => {
 
 					<div className={styles.dropdownWrapper}>
 						<Select
-							defaultValue={''}
+							defaultValue={null}
 							placeholder="Industry*"
-							options={industryOptions}
+							options={countryPhoneCodeList}
 							className={styles.countrySelect}
 							classNamePrefix="dropdown"
 							id="dropdown"
@@ -441,9 +441,9 @@ const DemoForm: React.FC<Props> = () => {
 
 					<div className={styles.dropdownWrapper}>
 						<Select
-							defaultValue={''}
+							defaultValue={null}
 							placeholder="Number of employees*"
-							options={noOfEmployeesOptions}
+							options={countryPhoneCodeList}
 							className={styles.countrySelect}
 							classNamePrefix="dropdown"
 							id="dropdown"
