@@ -75,31 +75,31 @@ export const plansAndProductsDetails = [
 					}
 				]
 			},
-			// {
-			// 	id: 1,
-			// 	name: 'Team',
-			// 	productsDatabase: 0,
-			// 	salesEstimateCount: 2000,
-			// 	monthlyPrice: 749,
-			// 	annualPrice: 7190,
-			// 	users: 3,
-			// 	lookups: 24000,
-			// 	desc: `Perfect for small teams`,
-			// 	featureSubName: 'Professional',
-			// 	isFirstPlan: false,
-			// 	isSecondPlan: true,
-			// 	isThirdPlan: false,
-			// 	isNew: false,
-			// 	isFree: false,
-			// 	isEnterprise: false,
-			// 	isUsage: true,
-			// 	featuresLists: [
-			// 		{
-			// 			title: '',
-			// 			featuresIncluded: ['Roles & permissions', 'Assign team members']
-			// 		}
-			// 	]
-			// },
+			{
+				id: 1,
+				name: 'Team',
+				productsDatabase: 0,
+				salesEstimateCount: 2000,
+				monthlyPrice: 749,
+				annualPrice: 7190,
+				users: 3,
+				lookups: 24000,
+				desc: `Perfect for small teams`,
+				featureSubName: 'Professional',
+				isFirstPlan: false,
+				isSecondPlan: true,
+				isThirdPlan: false,
+				isNew: false,
+				isFree: false,
+				isEnterprise: false,
+				isUsage: true,
+				featuresLists: [
+					{
+						title: '',
+						featuresIncluded: ['Roles & permissions', 'Assign team members']
+					}
+				]
+			},
 			{
 				id: 1,
 				name: 'Business',
