@@ -226,3 +226,12 @@
 		max-width: 100%;
 	}
 }
+
+.heroBoxCTA {
+	width: 27rem;
+
+	@media screen and (max-width: 480px) {
+		margin-right: 6px;
+		width: 10em;
+	}
+}

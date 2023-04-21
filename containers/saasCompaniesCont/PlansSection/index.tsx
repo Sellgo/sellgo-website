@@ -12,7 +12,7 @@ import PlansCard from '../../../components/PlansCard';
 
 /* Data */
 import { plansData } from './data';
-import { createFreeTrialLink } from '../../../utils/Referral';
+import { checkPricingLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -38,12 +38,12 @@ const PlansSection: React.FC<Props> = () => {
 					type="primary"
 					size="medium"
 					variant="rainbow"
-					navigateTo={createFreeTrialLink()}
+					navigateTo={checkPricingLink()}
 					newTarget
 					asExternal
 					className={styles.plansCTA}
 				>
-					Start free trial
+					Check pricing
 				</CTAButton>
 				<CTAButton
 					type="secondary"

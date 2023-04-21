@@ -8,7 +8,7 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../../components/CTAButton';
 import DemoForm from '../../Demo/DemoForm';
-import { createFreeTrialLink } from '../../../utils/Referral';
+import { checkPricingLink } from '../../../utils/Referral';
 
 const NewClosingCTASection = () => {
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
@@ -34,12 +34,12 @@ const NewClosingCTASection = () => {
 								type="primary"
 								size="medium"
 								variant="rainbow"
-								navigateTo={createFreeTrialLink()}
-								asExternal
+								navigateTo={checkPricingLink()}
+								// asExternal
 								newTarget
 								className={styles.closingCTA}
 							>
-								Create free account
+								Check Sellgo pricing
 							</CTAButton>
 							<button
 								className={styles.demoButton}
@@ -48,7 +48,7 @@ const NewClosingCTASection = () => {
 								Book a demo
 							</button>
 						</div>
-						<span>Free forever. No credit card required. Instant access.</span>
+						<span>Premium leads. Instant access. Easy workflow.</span>
 					</div>
 					<Image src="/closingCtaLaptop.png" width={400} height={250} />
 				</div>

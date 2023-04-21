@@ -10,7 +10,7 @@ import CTAButton from '../../../components/CTAButton';
 import DemoForm from '../../Demo/DemoForm';
 
 /* Utils */
-import { createFreeTrialLink } from '../../../utils/Referral';
+import { checkPricingLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -41,7 +41,7 @@ const HeroBox: React.FC<Props> = () => {
 					</p>
 					<div className={styles.buttonsRow}>
 						<CTAButton
-							navigateTo={createFreeTrialLink()}
+							navigateTo={checkPricingLink()}
 							newTarget
 							asExternal
 							type="primary"
@@ -49,7 +49,7 @@ const HeroBox: React.FC<Props> = () => {
 							variant="rainbow"
 							className={styles.heroBoxCTA}
 						>
-							Start free trial
+							Check pricing
 						</CTAButton>
 						<CTAButton
 							type="secondary"

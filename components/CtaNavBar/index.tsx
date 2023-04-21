@@ -6,7 +6,7 @@ import styles from './index.module.scss';
 import CTAButton from '../CTAButton';
 
 /* Utils */
-import { createFreeTrialLink } from '../../utils/Referral';
+import { checkPricingLink } from '../../utils/Referral';
 
 interface Props {
 	showCtaNavBar: boolean;
@@ -38,12 +38,12 @@ const CtaNavBar = (props: Props) => {
 					type="secondary"
 					size="small"
 					variant="rainbow"
-					navigateTo={createFreeTrialLink()}
-					asExternal
+					navigateTo={checkPricingLink()}
+					// asExternal
 					newTarget
 					className={styles.ctaButton}
 				>
-					Start free trial
+					Check Sellgo pricing
 				</CTAButton>
 			</div>
 		</div>

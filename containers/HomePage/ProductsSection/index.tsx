@@ -14,7 +14,7 @@ import RainbowText from '../../../components/RainbowText';
 import DemoForm from '../../Demo/DemoForm';
 
 /* Utils */
-import { createFreeTrialLink } from '../../../utils/Referral';
+import { checkPricingLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -58,14 +58,14 @@ const ProductsSection: React.FC<Props> = () => {
 					type="primary"
 					variant="rainbow"
 					size="medium"
-					navigateTo={createFreeTrialLink()}
-					asExternal
+					navigateTo={checkPricingLink()}
+					// asExternal
 					newTarget
 					className={styles.pricingButton}
 				>
-					Get started free today
+					Check Sellgo pricing
 				</CTAButton>
-				<p>Free forever. No credit card required. Instant access.</p>
+				{/* <p>Premium leads. Instant access. Easy workflow.</p> */}
 				<button
 					className={styles.textButton}
 					onClick={() => setIsDemoFormOpen(true)}

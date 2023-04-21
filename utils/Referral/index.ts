@@ -59,3 +59,10 @@ export const createSignupLink = (plan: string, td?: string) => {
 	const freeTrialLink = appendReferralCode(webFreeTrialLink);
 	return freeTrialLink;
 };
+
+export const checkPricingLink = () => {
+	const webPricingLink = `${AppConfig.WEB_URL}/pricing`;
+
+	const pricingLink = appendReferralCode(webPricingLink);
+	return pricingLink;
+};
