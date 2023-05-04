@@ -313,7 +313,7 @@
 	font-weight: $fontweight_semibold;
 	color: $black_green;
 	//margin: 4em auto;
-	margin-top: 7em;
+	margin-top: 5em;
 	padding-left: 7px;
 	line-height: $fontlineheight_40;
 	//padding-top: 1em;
@@ -342,6 +342,24 @@
 }
 
 .learnMore {
+	margin-top: 14em;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
+	text-decoration: underline;
+	color: $black_green;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	&:hover {
+		opacity: 0.85;
+		cursor: pointer;
+	}
+}
+
+.learnMoreEnterprise {
 	margin-top: 14em;
 	font-size: $fontsize_14;
 	font-weight: $fontweight_regular;

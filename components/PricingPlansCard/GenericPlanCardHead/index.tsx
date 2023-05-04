@@ -597,7 +597,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			)}
 
 			{lookups && isEnterprise && (
-				<p className={styles.learnMore}>
+				<p className={styles.learnMoreEnterprise}>
 					<CTAButton
 						type="link"
 						size="small"
