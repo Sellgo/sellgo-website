@@ -50,7 +50,7 @@ interface Props {
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
-	console.log(props);
+	// console.log(props); 	
 
 	const {
 		name,
