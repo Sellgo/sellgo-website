@@ -47,6 +47,9 @@ const BenefitsSection: React.FC<Props> = () => {
 									benefitSummary={benefitSummary}
 									popularFeaturesList={popularFeaturesList}
 									details={details}
+									imageUrl={''}
+									imageWidth={0}
+									imageHeight={0}
 								/>
 							</TabPanel>
 						);
