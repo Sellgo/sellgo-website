@@ -12,6 +12,7 @@ import ExpandedNavbarIcons from '../../../components/Icons/ExpandedNavbarIcons';
 
 /* Data */
 import { accordionData } from './data';
+import { checkPricingLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -39,20 +40,18 @@ const HeroBox: React.FC<Props> = () => {
 					Track top FBA competitors and best sellers
 				</h1>
 				<CTAButton
-					navigateTo="/"
+					navigateTo={checkPricingLink()}
 					type="primary"
 					size="productPageBig"
 					variant="rainbow"
-					asExternal
+					// asExternal
 					newTarget
 					className={styles.heroBoxCTA}
 				>
-					Create free account
+					Check pricing
 				</CTAButton>
 				<p>
-					Sellgo is the seller database platform of choice for thousands of top
-					Amazon seller agencies worldwide. Try it free. No credit card
-					required. Contact us if you need help.
+					Sellgo is the leads platform of choice for top B2B agencies worldwide.
 				</p>
 
 				<ProductAccordion data={accordionData} />

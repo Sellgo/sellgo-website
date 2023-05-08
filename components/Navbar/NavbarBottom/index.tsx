@@ -7,11 +7,14 @@ import { useRouter } from 'next/router';
 import styles from './index.module.scss';
 
 /* COmponents */
+// import CTAButton from '../../CTAButton';
 import CTAButton from '../../CTAButton';
-import ProductsNavbarExpansion from '../ProductsNavbarExpansion';
+// import PlatformNavbarExpansion from '../PlatformNavbarExpansion';
+// import UsecasesNavbarExpansion from '../UsecasesNavbarExpansion';
 import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
 import AppConfig from '../../../config';
+
 import { createFreeTrialLink } from '../../../utils/Referral';
 
 interface Props {}
@@ -35,23 +38,28 @@ const NavbarBottom: React.FC<Props> = () => {
 				</Link>
 
 				<ul className={styles.navbarBottomLinksList}>
-					<li className={styles.navbarBottomLink}>
+					{/* <li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
-							Solutions <Bottom width={10} height={8} fill="#fff" />
+							Platform <Bottom width={10} height={8} fill="#fff" />
 						</a>
-						<ProductsNavbarExpansion
+						<PlatformNavbarExpansion
 							className={styles.expandedProductsNavbar}
 						/>
-					</li>
+					</li> */}
+
+					{/* <li className={styles.navbarBottomLink}>
+						<a href="#" className={styles.navLink}>
+							Use cases <Bottom width={10} height={8} fill="#fff" />
+						</a>
+						<UsecasesNavbarExpansion
+							className={styles.expandedUsecasesNavbar}
+						/>
+					</li> */}
 
 					<li
 						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
 					>
-						<Link
-							href="/pricing?type=usage-based-plans"
-							passHref
-							prefetch={false}
-						>
+						<Link href="/pricing" passHref prefetch={false}>
 							<a className={styles.navLink}>Pricing</a>
 						</Link>
 					</li>
@@ -64,10 +72,18 @@ const NavbarBottom: React.FC<Props> = () => {
 							className={styles.expandedResourcesNavbar}
 						/>
 					</li>
+
+					{/* <li
+						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
+					>
+						<Link href="/customers" passHref prefetch={false}>
+							<a className={styles.navLink}>Customers</a>
+						</Link>
+					</li> */}
 				</ul>
 			</div>
 
-			{router.pathname !== '/career' && (
+			{router.pathname !== '/career' && router.pathname !== '/select-plan' && (
 				<>
 					<a
 						href={AppConfig.APP_URL}
@@ -81,12 +97,10 @@ const NavbarBottom: React.FC<Props> = () => {
 						type="primary"
 						size="small"
 						navigateTo={createFreeTrialLink()}
-						newTarget
-						asExternal
 						variant="white"
 						className={styles.navbarCTA}
 					>
-						Sign up free
+						Start free trial
 						<div className={styles.navbarCTA__arrow}>
 							<Image
 								src="/longArrowRightIcon.svg"

@@ -9,22 +9,35 @@ import styles from './index.module.scss';
 import CTAButton from '../../CTAButton';
 import PricePlanToggleButton from '../../PricePlanToggleButton';
 import DemoForm from '../../../containers/Demo/DemoForm';
+import LinkedIn from '../../Icons/SocialIcons/LinkedIn';
+import Facebook from '../../Icons/SocialIcons/Facebook';
+import Instagram from '../../Icons/SocialIcons/Instagram';
+import Twitter from '../../Icons/SocialIcons/Twitter';
+import DecisionMaker from '../../Icons/DecisionMaker';
+import Email from '../../Icons/Email';
+import Phone from '../../Icons/Phone';
 
 /* Utils */
 
-import { prettyPrintNumber } from '../../../utils/Format';
-import { createFreeTrialLink } from '../../../utils/Referral';
+import { formatNumber } from '../../../utils/Format';
+import { createSignupLink } from '../../../utils/Referral';
+// import ChromeExtension from '../../Icons/Products/ChromeExtension';
 
 interface Props {
 	name: string;
 	desc: string;
 	monthlyPrice: number;
 	annualPrice: number;
+	users: number;
+	lookups: number;
 	isNew?: boolean;
 	isFree?: boolean;
 	isEnterprise?: boolean;
 	isUsage?: boolean;
 	isSmall?: boolean;
+	isFirstPlan?: boolean;
+	isSecondPlan?: boolean;
+	isThirdPlan?: boolean;
 
 	// plan details
 	isMonthly: boolean;
@@ -33,11 +46,11 @@ interface Props {
 	// used for pricing cards on comparision table
 	withToggle?: boolean;
 	className?: string;
-	handleChange?: () => void;
+	// handleChange?: () => void;
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
-	console.log(props);
+	// console.log(props);
 
 	const {
 		name,
@@ -46,14 +59,19 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 		setIsMonthly,
 		annualPrice,
 		desc,
+		users,
+		lookups,
+		isFirstPlan,
+		isSecondPlan,
+		isThirdPlan,
 		isNew,
 		isFree,
 		isUsage,
 		isEnterprise,
 		isSmall,
 		withToggle,
-		className,
-		handleChange
+		className
+		// handleChange
 	} = props;
 
 	const [isDemoFormOpen, setIsDemoFormOpen] = React.useState(false);
@@ -91,12 +109,12 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 
 			{isUsage ? (
 				<div className={styles.startingAt}>
-					<p>
-						Starts At{' '}
+					{/* <p>
+						Starts at{' '}
 						{!isMonthly && (
 							<span className="strike-text">${Math.round(monthlyPrice)}</span>
 						)}
-					</p>
+					</p> */}
 
 					{isMonthly ? (
 						<span className={styles.betaPriceContainer}>
@@ -105,7 +123,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 									withToggle && styles.toggledPrice
 								}`}
 							>
-								${Math.round(monthlyPrice)}/ mo
+								${Math.round(monthlyPrice)}
+								<span className={styles.periodPrice}> /mo</span>
 							</h3>
 						</span>
 					) : (
@@ -115,12 +134,13 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 									withToggle && styles.toggledPrice
 								}`}
 							>
-								${Math.round(annualPrice / 12)}/ mo
+								${Math.round(annualPrice / 12)}
+								<span className={styles.periodPrice}> /mo*</span>
 							</h3>
 						</span>
 					)}
 
-					{!isMonthly ? (
+					{/* {!isMonthly ? (
 						<p className={styles.billedAtPrice}>
 							<span
 								className={`${styles.originalPrice} ${
@@ -151,7 +171,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						</p>
 					) : (
 						<p>Billed Monthly</p>
-					)}
+					)} */}
 				</div>
 			) : (
 				<div className={styles.startingAt}>
@@ -168,7 +188,8 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 									withToggle && styles.toggledPrice
 								}`}
 							>
-								${Math.round(monthlyPrice)}/ mo
+								${Math.round(monthlyPrice)}
+								<span className={styles.periodPrice}> /mo</span>
 							</h3>
 						</span>
 					) : (
@@ -208,35 +229,86 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</div>
 			)}
 
-			{withToggle && handleChange && !isFree && !isEnterprise && (
+			{/* {withToggle && handleChange && !isFree && !isEnterprise && (
 				<div className={styles.toggleWrapper}>
 					<PricePlanToggleButton
 						isMonthly={isMonthly}
 						handleChange={handleChange}
 					/>
 				</div>
-			)}
+			)} */}
 
-			{isUsage && (
+			{isUsage && isFirstPlan && (
 				<CTAButton
 					type="primary"
 					size="medium"
-					variant={isNew ? 'purplePinkRainbow' : 'green'}
-					navigateTo={createFreeTrialLink()}
+					variant={isNew ? 'rainbow' : 'black_green'}
+					navigateTo={
+						isNew
+							? createSignupLink('PROFESSIONAL_PLAN')
+							: createSignupLink('BUSINESS_PLAN')
+					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
 					newTarget
 				>
-					Get started
+					Free 7-day trial
 				</CTAButton>
 			)}
+
+			{isUsage && isSecondPlan && (
+				<div className={styles.talkToExpertContainer}>
+					{/* <h1>Unlimited lookups</h1> */}
+
+					<button
+						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
+						onClick={() => setIsDemoFormOpen(true)}
+					>
+						Request a demo
+					</button>
+				</div>
+			)}
+
+			{isUsage && isThirdPlan && (
+				<CTAButton
+					type="primary"
+					size="medium"
+					variant={isNew ? 'rainbow' : 'black_green'}
+					navigateTo={
+						isNew
+							? createSignupLink('PROFESSIONAL_PLAN')
+							: createSignupLink('BUSINESS_PLAN')
+					}
+					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
+					asExternal
+					newTarget
+				>
+					Free 7-day trial
+				</CTAButton>
+			)}
+
+			{/* {isUsage && isThirdPlan && (
+				<div className={styles.talkToExpertContainer}>
+
+					<button
+						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
+						onClick={() => setIsDemoFormOpen(true)}
+					>
+						Request a demo
+					</button>
+				</div>
+			)} */}
 
 			{isFree && (
 				<CTAButton
 					type="primary"
 					size="medium"
-					variant={isNew ? 'purplePinkRainbow' : 'green'}
-					navigateTo={createFreeTrialLink()}
+					variant={isNew ? 'rainbow' : 'green'}
+					navigateTo={
+						isNew
+							? createSignupLink('PROFESSIONAL_PLAN')
+							: createSignupLink('BUSINESS_PLAN')
+					}
 					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
 					asExternal
 					newTarget
@@ -247,17 +319,295 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 
 			{isEnterprise && (
 				<div className={styles.talkToExpertContainer}>
-					<h1>Unlimited contacts</h1>
-					<p></p>
+					{/* <h1>Unlimited lookups</h1> */}
 
 					<button
 						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
 						onClick={() => setIsDemoFormOpen(true)}
 					>
-						Contact sales
+						Request a demo
 					</button>
 				</div>
 			)}
+
+			{!withToggle && !isEnterprise && isFirstPlan && (
+				<p className={styles.skipTrial}>
+					or
+					<CTAButton
+						type="link"
+						size="medium"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Skip trial, get 20% off
+					</CTAButton>
+				</p>
+			)}
+
+			{!withToggle && !isEnterprise && isSecondPlan && (
+				<p className={styles.skipTrial}>
+					or
+					<CTAButton
+						type="link"
+						size="medium"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Skip trial, get 20% off
+					</CTAButton>
+				</p>
+			)}
+
+			{!withToggle && !isEnterprise && isThirdPlan && (
+				<p className={styles.skipTrial}>
+					or
+					<CTAButton
+						type="link"
+						size="medium"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Buy now
+					</CTAButton>
+				</p>
+			)}
+
+			{withToggle && !isEnterprise && (
+				<p className={styles.skipTrialBottom}>
+					<CTAButton
+						type="link"
+						size="small"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						or Skip trial, get 20% off
+					</CTAButton>
+				</p>
+			)}
+
+			{lookups && !isEnterprise && isFirstPlan && (
+				<h2 className={styles.lookups}>
+					{users} User
+					<br />
+					{formatNumber(lookups)} Insights
+					<ul className={styles.icons}>
+						<li>
+							<DecisionMaker width={17} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Email width={20} height={17} fill="#012b3b" />
+						</li>
+						<li>
+							<Phone width={17} height={18} fill="#012b3b" />
+						</li>
+						<li>
+							<LinkedIn width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Twitter width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Facebook width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Instagram width={15} height={20} fill="#012b3b" />
+						</li>
+					</ul>
+				</h2>
+			)}
+
+			{lookups && !isEnterprise && isSecondPlan && (
+				<h2 className={styles.lookups}>
+					{users} Users
+					<br />
+					{formatNumber(lookups)} Insights
+					<ul className={styles.icons}>
+						<li>
+							<DecisionMaker width={17} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Email width={20} height={17} fill="#012b3b" />
+						</li>
+						<li>
+							<Phone width={17} height={18} fill="#012b3b" />
+						</li>
+						<li>
+							<LinkedIn width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Twitter width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Facebook width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Instagram width={15} height={20} fill="#012b3b" />
+						</li>
+					</ul>
+				</h2>
+			)}
+
+			{lookups && !isEnterprise && isThirdPlan && (
+				<h2 className={styles.lookups}>
+					{users} Users
+					<br />
+					{formatNumber(lookups)} Insights
+					<ul className={styles.icons}>
+						<li>
+							<DecisionMaker width={17} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Email width={20} height={17} fill="#012b3b" />
+						</li>
+						<li>
+							<Phone width={17} height={18} fill="#012b3b" />
+						</li>
+						<li>
+							<LinkedIn width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Twitter width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Facebook width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Instagram width={15} height={20} fill="#012b3b" />
+						</li>
+					</ul>
+				</h2>
+			)}
+
+			{lookups && isEnterprise && (
+				<h2 className={styles.lookupsEnterprise}>
+					Starts at {users}+ Users
+					<br />
+					Starts at {formatNumber(lookups)}+ Insights
+					<ul className={styles.icons}>
+						<li>
+							<DecisionMaker width={17} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Email width={20} height={17} fill="#012b3b" />
+						</li>
+						<li>
+							<Phone width={17} height={18} fill="#012b3b" />
+						</li>
+						<li>
+							<LinkedIn width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Twitter width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Facebook width={15} height={20} fill="#012b3b" />
+						</li>
+						<li>
+							<Instagram width={15} height={20} fill="#012b3b" />
+						</li>
+					</ul>
+				</h2>
+			)}
+
+			{/* {lookups && !isEnterprise && isFirstPlan && (
+				<p className={styles.learnMoreNew}>
+					<CTAButton
+						type="link"
+						size="small"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Learn more about {name}
+					</CTAButton>
+				</p>
+			)}
+
+			{lookups && !isEnterprise && isSecondPlan && (
+				<p className={styles.learnMore}>
+					<CTAButton
+						type="link"
+						size="small"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Learn more about {name}
+					</CTAButton>
+				</p>
+			)}
+
+			{lookups && !isEnterprise && isThirdPlan && (
+				<p className={styles.learnMore}>
+					<CTAButton
+						type="link"
+						size="small"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Learn more about {name}
+					</CTAButton>
+				</p>
+			)}
+
+			{lookups && isEnterprise && (
+				<p className={styles.learnMoreEnterprise}>
+					<CTAButton
+						type="link"
+						size="small"
+						variant={'white'}
+						navigateTo={
+							isNew
+								? createSignupLink('PROFESSIONAL_PLAN', 'buynow')
+								: createSignupLink('BUSINESS_PLAN', 'buynow')
+						}
+						asExternal
+						newTarget
+					>
+						Learn more about {name}
+					</CTAButton>
+				</p>
+			)} */}
 
 			<Modal
 				isOpen={isDemoFormOpen}
@@ -278,8 +628,8 @@ GenericPriceCardHead.defaultProps = {
 	isUsage: false,
 	isSmall: false,
 	withToggle: false,
-	className: '',
-	handleChange: () => null
+	className: ''
+	// handleChange: () => null
 };
 
 export default GenericPriceCardHead;

@@ -5,16 +5,17 @@
 	position: relative;
 	border-radius: 7px;
 	background: $prim_white;
-	height: 360px;
+	height: 400px;
 
 	&__new {
-		padding-top: 6rem;
+		padding-top: 5rem;
 		border-top: none !important;
-		height: 415px;
+		height: 520px;
 	}
 
 	&__notNew {
-		margin-top: 5rem;
+		margin-top: 4rem;
+		height: 480px;
 	}
 
 	&__bordered {
@@ -37,14 +38,14 @@
 		h2 {
 			font-size: $fontsize_28;
 			font-weight: $fontweight_bold;
-			color: $prim_dark_2;
+			color: $prim_dark_1;
 			margin: 0 auto;
 		}
 
 		p {
-			font-size: $fontsize_10;
+			font-size: $fontsize_12;
 			font-weight: $fontweight_regular;
-			color: $prim_dark_2;
+			color: $prim_dark_1;
 			max-width: 33rem;
 			text-align: center;
 			white-space: pre-line;
@@ -55,11 +56,11 @@
 
 .startingAt {
 	font-size: $fontsize_10;
-	margin-top: 2rem;
+	margin-top: 0.5rem;
 	text-align: center;
 
 	h3 {
-		color: $prim_dark_2;
+		color: $prim_dark_1;
 		font-size: $fontsize_32;
 		font-weight: $fontweight_bold;
 	}
@@ -111,7 +112,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 90%;
 	margin: 2rem auto;
 	div {
 		width: 100%;
@@ -119,33 +120,93 @@
 }
 
 .buyNowCTA {
-	width: 24rem;
-	height: 4rem;
+	width: 93%;
+	height: 5rem;
 	font-weight: $fontweight_semibold;
-	font-size: $fontsize_16;
-	margin: 5rem auto;
+	font-size: $fontsize_18;
+	margin: 18rem auto;
 	position: absolute;
 	bottom: 0;
+	box-shadow: $box-shadow-1;
+
+	&:hover {
+		opacity: 0.85;
+		cursor: pointer;
+	}
 
 	@media screen and (max-width: 480px) {
 		width: 16em;
 	}
 }
 
+.skipTrial {
+	margin: 9rem auto;
+	position: absolute;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
+	color: $prim_dark_1;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 94%;
+
+	&:hover {
+		opacity: 0.85;
+		cursor: pointer;
+	}
+
+	a {
+		color: $prim_dark_1;
+		text-decoration: underline;
+		padding: 0.4em;
+	}
+}
+
+.skipTrialBottom {
+	margin: 2rem auto;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
+	color: $prim_dark_1;
+	position: absolute;
+	bottom: 0.3em;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		opacity: 0.85;
+		cursor: pointer;
+	}
+
+	a {
+		color: $prim_dark_1;
+		text-decoration: underline;
+		padding: 0.4em;
+	}
+}
+
+.icons {
+	display: flex;
+	gap: 11px;
+	padding-top: 7px;
+}
+
 .tableCardCTA {
-	width: 26rem;
-	height: 5rem;
+	width: 90%;
+	height: 4rem;
 	font-weight: $fontweight_semibold;
 	font-size: $fontsize_16;
+	color: $prim_dark_1;
 	margin: 0;
-	margin-bottom: 30px;
+	margin-bottom: 70px;
 }
 
 .newFeatureBanner {
 	position: absolute;
 	top: 0;
-	height: 5rem;
-	background: $purple_pink_gradient;
+	height: 4rem;
 
 	/* To compensate for the 1px from border */
 	width: calc(100% + 2px);
@@ -156,10 +217,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	font-size: $fontsize_20;
-	font-weight: $fontweight_medium;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
 	color: $prim_white;
-	padding: 0 5rem;
+	padding: 0 6rem;
 }
 
 .paymentModeToggle {
@@ -178,15 +239,21 @@
 		/* Override absolute position for the smaller pricing header card */
 		left: 10px;
 	}
+
+	.periodPrice {
+		font-size: $fontsize_16;
+		font-weight: $fontweight_medium;
+		color: $prim_dark_1;
+	}
 }
 
 .talkToExpertContainer {
 	text-align: center;
 
 	h1 {
-		color: #2e3b4a;
+		color: $grey_8;
 		font-size: $fontsize_16;
-		font-weight: $fontweight_medium;
+		font-weight: $fontweight_regular;
 	}
 
 	p {
@@ -196,28 +263,116 @@
 	}
 
 	button {
-		background-color: #000;
-		font-size: $fontsize_16;
+		background-color: $black_green;
+		font-size: $fontsize_18;
 		font-weight: $fontweight_semibold;
 		color: #fff;
 		border: none;
 		margin-top: 1.5em;
 		border-radius: 7px;
 		cursor: pointer;
-		margin-bottom: 2em;
+		margin-bottom: 48px;
 		left: 1em;
 	}
 
 	.buyNowBtn {
-		width: 24rem;
-		height: 4rem;
+		width: 90%;
+		height: 5rem;
 		position: absolute;
 		bottom: 0;
-		margin: 5rem auto;
+		margin: 18rem auto;
+		box-shadow: $box-shadow-1;
+
+		&:hover {
+			opacity: 0.85;
+			cursor: pointer;
+		}
 	}
 
 	.tableCardBtn {
 		width: 26rem;
-		height: 5rem;
+		height: 4rem;
+		margin-bottom: 70px;
+	}
+}
+
+.lookups {
+	font-size: $fontsize_18;
+	font-weight: $fontweight_semibold;
+	color: $black_green;
+	//margin: 4em auto;
+	margin-top: 8em;
+	padding-left: 7px;
+	line-height: $fontlineheight_40;
+	//padding-top: 1em;
+	//text-align: center;
+}
+
+.lookupsEnterprise {
+	font-size: $fontsize_18;
+	font-weight: $fontweight_semibold;
+	color: $black_green;
+	//margin: 4em auto;
+	margin-top: 5em;
+	padding-left: 7px;
+	line-height: $fontlineheight_40;
+	//padding-top: 1em;
+	//text-align: center;
+}
+
+.lookupsSummary {
+	font-size: $fontsize_18;
+	font-weight: $fontweight_regular;
+	color: $black_green;
+	margin: 0.2em auto;
+	text-align: center;
+}
+
+.learnMoreNew {
+	margin-top: 14em;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
+	text-decoration: underline;
+	color: $black_green;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.learnMore {
+	margin-top: 14em;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
+	text-decoration: underline;
+	color: $black_green;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	&:hover {
+		opacity: 0.85;
+		cursor: pointer;
+	}
+}
+
+.learnMoreEnterprise {
+	margin-top: 14em;
+	font-size: $fontsize_14;
+	font-weight: $fontweight_regular;
+	text-decoration: underline;
+	color: $black_green;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	&:hover {
+		opacity: 0.85;
+		cursor: pointer;
 	}
 }

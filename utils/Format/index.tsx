@@ -44,7 +44,7 @@ export const stringToFloat = (num: string, defaultTo: number = 0) => {
 export const prettyPrintNumber = (num: number) => {
 	const formattedNumber = numeral(num).format('0a');
 
-	if (num < 9999) {
+	if (num < 99999) {
 		const firstResult = formatNumber(num);
 		return firstResult;
 	}

@@ -4,6 +4,9 @@ export const benefitsData = [
 		benefitSummary: `This is summary for benefit. Hope you like it`,
 		details: `Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum 
 		Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum`,
+		imageUrl: '',
+		imageWidth: '',
+		imageHeight: '',
 		popularFeaturesList: [
 			{
 				title: 'Feature 1',
@@ -47,6 +50,9 @@ export const benefitsData = [
 		Dolores veniam rem rerum deserunt commodi optio maiores ullam voluptatum quod atque`,
 		details: `Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum 
 		Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum`,
+		imageUrl: '',
+		imageWidth: '',
+		imageHeight: '',
 		popularFeaturesList: []
 	},
 	{
@@ -54,6 +60,9 @@ export const benefitsData = [
 		benefitSummary: `Just changing the summary to check if the data mapping works`,
 		details: `Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum 
 		Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum`,
+		imageUrl: '',
+		imageWidth: '',
+		imageHeight: '',
 		popularFeaturesList: [
 			{
 				title: 'Feature 1',

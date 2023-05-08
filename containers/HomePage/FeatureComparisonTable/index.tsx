@@ -10,7 +10,7 @@ import { features, plans, competitors } from './data';
 import CTAButton from '../../../components/CTAButton';
 
 /* Utils */
-import { createFreeTrialLink } from '../../../utils/Referral';
+import { checkPricingLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -134,12 +134,12 @@ const FeatureComparisonTable: React.FC<Props> = () => {
 					type="primary"
 					variant="white"
 					size="medium"
-					navigateTo={createFreeTrialLink()}
-					asExternal
+					navigateTo={checkPricingLink()}
+					// asExternal
 					newTarget
 					className={styles.pricingButton}
 				>
-					Try for FREE
+					Check Sellgo pricing
 				</CTAButton>
 			</div>
 		</section>

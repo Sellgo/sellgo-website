@@ -58,7 +58,7 @@
 .heading {
 	font-size: $fontsize_46;
 	font-weight: $fontweight_extrabold;
-	line-height: $fontlineheight_heading_70;
+	line-height: $fontlineheight_70;
 
 	@media only screen and(max-width: 650px) {
 		font-size: $fontsize_38;
@@ -70,7 +70,7 @@
 	margin-top: 20px;
 	width: 600px;
 	font-size: $fontsize_20;
-	line-height: $fontlineheight_content_30;
+	line-height: $fontlineheight_30;
 	font-weight: $fontweight_medium;
 	color: $black_0;
 

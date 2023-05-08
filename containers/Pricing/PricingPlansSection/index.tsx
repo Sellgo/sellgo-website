@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 import { Element } from 'react-scroll';
 
@@ -9,9 +9,9 @@ import styles from './index.module.scss';
 /* Components */
 import PricingPlansCard from '../../../components/PricingPlansCard';
 import AllfeaturesTable from '../../../components/AllFeaturesTable';
-import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
+// import PricePlanToggleButton from '../../../components/PricePlanToggleButton';
 // import ContactInfo from '../../../components/ContactInfo';
-import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
+// import PricingPlansCardHead from '../../../components/PricingPlansCard/PricingPlansCardHead';
 import TestimonialsSection from '../TestimonialSection';
 
 /* Constants */
@@ -49,7 +49,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					<div className={styles.planShortSummary}>
 						<p>{summary}</p>
 					</div>
-					<div className={styles.paymentModeToggle}>
+					{/* <div className={styles.paymentModeToggle}>
 						<PricePlanToggleButton
 							isMonthly={isMonthly}
 							handleChange={() => setIsMonthly(!isMonthly)}
@@ -62,9 +62,9 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 								src="/handPointIcon.svg"
 								alt="handpointicon"
 							/>
-							<p className={styles.paymentToggleText}>Up to 6 months free.</p>
+							<p className={styles.paymentToggleText}>20% off.</p>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</section>
 
@@ -87,11 +87,23 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 							featureSubName={product.featureSubName}
 							featuresLists={product.featuresLists}
 							setIsMonthly={setIsMonthly}
+							lookups={product.lookups}
+							users={product.users}
+							isFirstPlan={product.isFirstPlan}
+							isSecondPlan={product.isSecondPlan}
+							isThirdPlan={product.isThirdPlan}
 							// Plan details
 							isMonthly={isMonthly}
 						/>
 					);
 				})}
+			</section>
+
+			<section className={styles.pricingNote}>
+				<p>
+					* Prices displayed in USD, based on annual billing, but do not include
+					applicable taxes.
+				</p>
 			</section>
 
 			{/*  Main pricing table comparision section section */}
@@ -110,7 +122,7 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 					</Element>
 
 					{/* Summary pricing card head below table  */}
-					<div className={styles.priceSummaryWrapper}>
+					{/* <div className={styles.priceSummaryWrapper}>
 						{productsIncluded.map((product: any) => {
 							return (
 								<div className={styles.priceSummaryCard} key={uuid()}>
@@ -124,25 +136,32 @@ const PricingPlansSection: React.FC<Props> = (props) => {
 										isNew={product.isNew}
 										isUsage={product.isUsage}
 										isFree={product.isFree}
+										lookups={product.lookups}
 										isEnterprise={product.isEnterprise}
 										// plan details
 										isMonthly={isMonthly}
 										// optional props for comparision table cards
 										withToggle
 										className={styles.tablePricingSummary}
-										handleChange={() => setIsMonthly(!isMonthly)}
+										// handleChange={() => setIsMonthly(!isMonthly)}
 										isSmall
 									/>
 								</div>
 							);
 						})}
-					</div>
+					</div> */}
 				</section>
 			)}
+
+			{/* <section className={styles.pricingNoteSummary}>
+				<p>* Prices displayed in USD, based on annual billing, 
+						but do not include applicable taxes.</p>
+			</section> */}
+
 			<TestimonialsSection />
 
 			<div className={styles.brandsContainer}>
-				<h2>Trusted by 7,000+ businesses.</h2>
+				<h2>Trusted by moving forward businesses.</h2>
 				{/* <img src="/brands.png" alt="brands" /> */}
 				<img src="/brands1.png" alt="brands" />
 			</div>

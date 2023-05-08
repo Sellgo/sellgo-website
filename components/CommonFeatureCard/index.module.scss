@@ -3,9 +3,9 @@
 .commonFeatureCard {
 	text-align: center;
 	width: 35rem;
-	margin: 3rem auto;
+	margin: 5rem auto;
 
-	h2 {
+	h1 {
 		font-size: $fontsize_16;
 		font-weight: $fontweight_semibold;
 		margin-top: 1rem;
@@ -18,5 +18,6 @@
 		text-align: center;
 		width: 95%;
 		margin: 0 auto;
+		color: $prim_white;
 	}
 }

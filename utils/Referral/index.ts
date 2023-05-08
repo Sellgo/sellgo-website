@@ -28,7 +28,7 @@ export const createCheckoutLink = (
 	email?: string
 ) => {
 	let webCheckOutLink = `${
-		AppConfig.APP_URL
+		AppConfig.WEB_URL
 	}/subscription?mode=${paymentMode}&type=${name
 		.split(' ')
 		.join('')
@@ -43,8 +43,26 @@ export const createCheckoutLink = (
 
 /* Create free trial link for webapp */
 export const createFreeTrialLink = () => {
-	const webFreeTrialLink = `${AppConfig.APP_URL}/signup?type=free`;
+	const webFreeTrialLink = `${AppConfig.WEB_URL}/select-plan`;
 
 	const freeTrialLink = appendReferralCode(webFreeTrialLink);
 	return freeTrialLink;
+};
+
+export const createSignupLink = (plan: string, td?: string) => {
+	let webFreeTrialLink = `${AppConfig.APP_URL}/signup?plan=${plan}`;
+
+	if (td) {
+		webFreeTrialLink += `&td=${td}`;
+	}
+
+	const freeTrialLink = appendReferralCode(webFreeTrialLink);
+	return freeTrialLink;
+};
+
+export const checkPricingLink = () => {
+	const webPricingLink = `${AppConfig.WEB_URL}/pricing`;
+
+	const pricingLink = appendReferralCode(webPricingLink);
+	return pricingLink;
 };

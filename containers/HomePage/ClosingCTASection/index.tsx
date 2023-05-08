@@ -6,7 +6,7 @@ import styles from './index.module.scss';
 /* Components */
 import CTAButton from '../../../components/CTAButton';
 import RainbowText from '../../../components/RainbowText';
-import { createFreeTrialLink } from '../../../utils/Referral';
+import { checkPricingLink } from '../../../utils/Referral';
 
 const ClosingCTASection = () => {
 	return (
@@ -30,12 +30,12 @@ const ClosingCTASection = () => {
 							type="primary"
 							size="medium"
 							variant="white"
-							navigateTo={createFreeTrialLink()}
+							navigateTo={checkPricingLink()}
 							asExternal
 							newTarget
 							className={styles.closingCTA}
 						>
-							Sign up free
+							Check pricing
 						</CTAButton>
 						{/* <div className={styles.signUpDetails}>
 							<Image src="/smileyFace.svg" width={25} height={25} />
