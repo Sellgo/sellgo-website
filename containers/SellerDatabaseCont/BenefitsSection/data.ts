@@ -6,6 +6,9 @@ export const benefitsData = [
 		easily integrate the Seller Finder within your scouting process. 
 		Probe your competitor's catalogs for potential products you can take over and source for your 
 		own businesses.`,
+		imageUrl: '',
+		imageWidth: '',
+		imageHeight: '',
 		popularFeaturesList: [
 			{
 				title: 'Feature 1',
@@ -45,6 +48,9 @@ export const benefitsData = [
 		details: `Simply use the Seller Finder to examine all the competitve sellers for any product 
 		listing and then scan their catalogs for the other products they sell. 
 		Lookout for leads and potential products you can source and sell.`,
+		imageUrl: '',
+		imageWidth: '',
+		imageHeight: '',
 		popularFeaturesList: [
 			{
 				title: 'Feature 1',
@@ -83,6 +89,9 @@ export const benefitsData = [
 		benefitSummary: `Compete in the Buy Box`,
 		details: `Follow the leads back to the suppliers and start sourcing the same products. 
 		Add the products to your Buy Box strategy and take over new profitable products.`,
+		imageUrl: '',
+		imageWidth: '',
+		imageHeight: '',
 		popularFeaturesList: [
 			{
 				title: 'Feature 1',
