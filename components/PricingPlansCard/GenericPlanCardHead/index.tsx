@@ -533,7 +533,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 				</h2>
 			)}
 
-			{lookups && !isEnterprise && isFirstPlan && (
+			{/* {lookups && !isEnterprise && isFirstPlan && (
 				<p className={styles.learnMoreNew}>
 					<CTAButton
 						type="link"
@@ -547,7 +547,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						asExternal
 						newTarget
 					>
-						{/* Learn more about {name} */}
+						Learn more about {name}
 					</CTAButton>
 				</p>
 			)}
@@ -566,7 +566,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						asExternal
 						newTarget
 					>
-						{/* Learn more about {name} */}
+						Learn more about {name}
 					</CTAButton>
 				</p>
 			)}
@@ -585,7 +585,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						asExternal
 						newTarget
 					>
-						{/* Learn more about {name} */}
+						Learn more about {name}
 					</CTAButton>
 				</p>
 			)}
@@ -604,10 +604,10 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						asExternal
 						newTarget
 					>
-						{/* Learn more about {name} */}
+						Learn more about {name}
 					</CTAButton>
 				</p>
-			)}
+			)} */}
 
 			<Modal
 				isOpen={isDemoFormOpen}
