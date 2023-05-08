@@ -47,7 +47,7 @@ export const plansAndProductsDetails = [
 		},
 		productsIncluded: [
 			{
-				id: 6, // subscriptionID if needed
+				id: 30, // subscriptionID if needed
 				name: 'Professional',
 				productsDatabase: 0,
 				salesEstimateCount: 1000,
@@ -101,7 +101,7 @@ export const plansAndProductsDetails = [
 			// 	]
 			// },
 			{
-				id: 1,
+				id: 32,
 				name: 'Business',
 				productsDatabase: 0,
 				salesEstimateCount: 2000,
