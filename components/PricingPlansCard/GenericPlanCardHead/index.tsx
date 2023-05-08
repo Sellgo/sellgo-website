@@ -50,7 +50,7 @@ interface Props {
 }
 
 const GenericPriceCardHead: React.FC<Props> = (props) => {
-	// console.log(props); 	
+	// console.log(props);
 
 	const {
 		name,
@@ -257,6 +257,19 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			)}
 
 			{isUsage && isSecondPlan && (
+				<div className={styles.talkToExpertContainer}>
+					{/* <h1>Unlimited lookups</h1> */}
+
+					<button
+						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
+						onClick={() => setIsDemoFormOpen(true)}
+					>
+						Request a demo
+					</button>
+				</div>
+			)}
+
+			{isUsage && isThirdPlan && (
 				<CTAButton
 					type="primary"
 					size="medium"
@@ -275,26 +288,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 			)}
 
 			{/* {isUsage && isThirdPlan && (
-				<CTAButton
-					type="primary"
-					size="medium"
-					variant={isNew ? 'rainbow' : 'black_green'}
-					navigateTo={
-						isNew
-							? createSignupLink('PROFESSIONAL_PLAN')
-							: createSignupLink('BUSINESS_PLAN')
-						}
-					className={`${withToggle ? styles.tableCardCTA : styles.buyNowCTA}`}
-					asExternal
-					newTarget
-				>
-					Request a demo
-				</CTAButton>
-			)} */}
-
-			{isUsage && isThirdPlan && (
 				<div className={styles.talkToExpertContainer}>
-					{/* <h1>Unlimited lookups</h1> */}
 
 					<button
 						className={`${withToggle ? styles.tableCardBtn : styles.buyNowBtn}`}
@@ -303,7 +297,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						Request a demo
 					</button>
 				</div>
-			)}
+			)} */}
 
 			{isFree && (
 				<CTAButton
@@ -553,7 +547,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						asExternal
 						newTarget
 					>
-						Learn more about {name}
+						{/* Learn more about {name} */}
 					</CTAButton>
 				</p>
 			)}
@@ -572,7 +566,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						asExternal
 						newTarget
 					>
-						Learn more about {name}
+						{/* Learn more about {name} */}
 					</CTAButton>
 				</p>
 			)}
@@ -591,7 +585,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						asExternal
 						newTarget
 					>
-						Learn more about {name}
+						{/* Learn more about {name} */}
 					</CTAButton>
 				</p>
 			)}
@@ -610,7 +604,7 @@ const GenericPriceCardHead: React.FC<Props> = (props) => {
 						asExternal
 						newTarget
 					>
-						Learn more about {name}
+						{/* Learn more about {name} */}
 					</CTAButton>
 				</p>
 			)}

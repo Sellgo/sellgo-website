@@ -21,7 +21,7 @@ export const productsNavigationList: ProductsNavigationList[] = [
 		hoverId: 'dataSolution'
 	},
 	{
-		head: 'Partership GO',
+		head: 'Partnership GO',
 		desc: 'xxxxxxxx',
 		hoverId: 'partnershipSolution'
 	}

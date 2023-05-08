@@ -128,11 +128,11 @@ const HeroBox = () => {
 						</RainbowText>
 					</h2>
 					<p className={`${styles.tagline}`}>
-						Hit your sales number with ease:
+						Hit your sales number with high quality leads:
 					</p>
 					<p className={`${styles.tagbenefit}`}>
 						<br />
-						<Bottom width={10} height={8} fill="#5DC560" /> Accurate buying
+						<Bottom width={10} height={8} fill="#5DC560" /> Unique buying
 						intents
 						<br />
 						<Bottom width={10} height={8} fill="#5DC560" /> Verified contact

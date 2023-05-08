@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Modal from 'react-modal';
 
 /* Styling */
-import Link from 'next/link';
+// import Link from 'next/link';
 import styles from './index.module.scss';
 // import RainbowText from '../../../components/RainbowText';
 
@@ -39,14 +39,14 @@ const PersonasSection: React.FC<Props> = () => {
 					</div>
 					<h4 className={styles.cardsWrapper__Text}>
 						Ads service companies
-						<p>Annual less than USD $1M</p>
+						{/* <p>Annual less than USD $1M</p> */}
 					</h4>
-					<Link href="/ads-service-companies" passHref>
+					{/* <Link href="/ads-service-companies" passHref>
 						<a className={styles.cardsWrapper__Link}>
 							Learn more about Ads Service &nbsp;
 							<Image src="/blueLongArrowRight.svg" width={20} height={8} />
 						</a>
-					</Link>
+					</Link> */}
 				</div>
 
 				<div className={styles.cardsWrapper}>
@@ -63,14 +63,14 @@ const PersonasSection: React.FC<Props> = () => {
 					</div>
 					<h4 className={styles.cardsWrapper__Text}>
 						Marketing service companies
-						<p>Annual USD $1-2M</p>
+						{/* <p>Annual USD $1-2M</p> */}
 					</h4>
-					<Link href="/marketing-service-companies" passHref>
+					{/* <Link href="/marketing-service-companies" passHref>
 						<a className={styles.cardsWrapper__Link}>
 							Learn more about Marketing Service &nbsp;
 							<Image src="/blueLongArrowRight.svg" width={20} height={8} />
 						</a>
-					</Link>
+					</Link> */}
 				</div>
 
 				<div className={styles.cardsWrapper}>
@@ -87,14 +87,14 @@ const PersonasSection: React.FC<Props> = () => {
 					</div>
 					<h4 className={styles.cardsWrapper__Text}>
 						SAAS companies
-						<p>Annual USD $2-5M</p>
+						{/* <p>Annual USD $2-5M</p> */}
 					</h4>
-					<Link href="/saas-companies" passHref>
+					{/* <Link href="/saas-companies" passHref>
 						<a className={styles.cardsWrapper__Link}>
 							Learn more about SAAS &nbsp;
 							<Image src="/blueLongArrowRight.svg" width={20} height={8} />
 						</a>
-					</Link>
+					</Link> */}
 				</div>
 
 				<div className={styles.cardsWrapper}>
@@ -111,14 +111,14 @@ const PersonasSection: React.FC<Props> = () => {
 					</div>
 					<h4 className={styles.cardsWrapper__Text}>
 						Ecom vendor companies
-						<p>Annual USD $5-20M</p>
+						{/* <p>Annual USD $5-20M</p> */}
 					</h4>
-					<Link href="/ecom-vendor-companies" passHref>
+					{/* <Link href="/ecom-vendor-companies" passHref>
 						<a className={styles.cardsWrapper__Link}>
 							Learn more about Ecom Vendor &nbsp;
 							<Image src="/blueLongArrowRight.svg" width={20} height={8} />
 						</a>
-					</Link>
+					</Link> */}
 				</div>
 			</div>
 

@@ -29,19 +29,19 @@ export const brandLogoData = {
 		},
 		{
 			title: 'Test',
-			src: 'customer_poshmark_bw.png'
+			src: 'customer_payoneer_bw.png'
 		},
 		{
 			title: 'Test',
-			src: 'customer_poshmark_bw.png'
+			src: 'customer_shein_bw.png'
 		},
 		{
 			title: 'Test',
-			src: 'customer_poshmark_bw.png'
+			src: 'customer_shopify_bw.png'
 		},
 		{
 			title: 'Test',
-			src: 'customer_poshmark_bw.png'
+			src: 'customer_xiaomi_bw.png'
 		},
 		{
 			title: 'Test',
@@ -58,10 +58,6 @@ export const brandLogoData = {
 		{
 			title: 'Test',
 			src: 'customer_poshmark_bw.png'
-		},
-		{
-			title: 'Test',
-			src: 'customer_nest_bw.png'
 		},
 		{
 			title: 'Test',

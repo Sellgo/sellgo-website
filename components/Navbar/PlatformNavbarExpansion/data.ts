@@ -9,22 +9,23 @@ export const productsNavigationList: ProductsNavigationList[] = [
 		head: 'Sales GO',
 		desc: 'xxxxxxxx',
 		hoverId: 'salesSolution'
-	},
-	{
-		head: 'Marketing GO',
-		desc: 'xxxxxxxx',
-		hoverId: 'marketingSolution'
-	},
-	{
-		head: 'Data GO',
-		desc: 'xxxxxxxx',
-		hoverId: 'dataSolution'
-	},
-	{
-		head: 'Partership GO',
-		desc: 'xxxxxxxx',
-		hoverId: 'partnershipSolution'
 	}
+	// ,
+	// {
+	// 	head: 'Marketing GO',
+	// 	desc: 'xxxxxxxx',
+	// 	hoverId: 'marketingSolution'
+	// },
+	// {
+	// 	head: 'Data GO',
+	// 	desc: 'xxxxxxxx',
+	// 	hoverId: 'dataSolution'
+	// },
+	// {
+	// 	head: 'Partnership GO',
+	// 	desc: 'xxxxxxxx',
+	// 	hoverId: 'partnershipSolution'
+	// }
 ];
 
 export const productsRightPanelData: ProductsPanelData[] = [

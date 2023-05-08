@@ -9,9 +9,9 @@ import styles from './index.module.scss';
 /* COmponents */
 // import CTAButton from '../../CTAButton';
 import CTAButton from '../../CTAButton';
-import PlatformNavbarExpansion from '../PlatformNavbarExpansion';
+// import PlatformNavbarExpansion from '../PlatformNavbarExpansion';
 // import UsecasesNavbarExpansion from '../UsecasesNavbarExpansion';
-// import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
+import ResourcesNavBarExpansion from '../ResourcesNavbarExpansion';
 import Bottom from '../../Icons/Chervons/Bottom';
 import AppConfig from '../../../config';
 
@@ -38,14 +38,14 @@ const NavbarBottom: React.FC<Props> = () => {
 				</Link>
 
 				<ul className={styles.navbarBottomLinksList}>
-					<li className={styles.navbarBottomLink}>
+					{/* <li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
 							Platform <Bottom width={10} height={8} fill="#fff" />
 						</a>
 						<PlatformNavbarExpansion
 							className={styles.expandedProductsNavbar}
 						/>
-					</li>
+					</li> */}
 
 					{/* <li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
@@ -64,22 +64,22 @@ const NavbarBottom: React.FC<Props> = () => {
 						</Link>
 					</li>
 
-					{/* <li className={styles.navbarBottomLink}>
+					<li className={styles.navbarBottomLink}>
 						<a href="#" className={styles.navLink}>
 							Resources <Bottom width={10} height={8} fill="#fff" />
 						</a>
 						<ResourcesNavBarExpansion
 							className={styles.expandedResourcesNavbar}
 						/>
-					</li> */}
+					</li>
 
-					<li
+					{/* <li
 						className={`${styles.navbarBottomLink} ${styles.navbarBottomLink__pricing}`}
 					>
 						<Link href="/customers" passHref prefetch={false}>
 							<a className={styles.navLink}>Customers</a>
 						</Link>
-					</li>
+					</li> */}
 				</ul>
 			</div>
 
