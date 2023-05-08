@@ -10,6 +10,7 @@ import CTAButton from '../../../components/CTAButton';
 
 /* Data */
 import { newBenefitsData } from './data';
+import { checkPricingLink } from '../../../utils/Referral';
 
 interface Props {}
 
@@ -41,14 +42,14 @@ const NewBenefitsSection: React.FC<Props> = () => {
 					type="primary"
 					size="medium"
 					variant="rainbow"
-					navigateTo="/"
+					navigateTo={checkPricingLink()}
 					asExternal
 					newTarget
 					className={styles.newBenefitsCTA}
 				>
-					Analyze sellers with free account
+					Check pricing
 				</CTAButton>
-				<p>Free forever. No credit card required. Instant access.</p>
+				{/* <p>Premium leads. Instant access. Easy workflow.</p> */}
 			</div>
 		</section>
 	);

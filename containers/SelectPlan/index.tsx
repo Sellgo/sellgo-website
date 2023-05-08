@@ -24,7 +24,7 @@ interface Props {}
 const HeroBox: React.FC<Props> = () => {
 	const [selectedPlan, setSelectedPlan] = useState('');
 
-	console.log(selectedPlan);
+	// console.log(selectedPlan);
 
 	return (
 		<section className={styles.heroboxWrapper}>

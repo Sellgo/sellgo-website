@@ -11,13 +11,15 @@ import { GET_SHOW_CASE_BLOGS } from '../graphql/cms';
 /* Containers */
 import HeroBox from '../containers/HomePage/HeroBox';
 import FeaturesSection from '../containers/HomePage/FeaturesSection';
-import ProductsSection from '../containers/HomePage/ProductsSection';
+// import ProductsSection from '../containers/HomePage/ProductsSection';
 import StatisticsSection from '../containers/HomePage/StatisticsSection';
 import FeatureComparisonTable from '../containers/HomePage/FeatureComparisonTable';
 import TestimonialsSection from '../containers/HomePage/TestimonialsSection';
 import RecentBlogsSection from '../containers/HomePage/RecentBlogsSection';
 import StepperInfoSection from '../containers/HomePage/StepperInfoSection';
 import FAQSection from '../containers/HomePage/FAQSection';
+import ProductCardsSection from '../containers/HomePage/ProductCardsSection';
+import PersonasSection from '../containers/HomePage/PersonasSection';
 /* Components */
 import SEOHead from '../components/SEOHead';
 
@@ -33,7 +35,7 @@ import { ShowcaseBlogDetails } from '../interfaces/Blogs';
 
 /* Constants */
 import { limitDateForCustomerCount } from '../constants';
-import ProductCardsSection from '../containers/HomePage/ProductCardsSection';
+
 import NewClosingCTASection from '../containers/HomePage/NewClosingCTA';
 import { FAQDetails } from '../interfaces/FAQ';
 
@@ -55,13 +57,14 @@ const HomePage: React.FC<Props> = (props) => {
 			/>
 			<HeroBox />
 			<main>
+				<PersonasSection />
 				<StatisticsSection />
 				<StepperInfoSection />
 				<ProductCardsSection />
 				<FeaturesSection />
 				<FeatureComparisonTable />
 				<TestimonialsSection />
-				<ProductsSection />
+				{/* <ProductsSection /> */}
 				<RecentBlogsSection recentBlogs={homeBlogs} />
 				{faqDetails.data.length > 0 && <FAQSection faqData={faqDetails.data} />}
 				<NewClosingCTASection />

@@ -4,11 +4,12 @@ import React from 'react';
 import styles from './index.module.scss';
 
 /* Components */
+// import CTAButton from '../CTAButton';
 import CTAButton from '../CTAButton';
 import Check from '../Icons/Check';
 
 /* Utils */
-import { createFreeTrialLink } from '../../utils/Referral';
+import { checkPricingLink } from '../../utils/Referral';
 
 interface Props {
 	className?: string;
@@ -35,12 +36,12 @@ const FreeTrialCTABox: React.FC<Props> = (props) => {
 					<CTAButton
 						type={isPrimary ? 'primary' : 'secondary'}
 						size="medium"
-						navigateTo={createFreeTrialLink()}
+						navigateTo={checkPricingLink()}
 						asExternal
 						newTarget
 						className={styles.freeTrialCTA}
 					>
-						Start free trial
+						Check Selgo Pricing
 					</CTAButton>
 					<p>Try for free, no credit card required.</p>
 				</div>

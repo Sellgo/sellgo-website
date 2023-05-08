@@ -1,0 +1,42 @@
+@import '../../../styles/guidelines';
+
+.brandsContainer {
+	overflow: hidden;
+	margin-top: 0;
+	margin-bottom: 2em;
+	text-align: center;
+	width: 100%;
+	position: relative;
+
+	.benefitWrapper {
+		background-color: #000;
+	}
+
+	.benefitContainer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		animation-name: marquee;
+		animation-duration: 50s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		width: 10000px;
+		height: 50px;
+	}
+
+	.benefit {
+		color: #fff;
+		padding: 2em 5em;
+		font-size: $fontsize_14;
+		font-weight: $fontweight_medium;
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}

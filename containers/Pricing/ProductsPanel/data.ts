@@ -28,8 +28,8 @@ export const planTypes: PlanTypes[] = [
 
 export const plansAndProductsDetails = [
 	{
-		planName: '"Sellgo pays for itself 10x over"',
-		summary: `Reach millions of Amazon seller decision makers and their teams`,
+		planName: 'Simple pricing plan',
+		summary: `Discover the full value of Sellgo and see how it pays for itself 10 times over!`,
 
 		infoAlertMessage: {
 			monthly: {
@@ -84,7 +84,7 @@ export const plansAndProductsDetails = [
 			// 	annualPrice: 7190,
 			// 	users: 3,
 			// 	lookups: 24000,
-			// 	desc: `Perfect for small teams`,
+			// 	desc: `Ideal for small teams`,
 			// 	featureSubName: 'Professional',
 			// 	isFirstPlan: false,
 			// 	isSecondPlan: true,
@@ -109,7 +109,7 @@ export const plansAndProductsDetails = [
 				annualPrice: 9590,
 				users: 5,
 				lookups: 36000,
-				desc: `Perfect for small teams`,
+				desc: `Perfect for fast growing businesses`,
 				featureSubName: 'Professional',
 				isFirstPlan: false,
 				isSecondPlan: false,

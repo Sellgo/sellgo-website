@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { createFreeTrialLink } from '../../utils/Referral';
+import { checkPricingLink } from '../../utils/Referral';
 
 export const CTA_1A = {
 	title: (
@@ -19,7 +19,7 @@ export const CTA_1A = {
 	),
 	asterisk: <span> *emails, phones, website, social media links, etc. </span>,
 	linkLabel: 'Create free account',
-	link: createFreeTrialLink()
+	link: checkPricingLink()
 };
 
 export const CTA_1B = {
@@ -39,5 +39,5 @@ export const CTA_1B = {
 	),
 	asterisk: <span> *emails, phones, website, social media links, etc. </span>,
 	linkLabel: 'Learn more',
-	link: createFreeTrialLink()
+	link: checkPricingLink()
 };

@@ -7,9 +7,9 @@
 
 .herobox {
 	overflow: hidden;
-	min-height: 70vh;
+	min-height: 60vh;
 	padding-top: 3rem;
-	padding-bottom: 3rem;
+	padding-bottom: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -105,10 +105,21 @@
 	width: 400px;
 	margin-top: 50px;
 
+	span {
+		font-size: 10px;
+		width: 100%;
+		padding-left: 18px;
+	}
+
 	@media only screen and(max-width: 1080px) {
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
+
+		span {
+			font-size: 9px;
+			padding-left: 55px;
+		}
 	}
 
 	.closingCTA {
@@ -204,16 +215,19 @@
 		opacity: 0.8;
 	}
 }
-
 .brandsContainer {
 	margin-top: 0;
-	margin-bottom: 15em;
+	margin-bottom: 0;
 	text-align: center;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	height: 14rem;
+	background-color: #f7f7f7;
 
 	h2 {
 		color: $prim_dark_2;
 		text-align: center;
-		font-size: $fontsize_20;
+		font-size: $fontsize_16;
 		font-weight: $fontweight_medium;
 		margin-bottom: 1em;
 	}
@@ -221,5 +235,14 @@
 	img {
 		padding: 0 5em;
 		max-width: 100%;
+	}
+}
+
+.heroBoxCTA {
+	width: 27rem;
+
+	@media screen and (max-width: 480px) {
+		margin-right: 6px;
+		width: 10em;
 	}
 }

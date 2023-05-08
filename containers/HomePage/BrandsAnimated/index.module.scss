@@ -1,0 +1,43 @@
+@import '../../../styles/guidelines';
+
+.brandsContainer {
+	overflow: hidden;
+	margin-top: 0;
+	margin-bottom: 2em;
+	text-align: center;
+	width: 100%;
+
+	h2 {
+		color: $prim_dark_2;
+		text-align: center;
+		font-size: $fontsize_18;
+		font-weight: $fontweight_regular;
+		margin-bottom: 1.5em;
+		border-bottom: 1px solid $grey_3;
+		line-height: 3;
+	}
+
+	div {
+		display: flex;
+		animation-name: marquee;
+		animation-duration: 50s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+
+	img {
+		display: block;
+		min-width: 200px;
+		height: 50px;
+		margin: 0 1vw;
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0%);
+	}
+	50% {
+		transform: translateX(-100%);
+	}
+}
